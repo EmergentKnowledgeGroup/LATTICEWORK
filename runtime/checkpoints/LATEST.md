@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-30T22:28:19Z`
+Updated: `2026-07-30T22:30:55Z`
 
 ## CURRENT
 
 Track: `LW_P4_CHARACTERIZATION WORK`
-Step: `phase4-characterization-complete-blocked`
-Note: Executed all 39 locked primary-Chat subcases with 20 PASS, 16 UNKNOWN, and 3 FAIL; strict GREEN validation rejected the bundle and implementation remains blocked.
+Step: `phase4-characterization-pr-open`
+Note: PR #3 is open with the complete BLOCKED characterization packet; one CodeRabbit/CI review cycle is authorized before merge.
 Branch: `reengineering/p4-chat-vertical-slice-preflight`
-Head: `6151404511facb3916541512da78f74f3a2e6ec6`
-Next command: `Obtain maintainer disposition for a separately claimed Phase 4 characterization amendment; do not begin LW-P4-001 under the blocked packet.`
+Head: `7e42c6637dc2f39eec602c8c390902203bcfd5a1`
+Next command: `Inspect PR #3 checks and the single CodeRabbit review; fix actionable findings once, then merge if green.`
 
 ## LW_M0_BASELINE WORK
 
@@ -276,11 +276,11 @@ Next command: `Read docs/agents/handoffs/LW-P4-CTRL-001.md before transitioning 
 
 ## LW_P4_CHARACTERIZATION WORK
 
-Step: `phase4-characterization-complete-blocked`
-Note: Executed all 39 locked primary-Chat subcases with 20 PASS, 16 UNKNOWN, and 3 FAIL; strict GREEN validation rejected the bundle and implementation remains blocked.
+Step: `phase4-characterization-pr-open`
+Note: PR #3 is open with the complete BLOCKED characterization packet; one CodeRabbit/CI review cycle is authorized before merge.
 Branch: `reengineering/p4-chat-vertical-slice-preflight`
-Head: `6151404511facb3916541512da78f74f3a2e6ec6`
-Next command: `Obtain maintainer disposition for a separately claimed Phase 4 characterization amendment; do not begin LW-P4-001 under the blocked packet.`
+Head: `7e42c6637dc2f39eec602c8c390902203bcfd5a1`
+Next command: `Inspect PR #3 checks and the single CodeRabbit review; fix actionable findings once, then merge if green.`
 
 ### Validations
 
@@ -294,6 +294,7 @@ Next command: `Obtain maintainer disposition for a separately claimed Phase 4 ch
 - **OBSERVED** — visible OpenAI setup dispatches the Groq Chat Completions target instead of the locked OpenAI target.
 - **OBSERVED** — primary Chat exposes no visible cancellation control.
 - **OBSERVED** — `implementation_authorized` remains false.
+- **VERIFIED** — PR #3 opened against `EmergentKnowledgeGroup/LATTICEWORK:main` with the complete characterization and evidence packet.
 
 ### Blockers
 
