@@ -1,8 +1,8 @@
 {
   "schema": "latticework.context_checkpoint.tracks.v1",
-  "captured_at": "2026-07-30T16:13:06Z",
+  "captured_at": "2026-07-30T21:15:43Z",
   "repo_root": "Z:\\LATTICEWORK",
-  "current_track": "LW_P3_IMPLEMENTATION WORK",
+  "current_track": "LW_P4_PREFLIGHT WORK",
   "tracks": {
     "LW_M0_BASELINE WORK": {
       "track": "LW_M0_BASELINE WORK",
@@ -415,7 +415,111 @@
       ],
       "updated_at": "2026-07-30T16:13:06Z",
       "captured_at": "2026-07-30T16:13:06Z"
+    },
+    "LW_P4_PREFLIGHT WORK": {
+      "track": "LW_P4_PREFLIGHT WORK",
+      "step": "phase4-preflight-locked-green",
+      "note": "Phase 4 primary-Chat characterization preflight version 1.0 is locked after SpecSwarm consolidation, control repair, 116/116 repository controls, and independent post-repair guardrail GREEN; implementation remains blocked.",
+      "branch": "reengineering/p4-chat-vertical-slice-preflight",
+      "head": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+      "next_cmd": "Create docs/agents/claims/LW-P4-CHAR-001.md, transition the active-scope validator test-first to the exact locked characterization path set, and execute only the additive characterization packet.",
+      "validations": [
+        "VERIFIED: LW-P3-001 is merged, post-merge GREEN, and its packages remain inactive.",
+        "OBSERVED: the maintainer explicitly reaffirmed acceptance of ADR-004, ADR-005, and ADR-006 and directed continued execution under their packet limits.",
+        "OBSERVED: LW-P4-001 remains BLOCKED; no canonical Phase 4 preflight identifier existed, so this track claims LW-P4-PREFLIGHT-001.",
+        "VERIFIED: branch reengineering/p4-chat-vertical-slice-preflight starts cleanly from main commit e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd.",
+        "INFERRED: the narrowest safe next package is synthetic-profile, denied-egress characterization plus a decision-complete vertical-slice preflight; it is not feature implementation.",
+        "VERIFIED: SpecSwarm reviews and final consolidation left no unresolved packet defect after the 39-subcase/16-group wording correction.",
+        "VERIFIED: the phase-closed and active-scope controls pass 48 of 48 focused tests and independent post-repair guardrail QA is GREEN.",
+        "VERIFIED: the full repository-control suite passes 116 of 116 with zero fail, skip, or todo; git diff --check is clean.",
+        "VERIFIED: reengineering/PHASE4_PREFLIGHT.md version 1.0 is locked with implementation_authorized false."
+      ],
+      "decisions": [
+        "Use LW-P4-PREFLIGHT-001 for the separately claimed Phase 4 characterization/preflight package.",
+        "Keep LW-P4-001 implementation blocked until the preflight is independently reviewed and explicitly accepted."
+      ],
+      "changed_paths": [
+        "docs/agents/claims/LW-P4-PREFLIGHT-001.md",
+        "reengineering/PHASE4_PREFLIGHT.md",
+        "reengineering/EXECUTION_CHECKLIST.md",
+        "reengineering/BLOCKERBOARD.md",
+        "PROJECT_STATE.md",
+        "ROADMAP.md",
+        "docs/agents/handoffs/LW-P4-PREFLIGHT-001.md",
+        "runtime/checkpoints/LATEST.md",
+        "runtime/checkpoints/LATEST.json",
+        "reengineering/checkpoints/LATEST.md",
+        "reengineering/checkpoints/LATEST.json"
+      ],
+      "blockers": [
+        {
+          "id": "LW-BLK-005",
+          "severity": "P1",
+          "status": "OPEN",
+          "summary": "Only disposable synthetic profiles are authorized; real user data reads and migration remain blocked."
+        },
+        {
+          "id": "LW-BLK-006",
+          "severity": "P1",
+          "status": "OPEN",
+          "summary": "Only deterministic mocks and denied egress are authorized; provider traffic and listeners remain blocked."
+        },
+        {
+          "id": "LW-BLK-007",
+          "severity": "P1",
+          "status": "OPEN",
+          "summary": "The legacy route remains default; activation and cutover remain blocked."
+        }
+      ],
+      "updated_at": "2026-07-30T21:15:43Z",
+      "captured_at": "2026-07-30T21:15:43Z"
+    },
+    "LW_P4_CONTROL_CLOSURE WORK": {
+      "track": "LW_P4_CONTROL_CLOSURE WORK",
+      "step": "phase4-control-closure-green",
+      "note": "Historical Phase 3 validation is closed base-to-terminal and active Phase 4 scope is claim-specific and fail-closed across committed, staged, unstaged, untracked, add-then-delete, and force-added ignored paths.",
+      "branch": "reengineering/p4-chat-vertical-slice-preflight",
+      "head": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+      "next_cmd": "Read docs/agents/handoffs/LW-P4-CTRL-001.md before transitioning active ownership to the exact LW-P4-CHAR-001 path set.",
+      "validations": [
+        "OBSERVED: full repository controls are 105/107 solely because both historical Phase 3 scope validators diff their old base through current HEAD and include current untracked Phase 4 files.",
+        "VERIFIED: three independent Phase 4 preflight reviews reject adding Phase 4 paths to Phase 3 allowlists and recommend a pinned Phase 3 terminal commit plus a separate active Phase 4 scope validator.",
+        "PROPOSED: pin the Phase 3 terminal commit to e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd, preserve semantic controls and exact Phase 3 allowlists, and add positive/negative regression tests.",
+        "VERIFIED: focused scope controls pass 48 of 48 and full repository controls pass 116 of 116.",
+        "VERIFIED: add-then-delete paths are retained; committed, staged, unstaged, untracked, and force-added ignored paths are inspected.",
+        "VERIFIED: independent post-repair guardrail QA is GREEN and the Phase 3 allowlists were not widened."
+      ],
+      "decisions": [
+        "Repair historical validation with a closed base-to-terminal range rather than widening Phase 3 allowlists.",
+        "Protect current Phase 4 tracked and untracked state with a dedicated additive active-scope validator."
+      ],
+      "changed_paths": [
+        "docs/agents/claims/LW-P4-CTRL-001.md",
+        "tools/reengineering/validate-phase3-decision-packet.mjs",
+        "tools/reengineering/validate-phase3-preflight.mjs",
+        "tools/reengineering/git-scope-common.mjs",
+        "tools/reengineering/validate-phase4-active-scope.mjs",
+        "tests/reengineering/phase3-decision-packet.test.mjs",
+        "tests/reengineering/phase3-preflight.test.mjs",
+        "tests/reengineering/phase4-active-scope.test.mjs",
+        "docs/agents/handoffs/LW-P4-CTRL-001.md",
+        "reengineering/evidence/phase-4/LW-P4-CTRL-001/",
+        "runtime/checkpoints/LATEST.md",
+        "runtime/checkpoints/LATEST.json",
+        "reengineering/checkpoints/LATEST.md",
+        "reengineering/checkpoints/LATEST.json"
+      ],
+      "blockers": [
+        {
+          "id": "LW-BLK-008",
+          "severity": "P0",
+          "status": "CLOSED",
+          "summary": "Historical and active-phase scope validation is repaired without widening Phase 3 allowlists."
+        }
+      ],
+      "updated_at": "2026-07-30T21:15:43Z",
+      "captured_at": "2026-07-30T21:15:43Z"
     }
   },
-  "updated": "2026-07-30T16:13:06Z"
+  "updated": "2026-07-30T21:15:43Z"
 }

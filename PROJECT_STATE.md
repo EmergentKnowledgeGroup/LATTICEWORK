@@ -8,15 +8,15 @@ LATTICEWORK
 
 ## Project state
 
-`BOUNDED FOUNDATION VERIFIED / NOT ACTIVATED`
+`PHASE 4 CHARACTERIZATION AUTHORIZED / IMPLEMENTATION BLOCKED`
 
 ## Current milestone
 
-`M3 — Synthetic storage/provider foundation`
+`M1/M3 boundary — primary Chat baseline characterization`
 
 ## Current target
 
-`LW-P3-001 — merged and post-merge verified`
+`LW-P4-CHAR-001 — next bounded additive work unit`
 
 ## Upstream baseline
 
@@ -24,7 +24,8 @@ LATTICEWORK
 
 ## Last verified commit
 
-`67e960d6671fb2f55e8c795ef472d4fb2ba36f6e` (`LW-P3-001` merge commit)
+`e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd` (Phase 3 post-merge
+checkpoint; Phase 4 control/preflight working tree independently green)
 
 The verified Phase 3 candidate
 `d746b96225a3eaf59a5b5937e3f531e2cad280ef` is contained in the merged
@@ -32,9 +33,15 @@ history, but its packages remain unregistered and inactive. The last verified
 active runtime behavior remains the Phase 2 foundation; Phase 3 introduced no
 route, listener, provider transport, real-data read, activation, or cutover.
 
+The locked Phase 4 preflight authorizes only additive, synthetic-profile,
+denied-egress characterization of the primary Chat baseline. It does not
+authorize candidate application changes, package integration, real data,
+credentials, provider traffic, listeners beyond the existing loopback static
+harness, activation, migration, or cutover.
+
 ## Last verified date
 
-`2026-07-30 16:13 UTC`
+`2026-07-30 21:15 UTC`
 
 ## Locked constraints
 
@@ -56,6 +63,9 @@ route, listener, provider transport, real-data read, activation, or cutover.
 | `LW-P3-DEC-001` | Phase 3 storage/provider/security decision packet | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — ACCEPTED` | `docs/agents/handoffs/LW-P3-DEC-001.md` |
 | `LW-P3-PREFLIGHT-001` | Exact synthetic storage/provider implementation preflight | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P3-PREFLIGHT-001.md` |
 | `LW-P3-001` | Synthetic conversation storage and deterministic provider foundation | Codex root controller | `main` | `COMPLETED — MERGED / VERIFIED` | `docs/agents/handoffs/LW-P3-001.md` |
+| `LW-P4-CTRL-001` | Phase-closed historical and fail-closed active scope controls | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P4-CTRL-001.md` |
+| `LW-P4-PREFLIGHT-001` | Primary Chat baseline characterization lock | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `COMPLETED — LOCKED / GREEN` | `docs/agents/handoffs/LW-P4-PREFLIGHT-001.md` |
+| `LW-P4-CHAR-001` | Synthetic primary Chat baseline characterization | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `AUTHORIZED — NOT STARTED` | `reengineering/PHASE4_PREFLIGHT.md` |
 
 ## Completed in current milestone
 
@@ -148,6 +158,17 @@ route, listener, provider transport, real-data read, activation, or cutover.
   repository controls, five native Chromium IndexedDB scenarios, the valid
   protected-boundary gate, the valid 12-gate/138-artifact evidence validator,
   and a zero-vulnerability npm audit.
+- **VERIFIED:** Phase 3 historical validators now inspect the exact closed
+  base-to-terminal history, including add-then-delete paths, while a separate
+  active Phase 4 validator rejects unauthorized committed, staged, unstaged,
+  untracked, and force-added ignored paths. The focused suite passes 48 of 48,
+  the full repository-control suite passes 116 of 116, and independent
+  guardrail QA is GREEN.
+- **VERIFIED:** `reengineering/PHASE4_PREFLIGHT.md` version 1.0 freezes 16
+  reporting groups containing 39 mandatory atomic synthetic-profile subcases,
+  exact mocked Ollama/OpenAI caller boundaries, denied egress, fresh profiles,
+  evidence promotion and cleanup, owned paths, rollback, stop conditions, and
+  a zero-UNKNOWN GREEN rule. It grants characterization authority only.
 
 ## Blockers
 
@@ -158,6 +179,12 @@ route, listener, provider transport, real-data read, activation, or cutover.
   slice is verified but does not close those obligations.
 - `LW-BLK-006` remains open for optional gateway/worker/mesh work.
 - `LW-BLK-007` remains open for eventual cutover.
+- `LW-BLK-008` is closed by the phase-closed historical and claim-specific
+  active-scope controls.
+- `LW-BLK-009` remains open until all 39 mandatory Phase 4 characterization
+  subcases pass and independent clean-worktree reproduction is accepted.
+- `LW-BLK-010` keeps candidate implementation blocked until a later,
+  separately accepted implementation packet exists.
 
 ## Open decisions
 
@@ -173,8 +200,8 @@ route, listener, provider transport, real-data read, activation, or cutover.
 - Documentation accuracy improvements.
 - Reproducible measurement tooling.
 - Documentation and evidence corrections that do not change product semantics.
-- Evidence-linked documentation and review/merge work for the completed
-  bounded synthetic-only `LW-P3-001` claim.
+- Execute only the additive `LW-P4-CHAR-001` characterization paths frozen in
+  `reengineering/PHASE4_PREFLIGHT.md`.
 
 ## Human decision required
 
@@ -192,23 +219,22 @@ route, listener, provider transport, real-data read, activation, or cutover.
 
 ## Next handoff
 
-**Next action:** Start Phase 4 only through a separately claimed preflight
-work unit. Read the `LW-P3-001` handoff and open blockers before proposing any
-runtime integration, real-data migration, provider transport, listener, or
-cutover work.
+**Next action:** Claim and execute `LW-P4-CHAR-001` exactly as frozen in
+`reengineering/PHASE4_PREFLIGHT.md`. Characterize the immutable primary Chat
+baseline with disposable synthetic profiles and denied egress. Do not modify
+candidate or legacy runtime behavior.
 
-**Read first:** `reengineering/PHASE3_PREFLIGHT.md`,
-`reengineering/PHASE3_DECISION_PACKET.md`,
-`docs/decisions/0004-versioned-storage-and-migration.md`,
-`docs/decisions/0005-provider-abstraction-and-provenance.md`, and
-`docs/decisions/0006-optional-local-proxy-security.md`.
+**Read first:** `reengineering/PHASE4_PREFLIGHT.md`,
+`docs/agents/handoffs/LW-P4-PREFLIGHT-001.md`, and
+`reengineering/BLOCKERBOARD.md`.
 
 **Do not touch:** stored-data/provider/security semantics, default routes,
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** a separately accepted Phase 4 work unit defines exact
-owned paths, compatibility surfaces, evidence gates, rollback, and authority
-boundaries before any new implementation begins.
+**Success condition:** all 39 mandatory atomic subcases in 16 reporting groups
+are PASS with zero UNKNOWN/conditional/fail results, complete evidence, and
+independent clean-worktree reproduction. Any missing baseline behavior remains
+an explicit blocker; it is not simulated or silently waived.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`
