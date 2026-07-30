@@ -16,7 +16,7 @@ LATTICEWORK
 
 ## Current target
 
-`LW-P3-001 — verified; PR #2 open`
+`LW-P3-001 — merged and post-merge verified`
 
 ## Upstream baseline
 
@@ -24,16 +24,17 @@ LATTICEWORK
 
 ## Last verified commit
 
-`d746b96225a3eaf59a5b5937e3f531e2cad280ef` (`LW-P3-001` verified implementation candidate)
+`67e960d6671fb2f55e8c795ef472d4fb2ba36f6e` (`LW-P3-001` merge commit)
 
-The last verified merged runtime implementation remains
-`c48505c5437c6b9cf67a652cdc2d8c81778c15a1`. The independently verified
-Phase 3 candidate is not registered into the runtime and has not yet merged.
-It begins from `93a36626f786a880210c53b8486c961e8b86e9ea`.
+The verified Phase 3 candidate
+`d746b96225a3eaf59a5b5937e3f531e2cad280ef` is contained in the merged
+history, but its packages remain unregistered and inactive. The last verified
+active runtime behavior remains the Phase 2 foundation; Phase 3 introduced no
+route, listener, provider transport, real-data read, activation, or cutover.
 
 ## Last verified date
 
-`2026-07-30 15:59 UTC`
+`2026-07-30 16:13 UTC`
 
 ## Locked constraints
 
@@ -54,7 +55,7 @@ It begins from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 | `LW-P2-001` | Isolated typed kernel/contracts/status-shell candidate | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-001.md` |
 | `LW-P3-DEC-001` | Phase 3 storage/provider/security decision packet | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — ACCEPTED` | `docs/agents/handoffs/LW-P3-DEC-001.md` |
 | `LW-P3-PREFLIGHT-001` | Exact synthetic storage/provider implementation preflight | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P3-PREFLIGHT-001.md` |
-| `LW-P3-001` | Synthetic conversation storage and deterministic provider foundation | Codex root controller | `reengineering/p3-storage-provider-foundation` | `COMPLETED — VERIFIED` | `docs/agents/handoffs/LW-P3-001.md` |
+| `LW-P3-001` | Synthetic conversation storage and deterministic provider foundation | Codex root controller | `main` | `COMPLETED — MERGED / VERIFIED` | `docs/agents/handoffs/LW-P3-001.md` |
 
 ## Completed in current milestone
 
@@ -135,10 +136,18 @@ It begins from `93a36626f786a880210c53b8486c961e8b86e9ea`.
   runtime path. The implementation has no real-data fixture, provider
   transport, listener, ambient credential read, activation API, feature
   registration, or cutover.
-- **OBSERVED:** pull request
+- **VERIFIED:** pull request
   [`#2`](https://github.com/EmergentKnowledgeGroup/LATTICEWORK/pull/2)
-  is open against `main` from verified branch head
-  `f009842574a6df8210ed7c49c812d1b85bb78774`.
+  merged into `main` at
+  `67e960d6671fb2f55e8c795ef472d4fb2ba36f6e`. The automatic CodeRabbit
+  status completed successfully but its review was rate-limited and produced
+  no code findings; no additional review was requested. Separate
+  clean-worktree QA was GREEN with no findings.
+- **MEASURED:** post-merge verification on `main` passes six workspace
+  typechecks, 51 integrated storage/provider/boundary tests, 107 of 107
+  repository controls, five native Chromium IndexedDB scenarios, the valid
+  protected-boundary gate, the valid 12-gate/138-artifact evidence validator,
+  and a zero-vulnerability npm audit.
 
 ## Blockers
 
@@ -183,10 +192,10 @@ It begins from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 
 ## Next handoff
 
-**Next action:** Commit the finalized hash-pinned evidence and terminal
-documentation, open one review-ready pull request for the verified
-`LW-P3-001` candidate, pass required CI without requesting another CodeRabbit
-review, merge, and verify `main`.
+**Next action:** Start Phase 4 only through a separately claimed preflight
+work unit. Read the `LW-P3-001` handoff and open blockers before proposing any
+runtime integration, real-data migration, provider transport, listener, or
+cutover work.
 
 **Read first:** `reengineering/PHASE3_PREFLIGHT.md`,
 `reengineering/PHASE3_DECISION_PACKET.md`,
@@ -198,8 +207,8 @@ review, merge, and verify `main`.
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** the single Phase 3 pull request is merged, `main`
-contains the verified candidate and evidence, post-merge controls remain
-green, and no candidate runtime path has been activated.
+**Success condition:** a separately accepted Phase 4 work unit defines exact
+owned paths, compatibility surfaces, evidence gates, rollback, and authority
+boundaries before any new implementation begins.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`
