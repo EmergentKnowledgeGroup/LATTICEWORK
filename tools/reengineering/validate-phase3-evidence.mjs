@@ -307,6 +307,7 @@ function validateIndependentCommandReceipt({
   marker,
   candidateSha,
   worktreeRoot,
+  allowDescendantCwd = false,
   requireEmptyStdout = false,
   failures,
   requiredArtifacts,
@@ -324,10 +325,11 @@ function validateIndependentCommandReceipt({
   ) {
     failures.push(`${label} receipt identity or exit status is invalid`);
   }
-  if (
-    normalizedFsPath(receipt.cwd) !== normalizedFsPath(worktreeRoot) ||
-    receipt.repository?.head !== candidateSha
-  ) {
+  const cwdIdentifiesWorktree =
+    normalizedFsPath(receipt.cwd) === normalizedFsPath(worktreeRoot) ||
+    (allowDescendantCwd &&
+      recordedPathIsStrictDescendant(receipt.cwd, worktreeRoot));
+  if (!cwdIdentifiesWorktree || receipt.repository?.head !== candidateSha) {
     failures.push(`${label} receipt does not identify the independent candidate worktree`);
   }
   if (!capturedStatusIsClean(receipt.repository?.status)) {
@@ -477,6 +479,7 @@ export function validatePhase3IndependentReview({
       marker: INDEPENDENT_COMMAND_MARKERS[gate],
       candidateSha,
       worktreeRoot,
+      allowDescendantCwd: gate === "lockfile-replay",
       failures,
       requiredArtifacts,
     });

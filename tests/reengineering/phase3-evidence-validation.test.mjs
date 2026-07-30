@@ -99,13 +99,18 @@ function writeJson(filePath, value) {
   fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
 }
 
-function writeIndependentReceipt(root, relativePath, command) {
+function writeIndependentReceipt(
+  root,
+  relativePath,
+  command,
+  cwd = REVIEW_WORKTREE,
+) {
   writeJson(path.join(root, relativePath), {
     schema: "latticework.evidence.command.v1",
     receipt_id: `LW-P3-001-independent-${path.basename(path.dirname(relativePath))}`,
     baseline_sha: BASELINE_SHA,
     candidate_sha: CANDIDATE_SHA,
-    cwd: REVIEW_WORKTREE,
+    cwd,
     exit_code: 0,
     command,
     repository: {
@@ -152,7 +157,21 @@ function addIndependentReview(root) {
   for (const gate of INDEPENDENT_GATES) {
     const receipt = `commands/${gate}/manifest.json`;
     gates[gate] = { valid: true, receipt };
-    writeIndependentReceipt(reviewRoot, receipt, INDEPENDENT_COMMANDS[gate]);
+    const cwd = gate === "lockfile-replay"
+      ? path.join(
+        REVIEW_WORKTREE,
+        "runtime",
+        "tmp",
+        "phase3-verification-4196",
+        "lockfile-replay",
+      )
+      : REVIEW_WORKTREE;
+    writeIndependentReceipt(
+      reviewRoot,
+      receipt,
+      INDEPENDENT_COMMANDS[gate],
+      cwd,
+    );
   }
   writeJson(path.join(reviewRoot, "automation.json"), {
     schema: "latticework.phase3-independent-review.v1",
@@ -414,6 +433,31 @@ test("rejects dirty or wrong-identity independent worktree receipts", () => {
   );
 });
 
+test("rejects a lockfile replay receipt outside the independent worktree", () => {
+  const root = createFixture("outside-lockfile-replay");
+  const receiptPath = path.join(
+    root,
+    "independent-review",
+    "commands",
+    "lockfile-replay",
+    "manifest.json",
+  );
+  const receipt = JSON.parse(fs.readFileSync(receiptPath, "utf8"));
+  receipt.cwd = path.resolve(REPO_ROOT, "..", "unrelated-replay");
+  writeJson(receiptPath, receipt);
+
+  const result = validatePhase3Evidence({
+    workspaceRoot: REPO_ROOT,
+    evidenceDirectory: root,
+  });
+
+  assert.equal(result.valid, false);
+  assert.match(
+    result.failures.join("\n"),
+    /lockfile-replay.*independent candidate worktree/i,
+  );
+});
+
 test("verification runner produces and validates structured independent worktree evidence", () => {
   const runner = fs.readFileSync(
     path.join(
@@ -432,6 +476,11 @@ test("verification runner produces and validates structured independent worktree
   assert.match(runner, /latticework\.phase3-independent-review\.v1/u);
   assert.match(runner, /--independent-review/u);
   assert.doesNotMatch(runner, /findstr/u);
+  assert.match(
+    runner,
+    /-Command @\("git", "status", "--porcelain"\)/u,
+  );
+  assert.doesNotMatch(runner, /@\("git\.exe", "status", "--porcelain"\)/u);
   const installIndex = runner.indexOf("npm ci --ignore-scripts");
   const clearIgnoreScriptsIndex = runner.indexOf(
     "Remove-Item Env:npm_config_ignore_scripts -ErrorAction SilentlyContinue",

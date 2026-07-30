@@ -80,7 +80,7 @@ surface is implementation-authorized.
 
 **MEASURED, FINAL EVIDENCE PENDING:** the bounded candidate now passes strict
 typecheck; 26 storage tests; 19 provider tests; six storage/provider boundary
-tests; nine evidence-validator tests; and five native Chromium IndexedDB
+tests; ten evidence-validator tests; and five native Chromium IndexedDB
 scenarios. The tests use generated synthetic records and deterministic
 in-process mocks only. They cover copy-on-write checkpoint/resume/rollback,
 native unknown-value preservation, hostile import staging, blocked/quota

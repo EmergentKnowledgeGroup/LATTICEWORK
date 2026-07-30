@@ -41,7 +41,7 @@
 | Phase 3 strict typecheck | `npm run p3:typecheck` | web, contracts, kernel, storage, provider, and browser-harness TypeScript projects | Windows 10; Node 24.13.0; TypeScript 6.0.3 | 6 workspaces | pass; exit 0 | canonical receipt pending |
 | Phase 3 storage/provider tests | `npm run p3:test` | storage migration/import/journal/native-value behavior; provider routing/stream/retry/deadline/cancellation/provenance; no-egress and namespace boundaries | same | 51 | 51 pass; 0 fail/skip | canonical receipt pending |
 | Phase 3 native IndexedDB browser gate | `npm run p3:browser` | synthetic v3 copy, every checkpoint resume, rollback, future abstention, hostile staging, blocked upgrade, quota failure, source equivalence, and no egress | Windows 10; Playwright 1.62.0; bundled Chromium | 5 | 5 pass; 0 skip/unexpected/flaky | canonical receipt pending |
-| Phase 3 evidence-validator controls | `node --test tests/reengineering/phase3-evidence-validation.test.mjs` | hash/identity/gate/review/secret/completeness acceptance, separate clean-worktree receipt validation, and negative fixtures | Windows 10; Node 24.13.0 | 9 | 9 pass | canonical receipt pending |
+| Phase 3 evidence-validator controls | `node --test tests/reengineering/phase3-evidence-validation.test.mjs` | hash/identity/gate/review/secret/completeness acceptance, clean-worktree receipt validation, isolated replay descendant proof, restored workspace lifecycle scripts, and negative fixtures | Windows 10; Node 24.13.0 | 10 | 10 pass | canonical receipt pending |
 
 ## Characterization tests
 

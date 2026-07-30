@@ -125,7 +125,7 @@ from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 - **MEASURED, FINAL EVIDENCE PENDING:** the bounded `LW-P3-001` candidate now
   contains additive `@latticework/storage` and `@latticework/providers`
   packages plus shared contracts. Integrated local gates pass six workspace
-  typechecks, 26 storage tests, 19 provider tests, six boundary tests, nine
+  typechecks, 26 storage tests, 19 provider tests, six boundary tests, ten
   evidence-validator tests, and five native Chromium IndexedDB scenarios.
 - **OBSERVED:** no Phase 3 package is imported by `apps/web` or a legacy
   runtime path. The implementation has no real-data fixture, provider

@@ -150,7 +150,7 @@ $env:LATTICEWORK_BASELINE_ROOT = $BaselineRoot
 New-Item -ItemType Directory -Force -Path $env:TEMP, $env:npm_config_cache | Out-Null
 
 if ($IndependentReview) {
-    Invoke-EvidenceCommand -Id "$WorkId-independent-worktree-start" -Directory "worktree-start" -Command @("git.exe", "status", "--porcelain")
+    Invoke-EvidenceCommand -Id "$WorkId-independent-worktree-start" -Directory "worktree-start" -Command @("git", "status", "--porcelain")
 }
 
 $gateReceipts = [ordered]@{
@@ -283,7 +283,7 @@ if ($controls.tests -le 0 -or $controls.fail -ne 0 -or $controls.skipped -ne 0 -
 Invoke-EvidenceCommand -Id "$WorkId-diff-and-json-hygiene" -Directory "diff-and-json-hygiene" -Command @("cmd.exe", "/d", "/s", "/c", "git diff --check $ImplementationBase -- && node --check tools/reengineering/validate-phase3-evidence.mjs && node tools/reengineering/validate-phase3-decision-packet.mjs && node tools/reengineering/validate-phase3-preflight.mjs")
 
 if ($IndependentReview) {
-    Invoke-EvidenceCommand -Id "$WorkId-independent-worktree-end" -Directory "worktree-end" -Command @("git.exe", "status", "--porcelain")
+    Invoke-EvidenceCommand -Id "$WorkId-independent-worktree-end" -Directory "worktree-end" -Command @("git", "status", "--porcelain")
     $reviewStatus = @(& git -C $RepositoryRoot status --porcelain)
     if ($LASTEXITCODE -ne 0 -or $reviewStatus.Count -ne 0) {
         throw "Independent review worktree is not clean after automated reproduction."

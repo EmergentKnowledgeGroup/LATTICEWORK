@@ -195,7 +195,7 @@ Next command: `Create the exact candidate commit, run canonical hash-pinned Phas
 - **VERIFIED** — Docker Engine is reachable locally and reports server version `29.5.3`; the Docker Desktop MCP profile screen is not a Phase 3 blocker.
 - **MEASURED** — `npm run p3:typecheck` passes all six TypeScript workspace projects.
 - **MEASURED** — the integrated Node gate passes 26 storage, 19 provider, and six storage/provider boundary tests with zero fail or skip.
-- **MEASURED** — the Phase 3 evidence-validator suite passes nine positive/negative cases.
+- **MEASURED** — the Phase 3 evidence-validator suite passes ten positive/negative cases.
 - **MEASURED** — native Chromium passes five IndexedDB scenarios covering fresh copy, every checkpoint resume, rollback, future-version abstention, hostile staging, blocked upgrade, quota failure, and zero external egress.
 - **VERIFIED** — the Phase 3 boundary verifier reports `valid: true`; no protected legacy or `apps/web` path is modified.
 - **OBSERVED** — the packages remain unused by the application and contain no real-data fixture, provider transport, listener, ambient credential read, activation API, or cutover.
@@ -204,7 +204,8 @@ Next command: `Create the exact candidate commit, run canonical hash-pinned Phas
 - **VERIFIED** — one shared fail-closed native-value contract distinguishes regular expressions, serialized errors/causes, files/blobs, buffers/views, ordered maps/sets, cycles/shared references, and rejects unsupported host/class objects.
 - **VERIFIED** — provider terminal provenance records immutable fallback chains and retry authorization for dispatched and pre-dispatch outcomes.
 - **VERIFIED** — source-read failure cannot mutate or return an operation bound to another migration ID; active and terminal regressions assert zero discard and zero journal writes.
-- **MEASURED** — the final precommit matrix passes six workspace typechecks, 51 integrated Node tests, nine evidence controls, 106 repository controls, the valid boundary gate, five Chromium scenarios, zero audit vulnerabilities, JSON/parser checks, and `git diff --check`.
+- **MEASURED** — the final precommit matrix passes six workspace typechecks, 51 integrated Node tests, ten evidence controls, 107 repository controls, the valid boundary gate, five Chromium scenarios, zero audit vulnerabilities, JSON/parser checks, and `git diff --check`.
+- **VERIFIED** — clean-detached-worktree execution exposed and regression-locked two evidence-runner assumptions: workspace lifecycle scripts are restored after `npm ci --ignore-scripts`, and isolated lockfile replay is accepted only from a strict descendant of the attested worktree.
 - **VERIFIED** — fresh independent precommit re-review returned GREEN with no actionable findings; hash-pinned canonical and clean-detached-worktree evidence remain the next gates.
 
 ### Blockers
