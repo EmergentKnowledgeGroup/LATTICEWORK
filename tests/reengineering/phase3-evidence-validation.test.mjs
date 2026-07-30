@@ -432,4 +432,18 @@ test("verification runner produces and validates structured independent worktree
   assert.match(runner, /latticework\.phase3-independent-review\.v1/u);
   assert.match(runner, /--independent-review/u);
   assert.doesNotMatch(runner, /findstr/u);
+  const installIndex = runner.indexOf("npm ci --ignore-scripts");
+  const clearIgnoreScriptsIndex = runner.indexOf(
+    "Remove-Item Env:npm_config_ignore_scripts -ErrorAction SilentlyContinue",
+  );
+  const browserIndex = runner.indexOf("npm run p3:browser");
+  assert.ok(installIndex >= 0, "runner must install with lifecycle scripts disabled");
+  assert.ok(
+    clearIgnoreScriptsIndex > installIndex,
+    "runner must clear npm_config_ignore_scripts after the clean install",
+  );
+  assert.ok(
+    clearIgnoreScriptsIndex < browserIndex,
+    "runner must restore workspace pretest scripts before the browser gate",
+  );
 });

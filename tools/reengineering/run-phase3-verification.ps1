@@ -252,6 +252,7 @@ $lockMatch = (Get-FileHash (Join-Path $RepositoryRoot "package-lock.json") -Algo
 if (-not $lockMatch) { throw "Isolated lockfile replay did not reproduce package-lock.json." }
 
 Invoke-EvidenceCommand -Id "$WorkId-install" -Directory "install" -Command @("cmd.exe", "/d", "/s", "/c", "npm ci --ignore-scripts")
+Remove-Item Env:npm_config_ignore_scripts -ErrorAction SilentlyContinue
 Invoke-EvidenceCommand -Id "$WorkId-strict-typecheck" -Directory "strict-typecheck" -Command @("cmd.exe", "/d", "/s", "/c", "npm run p3:typecheck")
 Invoke-EvidenceCommand -Id "$WorkId-node-unit" -Directory "node-unit" -Command @("cmd.exe", "/d", "/s", "/c", "npm run p3:test")
 Invoke-EvidenceCommand -Id "$WorkId-provider-no-egress" -Directory "provider-no-egress" -Command @("node.exe", "--test", "tests/reengineering/phase3-provider-boundary.test.mjs")
