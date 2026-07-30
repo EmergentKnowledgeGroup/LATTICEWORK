@@ -26,10 +26,10 @@ LATTICEWORK must not be described as a drop-in replacement until the required le
 |---|---|---:|---|---|
 | HTTP launch, first run, and skip | `docs/app.html` | `C2` | [Phase 1 summary](../reengineering/evidence/phase-1/LW-P1-001/summary.json) | Pinned Chromium fixture against the immutable baseline; provider setup is not exercised |
 | Edge and direct-file launch | `index.html`, `app.html`, `docs/app.html`, start scripts | `C1` | [Phase 0 browser receipt](../reengineering/evidence/phase-0/LW-P0-003-browser/README.md) | Bounded first-render observations only |
-| Local model connection | Ollama, LM Studio, custom OpenAI-compatible source paths | `C0` | [boundary map](../reengineering/evidence/phase-0/LW-M0-BEH-001/behavior-boundary-map.md) | No endpoint was contacted |
-| Cloud provider connection | provider definitions in primary runtime | `C0` | [boundary map](../reengineering/evidence/phase-0/LW-M0-BEH-001/behavior-boundary-map.md) | No credentials or requests exercised |
+| Local model connection | Ollama, LM Studio, custom OpenAI-compatible source paths | `C0` | [Phase 4 blocked summary](../reengineering/evidence/phase-4/LW-P4-CHAR-001/summary.json) | Exact Ollama fixture request was intercepted, but timed fragmentation is UNKNOWN and no real provider was contacted |
+| Cloud provider connection | provider definitions in primary runtime | `C0` | [Phase 4 blocked summary](../reengineering/evidence/phase-4/LW-P4-CHAR-001/summary.json) | Visible OpenAI setup dispatched Groq instead of the locked OpenAI target; request was blocked before transmission |
 | Chat shell | primary runtime Chat panel | `C2` | [Phase 1 summary](../reengineering/evidence/phase-1/LW-P1-001/summary.json) | Shell and unsent-input privacy boundary only |
-| Chat send, stream, cancel, and retry | primary runtime chat/send globals | `C0` | [behavior JSON](../reengineering/evidence/phase-0/LW-M0-BEH-001/behavior-boundary-map.json) | No provider call or message send exercised |
+| Chat send, stream, cancel, and retry | primary runtime chat/send globals | `C0` | [Phase 4 blocked summary](../reengineering/evidence/phase-4/LW-P4-CHAR-001/summary.json) | 39 cases executed, but aggregate is 20 PASS / 16 UNKNOWN / 3 FAIL; no visible cancel control exists |
 | Conversation persistence | IndexedDB/localStorage call sites | `C0` | [storage inventory](../reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.csv) | Schema, retention, and recovery unverified |
 | Fresh storage initialization shape | localStorage, service worker/cache, IndexedDB databases and stores | `C2` | [runtime snapshot](../reengineering/evidence/phase-1/LW-P1-001/artifacts/shell-and-storage/runtime-snapshot.json) | Names/versions/stores only; values, retention, migration, and recovery remain unverified |
 | Identity or continuity behavior | identity, key, Merkle, Garden/Core source paths | `C0` | [security map](../reengineering/SECURITY_BOUNDARY_MAP.md) | Cryptographic semantics unverified |
@@ -43,13 +43,28 @@ LATTICEWORK must not be described as a drop-in replacement until the required le
 | Import and export | file, backup, restore source paths | `C0` | [behavior JSON](../reengineering/evidence/phase-0/LW-M0-BEH-001/behavior-boundary-map.json) | Formats and malformed-input behavior unverified |
 | Stored-data migration | legacy plaintext/encrypted credential and store paths | `C0` | [data inventory](../reengineering/DATA_INVENTORY.md) | No candidate migration exists |
 | Mobile Garden behavior | Garden at 390 × 844 | `C2` | [geometry receipt](../reengineering/evidence/phase-1/LW-P1-001/artifacts/mobile/mobile-overlap.json) | One Chromium viewport; the `✦ Presence` role button overlaps the Garden title |
-| Accessibility | semantic/control source hints | `C0` | `UNKNOWN` | No keyboard, screen-reader, contrast, or axe receipt |
+| Accessibility | semantic/control source hints | `C0` | [Phase 4 blocked summary](../reengineering/evidence/phase-4/LW-P4-CHAR-001/summary.json) | Keyboard, forced-colors, and reduced-motion semantics captured; primary Chat live-region contract remains UNKNOWN |
 | Signal Report open/copy | Chat diagnostics modal and clipboard action | `C2` | [Phase 1 summary](../reengineering/evidence/phase-1/LW-P1-001/summary.json) | Synthetic unsent text is excluded from the report; broader failure/recovery remains uncharacterized |
 
 C1 and C2 rows are narrowly bounded browser paths. They are not full capability
 characterization and do not support a replacement or drop-in claim.
 The Phase 1 network-denial gate proves fixture isolation, not provider
 compatibility; real provider connection semantics remain C0.
+
+## Phase 4 primary-Chat characterization result
+
+**MEASURED:** `LW-P4-CHAR-001` executed all 39 locked atomic subcases against
+the immutable baseline with one run-owned synthetic Chromium profile per case,
+one worker, zero retries, exact in-browser provider interception, and denied
+external egress. The result is `20 PASS`, `16 UNKNOWN`, `3 FAIL`, and
+`0 CONDITIONAL`.
+
+The strict GREEN validator correctly rejects the bundle. The visible OpenAI
+choice dispatches the Groq Chat Completions endpoint; the primary Chat exposes
+no visible cancel control; timed fragmentation, several reload/race cases, and
+the complete accessibility contract remain unresolved under the current
+no-listener packet. These observations do not advance any broad compatibility
+row and do not authorize candidate implementation.
 
 ## Candidate-only foundation evidence
 

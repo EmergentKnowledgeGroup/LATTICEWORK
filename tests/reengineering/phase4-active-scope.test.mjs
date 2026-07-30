@@ -67,13 +67,15 @@ test("active scope rejects unauthorized tracked and untracked path classes", () 
       "packages/providers/src/unauthorized.ts",
       "reengineering/PHASE4_PREFLIGHT.md",
       "runtime/tmp/phase4-characterization/run-id/raw.json",
+      "docs/agents/claims/LW-P4-CHAR-001.md",
       "tests/characterization/specs/phase4-chat.spec.mjs",
+      "tools/reengineering/validate-phase4-characterization.mjs",
+      "reengineering/evidence/phase-4/LW-P4-CHAR-001/summary.json",
     ]),
     [
       "apps/web/src/unauthorized.ts",
       "packages/providers/src/unauthorized.ts",
       "runtime/tmp/phase4-characterization/run-id/raw.json",
-      "tests/characterization/specs/phase4-chat.spec.mjs",
     ],
   );
 });

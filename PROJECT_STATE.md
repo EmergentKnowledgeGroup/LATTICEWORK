@@ -8,15 +8,15 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 4 CHARACTERIZATION AUTHORIZED / IMPLEMENTATION BLOCKED`
+`PHASE 4 CHARACTERIZATION COMPLETE — BLOCKED / IMPLEMENTATION BLOCKED`
 
 ## Current milestone
 
-`M1/M3 boundary — primary Chat baseline characterization`
+`M1/M3 boundary — primary Chat characterization amendment required`
 
 ## Current target
 
-`LW-P4-CHAR-001 — next bounded additive work unit`
+`LW-P4-CHAR-001 — 39/39 executed; aggregate BLOCKED`
 
 ## Upstream baseline
 
@@ -33,11 +33,11 @@ history, but its packages remain unregistered and inactive. The last verified
 active runtime behavior remains the Phase 2 foundation; Phase 3 introduced no
 route, listener, provider transport, real-data read, activation, or cutover.
 
-The locked Phase 4 preflight authorizes only additive, synthetic-profile,
-denied-egress characterization of the primary Chat baseline. It does not
-authorize candidate application changes, package integration, real data,
-credentials, provider traffic, listeners beyond the existing loopback static
-harness, activation, migration, or cutover.
+The locked Phase 4 characterization executed with additive, synthetic-profile,
+denied-egress tooling only. It produced 20 PASS, 16 UNKNOWN, and 3 FAIL.
+Candidate application changes, package integration, real data, credentials,
+provider traffic, listeners beyond the existing loopback static harness,
+activation, migration, and cutover remain unauthorized.
 
 ## Last verified date
 
@@ -65,7 +65,7 @@ harness, activation, migration, or cutover.
 | `LW-P3-001` | Synthetic conversation storage and deterministic provider foundation | Codex root controller | `main` | `COMPLETED — MERGED / VERIFIED` | `docs/agents/handoffs/LW-P3-001.md` |
 | `LW-P4-CTRL-001` | Phase-closed historical and fail-closed active scope controls | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P4-CTRL-001.md` |
 | `LW-P4-PREFLIGHT-001` | Primary Chat baseline characterization lock | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `COMPLETED — LOCKED / GREEN` | `docs/agents/handoffs/LW-P4-PREFLIGHT-001.md` |
-| `LW-P4-CHAR-001` | Synthetic primary Chat baseline characterization | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `AUTHORIZED — NOT STARTED` | `reengineering/PHASE4_PREFLIGHT.md` |
+| `LW-P4-CHAR-001` | Synthetic primary Chat baseline characterization | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `COMPLETED — BLOCKED` | `docs/agents/handoffs/LW-P4-CHAR-001.md` |
 
 ## Completed in current milestone
 
@@ -219,10 +219,11 @@ harness, activation, migration, or cutover.
 
 ## Next handoff
 
-**Next action:** Claim and execute `LW-P4-CHAR-001` exactly as frozen in
-`reengineering/PHASE4_PREFLIGHT.md`. Characterize the immutable primary Chat
-baseline with disposable synthetic profiles and denied egress. Do not modify
-candidate or legacy runtime behavior.
+**Next action:** obtain maintainer disposition for a separately claimed Phase 4
+characterization amendment. The amendment must explicitly handle definitive
+baseline absences, the OpenAI-to-Groq wrong-target defect, and observations
+that require capabilities prohibited by the current no-listener packet. Do not
+modify candidate or legacy runtime behavior.
 
 **Read first:** `reengineering/PHASE4_PREFLIGHT.md`,
 `docs/agents/handoffs/LW-P4-PREFLIGHT-001.md`, and
