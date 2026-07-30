@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-30T23:39:48Z`
+Updated: `2026-07-30T23:44:39Z`
 
 ## CURRENT
 
 Track: `LW_P4_AMENDMENT WORK`
-Step: `phase4-amendment-pr-open`
-Note: PR #4 contains the independently GREEN control-only amendment and corrected implementation proposal; no runtime authority is granted.
-Branch: `reengineering/p4-characterization-amendment`
-Head: `99bc4409606d3af1b9d6a2ac938859bba58c3517`
-Next command: `Review PR #4 once, address actionable findings in one batch, then merge only if checks remain GREEN; do not begin LW-P4-001.`
+Step: `phase4-amendment-post-merge`
+Note: PR #4 merged the independently GREEN control-only amendment and corrected implementation proposal; no runtime authority is granted.
+Branch: `main`
+Head: `e71ad04f803aa6a66e2e2f947b8ed9fee10f0cdb`
+Next command: `Execute only the eleven retests frozen in reengineering/PHASE4_CHARACTERIZATION_AMENDMENT.md; do not begin LW-P4-001.`
 
 ## LW_M0_BASELINE WORK
 
@@ -304,11 +304,11 @@ Next command: `Obtain maintainer disposition for a separately claimed Phase 4 ch
 
 ## LW_P4_AMENDMENT WORK
 
-Step: `phase4-amendment-pr-open`
-Note: PR #4 contains the independently GREEN control-only amendment and corrected implementation proposal; no runtime authority is granted.
-Branch: `reengineering/p4-characterization-amendment`
-Head: `99bc4409606d3af1b9d6a2ac938859bba58c3517`
-Next command: `Review PR #4 once, address actionable findings in one batch, then merge only if checks remain GREEN; do not begin LW-P4-001.`
+Step: `phase4-amendment-post-merge`
+Note: PR #4 merged the independently GREEN control-only amendment and corrected implementation proposal; no runtime authority is granted.
+Branch: `main`
+Head: `e71ad04f803aa6a66e2e2f947b8ed9fee10f0cdb`
+Next command: `Execute only the eleven retests frozen in reengineering/PHASE4_CHARACTERIZATION_AMENDMENT.md; do not begin LW-P4-001.`
 
 ### Validations
 
@@ -322,6 +322,8 @@ Next command: `Review PR #4 once, address actionable findings in one batch, then
 - **VERIFIED** — final independent read-only QA returned GREEN after reproducing 8/8 focused tests, validator validity, all isolated negative locks, and clean diff hygiene.
 - **VERIFIED** — PR #4 opened against `EmergentKnowledgeGroup/LATTICEWORK:main` from pushed commit `99bc4409606d3af1b9d6a2ac938859bba58c3517`.
 - **VERIFIED** — the single CodeRabbit review's one actionable testing finding was fixed by splitting combined negative cases into one mutation and one specific assertion each.
+- **VERIFIED** — PR #4 merged at `e71ad04f803aa6a66e2e2f947b8ed9fee10f0cdb`; its only review thread is resolved and the CodeRabbit status is SUCCESS.
+- **MEASURED** — post-merge full controls pass 138/138 with zero fail/skip/todo; both Phase 4 validators remain valid and diff hygiene is clean.
 
 ### Blockers
 
