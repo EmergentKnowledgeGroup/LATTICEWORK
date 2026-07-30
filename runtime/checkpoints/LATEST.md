@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-30T22:32:57Z`
+Updated: `2026-07-30T23:39:48Z`
 
 ## CURRENT
 
-Track: `LW_P4_CHARACTERIZATION WORK`
-Step: `phase4-characterization-post-merge`
-Note: PR #3 merged the complete BLOCKED characterization packet; LW-P4-001 remains blocked pending a separately accepted amendment.
-Branch: `main`
-Head: `baf82dc59edbe065d3c62d3ea08fe2941438fc96`
-Next command: `Obtain maintainer disposition for a separately claimed Phase 4 characterization amendment; do not begin LW-P4-001 under the blocked packet.`
+Track: `LW_P4_AMENDMENT WORK`
+Step: `phase4-amendment-pr-open`
+Note: PR #4 contains the independently GREEN control-only amendment and corrected implementation proposal; no runtime authority is granted.
+Branch: `reengineering/p4-characterization-amendment`
+Head: `99bc4409606d3af1b9d6a2ac938859bba58c3517`
+Next command: `Review PR #4 once, address actionable findings in one batch, then merge only if checks remain GREEN; do not begin LW-P4-001.`
 
 ## LW_M0_BASELINE WORK
 
@@ -301,3 +301,29 @@ Next command: `Obtain maintainer disposition for a separately claimed Phase 4 ch
 
 - `LW-BLK-009` remains OPEN until every mandatory characterization result is PASS and independent reproduction is accepted.
 - `LW-BLK-010` keeps `LW-P4-001` implementation blocked.
+
+## LW_P4_AMENDMENT WORK
+
+Step: `phase4-amendment-pr-open`
+Note: PR #4 contains the independently GREEN control-only amendment and corrected implementation proposal; no runtime authority is granted.
+Branch: `reengineering/p4-characterization-amendment`
+Head: `99bc4409606d3af1b9d6a2ac938859bba58c3517`
+Next command: `Review PR #4 once, address actionable findings in one batch, then merge only if checks remain GREEN; do not begin LW-P4-001.`
+
+### Validations
+
+- **VERIFIED** — PR #3 merged the original blocked characterization evidence.
+- **ACCEPTED** — maintainer authorized documented defect divergences and a run-owned loopback-only synthetic streaming fixture.
+- **OBSERVED** — real data, credentials, provider traffic, activation, deployment, and cutover remain disabled.
+- **VERIFIED** — eight original defects are accepted divergences, eleven cases remain bounded retests, and all 39 original results remain immutable.
+- **MEASURED** — post-review amendment controls pass 13/13 and full repository controls pass 138/138 with zero fail, skip, or todo.
+- **VERIFIED** — amendment and active-scope validators are valid; negative controls reject runtime authority, unsafe listeners, scope drift, and owned/protected-path drift.
+- **VERIFIED** — independent QA's one finding was fixed by machine-locking fixture/synthetic-only flags and exact owned/protected paths.
+- **VERIFIED** — final independent read-only QA returned GREEN after reproducing 8/8 focused tests, validator validity, all isolated negative locks, and clean diff hygiene.
+- **VERIFIED** — PR #4 opened against `EmergentKnowledgeGroup/LATTICEWORK:main` from pushed commit `99bc4409606d3af1b9d6a2ac938859bba58c3517`.
+- **VERIFIED** — the single CodeRabbit review's one actionable testing finding was fixed by splitting combined negative cases into one mutation and one specific assertion each.
+
+### Blockers
+
+- `LW-BLK-009` remains open until the eleven bounded retests and independent reproduction are complete.
+- `LW-BLK-010` remains open until the corrected implementation packet is separately accepted.

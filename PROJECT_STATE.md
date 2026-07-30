@@ -8,15 +8,15 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 4 CHARACTERIZATION COMPLETE — BLOCKED / IMPLEMENTATION BLOCKED`
+`PHASE 4 AMENDMENT PREPARED — RETESTS AND IMPLEMENTATION ACCEPTANCE BLOCKED`
 
 ## Current milestone
 
-`M1/M3 boundary — primary Chat characterization amendment required`
+`M1/M3 boundary — primary Chat amendment validation and bounded retests`
 
 ## Current target
 
-`LW-P4-CHAR-001 — 39/39 executed; aggregate BLOCKED`
+`LW-P4-AMEND-001 — eight divergences accepted; eleven retests frozen`
 
 ## Upstream baseline
 
@@ -38,6 +38,13 @@ denied-egress tooling only. It produced 20 PASS, 16 UNKNOWN, and 3 FAIL.
 Candidate application changes, package integration, real data, credentials,
 provider traffic, listeners beyond the existing loopback static harness,
 activation, migration, and cutover remain unauthorized.
+
+The maintainer has now accepted the confirmed cancellation and wrong-target
+defects as documented divergences and authorized one run-owned
+`127.0.0.1` synthetic streaming fixture. The amendment and corrected
+implementation packet remain control documents only. Eleven bounded retests,
+independent reproduction, and later explicit implementation-packet acceptance
+are still required.
 
 ## Last verified date
 
@@ -66,6 +73,7 @@ activation, migration, and cutover remain unauthorized.
 | `LW-P4-CTRL-001` | Phase-closed historical and fail-closed active scope controls | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P4-CTRL-001.md` |
 | `LW-P4-PREFLIGHT-001` | Primary Chat baseline characterization lock | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `COMPLETED — LOCKED / GREEN` | `docs/agents/handoffs/LW-P4-PREFLIGHT-001.md` |
 | `LW-P4-CHAR-001` | Synthetic primary Chat baseline characterization | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `COMPLETED — BLOCKED` | `docs/agents/handoffs/LW-P4-CHAR-001.md` |
+| `LW-P4-AMEND-001` | Characterization amendment and corrected implementation packet | Codex root controller | `reengineering/p4-characterization-amendment` | `IN PROGRESS — CONTROL ONLY` | `reengineering/PHASE4_CHARACTERIZATION_AMENDMENT.md` |
 
 ## Completed in current milestone
 
@@ -181,8 +189,9 @@ activation, migration, and cutover remain unauthorized.
 - `LW-BLK-007` remains open for eventual cutover.
 - `LW-BLK-008` is closed by the phase-closed historical and claim-specific
   active-scope controls.
-- `LW-BLK-009` remains open until all 39 mandatory Phase 4 characterization
-  subcases pass and independent clean-worktree reproduction is accepted.
+- `LW-BLK-009` remains open until all 39 mandatory Phase 4 cases have a final
+  `PASS` or accepted-divergence disposition and the amended bundle is
+  independently reproduced.
 - `LW-BLK-010` keeps candidate implementation blocked until a later,
   separately accepted implementation packet exists.
 
@@ -219,11 +228,9 @@ activation, migration, and cutover remain unauthorized.
 
 ## Next handoff
 
-**Next action:** obtain maintainer disposition for a separately claimed Phase 4
-characterization amendment. The amendment must explicitly handle definitive
-baseline absences, the OpenAI-to-Groq wrong-target defect, and observations
-that require capabilities prohibited by the current no-listener packet. Do not
-modify candidate or legacy runtime behavior.
+**Next action:** validate the amendment and corrected implementation packet,
+then execute only the eleven bounded characterization retests. Do not modify
+candidate or legacy runtime behavior.
 
 **Read first:** `reengineering/PHASE4_PREFLIGHT.md`,
 `docs/agents/handoffs/LW-P4-PREFLIGHT-001.md`, and

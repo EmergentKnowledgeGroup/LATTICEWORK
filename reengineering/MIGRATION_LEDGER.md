@@ -7,7 +7,7 @@
 | `MIG-001` | Canonical web source/build | root/docs mirrors | `apps/web/src` per accepted ADR-001 | Low | Critical | legacy remains runnable | FOUNDATION VERIFIED — no route or deployment cutover | `evidence/phase-2/LW-P2-001/` |
 | `MIG-002` | Provider calls | global browser functions | provider contracts/adapters | High | High | route flag to legacy | BOUNDED MOCK FOUNDATION VERIFIED — no provider traffic or route activation | ADR-005 and `evidence/phase-3/LW-P3-001/` |
 | `MIG-003` | Browser storage | direct feature/UI calls | versioned repositories | Critical | Critical | backup-first/copy-on-write | SYNTHETIC FOUNDATION VERIFIED — no real-data read or activation | ADR-004 and `evidence/phase-3/LW-P3-001/` |
-| `MIG-004` | Chat vertical slice | monolith/global state | bounded chat feature | High | Critical | legacy route default | BLOCKED — baseline characterization is 20 PASS / 16 UNKNOWN / 3 FAIL | `evidence/phase-4/LW-P4-CHAR-001/` |
+| `MIG-004` | Chat vertical slice | monolith/global state | bounded chat feature | High | Critical | legacy route default | BLOCKED — eight divergences accepted; eleven bounded retests and packet acceptance remain | `evidence/phase-4/LW-P4-CHAR-001/`, `PHASE4_CHARACTERIZATION_AMENDMENT.md` |
 | `MIG-005` | Service worker | mirrored scripts/caches | generated manifest/runtime | Critical | Critical | previous known-good cache | BLOCKED | pending |
 | `MIG-006` | Desktop | Electron and Tauri | one accepted strategy or deferral | High | High | no desktop cutover | BLOCKED | pending |
 
@@ -28,3 +28,7 @@ characterization packet cannot reach GREEN without a separately accepted
 amendment: the baseline lacks visible Chat cancellation, several timed and
 accessibility observations remain UNKNOWN under the no-listener boundary, and
 visible OpenAI onboarding dispatches the Groq endpoint.
+
+The maintainer-approved amendment preserves those original results, accepts
+eight named defects as divergences, and authorizes a test-only loopback stream
+fixture. It starts no migration and grants no implementation authority.

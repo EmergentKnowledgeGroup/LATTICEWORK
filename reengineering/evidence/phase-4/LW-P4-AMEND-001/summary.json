@@ -1,0 +1,41 @@
+{
+  "schema": "latticework.phase4-amendment-evidence.v1",
+  "work_id": "LW-P4-AMEND-001",
+  "status": "CONTROL_PACKET_GREEN",
+  "base_commit": "a9f8cdd877e835f7bd86edd49d44ba0b711ef205",
+  "original_characterization": {
+    "work_id": "LW-P4-CHAR-001",
+    "status": "BLOCKED",
+    "pass": 20,
+    "unknown": 16,
+    "fail": 3
+  },
+  "amendment": {
+    "accepted_divergences": 8,
+    "loopback_retests": 5,
+    "existing_harness_retests": 6,
+    "remaining_characterization_gate": "BLOCKED_PENDING_RETESTS"
+  },
+  "implementation_packet": {
+    "packet_id": "LW-P4-IMPL-PREFLIGHT-001",
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "implementation_authorized": false
+  },
+  "safety": {
+    "real_data": false,
+    "real_credentials": false,
+    "real_provider_traffic": false,
+    "activation": false,
+    "deployment": false,
+    "cutover": false,
+    "listener": "test-only 127.0.0.1 OS-selected run-owned synthetic fixture"
+  },
+  "validation": {
+    "focused_tests": "13/13 pass",
+    "repository_controls": "138/138 pass; zero fail/skip/todo",
+    "amendment_validator": "valid true",
+    "active_scope_validator": "valid true",
+    "diff_check": "pass",
+    "independent_review": "GREEN before PR review; CodeRabbit's single finding was fixed with isolated negative tests"
+  }
+}
