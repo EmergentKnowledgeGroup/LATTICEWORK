@@ -1,9 +1,9 @@
 # Handoff — `LW-P3-DEC-001`
 
-**From:** Codex root controller  
-**To:** Maintainer or next bounded implementation controller  
-**Date:** `2026-07-30T13:35:25Z`  
-**Current commit:** `22c3742cdc7863f16bf190ee23ddc67eabc20ec1`  
+**From:** Codex root controller
+**To:** Maintainer or next bounded implementation controller
+**Date:** `2026-07-30T13:35:25Z`
+**Current commit:** `22c3742cdc7863f16bf190ee23ddc67eabc20ec1`
 **Branch:** `reengineering/p3-decision-packet`
 
 ## State in one paragraph
