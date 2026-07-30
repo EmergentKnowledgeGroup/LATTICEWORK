@@ -21,7 +21,16 @@ function createBundle(name) {
   fs.rmSync(root, { recursive: true, force: true });
   const bundle = path.join(root, "evidence");
   for (const command of COMMANDS) writeJson(path.join(bundle, "commands", command, "manifest.json"), { schema: "latticework.evidence.command.v1", exit_code: 0, baseline_sha: BASELINE, candidate_sha: CANDIDATE });
-  writeJson(path.join(bundle, "summary.json"), { schema: "latticework.phase2-summary.v1", valid: true, work_id: "LW-P2-001", baseline_sha: BASELINE, candidate_sha: CANDIDATE, lockfile_reproducible: true, browser: { expected: 6, unexpected: 0, skipped: 0, flaky: 0 } });
+  writeJson(path.join(bundle, "summary.json"), {
+    schema: "latticework.phase2-summary.v1",
+    valid: true,
+    work_id: "LW-P2-001",
+    baseline_sha: BASELINE,
+    candidate_sha: CANDIDATE,
+    lockfile_reproducible: true,
+    browser: { expected: 6, unexpected: 0, skipped: 0, flaky: 0 },
+    repository_controls: { tests: 52, passed: 52, failed: 0, skipped: 0 },
+  });
   const file = { path: "assets/index.js", bytes: 12, gzip_bytes: 8, brotli_bytes: 7 };
   writeJson(path.join(bundle, "build-comparison.json"), { schema: "latticework.phase2-build-comparison.v1", valid: true, first: { files: [file] }, second: { files: [file] } });
   const protectedFiles = ["app.html", "index.html", "docs/app.html", "docs/sw.js", "sw.js", "server.js", "server.py", "tests/smoke.js"].map((item) => ({ path: item }));
@@ -108,6 +117,7 @@ test("rejects gate failures, wrong receipts, missing visual evidence, and secret
   const summaryPath = path.join(bundle, "summary.json");
   const summary = JSON.parse(fs.readFileSync(summaryPath, "utf8"));
   summary.browser.flaky = 1;
+  summary.repository_controls.skipped = 1;
   writeJson(summaryPath, summary);
   writeJson(path.join(bundle, "commands", "audit", "manifest.json"), { schema: "latticework.evidence.command.v1", exit_code: 1, baseline_sha: BASELINE, candidate_sha: CANDIDATE });
   fs.rmSync(path.join(bundle, "browser", "candidate-forced-colors.png"));
@@ -117,6 +127,7 @@ test("rejects gate failures, wrong receipts, missing visual evidence, and secret
   assert.equal(result.valid, false);
   const report = result.failures.join("\n");
   assert.match(report, /browser stats/i);
+  assert.match(report, /repository control stats/i);
   assert.match(report, /did not exit 0/i);
   assert.match(report, /missing browser artifact/i);
   assert.match(report, /sentinel or secret/i);

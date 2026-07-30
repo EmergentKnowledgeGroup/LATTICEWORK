@@ -184,5 +184,8 @@ test("verification runner replays the lockfile and validates the final bundle", 
   assert.match(runner, /LW-P2-001-lockfile-generate/);
   assert.match(runner, /npm install --package-lock-only --ignore-scripts/);
   assert.match(runner, /latticework\.phase2-lockfile-comparison\.v1/);
+  assert.match(runner, /\$env:LATTICEWORK_BASELINE_ROOT = \$BaselineRoot/);
+  assert.match(runner, /--test-reporter=tap/);
+  assert.match(runner, /52 tests, 52 passed, 0 failed, and 0 skipped/);
   assert.match(runner, /validate-phase2-evidence\.mjs/);
 });

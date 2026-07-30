@@ -76,6 +76,20 @@ function Invoke-EvidenceCommand {
     }
 }
 
+function Read-TapCount {
+    param(
+        [Parameter(Mandatory = $true)][string]$Text,
+        [Parameter(Mandatory = $true)][string]$Name
+    )
+
+    $Pattern = "(?m)^# $([regex]::Escape($Name)) (?<count>\d+)\r?$"
+    $Match = [regex]::Match($Text, $Pattern)
+    if (-not $Match.Success) {
+        throw "Repository control receipt is missing TAP count: $Name"
+    }
+    return [int]$Match.Groups["count"].Value
+}
+
 if ($Port -lt 1024 -or $Port -gt 65535) {
     throw "Port must be between 1024 and 65535."
 }
@@ -119,6 +133,7 @@ $env:PLAYWRIGHT_BROWSERS_PATH = Resolve-RepositoryDescendant `
     -Label "Playwright browser path"
 $env:LATTICEWORK_P2_PORT = [string]$Port
 $env:LATTICEWORK_P2_PLAYWRIGHT_OUTPUT = $BrowserOutput
+$env:LATTICEWORK_BASELINE_ROOT = $BaselineRoot
 Remove-Item Env:FORCE_COLOR -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Force -Path `
     $env:TEMP, `
@@ -192,7 +207,23 @@ Invoke-EvidenceCommand `
 Invoke-EvidenceCommand `
     -Id "LW-P2-001-controls" `
     -Directory "controls" `
-    -Command @("node.exe", "--test", "tests/reengineering/*.test.mjs")
+    -Command @("node.exe", "--test", "--test-reporter=tap", "tests/reengineering/*.test.mjs")
+$ControlsReceipt = Join-Path $EvidenceRoot "commands\controls\stdout.log"
+$ControlsOutput = Get-Content -LiteralPath $ControlsReceipt -Raw
+$Controls = [ordered]@{
+    tests = Read-TapCount -Text $ControlsOutput -Name "tests"
+    passed = Read-TapCount -Text $ControlsOutput -Name "pass"
+    failed = Read-TapCount -Text $ControlsOutput -Name "fail"
+    skipped = Read-TapCount -Text $ControlsOutput -Name "skipped"
+}
+if (
+    $Controls.tests -ne 52 -or
+    $Controls.passed -ne 52 -or
+    $Controls.failed -ne 0 -or
+    $Controls.skipped -ne 0
+) {
+    throw "Repository controls must report exactly 52 tests, 52 passed, 0 failed, and 0 skipped."
+}
 
 Remove-Item Env:LATTICEWORK_P2_OUT_DIR -ErrorAction SilentlyContinue
 Invoke-EvidenceCommand `
@@ -305,9 +336,14 @@ $Summary = [ordered]@{
         $BuildComparison.valid -and
         $Boundary.valid -and
         $SupplyChain.valid -and
+        $Controls.tests -eq 52 -and
+        $Controls.passed -eq 52 -and
+        $Controls.failed -eq 0 -and
+        $Controls.skipped -eq 0 -and
         $Audit.metadata.vulnerabilities.total -eq 0
     )
     browser = $BrowserResults.stats
+    repository_controls = $Controls
     lockfile_reproducible = [bool]$LockfileComparison.valid
     build_reproducible = [bool]$BuildComparison.valid
     protected_boundary_valid = [bool]$Boundary.valid
@@ -340,6 +376,7 @@ This bundle proves only the bounded feature-free candidate shell described in
 feature migration, production readiness, or cutover readiness.
 
 - Browser: $($BrowserResults.stats.expected) expected, $($BrowserResults.stats.unexpected) unexpected, $($BrowserResults.stats.skipped) skipped.
+- Repository controls: $($Controls.passed)/$($Controls.tests) passed, $($Controls.failed) failed, $($Controls.skipped) skipped.
 - Isolated package-lock replay: $($LockfileComparison.valid).
 - Deterministic build comparison: $($BuildComparison.valid).
 - Protected legacy boundary: $($Boundary.valid).

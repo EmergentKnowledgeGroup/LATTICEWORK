@@ -236,6 +236,16 @@ export function validatePhase2Evidence({ directory, workspaceRoot, baselineSha, 
   if (!browser || browser.expected !== 6 || browser.unexpected !== 0 || browser.skipped !== 0 || browser.flaky !== 0) {
     failures.push("summary browser stats must be exactly 6 expected and 0 unexpected/skipped/flaky");
   }
+  const controls = summary?.repository_controls;
+  if (
+    !controls ||
+    controls.tests !== 52 ||
+    controls.passed !== 52 ||
+    controls.failed !== 0 ||
+    controls.skipped !== 0
+  ) {
+    failures.push("summary repository control stats must be exactly 52 tests, 52 passed, 0 failed, and 0 skipped");
+  }
 
   const build = readJson(path.join(resolvedDirectory, "build-comparison.json"), failures, "build-comparison.json");
   if (!build || build.valid !== true || build.schema !== "latticework.phase2-build-comparison.v1") failures.push("build comparison must be valid");
