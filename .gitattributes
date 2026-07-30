@@ -17,4 +17,4 @@
 *.zip binary
 
 # Raw evidence is byte-addressed by its own manifests.
-reengineering/evidence/** -whitespace
+reengineering/evidence/** -text -whitespace

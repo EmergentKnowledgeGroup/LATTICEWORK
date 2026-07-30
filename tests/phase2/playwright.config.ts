@@ -1,27 +1,28 @@
 import { defineConfig } from "@playwright/test";
-import { isAbsolute, relative, resolve } from "node:path";
+import { isAbsolute, resolve } from "node:path";
+import {
+  candidatePreviewPort,
+  requireSafeRepositoryOutput,
+} from "../../apps/web/vite.config.ts";
 
 const workspaceRoot = resolve(import.meta.dirname, "../..");
-const configuredOutput = process.env.LATTICEWORK_P2_PLAYWRIGHT_OUTPUT?.trim();
-const outputDir = resolve(
-  workspaceRoot,
-  configuredOutput && !isAbsolute(configuredOutput)
-    ? configuredOutput
-    : configuredOutput || "output/lw-p2-001/playwright",
-);
-const outputRelative = relative(workspaceRoot, outputDir);
-if (
-  outputRelative.length === 0 ||
-  outputRelative.startsWith("..") ||
-  isAbsolute(outputRelative)
-) {
-  throw new Error("Phase 2 Playwright output must stay inside the LATTICEWORK repository.");
+export function phase2PlaywrightOutputDirectory(
+  configuredOutput = process.env.LATTICEWORK_P2_PLAYWRIGHT_OUTPUT?.trim(),
+): string {
+  const target = configuredOutput
+    ? isAbsolute(configuredOutput)
+      ? configuredOutput
+      : resolve(workspaceRoot, configuredOutput)
+    : resolve(workspaceRoot, "output/lw-p2-001/playwright");
+  return requireSafeRepositoryOutput(
+    target,
+    workspaceRoot,
+    "Phase 2 Playwright output",
+  );
 }
-const configuredPort = Number(process.env.LATTICEWORK_P2_PORT ?? "4174");
-if (!Number.isInteger(configuredPort) || configuredPort < 1024 || configuredPort > 65535) {
-  throw new Error("LATTICEWORK_P2_PORT must be an integer between 1024 and 65535.");
-}
-const baseURL = `http://127.0.0.1:${configuredPort}`;
+
+const outputDir = phase2PlaywrightOutputDirectory();
+const baseURL = `http://127.0.0.1:${candidatePreviewPort("production")}`;
 
 export default defineConfig({
   forbidOnly: true,

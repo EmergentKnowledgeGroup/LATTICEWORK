@@ -105,6 +105,55 @@ test("records a platform-skipped optional package from lock metadata without fai
   });
 });
 
+test("permits skipped optional metadata without installed license or integrity", () => {
+  const root = path.join(TEST_ROOT, "optional-without-installed-metadata");
+  fs.rmSync(root, { recursive: true, force: true });
+  writeJson(path.join(root, "package.json"), { name: "fixture", private: true });
+  writeJson(path.join(root, "package-lock.json"), {
+    name: "fixture",
+    lockfileVersion: 3,
+    packages: {
+      "": { name: "fixture" },
+      "node_modules/platform-addon": { version: "1.0.0", optional: true },
+    },
+  });
+
+  const summary = collectPhase2SupplyChain({
+    workspaceRoot: root,
+    outputPath: path.join(root, "evidence", "supply-chain.json"),
+  });
+
+  assert.equal(summary.valid, true);
+  assert.equal(summary.skipped_optional_package_count, 1);
+});
+
+test("discovers nested node_modules packages using their innermost package name", () => {
+  const root = path.join(TEST_ROOT, "nested-node-modules");
+  fs.rmSync(root, { recursive: true, force: true });
+  writeJson(path.join(root, "package.json"), { name: "fixture", private: true });
+  writeJson(path.join(root, "package-lock.json"), {
+    name: "fixture",
+    lockfileVersion: 3,
+    packages: {
+      "": { name: "fixture" },
+      "node_modules/parent/node_modules/child": {
+        version: "1.0.0", integrity: "sha512-child", license: "MIT",
+      },
+    },
+  });
+  writeJson(path.join(root, "node_modules", "parent", "node_modules", "child", "package.json"), {
+    name: "child", version: "1.0.0", license: "MIT",
+  });
+
+  const summary = collectPhase2SupplyChain({
+    workspaceRoot: root,
+    outputPath: path.join(root, "evidence", "supply-chain.json"),
+  });
+
+  assert.equal(summary.valid, true);
+  assert.equal(summary.external_packages[0].name, "child");
+});
+
 test("reports missing external license and integrity metadata", () => {
   const root = path.join(TEST_ROOT, "incomplete");
   fs.rmSync(root, { recursive: true, force: true });

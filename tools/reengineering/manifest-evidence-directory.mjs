@@ -11,9 +11,17 @@ import {
 } from "./evidence-common.mjs";
 
 function walkFiles(directory) {
+  const directoryStats = fs.lstatSync(directory);
+  if (directoryStats.isSymbolicLink()) {
+    throw new Error(`Evidence directory must not traverse symbolic links: ${directory}`);
+  }
   const files = [];
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
     const entryPath = path.join(directory, entry.name);
+    const entryStats = fs.lstatSync(entryPath);
+    if (entryStats.isSymbolicLink()) {
+      throw new Error(`Evidence directory must not traverse symbolic links: ${entryPath}`);
+    }
     if (entry.isDirectory()) {
       files.push(...walkFiles(entryPath));
     } else if (entry.isFile()) {
@@ -44,12 +52,16 @@ export function manifestEvidenceDirectory({
   const externalArtifacts = [];
   if (externalPath) {
     const resolvedExternal = path.resolve(externalPath);
-    const stats = fs.statSync(resolvedExternal);
+    const stats = fs.lstatSync(resolvedExternal);
+    if (stats.isSymbolicLink()) {
+      throw new Error(`External evidence path must not be a symbolic link: ${resolvedExternal}`);
+    }
     if (!stats.isFile()) {
       throw new Error(`External evidence path is not a file: ${resolvedExternal}`);
     }
     externalArtifacts.push({
-      ...buildFileReceipt(resolvedExternal, resolvedDirectory),
+      ...buildFileReceipt(resolvedExternal, path.dirname(resolvedExternal)),
+      path: path.basename(resolvedExternal),
       absolute_path: resolvedExternal,
       repository_artifact: false,
     });

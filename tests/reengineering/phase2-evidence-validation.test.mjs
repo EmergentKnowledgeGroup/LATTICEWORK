@@ -122,8 +122,41 @@ test("rejects gate failures, wrong receipts, missing visual evidence, and secret
   assert.match(report, /sentinel or secret/i);
 });
 
+test("rejects malformed audit receipts and scans NUL-containing text while excluding PNG artifacts", () => {
+  const { bundle } = createBundle("nul-secret-and-audit");
+  writeJson(path.join(bundle, "npm-audit.json"), { metadata: { vulnerabilities: { total: "0" } } });
+  write(path.join(bundle, "notes.txt"), "sk-\0abcdefghijklmnopqrstuvwxyz");
+  write(path.join(bundle, "browser", "candidate-desktop.png"), Buffer.concat([
+    Buffer.from("sk-\0abcdefghijklmnopqrstuvwxyz"),
+    Buffer.from([0]),
+  ]));
+  refreshManifest(bundle);
+
+  const result = validate(bundle);
+  assert.equal(result.valid, false);
+  assert.match(result.failures.join("\n"), /npm audit vulnerability total must be an integer 0/);
+  assert.match(result.failures.join("\n"), /sentinel or secret/i);
+});
+
 test("refuses evidence and output paths outside the repository", () => {
   const { bundle } = createBundle("path-safety");
   assert.throws(() => validatePhase2Evidence({ directory: path.resolve(REPO_ROOT, ".."), workspaceRoot: REPO_ROOT, baselineSha: BASELINE, candidateSha: CANDIDATE }), /strict repository descendant/i);
   assert.throws(() => validatePhase2Evidence({ directory: bundle, workspaceRoot: REPO_ROOT, baselineSha: BASELINE, candidateSha: CANDIDATE, outputPath: path.resolve(REPO_ROOT, "..", "escaped.json") }), /strict repository descendant/i);
+});
+
+test("fails closed when browser evidence is behind a symbolic link", (t) => {
+  const { bundle } = createBundle("browser-symlink");
+  const browser = path.join(bundle, "browser");
+  const target = path.join(path.dirname(bundle), "real-browser");
+  fs.renameSync(browser, target);
+  try {
+    fs.symlinkSync(target, browser, process.platform === "win32" ? "junction" : "dir");
+  } catch (error) {
+    t.skip(`symbolic-link fixture unavailable: ${error.code ?? error.message}`);
+    return;
+  }
+
+  const result = validate(bundle);
+  assert.equal(result.valid, false);
+  assert.match(result.failures.join("\n"), /symbolic link or junction/i);
 });

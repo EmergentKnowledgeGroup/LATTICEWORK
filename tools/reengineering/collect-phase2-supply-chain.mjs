@@ -4,14 +4,9 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { parseNamedArgs, writeJson } from "./evidence-common.mjs";
+import { isStrictDescendant, parseNamedArgs, writeJson } from "./evidence-common.mjs";
 
 const LIFECYCLE_SCRIPT_NAMES = ["preinstall", "install", "postinstall", "prepare"];
-
-function isStrictDescendant(targetPath, parentPath) {
-  const relative = path.relative(path.resolve(parentPath), path.resolve(targetPath));
-  return Boolean(relative) && !relative.startsWith("..") && !path.isAbsolute(relative);
-}
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, ""));
@@ -60,11 +55,13 @@ function inspectExternalPackage(workspaceRoot, lockPath, lockEntry, failures) {
     if (!record.optional) {
       failures.push(`required installed package metadata is missing: ${lockPath}/package.json`);
     }
-    if (!record.license) {
-      failures.push(`${record.name} is missing license metadata`);
-    }
-    if (!record.integrity) {
-      failures.push(`${record.name} is missing lockfile integrity metadata`);
+    if (!record.optional) {
+      if (!record.license) {
+        failures.push(`${record.name} is missing license metadata`);
+      }
+      if (!record.integrity) {
+        failures.push(`${record.name} is missing lockfile integrity metadata`);
+      }
     }
     return record;
   }

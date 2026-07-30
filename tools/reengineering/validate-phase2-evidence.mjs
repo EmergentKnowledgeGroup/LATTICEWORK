@@ -1,11 +1,16 @@
 #!/usr/bin/env node
 
-import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { parseNamedArgs, writeJson } from "./evidence-common.mjs";
+import {
+  isStrictDescendant,
+  findReparsePoint,
+  parseNamedArgs,
+  sha256File,
+  writeJson,
+} from "./evidence-common.mjs";
 
 const WORK_ID = "LW-P2-001";
 const COMMAND_DIRECTORIES = [
@@ -30,27 +35,10 @@ const SECRET_PATTERNS = [
   /\b(?:PRIVATE|SECRET)_(?:SENTINEL|TOKEN|KEY)(?:_[A-Z0-9_]+)?\b/,
 ];
 
-function isStrictDescendant(target, root) {
-  const relative = path.relative(path.resolve(root), path.resolve(target));
-  return Boolean(relative) && !relative.startsWith("..") && !path.isAbsolute(relative);
-}
-
 function assertDescendant(target, root, label) {
   if (!isStrictDescendant(target, root)) {
     throw new Error(`${label} must be a strict repository descendant: ${path.resolve(target)}`);
   }
-}
-
-function hasReparsePoint(filePath, root) {
-  let current = path.resolve(root);
-  const target = path.resolve(filePath);
-  const relative = path.relative(current, target);
-  for (const segment of relative.split(path.sep)) {
-    current = path.join(current, segment);
-    const stats = fs.lstatSync(current);
-    if (stats.isSymbolicLink()) return current;
-  }
-  return null;
 }
 
 function readJson(filePath, failures, label) {
@@ -62,25 +50,30 @@ function readJson(filePath, failures, label) {
   }
 }
 
-function sha256(filePath) {
-  return crypto.createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
-}
-
-function findNamedFilePaths(directory, names) {
+function findNamedFilePaths(directory, names, failures) {
   const wanted = new Set(names);
   const found = new Map();
   function walk(current) {
     for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
       const target = path.join(current, entry.name);
       const stats = fs.lstatSync(target);
-      if (stats.isSymbolicLink()) continue;
+      if (stats.isSymbolicLink()) {
+        failures.push(`browser evidence traverses symbolic link or junction: ${target}`);
+        continue;
+      }
       if (entry.isDirectory()) walk(target);
       else if (entry.isFile() && wanted.has(entry.name) && !found.has(entry.name)) {
         found.set(entry.name, target);
       }
     }
   }
-  if (fs.existsSync(directory)) walk(directory);
+  if (fs.existsSync(directory)) {
+    if (fs.lstatSync(directory).isSymbolicLink()) {
+      failures.push(`browser evidence traverses symbolic link or junction: ${directory}`);
+    } else {
+      walk(directory);
+    }
+  }
   return found;
 }
 
@@ -167,7 +160,7 @@ function validateManifest(directory, manifest, failures) {
       failures.push(`manifest artifact is missing: ${artifact.path}`);
       continue;
     }
-    const reparse = hasReparsePoint(target, directory);
+    const reparse = findReparsePoint(target, directory);
     if (reparse) {
       failures.push(`manifest artifact traverses symlink or reparse point: ${artifact.path}`);
       continue;
@@ -178,7 +171,7 @@ function validateManifest(directory, manifest, failures) {
       continue;
     }
     if (stats.size !== artifact.bytes) failures.push(`manifest byte count mismatch: ${artifact.path}`);
-    if (sha256(target) !== artifact.sha256) failures.push(`manifest SHA-256 mismatch: ${artifact.path}`);
+    if (sha256File(target) !== artifact.sha256) failures.push(`manifest SHA-256 mismatch: ${artifact.path}`);
   }
 }
 
@@ -202,12 +195,15 @@ function validateReceipts(directory, baselineSha, candidateSha, failures) {
 }
 
 function validateTextSafety(directory, manifest, failures) {
+  const knownBinaryExtensions = new Set([
+    ".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico", ".pdf", ".zip", ".gz", ".wasm",
+  ]);
   for (const artifact of manifest?.artifacts ?? []) {
     if (!artifact || typeof artifact.path !== "string") continue;
     const target = path.resolve(directory, artifact.path);
     if (!isStrictDescendant(target, directory) || !fs.existsSync(target)) continue;
-    const data = fs.readFileSync(target);
-    const text = data.includes(0) ? "" : data.toString("utf8");
+    if (knownBinaryExtensions.has(path.extname(target).toLowerCase())) continue;
+    const text = fs.readFileSync(target).toString("utf8").replaceAll("\0", "");
     if (SECRET_PATTERNS.some((pattern) => pattern.test(text))) {
       failures.push(`obvious sentinel or secret text found in artifact: ${artifact.path}`);
     }
@@ -222,7 +218,7 @@ export function validatePhase2Evidence({ directory, workspaceRoot, baselineSha, 
   if (!fs.existsSync(resolvedDirectory) || !fs.statSync(resolvedDirectory).isDirectory()) {
     throw new Error(`evidence directory does not exist: ${resolvedDirectory}`);
   }
-  const rootReparse = hasReparsePoint(resolvedDirectory, resolvedWorkspace);
+  const rootReparse = findReparsePoint(resolvedDirectory, resolvedWorkspace);
   const failures = [];
   if (rootReparse) failures.push(`evidence directory traverses symlink or reparse point: ${rootReparse}`);
 
@@ -262,8 +258,8 @@ export function validatePhase2Evidence({ directory, workspaceRoot, baselineSha, 
     lockfileComparison.canonical_sha256 !== lockfileComparison.replayed_sha256 ||
     !fs.existsSync(lockfileSnapshot) ||
     !fs.existsSync(lockfileReplay) ||
-    sha256(lockfileSnapshot) !== lockfileComparison.canonical_sha256 ||
-    sha256(lockfileReplay) !== lockfileComparison.replayed_sha256
+    sha256File(lockfileSnapshot) !== lockfileComparison.canonical_sha256 ||
+    sha256File(lockfileReplay) !== lockfileComparison.replayed_sha256
   ) {
     failures.push("isolated package-lock replay must byte-match the canonical lockfile");
   }
@@ -273,7 +269,13 @@ export function validatePhase2Evidence({ directory, workspaceRoot, baselineSha, 
   const supply = readJson(path.join(resolvedDirectory, "supply-chain.json"), failures, "supply-chain.json");
   if (!supply || supply.valid !== true || supply.schema !== "latticework.phase2-supply-chain.v1") failures.push("supply-chain receipt must be valid");
   const audit = readJson(path.join(resolvedDirectory, "npm-audit.json"), failures, "npm-audit.json");
-  if (audit?.metadata?.vulnerabilities?.total !== 0) failures.push("npm audit vulnerability total must be 0");
+  if (
+    !audit ||
+    typeof audit !== "object" ||
+    Array.isArray(audit) ||
+    !Number.isInteger(audit.metadata?.vulnerabilities?.total) ||
+    audit.metadata.vulnerabilities.total !== 0
+  ) failures.push("npm audit vulnerability total must be an integer 0");
   const sbom = readJson(path.join(resolvedDirectory, "sbom.cdx.json"), failures, "sbom.cdx.json");
   if (sbom?.bomFormat !== "CycloneDX") failures.push("SBOM must be CycloneDX");
 
@@ -281,6 +283,7 @@ export function validatePhase2Evidence({ directory, workspaceRoot, baselineSha, 
   const foundBrowser = findNamedFilePaths(
     path.join(resolvedDirectory, "browser"),
     ["results.json", ...REQUIRED_BROWSER_ARTIFACTS],
+    failures,
   );
   for (const name of ["results.json", ...REQUIRED_BROWSER_ARTIFACTS]) {
     if (!foundBrowser.has(name)) failures.push(`missing browser artifact: ${name}`);

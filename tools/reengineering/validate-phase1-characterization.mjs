@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
@@ -9,6 +8,7 @@ import { fileURLToPath } from "node:url";
 import {
   ensureDirectory,
   parseNamedArgs,
+  sha256Buffer,
   writeJson,
 } from "./evidence-common.mjs";
 
@@ -117,10 +117,6 @@ const PNG_SIGNATURE = Buffer.from([
 ]);
 const SAFE_ATTACHMENT_NAME = /^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$/;
 
-function sha256(buffer) {
-  return crypto.createHash("sha256").update(buffer).digest("hex");
-}
-
 function safeSegment(value) {
   return String(value)
     .toLowerCase()
@@ -167,7 +163,11 @@ function safeAttachmentName(name) {
 
 function decodeAttachment(attachment) {
   if (typeof attachment.body !== "string") return null;
-  return Buffer.from(attachment.body, "base64");
+  if (!/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(attachment.body)) {
+    return null;
+  }
+  const body = Buffer.from(attachment.body, "base64");
+  return body.toString("base64") === attachment.body ? body : null;
 }
 
 function parseJsonAttachment(text, label, failures) {
@@ -697,7 +697,7 @@ export function validatePhase1Characterization({
   let blockedHttp = 0;
   let blockedWebSockets = 0;
   let blockedRealtime = 0;
-  let networkReceipts = 0;
+  const networkReceiptSpecs = new Set();
   let embeddedSecretSentinel = false;
 
   for (const spec of observedSpecs) {
@@ -711,7 +711,7 @@ export function validatePhase1Characterization({
     const specDirectory = ensureDirectory(
       path.join(resolvedArtifacts, specSegment),
     );
-    const observedNames = new Set();
+    const observedNames = observedAttachmentsBySpec.get(spec.file) ?? new Set();
     observedAttachmentsBySpec.set(spec.file, observedNames);
 
     for (const result of spec.results) {
@@ -806,7 +806,7 @@ export function validatePhase1Characterization({
           attachment.name === "network-receipt.json" &&
           parsedJson !== null
         ) {
-          networkReceipts += 1;
+          networkReceiptSpecs.add(spec.file);
           const counts = validateNetworkReceipt(
             parsedJson,
             spec.file,
@@ -829,7 +829,7 @@ export function validatePhase1Characterization({
             .relative(path.dirname(resolvedOutput), targetPath)
             .replaceAll("\\", "/"),
           bytes: body.byteLength,
-          sha256: sha256(body),
+          sha256: sha256Buffer(body),
         });
       }
     }
@@ -853,6 +853,7 @@ export function validatePhase1Characterization({
       }
     }
   }
+  const networkReceipts = networkReceiptSpecs.size;
   if (networkReceipts !== 6) {
     failures.push(
       `expected 6 browser network receipts; observed ${networkReceipts}`,
@@ -882,7 +883,7 @@ export function validatePhase1Characterization({
         .relative(path.dirname(resolvedOutput), resolvedResults)
         .replaceAll("\\", "/"),
       bytes: fs.statSync(resolvedResults).size,
-      sha256: sha256(fs.readFileSync(resolvedResults)),
+      sha256: sha256Buffer(fs.readFileSync(resolvedResults)),
     },
     baseline_sha: metadata.baseline_sha ?? null,
     baseline_root: metadata.baseline_root ?? null,

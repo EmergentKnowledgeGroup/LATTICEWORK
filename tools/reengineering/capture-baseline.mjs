@@ -167,13 +167,19 @@ export function captureBaseline({ repo, outputDirectory, expectedSha, archiveOut
   const archiveName = `freelattice-baseline-${head}.zip`;
   const archivePath = path.resolve(archiveOutput ?? path.join(resolvedOutput, archiveName));
   ensureDirectory(path.dirname(archivePath));
-  const archiveReused = fs.existsSync(archivePath);
+  const expectedArchive = git(resolvedRepo, ["archive", "--format=zip", head], {
+    encoding: "buffer",
+  });
+  const expectedArchiveSha = sha256Buffer(expectedArchive);
+  const archiveReused = fs.existsSync(archivePath)
+    && sha256Buffer(fs.readFileSync(archivePath)) === expectedArchiveSha;
   if (!archiveReused) {
     git(resolvedRepo, ["archive", "--format=zip", `--output=${archivePath}`, head]);
   }
 
   const treePath = path.join(resolvedOutput, "tracked-tree.json");
   const summaryPath = path.join(resolvedOutput, "baseline-summary.json");
+  const endedAt = new Date();
   writeJson(treePath, {
     schema: "latticework.baseline.tree.v1",
     baseline_sha: head,
@@ -182,7 +188,7 @@ export function captureBaseline({ repo, outputDirectory, expectedSha, archiveOut
   writeJson(summaryPath, {
     schema: "latticework.baseline.summary.v1",
     baseline_sha: head,
-    captured_at: new Date().toISOString(),
+    captured_at: endedAt.toISOString(),
     counts: {
       tracked_files: files.length,
       tracked_directories: directories.size,
@@ -213,7 +219,7 @@ export function captureBaseline({ repo, outputDirectory, expectedSha, archiveOut
     schema: "latticework.evidence.baseline.v1",
     baseline_sha: head,
     started_at: startedAt.toISOString(),
-    ended_at: new Date().toISOString(),
+    ended_at: endedAt.toISOString(),
     repository: {
       path: resolvedRepo,
       status,
@@ -221,6 +227,7 @@ export function captureBaseline({ repo, outputDirectory, expectedSha, archiveOut
       tags: git(resolvedRepo, ["tag", "--points-at", head]).trim().split(/\r?\n/).filter(Boolean),
     },
     archive_reused: archiveReused,
+    archive_sha256: expectedArchiveSha,
     environment: {
       platform: process.platform,
       os_release: os.release(),

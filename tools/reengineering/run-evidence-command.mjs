@@ -27,6 +27,11 @@ function runText(command, args, cwd) {
   };
 }
 
+function optionalToolVersion(command, cwd) {
+  const result = runText(command, ["--version"], cwd);
+  return result.exitCode === 0 ? result.stdout.trim() || null : null;
+}
+
 export function captureCommand({
   cwd,
   outputDirectory,
@@ -34,9 +39,13 @@ export function captureCommand({
   command,
   baselineSha = null,
   candidateSha = null,
+  timeoutMs = 300_000,
 }) {
   if (!Array.isArray(command) || command.length === 0) {
     throw new Error("A command is required after --");
+  }
+  if (!Number.isInteger(timeoutMs) || timeoutMs < 1 || timeoutMs > 3_600_000) {
+    throw new Error("timeoutMs must be an integer between 1 and 3600000.");
   }
 
   const resolvedCwd = path.resolve(cwd);
@@ -47,6 +56,7 @@ export function captureCommand({
     cwd: resolvedCwd,
     encoding: "buffer",
     maxBuffer: 256 * 1024 * 1024,
+    timeout: timeoutMs,
     windowsHide: true,
   });
   const endedNs = process.hrtime.bigint();
@@ -70,6 +80,7 @@ export function captureCommand({
     started_at: startedAt.toISOString(),
     ended_at: endedAt.toISOString(),
     duration_ms: Number(endedNs - startedNs) / 1_000_000,
+    timeout_ms: timeoutMs,
     exit_code: result.status,
     signal: result.signal ?? null,
     spawn_error: result.error?.message ?? null,
@@ -85,6 +96,7 @@ export function captureCommand({
       architecture: process.arch,
       node: process.version,
       git: gitVersion.stdout.trim() || null,
+      npm: optionalToolVersion("npm", resolvedCwd),
     },
     artifacts: [
       buildFileReceipt(stdoutPath, resolvedOutput),

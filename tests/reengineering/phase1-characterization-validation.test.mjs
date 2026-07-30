@@ -355,6 +355,14 @@ test("Phase 1 validator rejects attachment traversal without writing it", () => 
   assert.equal(fs.existsSync(escapedPath), false);
 });
 
+test("Phase 1 validator rejects non-canonical base64 attachment bodies", () => {
+  const result = executeFixture("bad-base64", (results) => {
+    results.suites[0].specs[0].tests[0].results[0].attachments[0].body = "cHJvb2Y";
+  });
+  assert.equal(result.summary.valid, false);
+  assert.match(result.summary.failures.join("\n"), /missing or not embedded/);
+});
+
 test("Phase 1 validator rejects an attachment owned by the wrong spec", () => {
   const result = executeFixture("wrong-owner", (results) => {
     const shellAttachments =

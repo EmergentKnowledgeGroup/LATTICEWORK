@@ -216,6 +216,16 @@ test("fails when a declared evidence hash no longer matches", () => {
   assert.ok(report.failures.some((failure) => failure.code === "evidence-artifact-hash-mismatch"));
 });
 
+test("rejects control JSON that is valid JSON but not an object", () => {
+  createFixture();
+  writeFile(testRoot, "runtime/checkpoints/LATEST.json", "[]\n");
+
+  const report = validatePhase0Control({ repoRoot: testRoot });
+
+  assert.equal(report.valid, false);
+  assert.ok(report.failures.some((failure) => failure.code === "checkpoint-invalid-schema"));
+});
+
 test("fails when a living control document retains an unresolved placeholder", () => {
   createFixture();
   writeFile(testRoot, "docs/COMPARISON.md", "# Comparison\n\n[VALUE]\n");

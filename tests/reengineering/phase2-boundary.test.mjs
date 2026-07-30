@@ -5,7 +5,7 @@ import path from "node:path";
 import test from "node:test";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..", "..");
-const BASELINE_ROOT = "Z:\\LATTICEWORK_BASELINE_e7585999";
+const BASELINE_ROOT = process.env.LATTICEWORK_BASELINE_ROOT;
 
 const PROTECTED_PATHS = [
   "app.html",
@@ -112,7 +112,11 @@ test("candidate build target stays outside deployment mirrors", () => {
   assert.match(config, /base\s*:\s*["']\.\/["']/);
 });
 
-test("protected legacy files byte-match the immutable baseline", () => {
+test("protected legacy files byte-match the immutable baseline", {
+  skip: BASELINE_ROOT
+    ? false
+    : "LATTICEWORK_BASELINE_ROOT is required for immutable baseline comparison",
+}, () => {
   for (const relativePath of PROTECTED_PATHS) {
     const candidate = path.join(REPO_ROOT, relativePath);
     const baseline = path.join(BASELINE_ROOT, relativePath);

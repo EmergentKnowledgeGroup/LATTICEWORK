@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-30T11:43:17Z`
+Updated: `2026-07-30T12:24:24Z`
 
 ## CURRENT
 
 Track: `LW_P2_FOUNDATION WORK`
-Step: `phase2-pr-open`
-Note: The bounded Phase 2 foundation and strict evidence package are committed, pushed, and open for the single authorized review cycle in fork PR #1 without migrating legacy behavior.
+Step: `phase2-coderabbit-fixes-local-green`
+Note: The single authorized CodeRabbit review was addressed in one bounded fix batch; local repository, type, kernel, audit, legacy-characterization, candidate-browser, and junction-safety gates are green before the fix commit and canonical evidence rerun.
 Branch: `reengineering/m0-baseline-characterization`
-Head: `d441177eb14c6f4369f6ff81f5023de7f69e3976`
-Next command: `Run exactly one CodeRabbit review cycle on https://github.com/EmergentKnowledgeGroup/LATTICEWORK/pull/1, address every actionable finding, rerun all relevant gates, then merge and record the post-merge checkpoint.`
+Head: `dc85d0f7819e1cc873daec5c262c0dcf978316bd`
+Next command: `Commit the verified CodeRabbit fix batch, regenerate canonical and independent Phase 2 evidence at the fix commit, update living records, push once without another review, resolve addressed threads, and merge PR #1.`
 
 ## LW_M0_BASELINE WORK
 
@@ -82,11 +82,11 @@ Next command: `Continue only through LW_P2_FOUNDATION WORK and follow reengineer
 
 ## LW_P2_FOUNDATION WORK
 
-Step: `phase2-pr-open`
-Note: The bounded Phase 2 foundation and strict evidence package are committed, pushed, and open for the single authorized review cycle in fork PR #1 without migrating legacy behavior.
+Step: `phase2-coderabbit-fixes-local-green`
+Note: The single authorized CodeRabbit review was addressed in one bounded fix batch; local repository, type, kernel, audit, legacy-characterization, candidate-browser, and junction-safety gates are green before the fix commit and canonical evidence rerun.
 Branch: `reengineering/m0-baseline-characterization`
-Head: `d441177eb14c6f4369f6ff81f5023de7f69e3976`
-Next command: `Run exactly one CodeRabbit review cycle on https://github.com/EmergentKnowledgeGroup/LATTICEWORK/pull/1, address every actionable finding, rerun all relevant gates, then merge and record the post-merge checkpoint.`
+Head: `dc85d0f7819e1cc873daec5c262c0dcf978316bd`
+Next command: `Commit the verified CodeRabbit fix batch, regenerate canonical and independent Phase 2 evidence at the fix commit, update living records, push once without another review, resolve addressed threads, and merge PR #1.`
 
 ### Validations
 
@@ -105,6 +105,11 @@ Next command: `Run exactly one CodeRabbit review cycle on https://github.com/Eme
 - **VERIFIED** — desktop, 390 × 844 mobile, and forced-colors evidence was visually inspected and remained readable with explicit candidate-only/no-migrated-feature language.
 - **VERIFIED** — `docs/agents/handoffs/LW-P2-001.md` and the evidence-linked living documents match the bounded result.
 - **VERIFIED** — commits `c8a040fb38f627bf4d0353b3497645653a57139c` and `d441177eb14c6f4369f6ff81f5023de7f69e3976` are pushed to fork branch `reengineering/m0-baseline-characterization`; review-ready PR #1 targets fork `main`.
+- **OBSERVED** — the single CodeRabbit run completed at commit `dc85d0f7819e1cc873daec5c262c0dcf978316bd`, selected 69 executable/test/tooling files, passed its status check, and posted 19 actionable comments plus 25 nits for one-batch triage.
+- **VERIFIED** — the post-fix repository-control suite passes 52/52, strict TypeScript passes, the kernel suite passes 5/5, and npm audit reports zero vulnerabilities.
+- **VERIFIED** — the corrected immutable-baseline characterization passes 7/7 after proving completion-state persistence and filtering only a transient service-worker toast from the welcome-overlay screenshot.
+- **VERIFIED** — the candidate browser suite passes 6/6 on port 4181 with its network boundary derived from Playwright's resolved base URL.
+- **VERIFIED** — the Phase 2 runner rejects a repository-local junction from an external working directory before recursive evidence cleanup.
 
 ### Blockers
 

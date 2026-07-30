@@ -3,11 +3,17 @@ import fs from "node:fs";
 import path from "node:path";
 import test from "node:test";
 
-import { requireSafeRepositoryOutput } from "../../apps/web/vite.config.ts";
+import {
+  candidatePreviewPort,
+  requireSafeRepositoryOutput,
+} from "../../apps/web/vite.config.ts";
+import { phase2PlaywrightOutputDirectory } from "../phase2/playwright.config.ts";
 import { verifyPhase2Build } from "../../tools/reengineering/verify-phase2-build.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..", "..");
 const TEST_ROOT = path.join(REPO_ROOT, "runtime", "tmp", "phase2-build-verifier-tests");
+
+test.after(() => fs.rmSync(TEST_ROOT, { recursive: true, force: true }));
 
 function resetDirectory(directory) {
   fs.rmSync(directory, { recursive: true, force: true });
@@ -126,6 +132,46 @@ test("candidate output rejects a repository-local reparse point", () => {
     () => requireSafeRepositoryOutput(path.join(link, "candidate"), REPO_ROOT, "Candidate output"),
     /symbolic link or junction/i,
   );
+});
+
+test("Playwright output rejects a repository-local reparse point", () => {
+  const root = path.join(TEST_ROOT, "playwright-reparse-output");
+  const target = path.join(root, "real-target");
+  const link = path.join(root, "linked-output");
+  fs.rmSync(root, { recursive: true, force: true });
+  fs.mkdirSync(target, { recursive: true });
+  fs.symlinkSync(target, link, process.platform === "win32" ? "junction" : "dir");
+
+  assert.throws(
+    () => phase2PlaywrightOutputDirectory(link),
+    /symbolic link or junction/i,
+  );
+});
+
+test("Playwright resolves its preview port through the Vite configuration", () => {
+  const config = fs.readFileSync(
+    path.join(REPO_ROOT, "tests", "phase2", "playwright.config.ts"),
+    "utf8",
+  );
+
+  assert.match(config, /candidatePreviewPort\("production"\)/);
+  assert.doesNotMatch(config, /Number\(process\.env\.LATTICEWORK_P2_PORT/);
+});
+
+test("Vite preview port resolver accepts configured values and defaults empty values", () => {
+  const prior = process.env.LATTICEWORK_P2_PORT;
+  try {
+    process.env.LATTICEWORK_P2_PORT = "4175";
+    assert.equal(candidatePreviewPort("production"), 4175);
+    process.env.LATTICEWORK_P2_PORT = "";
+    assert.equal(candidatePreviewPort("production"), 4174);
+  } finally {
+    if (prior === undefined) {
+      delete process.env.LATTICEWORK_P2_PORT;
+    } else {
+      process.env.LATTICEWORK_P2_PORT = prior;
+    }
+  }
 });
 
 test("verification runner replays the lockfile and validates the final bundle", () => {

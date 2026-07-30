@@ -89,18 +89,29 @@ async function hardenBrowserBoundary(page: Page): Promise<void> {
   });
 }
 
-async function visitCandidate(page: Page): Promise<BrowserBoundaryReceipt> {
+function candidateOrigin(testInfo: TestInfo): string {
+  const configuredBaseURL = testInfo.project.use.baseURL;
+  if (typeof configuredBaseURL !== "string") {
+    throw new Error("Phase 2 Playwright baseURL must be configured.");
+  }
+  return new URL(configuredBaseURL).origin;
+}
+
+async function visitCandidate(
+  page: Page,
+  testInfo: TestInfo,
+): Promise<BrowserBoundaryReceipt> {
   const blockedOutOfOriginRequests: string[] = [];
   const outOfOriginRequests: string[] = [];
   const sameOriginRequests: string[] = [];
   const openedWebSockets: string[] = [];
   const consoleErrors: string[] = [];
   const pageErrors: string[] = [];
-  const candidateOrigin = `http://127.0.0.1:${process.env.LATTICEWORK_P2_PORT ?? "4174"}`;
+  const allowedOrigin = candidateOrigin(testInfo);
 
   await page.route("**/*", async (route) => {
     const requestUrl = new URL(route.request().url());
-    if (requestUrl.origin !== candidateOrigin) {
+    if (requestUrl.origin !== allowedOrigin) {
       blockedOutOfOriginRequests.push(route.request().url());
       await route.abort("blockedbyclient");
       return;
@@ -109,7 +120,7 @@ async function visitCandidate(page: Page): Promise<BrowserBoundaryReceipt> {
   });
   page.on("request", (request) => {
     const requestUrl = new URL(request.url());
-    if (requestUrl.origin !== candidateOrigin) {
+    if (requestUrl.origin !== allowedOrigin) {
       outOfOriginRequests.push(request.url());
     } else {
       sameOriginRequests.push(`${requestUrl.pathname}${requestUrl.search}`);
@@ -184,7 +195,7 @@ async function attachVisualEvidence(page: Page, testInfo: TestInfo, name: string
 
 test("desktop candidate shell is explicit, semantic, and bounded", async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 1440, height: 900 });
-  const browserBoundary = await visitCandidate(page);
+  const browserBoundary = await visitCandidate(page, testInfo);
 
   await expect(page.getByRole("heading", { name: "Candidate status shell" })).toBeVisible();
   await expect(page.getByText("Candidate only. No migrated features are available in this shell.")).toBeVisible();
@@ -220,7 +231,7 @@ test("desktop candidate shell is explicit, semantic, and bounded", async ({ page
 
 test("mobile shell remains readable without horizontal overflow", async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await visitCandidate(page);
+  await visitCandidate(page, testInfo);
 
   const dimensions = await page.evaluate(() => ({
     clientWidth: document.documentElement.clientWidth,
@@ -232,8 +243,8 @@ test("mobile shell remains readable without horizontal overflow", async ({ page 
   await attachVisualEvidence(page, testInfo, "candidate-mobile-390x844");
 });
 
-test("keyboard focus is visible", async ({ page }) => {
-  await visitCandidate(page);
+test("keyboard focus is visible", async ({ page }, testInfo) => {
+  await visitCandidate(page, testInfo);
   await page.keyboard.press("Tab");
 
   const boundaryLink = page.getByRole("link", { name: "Read the candidate boundary" });
@@ -247,9 +258,9 @@ test("keyboard focus is visible", async ({ page }) => {
 });
 
 test.describe("accessibility media profiles", () => {
-  test("reduced motion disables decorative timing", async ({ page }) => {
+  test("reduced motion disables decorative timing", async ({ page }, testInfo) => {
     await page.emulateMedia({ reducedMotion: "reduce" });
-    await visitCandidate(page);
+    await visitCandidate(page, testInfo);
     expect(await page.evaluate(() => matchMedia("(prefers-reduced-motion: reduce)").matches)).toBe(
       true,
     );
@@ -262,7 +273,7 @@ test.describe("accessibility media profiles", () => {
 test.describe("forced colors", () => {
   test("forced colors preserves readable candidate status", async ({ page }, testInfo) => {
     await page.emulateMedia({ forcedColors: "active" });
-    await visitCandidate(page);
+    await visitCandidate(page, testInfo);
     expect(await page.evaluate(() => matchMedia("(forced-colors: active)").matches)).toBe(true);
     const heading = page.getByRole("heading", { name: "Candidate status shell" });
     await expect(heading).toBeVisible();
@@ -280,7 +291,7 @@ test("candidate stays within provisional navigation and long-task ceilings", asy
     });
     Object.defineProperty(window, "__lwP2LongTasks", { value: longTasks });
   });
-  await visitCandidate(page);
+  await visitCandidate(page, testInfo);
   await page.waitForTimeout(100);
 
   const performance = await page.evaluate(() => {

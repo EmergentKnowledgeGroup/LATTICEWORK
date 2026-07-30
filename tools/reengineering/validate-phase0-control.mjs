@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
 import fs from "node:fs";
-import crypto from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
+import { sha256File } from "./evidence-common.mjs";
 
 const REQUIRED_DOCUMENTS = [
   "AGENTS.md",
@@ -146,10 +147,6 @@ function isFile(filePath) {
   }
 }
 
-function sha256File(filePath) {
-  return crypto.createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
-}
-
 function readJson(report, repoRoot, relativePath, codePrefix) {
   const filePath = resolvePath(repoRoot, relativePath);
   if (!isFile(filePath)) {
@@ -158,7 +155,12 @@ function readJson(report, repoRoot, relativePath, codePrefix) {
   }
 
   try {
-    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const value = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    if (!isPlainObject(value)) {
+      addFailure(report, `${codePrefix}-invalid-schema`, relativePath, "Control JSON must be an object.");
+      return null;
+    }
+    return value;
   } catch {
     addFailure(report, `${codePrefix}-invalid-json`, relativePath, "File does not contain valid JSON.");
     return null;
@@ -220,7 +222,8 @@ function validateAdrs(report, repoRoot) {
     }
 
     for (const section of REQUIRED_ADR_SECTIONS) {
-      const heading = new RegExp(`^## ${section.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&")}\\s*$`, "m");
+      const escapedSection = section.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const heading = new RegExp(`^## ${escapedSection}\\s*$`, "m");
       if (!heading.test(content)) {
         entry.missing_sections.push(section);
         addFailure(report, "adr-section-missing", relativePath, `ADR is missing required section: ${section}.`);

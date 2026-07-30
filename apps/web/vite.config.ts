@@ -66,7 +66,7 @@ export function candidateOutputDirectory(mode: string): string {
   );
 }
 
-function candidatePreviewPort(mode: string): number {
+export function candidatePreviewPort(mode: string): number {
   const workspaceRoot = resolve(import.meta.dirname, "../..");
   const loaded = loadEnv(mode, workspaceRoot, "LATTICEWORK_P2_");
   const configured = process.env.LATTICEWORK_P2_PORT ?? loaded.LATTICEWORK_P2_PORT;

@@ -10,6 +10,27 @@ export function sha256File(filePath) {
   return sha256Buffer(fs.readFileSync(filePath));
 }
 
+export function isStrictDescendant(targetPath, parentPath) {
+  const relative = path.relative(path.resolve(parentPath), path.resolve(targetPath));
+  return Boolean(relative) && !relative.startsWith("..") && !path.isAbsolute(relative);
+}
+
+export function findReparsePoint(targetPath, rootPath) {
+  let current = path.resolve(rootPath);
+  const target = path.resolve(targetPath);
+  const relative = path.relative(current, target);
+  for (const segment of relative.split(path.sep)) {
+    current = path.join(current, segment);
+    try {
+      if (fs.lstatSync(current).isSymbolicLink()) return current;
+    } catch (error) {
+      if (error?.code === "ENOENT") return current;
+      throw error;
+    }
+  }
+  return null;
+}
+
 export function ensureDirectory(directory) {
   fs.mkdirSync(directory, { recursive: true });
   return directory;

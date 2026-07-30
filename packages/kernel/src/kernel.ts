@@ -8,15 +8,16 @@ import type {
 
 const SAFE_START_FAILURE_MESSAGE = "A lifecycle start operation failed.";
 const SAFE_STOP_FAILURE_MESSAGE = "A lifecycle stop operation failed.";
+type KernelFailureCode = SafeDiagnostic["code"];
 
 /**
  * A deliberately generic error: thrown participant values are never retained
  * or surfaced in diagnostics because they may contain secrets or personal data.
  */
 export class KernelLifecycleError extends Error {
-  readonly code: "kernel.lifecycle.start.failed" | "kernel.lifecycle.stop.failed";
+  readonly code: KernelFailureCode;
 
-  constructor(code: "kernel.lifecycle.start.failed" | "kernel.lifecycle.stop.failed") {
+  constructor(code: KernelFailureCode) {
     super(code === "kernel.lifecycle.start.failed" ? SAFE_START_FAILURE_MESSAGE : SAFE_STOP_FAILURE_MESSAGE);
     this.name = "KernelLifecycleError";
     this.code = code;

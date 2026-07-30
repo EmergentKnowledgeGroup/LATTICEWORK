@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -6,6 +7,24 @@ import { defineConfig } from "@playwright/test";
 
 const harnessRoot = path.dirname(fileURLToPath(import.meta.url));
 const repositoryRoot = path.resolve(harnessRoot, "..", "..");
+const expectedBaselineSha = "e7585999fc1af2707f410ae87356cf2b52e08d9c";
+
+export function resolveServedBaselineSha(root) {
+  let servedSha;
+  try {
+    servedSha = execFileSync("git", ["-C", root, "rev-parse", "HEAD"], {
+      encoding: "utf8",
+    }).trim();
+  } catch {
+    throw new Error(`Unable to resolve immutable baseline Git SHA: ${root}`);
+  }
+  if (servedSha !== expectedBaselineSha) {
+    throw new Error(
+      `Immutable baseline SHA mismatch: expected ${expectedBaselineSha}, observed ${servedSha}`,
+    );
+  }
+  return servedSha;
+}
 const baselineRoot = path.resolve(
   process.env.LATTICEWORK_BASELINE_ROOT ?? "Z:\\LATTICEWORK_BASELINE_e7585999",
 );
@@ -38,6 +57,7 @@ const baselineEntry = path.join(baselineRoot, "docs", "app.html");
 if (!fs.existsSync(baselineEntry)) {
   throw new Error(`Immutable baseline entry is missing: ${baselineEntry}`);
 }
+const baselineSha = resolveServedBaselineSha(baselineRoot);
 
 export default defineConfig({
   testDir: path.join(harnessRoot, "specs"),
@@ -67,9 +87,7 @@ export default defineConfig({
     ],
   ],
   metadata: {
-    baseline_sha:
-      process.env.LATTICEWORK_BASELINE_SHA ??
-      "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    baseline_sha: baselineSha,
     baseline_root: baselineRoot,
     allowed_origin: new URL(baseURL).origin,
     evidence_label: "OBSERVED",

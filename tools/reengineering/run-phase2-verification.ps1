@@ -7,6 +7,9 @@ $ErrorActionPreference = "Stop"
 $Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 
 $RepositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+$RunEvidenceCommand = Join-Path $PSScriptRoot "run-evidence-command.mjs"
+$ManifestEvidenceDirectory = Join-Path $PSScriptRoot "manifest-evidence-directory.mjs"
+$ValidatePhase2Evidence = Join-Path $PSScriptRoot "validate-phase2-evidence.mjs"
 $BaselineRoot = "Z:\LATTICEWORK_BASELINE_e7585999"
 $BaselineSha = "e7585999fc1af2707f410ae87356cf2b52e08d9c"
 $CandidateSha = (& git -C $RepositoryRoot rev-parse HEAD).Trim()
@@ -30,6 +33,21 @@ function Resolve-RepositoryDescendant {
     if (-not $Candidate.StartsWith($RepositoryPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
         throw "$Label must stay inside the LATTICEWORK repository: $Candidate"
     }
+    $RelativePath = $Candidate.Substring($RepositoryPrefix.Length)
+    $CurrentPath = [System.IO.Path]::GetFullPath($RepositoryRoot)
+    foreach ($Segment in $RelativePath.Split(
+        [char[]]@('\', '/'),
+        [System.StringSplitOptions]::RemoveEmptyEntries
+    )) {
+        $CurrentPath = Join-Path $CurrentPath $Segment
+        if (-not (Test-Path -LiteralPath $CurrentPath)) {
+            break
+        }
+        $Attributes = (Get-Item -LiteralPath $CurrentPath -Force).Attributes
+        if (($Attributes -band [System.IO.FileAttributes]::ReparsePoint) -ne 0) {
+            throw "$Label must not traverse a symbolic link or junction: $CurrentPath"
+        }
+    }
     return $Candidate
 }
 
@@ -38,12 +56,13 @@ function Invoke-EvidenceCommand {
         [Parameter(Mandatory = $true)][string]$Id,
         [Parameter(Mandatory = $true)][string]$Directory,
         [Parameter(Mandatory = $true)][string[]]$Command,
-        [string]$WorkingDirectory = $RepositoryRoot
+        [string]$WorkingDirectory = $RepositoryRoot,
+        [switch]$AllowNonZero
     )
 
     $ReceiptDirectory = Join-Path $EvidenceRoot "commands\$Directory"
     $Arguments = @(
-        "tools/reengineering/run-evidence-command.mjs",
+        $RunEvidenceCommand,
         "--cwd", $WorkingDirectory,
         "--output", $ReceiptDirectory,
         "--id", $Id,
@@ -52,7 +71,7 @@ function Invoke-EvidenceCommand {
         "--"
     ) + $Command
     & node @Arguments
-    if ($LASTEXITCODE -ne 0) {
+    if ($LASTEXITCODE -ne 0 -and -not $AllowNonZero) {
         throw "Evidence command $Id failed with exit code $LASTEXITCODE. See $ReceiptDirectory."
     }
 }
@@ -210,10 +229,17 @@ Invoke-EvidenceCommand `
 Invoke-EvidenceCommand `
     -Id "LW-P2-001-audit" `
     -Directory "audit" `
-    -Command @("cmd.exe", "/d", "/s", "/c", "npm audit --all --json")
+    -AllowNonZero `
+    -Command @("cmd.exe", "/d", "/s", "/c", "npm audit --workspaces --include-workspace-root --json")
 $AuditReceipt = Join-Path $EvidenceRoot "commands\audit\stdout.log"
-$Audit = Get-Content -LiteralPath $AuditReceipt -Raw | ConvertFrom-Json
-if ($Audit.metadata.vulnerabilities.total -ne 0) {
+$Audit = $null
+try {
+    $Audit = Get-Content -LiteralPath $AuditReceipt -Raw | ConvertFrom-Json -ErrorAction Stop
+}
+catch {
+    throw "npm audit did not emit valid JSON: $($_.Exception.Message)"
+}
+if ($null -eq $Audit -or $Audit.metadata.vulnerabilities.total -isnot [long] -or $Audit.metadata.vulnerabilities.total -ne 0) {
     throw "npm audit reported $($Audit.metadata.vulnerabilities.total) vulnerabilities."
 }
 Copy-Item -LiteralPath $AuditReceipt -Destination (Join-Path $EvidenceRoot "npm-audit.json")
@@ -331,7 +357,7 @@ in this bundle.
     $Utf8NoBom
 )
 
-& node tools/reengineering/manifest-evidence-directory.mjs `
+& node $ManifestEvidenceDirectory `
     --directory $EvidenceRoot `
     --output (Join-Path $EvidenceRoot "manifest.json") `
     --id "LW-P2-001" `
@@ -357,7 +383,7 @@ Invoke-EvidenceCommand `
 Copy-Item -LiteralPath $ValidationScratch `
     -Destination (Join-Path $EvidenceRoot "validation.json")
 
-& node tools/reengineering/manifest-evidence-directory.mjs `
+& node $ManifestEvidenceDirectory `
     --directory $EvidenceRoot `
     --output (Join-Path $EvidenceRoot "manifest.json") `
     --id "LW-P2-001" `
@@ -367,7 +393,7 @@ if ($LASTEXITCODE -ne 0) {
     throw "Unable to finalize the Phase 2 evidence manifest."
 }
 
-& node tools/reengineering/validate-phase2-evidence.mjs `
+& node $ValidatePhase2Evidence `
     --directory $EvidenceRoot `
     --workspace-root $RepositoryRoot `
     --baseline-sha $BaselineSha `

@@ -7,6 +7,7 @@ import {
   attachScreenshot,
   attachText,
   captureRuntimeSnapshot,
+  dismissWelcome,
   installEvidenceCapture,
   openBaseline,
   waitForCanvasCount,
@@ -85,15 +86,23 @@ test("first run initializes storage while HTTP, WebSocket, and realtime egress s
       )
       .toBeGreaterThanOrEqual(1);
 
-    const snapshot = await captureRuntimeSnapshot(page);
-    await attachJson(testInfo, "runtime-snapshot.json", snapshot);
+    const initialSnapshot = await captureRuntimeSnapshot(
+      page,
+      persistenceContract,
+    );
+    await attachJson(testInfo, "runtime-before-skip.json", initialSnapshot);
     expect(
       evidence.network.blocked.every(
         (request) => new URL(request.url).origin !== evidence.network.allowed_origin,
       ),
     ).toBe(true);
-    assertPersistenceContract(snapshot, persistenceContract);
 
+    // The welcome overlay is the visual contract under test. Suppress the
+    // transient service-worker update toast so activation timing cannot
+    // invalidate an otherwise identical overlay screenshot.
+    await page.addStyleTag({
+      content: "#toast { display: none !important; }",
+    });
     await attachText(
       testInfo,
       "onboarding-aria.yml",
@@ -111,6 +120,14 @@ test("first run initializes storage while HTTP, WebSocket, and realtime egress s
         caret: "hide",
       },
     );
+
+    await dismissWelcome(page);
+    const postSkipSnapshot = await captureRuntimeSnapshot(
+      page,
+      persistenceContract,
+    );
+    await attachJson(testInfo, "runtime-snapshot.json", postSkipSnapshot);
+    assertPersistenceContract(postSkipSnapshot, persistenceContract);
   } finally {
     await evidence.finalize();
   }

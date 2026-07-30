@@ -1,12 +1,11 @@
 #!/usr/bin/env node
 
-import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
-import { parseNamedArgs, writeJson } from "./evidence-common.mjs";
+import { findReparsePoint, isStrictDescendant, parseNamedArgs, sha256File, writeJson } from "./evidence-common.mjs";
 
 const PROTECTED_PATHS = [
   "app.html",
@@ -38,10 +37,6 @@ const FORBIDDEN_RUNTIME_PATTERNS = [
   ["notifications", /\bNotification\b/],
 ];
 
-function sha256File(filePath) {
-  return crypto.createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
-}
-
 function runGit(args, cwd) {
   const result = spawnSync("git", args, {
     cwd,
@@ -55,25 +50,28 @@ function runGit(args, cwd) {
   };
 }
 
-function walkSource(directory) {
+function walkSource(directory, failures, workspaceRoot) {
   if (!fs.existsSync(directory)) return [];
+  if (findReparsePoint(directory, workspaceRoot)) {
+    failures.push(`candidate source directory traverses symbolic link or junction: ${directory}`);
+    return [];
+  }
   const files = [];
   for (const entry of fs
     .readdirSync(directory, { withFileTypes: true })
     .sort((left, right) => left.name.localeCompare(right.name))) {
     const entryPath = path.join(directory, entry.name);
+    if (fs.lstatSync(entryPath).isSymbolicLink()) {
+      failures.push(`candidate source traversal encountered symbolic link or junction: ${entryPath}`);
+      continue;
+    }
     if (entry.isDirectory()) {
-      files.push(...walkSource(entryPath));
+      files.push(...walkSource(entryPath, failures, workspaceRoot));
     } else if (entry.isFile() && /\.(?:ts|js|mjs|html|css)$/.test(entry.name)) {
       files.push(entryPath);
     }
   }
   return files;
-}
-
-function isStrictDescendant(targetPath, parentPath) {
-  const relative = path.relative(path.resolve(parentPath), path.resolve(targetPath));
-  return Boolean(relative) && !relative.startsWith("..") && !path.isAbsolute(relative);
 }
 
 export function verifyPhase2Boundary({
@@ -109,6 +107,10 @@ export function verifyPhase2Boundary({
       failures.push(`protected file is missing: ${relativePath}`);
       continue;
     }
+    if (findReparsePoint(workspacePath, resolvedWorkspace) || findReparsePoint(baselinePath, resolvedBaseline)) {
+      failures.push(`protected file traverses symbolic link or junction: ${relativePath}`);
+      continue;
+    }
     const workspaceHash = sha256File(workspacePath);
     const baselineHash = sha256File(baselinePath);
     const matches = workspaceHash === baselineHash;
@@ -129,7 +131,7 @@ export function verifyPhase2Boundary({
     path.join(resolvedWorkspace, "packages", "contracts", "src"),
     path.join(resolvedWorkspace, "packages", "kernel", "src"),
   ];
-  for (const filePath of candidateRoots.flatMap(walkSource)) {
+  for (const filePath of candidateRoots.flatMap((directory) => walkSource(directory, failures, resolvedWorkspace))) {
     const text = fs.readFileSync(filePath, "utf8");
     for (const [label, pattern] of FORBIDDEN_RUNTIME_PATTERNS) {
       if (pattern.test(text)) {

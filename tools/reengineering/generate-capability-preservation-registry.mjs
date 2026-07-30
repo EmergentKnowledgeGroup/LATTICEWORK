@@ -35,6 +35,31 @@ function addRows(rows, category, values, sourceFor, detailsFor = () => null) {
 }
 
 export function generateCapabilityRegistry(boundaryMap) {
+  if (!boundaryMap || typeof boundaryMap !== "object" || Array.isArray(boundaryMap)) {
+    throw new Error("Boundary map must be a JSON object.");
+  }
+  if (
+    !boundaryMap.baseline ||
+    typeof boundaryMap.baseline.sha !== "string" ||
+    !boundaryMap.baseline.sha ||
+    typeof boundaryMap.work_id !== "string" ||
+    !boundaryMap.work_id ||
+    !boundaryMap.application_surfaces ||
+    typeof boundaryMap.application_surfaces !== "object" ||
+    !boundaryMap.runtime_composition ||
+    typeof boundaryMap.runtime_composition !== "object" ||
+    !Array.isArray(boundaryMap.launch_modes) ||
+    !Array.isArray(boundaryMap.application_surfaces.in_app_tab_panels) ||
+    !Array.isArray(boundaryMap.application_surfaces.static_html_routes) ||
+    !Array.isArray(boundaryMap.application_surfaces.root_html_routes) ||
+    !Array.isArray(boundaryMap.application_surfaces.module_files) ||
+    !Array.isArray(boundaryMap.application_surfaces.major_user_actions) ||
+    !Array.isArray(boundaryMap.runtime_composition.major_globals) ||
+    !Array.isArray(boundaryMap.provider_and_network_boundaries) ||
+    !Array.isArray(boundaryMap.security_privacy_sensitive_surfaces)
+  ) {
+    throw new Error("Boundary map does not contain the required preservation inventories.");
+  }
   const surfaces = boundaryMap.application_surfaces;
   const rows = [];
 

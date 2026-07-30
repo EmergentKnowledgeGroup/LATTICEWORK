@@ -232,8 +232,11 @@ export async function waitForCanvasCount(page, expected) {
     .toBe(expected);
 }
 
-export async function captureRuntimeSnapshot(page) {
-  return page.evaluate(async () => {
+export async function captureRuntimeSnapshot(page, persistence) {
+  const completionKeys = Object.keys(
+    persistence.completion_keys_after_skip,
+  );
+  return page.evaluate(async (completionKeys) => {
     const indexedDBRows = [];
     if (typeof indexedDB.databases === "function") {
       for (const metadata of await indexedDB.databases()) {
@@ -295,12 +298,15 @@ export async function captureRuntimeSnapshot(page) {
         left.name.localeCompare(right.name),
       ),
       local_storage_keys: Object.keys(localStorage).sort(),
+      completion_storage: Object.fromEntries(
+        completionKeys.map((key) => [key, localStorage.getItem(key)]),
+      ),
       session_storage_keys: Object.keys(sessionStorage).sort(),
       indexed_db: indexedDBRows.sort((left, right) =>
         left.name.localeCompare(right.name),
       ),
     };
-  });
+  }, completionKeys);
 }
 
 export function assertPersistenceContract(snapshot, contract) {
@@ -308,6 +314,12 @@ export function assertPersistenceContract(snapshot, contract) {
 
   for (const key of contract.required_local_storage_keys_before_skip) {
     expect(snapshot.local_storage_keys).toContain(key);
+  }
+
+  for (const [key, value] of Object.entries(
+    contract.completion_keys_after_skip,
+  )) {
+    expect(snapshot.completion_storage[key]).toBe(value);
   }
 
   const observedDatabases = new Map(

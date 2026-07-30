@@ -52,9 +52,15 @@ function ensureEntry(entries, kind, name) {
   return entries.get(key);
 }
 
-export function generateDataRegistry(staticIdentifiers, runtimeProbe) {
+export function generateDataRegistry(staticIdentifiers, runtimeProbe, baselineSha) {
   if (!Array.isArray(staticIdentifiers)) {
     throw new Error("Static storage identifiers must be an array.");
+  }
+  if (!runtimeProbe || typeof runtimeProbe !== "object" || Array.isArray(runtimeProbe)) {
+    throw new Error("Runtime probe must be a JSON object.");
+  }
+  if (typeof baselineSha !== "string" || !/^[a-f0-9]{40}$/i.test(baselineSha)) {
+    throw new Error("Baseline SHA must be a 40-character Git SHA.");
   }
 
   const entries = new Map();
@@ -72,6 +78,9 @@ export function generateDataRegistry(staticIdentifiers, runtimeProbe) {
   }
 
   for (const name of runtimeProbe.localStorageKeys ?? []) {
+    if (typeof name !== "string" || !name) {
+      throw new Error("Runtime localStorage keys must be non-empty strings.");
+    }
     const entry = ensureEntry(entries, "localStorage", name);
     entry.runtime_observed = true;
     entry.evidence.add(
@@ -79,6 +88,9 @@ export function generateDataRegistry(staticIdentifiers, runtimeProbe) {
     );
   }
   for (const name of runtimeProbe.sessionStorageKeys ?? []) {
+    if (typeof name !== "string" || !name) {
+      throw new Error("Runtime sessionStorage keys must be non-empty strings.");
+    }
     const entry = ensureEntry(entries, "sessionStorage", name);
     entry.runtime_observed = true;
     entry.evidence.add(
@@ -86,6 +98,12 @@ export function generateDataRegistry(staticIdentifiers, runtimeProbe) {
     );
   }
   for (const database of runtimeProbe.indexedDB ?? []) {
+    if (!database || typeof database.name !== "string" || !database.name || !Array.isArray(database.stores)) {
+      throw new Error("Runtime IndexedDB entries require a non-empty name and stores array.");
+    }
+    if (database.stores.some((store) => typeof store !== "string" || !store)) {
+      throw new Error("Runtime IndexedDB store names must be non-empty strings.");
+    }
     const databaseEntry = ensureEntry(entries, "indexedDB_database", database.name);
     databaseEntry.runtime_observed = true;
     databaseEntry.runtime_details = {
@@ -138,7 +156,7 @@ export function generateDataRegistry(staticIdentifiers, runtimeProbe) {
 
   return {
     schema: "latticework.data-preservation-registry.v1",
-    baseline_sha: "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    baseline_sha: baselineSha,
     evidence_scope:
       "Static identifier extraction plus one fresh Chrome runtime-name probe. Values, record contents, indexes, ownership, retention, and full reachability remain UNKNOWN.",
     counts: {
@@ -157,17 +175,17 @@ function isMain() {
 
 if (isMain()) {
   try {
-    const [staticPath, runtimePath, outputPath] = process.argv.slice(2);
-    if (!staticPath || !runtimePath || !outputPath) {
+    const [staticPath, runtimePath, outputPath, baselineSha] = process.argv.slice(2);
+    if (!staticPath || !runtimePath || !outputPath || !baselineSha) {
       throw new Error(
-        "Usage: generate-data-preservation-registry.mjs STATIC_IDENTIFIERS_JSON RUNTIME_PROBE_LOG OUTPUT_JSON",
+        "Usage: generate-data-preservation-registry.mjs STATIC_IDENTIFIERS_JSON RUNTIME_PROBE_LOG OUTPUT_JSON BASELINE_SHA",
       );
     }
     const staticIdentifiers = parseJsonText(
       fs.readFileSync(path.resolve(staticPath), "utf8"),
     );
     const runtimeProbe = parseRuntimeProbe(fs.readFileSync(path.resolve(runtimePath), "utf8"));
-    writeJson(path.resolve(outputPath), generateDataRegistry(staticIdentifiers, runtimeProbe));
+    writeJson(path.resolve(outputPath), generateDataRegistry(staticIdentifiers, runtimeProbe, baselineSha));
     process.stdout.write(`${path.resolve(outputPath)}\n`);
   } catch (error) {
     process.stderr.write(`${error.stack ?? error.message}\n`);
