@@ -91,12 +91,38 @@ not a complete schema catalog:
   exports all localStorage including credential/crypto-adjacent values, and
   has no atomic restore or rollback proof.
 
-**OBSERVED:** accepted ADR-004 uses per-dataset descriptors and a separate namespaced
-candidate repository. Migration is adjacent-version, copy-on-write, journaled,
-idempotent, resumable, and interruption-safe. The first bounded fixture is
-synthetic `FreeLatticeDB` v3 conversation data. Unknown stores, fields, nested
-values, falsey values, and native structured-clone values must round-trip
-without coercion.
+**OBSERVED:** accepted ADR-004 uses per-dataset descriptors and a separate
+namespaced candidate repository.
+
+**MEASURED, FINAL EVIDENCE PENDING:** `packages/storage` implements the first
+bounded synthetic slice:
+
+- an injected, inventory-guarded, read-only `FreeLatticeDB` v3 reader for only
+  `conversations` and `messages`;
+- an inactive `latticework::conversation` schema-version-1 candidate and a
+  separate `latticework::migration` journal;
+- copy-on-write bounded batches, monotonic checkpoints, idempotent resume,
+  local-only full-snapshot source verification identity, ready-candidate
+  revalidation, full keyed/native-value validation, exact candidate rollback,
+  automatic failed-candidate disposal, and immutable failed receipts;
+- fixed-format hostile import parsing and
+  `latticework::staging::<operation-id>::conversation` staging with exact
+  cleanup on failure;
+- one shared, fail-closed native structured-clone verification contract for
+  primitives, Unicode, sparse arrays, dates, regular expressions, serialized
+  errors and causes, blobs/files, array buffers and views, ordered maps/sets,
+  cycles/shared references, and plain/null-prototype objects; unsupported host
+  and class objects reject instead of collapsing to an empty representation;
+- immutable migration-ID binding even when source reads fail, so a mismatched
+  caller cannot discard, fail, or reuse another operation;
+- explicit exclusion of `meta` and `memoryIndex`.
+
+Five Chromium scenarios exercise fresh copy, every batch interruption,
+future-version abstention, hostile/partial import rejection, blocked upgrade,
+quota failure, and source/schema equivalence. Twenty-six package tests separately
+cover malformed/duplicate/dangling keys, journal tampering, same-count
+candidate/source corruption, ready-candidate reuse, source-read failure,
+operation-binding failure, native-value mutation, and staging reread failure.
 
 This accepted bounded slice does not authorize reading or modifying real user data, changing
 a legacy version/store/key, importing an untrusted file into live state, or

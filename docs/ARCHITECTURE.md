@@ -4,7 +4,7 @@
 
 ## Status
 
-`ACCEPTED TARGET / BOUNDED FOUNDATION VERIFIED / PHASE 3 CONTRACTS PROPOSED`
+`ACCEPTED TARGET / PHASE 3 SYNTHETIC-MOCK FOUNDATION IMPLEMENTED / FINAL EVIDENCE PENDING`
 
 This document must describe implemented reality and clearly separate current state from target state.
 
@@ -162,29 +162,42 @@ flowchart LR
 
 ### Accepted bounded Phase 3 storage/provider spine
 
-**PROPOSED — NOT IMPLEMENTED OR ACCEPTED:**
+**IMPLEMENTED IN THE BOUNDED `LW-P3-001` CANDIDATE — FINAL CANONICAL AND
+INDEPENDENT EVIDENCE PENDING:**
 
 ```mermaid
 flowchart LR
-    F["Feature"] --> SR["Storage repository contract"]
-    SR --> CR["Namespaced candidate repository"]
-    LS["Legacy store (read-only authority)"] --> MJ["Copy-on-write migration journal"]
-    MJ --> CR
-    F --> PR["Provider router"]
-    PR --> PA["Selected provider adapter"]
-    PA --> EP["Egress policy"]
-    PA --> PV["Content-free provenance"]
-    EP --> M["Deterministic mocks in Phase 3"]
+    BH["Synthetic browser harness"] --> LS["Synthetic FreeLatticeDB v3 reader"]
+    LS --> MS["Copy-on-write migration service"]
+    MS --> CR["Inactive latticework::conversation candidate"]
+    MS --> MJ["latticework::migration journal"]
+    BH --> ST["Hostile import staging namespace"]
+    PT["Provider contract tests"] --> PR["Provider router"]
+    PR --> EP["Immutable egress grant"]
+    EP --> CS["Synthetic credential source"]
+    PR --> PA["One deterministic mock adapter"]
+    PR --> PV["Content-free terminal provenance"]
     PX["Future optional local proxy"] -. "ADR-006 contract only" .-> EP
 ```
 
-- ADR-004 accepts per-dataset descriptors, separate schema/database/export
-  versions, an application-level migration journal, opaque preservation of
-  unknown structured-clone values, and a synthetic `FreeLatticeDB` v3
-  `conversation` schema-version-1 fixture as the first candidate dataset.
-- ADR-005 accepts separate provider adapter, routing/fallback, credential
-  reference, and egress-policy seams. Phase 3 uses deterministic mocks
-  only; no real prompt, credential, or provider request is authorized.
+- `packages/storage` implements the accepted synthetic `conversation`
+  descriptor, injected read-only source reader, namespaced candidate
+  repository, immutable terminal-failure journal, checkpointed/resumable
+  copy-on-write migration, local-only source verification identity, automatic
+  failed-candidate disposal, immutable operation/migration binding,
+  ready-candidate revalidation, one shared fail-closed native structured-clone
+  identity/equivalence contract, and exact disposable import staging. It has
+  no activation API.
+- `packages/providers` implements an injected router, immutable
+  capability-bound egress grants, synthetic credential references,
+  deterministic in-process adapter scripts, normalized stream/error/retry/
+  deadline/cancellation behavior, and content-free provenance with explicit
+  fallback-chain and retry-authorization fields. It has no transport or
+  listener implementation.
+- Native Chromium tests exercise only generated synthetic records and prove
+  source/schema preservation, checkpoint resume, rollback, future-version
+  abstention, hostile-import rejection, blocked upgrades, quota failure, and
+  zero external egress.
 - ADR-006 accepts an optional, disabled, loopback-only, authenticated and
   exactly allowlisted proxy boundary for later work. It does not authorize a
   listener. Broader LAN/worker/peer/Telegram behavior remains blocked by
@@ -193,10 +206,12 @@ flowchart LR
   capability retirement remain future decisions. Cutover remains governed by
   future ADR-009.
 
-The proposal and its executable controls live in
+The accepted decisions and executable scope controls live in
 [`PHASE3_DECISION_PACKET.md`](../reengineering/PHASE3_DECISION_PACKET.md).
-Until explicit maintainer disposition is recorded, the implemented
-architecture remains the Phase 2 feature-free foundation above.
+No feature imports or registers these packages. The implemented application
+therefore remains the Phase 2 feature-free status shell; the new packages are
+an unused, synthetic/mock-only architecture seam pending final Phase 3
+evidence and later feature-specific work claims.
 
 ## Architecture invariants
 
@@ -217,5 +232,5 @@ architecture remains the Phase 2 feature-free foundation above.
 | `ARCH-003` | Rendering, state, storage, providers, and security are mixed | [boundary map](../reengineering/evidence/phase-0/LW-M0-BEH-001/behavior-boundary-map.md) | Hard-to-characterize migrations | view-model and adapter seams | Open; ADR-002/003 accepted, feature migration not started |
 | `ARCH-004` | Electron and Tauri overlap without a supported-platform decision | [legacy source map](../reengineering/LEGACY_SOURCE_MAP.md) | Double maintenance and unclear release claims | ADR-007 bounded spike | Open |
 | `ARCH-005` | PWA and launch-mode compatibility are unverified | [compatibility contract](COMPATIBILITY.md) | Data/offline/rollback risk | ADR-008/009/011 | Open |
-| `ARCH-006` | Storage ownership, versioning, migration, import/export, and rollback are not implemented | [Phase 3 packet](../reengineering/PHASE3_DECISION_PACKET.md) | Data loss or silent reinterpretation | accepted ADR-004 | Open; bounded synthetic implementation in progress |
-| `ARCH-007` | Provider routing, fallback, cancellation, provenance, credential, and egress behavior are inconsistent | [Phase 3 packet](../reengineering/PHASE3_DECISION_PACKET.md) | Trust-boundary crossing and unprovable failures | accepted ADR-005/006 | Open; deterministic mock implementation in progress, runtime unchanged |
+| `ARCH-006` | Most legacy storage owners/schemas and every real-data migration remain unverified | [Phase 3 packet](../reengineering/PHASE3_DECISION_PACKET.md) | Data loss or silent reinterpretation | accepted ADR-004 plus per-dataset descriptors | Open; one synthetic conversation repository/migration/staging seam is implemented, unused, and awaiting final evidence |
+| `ARCH-007` | Real provider protocols, fallback compatibility, credentials, and proxy behavior remain uncharacterized | [Phase 3 packet](../reengineering/PHASE3_DECISION_PACKET.md) | Trust-boundary crossing and unprovable failures | accepted ADR-005/006 | Open; deterministic no-egress mock router/provenance seam is implemented, unused, and awaiting final evidence |

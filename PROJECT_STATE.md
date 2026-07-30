@@ -122,6 +122,15 @@ from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 - **VERIFIED:** independent QA reproduced the canonical validator, 39 focused
   controls, 91 full controls, syntax/JSON/link/diff gates, and returned GREEN
   with no actionable finding.
+- **MEASURED, FINAL EVIDENCE PENDING:** the bounded `LW-P3-001` candidate now
+  contains additive `@latticework/storage` and `@latticework/providers`
+  packages plus shared contracts. Integrated local gates pass six workspace
+  typechecks, 26 storage tests, 19 provider tests, six boundary tests, nine
+  evidence-validator tests, and five native Chromium IndexedDB scenarios.
+- **OBSERVED:** no Phase 3 package is imported by `apps/web` or a legacy
+  runtime path. The implementation has no real-data fixture, provider
+  transport, listener, ambient credential read, activation API, feature
+  registration, or cutover.
 
 ## Blockers
 
@@ -164,9 +173,10 @@ from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 
 ## Next handoff
 
-**Next action:** Execute the exact `LW-P3-001` synthetic storage/provider
-preflight test-first, then produce canonical and independent clean-worktree
-evidence before a final review-ready pull request.
+**Next action:** Freeze the green `LW-P3-001` implementation candidate, capture
+the canonical hash-pinned evidence bundle, obtain independent clean-worktree
+reproduction for that exact SHA, then finalize the evidence and open one
+review-ready pull request.
 
 **Read first:** `reengineering/PHASE3_PREFLIGHT.md`,
 `reengineering/PHASE3_DECISION_PACKET.md`,

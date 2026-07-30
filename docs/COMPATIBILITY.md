@@ -66,7 +66,7 @@ claim. Evidence:
 [`LW-P2-001`](../reengineering/evidence/phase-2/LW-P2-001/README.md) and
 [`independent review`](../reengineering/evidence/phase-2/LW-P2-001/independent-review/REVIEW.md).
 
-## Phase 3 accepted boundary evidence
+## Phase 3 bounded implementation evidence
 
 **OBSERVED:** ADR-004 through ADR-006 are accepted with the maintainer receipt
 `approved choices - continue`. `LW-P3-DEC-001` defines candidate storage,
@@ -78,10 +78,22 @@ real-data, credential, listener, legacy-integration, activation, or cutover
 authority is recorded. Only the exact synthetic/mock `LW-P3-001` preflight
 surface is implementation-authorized.
 
-This is control-plane evidence only. It changes no compatibility level in the
-table above. In particular, conversation persistence, provider calls,
-streaming/cancellation/retry, import/export, stored-data migration, and local
-proxy behavior remain `C0`.
+**MEASURED, FINAL EVIDENCE PENDING:** the bounded candidate now passes strict
+typecheck; 26 storage tests; 19 provider tests; six storage/provider boundary
+tests; nine evidence-validator tests; and five native Chromium IndexedDB
+scenarios. The tests use generated synthetic records and deterministic
+in-process mocks only. They cover copy-on-write checkpoint/resume/rollback,
+native unknown-value preservation, hostile import staging, blocked/quota
+failure, exact egress/credential binding, normalized terminal streams,
+retry/deadline/cancellation, content-free provenance, and zero external
+provider capability.
+
+This is architecture-contract evidence, not legacy compatibility evidence. It
+changes no compatibility level in the table above. Real conversation values,
+provider protocols, persisted Chat effects, legacy import/export formats, and
+local proxy behavior remain `C0`. No candidate package is registered into the
+application, and no route, read owner, provider selection, or feature behavior
+has changed.
 
 ## Compatibility rules
 
