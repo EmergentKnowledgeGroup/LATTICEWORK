@@ -1,0 +1,45 @@
+✔ preservation registry accounts for every bounded source inventory row (1.7849ms)
+✔ data registry preserves every unique static and runtime storage identifier (9.2111ms)
+✔ runtime database rows retain versions and qualified store ownership (2.1489ms)
+✔ text and line helpers use the documented counting rule (0.7919ms)
+✔ first-party source classification excludes tests, vendor, and generated buckets (0.2271ms)
+✔ command receipt records exact command output, status, and hashes (151.4188ms)
+✔ artifact bundle manifest hashes repository and external evidence (1.8205ms)
+✔ validates the repository control plane deterministically (44.1608ms)
+✔ CLI emits JSON and fails for a missing in-repository evidence artifact (63.489ms)
+✔ accepts a complete fixture without writing to it (25.4772ms)
+✔ fails when a declared evidence hash no longer matches (26.6025ms)
+✔ fails when a living control document retains an unresolved placeholder (16.4776ms)
+✔ Phase 1 validator extracts owned, typed, semantic attachments (12.7441ms)
+✔ Phase 1 validator rejects attachment traversal without writing it (7.1832ms)
+✔ Phase 1 validator rejects an attachment owned by the wrong spec (7.4871ms)
+✔ Phase 1 validator rejects fake PNG and false mobile semantics (5.5766ms)
+✔ Phase 1 validator rejects wrong baseline metadata (6.8156ms)
+✔ Phase 1 validator rejects missing WebSocket/realtime proof (7.1671ms)
+✔ Phase 1 validator rejects sentinel leakage in receipted text (6.3419ms)
+✔ Phase 2 direct dependency set is exact and workspace-scoped (2.0404ms)
+✔ candidate and kernel source contain no privileged or durable runtime APIs (1.4819ms)
+✔ candidate build target stays outside deployment mirrors (0.3702ms)
+✔ protected legacy files byte-match the immutable baseline (14.8417ms)
+✔ accepts two complete byte-identical candidate builds (9.4597ms)
+✔ rejects a build whose bytes differ at the same declared path (6.0124ms)
+✔ rejects missing required Vite build artifacts (5.5761ms)
+✔ refuses build and summary paths outside the repository (2.2434ms)
+✔ preview script delegates its port to the guarded Vite configuration (0.2909ms)
+✔ candidate output rejects a repository-local reparse point (1.3161ms)
+✔ verification runner replays the lockfile and validates the final bundle (0.2793ms)
+✔ accepts a complete, repository-descendant Phase 2 fixture bundle (31.6426ms)
+✔ rejects manifest traversal and tampered artifact hashes (44.8072ms)
+✔ rejects gate failures, wrong receipts, missing visual evidence, and secret sentinels (23.4993ms)
+✔ refuses evidence and output paths outside the repository (17.0162ms)
+✔ captures integrity, license, and ignored lifecycle scripts from a lock fixture (5.8249ms)
+✔ records a platform-skipped optional package from lock metadata without failing (1.8076ms)
+✔ reports missing external license and integrity metadata (3.1785ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 294.8758

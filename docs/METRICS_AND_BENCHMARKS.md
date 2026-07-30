@@ -22,7 +22,7 @@ Metrics become useful only when the definition, environment, workload, feature s
 | Tool versions | npm 11.6.2; Git 2.50.1.windows.1; PowerShell 7.6.3; ripgrep 15.1.0 |
 | Network condition | Unthrottled loopback for current browser receipt; external/local discovery requests were still attempted |
 | Upstream commit | `e7585999fc1af2707f410ae87356cf2b52e08d9c` |
-| LATTICEWORK commit | `e7585999fc1af2707f410ae87356cf2b52e08d9c` plus uncommitted Phase 0 control artifacts |
+| LATTICEWORK commit | `c8a040fb38f627bf4d0353b3497645653a57139c` |
 
 Environment values are **MEASURED** in the
 [Phase 0 environment receipt](../reengineering/evidence/phase-0/LW-P0-001-environment/manifest.json).
@@ -94,9 +94,21 @@ Every table in this document must link to the raw artifact.
 bytes. It is a single run, not an accepted budget or regression verdict. See the
 [browser receipt](../reengineering/evidence/phase-0/LW-P0-003-browser/README.md).
 
-**UNKNOWN:** controlled warm runs, repeatability, aggregate resource transfer,
-emitted bundle sizes, long tasks, heap/GPU recovery, physical-mobile
-performance, cross-browser/OS behavior, desktop-shell performance, and
+**MEASURED:** one canonical loopback run of the feature-free Phase 2 candidate
+reported 25.5 ms DOMContentLoaded, 26.3 ms load, 871 navigation-transfer bytes,
+and zero observed long tasks at least 50 ms. The emitted JavaScript was 22,607
+raw / 8,332 gzip / 7,413 Brotli bytes; CSS was 655 / 399 / 314 bytes. The
+independent run used a different port and reproduced the passing ceilings.
+These are candidate-only single-run measurements, not a baseline comparison or
+public speed claim. Evidence:
+[`candidate performance`](../reengineering/evidence/phase-2/LW-P2-001/browser/empty-status-shell-candida-31ebf-tion-and-long-task-ceilings/candidate-performance.json)
+and
+[`build comparison`](../reengineering/evidence/phase-2/LW-P2-001/build-comparison.json).
+
+**UNKNOWN:** controlled warm-run distributions, five-run repeatability,
+baseline-versus-candidate performance for equivalent features, aggregate
+feature resource transfer, heap/GPU recovery, physical-mobile performance,
+cross-browser/OS behavior, desktop-shell performance, and complete
 accessibility-profile performance.
 
 **PROPOSED:** the ceilings in `reengineering/PERFORMANCE_PLAN.md` govern the

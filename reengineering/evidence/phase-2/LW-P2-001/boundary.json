@@ -1,0 +1,65 @@
+{
+  "schema": "latticework.phase2-boundary.v1",
+  "evidence_label": "MEASURED",
+  "captured_at": "2026-07-30T11:25:41.644Z",
+  "valid": true,
+  "workspace_root": "Z:\\LATTICEWORK",
+  "baseline": {
+    "root": "Z:\\LATTICEWORK_BASELINE_e7585999",
+    "expected_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "observed_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "clean": true
+  },
+  "protected_files": [
+    {
+      "path": "app.html",
+      "workspace_sha256": "ffa5a3d35d71049d6433627ce46e9f971faf5912ae5153fcc8fcdefe9c2cf4f9",
+      "baseline_sha256": "ffa5a3d35d71049d6433627ce46e9f971faf5912ae5153fcc8fcdefe9c2cf4f9",
+      "matches": true
+    },
+    {
+      "path": "index.html",
+      "workspace_sha256": "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3",
+      "baseline_sha256": "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3",
+      "matches": true
+    },
+    {
+      "path": "docs/app.html",
+      "workspace_sha256": "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3",
+      "baseline_sha256": "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3",
+      "matches": true
+    },
+    {
+      "path": "docs/sw.js",
+      "workspace_sha256": "4d0ddcb83b099993d341cceb8060247e99a1dc391739b156763f9bb3f8cfa94c",
+      "baseline_sha256": "4d0ddcb83b099993d341cceb8060247e99a1dc391739b156763f9bb3f8cfa94c",
+      "matches": true
+    },
+    {
+      "path": "sw.js",
+      "workspace_sha256": "5932a61f4fe9b2c27b27df2050143e61e2520b9f9b9c5519fec57694475f0a5e",
+      "baseline_sha256": "5932a61f4fe9b2c27b27df2050143e61e2520b9f9b9c5519fec57694475f0a5e",
+      "matches": true
+    },
+    {
+      "path": "server.js",
+      "workspace_sha256": "5eaf8c446a25305e2f76161849e935f505b07d39bcc7fc8cd5dad4bd48ba7d53",
+      "baseline_sha256": "5eaf8c446a25305e2f76161849e935f505b07d39bcc7fc8cd5dad4bd48ba7d53",
+      "matches": true
+    },
+    {
+      "path": "server.py",
+      "workspace_sha256": "a75ecd0242082693ee9ff8518bebd28da425e1090004add44c2c0b159b31e9bc",
+      "baseline_sha256": "a75ecd0242082693ee9ff8518bebd28da425e1090004add44c2c0b159b31e9bc",
+      "matches": true
+    },
+    {
+      "path": "tests/smoke.js",
+      "workspace_sha256": "6f9ea0736d9a3693d545d6bea6dbcf5e03e3568afaa71c53d5f7e2e065170511",
+      "baseline_sha256": "6f9ea0736d9a3693d545d6bea6dbcf5e03e3568afaa71c53d5f7e2e065170511",
+      "matches": true
+    }
+  ],
+  "source_violations": [],
+  "failures": []
+}

@@ -1,0 +1,26 @@
+{
+    "schema":  "latticework.phase2-summary.v1",
+    "evidence_label":  "MEASURED",
+    "captured_at":  "2026-07-30T11:26:18.3893842Z",
+    "work_id":  "LW-P2-001",
+    "baseline_sha":  "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "candidate_sha":  "c8a040fb38f627bf4d0353b3497645653a57139c",
+    "port":  4177,
+    "valid":  true,
+    "browser":  {
+                    "startTime":  "2026-07-30T11:26:11.532Z",
+                    "duration":  3487.284,
+                    "expected":  6,
+                    "skipped":  0,
+                    "unexpected":  0,
+                    "flaky":  0
+                },
+    "lockfile_reproducible":  true,
+    "build_reproducible":  true,
+    "protected_boundary_valid":  true,
+    "supply_chain_valid":  true,
+    "audit_vulnerability_total":  0,
+    "external_package_count":  58,
+    "installed_external_package_count":  27,
+    "skipped_optional_package_count":  31
+}

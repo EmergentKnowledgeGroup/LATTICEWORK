@@ -1,6 +1,6 @@
 # Feature Status Registry
 
-**Status:** PHASE 0 FROZEN — CHARACTERIZATION CONTINUES
+**Status:** BASELINE FROZEN / PHASE 2 FOUNDATION VERIFIED — FEATURE MIGRATION NOT STARTED
 **Allowed states:** `baseline-uncharacterized`, `observed`, `characterized`, `implemented`, `verified`, `diverged`, `unsupported`
 
 | ID | Capability | Baseline state | LATTICEWORK state | Evidence |
@@ -22,6 +22,10 @@
 | `FEAT-015` | Diagnostics, safe mode, and support receipts | observed | not implemented | `evidence/phase-1/LW-P1-001/` (Signal Report open/copy and unsent-input exclusion characterized; safe mode and broader error capture remain uncharacterized) |
 
 This registry cannot downgrade a baseline obligation. It only records evidence-backed state.
+
+The Phase 2 status shell, kernel, and contracts are architecture foundations,
+not migrated user capabilities, so no feature row is upgraded to `implemented`
+or `verified`.
 
 `observed` means one bounded runtime path has a receipt; it does not mean the
 capability is fully characterized. The exhaustive source-level preservation rows

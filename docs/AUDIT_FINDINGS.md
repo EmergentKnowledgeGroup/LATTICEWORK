@@ -117,3 +117,25 @@ Chromium 151 on Windows 10 against baseline
   pinned baseline and safety invariants, and accepted only the bounded
   `LW-P1-001` work unit. Receipt:
   [`independent-review/`](../reengineering/evidence/phase-1/LW-P1-001/independent-review/README.md).
+
+## Reproduced Phase 2 observations
+
+These observations apply only to the feature-free candidate at
+`c8a040fb38f627bf4d0353b3497645653a57139c`.
+
+- **MEASURED:** strict typecheck, 5 of 5 kernel tests, 37 of 37 repository
+  controls, and 6 of 6 browser scenarios passed; no browser test was skipped,
+  unexpected, or flaky.
+- **MEASURED:** an isolated package-lock replay was byte-identical, two clean
+  builds emitted the same four declared artifacts and hashes, npm audit
+  reported zero vulnerabilities, and the supply-chain/SBOM receipt was valid.
+- **OBSERVED:** the tested candidate opened no out-of-origin request or
+  realtime channel and created no localStorage, sessionStorage, IndexedDB,
+  Cache Storage, or service worker state.
+- **VERIFIED:** independent QA repeated the full gate from a separate
+  evidence directory on port 4177 and accepted only the bounded Phase 2 work
+  unit. Evidence:
+  [`LW-P2-001`](../reengineering/evidence/phase-2/LW-P2-001/README.md).
+
+These observations do not support a feature-parity, replacement, production,
+or release-readiness conclusion.

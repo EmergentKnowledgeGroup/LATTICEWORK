@@ -6,6 +6,10 @@
 
 | Name | Version | Purpose | Runtime or build | Source | License | Network access | Owner | Replacement plan |
 |---|---|---|---|---|---|---|---|---|
+| `lit` | `3.3.3` | Candidate-only status-shell rendering | Runtime | root workspace / `apps/web/package.json` | BSD-3-Clause (receipt-verified) | No runtime access in the verified shell | Candidate web shell | Retain through bounded evaluation |
+| `vite` | `8.1.5` | Candidate development, preview, and relative build | Build | root workspace | MIT (receipt-verified) | Package installation only; loopback preview in tests | Candidate build | Retain through bounded evaluation |
+| `typescript` | `6.0.3` | Strict candidate contracts and typechecking | Build | root workspace | Apache-2.0 (receipt-verified) | Package installation only | Candidate architecture | Retain through bounded evaluation |
+| `@playwright/test` | `1.62.0` | Isolated Phase 2 browser verification | Test | `tests/phase2/package.json` | Apache-2.0 (receipt-verified) | Browser installation; tested application egress is denied | Verification | Retain while browser gate applies |
 | `electron-store` | `^8.1.0` | Electron settings persistence | Runtime | `desktop/package.json` | UNKNOWN | No direct network requirement | Desktop surface | Freeze until ADR-007 |
 | `electron` | `^28.0.0` | Electron desktop shell | Build/dev runtime | `desktop/package.json` | MIT (not independently receipt-verified) | Can load network content | Desktop surface | Freeze until ADR-007 |
 | `electron-builder` | `^24.9.0` | Desktop packaging | Build | `desktop/package.json` | MIT (not independently receipt-verified) | Package resolution/signing may use network | Release engineering | Freeze until ADR-007 |
@@ -16,9 +20,20 @@
 | `serde_json` | major `1` | JSON serialization | Runtime/build | `desktop/src-tauri/Cargo.toml` | UNKNOWN | No | Desktop surface | Retain only with selected desktop |
 | `dirs` | major `5` | Platform directory discovery | Runtime | `desktop/src-tauri/Cargo.toml` | UNKNOWN | No | Desktop surface | Retain only with selected desktop |
 
-**OBSERVED:** no root `package.json` is tracked. Browser runtime libraries are
-also vendored under `docs/lib/` and referenced through source/CDN paths; their
-versions and licenses require a separate hash/SBOM pass before release.
+**OBSERVED:** the candidate commit tracks a root npm workspace with lockfile
+version 3 and exact Node/npm engine bounds. **MEASURED:** the Phase 2 receipt
+records 58 external lockfile packages, 27 installed on the measured Windows
+platform, 31 skipped optional packages, license/integrity metadata, a CycloneDX
+SBOM, and zero npm-audit vulnerabilities. The isolated lockfile replay was
+byte-identical to the committed lockfile. Evidence:
+[`supply-chain.json`](../reengineering/evidence/phase-2/LW-P2-001/supply-chain.json),
+[`sbom.cdx.json`](../reengineering/evidence/phase-2/LW-P2-001/sbom.cdx.json),
+and
+[`lockfile-comparison.json`](../reengineering/evidence/phase-2/LW-P2-001/lockfile-comparison.json).
+
+Legacy browser libraries remain vendored under `docs/lib/` and referenced
+through source/CDN paths. Their complete versions, licenses, and runtime
+resolution remain **UNKNOWN** until a separate legacy hash/SBOM pass.
 
 ## External services
 

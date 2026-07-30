@@ -24,11 +24,11 @@ LATTICEWORK
 
 ## Last verified commit
 
-`e7585999fc1af2707f410ae87356cf2b52e08d9c` (baseline; documentation-pack changes are uncommitted)
+`c8a040fb38f627bf4d0353b3497645653a57139c` (`LW-P2-001` candidate)
 
 ## Last verified date
 
-`2026-07-30 10:28 UTC`
+`2026-07-30 11:26 UTC`
 
 ## Locked constraints
 
@@ -46,7 +46,7 @@ LATTICEWORK
 | `LW-M0-001` | Immutable baseline and Phase 0 characterization | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-M0-001.md` |
 | `LW-P1-001` | Executable baseline characterization and fixtures | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P1-001.md` |
 | `LW-P2-PREFLIGHT-001` | Accepted architecture and exact Phase 2 execution packet | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-PREFLIGHT-001.md` |
-| `LW-P2-001` | Isolated typed kernel/contracts/status-shell candidate | Codex root controller | `reengineering/m0-baseline-characterization` | `IN_PROGRESS` | `reengineering/PHASE2_PREFLIGHT.md` |
+| `LW-P2-001` | Isolated typed kernel/contracts/status-shell candidate | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-001.md` |
 
 ## Completed in current milestone
 
@@ -75,6 +75,17 @@ LATTICEWORK
 - The exact Phase 2 owned paths, dependency pins, no-touch fence, browser,
   performance, supply-chain, evidence, and rollback gates are frozen in
   `reengineering/PHASE2_PREFLIGHT.md`.
+- The feature-free Phase 2 candidate at
+  `c8a040fb38f627bf4d0353b3497645653a57139c` implements strict typed
+  lifecycle/status contracts, a dependency-injected kernel, and a local-only
+  Lit status shell without changing a legacy route or durable state.
+- **MEASURED:** the canonical Phase 2 run passed strict typecheck, 5 of 5
+  kernel tests, 37 of 37 repository-control tests, two byte-identical builds,
+  and 6 of 6 browser scenarios; npm audit reported zero vulnerabilities.
+- **VERIFIED:** independent QA reproduced the full gate from a separate
+  Z:-local evidence directory on port 4177 and accepted the bounded work unit.
+  This does not establish feature parity, migration, cutover, or release
+  readiness.
 
 ## Blockers
 
@@ -97,14 +108,14 @@ LATTICEWORK
 - Characterization tests.
 - Documentation accuracy improvements.
 - Reproducible measurement tooling.
-- The exact additive `LW-P2-001` paths and verification work in
-  `reengineering/PHASE2_PREFLIGHT.md`.
+- Documentation and evidence corrections that do not change product semantics.
+- Read-only Phase 3 data/provider characterization and ADR drafting.
 
 ## Human decision required
 
-- No further architecture decision is required for the bounded `LW-P2-001`
-  status-shell spike.
-- Phase 3 data/provider work and any default-route cutover still require
+- A versioned data/storage and migration ADR is required before Phase 3
+  implementation.
+- Provider/security implementation and any default-route cutover require
   separate accepted decisions.
 
 ## Risks
@@ -118,18 +129,20 @@ LATTICEWORK
 
 ## Next handoff
 
-**Next action:** Implement and verify `LW-P2-001` exactly as claimed in
-`docs/agents/claims/LW-P2-001.md`.
+**Next action:** Read the completed Phase 2 handoff, then prepare the bounded
+Phase 3 data/storage and provider-contract decision packet without mutating
+stored data or external-service behavior.
 
-**Read first:** `docs/agents/handoffs/LW-P2-PREFLIGHT-001.md`,
-`reengineering/PHASE2_PREFLIGHT.md`, and
-`docs/agents/claims/LW-P2-001.md`.
+**Read first:** `docs/agents/handoffs/LW-P2-001.md`,
+`reengineering/BLOCKERBOARD.md`, `reengineering/DATA_INVENTORY.md`, and
+`reengineering/SECURITY_BOUNDARY_MAP.md`.
 
-**Do not touch:** The no-touch fence in `reengineering/PHASE2_PREFLIGHT.md`,
-stored-data/provider/security semantics, unrelated dirty work, or `LICENSE`.
+**Do not touch:** stored-data/provider/security semantics, default routes,
+legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
+decision and work claim.
 
-**Success condition:** the isolated shell/kernel/contracts slice passes all
-canonical and independent gates, produces a complete evidence manifest, and
-leaves legacy protected paths byte-untouched.
+**Success condition:** the next decision packet states versioning, ownership,
+unknown-field preservation, rollback, provider trust boundaries, and executable
+verification before any implementation claim is opened.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`

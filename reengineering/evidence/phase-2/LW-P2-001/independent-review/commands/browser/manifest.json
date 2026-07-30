@@ -1,0 +1,44 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P2-001-browser",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/s",
+    "/c",
+    "npm run p2:browser"
+  ],
+  "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"npm run p2:browser\"",
+  "cwd": "Z:\\LATTICEWORK",
+  "started_at": "2026-07-30T11:26:10.601Z",
+  "ended_at": "2026-07-30T11:26:15.058Z",
+  "duration_ms": 4456.4585,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "c8a040fb38f627bf4d0353b3497645653a57139c",
+  "repository": {
+    "head": "c8a040fb38f627bf4d0353b3497645653a57139c",
+    "status": "## reengineering/m0-baseline-characterization\n?? reengineering/evidence/phase-2/"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1"
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 868,
+      "sha256": "b441f38cc4f9429766b194757f5f77c5dd0cd618ec9612ab9386fbd0c6fecb09"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 352,
+      "sha256": "f17afa04f13f4bdc07c2da0520a57fdda58af95d3540954b0b0c0f073e36408a"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+
+> latticework@0.0.0 p2:typecheck
+> npm run typecheck --workspaces --if-present
+
+
+> @latticework/web@0.0.0 typecheck
+> tsc --project tsconfig.json
+
+
+> @latticework/contracts@0.0.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @latticework/kernel@0.0.0 typecheck
+> tsc -p tsconfig.json
+

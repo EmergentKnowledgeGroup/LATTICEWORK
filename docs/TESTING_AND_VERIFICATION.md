@@ -30,7 +30,13 @@
 | Phase 0 Edge/direct-file launch | Playwright CLI for Edge; isolated Chrome headless for `file://` | first-run shell, runtime names, network requests, direct-file first render | Windows 10; Edge/Chrome 150 | two bounded launch flows | Partial C1 observations; interaction/cross-browser parity not established | [receipt](../reengineering/evidence/phase-0/LW-P0-003-browser/README.md) |
 | Phase 0 fixed performance profiles | commands to be captured per profile | cold/warm desktop, emulated mobile, accessibility, offline warm, GPU cleanup | pinned by profile | five runs per applicable profile | PROPOSED; execution pending | [measurement contract](../reengineering/PERFORMANCE_PLAN.md) |
 | Phase 1 executable characterization | `powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/reengineering/run-phase1-characterization.ps1` | HTTP first run/skip, fresh storage shape, Garden, Chat shell, Signal Report, mobile, no-WebGPU, warm offline reload, denied network | Windows 10; Node 24.13.0; Playwright 1.62.0; bundled Chromium 151; immutable baseline | 7 | 7 pass; 0 skip/unexpected/flaky; exit 0; 31.188 s | [measured summary](../reengineering/evidence/phase-1/LW-P1-001/summary.json) |
-| Repository control tests | `node --test tests/reengineering/*.test.mjs` | evidence tooling, registries, Phase 0 control plane, Phase 1 evidence validator and negative safety fixtures | Windows 10; Node 24.13.0 | 19 | 19 pass | [Phase 1 command and manifest](../reengineering/evidence/phase-1/LW-P1-001/README.md) |
+| Repository control tests | `node --test tests/reengineering/*.test.mjs` | evidence tooling, registries, Phase 0/1 controls, Phase 2 boundary/build/supply-chain/evidence validators, and negative safety fixtures | Windows 10; Node 24.13.0 | 37 | 37 pass | [Phase 2 command receipt](../reengineering/evidence/phase-2/LW-P2-001/commands/controls/manifest.json) |
+| Phase 2 strict typecheck | `npm run p2:typecheck` | candidate web, contracts, and kernel workspaces | Windows 10; Node 24.13.0; TypeScript 6.0.3 | 3 workspaces | pass; exit 0 | [receipt](../reengineering/evidence/phase-2/LW-P2-001/commands/typecheck/manifest.json) |
+| Phase 2 kernel unit tests | `npm run p2:test` | lifecycle order, duplicate rejection, reverse stop, and safe failure diagnostics | same | 5 | 5 pass | [receipt](../reengineering/evidence/phase-2/LW-P2-001/commands/unit/manifest.json) |
+| Phase 2 deterministic build | two clean `npm run p2:build` runs plus verifier | relative Vite output paths and raw/gzip/Brotli artifact bytes | same; Vite 8.1.5 | 4 artifacts per build | byte-identical; valid | [comparison](../reengineering/evidence/phase-2/LW-P2-001/build-comparison.json) |
+| Phase 2 candidate browser gate | `npm run p2:browser` | desktop, 390 x 844 mobile, keyboard, reduced motion, forced colors, no egress/storage/worker/legacy, and provisional performance | Windows 10; Playwright 1.62.0; bundled Chromium | 6 | 6 pass; 0 skip/unexpected/flaky | [summary](../reengineering/evidence/phase-2/LW-P2-001/summary.json) |
+| Phase 2 supply-chain gate | `npm audit --all --json`, CycloneDX SBOM, and repository collector | exact lockfile integrity, licenses, optional packages, lifecycle scripts, and vulnerability count | same | 58 external lockfile packages | valid; 0 audit vulnerabilities | [receipt](../reengineering/evidence/phase-2/LW-P2-001/supply-chain.json) |
+| Phase 2 evidence validator | `node tools/reengineering/validate-phase2-evidence.mjs ...` | command receipts, hashes, identity, browser artifacts, protected paths, and sentinel safety | same | 16 commands; 8 protected paths; 8 required browser artifacts | valid; 0 failures | [validation](../reengineering/evidence/phase-2/LW-P2-001/validation.json) |
 
 ## Characterization tests
 
@@ -114,6 +120,23 @@ of 7 browser scenarios, revalidated the clean pinned baseline and safety
 invariants, and accepted the bounded `LW-P1-001` work unit. This acceptance does
 not upgrade broader compatibility or release readiness. Receipt:
 [`independent-review/`](../reengineering/evidence/phase-1/LW-P1-001/independent-review/README.md).
+
+**MEASURED:** the canonical Phase 2 run at candidate
+`c8a040fb38f627bf4d0353b3497645653a57139c` passed all rows above, reproduced
+the committed lockfile in an isolated workspace, produced two byte-identical
+builds, and kept all eight protected legacy files byte-equal to the pinned
+baseline.
+
+**VERIFIED:** independent Phase 2 QA reran the complete verifier from a
+separate evidence directory on loopback port 4177 and reproduced 5 of 5 kernel
+tests, 37 of 37 controls, 6 of 6 browser scenarios, zero audit
+vulnerabilities, the deterministic lock/build gates, and the protected/no-state
+browser boundary. Receipt:
+[`Phase 2 independent review`](../reengineering/evidence/phase-2/LW-P2-001/independent-review/REVIEW.md).
+
+The Phase 2 result is a feature-free architecture foundation. It does not
+upgrade any legacy compatibility level or establish real provider, stored-data,
+PWA, desktop, full accessibility, or release behavior.
 
 **UNKNOWN:** the Phase 1 result does not establish real provider behavior,
 message send/stream/cancel/retry, persisted-record values or migrations,

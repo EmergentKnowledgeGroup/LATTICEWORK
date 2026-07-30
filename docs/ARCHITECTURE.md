@@ -4,7 +4,7 @@
 
 ## Status
 
-`ACCEPTED TARGET / BOUNDED IMPLEMENTATION STARTED`
+`ACCEPTED TARGET / BOUNDED FOUNDATION VERIFIED`
 
 This document must describe implemented reality and clearly separate current state from target state.
 
@@ -49,7 +49,7 @@ The diagram is a source-level boundary map, not proof that every edge is live.
 
 | Surface | Responsibility | Inputs | Outputs | State | Dependencies | Tests |
 |---|---|---|---|---|---|---|
-| `docs/app.html` / `index.html` | Apparent deployed browser application | User input, files, provider responses | DOM, network requests, stored records | Globals, Web Storage, IndexedDB | modules, browser APIs, remote/local endpoints | `tests/smoke.js`; no browser suite |
+| `docs/app.html` / `index.html` | Apparent deployed browser application | User input, files, provider responses | DOM, network requests, stored records | Globals, Web Storage, IndexedDB | modules, browser APIs, remote/local endpoints | legacy smoke plus bounded Phase 1 browser characterization |
 | root `app.html` | Divergent browser application variant | Similar, not yet reconciled | DOM and side effects | Globals and browser storage | browser/platform APIs | source assertions only |
 | `docs/modules/*.js` / `modules/*.js` | Feature extensions | globals/events/user actions | UI/state/network effects | mixed global and store ownership | primary runtime and browser APIs | smoke literals; no module contract suite |
 | `server.js` / `server.py` | Static hosting and Ollama proxy | HTTP requests | static files/proxied responses | process configuration | filesystem, Ollama | no direct receipt |
@@ -134,6 +134,32 @@ See accepted ADRs
 isolated `LW-P2-001` status-shell spike only; no legacy feature, route, provider,
 or data behavior has been migrated.
 
+### Implemented candidate foundation
+
+**VERIFIED at `c8a040fb38f627bf4d0353b3497645653a57139c`:**
+
+```mermaid
+flowchart LR
+    W["apps/web Lit status shell"] --> K["packages/kernel"]
+    K --> C["packages/contracts"]
+    W --> C
+    B["Vite relative build"] --> O["ignored output/lw-p2-001/web"]
+    T["unit, control, and browser gates"] --> W
+    T --> K
+    T --> B
+```
+
+- `packages/contracts` owns lifecycle, diagnostics, and status types.
+- `packages/kernel` owns dependency-injected start/stop ordering, safe failure
+  diagnostics, and status aggregation.
+- `apps/web` renders a feature-free local status shell through Lit.
+- The candidate writes only ignored build output; it imports no legacy runtime
+  and touches no deployment mirror, durable browser state, provider, worker,
+  desktop, GPU, audio, or external-service boundary.
+- Canonical and independent verification prove this narrow dependency seam,
+  deterministic build, and browser safety profile. They do not prove legacy
+  feature parity or authorize a default-route switch.
+
 ## Architecture invariants
 
 - No feature may require editing an unrelated monolithic surface without an explicit reason.
@@ -148,8 +174,8 @@ or data behavior has been migrated.
 
 | ID | Debt | Evidence | Impact | Proposed boundary | Status |
 |---|---|---|---|---|---|
-| `ARCH-001` | Authored and deployed sources are indistinguishable and divergent | [inventory](../reengineering/evidence/phase-0/LW-M0-INV-001/LW-M0-INV-001.md) | Drift and partial releases | generated artifact boundary | Open; ADR-001 accepted, candidate boundary in progress |
-| `ARCH-002` | Global/load-order coupling | [boundary map](../reengineering/evidence/phase-0/LW-M0-BEH-001/behavior-boundary-map.md) | Unsafe unrelated changes | typed contracts and compatibility adapters | Open; ADR-002 accepted, lifecycle seam in progress |
+| `ARCH-001` | Authored and deployed legacy sources remain divergent | [inventory](../reengineering/evidence/phase-0/LW-M0-INV-001/LW-M0-INV-001.md) | Drift and partial releases | generated artifact boundary | Open; candidate-only generated boundary verified, legacy cutover not started |
+| `ARCH-002` | Legacy global/load-order coupling | [boundary map](../reengineering/evidence/phase-0/LW-M0-BEH-001/behavior-boundary-map.md) | Unsafe unrelated changes | typed contracts and compatibility adapters | Open; feature-free typed lifecycle seam verified, no legacy feature migrated |
 | `ARCH-003` | Rendering, state, storage, providers, and security are mixed | [boundary map](../reengineering/evidence/phase-0/LW-M0-BEH-001/behavior-boundary-map.md) | Hard-to-characterize migrations | view-model and adapter seams | Open; ADR-002/003 accepted, feature migration not started |
 | `ARCH-004` | Electron and Tauri overlap without a supported-platform decision | [legacy source map](../reengineering/LEGACY_SOURCE_MAP.md) | Double maintenance and unclear release claims | ADR-007 bounded spike | Open |
 | `ARCH-005` | PWA and launch-mode compatibility are unverified | [compatibility contract](COMPATIBILITY.md) | Data/offline/rollback risk | ADR-008/009/011 | Open |

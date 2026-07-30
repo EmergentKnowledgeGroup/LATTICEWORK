@@ -41,7 +41,7 @@
   },
   {
     "path": "CHANGELOG.md",
-    "bytes": 707,
+    "bytes": 1733,
     "status": null
   },
   {
@@ -66,7 +66,7 @@
   },
   {
     "path": "LICENSE",
-    "bytes": 1113,
+    "bytes": 1134,
     "status": null
   },
   {
@@ -101,27 +101,27 @@
   },
   {
     "path": "PROJECT_STATE.md",
-    "bytes": 1876,
+    "bytes": 7193,
     "status": "LIVING"
   },
   {
     "path": "PROVENANCE.md",
-    "bytes": 1792,
+    "bytes": 2254,
     "status": "LIVING"
   },
   {
     "path": "README.md",
-    "bytes": 3519,
+    "bytes": 3684,
     "status": null
   },
   {
     "path": "ROADMAP.md",
-    "bytes": 2094,
+    "bytes": 2443,
     "status": "LIVING"
   },
   {
     "path": "SECURITY.md",
-    "bytes": 1452,
+    "bytes": 1557,
     "status": "LIVING"
   },
   {
@@ -131,17 +131,17 @@
   },
   {
     "path": "VOICE_AND_POSITIONING.md",
-    "bytes": 2570,
+    "bytes": 2562,
     "status": "CANONICAL"
   },
   {
     "path": "docs/ARCHITECTURE.md",
-    "bytes": 2167,
+    "bytes": 8422,
     "status": "LIVING"
   },
   {
     "path": "docs/AUDIT_FINDINGS.md",
-    "bytes": 1488,
+    "bytes": 5802,
     "status": "LIVING"
   },
   {
@@ -151,22 +151,22 @@
   },
   {
     "path": "docs/BASELINE.md",
-    "bytes": 2182,
+    "bytes": 6919,
     "status": "LIVING"
   },
   {
     "path": "docs/CLAIMS_LEDGER.md",
-    "bytes": 1488,
+    "bytes": 2340,
     "status": "LIVING"
   },
   {
     "path": "docs/COMPARISON.md",
-    "bytes": 2406,
+    "bytes": 4529,
     "status": "LIVING"
   },
   {
     "path": "docs/COMPATIBILITY.md",
-    "bytes": 2539,
+    "bytes": 7223,
     "status": "LIVING"
   },
   {
@@ -176,17 +176,17 @@
   },
   {
     "path": "docs/DATA_AND_STORAGE.md",
-    "bytes": 1258,
+    "bytes": 4106,
     "status": "LIVING"
   },
   {
     "path": "docs/DEPENDENCY_INVENTORY.md",
-    "bytes": 1146,
+    "bytes": 5722,
     "status": "LIVING"
   },
   {
     "path": "docs/DIVERGENCES.md",
-    "bytes": 1239,
+    "bytes": 1458,
     "status": "LIVING"
   },
   {
@@ -196,17 +196,17 @@
   },
   {
     "path": "docs/KNOWN_LIMITATIONS.md",
-    "bytes": 998,
+    "bytes": 3570,
     "status": "LIVING"
   },
   {
     "path": "docs/METRICS_AND_BENCHMARKS.md",
-    "bytes": 1822,
+    "bytes": 4112,
     "status": "LIVING"
   },
   {
     "path": "docs/MIGRATION.md",
-    "bytes": 1567,
+    "bytes": 2329,
     "status": "LIVING"
   },
   {
@@ -231,17 +231,17 @@
   },
   {
     "path": "docs/TESTING_AND_VERIFICATION.md",
-    "bytes": 1825,
+    "bytes": 9758,
     "status": "LIVING"
   },
   {
     "path": "docs/UPSTREAM_SYNC_LOG.md",
-    "bytes": 577,
+    "bytes": 1626,
     "status": "LIVING"
   },
   {
     "path": "docs/agents/HANDOFF_TEMPLATE.md",
-    "bytes": 651,
+    "bytes": 643,
     "status": null
   },
   {
@@ -251,7 +251,7 @@
   },
   {
     "path": "docs/agents/SESSION_TEMPLATE.md",
-    "bytes": 660,
+    "bytes": 652,
     "status": null
   },
   {
@@ -261,12 +261,12 @@
   },
   {
     "path": "docs/agents/WORK_CLAIM_TEMPLATE.md",
-    "bytes": 696,
+    "bytes": 686,
     "status": null
   },
   {
     "path": "docs/decisions/0000-template.md",
-    "bytes": 818,
+    "bytes": 812,
     "status": null
   },
   {

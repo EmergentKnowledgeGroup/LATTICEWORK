@@ -129,6 +129,9 @@ No test was weakened, removed, or changed.
 
 ## Freeze rule
 
-This document is not frozen yet. Browser/runtime/network, data-schema, supported
-platform, and performance evidence remain open Phase 0 blockers. After verification,
-corrections must be recorded as corrections, not silent edits.
+This baseline identity and its measured Phase 0 receipts are frozen. Later
+characterization may add bounded evidence, but it must not rewrite the pinned
+tree, archive, hashes, commands, or observed failures. Corrections must be
+recorded as corrections, not silent edits. Data schemas, supported platforms,
+and equivalent-feature performance remain later-phase unknowns rather than
+reasons to alter the baseline.

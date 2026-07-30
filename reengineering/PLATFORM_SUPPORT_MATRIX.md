@@ -1,10 +1,26 @@
 # Platform, Launch-Mode, and Degraded-Capability Matrix
 
-**Status:** PHASE 0 FROZEN — SUPPORT DECISIONS PENDING
+**Status:** PHASE 0 LEGACY MATRIX FROZEN — PHASE 2 CANDIDATE SHELL MEASURED;
+SUPPORT DECISIONS PENDING
 **Baseline:** `e7585999fc1af2707f410ae87356cf2b52e08d9c`
+**Phase 2 candidate:** `c8a040fb38f627bf4d0353b3497645653a57139c`
 
 This matrix records evidence and preservation obligations. `OBSERVED` does not
 mean supported, and `PROPOSED` does not mean accepted.
+
+## Bounded candidate evidence
+
+- **VERIFIED:** the feature-free Phase 2 candidate shell passed an independent
+  Chromium desktop/mobile-emulation browser rerun, including keyboard,
+  reduced-motion, and forced-colors checks.
+- **OBSERVED:** the inspected desktop, 390 x 844 mobile, and forced-colors
+  screenshots were readable and did not show horizontal overflow.
+- **UNKNOWN:** candidate behavior in Firefox, WebKit/Safari, macOS, Linux
+  desktop shells, physical mobile browsers, packaged desktop modes, and any
+  migrated legacy workflow.
+- **INFERRED:** these receipts establish that the bounded shell is testable on
+  its pinned Chromium profile. They do not establish a supported-platform claim
+  or upgrade any legacy compatibility row below.
 
 ## Browser, operating system, and viewport
 
@@ -49,6 +65,8 @@ mean supported, and `PROPOSED` does not mean accepted.
 ## Evidence
 
 - [Phase 0 browser characterization](evidence/phase-0/LW-P0-003-browser/README.md)
+- [Phase 2 bounded candidate evidence](evidence/phase-2/LW-P2-001/README.md)
+- [Phase 2 independent review](evidence/phase-2/LW-P2-001/independent-review/REVIEW.md)
 - [Behavior and boundary map](evidence/phase-0/LW-M0-BEH-001/behavior-boundary-map.md)
 - [Performance measurement plan](PERFORMANCE_PLAN.md)
 - [Baseline capability contract](BASELINE_CAPABILITY_CONTRACT.md)

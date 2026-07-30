@@ -20,7 +20,13 @@ Move from upstream implementation to LATTICEWORK architecture without losing use
 
 | ID | Surface | Current owner | Target owner | Compatibility risk | Data risk | Rollback | Status |
 |---|---|---|---|---|---|---|---|
-| `MIG-001` | `[SURFACE]` | `[CURRENT]` | `[TARGET]` | `[LEVEL]` | `[LEVEL]` | `[PLAN]` | `[STATUS]` |
+| `MIG-001` | Canonical web source/build | legacy root/`docs` mirrors | candidate `apps/web/src` | Critical | Low in feature-free Phase 2 | remove candidate commit/output; legacy remains default | Foundation verified; no cutover |
+| `MIG-002` | Provider calls | legacy browser globals | future provider contracts/adapters | High | High | legacy route remains default | Blocked |
+| `MIG-003` | Browser storage | direct legacy UI/feature calls | future versioned repositories | Critical | Critical | backup-first/copy-on-write design required | Blocked |
+| `MIG-004` | First feature vertical slice | legacy monolith/global state | future bounded feature package | Critical | High | legacy route remains default | Blocked |
+
+The detailed machine-operational status is maintained in
+[`reengineering/MIGRATION_LEDGER.md`](../reengineering/MIGRATION_LEDGER.md).
 
 ## Required sequence per surface
 
@@ -39,7 +45,7 @@ Move from upstream implementation to LATTICEWORK architecture without losing use
 
 | Schema | From | To | Backup | Forward migration | Rollback | Verified |
 |---|---|---|---|---|---|---|
-| `[SCHEMA]` | `[VERSION]` | `[VERSION]` | `[METHOD]` | `[LINK]` | `[LINK]` | `[RESULT]` |
+| None | — | — | — | — | — | No LATTICEWORK data migration is implemented or authorized |
 
 ## Rollback rule
 

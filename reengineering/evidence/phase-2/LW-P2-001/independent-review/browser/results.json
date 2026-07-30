@@ -1,0 +1,357 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "Z:\\LATTICEWORK\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "Z:\\LATTICEWORK\\tests\\phase2\\playwright.config.ts",
+    "rootDir": "Z:/LATTICEWORK/tests/phase2",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "Z:/LATTICEWORK/runtime/tmp/phase2-independent-qa-final/browser",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "Z:/LATTICEWORK/tests/phase2",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.0",
+    "workers": 12,
+    "webServer": {
+      "command": "npm --prefix ../.. run p2:preview",
+      "cwd": ".",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "url": "http://127.0.0.1:4177"
+    }
+  },
+  "suites": [
+    {
+      "title": "empty-status-shell.spec.ts",
+      "file": "empty-status-shell.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "desktop candidate shell is explicit, semantic, and bounded",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 369,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T11:26:12.805Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-browser-boundary.json",
+                      "contentType": "application/json",
+                      "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-desktop-bafce-plicit-semantic-and-bounded\\attachments\\candidate-browser-boundary-json-ccf22fa653c2e7eb7116fc09bb8beef1069adc3b.json"
+                    },
+                    {
+                      "name": "candidate-desktop.png",
+                      "contentType": "image/png",
+                      "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-desktop-bafce-plicit-semantic-and-bounded\\attachments\\candidate-desktop-png-a13081dca96b79a5fdccee9a0f218cadb4222049.png"
+                    },
+                    {
+                      "name": "candidate-desktop-aria.yml",
+                      "contentType": "text/yaml",
+                      "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-desktop-bafce-plicit-semantic-and-bounded\\attachments\\candidate-desktop-aria-yml-3d439854903db05e32f37f228afe72b72d7ea72f.yml"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd566b232999ccc83406-da3a618ccad0802d1a86",
+          "file": "empty-status-shell.spec.ts",
+          "line": 185,
+          "column": 1
+        },
+        {
+          "title": "mobile shell remains readable without horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 268,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T11:26:13.258Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-mobile-390x844.png",
+                      "contentType": "image/png",
+                      "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-mobile--2f9e8-without-horizontal-overflow\\attachments\\candidate-mobile-390x844-png-99c97a12a0c16546bca54fe8442111fe90d52776.png"
+                    },
+                    {
+                      "name": "candidate-mobile-390x844-aria.yml",
+                      "contentType": "text/yaml",
+                      "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-mobile--2f9e8-without-horizontal-overflow\\attachments\\candidate-mobile-390x844-aria-yml-5300d4d0796bb698e69d57bb8466f611c8cef157.yml"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd566b232999ccc83406-01ea4caea27112c4ba45",
+          "file": "empty-status-shell.spec.ts",
+          "line": 221,
+          "column": 1
+        },
+        {
+          "title": "keyboard focus is visible",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 243,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T11:26:13.533Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd566b232999ccc83406-ea5143286028c2ae1896",
+          "file": "empty-status-shell.spec.ts",
+          "line": 235,
+          "column": 1
+        },
+        {
+          "title": "candidate stays within provisional navigation and long-task ceilings",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 334,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T11:26:14.243Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "candidate-performance.json",
+                      "contentType": "application/json",
+                      "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-candida-31ebf-tion-and-long-task-ceilings\\attachments\\candidate-performance-json-0b345b4f93f6af33a8c793be1bb7324221fb53da.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd566b232999ccc83406-1511aadfac2ac4213e8a",
+          "file": "empty-status-shell.spec.ts",
+          "line": 275,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "accessibility media profiles",
+          "file": "empty-status-shell.spec.ts",
+          "line": 249,
+          "column": 6,
+          "specs": [
+            {
+              "title": "reduced motion disables decorative timing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 228,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T11:26:13.782Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bd566b232999ccc83406-42ef3301d43511bd7fa9",
+              "file": "empty-status-shell.spec.ts",
+              "line": 250,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "forced colors",
+          "file": "empty-status-shell.spec.ts",
+          "line": 262,
+          "column": 6,
+          "specs": [
+            {
+              "title": "forced colors preserves readable candidate status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 215,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-30T11:26:14.016Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "candidate-forced-colors.png",
+                          "contentType": "image/png",
+                          "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-forced--87551-s-readable-candidate-status\\attachments\\candidate-forced-colors-png-68b39dc83a8dfae4a09f02b9d9882e51412bfb53.png"
+                        },
+                        {
+                          "name": "candidate-forced-colors-aria.yml",
+                          "contentType": "text/yaml",
+                          "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-forced--87551-s-readable-candidate-status\\attachments\\candidate-forced-colors-aria-yml-578466549af806436c5ce2e31115f74882e5b02f.yml"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bd566b232999ccc83406-438b46e4c6e8506374cd",
+              "file": "empty-status-shell.spec.ts",
+              "line": 263,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-30T11:26:11.532Z",
+    "duration": 3487.284,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

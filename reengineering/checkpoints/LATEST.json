@@ -1,6 +1,6 @@
 {
   "schema": "latticework.context_checkpoint.tracks.v1",
-  "captured_at": "2026-07-30T11:17:49Z",
+  "captured_at": "2026-07-30T11:26:02Z",
   "repo_root": "Z:\\LATTICEWORK",
   "current_track": "LW_P2_FOUNDATION WORK",
   "tracks": {
@@ -132,11 +132,11 @@
     },
     "LW_P2_FOUNDATION WORK": {
       "track": "LW_P2_FOUNDATION WORK",
-      "step": "precommit-green",
-      "note": "The bounded typed contracts, lifecycle kernel, Lit status shell, safety-hardened verification runner, and strict evidence validator are locally green; the candidate implementation is staged for its first commit so canonical evidence can identify a real candidate SHA.",
+      "step": "phase2-foundation-green",
+      "note": "The bounded typed contracts, lifecycle kernel, Lit status shell, safety-hardened verification runner, and strict evidence package are captured in the current worktree, canonically verified, independently reproduced, and documented without migrating legacy behavior.",
       "branch": "reengineering/m0-baseline-characterization",
-      "head": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
-      "next_cmd": "Commit the staged candidate implementation, then run canonical Phase 2 verification against that committed candidate SHA before living-doc and handoff updates.",
+      "head": "c8a040fb38f627bf4d0353b3497645653a57139c",
+      "next_cmd": "Read docs/agents/handoffs/LW-P2-001.md, then prepare the Phase 3 data/storage and provider-contract decision packet without mutating legacy data or external-service behavior.",
       "validations": [
         "VERIFIED: LW_P1_CHARACTERIZATION WORK and LW_P2_PREFLIGHT WORK are green.",
         "OBSERVED: ADR-001 through ADR-003 are Accepted.",
@@ -147,8 +147,11 @@
         "MEASURED: the complete Phase 2 smoke runner passes clean install, isolated byte-identical lockfile replay, typecheck, unit/control suites, two byte-identical builds, 6 of 6 browser scenarios, zero-vulnerability audit, CycloneDX SBOM, supply-chain inventory, protected-boundary verification, and strict bundle validation.",
         "VERIFIED: candidate output rejects symbolic-link or junction traversal before Vite emptyOutDir can run.",
         "VERIFIED: browser QA aborts out-of-origin traffic before transmission and blocks realtime, worker, EventSource, and sendBeacon capability use.",
-        "VERIFIED: the independent pre-commit QA findings were addressed; remaining acceptance gates are committed candidate identity, canonical evidence, and separate-port independent reproduction.",
-        "VERIFIED: staged diff contains no protected legacy path, local-only AGENTS.md, bootstrap archive, generated output, runtime temp, or Playwright scratch path."
+        "VERIFIED: candidate commit c8a040fb38f627bf4d0353b3497645653a57139c is identified throughout the canonical Phase 2 summary, manifests, validation, and command receipts.",
+        "VERIFIED: canonical evidence at reengineering/evidence/phase-2/LW-P2-001 reports 16 successful command receipts, 8 protected paths, 8 required browser artifacts, and zero validator failures.",
+        "VERIFIED: independent QA reproduced the complete gate from a separate Z-local evidence directory on port 4177 and accepted the bounded work unit.",
+        "VERIFIED: desktop, 390 x 844 mobile, and forced-colors evidence was visually inspected and remained readable with explicit candidate-only/no-migrated-feature language.",
+        "VERIFIED: docs/agents/handoffs/LW-P2-001.md and the living architecture, compatibility, testing, dependency, migration, readiness, claims, metrics, limitations, and project-state documents match the bounded result."
       ],
       "decisions": [
         "Use exact direct pins Vite 8.1.5, TypeScript 6.0.3, Lit 3.3.3, and isolated Playwright 1.62.0.",
@@ -162,6 +165,9 @@
         "tests/phase2/**",
         "Phase 2 tools and repository-control tests",
         "docs/agents/claims/LW-P2-001.md",
+        "docs/agents/handoffs/LW-P2-001.md",
+        "reengineering/evidence/phase-2/LW-P2-001/**",
+        "Phase 2 evidence-linked living documents",
         "runtime/checkpoints/LATEST.md",
         "runtime/checkpoints/LATEST.json",
         "reengineering/checkpoints/LATEST.md",

@@ -1,0 +1,7 @@
+{
+    "schema":  "latticework.phase2-lockfile-comparison.v1",
+    "evidence_label":  "MEASURED",
+    "valid":  true,
+    "canonical_sha256":  "ce6e0656d677c67a6f4e308f600796467d81a1cf72a3905be8e672ab1e65e4e8",
+    "replayed_sha256":  "ce6e0656d677c67a6f4e308f600796467d81a1cf72a3905be8e672ab1e65e4e8"
+}

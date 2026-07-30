@@ -1,8 +1,9 @@
 # Performance Measurement Plan
 
-**Status:** PROPOSED — Phase 0 measurement contract, not a compatibility or
-release claim
+**Status:** ACCEPTED MEASUREMENT CONTRACT — Phase 2 bounded candidate profile
+executed; broader compatibility and release profiles remain open
 **Baseline:** `e7585999fc1af2707f410ae87356cf2b52e08d9c`
+**Phase 2 candidate:** `c8a040fb38f627bf4d0353b3497645653a57139c`
 
 ## Evidence boundary
 
@@ -15,6 +16,16 @@ release claim
   subresource transfer, emitted bundle sizes, long tasks, heap recovery,
   GPU-resource recovery, physical-mobile performance, desktop-shell
   performance, and accessibility-profile performance.
+- **MEASURED:** the bounded Phase 2 candidate shell produced a deterministic
+  four-file build. Its one canonical browser run reported DOMContentLoaded at
+  25.5 ms, load at 26.3 ms, navigation transfer at 871 bytes, and zero observed
+  long tasks at or above 50 ms. Emitted JavaScript was 22,607 raw / 8,332 gzip /
+  7,413 Brotli bytes; emitted CSS was 655 / 399 / 314 bytes.
+- **VERIFIED:** an independent rerun at the pinned Phase 2 candidate commit
+  reproduced the required typecheck, unit, deterministic-build,
+  protected-boundary, supply-chain, browser, and evidence-validation gates.
+  This verifies the bounded candidate shell only, not legacy parity or release
+  readiness.
 - **PROPOSED:** a required online run must meet every applicable ceiling below.
   An average cannot hide a slower run.
 
@@ -54,10 +65,11 @@ baseline result. Heap and GPU ceilings require candidate-owned instrumentation:
 browser APIs do not provide portable, authoritative GPU-memory byte counts.
 Process memory, screenshots, or an absent WebGPU API are not cleanup receipts.
 
-No emitted bundle-size ceiling is proposed yet. The repository has no tracked
-canonical build command, and the browser receipt does not enumerate total static
-resource transfer. First record initial JavaScript and CSS bytes (raw, gzip, and
-Brotli) plus aggregate resource transfer for the selected candidate build.
+No emitted bundle-size ceiling is proposed yet. Phase 2 now provides a tracked
+canonical build command and an initial JavaScript/CSS size receipt, but one
+bounded candidate measurement is not enough to establish a defensible ceiling.
+Record repeated candidate results and comparable legacy-flow receipts before
+promoting any bundle-size budget.
 
 ## Promotion rule
 
@@ -82,5 +94,7 @@ corrected receipt.
 ## Current evidence
 
 - [Phase 0 browser characterization](evidence/phase-0/LW-P0-003-browser/README.md)
+- [Phase 2 bounded candidate evidence](evidence/phase-2/LW-P2-001/README.md)
+- [Phase 2 independent review](evidence/phase-2/LW-P2-001/independent-review/REVIEW.md)
 - [Pinned environment receipt](evidence/phase-0/LW-P0-001-environment/manifest.json)
 - [Baseline definition](../docs/BASELINE.md)

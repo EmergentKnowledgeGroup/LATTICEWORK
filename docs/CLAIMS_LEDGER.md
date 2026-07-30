@@ -17,7 +17,11 @@ Every public technical claim must appear here before publication.
 
 | ID | Public claim | State | Target versions | Evidence | Method | Independent review | Last checked |
 |---|---|---|---|---|---|---|---|
-| — | No public technical claim is authorized during Phase 0 | — | — | — | — | — | 2026-07-30 |
+| `CLM-001` | At commit `c8a040fb...`, the feature-free LATTICEWORK candidate foundation passes its bounded Phase 2 type, unit, control, deterministic-build, browser-safety, supply-chain, protected-boundary, and evidence gates. | `VERIFIED` | baseline `e7585999...`; candidate `c8a040fb...` | `reengineering/evidence/phase-2/LW-P2-001/` | canonical port-4174 run plus separate-directory port-4177 reproduction | independent QA accepted the bounded work unit | 2026-07-30 |
+| `CLM-002` | LATTICEWORK is not yet a drop-in replacement, feature-parity implementation, or release-ready product. | `SUPPORTED` | current repository state | `docs/COMPATIBILITY.md`; `reengineering/RELEASE_READINESS.md` | open compatibility, data, security, and cutover gates | consistent with Phase 2 independent-review boundary | 2026-07-30 |
+
+No broader product, compatibility, superiority, performance, or release claim
+is authorized by the Phase 2 foundation evidence.
 
 ## Claim requirements
 

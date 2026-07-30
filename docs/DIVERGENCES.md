@@ -10,7 +10,7 @@ A divergence is not automatically a defect. An undocumented divergence is.
 
 | ID | Surface | Upstream behavior | LATTICEWORK behavior | Reason | Migration impact | Evidence | Approval |
 |---|---|---|---|---|---|---|---|
-| `DIV-001` | `[SURFACE]` | `[BEHAVIOR]` | `[BEHAVIOR]` | `[REASON]` | `[IMPACT]` | `[LINK]` | `[ADR]` |
+| — | No accepted user-visible divergence | — | The Phase 2 candidate shell is isolated and is not a replacement route | Preserve compatibility obligations until shared-fixture evidence and approval exist | None | `reengineering/evidence/phase-2/LW-P2-001/` | ADR-001 through ADR-003 authorize the candidate seam only |
 
 ## Divergence classes
 

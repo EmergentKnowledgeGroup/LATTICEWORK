@@ -32,8 +32,9 @@ None. This entry records the starting point and does not change runtime behavior
 
 **LATTICEWORK commits**
 
-No candidate commit yet; Phase 0 control artifacts remain uncommitted on the
-baseline branch.
+The initial reengineering foundation was later committed as
+`c8a040fb38f627bf4d0353b3497645653a57139c`. It is additive and preserves this
+same upstream baseline; it is not an upstream sync or history rewrite.
 
 ## Sync entry template
 

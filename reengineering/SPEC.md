@@ -48,8 +48,9 @@ Reengineer the pinned FreeLattice baseline into a maintainable, secure, testable
 
 ## Current gate
 
-Phase 0 and Phase 1 are green, and ADR-001 through ADR-003 were accepted on
-2026-07-30. Runtime work is authorized only for the additive `LW-P2-001`
-status-shell/kernel/contracts slice defined in `PHASE2_PREFLIGHT.md`. Persistence,
-provider, security, feature migration, deployment cutover, and capability
-retirement remain blocked by their later evidence and decision gates.
+Phase 0, Phase 1, and the feature-free `LW-P2-001` foundation are green;
+ADR-001 through ADR-003 were accepted on 2026-07-30. The next implementation
+gate is Phase 3, which remains blocked on accepted data/storage and provider
+contracts. Persistence, provider, security, feature migration, deployment
+cutover, and capability retirement remain blocked by their later evidence and
+decision gates.

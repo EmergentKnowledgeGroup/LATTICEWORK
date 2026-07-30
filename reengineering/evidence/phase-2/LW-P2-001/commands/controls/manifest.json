@@ -1,0 +1,42 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P2-001-controls",
+  "command": [
+    "node.exe",
+    "--test",
+    "tests/reengineering/*.test.mjs"
+  ],
+  "command_display": "\"node.exe\" \"--test\" \"tests/reengineering/*.test.mjs\"",
+  "cwd": "Z:\\LATTICEWORK",
+  "started_at": "2026-07-30T11:25:30.591Z",
+  "ended_at": "2026-07-30T11:25:30.935Z",
+  "duration_ms": 343.8392,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "c8a040fb38f627bf4d0353b3497645653a57139c",
+  "repository": {
+    "head": "c8a040fb38f627bf4d0353b3497645653a57139c",
+    "status": "## reengineering/m0-baseline-characterization\n?? reengineering/evidence/phase-2/"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1"
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 3023,
+      "sha256": "73a70c3731dbf5e5740395d9bf45f440151bcd19abd1f5858734903e4ca79f46"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ It is not a general judgment about people, intent, or every version of either pr
 | Project | Commit or tag | Date | Environment |
 |---|---|---|---|
 | FreeLattice | `e7585999fc1af2707f410ae87356cf2b52e08d9c` / local `v0.0.0-upstream-baseline` | 2026-07-30 | [Phase 0 environment receipt](../reengineering/evidence/phase-0/LW-P0-001-environment/manifest.json) |
-| LATTICEWORK | no rewritten runtime or release yet; Phase 0 control checkout remains based on `e7585999fc1af2707f410ae87356cf2b52e08d9c` | 2026-07-30 | same control machine; candidate comparison unavailable |
+| LATTICEWORK | `c8a040fb38f627bf4d0353b3497645653a57139c` (feature-free Phase 2 foundation, not a release) | 2026-07-30 | same control machine; [bounded candidate evidence](../reengineering/evidence/phase-2/LW-P2-001/README.md) |
 
 ## Fair-comparison rules
 
@@ -31,15 +31,15 @@ It is not a general judgment about people, intent, or every version of either pr
 
 | Metric | FreeLattice | LATTICEWORK | Interpretation | Receipt |
 |---|---:|---:|---|---|
-| First-party source lines | 302,560 | not measured; rewritten runtime absent | Baseline is physical LOC under the documented source classifier; no reduction claim exists | [baseline summary](../reengineering/evidence/phase-0/LW-P0-001/baseline-summary.json) |
-| First-party source files | 220 | not measured; rewritten runtime absent | Candidate comparison is blocked until the canonical build/source ADR is accepted | [baseline summary](../reengineering/evidence/phase-0/LW-P0-001/baseline-summary.json) |
-| Largest source file | 65,387 lines (`docs/app.html`; exact duplicate `index.html`) | not measured; rewritten runtime absent | File concentration is observed, not a quality verdict | [baseline summary](../reengineering/evidence/phase-0/LW-P0-001/baseline-summary.json) |
-| Exact duplicate source | 9 groups; 75,123 redundant lines | not measured; rewritten runtime absent | Exact byte duplicates only; structural similarity is not counted | [baseline summary](../reengineering/evidence/phase-0/LW-P0-001/baseline-summary.json) |
+| First-party source lines | 302,560 | not compared; candidate has no equivalent feature scope | Baseline is physical LOC under the documented source classifier; missing features cannot be counted as reduction | [baseline summary](../reengineering/evidence/phase-0/LW-P0-001/baseline-summary.json) |
+| First-party source files | 220 | not compared; candidate is a bounded foundation | The canonical candidate source boundary is verified, but a like-for-like runtime does not exist | [candidate evidence](../reengineering/evidence/phase-2/LW-P2-001/README.md) |
+| Largest source file | 65,387 lines (`docs/app.html`; exact duplicate `index.html`) | not compared | File concentration is observed, not a quality verdict; the candidate lacks equivalent features | [baseline summary](../reengineering/evidence/phase-0/LW-P0-001/baseline-summary.json) |
+| Exact duplicate source | 9 groups; 75,123 redundant lines | not compared | Exact byte duplicates only; Phase 2 does not authorize a reduction claim | [baseline summary](../reengineering/evidence/phase-0/LW-P0-001/baseline-summary.json) |
 | Dependency cycles | unknown | unknown | No module-graph cycle methodology is frozen yet | none |
-| Assigned browser globals | 244 statically extracted `window` symbols; 24 major globals mapped | not measured; rewritten runtime absent | Static assignment presence does not establish mutation/reachability | [inventory](../reengineering/evidence/phase-0/LW-M0-INV-001/window-symbol-assignments.json) |
-| Smoke checks discovered | 3,213 | not applicable; rewritten runtime absent | Baseline harness is a cumulative source/release ledger | [smoke receipt](../reengineering/evidence/phase-0/LW-P0-002-smoke/manifest.json) |
-| Passing smoke checks | 3,106 | not applicable; rewritten runtime absent | Exit remains nonzero | [smoke receipt](../reengineering/evidence/phase-0/LW-P0-002-smoke/manifest.json) |
-| Failing smoke checks | 107 | not applicable; rewritten runtime absent | Failures remain preserved and dispositioned, not deleted | [smoke receipt](../reengineering/evidence/phase-0/LW-P0-002-smoke/manifest.json) |
+| Assigned browser globals | 244 statically extracted `window` symbols; 24 major globals mapped | candidate shell exposes no legacy feature globals | Different feature scope; this is a boundary observation, not a superiority claim | [inventory](../reengineering/evidence/phase-0/LW-M0-INV-001/window-symbol-assignments.json) |
+| Smoke checks discovered | 3,213 | 37 repository controls, 5 kernel tests, and 6 browser scenarios | Test counts have different scopes and cannot be compared as product quality | [testing contract](TESTING_AND_VERIFICATION.md) |
+| Passing smoke checks | 3,106 | all bounded Phase 2 gates pass | The legacy exit remains nonzero; candidate success does not erase baseline obligations | [candidate validation](../reengineering/evidence/phase-2/LW-P2-001/validation.json) |
+| Failing smoke checks | 107 | zero in the bounded candidate suites | Different scope; failures remain preserved and dispositioned, not deleted | [smoke receipt](../reengineering/evidence/phase-0/LW-P0-002-smoke/manifest.json) |
 
 ## Behavior comparison
 
@@ -79,6 +79,7 @@ Do not generalize from one run.
 
 ## Conclusion
 
-No structural or behavioral superiority claim is authorized. Phase 0 has a
-reproducible FreeLattice baseline; LATTICEWORK does not yet have a rewritten
-runtime or release that can be compared fairly.
+No structural or behavioral superiority claim is authorized. LATTICEWORK now
+has a reproducible feature-free foundation, but it does not have equivalent
+feature scope or a release that can be compared fairly with the preserved
+FreeLattice runtime.

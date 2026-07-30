@@ -2,6 +2,16 @@
 
 # Roadmap
 
+## Current position
+
+- `M0`: complete.
+- `M1`: bounded baseline characterization complete; feature-by-feature
+  characterization continues as migration reaches each surface.
+- `M2`: accepted architecture and feature-free typed foundation independently
+  verified.
+- `M3` and later: not started; blocked by their recorded decision/evidence
+  gates.
+
 ## M0 — Upstream baseline
 
 Exit criteria:

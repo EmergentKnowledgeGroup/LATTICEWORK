@@ -1,0 +1,14 @@
+{
+  "schema": "latticework.phase2-evidence-validation.v1",
+  "valid": true,
+  "directory": "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-2\\LW-P2-001",
+  "work_id": "LW-P2-001",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "c8a040fb38f627bf4d0353b3497645653a57139c",
+  "checks": {
+    "command_receipts": 16,
+    "protected_paths": 8,
+    "required_browser_artifacts": 8
+  },
+  "failures": []
+}

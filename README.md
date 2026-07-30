@@ -16,7 +16,11 @@ The project preserves worthwhile user-visible behavior while replacing unnecessa
 
 **Pre-alpha reengineering.**
 
-Audit, baseline characterization, compatibility discovery, and verification harness construction are in progress. LATTICEWORK must not be described as a drop-in replacement until the compatibility evidence supports that claim.
+The immutable baseline and bounded browser characterization are frozen. The
+first feature-free typed candidate foundation is implemented and independently
+verified, while all legacy features, stored data, providers, deployment routes,
+and release/cutover work remain unmigrated. LATTICEWORK must not be described
+as a drop-in replacement until the compatibility evidence supports that claim.
 
 ## Why this exists
 

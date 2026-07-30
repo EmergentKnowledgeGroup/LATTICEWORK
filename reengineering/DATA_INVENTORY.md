@@ -15,7 +15,8 @@
 The static and runtime name inventories are reproducible. The runtime receipt
 also proves first-load mutation before onboarding completion. Owner, sensitivity,
 retention, indexes, record schema, export/delete, interruption, and migration
-evidence remain a Phase 0/1 gate before storage implementation.
+evidence remain the Phase 3 decision and verification gate before storage
+implementation. Phase 2 intentionally created no durable browser state.
 
 The machine-readable
 [`DATA_PRESERVATION_REGISTRY.json`](DATA_PRESERVATION_REGISTRY.json) groups every

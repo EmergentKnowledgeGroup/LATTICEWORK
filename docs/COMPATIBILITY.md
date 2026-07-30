@@ -51,6 +51,21 @@ characterization and do not support a replacement or drop-in claim.
 The Phase 1 network-denial gate proves fixture isolation, not provider
 compatibility; real provider connection semantics remain C0.
 
+## Candidate-only foundation evidence
+
+**VERIFIED:** `LW-P2-001` provides a feature-free status shell, lifecycle
+kernel, and typed contracts at candidate commit
+`c8a040fb38f627bf4d0353b3497645653a57139c`. Canonical and independent browser
+gates cover its desktop, 390 x 844 mobile, keyboard, reduced-motion,
+forced-colors, no-egress, no-storage, and no-service-worker profiles.
+
+This is architecture-foundation evidence, not an upstream compatibility
+surface. It changes none of the C0-C2 levels above and does not establish a
+legacy feature, route, provider, storage, accessibility, or release-parity
+claim. Evidence:
+[`LW-P2-001`](../reengineering/evidence/phase-2/LW-P2-001/README.md) and
+[`independent review`](../reengineering/evidence/phase-2/LW-P2-001/independent-review/REVIEW.md).
+
 ## Compatibility rules
 
 - Preserve user-visible semantics, not implementation accidents, unless an accident became relied-upon behavior.

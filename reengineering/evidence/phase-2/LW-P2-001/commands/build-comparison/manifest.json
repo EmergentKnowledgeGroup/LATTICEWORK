@@ -1,0 +1,49 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P2-001-build-comparison",
+  "command": [
+    "node.exe",
+    "tools/reengineering/verify-phase2-build.mjs",
+    "--workspace-root",
+    "Z:\\LATTICEWORK",
+    "--first",
+    "Z:\\LATTICEWORK\\output\\lw-p2-001\\web",
+    "--second",
+    "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-2\\LW-P2-001\\generated\\build-2",
+    "--output",
+    "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-2\\LW-P2-001\\build-comparison.json"
+  ],
+  "command_display": "\"node.exe\" \"tools/reengineering/verify-phase2-build.mjs\" \"--workspace-root\" \"Z:\\\\LATTICEWORK\" \"--first\" \"Z:\\\\LATTICEWORK\\\\output\\\\lw-p2-001\\\\web\" \"--second\" \"Z:\\\\LATTICEWORK\\\\reengineering\\\\evidence\\\\phase-2\\\\LW-P2-001\\\\generated\\\\build-2\" \"--output\" \"Z:\\\\LATTICEWORK\\\\reengineering\\\\evidence\\\\phase-2\\\\LW-P2-001\\\\build-comparison.json\"",
+  "cwd": "Z:\\LATTICEWORK",
+  "started_at": "2026-07-30T11:25:32.869Z",
+  "ended_at": "2026-07-30T11:25:32.989Z",
+  "duration_ms": 119.6379,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "c8a040fb38f627bf4d0353b3497645653a57139c",
+  "repository": {
+    "head": "c8a040fb38f627bf4d0353b3497645653a57139c",
+    "status": "## reengineering/m0-baseline-characterization\n?? reengineering/evidence/phase-2/"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1"
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 1986,
+      "sha256": "615a17533c98a81ae23bbc6df4b52ecc7b48f01d5515fdd572fdd9084b1bec18"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

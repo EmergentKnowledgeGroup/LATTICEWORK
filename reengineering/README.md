@@ -2,7 +2,7 @@
 
 **Status:** ACTIVE
 **Baseline:** `e7585999fc1af2707f410ae87356cf2b52e08d9c`
-**Current milestone:** M1 — executable behavioral characterization
+**Current milestone:** M2 complete — typed candidate foundation verified; Phase 3 decision gate next
 
 This directory is the execution control plane for the compatibility-preserving FreeLattice reengineering. It separates current truth, obligations, decisions, evidence, and release gates from chat history.
 

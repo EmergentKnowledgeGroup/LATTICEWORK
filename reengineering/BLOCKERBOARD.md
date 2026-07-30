@@ -11,3 +11,8 @@
 | `LW-BLK-007` | P1 | P9 | Cutover and capability retirement require explicit owner approval | All reversible migration and verification work | Maintainer | Verbatim approval with affected IDs | OPEN |
 
 No blocker may be closed by weakening a test, hiding a capability, or relabeling required behavior.
+
+The verified `LW-P2-001` feature-free foundation does not close
+`LW-BLK-005` through `LW-BLK-007`; those gates concern data semantics,
+provider/security behavior, and eventual cutover that Phase 2 intentionally did
+not implement.
