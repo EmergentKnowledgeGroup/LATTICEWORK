@@ -5,42 +5,44 @@
     "node.exe",
     "tools/reengineering/validate-phase2-evidence.mjs",
     "--directory",
-    "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final",
+    "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence",
     "--workspace-root",
-    "Z:\\LATTICEWORK",
+    "Z:\\LATTICEWORK_QA_7e928bb",
     "--baseline-sha",
     "e7585999fc1af2707f410ae87356cf2b52e08d9c",
     "--candidate-sha",
-    "c8a040fb38f627bf4d0353b3497645653a57139c",
+    "7e928bba605e0309273989bf8fd1303d2a822923",
     "--output",
-    "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-verification-4177\\phase2-evidence-validation.json"
+    "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\phase2-verification-4183\\phase2-evidence-validation.json"
   ],
-  "command_display": "\"node.exe\" \"tools/reengineering/validate-phase2-evidence.mjs\" \"--directory\" \"Z:\\\\LATTICEWORK\\\\runtime\\\\tmp\\\\phase2-independent-qa-final\" \"--workspace-root\" \"Z:\\\\LATTICEWORK\" \"--baseline-sha\" \"e7585999fc1af2707f410ae87356cf2b52e08d9c\" \"--candidate-sha\" \"c8a040fb38f627bf4d0353b3497645653a57139c\" \"--output\" \"Z:\\\\LATTICEWORK\\\\runtime\\\\tmp\\\\phase2-verification-4177\\\\phase2-evidence-validation.json\"",
-  "cwd": "Z:\\LATTICEWORK",
-  "started_at": "2026-07-30T11:26:18.507Z",
-  "ended_at": "2026-07-30T11:26:18.592Z",
-  "duration_ms": 85.534,
+  "command_display": "\"node.exe\" \"tools/reengineering/validate-phase2-evidence.mjs\" \"--directory\" \"Z:\\\\LATTICEWORK_QA_7e928bb\\\\runtime\\\\tmp\\\\independent-phase2-final\\\\evidence\" \"--workspace-root\" \"Z:\\\\LATTICEWORK_QA_7e928bb\" \"--baseline-sha\" \"e7585999fc1af2707f410ae87356cf2b52e08d9c\" \"--candidate-sha\" \"7e928bba605e0309273989bf8fd1303d2a822923\" \"--output\" \"Z:\\\\LATTICEWORK_QA_7e928bb\\\\runtime\\\\tmp\\\\phase2-verification-4183\\\\phase2-evidence-validation.json\"",
+  "cwd": "Z:\\LATTICEWORK_QA_7e928bb",
+  "started_at": "2026-07-30T12:41:04.248Z",
+  "ended_at": "2026-07-30T12:41:04.348Z",
+  "duration_ms": 100.4068,
+  "timeout_ms": 300000,
   "exit_code": 0,
   "signal": null,
   "spawn_error": null,
   "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
-  "candidate_sha": "c8a040fb38f627bf4d0353b3497645653a57139c",
+  "candidate_sha": "7e928bba605e0309273989bf8fd1303d2a822923",
   "repository": {
-    "head": "c8a040fb38f627bf4d0353b3497645653a57139c",
-    "status": "## reengineering/m0-baseline-characterization\n?? reengineering/evidence/phase-2/"
+    "head": "7e928bba605e0309273989bf8fd1303d2a822923",
+    "status": "## HEAD (no branch)"
   },
   "environment": {
     "platform": "win32",
     "os_release": "10.0.19045",
     "architecture": "x64",
     "node": "v24.13.0",
-    "git": "git version 2.50.1.windows.1"
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
   },
   "artifacts": [
     {
       "path": "stdout.log",
-      "bytes": 432,
-      "sha256": "84d7e98ded70cb9959c2a5b11578613b648958aed8d0647ea99983811d46ab4a"
+      "bytes": 450,
+      "sha256": "ee3ac363ca830652860b446db364c8964f87eca421c2e77f079b050dfbf0d6fa"
     },
     {
       "path": "stderr.log",

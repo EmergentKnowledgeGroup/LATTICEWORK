@@ -1,9 +1,9 @@
 {
   "schema": "latticework.phase2-supply-chain.v1",
   "evidence_label": "MEASURED",
-  "captured_at": "2026-07-30T11:26:17.769Z",
+  "captured_at": "2026-07-30T12:41:01.898Z",
   "valid": true,
-  "workspace_root": "Z:\\LATTICEWORK",
+  "workspace_root": "Z:\\LATTICEWORK_QA_7e928bb",
   "root_package": {
     "name": "latticework",
     "version": "0.0.0",

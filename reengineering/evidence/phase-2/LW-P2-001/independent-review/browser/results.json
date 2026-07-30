@@ -2,11 +2,11 @@
   "config": {
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
-      "Z:\\LATTICEWORK\\node_modules\\@playwright\\test\\cli.js",
+      "Z:\\LATTICEWORK_QA_7e928bb\\node_modules\\@playwright\\test\\cli.js",
       "test"
     ],
-    "configFile": "Z:\\LATTICEWORK\\tests\\phase2\\playwright.config.ts",
-    "rootDir": "Z:/LATTICEWORK/tests/phase2",
+    "configFile": "Z:\\LATTICEWORK_QA_7e928bb\\tests\\phase2\\playwright.config.ts",
+    "rootDir": "Z:/LATTICEWORK_QA_7e928bb/tests/phase2",
     "failOnFlakyTests": false,
     "forbidOnly": true,
     "fullyParallel": false,
@@ -22,7 +22,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "Z:/LATTICEWORK/runtime/tmp/phase2-independent-qa-final/browser",
+        "outputDir": "Z:/LATTICEWORK_QA_7e928bb/runtime/tmp/independent-phase2-final/evidence/browser",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -30,7 +30,7 @@
         },
         "id": "",
         "name": "",
-        "testDir": "Z:/LATTICEWORK/tests/phase2",
+        "testDir": "Z:/LATTICEWORK_QA_7e928bb/tests/phase2",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -47,7 +47,7 @@
       [
         "json",
         {
-          "outputFile": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\results.json"
+          "outputFile": "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence\\browser\\results.json"
         }
       ]
     ],
@@ -66,7 +66,7 @@
       "cwd": ".",
       "reuseExistingServer": false,
       "timeout": 30000,
-      "url": "http://127.0.0.1:4177"
+      "url": "http://127.0.0.1:4183"
     }
   },
   "suites": [
@@ -92,28 +92,28 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 369,
+                  "duration": 380,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T11:26:12.805Z",
+                  "startTime": "2026-07-30T12:40:56.971Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "candidate-browser-boundary.json",
                       "contentType": "application/json",
-                      "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-desktop-bafce-plicit-semantic-and-bounded\\attachments\\candidate-browser-boundary-json-ccf22fa653c2e7eb7116fc09bb8beef1069adc3b.json"
+                      "path": "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence\\browser\\empty-status-shell-desktop-bafce-plicit-semantic-and-bounded\\attachments\\candidate-browser-boundary-json-eccbd093e8fd41e26964e2a0fc2fa38cac3b8cdb.json"
                     },
                     {
                       "name": "candidate-desktop.png",
                       "contentType": "image/png",
-                      "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-desktop-bafce-plicit-semantic-and-bounded\\attachments\\candidate-desktop-png-a13081dca96b79a5fdccee9a0f218cadb4222049.png"
+                      "path": "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence\\browser\\empty-status-shell-desktop-bafce-plicit-semantic-and-bounded\\attachments\\candidate-desktop-png-15e21d9e5ec8336bfaefc3b7b60d68f35798736f.png"
                     },
                     {
                       "name": "candidate-desktop-aria.yml",
                       "contentType": "text/yaml",
-                      "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-desktop-bafce-plicit-semantic-and-bounded\\attachments\\candidate-desktop-aria-yml-3d439854903db05e32f37f228afe72b72d7ea72f.yml"
+                      "path": "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence\\browser\\empty-status-shell-desktop-bafce-plicit-semantic-and-bounded\\attachments\\candidate-desktop-aria-yml-02a2cb59ffbff4ab132b21fa72f95efa6fdb250c.yml"
                     }
                   ]
                 }
@@ -123,7 +123,7 @@
           ],
           "id": "bd566b232999ccc83406-da3a618ccad0802d1a86",
           "file": "empty-status-shell.spec.ts",
-          "line": 185,
+          "line": 196,
           "column": 1
         },
         {
@@ -142,23 +142,23 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 268,
+                  "duration": 275,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T11:26:13.258Z",
+                  "startTime": "2026-07-30T12:40:57.992Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "candidate-mobile-390x844.png",
                       "contentType": "image/png",
-                      "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-mobile--2f9e8-without-horizontal-overflow\\attachments\\candidate-mobile-390x844-png-99c97a12a0c16546bca54fe8442111fe90d52776.png"
+                      "path": "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence\\browser\\empty-status-shell-mobile--2f9e8-without-horizontal-overflow\\attachments\\candidate-mobile-390x844-png-8736c1c10544a8516b9cdbe4f94faa13f894855e.png"
                     },
                     {
                       "name": "candidate-mobile-390x844-aria.yml",
                       "contentType": "text/yaml",
-                      "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-mobile--2f9e8-without-horizontal-overflow\\attachments\\candidate-mobile-390x844-aria-yml-5300d4d0796bb698e69d57bb8466f611c8cef157.yml"
+                      "path": "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence\\browser\\empty-status-shell-mobile--2f9e8-without-horizontal-overflow\\attachments\\candidate-mobile-390x844-aria-yml-bcbbde08a8b3f05e3463ad9479c4f7083e2dfa29.yml"
                     }
                   ]
                 }
@@ -168,7 +168,7 @@
           ],
           "id": "bd566b232999ccc83406-01ea4caea27112c4ba45",
           "file": "empty-status-shell.spec.ts",
-          "line": 221,
+          "line": 232,
           "column": 1
         },
         {
@@ -187,12 +187,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 243,
+                  "duration": 261,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T11:26:13.533Z",
+                  "startTime": "2026-07-30T12:40:58.272Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -202,7 +202,7 @@
           ],
           "id": "bd566b232999ccc83406-ea5143286028c2ae1896",
           "file": "empty-status-shell.spec.ts",
-          "line": 235,
+          "line": 246,
           "column": 1
         },
         {
@@ -221,18 +221,18 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 334,
+                  "duration": 333,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T11:26:14.243Z",
+                  "startTime": "2026-07-30T12:40:59.012Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "candidate-performance.json",
                       "contentType": "application/json",
-                      "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-candida-31ebf-tion-and-long-task-ceilings\\attachments\\candidate-performance-json-0b345b4f93f6af33a8c793be1bb7324221fb53da.json"
+                      "path": "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence\\browser\\empty-status-shell-candida-31ebf-tion-and-long-task-ceilings\\attachments\\candidate-performance-json-a16b551bc7e70b68568680e376fb5c483d9dae90.json"
                     }
                   ]
                 }
@@ -242,7 +242,7 @@
           ],
           "id": "bd566b232999ccc83406-1511aadfac2ac4213e8a",
           "file": "empty-status-shell.spec.ts",
-          "line": 275,
+          "line": 286,
           "column": 1
         }
       ],
@@ -250,7 +250,7 @@
         {
           "title": "accessibility media profiles",
           "file": "empty-status-shell.spec.ts",
-          "line": 249,
+          "line": 260,
           "column": 6,
           "specs": [
             {
@@ -269,12 +269,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 228,
+                      "duration": 226,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T11:26:13.782Z",
+                      "startTime": "2026-07-30T12:40:58.540Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -284,7 +284,7 @@
               ],
               "id": "bd566b232999ccc83406-42ef3301d43511bd7fa9",
               "file": "empty-status-shell.spec.ts",
-              "line": 250,
+              "line": 261,
               "column": 3
             }
           ]
@@ -292,7 +292,7 @@
         {
           "title": "forced colors",
           "file": "empty-status-shell.spec.ts",
-          "line": 262,
+          "line": 273,
           "column": 6,
           "specs": [
             {
@@ -311,23 +311,23 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 215,
+                      "duration": 234,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T11:26:14.016Z",
+                      "startTime": "2026-07-30T12:40:58.772Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "candidate-forced-colors.png",
                           "contentType": "image/png",
-                          "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-forced--87551-s-readable-candidate-status\\attachments\\candidate-forced-colors-png-68b39dc83a8dfae4a09f02b9d9882e51412bfb53.png"
+                          "path": "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence\\browser\\empty-status-shell-forced--87551-s-readable-candidate-status\\attachments\\candidate-forced-colors-png-bd2bcb1e985a98d909c38a0377ddffdb90ceb7ad.png"
                         },
                         {
                           "name": "candidate-forced-colors-aria.yml",
                           "contentType": "text/yaml",
-                          "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\browser\\empty-status-shell-forced--87551-s-readable-candidate-status\\attachments\\candidate-forced-colors-aria-yml-578466549af806436c5ce2e31115f74882e5b02f.yml"
+                          "path": "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence\\browser\\empty-status-shell-forced--87551-s-readable-candidate-status\\attachments\\candidate-forced-colors-aria-yml-9c6b6bf9e03535d575501097e2294673cc71379c.yml"
                         }
                       ]
                     }
@@ -337,7 +337,7 @@
               ],
               "id": "bd566b232999ccc83406-438b46e4c6e8506374cd",
               "file": "empty-status-shell.spec.ts",
-              "line": 263,
+              "line": 274,
               "column": 3
             }
           ]
@@ -347,8 +347,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-30T11:26:11.532Z",
-    "duration": 3487.284,
+    "startTime": "2026-07-30T12:40:55.626Z",
+    "duration": 4165.255,
     "expected": 6,
     "skipped": 0,
     "unexpected": 0,

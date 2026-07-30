@@ -1,43 +1,42 @@
-# Independent Phase 2 Review - `LW-P2-001`
+# Independent Phase 2 Review
 
-**Verdict:** VERIFIED for the bounded Phase 2 work unit
-**Reviewer:** Independent QA agent
-**Baseline:** `e7585999fc1af2707f410ae87356cf2b52e08d9c`
-**Candidate:** `c8a040fb38f627bf4d0353b3497645653a57139c`
-**Loopback port:** `4177`
-**Evidence label:** VERIFIED
+**Decision:** READY for the bounded `LW-P2-001` work unit  
+**Evidence label:** VERIFIED  
+**Candidate:** `7e928bba605e0309273989bf8fd1303d2a822923`  
+**Baseline:** `e7585999fc1af2707f410ae87356cf2b52e08d9c`  
+**Detached worktree:** `Z:\LATTICEWORK_QA_7e928bb`  
+**Evidence directory at capture:** `Z:\LATTICEWORK_QA_7e928bb\runtime\tmp\independent-phase2-final\evidence`  
+**Loopback port:** `4183`
 
-## Reproduction command
+## Reproduction
 
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/reengineering/run-phase2-verification.ps1 -EvidencePath Z:\LATTICEWORK\runtime\tmp\phase2-independent-qa-final -Port 4177
-```
+An independent QA agent ran the complete Phase 2 verifier from outside the
+candidate repository against a clean detached checkout at the exact candidate
+commit. The baseline worktree was also detached and clean at the pinned
+baseline commit.
 
-## Result
+The independent result was:
 
-- All 16 command receipts exited zero.
-- Strict typecheck passed.
-- Kernel tests passed 5 of 5.
-- Repository-control tests passed 37 of 37.
-- Browser tests passed 6 of 6 with zero skipped, unexpected, or flaky tests.
-- The lockfile replay and both candidate builds were byte-identical.
-- The evidence validator reported `valid: true` with no failures.
-- npm audit reported zero vulnerabilities.
-- All eight protected legacy paths matched the immutable baseline.
-- The candidate opened no out-of-origin request or realtime channel and created
-  no local storage, session storage, IndexedDB database, cache, or service
-  worker in the tested profile.
-- Desktop, 390 x 844 mobile, and forced-colors captures were readable and
-  explicitly identified the shell as candidate-only with no migrated features.
-- The review modified no tracked source or index file.
+- repository controls: 52 tests, 52 passed, 0 failed, 0 skipped;
+- strict TypeScript checks: passed;
+- lifecycle kernel: 5 tests, 5 passed;
+- browser verification: 6 expected, 0 unexpected, 0 skipped, 0 flaky;
+- npm audit: 0 vulnerabilities;
+- isolated lockfile replay: valid;
+- deterministic build comparison: valid;
+- protected legacy boundary: valid;
+- supply-chain inventory: valid; and
+- final evidence validator: valid with 0 failures.
 
-## Boundary
+## Visual inspection
 
-This review accepts only the feature-free candidate foundation described in
-`reengineering/PHASE2_PREFLIGHT.md`. It does not establish legacy feature
-parity, stored-data migration, provider behavior, production readiness, or
-cutover readiness.
+The reviewer inspected the desktop, 390 x 844 mobile, and forced-colors PNG
+artifacts. All three remained readable. No clipping, horizontal overflow,
+overlap, or loss of the candidate-only boundary message was observed.
 
-The complete independently generated raw bundle is preserved beside this
-review, including its own manifest, commands, browser artifacts, build and
-boundary receipts, supply-chain record, summary, and validation result.
+## Scope
+
+This acceptance applies only to the feature-free Phase 2 foundation described
+by `reengineering/PHASE2_PREFLIGHT.md`. It is not evidence of legacy feature
+parity, data migration, provider integration, production readiness, or cutover
+readiness.

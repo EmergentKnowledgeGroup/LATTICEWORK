@@ -3,7 +3,7 @@
 **Status:** ACCEPTED MEASUREMENT CONTRACT — Phase 2 bounded candidate profile
 executed; broader compatibility and release profiles remain open
 **Baseline:** `e7585999fc1af2707f410ae87356cf2b52e08d9c`
-**Phase 2 candidate:** `c8a040fb38f627bf4d0353b3497645653a57139c`
+**Phase 2 candidate:** `7e928bba605e0309273989bf8fd1303d2a822923`
 
 ## Evidence boundary
 
@@ -18,7 +18,7 @@ executed; broader compatibility and release profiles remain open
   performance, and accessibility-profile performance.
 - **MEASURED:** the bounded Phase 2 candidate shell produced a deterministic
   four-file build. Its one canonical browser run reported DOMContentLoaded at
-  25.5 ms, load at 26.3 ms, navigation transfer at 871 bytes, and zero observed
+  25.6 ms, load at 30.0 ms, navigation transfer at 871 bytes, and zero observed
   long tasks at or above 50 ms. Emitted JavaScript was 22,607 raw / 8,332 gzip /
   7,413 Brotli bytes; emitted CSS was 655 / 399 / 314 bytes.
 - **VERIFIED:** an independent rerun at the pinned Phase 2 candidate commit

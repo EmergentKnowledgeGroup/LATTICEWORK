@@ -9,31 +9,33 @@
     "npm run p2:test"
   ],
   "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"npm run p2:test\"",
-  "cwd": "Z:\\LATTICEWORK",
-  "started_at": "2026-07-30T11:26:06.167Z",
-  "ended_at": "2026-07-30T11:26:06.799Z",
-  "duration_ms": 631.6702,
+  "cwd": "Z:\\LATTICEWORK_QA_7e928bb",
+  "started_at": "2026-07-30T12:40:39.781Z",
+  "ended_at": "2026-07-30T12:40:40.432Z",
+  "duration_ms": 650.8329,
+  "timeout_ms": 300000,
   "exit_code": 0,
   "signal": null,
   "spawn_error": null,
   "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
-  "candidate_sha": "c8a040fb38f627bf4d0353b3497645653a57139c",
+  "candidate_sha": "7e928bba605e0309273989bf8fd1303d2a822923",
   "repository": {
-    "head": "c8a040fb38f627bf4d0353b3497645653a57139c",
-    "status": "## reengineering/m0-baseline-characterization\n?? reengineering/evidence/phase-2/"
+    "head": "7e928bba605e0309273989bf8fd1303d2a822923",
+    "status": "## HEAD (no branch)"
   },
   "environment": {
     "platform": "win32",
     "os_release": "10.0.19045",
     "architecture": "x64",
     "node": "v24.13.0",
-    "git": "git version 2.50.1.windows.1"
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
   },
   "artifacts": [
     {
       "path": "stdout.log",
-      "bytes": 661,
-      "sha256": "a660b7502a7ca35fc1d7fc724ab6017198e0fc3170e2cde75ba5e12ecbbc7426"
+      "bytes": 662,
+      "sha256": "cb793dcfd5b3dc48160ebf0ac96b5a2554de7a122c21275eb2fca85bd6c35db7"
     },
     {
       "path": "stderr.log",

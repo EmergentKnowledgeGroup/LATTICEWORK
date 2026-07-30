@@ -13,7 +13,7 @@ It is not a general judgment about people, intent, or every version of either pr
 | Project | Commit or tag | Date | Environment |
 |---|---|---|---|
 | FreeLattice | `e7585999fc1af2707f410ae87356cf2b52e08d9c` / local `v0.0.0-upstream-baseline` | 2026-07-30 | [Phase 0 environment receipt](../reengineering/evidence/phase-0/LW-P0-001-environment/manifest.json) |
-| LATTICEWORK | `c8a040fb38f627bf4d0353b3497645653a57139c` (feature-free Phase 2 foundation, not a release) | 2026-07-30 | same control machine; [bounded candidate evidence](../reengineering/evidence/phase-2/LW-P2-001/README.md) |
+| LATTICEWORK | `7e928bba605e0309273989bf8fd1303d2a822923` (feature-free Phase 2 foundation, not a release) | 2026-07-30 | same control machine; [bounded candidate evidence](../reengineering/evidence/phase-2/LW-P2-001/README.md) |
 
 ## Fair-comparison rules
 

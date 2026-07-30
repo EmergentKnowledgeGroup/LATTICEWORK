@@ -5,7 +5,7 @@
   "serialNumber": "urn:uuid:***",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-07-30T11:26:17.500Z",
+    "timestamp": "2026-07-30T12:41:01.620Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -21,7 +21,7 @@
     "component": {
       "bom-ref": "latticework@0.0.0",
       "type": "library",
-      "name": "LATTICEWORK",
+      "name": "LATTICEWORK_QA_7e928bb",
       "version": "0.0.0",
       "scope": "required",
       "description": "LATTICEWORK bounded candidate workspace; legacy runtime remains authoritative.",

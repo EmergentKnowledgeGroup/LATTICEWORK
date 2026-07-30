@@ -1,7 +1,7 @@
 {
   "schema": "latticework.phase2-boundary.v1",
   "evidence_label": "MEASURED",
-  "captured_at": "2026-07-30T11:25:41.644Z",
+  "captured_at": "2026-07-30T12:40:42.072Z",
   "valid": true,
   "workspace_root": "Z:\\LATTICEWORK",
   "baseline": {
@@ -13,50 +13,66 @@
   "protected_files": [
     {
       "path": "app.html",
-      "workspace_sha256": "ffa5a3d35d71049d6433627ce46e9f971faf5912ae5153fcc8fcdefe9c2cf4f9",
-      "baseline_sha256": "ffa5a3d35d71049d6433627ce46e9f971faf5912ae5153fcc8fcdefe9c2cf4f9",
+      "workspace_blob": "09116b9489e50e0ce252dbc5782202c83eb4d6f2",
+      "baseline_blob": "09116b9489e50e0ce252dbc5782202c83eb4d6f2",
+      "workspace_sha256": "d0cdf127b3d259d742144b427572e33bbc60a4cf82ab83e1dd165ed253ffb1c7",
+      "baseline_sha256": "d0cdf127b3d259d742144b427572e33bbc60a4cf82ab83e1dd165ed253ffb1c7",
       "matches": true
     },
     {
       "path": "index.html",
-      "workspace_sha256": "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3",
-      "baseline_sha256": "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3",
+      "workspace_blob": "db15c76bb07b7dfecd4f93cfbdc9abfecf1c61e4",
+      "baseline_blob": "db15c76bb07b7dfecd4f93cfbdc9abfecf1c61e4",
+      "workspace_sha256": "e2245dddcebfce331de93f41f8463fa63669466603fa1142e8c5859c3dd8278e",
+      "baseline_sha256": "e2245dddcebfce331de93f41f8463fa63669466603fa1142e8c5859c3dd8278e",
       "matches": true
     },
     {
       "path": "docs/app.html",
-      "workspace_sha256": "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3",
-      "baseline_sha256": "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3",
+      "workspace_blob": "db15c76bb07b7dfecd4f93cfbdc9abfecf1c61e4",
+      "baseline_blob": "db15c76bb07b7dfecd4f93cfbdc9abfecf1c61e4",
+      "workspace_sha256": "e2245dddcebfce331de93f41f8463fa63669466603fa1142e8c5859c3dd8278e",
+      "baseline_sha256": "e2245dddcebfce331de93f41f8463fa63669466603fa1142e8c5859c3dd8278e",
       "matches": true
     },
     {
       "path": "docs/sw.js",
-      "workspace_sha256": "4d0ddcb83b099993d341cceb8060247e99a1dc391739b156763f9bb3f8cfa94c",
-      "baseline_sha256": "4d0ddcb83b099993d341cceb8060247e99a1dc391739b156763f9bb3f8cfa94c",
+      "workspace_blob": "33addcd795bc17151676f875d3ec8cc2d68039ca",
+      "baseline_blob": "33addcd795bc17151676f875d3ec8cc2d68039ca",
+      "workspace_sha256": "969ede0ef6bfcac8204e5bf082680bcb6afa12671c4a80a2ed2e851eabc8f9c8",
+      "baseline_sha256": "969ede0ef6bfcac8204e5bf082680bcb6afa12671c4a80a2ed2e851eabc8f9c8",
       "matches": true
     },
     {
       "path": "sw.js",
-      "workspace_sha256": "5932a61f4fe9b2c27b27df2050143e61e2520b9f9b9c5519fec57694475f0a5e",
-      "baseline_sha256": "5932a61f4fe9b2c27b27df2050143e61e2520b9f9b9c5519fec57694475f0a5e",
+      "workspace_blob": "71a7d5e7eb63f80b46d052288c778574bf311e3c",
+      "baseline_blob": "71a7d5e7eb63f80b46d052288c778574bf311e3c",
+      "workspace_sha256": "dc2e00b7f9b7309083ea381061d36617f190871fc690579556e409a9a3ee60d9",
+      "baseline_sha256": "dc2e00b7f9b7309083ea381061d36617f190871fc690579556e409a9a3ee60d9",
       "matches": true
     },
     {
       "path": "server.js",
-      "workspace_sha256": "5eaf8c446a25305e2f76161849e935f505b07d39bcc7fc8cd5dad4bd48ba7d53",
-      "baseline_sha256": "5eaf8c446a25305e2f76161849e935f505b07d39bcc7fc8cd5dad4bd48ba7d53",
+      "workspace_blob": "af8c047a0a1fac8c901cb1e60e830f6803bd473d",
+      "baseline_blob": "af8c047a0a1fac8c901cb1e60e830f6803bd473d",
+      "workspace_sha256": "6210cb8f5490c1a55d984652adf0aba34197e9d1fd60c0db809842d0a36df98b",
+      "baseline_sha256": "6210cb8f5490c1a55d984652adf0aba34197e9d1fd60c0db809842d0a36df98b",
       "matches": true
     },
     {
       "path": "server.py",
-      "workspace_sha256": "a75ecd0242082693ee9ff8518bebd28da425e1090004add44c2c0b159b31e9bc",
-      "baseline_sha256": "a75ecd0242082693ee9ff8518bebd28da425e1090004add44c2c0b159b31e9bc",
+      "workspace_blob": "3e5eeedeb1ea0377e026119f40b035f9f09bbc62",
+      "baseline_blob": "3e5eeedeb1ea0377e026119f40b035f9f09bbc62",
+      "workspace_sha256": "e085d3fc71582346c4cecd3683358e4acdedcbb8239e2c2d0f746c0f9306f69f",
+      "baseline_sha256": "e085d3fc71582346c4cecd3683358e4acdedcbb8239e2c2d0f746c0f9306f69f",
       "matches": true
     },
     {
       "path": "tests/smoke.js",
-      "workspace_sha256": "6f9ea0736d9a3693d545d6bea6dbcf5e03e3568afaa71c53d5f7e2e065170511",
-      "baseline_sha256": "6f9ea0736d9a3693d545d6bea6dbcf5e03e3568afaa71c53d5f7e2e065170511",
+      "workspace_blob": "bce7cf5bd498b27bb3249f2a77b718077fe76ea4",
+      "baseline_blob": "bce7cf5bd498b27bb3249f2a77b718077fe76ea4",
+      "workspace_sha256": "b5e91c08761af81d21b6f9be8f305783691e1f8a055b951c6fb494560ab4ffa9",
+      "baseline_sha256": "b5e91c08761af81d21b6f9be8f305783691e1f8a055b951c6fb494560ab4ffa9",
       "matches": true
     }
   ],

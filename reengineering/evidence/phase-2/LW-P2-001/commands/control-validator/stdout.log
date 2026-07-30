@@ -5,17 +5,10 @@
   "checks": {
     "documents": [
       {
-        "path": "AGENTS.md",
-        "exists": true,
-        "bytes": 3849,
-        "sha256": "75305388ce0e5497bdc26811cb9126f349e282c64243d6c3e558bc1cb0ec94ff",
-        "unresolved_placeholder": false
-      },
-      {
         "path": "PROJECT_STATE.md",
         "exists": true,
-        "bytes": 6314,
-        "sha256": "ebb83c26b39cc5ce63d8ae378b28f2ab7397d957aa1f223cc7726ef87927a7e1",
+        "bytes": 7208,
+        "sha256": "812aaf9a8861d8b47f4be375b091d8473357b13aa002ee64d21823f7b9e2933a",
         "unresolved_placeholder": false
       },
       {
@@ -35,50 +28,50 @@
       {
         "path": "docs/BASELINE.md",
         "exists": true,
-        "bytes": 6736,
-        "sha256": "40741e8a6ecb7ca6815b15f94caada70ecf03145d9eb82d6a3d477fe6e0c8ec9",
+        "bytes": 6919,
+        "sha256": "f17c4b1a6f5ccda9c937b9ecca79e7db236ec2c22aee2eeed2d031d0825f342f",
         "unresolved_placeholder": false
       },
       {
         "path": "docs/COMPATIBILITY.md",
         "exists": true,
-        "bytes": 6432,
-        "sha256": "5ba33f711baf15660651bc58301ec11518c188e5e1d81dcf033e4453cfe54456",
+        "bytes": 7223,
+        "sha256": "75c3d3501ff122d162b1f891da5f050bdf6eaf8ba2ccbeb2f863c213a91ff8a4",
         "unresolved_placeholder": false
       },
       {
         "path": "docs/ARCHITECTURE.md",
         "exists": true,
-        "bytes": 7313,
-        "sha256": "0c5efe6d844eee4c160df4acff5d3ca43178174e4bb3671aebbab8faa048fb83",
+        "bytes": 8422,
+        "sha256": "1f3295620b99ccb032b9bcf7a1bd61ca34a813e9fd3784c20195366e07893aa8",
         "unresolved_placeholder": false
       },
       {
         "path": "docs/TESTING_AND_VERIFICATION.md",
         "exists": true,
-        "bytes": 6935,
-        "sha256": "321d72139fddc2213f70c572d8abb067027d772d72417a2d1701b2e0f686d4f0",
+        "bytes": 9838,
+        "sha256": "69832257644b7c4e1a4b691e6975125e51028d226cce368d25c3cba1a42440fe",
         "unresolved_placeholder": false
       },
       {
         "path": "docs/METRICS_AND_BENCHMARKS.md",
         "exists": true,
-        "bytes": 3330,
-        "sha256": "8c3fa9ceffc718c388b61951c73a17e3c19fb10d6cbab2d9e7a8b34aa03f1b18",
+        "bytes": 4112,
+        "sha256": "226a7199fe492aa1c8331598be789b50d4d9acd81ed04871ad1b4d0bfc1abad5",
         "unresolved_placeholder": false
       },
       {
         "path": "docs/COMPARISON.md",
         "exists": true,
-        "bytes": 4303,
-        "sha256": "e6134971a736605b45db17e3ce4a796856beb16a1a2afadc574e371e94585fb4",
+        "bytes": 4529,
+        "sha256": "b395acc15f3c4cfd46154d614f719ff6b08f5dbcf7a7739287f9b1dfe5e169ba",
         "unresolved_placeholder": false
       },
       {
         "path": "docs/CLAIMS_LEDGER.md",
         "exists": true,
-        "bytes": 1499,
-        "sha256": "7bf792e3e031410c0fe65e1a77e12f826a73549ecd5ea4552cc795316b5b4420",
+        "bytes": 2339,
+        "sha256": "6d1ba66d0322f93d555ae10a51c532f400ac3592ed006112c6e3547c5cc1e2b3",
         "unresolved_placeholder": false
       },
       {
@@ -105,8 +98,8 @@
       {
         "path": "reengineering/DATA_INVENTORY.md",
         "exists": true,
-        "bytes": 2755,
-        "sha256": "6dd43b32801dbbe3170931a5c6c61cfffab6a20084b01801981468b3a6aa0111",
+        "bytes": 2837,
+        "sha256": "090fa3fb7673829aa2a9f9783c0280a4c18d55a7067bf61c9c12124fa67ac154",
         "unresolved_placeholder": false
       },
       {
@@ -126,50 +119,50 @@
       {
         "path": "reengineering/FEATURE_STATUS_REGISTRY.md",
         "exists": true,
-        "bytes": 3004,
-        "sha256": "37ef59665bfd678f4e6aa2505cdc3d6a599e8feb0ce0f19f82808d73ee1ad7ef",
+        "bytes": 3211,
+        "sha256": "2ef56f0c9becac9fc7e353bf244430c7d0252047238e78c581816779a7611cca",
         "unresolved_placeholder": false
       },
       {
         "path": "reengineering/PARITY_MATRIX.md",
         "exists": true,
-        "bytes": 2152,
-        "sha256": "3be4f1a5f0c2cb0fad92d122d87a719772c5d03df74064b82c1b69f0f1237d6e",
+        "bytes": 2515,
+        "sha256": "6f6423170efe1b95ecbb33b4e776080912135fa6a890f9b407c6870158be50b7",
         "unresolved_placeholder": false
       },
       {
         "path": "reengineering/EXECUTION_CHECKLIST.md",
         "exists": true,
-        "bytes": 4316,
-        "sha256": "061f5e8da0970f7127fd32d670a99c2564b186fae257b5a970fc7247b3920266",
+        "bytes": 4453,
+        "sha256": "4f29fd8cc850629de6b1849c159281f289811718737cc4041906cda0e96d5084",
         "unresolved_placeholder": false
       },
       {
         "path": "reengineering/BLOCKERBOARD.md",
         "exists": true,
-        "bytes": 1842,
-        "sha256": "435306443f339a05985be58cfbdd26198d06b2073df4f82c2d66066c776fd924",
+        "bytes": 2073,
+        "sha256": "a3f15886393dcdbf84fa0a88dff8b546073e4ca5de863a03842562d7c8024b22",
         "unresolved_placeholder": false
       },
       {
         "path": "reengineering/RELEASE_READINESS.md",
         "exists": true,
-        "bytes": 1401,
-        "sha256": "7c00118bc67a24675ada1a3e11cf6e9b61de6a1acbb9a31169109ad9c376e4df",
+        "bytes": 1846,
+        "sha256": "f26270b4fe70c52e7b07f9a6c3b9ff533219c368b88283f2e027ec17971fdc94",
         "unresolved_placeholder": false
       },
       {
         "path": "reengineering/PERFORMANCE_PLAN.md",
         "exists": true,
-        "bytes": 6557,
-        "sha256": "49396b8fad11175b64ca3654fc6c23b6d9d2a2be2d7ce569a8c9cdc58361eecc",
+        "bytes": 7556,
+        "sha256": "2b09924813275be8e5dc389ece42c2537e3a548978273718efc3c60f9ebd2977",
         "unresolved_placeholder": false
       },
       {
         "path": "reengineering/PLATFORM_SUPPORT_MATRIX.md",
         "exists": true,
-        "bytes": 4626,
-        "sha256": "ab6c805929242d70242566aa6f5c80a412918304f6e559d188f6e0cc60f9b7b1",
+        "bytes": 5658,
+        "sha256": "151897025a26b8e90d1d7842e33ae7e3cd65f8817dca58a610369f4cc4242e3c",
         "unresolved_placeholder": false
       }
     ],
@@ -199,15 +192,15 @@
     "checkpoints": [
       {
         "path": "runtime/checkpoints/LATEST.json",
-        "bytes": 11748,
-        "sha256": "cf76b9be1643fa9df2a24ef3394816f8b10dc37128fece1dd43bcccd50f37551",
+        "bytes": 13678,
+        "sha256": "e8e26671d4114a85ba472848677820ed92c91988bb8abd9edf2451dac3a3b0c9",
         "current_track": "LW_P2_FOUNDATION WORK",
         "track_count": 4
       },
       {
         "path": "reengineering/checkpoints/LATEST.json",
-        "bytes": 11748,
-        "sha256": "cf76b9be1643fa9df2a24ef3394816f8b10dc37128fece1dd43bcccd50f37551",
+        "bytes": 13678,
+        "sha256": "e8e26671d4114a85ba472848677820ed92c91988bb8abd9edf2451dac3a3b0c9",
         "current_track": "LW_P2_FOUNDATION WORK",
         "track_count": 4
       }

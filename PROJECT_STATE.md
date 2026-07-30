@@ -24,7 +24,7 @@ LATTICEWORK
 
 ## Last verified commit
 
-`c8a040fb38f627bf4d0353b3497645653a57139c` (`LW-P2-001` candidate)
+`7e928bba605e0309273989bf8fd1303d2a822923` (`LW-P2-001` candidate)
 
 ## Last verified date
 
@@ -76,14 +76,14 @@ LATTICEWORK
   performance, supply-chain, evidence, and rollback gates are frozen in
   `reengineering/PHASE2_PREFLIGHT.md`.
 - The feature-free Phase 2 candidate at
-  `c8a040fb38f627bf4d0353b3497645653a57139c` implements strict typed
+  `7e928bba605e0309273989bf8fd1303d2a822923` implements strict typed
   lifecycle/status contracts, a dependency-injected kernel, and a local-only
   Lit status shell without changing a legacy route or durable state.
 - **MEASURED:** the canonical Phase 2 run passed strict typecheck, 5 of 5
-  kernel tests, 37 of 37 repository-control tests, two byte-identical builds,
+  kernel tests, 52 of 52 repository-control tests with zero skips, two byte-identical builds,
   and 6 of 6 browser scenarios; npm audit reported zero vulnerabilities.
 - **VERIFIED:** independent QA reproduced the full gate from a separate
-  Z:-local evidence directory on port 4177 and accepted the bounded work unit.
+  detached Z:-local worktree on port 4182 and accepted the bounded work unit.
   This does not establish feature parity, migration, cutover, or release
   readiness.
 

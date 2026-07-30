@@ -1,45 +1,322 @@
-✔ preservation registry accounts for every bounded source inventory row (1.7849ms)
-✔ data registry preserves every unique static and runtime storage identifier (9.2111ms)
-✔ runtime database rows retain versions and qualified store ownership (2.1489ms)
-✔ text and line helpers use the documented counting rule (0.7919ms)
-✔ first-party source classification excludes tests, vendor, and generated buckets (0.2271ms)
-✔ command receipt records exact command output, status, and hashes (151.4188ms)
-✔ artifact bundle manifest hashes repository and external evidence (1.8205ms)
-✔ validates the repository control plane deterministically (44.1608ms)
-✔ CLI emits JSON and fails for a missing in-repository evidence artifact (63.489ms)
-✔ accepts a complete fixture without writing to it (25.4772ms)
-✔ fails when a declared evidence hash no longer matches (26.6025ms)
-✔ fails when a living control document retains an unresolved placeholder (16.4776ms)
-✔ Phase 1 validator extracts owned, typed, semantic attachments (12.7441ms)
-✔ Phase 1 validator rejects attachment traversal without writing it (7.1832ms)
-✔ Phase 1 validator rejects an attachment owned by the wrong spec (7.4871ms)
-✔ Phase 1 validator rejects fake PNG and false mobile semantics (5.5766ms)
-✔ Phase 1 validator rejects wrong baseline metadata (6.8156ms)
-✔ Phase 1 validator rejects missing WebSocket/realtime proof (7.1671ms)
-✔ Phase 1 validator rejects sentinel leakage in receipted text (6.3419ms)
-✔ Phase 2 direct dependency set is exact and workspace-scoped (2.0404ms)
-✔ candidate and kernel source contain no privileged or durable runtime APIs (1.4819ms)
-✔ candidate build target stays outside deployment mirrors (0.3702ms)
-✔ protected legacy files byte-match the immutable baseline (14.8417ms)
-✔ accepts two complete byte-identical candidate builds (9.4597ms)
-✔ rejects a build whose bytes differ at the same declared path (6.0124ms)
-✔ rejects missing required Vite build artifacts (5.5761ms)
-✔ refuses build and summary paths outside the repository (2.2434ms)
-✔ preview script delegates its port to the guarded Vite configuration (0.2909ms)
-✔ candidate output rejects a repository-local reparse point (1.3161ms)
-✔ verification runner replays the lockfile and validates the final bundle (0.2793ms)
-✔ accepts a complete, repository-descendant Phase 2 fixture bundle (31.6426ms)
-✔ rejects manifest traversal and tampered artifact hashes (44.8072ms)
-✔ rejects gate failures, wrong receipts, missing visual evidence, and secret sentinels (23.4993ms)
-✔ refuses evidence and output paths outside the repository (17.0162ms)
-✔ captures integrity, license, and ignored lifecycle scripts from a lock fixture (5.8249ms)
-✔ records a platform-skipped optional package from lock metadata without failing (1.8076ms)
-✔ reports missing external license and integrity metadata (3.1785ms)
-ℹ tests 37
-ℹ suites 0
-ℹ pass 37
-ℹ fail 0
-ℹ cancelled 0
-ℹ skipped 0
-ℹ todo 0
-ℹ duration_ms 294.8758
+TAP version 13
+# Subtest: preservation registry accounts for every bounded source inventory row
+ok 1 - preservation registry accounts for every bounded source inventory row
+  ---
+  duration_ms: 2.536
+  type: 'test'
+  ...
+# Subtest: rejects a boundary map without every required source inventory
+ok 2 - rejects a boundary map without every required source inventory
+  ---
+  duration_ms: 0.3462
+  type: 'test'
+  ...
+# Subtest: data registry preserves every unique static and runtime storage identifier
+ok 3 - data registry preserves every unique static and runtime storage identifier
+  ---
+  duration_ms: 13.0314
+  type: 'test'
+  ...
+# Subtest: propagates the supplied baseline SHA and rejects malformed runtime names
+ok 4 - propagates the supplied baseline SHA and rejects malformed runtime names
+  ---
+  duration_ms: 0.8312
+  type: 'test'
+  ...
+# Subtest: runtime database rows retain versions and qualified store ownership
+ok 5 - runtime database rows retain versions and qualified store ownership
+  ---
+  duration_ms: 2.336
+  type: 'test'
+  ...
+# Subtest: text and line helpers use the documented counting rule
+ok 6 - text and line helpers use the documented counting rule
+  ---
+  duration_ms: 1.4693
+  type: 'test'
+  ...
+# Subtest: first-party source classification excludes tests, vendor, and generated buckets
+ok 7 - first-party source classification excludes tests, vendor, and generated buckets
+  ---
+  duration_ms: 0.2325
+  type: 'test'
+  ...
+# Subtest: baseline archive reuse is SHA-safe
+ok 8 - baseline archive reuse is SHA-safe
+  ---
+  duration_ms: 951.9602
+  type: 'test'
+  ...
+# Subtest: command receipt records exact command output, status, and hashes
+ok 9 - command receipt records exact command output, status, and hashes
+  ---
+  duration_ms: 149.4425
+  type: 'test'
+  ...
+# Subtest: command receipt preserves a nonzero command result for an explicit gate
+ok 10 - command receipt preserves a nonzero command result for an explicit gate
+  ---
+  duration_ms: 144.304
+  type: 'test'
+  ...
+# Subtest: command receipts record a bounded command timeout
+ok 11 - command receipts record a bounded command timeout
+  ---
+  duration_ms: 153.4994
+  type: 'test'
+  ...
+# Subtest: artifact bundle manifest hashes repository and external evidence
+ok 12 - artifact bundle manifest hashes repository and external evidence
+  ---
+  duration_ms: 2.089
+  type: 'test'
+  ...
+# Subtest: artifact manifest rejects symbolic-link traversal
+ok 13 - artifact manifest rejects symbolic-link traversal
+  ---
+  duration_ms: 1.0036
+  type: 'test'
+  ...
+# Subtest: validates the repository control plane deterministically
+ok 14 - validates the repository control plane deterministically
+  ---
+  duration_ms: 43.4283
+  type: 'test'
+  ...
+# Subtest: CLI emits JSON and fails for a missing in-repository evidence artifact
+ok 15 - CLI emits JSON and fails for a missing in-repository evidence artifact
+  ---
+  duration_ms: 66.3702
+  type: 'test'
+  ...
+# Subtest: accepts a complete fixture without writing to it
+ok 16 - accepts a complete fixture without writing to it
+  ---
+  duration_ms: 22.7644
+  type: 'test'
+  ...
+# Subtest: fails when a declared evidence hash no longer matches
+ok 17 - fails when a declared evidence hash no longer matches
+  ---
+  duration_ms: 23.4566
+  type: 'test'
+  ...
+# Subtest: rejects control JSON that is valid JSON but not an object
+ok 18 - rejects control JSON that is valid JSON but not an object
+  ---
+  duration_ms: 17.9225
+  type: 'test'
+  ...
+# Subtest: fails when a living control document retains an unresolved placeholder
+ok 19 - fails when a living control document retains an unresolved placeholder
+  ---
+  duration_ms: 19.02
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator extracts owned, typed, semantic attachments
+ok 20 - Phase 1 validator extracts owned, typed, semantic attachments
+  ---
+  duration_ms: 14.6433
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects attachment traversal without writing it
+ok 21 - Phase 1 validator rejects attachment traversal without writing it
+  ---
+  duration_ms: 8.1688
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects non-canonical base64 attachment bodies
+ok 22 - Phase 1 validator rejects non-canonical base64 attachment bodies
+  ---
+  duration_ms: 7.7705
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects an attachment owned by the wrong spec
+ok 23 - Phase 1 validator rejects an attachment owned by the wrong spec
+  ---
+  duration_ms: 7.7953
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects fake PNG and false mobile semantics
+ok 24 - Phase 1 validator rejects fake PNG and false mobile semantics
+  ---
+  duration_ms: 6.5782
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects wrong baseline metadata
+ok 25 - Phase 1 validator rejects wrong baseline metadata
+  ---
+  duration_ms: 6.6079
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects missing WebSocket/realtime proof
+ok 26 - Phase 1 validator rejects missing WebSocket/realtime proof
+  ---
+  duration_ms: 7.0436
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects sentinel leakage in receipted text
+ok 27 - Phase 1 validator rejects sentinel leakage in receipted text
+  ---
+  duration_ms: 7.543
+  type: 'test'
+  ...
+# Subtest: Phase 2 direct dependency set is exact and workspace-scoped
+ok 28 - Phase 2 direct dependency set is exact and workspace-scoped
+  ---
+  duration_ms: 1.4862
+  type: 'test'
+  ...
+# Subtest: candidate and kernel source contain no privileged or durable runtime APIs
+ok 29 - candidate and kernel source contain no privileged or durable runtime APIs
+  ---
+  duration_ms: 2.6488
+  type: 'test'
+  ...
+# Subtest: candidate build target stays outside deployment mirrors
+ok 30 - candidate build target stays outside deployment mirrors
+  ---
+  duration_ms: 0.5497
+  type: 'test'
+  ...
+# Subtest: protected legacy committed blobs byte-match the immutable baseline
+ok 31 - protected legacy committed blobs byte-match the immutable baseline
+  ---
+  duration_ms: 551.2554
+  type: 'test'
+  ...
+# Subtest: accepts two complete byte-identical candidate builds
+ok 32 - accepts two complete byte-identical candidate builds
+  ---
+  duration_ms: 9.6732
+  type: 'test'
+  ...
+# Subtest: rejects a build whose bytes differ at the same declared path
+ok 33 - rejects a build whose bytes differ at the same declared path
+  ---
+  duration_ms: 4.9455
+  type: 'test'
+  ...
+# Subtest: rejects missing required Vite build artifacts
+ok 34 - rejects missing required Vite build artifacts
+  ---
+  duration_ms: 5.2454
+  type: 'test'
+  ...
+# Subtest: refuses build and summary paths outside the repository
+ok 35 - refuses build and summary paths outside the repository
+  ---
+  duration_ms: 2.3428
+  type: 'test'
+  ...
+# Subtest: preview script delegates its port to the guarded Vite configuration
+ok 36 - preview script delegates its port to the guarded Vite configuration
+  ---
+  duration_ms: 0.4685
+  type: 'test'
+  ...
+# Subtest: candidate output rejects a repository-local reparse point
+ok 37 - candidate output rejects a repository-local reparse point
+  ---
+  duration_ms: 1.6115
+  type: 'test'
+  ...
+# Subtest: Playwright output rejects a repository-local reparse point
+ok 38 - Playwright output rejects a repository-local reparse point
+  ---
+  duration_ms: 1.6998
+  type: 'test'
+  ...
+# Subtest: Playwright resolves its preview port through the Vite configuration
+ok 39 - Playwright resolves its preview port through the Vite configuration
+  ---
+  duration_ms: 0.286
+  type: 'test'
+  ...
+# Subtest: Vite preview port resolver accepts configured values and defaults empty values
+ok 40 - Vite preview port resolver accepts configured values and defaults empty values
+  ---
+  duration_ms: 1.5664
+  type: 'test'
+  ...
+# Subtest: verification runner replays the lockfile and validates the final bundle
+ok 41 - verification runner replays the lockfile and validates the final bundle
+  ---
+  duration_ms: 0.4748
+  type: 'test'
+  ...
+# Subtest: accepts a complete, repository-descendant Phase 2 fixture bundle
+ok 42 - accepts a complete, repository-descendant Phase 2 fixture bundle
+  ---
+  duration_ms: 35.774
+  type: 'test'
+  ...
+# Subtest: rejects manifest traversal and tampered artifact hashes
+ok 43 - rejects manifest traversal and tampered artifact hashes
+  ---
+  duration_ms: 51.0658
+  type: 'test'
+  ...
+# Subtest: rejects gate failures, wrong receipts, missing visual evidence, and secret sentinels
+ok 44 - rejects gate failures, wrong receipts, missing visual evidence, and secret sentinels
+  ---
+  duration_ms: 25.6323
+  type: 'test'
+  ...
+# Subtest: rejects malformed audit receipts and scans NUL-containing text while excluding PNG artifacts
+ok 45 - rejects malformed audit receipts and scans NUL-containing text while excluding PNG artifacts
+  ---
+  duration_ms: 25.799
+  type: 'test'
+  ...
+# Subtest: refuses evidence and output paths outside the repository
+ok 46 - refuses evidence and output paths outside the repository
+  ---
+  duration_ms: 13.7908
+  type: 'test'
+  ...
+# Subtest: fails closed when browser evidence is behind a symbolic link
+ok 47 - fails closed when browser evidence is behind a symbolic link
+  ---
+  duration_ms: 24.8876
+  type: 'test'
+  ...
+# Subtest: captures integrity, license, and ignored lifecycle scripts from a lock fixture
+ok 48 - captures integrity, license, and ignored lifecycle scripts from a lock fixture
+  ---
+  duration_ms: 5.9162
+  type: 'test'
+  ...
+# Subtest: records a platform-skipped optional package from lock metadata without failing
+ok 49 - records a platform-skipped optional package from lock metadata without failing
+  ---
+  duration_ms: 1.9177
+  type: 'test'
+  ...
+# Subtest: permits skipped optional metadata without installed license or integrity
+ok 50 - permits skipped optional metadata without installed license or integrity
+  ---
+  duration_ms: 2.6034
+  type: 'test'
+  ...
+# Subtest: discovers nested node_modules packages using their innermost package name
+ok 51 - discovers nested node_modules packages using their innermost package name
+  ---
+  duration_ms: 4.1925
+  type: 'test'
+  ...
+# Subtest: reports missing external license and integrity metadata
+ok 52 - reports missing external license and integrity metadata
+  ---
+  duration_ms: 3.0237
+  type: 'test'
+  ...
+1..52
+# tests 52
+# suites 0
+# pass 52
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1479.2413

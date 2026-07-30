@@ -1,7 +1,7 @@
 [
   {
     "path": ".github/ISSUE_TEMPLATE/audit_finding.yml",
-    "bytes": 1237,
+    "bytes": 1519,
     "status": null
   },
   {
@@ -11,12 +11,12 @@
   },
   {
     "path": ".github/ISSUE_TEMPLATE/compatibility_regression.yml",
-    "bytes": 1163,
+    "bytes": 1445,
     "status": null
   },
   {
     "path": ".github/ISSUE_TEMPLATE/config.yml",
-    "bytes": 181,
+    "bytes": 236,
     "status": null
   },
   {
@@ -101,7 +101,7 @@
   },
   {
     "path": "PROJECT_STATE.md",
-    "bytes": 7193,
+    "bytes": 7208,
     "status": "LIVING"
   },
   {
@@ -141,7 +141,7 @@
   },
   {
     "path": "docs/AUDIT_FINDINGS.md",
-    "bytes": 5802,
+    "bytes": 5801,
     "status": "LIVING"
   },
   {
@@ -156,7 +156,7 @@
   },
   {
     "path": "docs/CLAIMS_LEDGER.md",
-    "bytes": 2340,
+    "bytes": 2339,
     "status": "LIVING"
   },
   {
@@ -231,7 +231,7 @@
   },
   {
     "path": "docs/TESTING_AND_VERIFICATION.md",
-    "bytes": 9758,
+    "bytes": 9897,
     "status": "LIVING"
   },
   {

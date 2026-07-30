@@ -6,11 +6,11 @@
 > @latticework/kernel@0.0.0 test
 > node --test src/kernel.test.mjs
 
-✔ starts participants in deterministic registration order and aggregates status (1.0463ms)
-✔ rejects duplicate lifecycle participant ids (0.292ms)
-✔ stops started participants in reverse registration order (0.2129ms)
-✔ records a generic safe diagnostic and enters failed state after start failure (0.5073ms)
-✔ attempts every reverse stop and preserves failed state when a stop fails (0.235ms)
+✔ starts participants in deterministic registration order and aggregates status (1.0401ms)
+✔ rejects duplicate lifecycle participant ids (0.3208ms)
+✔ stops started participants in reverse registration order (0.2142ms)
+✔ records a generic safe diagnostic and enters failed state after start failure (0.3914ms)
+✔ attempts every reverse stop and preserves failed state when a stop fails (0.2374ms)
 ℹ tests 5
 ℹ suites 0
 ℹ pass 5
@@ -18,4 +18,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 82.6228
+ℹ duration_ms 89.112

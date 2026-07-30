@@ -3,7 +3,7 @@
 **Status:** PHASE 0 LEGACY MATRIX FROZEN — PHASE 2 CANDIDATE SHELL MEASURED;
 SUPPORT DECISIONS PENDING
 **Baseline:** `e7585999fc1af2707f410ae87356cf2b52e08d9c`
-**Phase 2 candidate:** `c8a040fb38f627bf4d0353b3497645653a57139c`
+**Phase 2 candidate:** `7e928bba605e0309273989bf8fd1303d2a822923`
 
 This matrix records evidence and preservation obligations. `OBSERVED` does not
 mean supported, and `PROPOSED` does not mean accepted.

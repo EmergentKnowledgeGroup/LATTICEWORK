@@ -9,11 +9,11 @@
 
 Running 6 tests using 1 worker
 
-  ok 1 empty-status-shell.spec.ts:185:1 › desktop candidate shell is explicit, semantic, and bounded (397ms)
-  ok 2 empty-status-shell.spec.ts:221:1 › mobile shell remains readable without horizontal overflow (270ms)
-  ok 3 empty-status-shell.spec.ts:235:1 › keyboard focus is visible (272ms)
-  ok 4 empty-status-shell.spec.ts:250:3 › accessibility media profiles › reduced motion disables decorative timing (257ms)
-  ok 5 empty-status-shell.spec.ts:263:3 › forced colors › forced colors preserves readable candidate status (242ms)
-  ok 6 empty-status-shell.spec.ts:275:1 › candidate stays within provisional navigation and long-task ceilings (349ms)
+  ok 1 empty-status-shell.spec.ts:196:1 › desktop candidate shell is explicit, semantic, and bounded (366ms)
+  ok 2 empty-status-shell.spec.ts:232:1 › mobile shell remains readable without horizontal overflow (284ms)
+  ok 3 empty-status-shell.spec.ts:246:1 › keyboard focus is visible (281ms)
+  ok 4 empty-status-shell.spec.ts:261:3 › accessibility media profiles › reduced motion disables decorative timing (250ms)
+  ok 5 empty-status-shell.spec.ts:274:3 › forced colors › forced colors preserves readable candidate status (271ms)
+  ok 6 empty-status-shell.spec.ts:286:1 › candidate stays within provisional navigation and long-task ceilings (375ms)
 
-  6 passed (3.7s)
+  6 passed (3.8s)

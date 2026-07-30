@@ -121,9 +121,9 @@ Chromium 151 on Windows 10 against baseline
 ## Reproduced Phase 2 observations
 
 These observations apply only to the feature-free candidate at
-`c8a040fb38f627bf4d0353b3497645653a57139c`.
+`7e928bba605e0309273989bf8fd1303d2a822923`.
 
-- **MEASURED:** strict typecheck, 5 of 5 kernel tests, 37 of 37 repository
+- **MEASURED:** strict typecheck, 5 of 5 kernel tests, 52 of 52 repository
   controls, and 6 of 6 browser scenarios passed; no browser test was skipped,
   unexpected, or flaky.
 - **MEASURED:** an isolated package-lock replay was byte-identical, two clean
@@ -132,8 +132,8 @@ These observations apply only to the feature-free candidate at
 - **OBSERVED:** the tested candidate opened no out-of-origin request or
   realtime channel and created no localStorage, sessionStorage, IndexedDB,
   Cache Storage, or service worker state.
-- **VERIFIED:** independent QA repeated the full gate from a separate
-  evidence directory on port 4177 and accepted only the bounded Phase 2 work
+- **VERIFIED:** independent QA repeated the full gate from a separate detached
+  worktree on port 4182 and accepted only the bounded Phase 2 work
   unit. Evidence:
   [`LW-P2-001`](../reengineering/evidence/phase-2/LW-P2-001/README.md).
 

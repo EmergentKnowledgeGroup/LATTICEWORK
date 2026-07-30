@@ -55,7 +55,7 @@ compatibility; real provider connection semantics remain C0.
 
 **VERIFIED:** `LW-P2-001` provides a feature-free status shell, lifecycle
 kernel, and typed contracts at candidate commit
-`c8a040fb38f627bf4d0353b3497645653a57139c`. Canonical and independent browser
+`7e928bba605e0309273989bf8fd1303d2a822923`. Canonical and independent browser
 gates cover its desktop, 390 x 844 mobile, keyboard, reduced-motion,
 forced-colors, no-egress, no-storage, and no-service-worker profiles.
 

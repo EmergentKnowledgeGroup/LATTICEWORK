@@ -1,6 +1,6 @@
 {
   "schema": "latticework.context_checkpoint.tracks.v1",
-  "captured_at": "2026-07-30T12:24:24Z",
+  "captured_at": "2026-07-30T12:44:39Z",
   "repo_root": "Z:\\LATTICEWORK",
   "current_track": "LW_P2_FOUNDATION WORK",
   "tracks": {
@@ -132,32 +132,36 @@
     },
     "LW_P2_FOUNDATION WORK": {
       "track": "LW_P2_FOUNDATION WORK",
-      "step": "phase2-coderabbit-fixes-local-green",
-      "note": "The single authorized CodeRabbit review was addressed in one bounded fix batch; local repository, type, kernel, audit, legacy-characterization, candidate-browser, and junction-safety gates are green before the fix commit and canonical evidence rerun.",
+      "step": "phase2-final-clone-verified",
+      "note": "The single CodeRabbit fix batch and clone-reproducibility repair are complete; canonical and clean detached-worktree Phase 2 verification are green at the final candidate.",
       "branch": "reengineering/m0-baseline-characterization",
-      "head": "dc85d0f7819e1cc873daec5c262c0dcf978316bd",
-      "next_cmd": "Commit the verified CodeRabbit fix batch, regenerate canonical and independent Phase 2 evidence at the fix commit, update living records, push once without another review, resolve addressed threads, and merge PR #1.",
+      "head": "7e928bba605e0309273989bf8fd1303d2a822923",
+      "next_cmd": "Commit the final living records and canonical/independent evidence, push once with incremental CodeRabbit disabled, resolve the 19 addressed review threads, and merge PR #1.",
       "validations": [
         "VERIFIED: LW_P1_CHARACTERIZATION WORK and LW_P2_PREFLIGHT WORK are green.",
         "OBSERVED: ADR-001 through ADR-003 are Accepted.",
         "OBSERVED: docs/agents/claims/LW-P2-001.md claims the bounded candidate paths and no-touch fence.",
         "VERIFIED: the legacy baseline remains pinned at e7585999fc1af2707f410ae87356cf2b52e08d9c and no Phase 2 runtime file existed at phase start.",
         "VERIFIED: strict TypeScript checks pass for the web, contracts, and kernel workspaces.",
-        "VERIFIED: the lifecycle kernel suite passes 5 of 5 tests and the repository-control suite passes 37 of 37 tests.",
+        "VERIFIED: the lifecycle kernel suite passes 5 of 5 tests and the repository-control suite passes 52 of 52 tests with zero skips.",
         "MEASURED: the complete Phase 2 smoke runner passes clean install, isolated byte-identical lockfile replay, typecheck, unit/control suites, two byte-identical builds, 6 of 6 browser scenarios, zero-vulnerability audit, CycloneDX SBOM, supply-chain inventory, protected-boundary verification, and strict bundle validation.",
         "VERIFIED: candidate output rejects symbolic-link or junction traversal before Vite emptyOutDir can run.",
         "VERIFIED: browser QA aborts out-of-origin traffic before transmission and blocks realtime, worker, EventSource, and sendBeacon capability use.",
-        "VERIFIED: candidate commit c8a040fb38f627bf4d0353b3497645653a57139c is identified throughout the canonical Phase 2 summary, manifests, validation, and command receipts.",
+        "VERIFIED: candidate commit 7e928bba605e0309273989bf8fd1303d2a822923 is identified throughout the canonical Phase 2 summary, manifests, validation, and command receipts.",
         "VERIFIED: canonical evidence at reengineering/evidence/phase-2/LW-P2-001 reports 16 successful command receipts, 8 protected paths, 8 required browser artifacts, and zero validator failures.",
-        "VERIFIED: independent QA reproduced the complete gate from a separate Z-local evidence directory on port 4177 and accepted the bounded work unit.",
+        "VERIFIED: independent QA reproduced the complete gate from a clean detached Z-local worktree on port 4183 and accepted the bounded work unit.",
         "VERIFIED: desktop, 390 x 844 mobile, and forced-colors evidence was visually inspected and remained readable with explicit candidate-only/no-migrated-feature language.",
         "VERIFIED: docs/agents/handoffs/LW-P2-001.md and the living architecture, compatibility, testing, dependency, migration, readiness, claims, metrics, limitations, and project-state documents match the bounded result.",
         "VERIFIED: commits c8a040fb38f627bf4d0353b3497645653a57139c and d441177eb14c6f4369f6ff81f5023de7f69e3976 are pushed to fork branch reengineering/m0-baseline-characterization; review-ready PR #1 targets fork main.",
         "OBSERVED: the single CodeRabbit run completed at commit dc85d0f7819e1cc873daec5c262c0dcf978316bd, selected 69 executable/test/tooling files, passed its status check, and posted 19 actionable comments plus 25 nits for one-batch triage.",
         "VERIFIED: the post-fix repository-control suite passes 52/52, strict TypeScript passes, the kernel suite passes 5/5, and npm audit reports zero vulnerabilities.",
         "VERIFIED: the corrected immutable-baseline characterization passes 7/7 after proving completion-state persistence and filtering only a transient service-worker toast from the welcome-overlay screenshot.",
-        "VERIFIED: the candidate browser suite passes 6/6 on port 4181 with its network boundary derived from Playwright's resolved base URL.",
-        "VERIFIED: the Phase 2 runner rejects a repository-local junction from an external working directory before recursive evidence cleanup."
+        "VERIFIED: the canonical candidate browser suite passes 6/6 on port 4174 with its network boundary derived from Playwright's resolved base URL.",
+        "VERIFIED: the Phase 2 runner rejects a repository-local junction from an external working directory before recursive evidence cleanup.",
+        "OBSERVED: independent QA at 3cbec48 found 50/52 controls because the clean checkout lacked intentionally ignored AGENTS.md and checkout line endings differed from stale local bytes.",
+        "VERIFIED: commit 7e928bba605e0309273989bf8fd1303d2a822923 removes the impossible AGENTS.md clone requirement, compares protected committed Git blobs, and repairs 19 Phase 0 artifact manifest records to the canonical Git bytes.",
+        "VERIFIED: canonical Phase 2 verification at 7e928bba605e0309273989bf8fd1303d2a822923 passed 52/52 controls with zero skips, strict TypeScript, 5/5 kernel tests, 6/6 browser checks on port 4174, zero-vulnerability audit, deterministic lock/build checks, protected boundary, and final evidence validation.",
+        "VERIFIED: independent QA reproduced the complete gate from clean detached worktree Z:\\LATTICEWORK_QA_7e928bb on port 4183; 52/52 controls, 5/5 kernel, 6/6 browser, zero audit vulnerabilities, clean visuals, and final validator all passed."
       ],
       "decisions": [
         "Use exact direct pins Vite 8.1.5, TypeScript 6.0.3, Lit 3.3.3, and isolated Playwright 1.62.0.",
@@ -186,7 +190,10 @@
           "status": "OPEN_FOR_LATER_PHASES",
           "summary": "Data, provider and security, and cutover decisions remain blocked but do not prevent the bounded Phase 2 status-shell slice."
         }
-      ]
+      ],
+      "updated_at": "2026-07-30T12:44:39Z",
+      "captured_at": "2026-07-30T12:44:39Z"
     }
-  }
+  },
+  "updated": "2026-07-30T12:44:39Z"
 }

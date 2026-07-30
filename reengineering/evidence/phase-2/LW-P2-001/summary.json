@@ -1,26 +1,32 @@
 {
-    "schema":  "latticework.phase2-summary.v1",
-    "evidence_label":  "MEASURED",
-    "captured_at":  "2026-07-30T11:25:41.9746337Z",
-    "work_id":  "LW-P2-001",
-    "baseline_sha":  "e7585999fc1af2707f410ae87356cf2b52e08d9c",
-    "candidate_sha":  "c8a040fb38f627bf4d0353b3497645653a57139c",
-    "port":  4174,
-    "valid":  true,
-    "browser":  {
-                    "startTime":  "2026-07-30T11:25:35.596Z",
-                    "duration":  3668.938,
-                    "expected":  6,
-                    "skipped":  0,
-                    "unexpected":  0,
-                    "flaky":  0
-                },
-    "lockfile_reproducible":  true,
-    "build_reproducible":  true,
-    "protected_boundary_valid":  true,
-    "supply_chain_valid":  true,
-    "audit_vulnerability_total":  0,
-    "external_package_count":  58,
-    "installed_external_package_count":  27,
-    "skipped_optional_package_count":  31
+  "schema": "latticework.phase2-summary.v1",
+  "evidence_label": "MEASURED",
+  "captured_at": "2026-07-30T12:40:42.4083502Z",
+  "work_id": "LW-P2-001",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "7e928bba605e0309273989bf8fd1303d2a822923",
+  "port": 4174,
+  "valid": true,
+  "browser": {
+    "startTime": "2026-07-30T12:40:34.093Z",
+    "duration": 3809.9010000000003,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "repository_controls": {
+    "tests": 52,
+    "passed": 52,
+    "failed": 0,
+    "skipped": 0
+  },
+  "lockfile_reproducible": true,
+  "build_reproducible": true,
+  "protected_boundary_valid": true,
+  "supply_chain_valid": true,
+  "audit_vulnerability_total": 0,
+  "external_package_count": 58,
+  "installed_external_package_count": 27,
+  "skipped_optional_package_count": 31
 }

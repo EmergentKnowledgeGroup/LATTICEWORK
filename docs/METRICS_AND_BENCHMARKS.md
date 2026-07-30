@@ -22,7 +22,7 @@ Metrics become useful only when the definition, environment, workload, feature s
 | Tool versions | npm 11.6.2; Git 2.50.1.windows.1; PowerShell 7.6.3; ripgrep 15.1.0 |
 | Network condition | Unthrottled loopback for current browser receipt; external/local discovery requests were still attempted |
 | Upstream commit | `e7585999fc1af2707f410ae87356cf2b52e08d9c` |
-| LATTICEWORK commit | `c8a040fb38f627bf4d0353b3497645653a57139c` |
+| LATTICEWORK commit | `7e928bba605e0309273989bf8fd1303d2a822923` |
 
 Environment values are **MEASURED** in the
 [Phase 0 environment receipt](../reengineering/evidence/phase-0/LW-P0-001-environment/manifest.json).
@@ -95,7 +95,7 @@ bytes. It is a single run, not an accepted budget or regression verdict. See the
 [browser receipt](../reengineering/evidence/phase-0/LW-P0-003-browser/README.md).
 
 **MEASURED:** one canonical loopback run of the feature-free Phase 2 candidate
-reported 25.5 ms DOMContentLoaded, 26.3 ms load, 871 navigation-transfer bytes,
+reported 25.6 ms DOMContentLoaded, 30.0 ms load, 871 navigation-transfer bytes,
 and zero observed long tasks at least 50 ms. The emitted JavaScript was 22,607
 raw / 8,332 gzip / 7,413 Brotli bytes; CSS was 655 / 399 / 314 bytes. The
 independent run used a different port and reproduced the passing ceilings.

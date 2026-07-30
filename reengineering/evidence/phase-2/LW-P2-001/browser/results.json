@@ -92,12 +92,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 397,
+                  "duration": 366,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T11:25:36.909Z",
+                  "startTime": "2026-07-30T12:40:35.461Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -123,7 +123,7 @@
           ],
           "id": "bd566b232999ccc83406-da3a618ccad0802d1a86",
           "file": "empty-status-shell.spec.ts",
-          "line": 185,
+          "line": 196,
           "column": 1
         },
         {
@@ -142,12 +142,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 270,
+                  "duration": 284,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T11:25:37.396Z",
+                  "startTime": "2026-07-30T12:40:35.917Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -168,7 +168,7 @@
           ],
           "id": "bd566b232999ccc83406-01ea4caea27112c4ba45",
           "file": "empty-status-shell.spec.ts",
-          "line": 221,
+          "line": 232,
           "column": 1
         },
         {
@@ -187,12 +187,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 272,
+                  "duration": 281,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T11:25:37.673Z",
+                  "startTime": "2026-07-30T12:40:36.206Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -202,7 +202,7 @@
           ],
           "id": "bd566b232999ccc83406-ea5143286028c2ae1896",
           "file": "empty-status-shell.spec.ts",
-          "line": 235,
+          "line": 246,
           "column": 1
         },
         {
@@ -221,12 +221,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 349,
+                  "duration": 375,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-30T11:25:38.466Z",
+                  "startTime": "2026-07-30T12:40:37.037Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -242,7 +242,7 @@
           ],
           "id": "bd566b232999ccc83406-1511aadfac2ac4213e8a",
           "file": "empty-status-shell.spec.ts",
-          "line": 275,
+          "line": 286,
           "column": 1
         }
       ],
@@ -250,7 +250,7 @@
         {
           "title": "accessibility media profiles",
           "file": "empty-status-shell.spec.ts",
-          "line": 249,
+          "line": 260,
           "column": 6,
           "specs": [
             {
@@ -269,12 +269,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 257,
+                      "duration": 250,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T11:25:37.952Z",
+                      "startTime": "2026-07-30T12:40:36.496Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -284,7 +284,7 @@
               ],
               "id": "bd566b232999ccc83406-42ef3301d43511bd7fa9",
               "file": "empty-status-shell.spec.ts",
-              "line": 250,
+              "line": 261,
               "column": 3
             }
           ]
@@ -292,7 +292,7 @@
         {
           "title": "forced colors",
           "file": "empty-status-shell.spec.ts",
-          "line": 262,
+          "line": 273,
           "column": 6,
           "specs": [
             {
@@ -311,12 +311,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 242,
+                      "duration": 271,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-30T11:25:38.216Z",
+                      "startTime": "2026-07-30T12:40:36.756Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -337,7 +337,7 @@
               ],
               "id": "bd566b232999ccc83406-438b46e4c6e8506374cd",
               "file": "empty-status-shell.spec.ts",
-              "line": 263,
+              "line": 274,
               "column": 3
             }
           ]
@@ -347,8 +347,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-30T11:25:35.596Z",
-    "duration": 3668.938,
+    "startTime": "2026-07-30T12:40:34.093Z",
+    "duration": 3809.9010000000003,
     "expected": 6,
     "skipped": 0,
     "unexpected": 0,

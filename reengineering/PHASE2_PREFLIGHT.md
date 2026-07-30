@@ -128,7 +128,7 @@ The candidate must not:
    hashes;
 6. `npm run p2:browser` for desktop, mobile, keyboard, reduced-motion,
    forced-colors, no-egress, no-storage, no-worker, and no-legacy assertions;
-7. `npm audit --all --json`;
+7. `npm audit --workspaces --include-workspace-root --json`;
 8. direct dependency license receipt and CycloneDX or SPDX SBOM;
 9. `node --test tests/reengineering/*.test.mjs`;
 10. immutable-baseline cleanliness and protected-file hash comparison before

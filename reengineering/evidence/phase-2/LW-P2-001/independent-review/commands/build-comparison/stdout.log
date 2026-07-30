@@ -1,11 +1,11 @@
 {
   "schema": "latticework.phase2-build-comparison.v1",
   "evidence_label": "MEASURED",
-  "captured_at": "2026-07-30T11:26:09.322Z",
+  "captured_at": "2026-07-30T12:40:44.396Z",
   "valid": true,
-  "workspace_root": "Z:\\LATTICEWORK",
+  "workspace_root": "Z:\\LATTICEWORK_QA_7e928bb",
   "first": {
-    "directory": "Z:\\LATTICEWORK\\output\\lw-p2-001\\web",
+    "directory": "Z:\\LATTICEWORK_QA_7e928bb\\output\\lw-p2-001\\web",
     "files": [
       {
         "path": ".vite/manifest.json",
@@ -34,7 +34,7 @@
     ]
   },
   "second": {
-    "directory": "Z:\\LATTICEWORK\\runtime\\tmp\\phase2-independent-qa-final\\generated\\build-2",
+    "directory": "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence\\generated\\build-2",
     "files": [
       {
         "path": ".vite/manifest.json",
