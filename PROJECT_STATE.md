@@ -12,11 +12,11 @@ LATTICEWORK
 
 ## Current milestone
 
-`M2 — Typed candidate foundation`
+`M3 — Data/provider/security decision gate`
 
 ## Current target
 
-`reengineering/m0-baseline-characterization`
+`reengineering/p3-decision-packet`
 
 ## Upstream baseline
 
@@ -24,11 +24,15 @@ LATTICEWORK
 
 ## Last verified commit
 
-`7e928bba605e0309273989bf8fd1303d2a822923` (`LW-P2-001` candidate)
+`6704dd502a140fce2fe8e06f8db336d0bd3839a5` (Phase 2 merge checkpoint)
+
+The last verified implementation merge is
+`c48505c5437c6b9cf67a652cdc2d8c81778c15a1`; the later commit changes only
+post-merge control documentation.
 
 ## Last verified date
 
-`2026-07-30 11:26 UTC`
+`2026-07-30 12:50 UTC`
 
 ## Locked constraints
 
@@ -47,6 +51,7 @@ LATTICEWORK
 | `LW-P1-001` | Executable baseline characterization and fixtures | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P1-001.md` |
 | `LW-P2-PREFLIGHT-001` | Accepted architecture and exact Phase 2 execution packet | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-PREFLIGHT-001.md` |
 | `LW-P2-001` | Isolated typed kernel/contracts/status-shell candidate | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-001.md` |
+| `LW-P3-DEC-001` | Phase 3 storage/provider/security decision packet | Codex root controller | `reengineering/p3-decision-packet` | `IN_PROGRESS` | `reengineering/PHASE3_DECISION_PACKET.md` |
 
 ## Completed in current milestone
 
@@ -86,6 +91,17 @@ LATTICEWORK
   detached Z:-local worktree on port 4182 and accepted the bounded work unit.
   This does not establish feature parity, migration, cutover, or release
   readiness.
+- Pull request
+  [`#1`](https://github.com/EmergentKnowledgeGroup/LATTICEWORK/pull/1)
+  received the single authorized CodeRabbit review, resolved all 19 review
+  threads, passed its required checks, and merged at
+  `c48505c5437c6b9cf67a652cdc2d8c81778c15a1`.
+- The post-merge control checkpoint was pushed to `main` at
+  `6704dd502a140fce2fe8e06f8db336d0bd3839a5`.
+- **PROPOSED:** ADR-004 through ADR-006 and
+  `reengineering/PHASE3_DECISION_PACKET.*` now describe the bounded Phase 3
+  storage, provider, and optional-proxy contracts. They have not been accepted
+  and authorize no runtime, storage, provider, listener, or cutover change.
 
 ## Blockers
 
@@ -97,8 +113,11 @@ LATTICEWORK
 
 ## Open decisions
 
-- A versioned data/storage and migration ADR before Phase 3.
-- Provider and security boundary decisions before provider/worker work.
+- Disposition of proposed ADR-004 before Phase 3 storage implementation.
+- Disposition of proposed ADR-005 before Phase 3 provider-contract
+  implementation.
+- Disposition of proposed ADR-006 before later optional-proxy work; ADR-012
+  remains required before LAN/worker/peer/Telegram implementation.
 - Browser, desktop, launch-mode, and eventual cutover dispositions.
 
 ## AI work allowed without new approval
@@ -129,20 +148,21 @@ LATTICEWORK
 
 ## Next handoff
 
-**Next action:** Read the completed Phase 2 handoff, then prepare the bounded
-Phase 3 data/storage and provider-contract decision packet without mutating
-stored data or external-service behavior.
+**Next action:** Validate `LW-P3-DEC-001`, record independent review, and obtain
+explicit maintainer dispositions for proposed ADR-004 through ADR-006 before
+opening the separately claimed `LW-P3-001` implementation.
 
-**Read first:** `docs/agents/handoffs/LW-P2-001.md`,
-`reengineering/BLOCKERBOARD.md`, `reengineering/DATA_INVENTORY.md`, and
-`reengineering/SECURITY_BOUNDARY_MAP.md`.
+**Read first:** `reengineering/PHASE3_DECISION_PACKET.md`,
+`docs/decisions/0004-versioned-storage-and-migration.md`,
+`docs/decisions/0005-provider-abstraction-and-provenance.md`, and
+`docs/decisions/0006-optional-local-proxy-security.md`.
 
 **Do not touch:** stored-data/provider/security semantics, default routes,
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** the next decision packet states versioning, ownership,
-unknown-field preservation, rollback, provider trust boundaries, and executable
-verification before any implementation claim is opened.
+**Success condition:** the proposal validator and full repository-control suite
+are green, independent reviewers report no unresolved issue, and maintainer
+acceptance or rejection is recorded without weakening any blocker.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`

@@ -30,13 +30,14 @@
 | Phase 0 Edge/direct-file launch | Playwright CLI for Edge; isolated Chrome headless for `file://` | first-run shell, runtime names, network requests, direct-file first render | Windows 10; Edge/Chrome 150 | two bounded launch flows | Partial C1 observations; interaction/cross-browser parity not established | [receipt](../reengineering/evidence/phase-0/LW-P0-003-browser/README.md) |
 | Phase 0 fixed performance profiles | commands to be captured per profile | cold/warm desktop, emulated mobile, accessibility, offline warm, GPU cleanup | pinned by profile | five runs per applicable profile | PROPOSED; execution pending | [measurement contract](../reengineering/PERFORMANCE_PLAN.md) |
 | Phase 1 executable characterization | `powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/reengineering/run-phase1-characterization.ps1` | HTTP first run/skip, fresh storage shape, Garden, Chat shell, Signal Report, mobile, no-WebGPU, warm offline reload, denied network | Windows 10; Node 24.13.0; Playwright 1.62.0; bundled Chromium 151; immutable baseline | 7 | 7 pass; 0 skip/unexpected/flaky; exit 0; 31.188 s | [measured summary](../reengineering/evidence/phase-1/LW-P1-001/summary.json) |
-| Repository control tests | `node --test --test-reporter=tap tests/reengineering/*.test.mjs` | evidence tooling, registries, Phase 0/1 controls, Phase 2 boundary/build/supply-chain/evidence validators, and negative safety fixtures | Windows 10; Node 24.13.0 | 52 | 52 pass; 0 fail/skip | [Phase 2 command receipt](../reengineering/evidence/phase-2/LW-P2-001/commands/controls/manifest.json) |
+| Repository control tests | `node --test --test-reporter=tap tests/reengineering/*.test.mjs` | evidence tooling, registries, Phase 0/1 controls, Phase 2 boundary/build/supply-chain/evidence validators, Phase 3 decision controls, and negative safety fixtures | Windows 10; Node 24.13.0; immutable baseline root supplied | 75 | 75 pass; 0 fail/skip | current `LW-P3-DEC-001` handoff pending; [Phase 2 receipt](../reengineering/evidence/phase-2/LW-P2-001/commands/controls/manifest.json) preserves the earlier 52-test gate |
 | Phase 2 strict typecheck | `npm run p2:typecheck` | candidate web, contracts, and kernel workspaces | Windows 10; Node 24.13.0; TypeScript 6.0.3 | 3 workspaces | pass; exit 0 | [receipt](../reengineering/evidence/phase-2/LW-P2-001/commands/typecheck/manifest.json) |
 | Phase 2 kernel unit tests | `npm run p2:test` | lifecycle order, duplicate rejection, reverse stop, and safe failure diagnostics | same | 5 | 5 pass | [receipt](../reengineering/evidence/phase-2/LW-P2-001/commands/unit/manifest.json) |
 | Phase 2 deterministic build | two clean `npm run p2:build` runs plus verifier | relative Vite output paths and raw/gzip/Brotli artifact bytes | same; Vite 8.1.5 | 4 artifacts per build | byte-identical; valid | [comparison](../reengineering/evidence/phase-2/LW-P2-001/build-comparison.json) |
 | Phase 2 candidate browser gate | `npm run p2:browser` | desktop, 390 x 844 mobile, keyboard, reduced motion, forced colors, no egress/storage/worker/legacy, and provisional performance | Windows 10; Playwright 1.62.0; bundled Chromium | 6 | 6 pass; 0 skip/unexpected/flaky | [summary](../reengineering/evidence/phase-2/LW-P2-001/summary.json) |
 | Phase 2 supply-chain gate | `npm audit --workspaces --include-workspace-root --json`, CycloneDX SBOM, and repository collector | exact lockfile integrity, licenses, optional packages, lifecycle scripts, and vulnerability count | same | 58 external lockfile packages | valid; 0 audit vulnerabilities | [receipt](../reengineering/evidence/phase-2/LW-P2-001/supply-chain.json) |
 | Phase 2 evidence validator | `node tools/reengineering/validate-phase2-evidence.mjs ...` | command receipts, hashes, identity, browser artifacts, protected paths, and sentinel safety | same | 16 commands; 8 protected paths; 8 required browser artifacts | valid; 0 failures | [validation](../reengineering/evidence/phase-2/LW-P2-001/validation.json) |
+| Phase 3 decision-packet controls | `node --test tests/reengineering/phase3-decision-packet.test.mjs` | proposed ADR status/authority, additive registry floor, blockers, exact safety contracts/invariants, Markdown projection, scope fence, and negative fixtures | Windows 10; Node 24.13.0 | 23 | 23 pass | proposal receipt pending post-green handoff |
 
 ## Characterization tests
 
@@ -137,6 +138,13 @@ browser boundary. Receipt:
 The Phase 2 result is a feature-free architecture foundation. It does not
 upgrade any legacy compatibility level or establish real provider, stored-data,
 PWA, desktop, full accessibility, or release behavior.
+
+**MEASURED:** the focused `LW-P3-DEC-001` controls pass 23 of 23 positive and
+negative cases. They prove only that the decision packet is internally
+consistent, proposal-only, scope-fenced, and unable to close blockers or grant
+implementation authority by accidental document edits. They do not test a
+storage repository, provider adapter, migration, proxy, or cutover because none
+is implemented or authorized.
 
 **UNKNOWN:** the Phase 1 result does not establish real provider behavior,
 message send/stream/cancel/retry, persisted-record values or migrations,

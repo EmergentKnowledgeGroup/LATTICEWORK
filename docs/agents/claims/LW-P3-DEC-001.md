@@ -17,8 +17,9 @@ external-service behavior, or deployment routing.
 
 - Characterize the decision surfaces behind `LW-BLK-005` through
   `LW-BLK-007`.
-- Draft proposed ADRs for versioned storage/migration, provider/security
-  boundaries, and reversible cutover.
+- Draft proposed ADRs for versioned storage/migration, provider abstraction,
+  and optional-proxy security; freeze reversible cutover as a future ADR-009
+  owner gate rather than deciding it here.
 - Define invariants, stop conditions, rollback, fixtures, and executable
   verification required before implementation.
 - Add repository controls that reject an incomplete or prematurely accepted
@@ -37,10 +38,11 @@ external-service behavior, or deployment routing.
 
 ## Locked constraints
 
-- Preserve all 252 registry rows as unknown-preserve obligations until
-  characterized and accepted otherwise.
-- Exact legacy identifiers, unknown fields, and unrecognized records survive
-  every proposed migration and rollback.
+- Preserve all 252 pinned registry rows and every newly discovered row as
+  unknown-preserve obligations until characterized and accepted otherwise.
+- Exact legacy identifiers, unknown fields, and unrecognized records within an
+  explicitly authorized in-scope dataset survive every proposed migration and
+  rollback; excluded datasets remain untouched and unexported.
 - Credentials and sensitive values never enter fixtures, evidence, logs, or
   version control.
 - Default provider, bind, network, and route behavior remain unchanged.
@@ -65,6 +67,8 @@ external-service behavior, or deployment routing.
 - `docs/decisions/0005-*.md`
 - `docs/decisions/0006-*.md`
 - `reengineering/PHASE3_DECISION_PACKET.md`
+- `reengineering/PHASE3_DECISION_PACKET.json`
+- `reengineering/PHASE3_BASELINE_PRESERVATION_IDS.json`
 - `tests/reengineering/phase3-decision-packet.test.mjs`
 - `tools/reengineering/validate-phase3-decision-packet.mjs`
 - Evidence-linked living documents and this work unit's handoff

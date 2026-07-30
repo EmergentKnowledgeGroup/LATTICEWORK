@@ -76,3 +76,29 @@ Link every preserved or changed upstream data format to `COMPATIBILITY.md` and `
 
 No LATTICEWORK data migration is implemented or authorized. ADR-004 remains a
 blocking decision.
+
+## Phase 3 proposal
+
+**OBSERVED:** the 252-row preservation registry is a name-level safety floor,
+not a complete schema catalog:
+
+- computed database/key names can escape literal extraction;
+- a fresh run observed 17 databases and 24 object stores while static
+  extraction found additional names;
+- every row still has unknown owner, schema, retention, and removal
+  disposition;
+- the legacy generic backup covers fewer databases than the runtime probe,
+  exports all localStorage including credential/crypto-adjacent values, and
+  has no atomic restore or rollback proof.
+
+**PROPOSED:** ADR-004 uses per-dataset descriptors and a separate namespaced
+candidate repository. Migration is adjacent-version, copy-on-write, journaled,
+idempotent, resumable, and interruption-safe. The first bounded fixture is
+synthetic `FreeLatticeDB` v3 conversation data. Unknown stores, fields, nested
+values, falsey values, and native structured-clone values must round-trip
+without coercion.
+
+This proposal does not authorize reading or modifying real user data, changing
+a legacy version/store/key, importing an untrusted file into live state, or
+activating the candidate copy. See
+[`PHASE3_DECISION_PACKET.md`](../reengineering/PHASE3_DECISION_PACKET.md).

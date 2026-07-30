@@ -4,7 +4,7 @@
 
 ## Status
 
-`ACCEPTED TARGET / BOUNDED FOUNDATION VERIFIED`
+`ACCEPTED TARGET / BOUNDED FOUNDATION VERIFIED / PHASE 3 CONTRACTS PROPOSED`
 
 This document must describe implemented reality and clearly separate current state from target state.
 
@@ -160,6 +160,44 @@ flowchart LR
   deterministic build, and browser safety profile. They do not prove legacy
   feature parity or authorize a default-route switch.
 
+### Proposed Phase 3 storage/provider spine
+
+**PROPOSED — NOT IMPLEMENTED OR ACCEPTED:**
+
+```mermaid
+flowchart LR
+    F["Feature"] --> SR["Storage repository contract"]
+    SR --> CR["Namespaced candidate repository"]
+    LS["Legacy store (read-only authority)"] --> MJ["Copy-on-write migration journal"]
+    MJ --> CR
+    F --> PR["Provider router"]
+    PR --> PA["Selected provider adapter"]
+    PA --> EP["Egress policy"]
+    PA --> PV["Content-free provenance"]
+    EP --> M["Deterministic mocks in Phase 3"]
+    PX["Future optional local proxy"] -. "ADR-006 contract only" .-> EP
+```
+
+- ADR-004 proposes per-dataset descriptors, separate schema/database/export
+  versions, an application-level migration journal, opaque preservation of
+  unknown structured-clone values, and a synthetic `FreeLatticeDB` v3
+  `conversation` schema-version-1 fixture as the first candidate dataset.
+- ADR-005 proposes separate provider adapter, routing/fallback, credential
+  reference, and egress-policy seams. Phase 3 would use deterministic mocks
+  only; no real prompt, credential, or provider request is authorized.
+- ADR-006 proposes an optional, disabled, loopback-only, authenticated and
+  exactly allowlisted proxy boundary for later work. It does not authorize a
+  listener. Broader LAN/worker/peer/Telegram behavior remains blocked by
+  ADR-012.
+- Activation, cleanup, legacy feature migration, route switching, and
+  capability retirement remain future decisions. Cutover remains governed by
+  future ADR-009.
+
+The proposal and its executable controls live in
+[`PHASE3_DECISION_PACKET.md`](../reengineering/PHASE3_DECISION_PACKET.md).
+Until explicit maintainer disposition is recorded, the implemented
+architecture remains the Phase 2 feature-free foundation above.
+
 ## Architecture invariants
 
 - No feature may require editing an unrelated monolithic surface without an explicit reason.
@@ -179,3 +217,5 @@ flowchart LR
 | `ARCH-003` | Rendering, state, storage, providers, and security are mixed | [boundary map](../reengineering/evidence/phase-0/LW-M0-BEH-001/behavior-boundary-map.md) | Hard-to-characterize migrations | view-model and adapter seams | Open; ADR-002/003 accepted, feature migration not started |
 | `ARCH-004` | Electron and Tauri overlap without a supported-platform decision | [legacy source map](../reengineering/LEGACY_SOURCE_MAP.md) | Double maintenance and unclear release claims | ADR-007 bounded spike | Open |
 | `ARCH-005` | PWA and launch-mode compatibility are unverified | [compatibility contract](COMPATIBILITY.md) | Data/offline/rollback risk | ADR-008/009/011 | Open |
+| `ARCH-006` | Storage ownership, versioning, migration, import/export, and rollback are not implemented | [Phase 3 packet](../reengineering/PHASE3_DECISION_PACKET.md) | Data loss or silent reinterpretation | proposed ADR-004 | Open; decision proposed, implementation blocked |
+| `ARCH-007` | Provider routing, fallback, cancellation, provenance, credential, and egress behavior are inconsistent | [Phase 3 packet](../reengineering/PHASE3_DECISION_PACKET.md) | Trust-boundary crossing and unprovable failures | proposed ADR-005/006 | Open; decisions proposed, runtime unchanged |

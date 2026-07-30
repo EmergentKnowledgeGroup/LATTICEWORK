@@ -66,6 +66,20 @@ claim. Evidence:
 [`LW-P2-001`](../reengineering/evidence/phase-2/LW-P2-001/README.md) and
 [`independent review`](../reengineering/evidence/phase-2/LW-P2-001/independent-review/REVIEW.md).
 
+## Phase 3 proposal evidence
+
+**PROPOSED:** `LW-P3-DEC-001` defines candidate storage, provider, provenance,
+and optional-proxy contracts in ADR-004 through ADR-006. Its validator proves
+that the decisions remain Proposed, all 252 preservation rows remain
+the pinned minimum of unknown-preserve obligations while allowing additive
+inventory expansion, the affected blockers remain open, and no
+implementation or cutover authority is recorded.
+
+This is control-plane evidence only. It changes no compatibility level in the
+table above. In particular, conversation persistence, provider calls,
+streaming/cancellation/retry, import/export, stored-data migration, and local
+proxy behavior remain `C0`.
+
 ## Compatibility rules
 
 - Preserve user-visible semantics, not implementation accidents, unless an accident became relied-upon behavior.

@@ -1,0 +1,282 @@
+{
+  "schema": "latticework.phase3-decision-packet.v1",
+  "work_id": "LW-P3-DEC-001",
+  "status": "PROPOSED",
+  "date": "2026-07-30",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "base_commit": "6704dd502a140fce2fe8e06f8db336d0bd3839a5",
+  "authority": {
+    "maintainer_disposition": "PENDING",
+    "implementation_authorized": false,
+    "runtime_semantics_changed": false,
+    "cutover_authorized": false
+  },
+  "decision_contracts": {
+    "storage": {
+      "candidate_namespace_pattern": "latticework::<dataset-id>",
+      "migration_database": "latticework::migration",
+      "staging_namespace_pattern": "latticework::staging::<operation-id>::<dataset-id>",
+      "first_dataset": {
+        "id": "conversation",
+        "schema_version": 1,
+        "target_database": "latticework::conversation",
+        "owned_legacy_stores": [
+          "conversations",
+          "messages"
+        ],
+        "fixture_characterization_only_stores": [
+          "meta",
+          "memoryIndex"
+        ],
+        "real_data_authorized": false
+      },
+      "migration_mode": "copy-on-write-journaled",
+      "unknown_preservation_scope": "authorized-in-scope-datasets-only",
+      "excluded_dataset_classes": [
+        "credentials",
+        "device-derived-key-material",
+        "identity-and-cryptography",
+        "wallet-and-chain",
+        "session-only-tokens",
+        "cache-storage",
+        "desktop-state",
+        "remote-state"
+      ],
+      "excluded_dataset_handling": "legacy-parse-only-no-copy-or-export-writer",
+      "rollback": {
+        "candidate_action": "close-then-delete-or-quarantine-exact-dataset-namespace",
+        "journal_action": "retain-immutable-terminal-receipt",
+        "legacy_action": "untouched"
+      },
+      "import": {
+        "promotion": "complete-validation-before-verified-promotion",
+        "cleanup": "journaled-delete-or-quarantine"
+      },
+      "integrity": {
+        "synthetic_fixtures": "ordinary-content-derived-hashes-permitted",
+        "real_data": "non-exported-keyed-verification-or-opaque-local-migration-id",
+        "export_content_derived_digests": false
+      }
+    },
+    "provider": {
+      "seams": [
+        "adapter",
+        "router",
+        "credential-source",
+        "egress-policy"
+      ],
+      "phase3_endpoints": "deterministic-mocks-only",
+      "real_credentials_authorized": false,
+      "real_provider_traffic_authorized": false,
+      "wire_attempts_per_adapter_invocation": 1,
+      "retry_owner": "router",
+      "default_retry_count": 0,
+      "post_dispatch_retry": "proven-provider-idempotency-or-explicit-caller-authorization",
+      "identity": {
+        "operation_id": "stable-per-logical-request",
+        "attempt_id": "unique-per-wire-attempt"
+      },
+      "fallback": "explicit-visible-consented",
+      "cross_trust_fallback": "forbidden-without-explicit-visible-consent",
+      "retry_after_first_delta": false,
+      "terminal_outcome_count": 1,
+      "credential_resolution": "immutable-egress-grant-before-resolution-with-exact-binding-match",
+      "credential_binding_fields": [
+        "provider-id",
+        "adapter-id-and-version",
+        "exact-origin",
+        "trust-class",
+        "authentication-scheme"
+      ],
+      "cancellation_scopes": [
+        "transport-aborted",
+        "provider-cancel-acknowledged"
+      ],
+      "provenance": "required-content-free-per-operation-and-attempt"
+    },
+    "optional_proxy": {
+      "phase3_listener_authorized": false,
+      "enabled_by_default": false,
+      "default_bind": [
+        "127.0.0.1",
+        "::1"
+      ],
+      "lan_bind_authorized": false,
+      "authentication": "paired-scoped-expiring-bearer-session",
+      "unauthenticated_routes": {
+        "health": "content-free-read-only",
+        "pairing-bootstrap": "exact-origin-non-get-single-use-short-lived-code-rate-limited-no-upstream-sanitized"
+      },
+      "request_identity": {
+        "operation_id": "stable-across-authorized-retry",
+        "attempt_id": "unique-replay-rejected-for-token-lifetime"
+      },
+      "origin_policy": "exact-allowlist",
+      "route_policy": "exact-method-and-path-allowlist",
+      "upstream_policy": "parsed-trust-classified-explicit-allowlist",
+      "diagnostics": "content-free",
+      "broader_trust_gate": "ADR-012"
+    }
+  },
+  "decision_records": [
+    {
+      "id": "ADR-004",
+      "path": "docs/decisions/0004-versioned-storage-and-migration.md",
+      "status": "Proposed",
+      "scope": "Versioned repositories, copy-on-write migration, import/export, rollback",
+      "required_for": [
+        "LW-P3-001"
+      ]
+    },
+    {
+      "id": "ADR-005",
+      "path": "docs/decisions/0005-provider-abstraction-and-provenance.md",
+      "status": "Proposed",
+      "scope": "Provider adapters, routing, streaming, cancellation, errors, provenance, credential references",
+      "required_for": [
+        "LW-P3-001"
+      ]
+    },
+    {
+      "id": "ADR-006",
+      "path": "docs/decisions/0006-optional-local-proxy-security.md",
+      "status": "Proposed",
+      "scope": "Optional loopback proxy contract, pairing, authentication, origin/egress/resource boundaries",
+      "required_for": [
+        "LW-P7-001"
+      ]
+    }
+  ],
+  "data_preservation": {
+    "registry_schema": "latticework.data-preservation-registry.v1",
+    "baseline_ids_path": "reengineering/PHASE3_BASELINE_PRESERVATION_IDS.json",
+    "baseline_minimum_obligations": 252,
+    "registry_may_expand": true,
+    "total_obligations": 252,
+    "runtime_observed": 63,
+    "by_kind": {
+      "indexedDB_database": 21,
+      "indexedDB_store": 5,
+      "indexedDB_store_runtime": 24,
+      "localStorage": 200,
+      "sessionStorage": 2
+    },
+    "unknown_preserve_obligations": 252,
+    "owner_approval_required_for_removal": 252,
+    "first_candidate_dataset": "conversation",
+    "first_candidate_schema_version": 1,
+    "first_legacy_fixture": "FreeLatticeDB v3 synthetic fixture"
+  },
+  "blockers": [
+    {
+      "id": "LW-BLK-005",
+      "status": "OPEN",
+      "unblock_condition": "ADR-004 accepted and the expanded inventory plus synthetic migration fixtures independently verified"
+    },
+    {
+      "id": "LW-BLK-006",
+      "status": "OPEN",
+      "unblock_condition": "ADR-006 and ADR-012 accepted with gateway/LAN/worker/peer/Telegram security tests"
+    },
+    {
+      "id": "LW-BLK-007",
+      "status": "OPEN",
+      "unblock_condition": "ADR-009 accepted after parity, migration, rollback, release evidence, and verbatim owner approval naming affected capability IDs"
+    }
+  ],
+  "invariants": [
+    {
+      "id": "P3-INV-001",
+      "statement": "Legacy data and storage schemas remain authoritative and untouched during Phase 3."
+    },
+    {
+      "id": "P3-INV-002",
+      "statement": "All 252 baseline preservation-registry rows and every newly discovered row remain unknown-preserve obligations."
+    },
+    {
+      "id": "P3-INV-003",
+      "statement": "Migration is backup-first or copy-on-write and never an in-place legacy rewrite."
+    },
+    {
+      "id": "P3-INV-004",
+      "statement": "Migration steps are versioned, adjacent, idempotent, resumable, and interruption-safe."
+    },
+    {
+      "id": "P3-INV-005",
+      "statement": "Unknown records, keys, fields, nested values, and falsey values in an authorized in-scope dataset survive copy, export, restore, and rollback; excluded datasets remain untouched and unexported."
+    },
+    {
+      "id": "P3-INV-006",
+      "statement": "Migrated UI and feature view code never access durable browser or platform storage directly."
+    },
+    {
+      "id": "P3-INV-007",
+      "statement": "Provider selection and fallback are explicit; no prompt is silently resent to another provider."
+    },
+    {
+      "id": "P3-INV-008",
+      "statement": "Every terminal provider result has content-free provenance and exactly one terminal outcome."
+    },
+    {
+      "id": "P3-INV-009",
+      "statement": "Features use credential references; secrets and private content never enter logs, evidence, fixtures, or build output."
+    },
+    {
+      "id": "P3-INV-010",
+      "statement": "Any future local proxy is optional, disabled by default, loopback-only, authenticated, origin-allowlisted, and not an open proxy."
+    },
+    {
+      "id": "P3-INV-011",
+      "statement": "Phase 3 provider/storage tests use synthetic fixtures and deterministic mocks with external egress denied."
+    },
+    {
+      "id": "P3-INV-012",
+      "statement": "No default route, deployment mirror, service worker, legacy capability, or cutover changes are authorized."
+    }
+  ],
+  "phase3_execution_after_acceptance": {
+    "required_accepted_adrs": [
+      "ADR-004",
+      "ADR-005"
+    ],
+    "permitted": [
+      "Add strict storage and provider contracts",
+      "Add a namespaced candidate repository and journal against synthetic fixtures",
+      "Add deterministic local and cloud mock provider adapters",
+      "Add redacted diagnostics and provenance",
+      "Add staged import/export and migration verification tooling",
+      "Create evidence only under reengineering/evidence/phase-3/LW-P3-001"
+    ],
+    "still_forbidden": [
+      "Read or mutate real user data",
+      "Use real credentials or call a real provider",
+      "Change legacy storage versions, values, routes, modules, gateways, workers, service workers, desktop code, or deployment mirrors",
+      "Start a local proxy or expose a LAN listener",
+      "Migrate Chat or any legacy feature",
+      "Retire a capability or cut over a default route"
+    ]
+  },
+  "future_decisions": [
+    {
+      "id": "ADR-009",
+      "title": "Legacy compatibility and cutover",
+      "status": "NOT_STARTED",
+      "owner_approval_required": true
+    },
+    {
+      "id": "ADR-012",
+      "title": "Gateway, LAN, peer, worker, and Telegram trust protocols",
+      "status": "NOT_STARTED",
+      "owner_approval_required": true
+    }
+  ],
+  "required_verification": [
+    "Decision packet validator and negative fixtures",
+    "Expanded data inventory and descriptor coverage",
+    "Synthetic legacy migration, interruption, idempotence, rollback, and round-trip tests",
+    "Provider stream, error, cancellation, retry, fallback, provenance, and credential-sentinel contract tests",
+    "External-egress-denied browser/integration tests",
+    "Protected legacy committed-blob comparison",
+    "Deterministic build, supply-chain, evidence manifest, and clean-worktree independent reproduction"
+  ]
+}
