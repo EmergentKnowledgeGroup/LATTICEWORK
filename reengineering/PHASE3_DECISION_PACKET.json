@@ -1,13 +1,15 @@
 {
   "schema": "latticework.phase3-decision-packet.v1",
   "work_id": "LW-P3-DEC-001",
-  "status": "PROPOSED",
+  "status": "ACCEPTED",
   "date": "2026-07-30",
   "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
   "base_commit": "6704dd502a140fce2fe8e06f8db336d0bd3839a5",
   "authority": {
-    "maintainer_disposition": "PENDING",
-    "implementation_authorized": false,
+    "maintainer_disposition": "ACCEPTED",
+    "decision_receipt": "approved choices - continue",
+    "decision_receipt_date": "2026-07-30",
+    "implementation_authorized": true,
     "runtime_semantics_changed": false,
     "cutover_authorized": false
   },
@@ -122,7 +124,7 @@
     {
       "id": "ADR-004",
       "path": "docs/decisions/0004-versioned-storage-and-migration.md",
-      "status": "Proposed",
+      "status": "Accepted",
       "scope": "Versioned repositories, copy-on-write migration, import/export, rollback",
       "required_for": [
         "LW-P3-001"
@@ -131,7 +133,7 @@
     {
       "id": "ADR-005",
       "path": "docs/decisions/0005-provider-abstraction-and-provenance.md",
-      "status": "Proposed",
+      "status": "Accepted",
       "scope": "Provider adapters, routing, streaming, cancellation, errors, provenance, credential references",
       "required_for": [
         "LW-P3-001"
@@ -140,7 +142,7 @@
     {
       "id": "ADR-006",
       "path": "docs/decisions/0006-optional-local-proxy-security.md",
-      "status": "Proposed",
+      "status": "Accepted",
       "scope": "Optional loopback proxy contract, pairing, authentication, origin/egress/resource boundaries",
       "required_for": [
         "LW-P7-001"

@@ -44,16 +44,20 @@ test.after(() => {
   fs.rmSync(TEST_ROOT, { recursive: true, force: true });
 });
 
-test("canonical Phase 3 preflight freezes an implementation-ready but unauthorized slice", () => {
+test("canonical Phase 3 preflight freezes the accepted bounded implementation slice", () => {
   const result = validatePhase3Preflight({
     workspaceRoot: REPO_ROOT,
     checkGitScope: true,
   });
 
   assert.equal(result.valid, true, result.failures.join("\n"));
-  assert.equal(result.status, "READY_PENDING_ACCEPTANCE");
-  assert.equal(result.implementationAuthorized, false);
+  assert.equal(result.status, "ACCEPTED_FOR_BOUNDED_EXECUTION");
+  assert.equal(result.implementationAuthorized, true);
   assert.equal(result.gitScopeChecked, true);
+  assert.equal(
+    result.gitScopeBase,
+    "93a36626f786a880210c53b8486c961e8b86e9ea",
+  );
   assert.deepEqual(result.checks, {
     packages: 2,
     requiredAcceptedAdrs: 2,
@@ -63,10 +67,10 @@ test("canonical Phase 3 preflight freezes an implementation-ready but unauthoriz
   });
 });
 
-test("preflight rejects implementation authority before ADR acceptance", () => {
+test("preflight rejects implementation authority without the accepted disposition", () => {
   const root = createFixture("authority");
   const packet = readJson(root);
-  packet.authority.implementation_authorized = true;
+  packet.authority.maintainer_disposition = "PENDING";
   writeJson(root, packet);
 
   const result = validatePhase3Preflight({
@@ -75,7 +79,7 @@ test("preflight rejects implementation authority before ADR acceptance", () => {
   });
 
   assert.equal(result.valid, false);
-  assert.match(result.failures.join("\n"), /implementation authority/i);
+  assert.match(result.failures.join("\n"), /accepted implementation authority/i);
 });
 
 const unsafeMutations = [

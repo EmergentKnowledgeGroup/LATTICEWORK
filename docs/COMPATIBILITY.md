@@ -66,14 +66,17 @@ claim. Evidence:
 [`LW-P2-001`](../reengineering/evidence/phase-2/LW-P2-001/README.md) and
 [`independent review`](../reengineering/evidence/phase-2/LW-P2-001/independent-review/REVIEW.md).
 
-## Phase 3 proposal evidence
+## Phase 3 accepted boundary evidence
 
-**PROPOSED:** `LW-P3-DEC-001` defines candidate storage, provider, provenance,
-and optional-proxy contracts in ADR-004 through ADR-006. Its validator proves
-that the decisions remain Proposed, all 252 preservation rows remain
+**OBSERVED:** ADR-004 through ADR-006 are accepted with the maintainer receipt
+`approved choices - continue`. `LW-P3-DEC-001` defines candidate storage,
+provider, provenance, and optional-proxy contracts. Its validator proves that
+all 252 preservation rows remain
 the pinned minimum of unknown-preserve obligations while allowing additive
 inventory expansion, the affected blockers remain open, and no
-implementation or cutover authority is recorded.
+real-data, credential, listener, legacy-integration, activation, or cutover
+authority is recorded. Only the exact synthetic/mock `LW-P3-001` preflight
+surface is implementation-authorized.
 
 This is control-plane evidence only. It changes no compatibility level in the
 table above. In particular, conversation persistence, provider calls,

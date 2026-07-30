@@ -1,19 +1,22 @@
 {
   "schema": "latticework.phase3-preflight.v1",
   "work_id": "LW-P3-PREFLIGHT-001",
-  "status": "READY_PENDING_ACCEPTANCE",
+  "status": "ACCEPTED_FOR_BOUNDED_EXECUTION",
   "date": "2026-07-30",
   "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
   "base_commit": "6fa553ee3f5c7d1952f7aed836873467c4626068",
+  "implementation_base_commit": "93a36626f786a880210c53b8486c961e8b86e9ea",
   "decision_packet": "reengineering/PHASE3_DECISION_PACKET.json",
   "authority": {
-    "maintainer_disposition": "PENDING",
+    "maintainer_disposition": "ACCEPTED",
+    "decision_receipt": "approved choices - continue",
+    "decision_receipt_date": "2026-07-30",
     "required_accepted_adrs": [
       "ADR-004",
       "ADR-005"
     ],
     "optional_proxy_contract_adr": "ADR-006",
-    "implementation_authorized": false,
+    "implementation_authorized": true,
     "listener_authorized": false,
     "cutover_authorized": false
   },

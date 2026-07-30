@@ -74,10 +74,10 @@ not been exercised. No credential was captured in Phase 0 evidence.
 
 Link every preserved or changed upstream data format to `COMPATIBILITY.md` and `DIVERGENCES.md`.
 
-No LATTICEWORK data migration is implemented or authorized. ADR-004 remains a
-blocking decision.
+No LATTICEWORK real-data migration or activation is implemented or authorized.
+ADR-004 is accepted only for the exact synthetic `LW-P3-001` fixture surface.
 
-## Phase 3 proposal
+## Phase 3 accepted synthetic slice
 
 **OBSERVED:** the 252-row preservation registry is a name-level safety floor,
 not a complete schema catalog:
@@ -91,14 +91,14 @@ not a complete schema catalog:
   exports all localStorage including credential/crypto-adjacent values, and
   has no atomic restore or rollback proof.
 
-**PROPOSED:** ADR-004 uses per-dataset descriptors and a separate namespaced
+**OBSERVED:** accepted ADR-004 uses per-dataset descriptors and a separate namespaced
 candidate repository. Migration is adjacent-version, copy-on-write, journaled,
 idempotent, resumable, and interruption-safe. The first bounded fixture is
 synthetic `FreeLatticeDB` v3 conversation data. Unknown stores, fields, nested
 values, falsey values, and native structured-clone values must round-trip
 without coercion.
 
-This proposal does not authorize reading or modifying real user data, changing
+This accepted bounded slice does not authorize reading or modifying real user data, changing
 a legacy version/store/key, importing an untrusted file into live state, or
 activating the candidate copy. See
 [`PHASE3_DECISION_PACKET.md`](../reengineering/PHASE3_DECISION_PACKET.md).

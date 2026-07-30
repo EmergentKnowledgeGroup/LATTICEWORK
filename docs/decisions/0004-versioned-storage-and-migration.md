@@ -1,14 +1,17 @@
 # ADR 0004 — Versioned storage and non-destructive migration
 
-**Status:** Proposed
+**Status:** Accepted
 **Date:** 2026-07-30
 **Owners:** Maintainers
 **Related work:** `LW-P3-DEC-001`, `LW-P3-001`, `LW-BLK-005`,
 `reengineering/DATA_PRESERVATION_REGISTRY.json`,
 `reengineering/MIGRATION_LEDGER.md`
 
-**Decision receipt:** **PENDING** — this proposal does not authorize storage
-implementation or mutation of any legacy/user store.
+**Decision receipt:** **ACCEPTED** — maintainer replied `approved choices - continue`
+in the active Codex task on 2026-07-30. This authorizes only the exact
+synthetic/mock `LW-P3-001` scope frozen by the accepted Phase 3 preflight; it
+does not authorize real-data reads, legacy/user-store mutation, activation, or
+cutover.
 
 ## Context
 

@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-30T13:57:34Z`
+Updated: `2026-07-30T14:13:34Z`
 
 ## CURRENT
 
-Track: `LW_P3_PREFLIGHT WORK`
-Step: `phase3-preflight-green`
-Note: The exact synthetic storage/provider preflight is scope-validated and independently GREEN; it remains implementation-unauthorized until the maintainer dispositions are recorded.
-Branch: `reengineering/p3-decision-packet`
-Head: `a431384891db5526c297ac1a4220e2ab308966ca`
-Next command: `Record the maintainer's ADR-004, ADR-005, and ADR-006 acceptance receipt, then claim and checkpoint LW-P3-001 before implementation.`
+Track: `LW_P3_IMPLEMENTATION WORK`
+Step: `phase3-acceptance-controls-green`
+Note: The maintainer accepted ADR-004 through ADR-006; the exact synthetic storage/provider slice is claimed while real data, credentials, provider traffic, listeners, legacy integration, activation, and cutover remain forbidden.
+Branch: `reengineering/p3-storage-provider-foundation`
+Head: `93a36626f786a880210c53b8486c961e8b86e9ea`
+Next command: `Commit the accepted authority boundary, then write failing storage/provider contract tests before adding package implementation.`
 
 ## LW_M0_BASELINE WORK
 
@@ -172,3 +172,28 @@ Next command: `Record the maintainer's ADR-004, ADR-005, and ADR-006 acceptance 
 
 - `LW-P3-001` remains blocked until explicit ADR-004 and ADR-005 acceptance.
 - ADR-006 acceptance would freeze a future proxy contract but would not authorize a Phase 3 listener.
+
+## LW_P3_IMPLEMENTATION WORK
+
+Step: `phase3-acceptance-controls-green`
+Note: The maintainer accepted ADR-004 through ADR-006; the exact synthetic storage/provider slice is claimed while real data, credentials, provider traffic, listeners, legacy integration, activation, and cutover remain forbidden.
+Branch: `reengineering/p3-storage-provider-foundation`
+Head: `93a36626f786a880210c53b8486c961e8b86e9ea`
+Next command: `Commit the accepted authority boundary, then write failing storage/provider contract tests before adding package implementation.`
+
+### Validations
+
+- **VERIFIED** — `LW-P3-PREFLIGHT-001` is pushed, independently GREEN, and hash-evidenced.
+- **OBSERVED** — the maintainer replied `approved choices - continue` after reviewing the proposed choices; this is the ADR-004/005/006 acceptance receipt.
+- **OBSERVED** — `docs/agents/claims/LW-P3-001.md` owns only the exact preflight paths and preserves its no-touch fence.
+- **VERIFIED** — no storage/provider package, implementation fixture, real-data read, credential, provider call, listener, legacy registration, route, feature, activation, or cutover exists at phase start.
+- **VERIFIED** — decision validator reports `ACCEPTED`, exact maintainer receipt, `implementation_authorized: true`, 252 preservation rows, 12 invariants, and zero failures.
+- **VERIFIED** — preflight validator reports `ACCEPTED_FOR_BOUNDED_EXECUTION`, implementation base `93a36626f786a880210c53b8486c961e8b86e9ea`, exact two-package scope, and zero failures.
+- **MEASURED** — combined decision/preflight controls pass 39/39 with zero fail, skip, or todo.
+- **MEASURED** — full repository-control suite passes 91/91 with the immutable baseline root supplied and zero fail, skip, or todo.
+
+### Blockers
+
+- `LW-BLK-005` remains open while the accepted synthetic migration/rollback/round-trip fixtures are implemented and independently verified.
+- `LW-BLK-006` remains open for ADR-012 plus later gateway/LAN/worker/peer/Telegram security implementation; Phase 3 starts no listener.
+- `LW-BLK-007` remains open for future ADR-009, compatibility evidence, and explicit cutover approval.

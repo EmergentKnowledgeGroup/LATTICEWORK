@@ -8,6 +8,10 @@ import { isStrictDescendant, parseNamedArgs, writeJson } from "./evidence-common
 
 const EXPECTED_BASELINE_SHA = "e7585999fc1af2707f410ae87356cf2b52e08d9c";
 const EXPECTED_BASE_COMMIT = "6fa553ee3f5c7d1952f7aed836873467c4626068";
+const EXPECTED_IMPLEMENTATION_BASE_COMMIT =
+  "93a36626f786a880210c53b8486c961e8b86e9ea";
+const EXPECTED_DECISION_RECEIPT = "approved choices - continue";
+const EXPECTED_DECISION_RECEIPT_DATE = "2026-07-30";
 const EXPECTED_PACKAGES = [
   {
     name: "@latticework/storage",
@@ -103,11 +107,28 @@ const EXPECTED_SAFETY = {
   legacy_read_owner: "unchanged",
 };
 const ALLOWED_PREFLIGHT_SCOPE = new Set([
+  ...EXPECTED_OWNED_PATHS.filter((relativePath) => !relativePath.endsWith("/")),
   "PROJECT_STATE.md",
+  "ROADMAP.md",
+  "docs/ARCHITECTURE.md",
+  "docs/COMPATIBILITY.md",
+  "docs/DATA_AND_STORAGE.md",
+  "docs/KNOWN_LIMITATIONS.md",
   "docs/TESTING_AND_VERIFICATION.md",
+  "docs/agents/claims/LW-P3-001.md",
   "docs/agents/claims/LW-P3-PREFLIGHT-001.md",
+  "docs/agents/handoffs/LW-P3-001.md",
   "docs/agents/handoffs/LW-P3-PREFLIGHT-001.md",
+  "docs/decisions/README.md",
+  "docs/decisions/0004-versioned-storage-and-migration.md",
+  "docs/decisions/0005-provider-abstraction-and-provenance.md",
+  "docs/decisions/0006-optional-local-proxy-security.md",
+  "reengineering/BLOCKERBOARD.md",
+  "reengineering/DECISION_LOG.md",
   "reengineering/EXECUTION_CHECKLIST.md",
+  "reengineering/MIGRATION_LEDGER.md",
+  "reengineering/PHASE3_DECISION_PACKET.json",
+  "reengineering/PHASE3_DECISION_PACKET.md",
   "reengineering/evidence/phase-3/LW-P3-PREFLIGHT-001/README.md",
   "reengineering/evidence/phase-3/LW-P3-PREFLIGHT-001/independent-review.md",
   "reengineering/evidence/phase-3/LW-P3-PREFLIGHT-001/manifest.json",
@@ -134,6 +155,9 @@ const ALLOWED_PREFLIGHT_SCOPE = new Set([
   "tools/reengineering/validate-phase3-decision-packet.mjs",
   "tools/reengineering/validate-phase3-preflight.mjs",
 ]);
+const ALLOWED_IMPLEMENTATION_PREFIXES = EXPECTED_OWNED_PATHS.filter(
+  (relativePath) => relativePath.endsWith("/"),
+);
 
 function readJson(filePath, failures, label) {
   try {
@@ -150,26 +174,29 @@ function validateAuthority(packet, failures) {
   }
   if (
     packet?.work_id !== "LW-P3-PREFLIGHT-001" ||
-    packet?.status !== "READY_PENDING_ACCEPTANCE"
+    packet?.status !== "ACCEPTED_FOR_BOUNDED_EXECUTION"
   ) {
     failures.push("preflight work ID/status is invalid");
   }
   if (
     packet?.baseline_sha !== EXPECTED_BASELINE_SHA ||
-    packet?.base_commit !== EXPECTED_BASE_COMMIT
+    packet?.base_commit !== EXPECTED_BASE_COMMIT ||
+    packet?.implementation_base_commit !== EXPECTED_IMPLEMENTATION_BASE_COMMIT
   ) {
-    failures.push("preflight baseline/base commit is invalid");
+    failures.push("preflight baseline/design/implementation base identity is invalid");
   }
   const authority = packet?.authority;
   if (
-    authority?.maintainer_disposition !== "PENDING" ||
-    authority?.implementation_authorized !== false ||
+    authority?.maintainer_disposition !== "ACCEPTED" ||
+    authority?.decision_receipt !== EXPECTED_DECISION_RECEIPT ||
+    authority?.decision_receipt_date !== EXPECTED_DECISION_RECEIPT_DATE ||
+    authority?.implementation_authorized !== true ||
     authority?.listener_authorized !== false ||
     authority?.cutover_authorized !== false ||
     !isDeepStrictEqual(authority?.required_accepted_adrs, ["ADR-004", "ADR-005"]) ||
     authority?.optional_proxy_contract_adr !== "ADR-006"
   ) {
-    failures.push("implementation authority must remain pending ADR-004/ADR-005 acceptance");
+    failures.push("accepted implementation authority and exact maintainer receipt are required");
   }
 }
 
@@ -291,8 +318,10 @@ function validateMarkdown(root, failures) {
     return;
   }
   const required = [
-    "**Status:** READY PENDING MAINTAINER ACCEPTANCE",
-    "- implementation authorized: false",
+    "**Status:** ACCEPTED FOR BOUNDED EXECUTION",
+    "**Implementation base:** `93a36626f786a880210c53b8486c961e8b86e9ea`",
+    "**Decision receipt:** maintainer replied `approved choices - continue`",
+    "- implementation authorized: true",
     "- real user data: forbidden",
     "- real provider traffic: forbidden",
     "- real credentials: forbidden",
@@ -333,16 +362,18 @@ function runGit(root, args, failures, label) {
 function validateGitScope(root, failures) {
   const ancestry = spawnSync(
     "git",
-    ["merge-base", "--is-ancestor", EXPECTED_BASE_COMMIT, "HEAD"],
+    ["merge-base", "--is-ancestor", EXPECTED_IMPLEMENTATION_BASE_COMMIT, "HEAD"],
     { cwd: root, encoding: "utf8", windowsHide: true },
   );
   if (ancestry.status !== 0) {
-    failures.push(`base commit ${EXPECTED_BASE_COMMIT} is not an ancestor of HEAD`);
+    failures.push(
+      `implementation base commit ${EXPECTED_IMPLEMENTATION_BASE_COMMIT} is not an ancestor of HEAD`,
+    );
     return;
   }
   const changed = runGit(
     root,
-    ["diff", "--name-only", EXPECTED_BASE_COMMIT, "--"],
+    ["diff", "--name-only", EXPECTED_IMPLEMENTATION_BASE_COMMIT, "--"],
     failures,
     "changed-path query",
   );
@@ -354,8 +385,11 @@ function validateGitScope(root, failures) {
   );
   for (const relativePath of new Set([...changed, ...untracked])) {
     if (relativePath.startsWith("runtime/tmp/")) continue;
-    if (!ALLOWED_PREFLIGHT_SCOPE.has(relativePath)) {
-      failures.push(`preflight-only scope contains an unauthorized path: ${relativePath}`);
+    const allowedByPrefix = ALLOWED_IMPLEMENTATION_PREFIXES.some((prefix) =>
+      relativePath.startsWith(prefix),
+    );
+    if (!ALLOWED_PREFLIGHT_SCOPE.has(relativePath) && !allowedByPrefix) {
+      failures.push(`accepted implementation scope contains an unauthorized path: ${relativePath}`);
     }
   }
 }
@@ -389,7 +423,7 @@ export function validatePhase3Preflight({
     implementationAuthorized:
       packet?.authority?.implementation_authorized ?? null,
     gitScopeChecked: checkGitScope,
-    gitScopeBase: checkGitScope ? EXPECTED_BASE_COMMIT : null,
+    gitScopeBase: checkGitScope ? EXPECTED_IMPLEMENTATION_BASE_COMMIT : null,
     checks: {
       packages: EXPECTED_PACKAGES.length,
       requiredAcceptedAdrs: 2,

@@ -37,8 +37,7 @@
 | Phase 2 candidate browser gate | `npm run p2:browser` | desktop, 390 x 844 mobile, keyboard, reduced motion, forced colors, no egress/storage/worker/legacy, and provisional performance | Windows 10; Playwright 1.62.0; bundled Chromium | 6 | 6 pass; 0 skip/unexpected/flaky | [summary](../reengineering/evidence/phase-2/LW-P2-001/summary.json) |
 | Phase 2 supply-chain gate | `npm audit --workspaces --include-workspace-root --json`, CycloneDX SBOM, and repository collector | exact lockfile integrity, licenses, optional packages, lifecycle scripts, and vulnerability count | same | 58 external lockfile packages | valid; 0 audit vulnerabilities | [receipt](../reengineering/evidence/phase-2/LW-P2-001/supply-chain.json) |
 | Phase 2 evidence validator | `node tools/reengineering/validate-phase2-evidence.mjs ...` | command receipts, hashes, identity, browser artifacts, protected paths, and sentinel safety | same | 16 commands; 8 protected paths; 8 required browser artifacts | valid; 0 failures | [validation](../reengineering/evidence/phase-2/LW-P2-001/validation.json) |
-| Phase 3 decision-packet controls | `node --test tests/reengineering/phase3-decision-packet.test.mjs` | proposed ADR status/authority, additive registry floor, blockers, exact safety contracts/invariants, Markdown projection, scope fence, and negative fixtures | Windows 10; Node 24.13.0 | 23 | 23 pass | [receipt](../reengineering/evidence/phase-3/LW-P3-DEC-001/commands/focused/manifest.json) |
-| Phase 3 preflight controls | `node --test tests/reengineering/phase3-preflight.test.mjs` | exact package/scope/namespace/provider/storage/dependency/test gates, pending authority, Markdown projection, and unsafe mutation rejection | Windows 10; Node 24.13.0 | 15 | 15 pass | [receipt](../reengineering/evidence/phase-3/LW-P3-PREFLIGHT-001/commands/focused/manifest.json) |
+| Phase 3 decision/preflight acceptance controls | `node --test tests/reengineering/phase3-decision-packet.test.mjs tests/reengineering/phase3-preflight.test.mjs` | exact maintainer receipt, accepted bounded authority, additive registry floor, blockers, exact safety contracts/invariants, implementation scope fence, Markdown projection, and unsafe mutation rejection | Windows 10; Node 24.13.0 | 39 | 39 pass | Acceptance run on 2026-07-30; implementation evidence will be stored under `reengineering/evidence/phase-3/LW-P3-001/` |
 
 ## Characterization tests
 
@@ -140,10 +139,10 @@ The Phase 2 result is a feature-free architecture foundation. It does not
 upgrade any legacy compatibility level or establish real provider, stored-data,
 PWA, desktop, full accessibility, or release behavior.
 
-**MEASURED:** the focused `LW-P3-DEC-001` controls pass 23 of 23 positive and
-negative cases. They prove only that the decision packet is internally
-consistent, proposal-only, scope-fenced, and unable to close blockers or grant
-implementation authority by accidental document edits. They do not test a
+**MEASURED:** the combined Phase 3 decision/preflight acceptance controls pass
+39 of 39 positive and negative cases. They prove the exact accepted receipt,
+bounded implementation authority, safety contract, and scope fence while
+preventing accidental blocker closure or wider authority. They do not test a
 storage repository, provider adapter, migration, proxy, or cutover because none
 is implemented or authorized.
 

@@ -16,7 +16,7 @@ LATTICEWORK
 
 ## Current target
 
-`LW-P3-PREFLIGHT-001 — exact synthetic implementation preflight`
+`LW-P3-001 — synthetic storage/provider foundation`
 
 ## Upstream baseline
 
@@ -24,11 +24,12 @@ LATTICEWORK
 
 ## Last verified commit
 
-`22c3742cdc7863f16bf190ee23ddc67eabc20ec1` (`LW-P3-DEC-001` proposal candidate)
+`93a36626f786a880210c53b8486c961e8b86e9ea` (`LW-P3-PREFLIGHT-001` verified preflight)
 
 The last verified runtime implementation merge is
-`c48505c5437c6b9cf67a652cdc2d8c81778c15a1`; the later commit changes only
-decision/control documentation and tests.
+`c48505c5437c6b9cf67a652cdc2d8c81778c15a1`; later verified commits change
+only decision/preflight controls and evidence. Phase 3 implementation begins
+from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 
 ## Last verified date
 
@@ -51,8 +52,9 @@ decision/control documentation and tests.
 | `LW-P1-001` | Executable baseline characterization and fixtures | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P1-001.md` |
 | `LW-P2-PREFLIGHT-001` | Accepted architecture and exact Phase 2 execution packet | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-PREFLIGHT-001.md` |
 | `LW-P2-001` | Isolated typed kernel/contracts/status-shell candidate | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-001.md` |
-| `LW-P3-DEC-001` | Phase 3 storage/provider/security decision packet | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — DISPOSITION PENDING` | `docs/agents/handoffs/LW-P3-DEC-001.md` |
+| `LW-P3-DEC-001` | Phase 3 storage/provider/security decision packet | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — ACCEPTED` | `docs/agents/handoffs/LW-P3-DEC-001.md` |
 | `LW-P3-PREFLIGHT-001` | Exact synthetic storage/provider implementation preflight | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P3-PREFLIGHT-001.md` |
+| `LW-P3-001` | Synthetic conversation storage and deterministic provider foundation | Codex root controller | `reengineering/p3-storage-provider-foundation` | `IN PROGRESS` | `docs/agents/claims/LW-P3-001.md` |
 
 ## Completed in current milestone
 
@@ -99,24 +101,24 @@ decision/control documentation and tests.
   `c48505c5437c6b9cf67a652cdc2d8c81778c15a1`.
 - The post-merge control checkpoint was pushed to `main` at
   `6704dd502a140fce2fe8e06f8db336d0bd3839a5`.
-- **PROPOSED:** ADR-004 through ADR-006 and
-  `reengineering/PHASE3_DECISION_PACKET.*` now describe the bounded Phase 3
-  storage, provider, and optional-proxy contracts. They have not been accepted
-  and authorize no runtime, storage, provider, listener, or cutover change.
+- **OBSERVED:** the maintainer accepted ADR-004 through ADR-006 on 2026-07-30
+  with the receipt `approved choices - continue`. ADR-004/005 authorize only
+  the exact synthetic/mock `LW-P3-001` preflight scope; ADR-006 freezes a future
+  proxy contract and authorizes no listener.
 - **MEASURED:** the Phase 3 proposal validator is valid and scope-checked, 23
   focused controls and 75 full repository controls pass with zero fail/skip,
   and the evidence bundle is stored under
   `reengineering/evidence/phase-3/LW-P3-DEC-001/`.
-- **VERIFIED:** independent final QA reproduced the decision gates and returned
-  GREEN with no actionable findings. Explicit maintainer dispositions remain
-  the only authority gate.
+- **VERIFIED:** independent final QA reproduced the decision and preflight
+  gates and returned GREEN with no actionable findings.
 - **MEASURED:** `reengineering/PHASE3_PREFLIGHT.*` freezes exactly two
   candidate packages, three storage namespaces, 12 required verification
   gates, and 15 forbidden legacy/runtime prefixes. Its 15 focused controls and
   the 91-test full repository-control suite pass with zero fail/skip.
-- **OBSERVED:** the preflight still records `implementation_authorized: false`.
-  No storage/provider package, implementation fixture, real-data read,
-  credential, provider call, listener, route, feature, or cutover exists.
+- **OBSERVED:** the accepted preflight records
+  `implementation_authorized: true` only for its exact synthetic/mock package
+  surface. Real-data reads, credentials, provider calls, listeners, legacy
+  routes/features, activation, and cutover remain forbidden.
 - **VERIFIED:** independent QA reproduced the canonical validator, 39 focused
   controls, 91 full controls, syntax/JSON/link/diff gates, and returned GREEN
   with no actionable finding.
@@ -131,11 +133,8 @@ decision/control documentation and tests.
 
 ## Open decisions
 
-- Disposition of proposed ADR-004 before Phase 3 storage implementation.
-- Disposition of proposed ADR-005 before Phase 3 provider-contract
-  implementation.
-- Disposition of proposed ADR-006 before later optional-proxy work; ADR-012
-  remains required before LAN/worker/peer/Telegram implementation.
+- ADR-012 remains required before LAN/worker/peer/Telegram or optional-proxy
+  runtime implementation.
 - Browser, desktop, launch-mode, and eventual cutover dispositions.
 
 ## AI work allowed without new approval
@@ -146,14 +145,13 @@ decision/control documentation and tests.
 - Documentation accuracy improvements.
 - Reproducible measurement tooling.
 - Documentation and evidence corrections that do not change product semantics.
-- Read-only Phase 3 data/provider characterization and ADR drafting.
+- Bounded synthetic-only `LW-P3-001` implementation under the accepted
+  preflight and active work claim.
 
 ## Human decision required
 
-- A versioned data/storage and migration ADR is required before Phase 3
-  implementation.
-- Provider/security implementation and any default-route cutover require
-  separate accepted decisions.
+- Real-data migration, optional-proxy runtime, provider activation, and any
+  default-route cutover require separate accepted decisions and evidence.
 
 ## Risks
 
@@ -166,9 +164,9 @@ decision/control documentation and tests.
 
 ## Next handoff
 
-**Next action:** Independently review `LW-P3-PREFLIGHT-001`, then record the
-maintainer's explicit ADR-004 through ADR-006 dispositions before opening the
-separately claimed `LW-P3-001` implementation.
+**Next action:** Execute the exact `LW-P3-001` synthetic storage/provider
+preflight test-first, then produce canonical and independent clean-worktree
+evidence before a final review-ready pull request.
 
 **Read first:** `reengineering/PHASE3_PREFLIGHT.md`,
 `reengineering/PHASE3_DECISION_PACKET.md`,
@@ -180,8 +178,9 @@ separately claimed `LW-P3-001` implementation.
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** the preflight validator and full repository-control
-suite are green, independent QA reports no unresolved issue, and maintainer
-acceptance or rejection is recorded without weakening any future gate.
+**Success condition:** the complete Phase 3 verification runner, browser
+IndexedDB scenarios, provider no-egress controls, evidence validator, full
+repository controls, and independent clean-worktree reproduction are green
+without activating any candidate runtime path.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`

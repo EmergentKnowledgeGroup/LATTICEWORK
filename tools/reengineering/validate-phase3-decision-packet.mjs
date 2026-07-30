@@ -13,6 +13,8 @@ const BASELINE_PRESERVATION_IDS_PATH =
   "reengineering/PHASE3_BASELINE_PRESERVATION_IDS.json";
 const EXPECTED_BASELINE_IDS_SHA256 =
   "113999f75b413ddd9dc9bcb60bb57ab05085c25e3d4e57bb4307c7ef760d4aa6";
+const EXPECTED_DECISION_RECEIPT = "approved choices - continue";
+const EXPECTED_DECISION_RECEIPT_DATE = "2026-07-30";
 const REQUIRED_ADRS = [
   {
     id: "ADR-004",
@@ -232,8 +234,10 @@ const ALLOWED_SCOPE_PATHS = new Set([
   "docs/TESTING_AND_VERIFICATION.md",
   "docs/agents/claims/LW-P3-DEC-001.md",
   "docs/agents/claims/LW-P3-PREFLIGHT-001.md",
+  "docs/agents/claims/LW-P3-001.md",
   "docs/agents/handoffs/LW-P3-DEC-001.md",
   "docs/agents/handoffs/LW-P3-PREFLIGHT-001.md",
+  "docs/agents/handoffs/LW-P3-001.md",
   "docs/decisions/README.md",
   "docs/decisions/0004-versioned-storage-and-migration.md",
   "docs/decisions/0005-provider-abstraction-and-provenance.md",
@@ -280,11 +284,28 @@ const ALLOWED_SCOPE_PATHS = new Set([
   "reengineering/evidence/phase-3/LW-P3-PREFLIGHT-001/commands/validator/stdout.log",
   "runtime/checkpoints/LATEST.json",
   "runtime/checkpoints/LATEST.md",
+  "package.json",
+  "package-lock.json",
+  "packages/contracts/src/index.ts",
+  "packages/contracts/src/storage.ts",
+  "packages/contracts/src/provider.ts",
+  "tests/reengineering/phase3-storage-boundary.test.mjs",
+  "tests/reengineering/phase3-provider-boundary.test.mjs",
+  "tests/reengineering/phase3-evidence-validation.test.mjs",
   "tests/reengineering/phase3-decision-packet.test.mjs",
   "tests/reengineering/phase3-preflight.test.mjs",
+  "tools/reengineering/run-phase3-verification.ps1",
+  "tools/reengineering/verify-phase3-boundary.mjs",
+  "tools/reengineering/validate-phase3-evidence.mjs",
   "tools/reengineering/validate-phase3-decision-packet.mjs",
   "tools/reengineering/validate-phase3-preflight.mjs",
 ]);
+const ALLOWED_SCOPE_PREFIXES = [
+  "packages/storage/",
+  "packages/providers/",
+  "tests/phase3/",
+  "reengineering/evidence/phase-3/LW-P3-001/",
+];
 const SECRET_PATTERNS = [
   /\bsk-[A-Za-z0-9_-]{16,}\b/,
   /\bAKIA[0-9A-Z]{16}\b/,
@@ -373,8 +394,17 @@ function validatePacketMarkdown(workspaceRoot, packet, failures) {
       "Phase 3 decision packet Markdown must contain the exact structured-contract projection",
     );
   }
-  if (!markdown.includes("**Status:** PROPOSED — MAINTAINER DISPOSITION REQUIRED")) {
-    failures.push("Phase 3 decision packet Markdown must remain proposal-only");
+  if (!markdown.includes("**Status:** ACCEPTED — BOUNDED PHASE 3 EXECUTION AUTHORIZED")) {
+    failures.push("Phase 3 decision packet Markdown must record accepted bounded authority");
+  }
+  if (
+    !normalizeWhitespace(markdown).includes(
+      normalizeWhitespace(
+        `**Decision receipt:** maintainer replied \`${EXPECTED_DECISION_RECEIPT}\` in the active Codex task on ${EXPECTED_DECISION_RECEIPT_DATE}.`,
+      ),
+    )
+  ) {
+    failures.push("Phase 3 decision packet Markdown must contain the exact maintainer receipt");
   }
   if (!markdown.includes(`**Base commit:** \`${packet.base_commit}\``)) {
     failures.push("Phase 3 decision packet Markdown base commit is out of sync");
@@ -397,10 +427,10 @@ function validateAdrs(workspaceRoot, packet, failures) {
     }
     if (
       decision.path !== required.path ||
-      decision.status !== "Proposed" ||
+      decision.status !== "Accepted" ||
       !isDeepStrictEqual(decision.required_for, required.requiredFor)
     ) {
-      failures.push(`${required.id} packet path/status must match the Proposed ADR`);
+      failures.push(`${required.id} packet path/status must match the Accepted ADR`);
     }
 
     const adrPath = path.join(workspaceRoot, required.path);
@@ -410,19 +440,22 @@ function validateAdrs(workspaceRoot, packet, failures) {
       failures.push(`${required.id} title/number is invalid`);
     }
     const status = text.match(/^\*\*Status:\*\*\s*(.+)$/m)?.[1]?.trim();
-    if (status !== "Proposed") {
-      failures.push(`${required.id} status must remain Proposed without a maintainer disposition`);
+    if (status !== "Accepted") {
+      failures.push(`${required.id} status must be Accepted`);
     }
-    if (!/^\*\*Decision receipt:\*\*\s+\*\*PENDING\*\*/m.test(text)) {
-      failures.push(`${required.id} must contain a PENDING decision receipt`);
-    }
-    if (/^\*\*Accepted:\*\*/m.test(text)) {
-      failures.push(`${required.id} cannot contain an Accepted date while Proposed`);
+    const normalizedText = normalizeWhitespace(text);
+    if (
+      !normalizedText.includes(
+        normalizeWhitespace(
+          `**Decision receipt:** **ACCEPTED** — maintainer replied \`${EXPECTED_DECISION_RECEIPT}\` in the active Codex task on ${EXPECTED_DECISION_RECEIPT_DATE}.`,
+        ),
+      )
+    ) {
+      failures.push(`${required.id} decision receipt must match the accepted maintainer receipt`);
     }
     for (const heading of REQUIRED_ADR_HEADINGS) {
       if (!text.includes(heading)) failures.push(`${required.id} is missing ${heading}`);
     }
-    const normalizedText = normalizeWhitespace(text);
     for (const clause of REQUIRED_ADR_CLAUSES[required.id] ?? []) {
       if (!normalizedText.includes(normalizeWhitespace(clause))) {
         failures.push(`${required.id} is missing required safety clause: ${clause}`);
@@ -567,8 +600,8 @@ function validateAuthority(packet, failures) {
   if (packet?.schema !== "latticework.phase3-decision-packet.v1") {
     failures.push("packet schema must be latticework.phase3-decision-packet.v1");
   }
-  if (packet?.work_id !== "LW-P3-DEC-001" || packet?.status !== "PROPOSED") {
-    failures.push("packet work ID/status must be LW-P3-DEC-001 / PROPOSED");
+  if (packet?.work_id !== "LW-P3-DEC-001" || packet?.status !== "ACCEPTED") {
+    failures.push("packet work ID/status must be LW-P3-DEC-001 / ACCEPTED");
   }
   if (
     packet?.baseline_sha !== EXPECTED_BASELINE_SHA ||
@@ -576,11 +609,13 @@ function validateAuthority(packet, failures) {
   ) {
     failures.push("packet baseline/base commit identity is invalid");
   }
-  if (packet?.authority?.maintainer_disposition !== "PENDING") {
-    failures.push("maintainer disposition must remain PENDING");
-  }
-  if (packet?.authority?.implementation_authorized !== false) {
-    failures.push("implementation_authorized must remain false without a maintainer disposition");
+  if (
+    packet?.authority?.maintainer_disposition !== "ACCEPTED" ||
+    packet?.authority?.decision_receipt !== EXPECTED_DECISION_RECEIPT ||
+    packet?.authority?.decision_receipt_date !== EXPECTED_DECISION_RECEIPT_DATE ||
+    packet?.authority?.implementation_authorized !== true
+  ) {
+    failures.push("accepted decision authority and exact maintainer receipt are required");
   }
   if (
     packet?.authority?.runtime_semantics_changed !== false ||
@@ -638,8 +673,11 @@ function validateGitScope(workspaceRoot, baseSha, failures) {
   const scope = new Set([...changed, ...untracked]);
   for (const relativePath of scope) {
     if (relativePath.startsWith("runtime/tmp/")) continue;
-    if (!ALLOWED_SCOPE_PATHS.has(relativePath)) {
-      failures.push(`Phase 3 decision-only scope contains an unauthorized path: ${relativePath}`);
+    const allowedByPrefix = ALLOWED_SCOPE_PREFIXES.some((prefix) =>
+      relativePath.startsWith(prefix),
+    );
+    if (!ALLOWED_SCOPE_PATHS.has(relativePath) && !allowedByPrefix) {
+      failures.push(`Phase 3 accepted scope contains an unauthorized path: ${relativePath}`);
     }
   }
 }

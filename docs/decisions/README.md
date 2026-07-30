@@ -33,9 +33,10 @@ Use `0000-template.md`.
 | [`0001`](0001-canonical-source-and-build-strategy.md) | Accepted | Canonical source and deterministic generated artifacts |
 | [`0002`](0002-typescript-module-architecture.md) | Accepted | Strict TypeScript module architecture |
 | [`0003`](0003-ui-rendering-strategy.md) | Accepted | Bounded Lit rendering strategy |
-| [`0004`](0004-versioned-storage-and-migration.md) | Proposed | Versioned storage and copy-on-write migration |
-| [`0005`](0005-provider-abstraction-and-provenance.md) | Proposed | Provider adapters, routing, and provenance |
-| [`0006`](0006-optional-local-proxy-security.md) | Proposed | Optional local proxy security contract |
+| [`0004`](0004-versioned-storage-and-migration.md) | Accepted | Versioned storage and copy-on-write migration |
+| [`0005`](0005-provider-abstraction-and-provenance.md) | Accepted | Provider adapters, routing, and provenance |
+| [`0006`](0006-optional-local-proxy-security.md) | Accepted | Optional local proxy security contract |
 
-No Proposed row grants implementation, runtime, migration, listener, or cutover
-authority.
+An Accepted ADR grants only the authority stated in its exact decision receipt
+and active work claim. Acceptance never implies real-data migration, listener,
+activation, or cutover authority.

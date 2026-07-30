@@ -1,13 +1,16 @@
 # ADR 0006 — Optional local proxy security
 
-**Status:** Proposed
+**Status:** Accepted
 **Date:** 2026-07-30
 **Owners:** Maintainers
 **Related work:** `LW-P3-DEC-001`, `LW-BLK-006`, `LW-P7-001`,
 `reengineering/SECURITY_BOUNDARY_MAP.md`
 
-**Decision receipt:** **PENDING** — this proposal does not authorize a gateway
-listener, LAN exposure, worker deployment, or credential migration.
+**Decision receipt:** **ACCEPTED** — maintainer replied `approved choices - continue`
+in the active Codex task on 2026-07-30. This freezes the future optional-proxy
+contract only; it authorizes no Phase 3 listener, LAN exposure, worker
+deployment, credential migration, activation, or cutover. Runtime proxy work
+remains blocked on ADR-012 and its later security gate.
 
 ## Context
 

@@ -1,13 +1,16 @@
 # ADR 0005 — Provider abstraction, routing, and provenance
 
-**Status:** Proposed
+**Status:** Accepted
 **Date:** 2026-07-30
 **Owners:** Maintainers
 **Related work:** `LW-P3-DEC-001`, `LW-P3-001`, `LW-P4-001`,
 `docs/ARCHITECTURE.md`, `reengineering/SECURITY_BOUNDARY_MAP.md`
 
-**Decision receipt:** **PENDING** — this proposal does not authorize real
-provider traffic, credential use, or a change to legacy routing.
+**Decision receipt:** **ACCEPTED** — maintainer replied `approved choices - continue`
+in the active Codex task on 2026-07-30. This authorizes only the exact
+deterministic in-process mock `LW-P3-001` scope frozen by the accepted Phase 3
+preflight; it does not authorize real provider traffic, credential use, legacy
+routing changes, activation, or cutover.
 
 ## Context
 

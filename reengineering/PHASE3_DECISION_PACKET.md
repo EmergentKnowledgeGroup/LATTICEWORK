@@ -1,9 +1,12 @@
 # Phase 3 Decision Packet — `LW-P3-DEC-001`
 
-**Status:** PROPOSED — MAINTAINER DISPOSITION REQUIRED
+**Status:** ACCEPTED — BOUNDED PHASE 3 EXECUTION AUTHORIZED
 **Date:** 2026-07-30
 **Base commit:** `6704dd502a140fce2fe8e06f8db336d0bd3839a5`
-**Runtime changes authorized:** No
+**Decision receipt:** maintainer replied `approved choices - continue` in the
+active Codex task on 2026-07-30.
+**Runtime changes authorized:** Only the exact synthetic/mock `LW-P3-001`
+preflight scope; no activation or legacy integration
 
 ## Purpose
 
@@ -50,12 +53,13 @@ The machine-readable control surface is
 - **VERIFIED:** the Phase 2 candidate has no provider, storage, worker,
   service-worker, route, or external-service behavior.
 
-These observations establish decision pressure, not permission to mutate the
-system.
+These observations establish the bounded design pressure. The maintainer
+receipt authorizes only the accepted synthetic/mock implementation surface
+below; it does not authorize mutation of legacy or real user state.
 
-## Proposed bounded Phase 3 execution
+## Accepted bounded Phase 3 execution
 
-Only after ADR-004 and ADR-005 are explicitly accepted, `LW-P3-001` may add:
+ADR-004 and ADR-005 are accepted. The separately claimed `LW-P3-001` may add:
 
 - storage/provider contracts;
 - one stable `conversation` dataset at schema version 1, sourced from synthetic
@@ -113,13 +117,13 @@ class. A partially streamed request is never replayed automatically.
 
 | Blocker | Current state | What this packet provides | What still closes it |
 |---|---|---|---|
-| `LW-BLK-005` | OPEN | Proposed ADR-004 and a measurable inventory/fixture contract | ADR-004 acceptance plus expanded inventory and independently verified fixtures |
-| `LW-BLK-006` | OPEN | Proposed ADR-006 proxy boundary | ADR-006 and ADR-012 acceptance plus Phase 7 security tests |
+| `LW-BLK-005` | OPEN | Accepted ADR-004 and a measurable inventory/fixture contract | Expanded inventory and independently verified synthetic fixtures |
+| `LW-BLK-006` | OPEN | Accepted ADR-006 proxy boundary | ADR-012 acceptance plus Phase 7 security tests |
 | `LW-BLK-007` | OPEN | Explicit no-cutover invariant | Future ADR-009, complete parity/migration/rollback/release evidence, and verbatim owner approval naming affected IDs |
 
-## Maintainer dispositions requested
+## Maintainer disposition
 
-The proposed choices are:
+The accepted choices are:
 
 1. **Storage:** separate namespaced candidate databases, per-dataset
    descriptors, stable `conversation` dataset/schema 1, synthetic
@@ -136,10 +140,12 @@ The proposed choices are:
    origin/method/path/upstream allowlists, bounded resources, no private
    diagnostics, and no runtime listener before the later security gate.
 
-Acceptance of 1 and 2 authorizes only a separately claimed `LW-P3-001`
-implementation matching this packet. Acceptance of 3 freezes the future proxy
-contract but does not authorize a listener. Rejection leaves all affected
-blockers open.
+The maintainer replied `approved choices - continue` in the active Codex task
+on 2026-07-30. Acceptance of 1 and 2 authorizes only the separately claimed
+`LW-P3-001` implementation matching this packet and the accepted preflight.
+Acceptance of 3 freezes the future proxy contract but does not authorize a
+listener. All affected blockers remain open until their remaining evidence
+conditions are independently verified.
 
 ## Verification before disposition
 
@@ -154,16 +160,16 @@ node --test --test-reporter=tap tests/reengineering/*.test.mjs
 git diff --check
 ```
 
-The validator must report `valid: true`, exactly three Proposed ADRs, all three
+The validator must report `valid: true`, exactly three Accepted ADRs, all three
 blockers open, at least the pinned 252 preservation obligations, 12 exact
 required invariants, `git_scope_checked: true`, and
-`implementation_authorized: false`.
+`implementation_authorized: true`.
 
 ## Stop conditions
 
 Stop immediately if any step would:
 
-- mark an ADR Accepted without a maintainer receipt;
+- alter the exact accepted ADR receipt;
 - weaken or remove a preservation obligation;
 - put private data or credentials in fixtures/evidence;
 - mutate a legacy source/store/provider;

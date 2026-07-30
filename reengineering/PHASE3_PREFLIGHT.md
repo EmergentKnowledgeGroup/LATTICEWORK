@@ -1,16 +1,20 @@
 # Phase 3 implementation preflight — `LW-P3-001`
 
-**Status:** READY PENDING MAINTAINER ACCEPTANCE
+**Status:** ACCEPTED FOR BOUNDED EXECUTION
 **Date:** 2026-07-30
 **Base:** `6fa553ee3f5c7d1952f7aed836873467c4626068`
-**Decision gate:** ADR-004 and ADR-005 must be explicitly accepted
+**Implementation base:** `93a36626f786a880210c53b8486c961e8b86e9ea`
+**Decision receipt:** maintainer replied `approved choices - continue` in the
+active Codex task on 2026-07-30.
+**Decision gate:** ADR-004 and ADR-005 are accepted
 
 ## Authority
 
-This preflight is implementation-ready but does not itself authorize code.
-ADR-006 may freeze a future proxy contract, but Phase 3 starts no listener.
+This preflight authorizes only the exact bounded synthetic/mock implementation
+surface below. ADR-006 freezes a future proxy contract, but Phase 3 starts no
+listener.
 
-- implementation authorized: false
+- implementation authorized: true
 - real user data: forbidden
 - real provider traffic: forbidden
 - real credentials: forbidden

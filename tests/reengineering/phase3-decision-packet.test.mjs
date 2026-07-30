@@ -48,7 +48,7 @@ test.after(() => {
   fs.rmSync(TEST_ROOT, { recursive: true, force: true });
 });
 
-test("canonical Phase 3 decision packet is complete, proposal-only, and scope-safe", () => {
+test("canonical Phase 3 decision packet records bounded maintainer acceptance", () => {
   const result = validatePhase3DecisionPacket({
     workspaceRoot: REPO_ROOT,
     checkGitScope: true,
@@ -61,8 +61,8 @@ test("canonical Phase 3 decision packet is complete, proposal-only, and scope-sa
     preservation_rows: 252,
     required_invariants: 12,
   });
-  assert.equal(result.status, "PROPOSED");
-  assert.equal(result.implementation_authorized, false);
+  assert.equal(result.status, "ACCEPTED");
+  assert.equal(result.implementation_authorized, true);
   assert.equal(result.git_scope_checked, true);
   assert.equal(
     result.git_scope_base,
@@ -70,10 +70,10 @@ test("canonical Phase 3 decision packet is complete, proposal-only, and scope-sa
   );
 });
 
-test("validator rejects implementation authority without a maintainer disposition", () => {
-  const fixtureRoot = createFixture("unauthorized");
+test("validator rejects accepted status without implementation authority", () => {
+  const fixtureRoot = createFixture("inconsistent-authority");
   const packet = readJson(fixtureRoot, "reengineering/PHASE3_DECISION_PACKET.json");
-  packet.authority.implementation_authorized = true;
+  packet.authority.implementation_authorized = false;
   writeJson(fixtureRoot, "reengineering/PHASE3_DECISION_PACKET.json", packet);
 
   const result = validatePhase3DecisionPacket({
@@ -82,7 +82,7 @@ test("validator rejects implementation authority without a maintainer dispositio
   });
 
   assert.equal(result.valid, false);
-  assert.match(result.failures.join("\n"), /implementation_authorized must remain false/i);
+  assert.match(result.failures.join("\n"), /accepted decision authority/i);
 });
 
 test("validator rejects a weakened preservation registry", () => {
@@ -168,8 +168,8 @@ test("validator rejects premature blocker closure", () => {
   assert.match(result.failures.join("\n"), /LW-BLK-005 must remain OPEN/i);
 });
 
-test("validator rejects an ADR marked Accepted without a decision receipt", () => {
-  const fixtureRoot = createFixture("adr-accepted");
+test("validator rejects an Accepted ADR without the exact decision receipt", () => {
+  const fixtureRoot = createFixture("adr-receipt-missing");
   const adrPath = path.join(
     fixtureRoot,
     "docs",
@@ -177,11 +177,7 @@ test("validator rejects an ADR marked Accepted without a decision receipt", () =
     "0004-versioned-storage-and-migration.md",
   );
   const adr = fs.readFileSync(adrPath, "utf8");
-  fs.writeFileSync(
-    adrPath,
-    adr.replace("**Status:** Proposed", "**Status:** Accepted"),
-    "utf8",
-  );
+  fs.writeFileSync(adrPath, adr.replace(/\*\*Decision receipt:\*\*[^\r\n]*/, "**Decision receipt:** **PENDING**"), "utf8");
 
   const result = validatePhase3DecisionPacket({
     workspaceRoot: fixtureRoot,
@@ -189,7 +185,7 @@ test("validator rejects an ADR marked Accepted without a decision receipt", () =
   });
 
   assert.equal(result.valid, false);
-  assert.match(result.failures.join("\n"), /ADR-004 status must remain Proposed/i);
+  assert.match(result.failures.join("\n"), /ADR-004 decision receipt/i);
 });
 
 test("validator rejects removal of a required decision invariant", () => {
@@ -432,7 +428,7 @@ test("canonical CLI cannot disable or rebase Git scope validation", () => {
   );
 });
 
-test("proposal validator permits only the claimed Phase 3 preflight control files", () => {
+test("accepted validator permits only the exact bounded Phase 3 implementation surface", () => {
   const validator = fs.readFileSync(
     path.join(
       REPO_ROOT,
@@ -444,15 +440,22 @@ test("proposal validator permits only the claimed Phase 3 preflight control file
   );
 
   for (const relativePath of [
+    "docs/agents/claims/LW-P3-001.md",
     "docs/agents/claims/LW-P3-PREFLIGHT-001.md",
     "docs/agents/handoffs/LW-P3-PREFLIGHT-001.md",
+    "packages/contracts/src/storage.ts",
+    "packages/contracts/src/provider.ts",
     "reengineering/PHASE3_PREFLIGHT.json",
     "reengineering/PHASE3_PREFLIGHT.md",
+    "tests/reengineering/phase3-storage-boundary.test.mjs",
     "tests/reengineering/phase3-preflight.test.mjs",
+    "tools/reengineering/run-phase3-verification.ps1",
     "tools/reengineering/validate-phase3-preflight.mjs",
   ]) {
     assert.match(validator, new RegExp(relativePath.replaceAll(".", "\\.")));
   }
-  assert.doesNotMatch(validator, /"packages\/storage\/"/);
-  assert.doesNotMatch(validator, /"packages\/providers\/"/);
+  assert.match(validator, /"packages\/storage\/"/);
+  assert.match(validator, /"packages\/providers\/"/);
+  assert.doesNotMatch(validator, /"apps\/web\/"/);
+  assert.doesNotMatch(validator, /"modules\/"/);
 });

@@ -9,9 +9,9 @@
   characterization continues as migration reaches each surface.
 - `M2`: accepted architecture and feature-free typed foundation independently
   verified, reviewed once, and merged.
-- `M3`: decision packet validated and independently reviewed. ADR-004 through
-  ADR-006 are Proposed and await maintainer disposition; structural
-  implementation has not started.
+- `M3`: ADR-004 through ADR-006 are accepted, the exact preflight is
+  independently verified, and bounded synthetic/mock implementation is in
+  progress.
 - `M4` and later: not started; blocked by their recorded decision/evidence
   gates.
 
@@ -52,10 +52,8 @@ Exit criteria:
 
 Current gate:
 
-- `LW-P3-DEC-001` may document and validate storage, provider, and optional
-  proxy decisions only.
-- `LW-P3-001` remains blocked until ADR-004 and ADR-005 are explicitly
-  accepted.
+- `LW-P3-001` may implement only the exact accepted synthetic conversation
+  storage and deterministic in-process provider-mock surface.
 - ADR-006 defines a later optional-proxy boundary and does not authorize a
   listener in Phase 3.
 
