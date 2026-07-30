@@ -16,7 +16,7 @@ LATTICEWORK
 
 ## Current target
 
-`LW-P3-001 — verified; review and merge pending`
+`LW-P3-001 — verified; PR #2 open`
 
 ## Upstream baseline
 
@@ -135,6 +135,10 @@ It begins from `93a36626f786a880210c53b8486c961e8b86e9ea`.
   runtime path. The implementation has no real-data fixture, provider
   transport, listener, ambient credential read, activation API, feature
   registration, or cutover.
+- **OBSERVED:** pull request
+  [`#2`](https://github.com/EmergentKnowledgeGroup/LATTICEWORK/pull/2)
+  is open against `main` from verified branch head
+  `f009842574a6df8210ed7c49c812d1b85bb78774`.
 
 ## Blockers
 
