@@ -1,0 +1,20 @@
+✔ preservation registry accounts for every bounded source inventory row (2.5614ms)
+✔ data registry preserves every unique static and runtime storage identifier (13.2527ms)
+✔ runtime database rows retain versions and qualified store ownership (2.3385ms)
+✔ text and line helpers use the documented counting rule (1.5044ms)
+✔ first-party source classification excludes tests, vendor, and generated buckets (0.2625ms)
+✔ command receipt records exact command output, status, and hashes (186.8932ms)
+✔ artifact bundle manifest hashes repository and external evidence (2.1449ms)
+✔ validates the repository control plane deterministically (45.4737ms)
+✔ CLI emits JSON and fails for a missing in-repository evidence artifact (75.5429ms)
+✔ accepts a complete fixture without writing to it (29.6713ms)
+✔ fails when a declared evidence hash no longer matches (34.6254ms)
+✔ fails when a living control document retains an unresolved placeholder (19.6707ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 296.7303

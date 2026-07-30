@@ -1,0 +1,46 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P2-001-typecheck",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/s",
+    "/c",
+    "npm run p2:typecheck"
+  ],
+  "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"npm run p2:typecheck\"",
+  "cwd": "Z:\\LATTICEWORK_QA_7e928bb",
+  "started_at": "2026-07-30T12:40:36.567Z",
+  "ended_at": "2026-07-30T12:40:39.640Z",
+  "duration_ms": 3073.1262,
+  "timeout_ms": 300000,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "7e928bba605e0309273989bf8fd1303d2a822923",
+  "repository": {
+    "head": "7e928bba605e0309273989bf8fd1303d2a822923",
+    "status": "## HEAD (no branch)"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 277,
+      "sha256": "f6d64f98236e06a4306d1045c93d575e81b31fe55c0635af517a895d4d8444de"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

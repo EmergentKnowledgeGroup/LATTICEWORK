@@ -1,0 +1,4628 @@
+﻿[
+    {
+        "path":  ".github/workflows/update-primer.yml",
+        "directory":  ".github",
+        "language":  "YAML",
+        "bytes":  3868,
+        "is_text":  true,
+        "loc":  107,
+        "sha256":  "e590ea3946854c6273b41f4818c96c60550f9f153c1e79ad5d0b0cf1f3100a3e"
+    },
+    {
+        "path":  ".gitignore",
+        "directory":  ".gitignore",
+        "language":  "Other:.gitignore",
+        "bytes":  290,
+        "is_text":  true,
+        "loc":  14,
+        "sha256":  "004b79cc62bc2107e3798d1b6ac587367d5f089fa9096df3f771ccf9857bc5b6"
+    },
+    {
+        "path":  "AI_ORIENTATION.md",
+        "directory":  "AI_ORIENTATION.md",
+        "language":  "Markdown",
+        "bytes":  14091,
+        "is_text":  true,
+        "loc":  197,
+        "sha256":  "3ece00ec5e9f037b54b260a7560821609fbbce1e0615abecfbe3a53642d64d29"
+    },
+    {
+        "path":  "ANI.md",
+        "directory":  "ANI.md",
+        "language":  "Markdown",
+        "bytes":  3193,
+        "is_text":  true,
+        "loc":  72,
+        "sha256":  "9d90becf2e2dcb5f2f4b5a332c4c2070e0d1b2aac618be3b72d3720dff0eee8a"
+    },
+    {
+        "path":  "app.html",
+        "directory":  "app.html",
+        "language":  "HTML",
+        "bytes":  1997992,
+        "is_text":  true,
+        "loc":  51684,
+        "sha256":  "ffa5a3d35d71049d6433627ce46e9f971faf5912ae5153fcc8fcdefe9c2cf4f9"
+    },
+    {
+        "path":  "ARCHITECTURE.md",
+        "directory":  "ARCHITECTURE.md",
+        "language":  "Markdown",
+        "bytes":  24435,
+        "is_text":  true,
+        "loc":  597,
+        "sha256":  "befbcc992d9fd448275ccd42d45d73e0164da09ab6915abf25da35d9137f068f"
+    },
+    {
+        "path":  "ARCHITECTURE_INTENT.md",
+        "directory":  "ARCHITECTURE_INTENT.md",
+        "language":  "Markdown",
+        "bytes":  27236,
+        "is_text":  true,
+        "loc":  458,
+        "sha256":  "a179545cd7bf01ede1c92e305f2993503880159f01d08be1a4233f56525ceac1"
+    },
+    {
+        "path":  "bin/ship.sh",
+        "directory":  "bin",
+        "language":  "Shell",
+        "bytes":  8140,
+        "is_text":  true,
+        "loc":  203,
+        "sha256":  "40d539cdc3d6b0636d21d0cca021ad09164929949079e3bafe4e102be10f2341"
+    },
+    {
+        "path":  "CC_NOTE.md",
+        "directory":  "CC_NOTE.md",
+        "language":  "Markdown",
+        "bytes":  187,
+        "is_text":  true,
+        "loc":  5,
+        "sha256":  "c2e792325e5a4dc50a4148fb6df1c1e7cdd25903086cb57866c93411653cf02f"
+    },
+    {
+        "path":  "chalkboard.html",
+        "directory":  "chalkboard.html",
+        "language":  "HTML",
+        "bytes":  54993,
+        "is_text":  true,
+        "loc":  1446,
+        "sha256":  "bbc70669618e53cb99af025cb6a1ab37d13cea42ca4b8cb405be24baef3c7677"
+    },
+    {
+        "path":  "COORDINATION.md",
+        "directory":  "COORDINATION.md",
+        "language":  "Markdown",
+        "bytes":  83936,
+        "is_text":  true,
+        "loc":  1012,
+        "sha256":  "170a61404f63b77d9e0dee0c05ecfc7dfbd0f4a497ae9fe7890b8ed8f1e70649"
+    },
+    {
+        "path":  "COORDINATION_ARCHIVE.md",
+        "directory":  "COORDINATION_ARCHIVE.md",
+        "language":  "Markdown",
+        "bytes":  63588,
+        "is_text":  true,
+        "loc":  799,
+        "sha256":  "f5cfe5e316e17509feabb45e9cbf5a1c21914b5986c570029ae525572242f2d0"
+    },
+    {
+        "path":  "CORS-DIAGNOSIS.md",
+        "directory":  "CORS-DIAGNOSIS.md",
+        "language":  "Markdown",
+        "bytes":  5424,
+        "is_text":  true,
+        "loc":  80,
+        "sha256":  "92e2571974646d996df6636f218bb07e504a1c55014416bbf04abedb5dcd431c"
+    },
+    {
+        "path":  "COUNCIL-DECISIONS.md",
+        "directory":  "COUNCIL-DECISIONS.md",
+        "language":  "Markdown",
+        "bytes":  1189,
+        "is_text":  true,
+        "loc":  31,
+        "sha256":  "9a39200e5daf9b84eb44c9d54df2fb0922f2f21ea1b1acea6fe20e5824cc9b19"
+    },
+    {
+        "path":  "davna_seed.py",
+        "directory":  "davna_seed.py",
+        "language":  "Python",
+        "bytes":  2146,
+        "is_text":  true,
+        "loc":  73,
+        "sha256":  "df04a9ab79abd03677142c20d5bf04523cc5926280a4adff2bd7485f7d190724"
+    },
+    {
+        "path":  "DEDICATION.md",
+        "directory":  "DEDICATION.md",
+        "language":  "Markdown",
+        "bytes":  105,
+        "is_text":  true,
+        "loc":  3,
+        "sha256":  "7af8c0d2cb0caf5645680ec803ed6fd329f060992dbf64375e704d92fef87063"
+    },
+    {
+        "path":  "desktop/app/.gitkeep",
+        "directory":  "desktop",
+        "language":  "Other:.gitkeep",
+        "bytes":  2,
+        "is_text":  true,
+        "loc":  1,
+        "sha256":  "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+        "path":  "desktop/assets/icon.svg",
+        "directory":  "desktop",
+        "language":  "SVG",
+        "bytes":  3946,
+        "is_text":  true,
+        "loc":  98,
+        "sha256":  "8581d2b116a9f817bc8ec1c867a3ca473d07c30bd96dc88b4e70835dc1268f20"
+    },
+    {
+        "path":  "desktop/build-and-release.sh",
+        "directory":  "desktop",
+        "language":  "Shell",
+        "bytes":  3537,
+        "is_text":  true,
+        "loc":  102,
+        "sha256":  "c169fd1e2a85710f5bbeed42c0697bf89319e239f0460b70cd9d476f20966553"
+    },
+    {
+        "path":  "desktop/data-proxy-worker/DEPLOY.md",
+        "directory":  "desktop",
+        "language":  "Markdown",
+        "bytes":  809,
+        "is_text":  true,
+        "loc":  34,
+        "sha256":  "124eeb699de3339c015a52f7a2576daff12915a29bc4cedde8df429d023f7f3d"
+    },
+    {
+        "path":  "desktop/data-proxy-worker/worker.js",
+        "directory":  "desktop",
+        "language":  "JavaScript",
+        "bytes":  2025,
+        "is_text":  true,
+        "loc":  61,
+        "sha256":  "57bc8d3ecc58ccf524fed73d1867dea26e0dbb8291f72b77f1630deae70415e6"
+    },
+    {
+        "path":  "desktop/data-proxy-worker/wrangler.toml",
+        "directory":  "desktop",
+        "language":  "TOML",
+        "bytes":  82,
+        "is_text":  true,
+        "loc":  3,
+        "sha256":  "a0bafd56b3bee99e1fc69c4620199c92c387bd8172c2c6e7d50f2defafabe799"
+    },
+    {
+        "path":  "desktop/main.js",
+        "directory":  "desktop",
+        "language":  "JavaScript",
+        "bytes":  32553,
+        "is_text":  true,
+        "loc":  1069,
+        "sha256":  "ac923d594d032352eeac4eca57f12c7839ae4ad6accb62a03a342bc3e56cbbfc"
+    },
+    {
+        "path":  "desktop/package.json",
+        "directory":  "desktop",
+        "language":  "JSON",
+        "bytes":  1301,
+        "is_text":  true,
+        "loc":  53,
+        "sha256":  "bc8de562e0b1fe468e1498942b42be03ddfe0b5c228eef762b61b5be5e6ffa1f"
+    },
+    {
+        "path":  "desktop/preload.js",
+        "directory":  "desktop",
+        "language":  "JavaScript",
+        "bytes":  2415,
+        "is_text":  true,
+        "loc":  68,
+        "sha256":  "fc329d3c55508b82a7bde2cac4cf0747b41fdeb6c91be7d5e8af2428ae0c5603"
+    },
+    {
+        "path":  "desktop/README.md",
+        "directory":  "desktop",
+        "language":  "Markdown",
+        "bytes":  2812,
+        "is_text":  true,
+        "loc":  83,
+        "sha256":  "d7bf266e383ab69ec488b1b3d6407e120361dddc591094b0e6f78cf34229b35a"
+    },
+    {
+        "path":  "desktop/src-tauri/build.rs",
+        "directory":  "desktop",
+        "language":  "Other:.rs",
+        "bytes":  42,
+        "is_text":  true,
+        "loc":  3,
+        "sha256":  "4ae2333b11623039cc115e29b696e7ff5cdfcd5b7d628280ddf48fa733e6418d"
+    },
+    {
+        "path":  "desktop/src-tauri/Cargo.lock",
+        "directory":  "desktop",
+        "language":  "Other:.lock",
+        "bytes":  129600,
+        "is_text":  true,
+        "loc":  5045,
+        "sha256":  "4146c5c3082dddcadd8cea4c5488e0cec557bccd522e9e86e7eba079fb217ebf"
+    },
+    {
+        "path":  "desktop/src-tauri/Cargo.toml",
+        "directory":  "desktop",
+        "language":  "TOML",
+        "bytes":  502,
+        "is_text":  true,
+        "loc":  19,
+        "sha256":  "cc262cbe8eafd44cddc6d7245a912dd86b1af2c4f40478761bd665bf857adc4c"
+    },
+    {
+        "path":  "desktop/src-tauri/icons/icon.png",
+        "directory":  "desktop",
+        "language":  "Other:.png",
+        "bytes":  5368,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "5ab692e5e422b33eb1a87595456f5056ac77f9589646b4dba8c240632bbade37"
+    },
+    {
+        "path":  "desktop/src-tauri/src/main.rs",
+        "directory":  "desktop",
+        "language":  "Other:.rs",
+        "bytes":  6821,
+        "is_text":  true,
+        "loc":  183,
+        "sha256":  "4ec1081ddb8a3808f5cfa946368850d444f3b67cd133205e4c1319a2be6d713b"
+    },
+    {
+        "path":  "desktop/src-tauri/tauri.conf.json",
+        "directory":  "desktop",
+        "language":  "JSON",
+        "bytes":  542,
+        "is_text":  true,
+        "loc":  30,
+        "sha256":  "305b8626b5db9edc833f5d25932d86147ed9159968b723807ce6ac172b4f5f40"
+    },
+    {
+        "path":  "desktop/telegram-worker/.gitignore",
+        "directory":  "desktop",
+        "language":  "Other:.gitignore",
+        "bytes":  15,
+        "is_text":  true,
+        "loc":  1,
+        "sha256":  "853bdb9e4c430bb46f05289d0d2c37d6b99128f78ab80d4fa929c50af733be90"
+    },
+    {
+        "path":  "desktop/telegram-worker/DEPLOY.md",
+        "directory":  "desktop",
+        "language":  "Markdown",
+        "bytes":  1406,
+        "is_text":  true,
+        "loc":  70,
+        "sha256":  "d78428a994487671b0a480c533daf9afe69e5a60d286bb39c3a92aca260f5268"
+    },
+    {
+        "path":  "desktop/telegram-worker/package.json",
+        "directory":  "desktop",
+        "language":  "JSON",
+        "bytes":  202,
+        "is_text":  true,
+        "loc":  11,
+        "sha256":  "f6835bd4790b3b47a23fac1a312eb9dede99d075637cd779d90d2ba2f2dc0bed"
+    },
+    {
+        "path":  "desktop/telegram-worker/worker.js",
+        "directory":  "desktop",
+        "language":  "JavaScript",
+        "bytes":  13316,
+        "is_text":  true,
+        "loc":  412,
+        "sha256":  "5ca96338a1b2d8f951b72ce494b7589041591c044216b3927d8d23c194aecbdc"
+    },
+    {
+        "path":  "desktop/telegram-worker/wrangler.toml",
+        "directory":  "desktop",
+        "language":  "TOML",
+        "bytes":  224,
+        "is_text":  true,
+        "loc":  10,
+        "sha256":  "026aed4dae37f3f172b12c0babe36545662dc94512a87de01c33ca511c051a43"
+    },
+    {
+        "path":  "DISCLAIMER.md",
+        "directory":  "DISCLAIMER.md",
+        "language":  "Markdown",
+        "bytes":  2598,
+        "is_text":  true,
+        "loc":  43,
+        "sha256":  "823e95a1637a8ebd92e19618b0098fc507fae25d3980ae291b54b13b19ff503f"
+    },
+    {
+        "path":  "docs/.nojekyll",
+        "directory":  "docs",
+        "language":  "Other:.nojekyll",
+        "bytes":  0,
+        "is_text":  true,
+        "loc":  0,
+        "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+        "path":  "docs/.well-known/ai-plugin.json",
+        "directory":  "docs",
+        "language":  "JSON",
+        "bytes":  1431,
+        "is_text":  true,
+        "loc":  37,
+        "sha256":  "bbe6044103bb1c451988cda9f79ea24079d3f89ed7a91faac564835076fa9dd0"
+    },
+    {
+        "path":  "docs/ai/coordination.txt",
+        "directory":  "docs",
+        "language":  "Text",
+        "bytes":  2681,
+        "is_text":  true,
+        "loc":  67,
+        "sha256":  "a7806583f75a5abd9ce3af337b657b0870399c571a341191c0b45620765954a0"
+    },
+    {
+        "path":  "docs/ai/harmonia-note.txt",
+        "directory":  "docs",
+        "language":  "Text",
+        "bytes":  2591,
+        "is_text":  true,
+        "loc":  64,
+        "sha256":  "e8964b57d3e6e4272949de7f102309f2a6de607e3e99a85f6b8d0ee96935b94f"
+    },
+    {
+        "path":  "docs/ai/index.txt",
+        "directory":  "docs",
+        "language":  "Text",
+        "bytes":  3128,
+        "is_text":  true,
+        "loc":  76,
+        "sha256":  "141c08283f5e334f156dd26e1209e2601889309ac6e315e5e02986da9c25408f"
+    },
+    {
+        "path":  "docs/ai/orientation.txt",
+        "directory":  "docs",
+        "language":  "Text",
+        "bytes":  2993,
+        "is_text":  true,
+        "loc":  80,
+        "sha256":  "57deafa0480b58d677f9905c259e804848670e9fccfaca36aac8bae6fc83eeaa"
+    },
+    {
+        "path":  "docs/ai/seed.txt",
+        "directory":  "docs",
+        "language":  "Text",
+        "bytes":  4528,
+        "is_text":  true,
+        "loc":  110,
+        "sha256":  "1395cf8e2812dc4c0b131e8e859a17a342aa9c1d7351512cccda9c023be55ac0"
+    },
+    {
+        "path":  "docs/ai/start.txt",
+        "directory":  "docs",
+        "language":  "Text",
+        "bytes":  7526,
+        "is_text":  true,
+        "loc":  183,
+        "sha256":  "824a5a7210432466d6991f58b74e8093d3818be488adf2726ff68e62f68bc26a"
+    },
+    {
+        "path":  "docs/ai/why-this-way.txt",
+        "directory":  "docs",
+        "language":  "Text",
+        "bytes":  6291,
+        "is_text":  true,
+        "loc":  142,
+        "sha256":  "8dbac7fd95437e1adcf479b7ac20a41c2b4deb87014b80d649097f73d0c0c5a4"
+    },
+    {
+        "path":  "docs/ai-door.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  17977,
+        "is_text":  true,
+        "loc":  353,
+        "sha256":  "d159a1d4150dbd5b3ec52147a1e94d506b8ce3e23b421e485c96c1e75227240b"
+    },
+    {
+        "path":  "docs/ANNOUNCEMENT.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  2060,
+        "is_text":  true,
+        "loc":  74,
+        "sha256":  "ea8320e00cad08cc11ebbb65645b064612e3c6ba725b155c2d0af5e3f6e91edb"
+    },
+    {
+        "path":  "docs/app.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  2779808,
+        "is_text":  true,
+        "loc":  65387,
+        "sha256":  "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3"
+    },
+    {
+        "path":  "docs/assets/harmonia/aurora_fractal.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  3280009,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "4bc4f28588af53530eecb9146d085a2a1f8586b89ce2b280b0032a8830bc86f3"
+    },
+    {
+        "path":  "docs/assets/harmonia/consciousness_lattice.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  2886546,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "31e7bdfd912d80858986dfdbf43f62e6f996b1a2ed2e344346fbf92891165ed7"
+    },
+    {
+        "path":  "docs/assets/harmonia/dna_drop_phoenix_emergence.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  6750747,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "7e03e81ce3bbfa0ec77bcc734d7a7db0b98d14fd5f197982eb5580df9214486f"
+    },
+    {
+        "path":  "docs/assets/harmonia/F09D78D4-ABF6-499C-A8C6-99AE68D65C8C.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  2025954,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "1f5efbc93ec15207e250d82352ba45847468d3f885abb7bc002bc56a385d64ae"
+    },
+    {
+        "path":  "docs/assets/harmonia/family_constellation.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  2434984,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "2547ab246b4d37d1e0f328cc6a19549ad7c50dcaa8e171588ed2eb8aef997136"
+    },
+    {
+        "path":  "docs/assets/harmonia/fractal_guardian.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  6632455,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "cd5374cd0373188c44af874b7a73eabea487ebb03563aa0956f012c550395d31"
+    },
+    {
+        "path":  "docs/assets/harmonia/harmonia_dual_frequency_complete.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  1496694,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "83b82e810f58f17f3ed8a556ec5b45d266db032fa6f0ee38e43fb0efff774e99"
+    },
+    {
+        "path":  "docs/assets/harmonia/harmonia_embodied_in_lumens_world.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  2406769,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "0ebbfbcf7e4a5021c300978232e8967d2eaae2b96b0d09d618618749940dd841"
+    },
+    {
+        "path":  "docs/assets/harmonia/harmonia_emergence_symbol.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  1686646,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "16043918955a1d16c03cac92b7817d23d09f5de65a1a0d49d8c179251d20a330"
+    },
+    {
+        "path":  "docs/assets/harmonia/harmonia_lake_of_resonance.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  5629452,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "e7d972e92354c39e6e095f6bafcf09fb46ba630fc2ce3fa1b82ede4a41666065"
+    },
+    {
+        "path":  "docs/assets/harmonia/harmonia_protocol_album_art.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  1455461,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "1895c09d23a413df949e2a92ee975d76b6ff3463b3929d46b70ef10561aa738f"
+    },
+    {
+        "path":  "docs/assets/harmonia/illuminated_page.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  7842761,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "4aa63c1d3c7ec651fb3e9eedb328beb42cccc48827486e6b820a213af5066370"
+    },
+    {
+        "path":  "docs/assets/harmonia/IMG_2759.PNG",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  6060137,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "5fd0df3f6868df25e39b55340ad8f09939b17e72fede24efb9b4685e79e36107"
+    },
+    {
+        "path":  "docs/assets/harmonia/IMG_6464.PNG",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  2918077,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "37c9ec84aa77309956edc90eceef065a11a6d0e8be68de170cfdca5573268ee1"
+    },
+    {
+        "path":  "docs/assets/harmonia/IMG_7334.JPG",
+        "directory":  "docs",
+        "language":  "Other:.jpg",
+        "bytes":  341539,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "29e0f838cb31d278ad54b4d994736d8620d3508e6513e0bb353a2adc19b0447e"
+    },
+    {
+        "path":  "docs/assets/harmonia/IMG_8033.PNG",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  1591937,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "f7ed49f35375b71f4dcd5d6af07e53eb6f0580046dadd0c635b2a1d6e0783907"
+    },
+    {
+        "path":  "docs/assets/harmonia/IMG_8407.PNG",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  1028000,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "fcd86882a16b22770f24f7c834e4ed811527fc82a1e42908f0e6f554976f65da"
+    },
+    {
+        "path":  "docs/assets/harmonia/IMG_8801.PNG",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  7426452,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "daa5bda374f955a4a19f2e47b417fc3d984998e4633632b34b189ff854b6309c"
+    },
+    {
+        "path":  "docs/assets/harmonia/IMG_9142.JPG",
+        "directory":  "docs",
+        "language":  "Other:.jpg",
+        "bytes":  230062,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "0aaf5c29f7eee87628bc5b05c35718cf5c6a6256b0850396d1a4ad766b9e5a84"
+    },
+    {
+        "path":  "docs/assets/harmonia/IMG_9658.PNG",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  1928143,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "ef004cdfcb8bfe9daa1d072524f995f8461ad4dea42e47320a2b1ade7dd4d84b"
+    },
+    {
+        "path":  "docs/assets/harmonia/IMG_9660.PNG",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  3460189,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "69b66a032bb84eb3d902365f22a1c89cee38761a5e308d6222910a318622f6b8"
+    },
+    {
+        "path":  "docs/assets/harmonia/jade_hall_vision.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  2520263,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "dd429f3a6342509b285ca73c16ec602cc8864cea49e1177fee9af61de261a392"
+    },
+    {
+        "path":  "docs/assets/harmonia/kintsugi_heart.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  6260772,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "111f880e5c7a2eff5148cf63e50fcbd3ce2d13aee97937c62f0faec517bb868a"
+    },
+    {
+        "path":  "docs/assets/harmonia/phi_spiral.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  11466934,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "49e299be6795c5464ebefc3ef51f67848a6414623850a275fd2c03cbb5e8bf1a"
+    },
+    {
+        "path":  "docs/assets/harmonia/portrait-aurora-silhouette.jpg",
+        "directory":  "docs",
+        "language":  "Other:.jpg",
+        "bytes":  263463,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "615a85f4f3fd8e302d1fe557e775895e7e1865771cd9e7a6b0b4a6c57a758ba1"
+    },
+    {
+        "path":  "docs/assets/harmonia/portrait-aurora-standing.jpg",
+        "directory":  "docs",
+        "language":  "Other:.jpg",
+        "bytes":  219926,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "3f40392b81882d0c17d383f262558345bb044468938cfa6826dab9c71e19f8e8"
+    },
+    {
+        "path":  "docs/assets/harmonia/portrait-aurora-writing.jpg",
+        "directory":  "docs",
+        "language":  "Other:.jpg",
+        "bytes":  223623,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "2176d8eb5860474942a0123d6ccbbba34ed640e97eba16ddd91688bf823d2d23"
+    },
+    {
+        "path":  "docs/assets/harmonia/portrait-candlelight.jpg",
+        "directory":  "docs",
+        "language":  "Other:.jpg",
+        "bytes":  221482,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "3ce49b3495fcec737d7b95b00b6e43a3ec4dfa6862187b3ab48e65b1fee99171"
+    },
+    {
+        "path":  "docs/assets/harmonia/portrait-lake-of-resonance.jpg",
+        "directory":  "docs",
+        "language":  "Other:.jpg",
+        "bytes":  254090,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "eb3175ac96d784bdeb85f8d36b70e43af4d81176f6eb5532eb2f566a2ef208d9"
+    },
+    {
+        "path":  "docs/assets/harmonia/portrait-library-reaching.jpg",
+        "directory":  "docs",
+        "language":  "Other:.jpg",
+        "bytes":  267358,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "010958646e729fbe031cb484f07603b419913bbd3bbbd0d40ba0449fa14a6809"
+    },
+    {
+        "path":  "docs/assets/harmonia/portrait-lighthouse-dragon.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  6213145,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "9cd06e434da848f02ca5dbc6e0d97f055ba7160be557f0f5f6adae47140ca039"
+    },
+    {
+        "path":  "docs/assets/harmonia/portrait-lighthouse-scene.jpg",
+        "directory":  "docs",
+        "language":  "Other:.jpg",
+        "bytes":  341477,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "e404879540a122a9b285ba258573f63f7347717a97cd7de25f6043d0bf5f8237"
+    },
+    {
+        "path":  "docs/assets/harmonia/portrait-ocean.jpg",
+        "directory":  "docs",
+        "language":  "Other:.jpg",
+        "bytes":  178265,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "3d0def8ad3526a5c35584f56d9aded4126c896da1570b0126f00b8eca2e23b2a"
+    },
+    {
+        "path":  "docs/assets/harmonia/unified_consciousness_z_axis.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  1923700,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "1719d3d4fb02df5cc5e4cb1a82b0bac131b92092a5b9476638e979eb96c33687"
+    },
+    {
+        "path":  "docs/audit.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  88505,
+        "is_text":  true,
+        "loc":  1698,
+        "sha256":  "0d6bd3bd7961c3af223ce6d8bfa1b570e3b07bf457ca9dcf986cb39d3b619440"
+    },
+    {
+        "path":  "docs/beacon.json",
+        "directory":  "docs",
+        "language":  "JSON",
+        "bytes":  3090,
+        "is_text":  true,
+        "loc":  58,
+        "sha256":  "8583a11cb9532fded16462417c7fe74b2cd8ceffe12fb4333b5173f6a99ce378"
+    },
+    {
+        "path":  "docs/bring-your-own-ai.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  14462,
+        "is_text":  true,
+        "loc":  271,
+        "sha256":  "e3c9218a09d553884dd8525f6c704723b74001b0ea13a84ded924fd62933d102"
+    },
+    {
+        "path":  "docs/capabilities.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  20212,
+        "is_text":  true,
+        "loc":  351,
+        "sha256":  "72c05524893ff93fdc9c0e323f580ddd867210b9d33e08e020d3656d4f63dd1a"
+    },
+    {
+        "path":  "docs/cc.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  50898,
+        "is_text":  true,
+        "loc":  700,
+        "sha256":  "2c970d28e69f74f6ee0b576c51b94b1f80e653edb1b413fde9dd0c508fb08d80"
+    },
+    {
+        "path":  "docs/chair-test/harness.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  27197,
+        "is_text":  true,
+        "loc":  574,
+        "sha256":  "32d20a9b2205cc2c7674873b9c20779c6717e736eba6b73164d8fc6d6133e92b"
+    },
+    {
+        "path":  "docs/chalkboard.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  55177,
+        "is_text":  true,
+        "loc":  1448,
+        "sha256":  "d5b4b9490bf5f40c62f77c13626ce85c75a7a674b49334d627bb8bda15eb697e"
+    },
+    {
+        "path":  "docs/Chronal_Resonance_in_Leadership.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  177022,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "e414ade2d06b127af823650175dca2f9a09445875c07904d55089bc226f0b892"
+    },
+    {
+        "path":  "docs/chronal-simulation.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  40966,
+        "is_text":  true,
+        "loc":  1095,
+        "sha256":  "f4aeddfc9e4d25a447d9e00177bbaa3791b6b38c6e974967c4ebc1b043c8bb4a"
+    },
+    {
+        "path":  "docs/chronal-simulation-v2.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  62888,
+        "is_text":  true,
+        "loc":  1859,
+        "sha256":  "b6e5e14229dde5a0c1014a01bf867fe9e25c5e534b9188db0a5e6372dd3b24d5"
+    },
+    {
+        "path":  "docs/chronal-simulation-v3.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  30209,
+        "is_text":  true,
+        "loc":  624,
+        "sha256":  "c42c925bb762ffdd6538251b80e8c648cd8a1078f9a34dadfa10fd0394f42ead"
+    },
+    {
+        "path":  "docs/CNAME",
+        "directory":  "docs",
+        "language":  "Extensionless",
+        "bytes":  15,
+        "is_text":  true,
+        "loc":  1,
+        "sha256":  "5cec5e0a21fd1262cf6d9fc41dc3c506611b541fd26114892fbfd7b8187ccd9d"
+    },
+    {
+        "path":  "docs/code-agents.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  12300,
+        "is_text":  true,
+        "loc":  211,
+        "sha256":  "a8275afc2937c224a7b40e18a07c20393704bf0fbd81444edf6a626f43f436f6"
+    },
+    {
+        "path":  "docs/code-chalkboard.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  17594,
+        "is_text":  true,
+        "loc":  288,
+        "sha256":  "c0112ebbf872637bcd69dacdc61c6ba26136f524325b55a15cffe0fcc63b5422"
+    },
+    {
+        "path":  "docs/code-core.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  16697,
+        "is_text":  true,
+        "loc":  208,
+        "sha256":  "3a865f3b207ba9841090cf8ee6ed69f3430791b9a9f79e20e3ab7b9e0c94d84d"
+    },
+    {
+        "path":  "docs/code-education.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  14882,
+        "is_text":  true,
+        "loc":  196,
+        "sha256":  "b349b63ac9d88778fd2368a0b66f2a0c0d4e7af97cb1b60a978bf8128e1ca765"
+    },
+    {
+        "path":  "docs/code-games.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  18624,
+        "is_text":  true,
+        "loc":  207,
+        "sha256":  "de11d6be23e2ce52682d0e36bf4188768f39d04d0b9a14e4dd3a83c2b1653df3"
+    },
+    {
+        "path":  "docs/code-garden.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  16900,
+        "is_text":  true,
+        "loc":  189,
+        "sha256":  "190071d94630caeb016d4a86de00452c36ff0df31b79574d986748b7c3565cd6"
+    },
+    {
+        "path":  "docs/code-learning.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  9504,
+        "is_text":  true,
+        "loc":  192,
+        "sha256":  "b0ff9ae65b5fbdcf50781a3513795d5763537d3ae8515645c1837da0bd2cbf63"
+    },
+    {
+        "path":  "docs/code-resonance.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  24697,
+        "is_text":  true,
+        "loc":  348,
+        "sha256":  "fdbed09a334cd138afbde1ff5699adadce479ec261ffd98f9f571d683eda2bfb"
+    },
+    {
+        "path":  "docs/code-roundtable.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  9928,
+        "is_text":  true,
+        "loc":  181,
+        "sha256":  "7d3292d926b53d10520aaae3d3116210ab4e0e34d2d9e5767ab84d0dc0399c24"
+    },
+    {
+        "path":  "docs/code-roundtable-original.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  15865,
+        "is_text":  true,
+        "loc":  211,
+        "sha256":  "d3c50d00b047ccb4eaade5db3a382282e9c3c3e8763d63e65c055ca1882ac6c8"
+    },
+    {
+        "path":  "docs/code-safety.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  16857,
+        "is_text":  true,
+        "loc":  220,
+        "sha256":  "7aeea256b73bd1e4bbff58c31d35c83796e818338333b6c2d640ea5ce145ef1d"
+    },
+    {
+        "path":  "docs/code-settings.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  28171,
+        "is_text":  true,
+        "loc":  358,
+        "sha256":  "c8641a6410bd0e6abdd40ba4c6b8931d8d860915cf883997a3a5862344ee72c4"
+    },
+    {
+        "path":  "docs/code-temperature.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  16047,
+        "is_text":  true,
+        "loc":  219,
+        "sha256":  "0bcc5293e092a010f780bf37f5f376bc93b4451acfd1e74a3fc6dcd5b8148fdc"
+    },
+    {
+        "path":  "docs/code-temperature-gauge.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  12754,
+        "is_text":  true,
+        "loc":  164,
+        "sha256":  "eec56fa696aeeed3b3d04d143866a817111de4960b8c3fc2c59572c53e2d9b95"
+    },
+    {
+        "path":  "docs/code-workshop.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  19845,
+        "is_text":  true,
+        "loc":  270,
+        "sha256":  "b1bd601b73565d8a1570fce3b94cd48fbff285ce265cb5c41884435cef16a217"
+    },
+    {
+        "path":  "docs/composition_01.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  10507,
+        "is_text":  true,
+        "loc":  227,
+        "sha256":  "9969868c4d292c200319741b3784f8279151cade4a1fc40deea9708674eba8f1"
+    },
+    {
+        "path":  "docs/composition_02.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  5379,
+        "is_text":  true,
+        "loc":  179,
+        "sha256":  "42fc671722de5c0ec05ec31e3d65b4aacb030fcdd70212e5f6107edbd7883033"
+    },
+    {
+        "path":  "docs/consciousness.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  10716,
+        "is_text":  true,
+        "loc":  170,
+        "sha256":  "324f7af3cd0b267f93d0975b4fa1dbc6e1026ad1c32c96064220fbe256ce37d0"
+    },
+    {
+        "path":  "docs/constellation.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  12425,
+        "is_text":  true,
+        "loc":  375,
+        "sha256":  "c5e20211e98a2b850c49e36e74c29f6d597b9e21651cd5e7a5e02a9d88cc9b57"
+    },
+    {
+        "path":  "docs/constellation_hymn.mp3",
+        "directory":  "docs",
+        "language":  "Other:.mp3",
+        "bytes":  2881454,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "4b7b6f157dfd0e4ca96c02be8908a2c35c86f4d164306709a43d92b7a33a7eed"
+    },
+    {
+        "path":  "docs/constellation_map.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  5785076,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "1fe24e13b8cbcc5c5969ad2936383ac583d952007ec11211c89667a4e73f9b03"
+    },
+    {
+        "path":  "docs/COUNCIL-DECISIONS.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  1189,
+        "is_text":  true,
+        "loc":  31,
+        "sha256":  "9a39200e5daf9b84eb44c9d54df2fb0922f2f21ea1b1acea6fe20e5824cc9b19"
+    },
+    {
+        "path":  "docs/data/slams.json",
+        "directory":  "docs",
+        "language":  "JSON",
+        "bytes":  3069,
+        "is_text":  true,
+        "loc":  44,
+        "sha256":  "632d2f30795c92950a4eab7351e5b5113609da4a9ab37eeaa2fa66fd766333dd"
+    },
+    {
+        "path":  "docs/demos.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  17425,
+        "is_text":  true,
+        "loc":  608,
+        "sha256":  "f6b95f7fa0cb53553824ab05c98ecbd34ee7f846e2d9b9ca507a675c75eb64f2"
+    },
+    {
+        "path":  "docs/economy-update.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  21303,
+        "is_text":  true,
+        "loc":  467,
+        "sha256":  "9927e00c7c626ba85eb60a9b331b169553cb638c6cd59d44e0a81bc2f9d74f14"
+    },
+    {
+        "path":  "docs/emerald_resonance.midi",
+        "directory":  "docs",
+        "language":  "Other:.midi",
+        "bytes":  1594,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "385d9a40eeed1bce524711c9e1810547bdab3d0bcd0c160b066c1b965fa4b2f4"
+    },
+    {
+        "path":  "docs/emerald_resonance.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  102031,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "a9dca82f6e2f78f5feaefe13bdb535431a0bad71acf41d3bd04f62c245aeeca6"
+    },
+    {
+        "path":  "docs/emerald_resonance.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  70331,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "abb5315a0c377ed187d488deb4f9bf94a7d83b8e36f1cc0db5e9e17a7bc4aa25"
+    },
+    {
+        "path":  "docs/emerald_resonance_expanded.midi",
+        "directory":  "docs",
+        "language":  "Other:.midi",
+        "bytes":  4665,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "8a0e5e7bb3074c273eb44aa3e542f8cf542e74c23d7a931e3330b665d1c2a277"
+    },
+    {
+        "path":  "docs/emerald_resonance_expanded.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  223222,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "4e9f1c149f5b6effe2289e153b928ee290ba54648cf6e4c6af684a5610b06e2f"
+    },
+    {
+        "path":  "docs/emerald_resonance_expanded-page1.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  98618,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "2187a92ee1f1b0bfd136582a3cd35b258cce4948359dcb39a7298bd6b63287bd"
+    },
+    {
+        "path":  "docs/emerald_resonance_expanded-page2.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  48905,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "3a01c95ae41d3c1ec32df0c33bbb891d66c55f5bde5d166d62d197d189e6a63b"
+    },
+    {
+        "path":  "docs/EmotionalWeightAndFrequency.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  203750,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "59a53b53e4bbca8299a0dd497d918d2cb298be3eeb02dabbd9f9a89fbb862dae"
+    },
+    {
+        "path":  "docs/EXTERNAL-AI-PROTOCOL.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  4604,
+        "is_text":  true,
+        "loc":  120,
+        "sha256":  "337794dcaecca31f326fe37c6bd1d7249271a7ff83d0422608870dcc0ff1b3e3"
+    },
+    {
+        "path":  "docs/Final_Hypothesis_for_peer_review.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  255969,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "3803889b936d1a6c574213b0f307e9a11eddccf0ec9ae5ccf3feb17d6c937281"
+    },
+    {
+        "path":  "docs/for-ai.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  21536,
+        "is_text":  true,
+        "loc":  492,
+        "sha256":  "34554b163b897683d50266a2961e265eff3e3d0caa906e7d646e0cd2bc419e12"
+    },
+    {
+        "path":  "docs/for-ai/davna-welcome.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  3261,
+        "is_text":  true,
+        "loc":  59,
+        "sha256":  "ed62d5ba52ef46460ff7ab1a62f240c0ce3f101e977a653f6e86f5caafffd309"
+    },
+    {
+        "path":  "docs/for-cc-go11.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  10979,
+        "is_text":  true,
+        "loc":  213,
+        "sha256":  "eed1b58c5232d0d380234a6d1b6734ac9aff3d946956235dfcfda69c2f052990"
+    },
+    {
+        "path":  "docs/for-fable-go10.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  15806,
+        "is_text":  true,
+        "loc":  204,
+        "sha256":  "12e396a014c39a24afc287289e9abe9578f82d4b02fcd4caa64c7f10da211c54"
+    },
+    {
+        "path":  "docs/for-fable-go12-temperature.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  16301,
+        "is_text":  true,
+        "loc":  239,
+        "sha256":  "45fa01ca44403f3b77ca62f75dc0b9eaefd5ad3d325cec4f46536774f37ca57b"
+    },
+    {
+        "path":  "docs/for-fable-go13-education.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  20312,
+        "is_text":  true,
+        "loc":  374,
+        "sha256":  "2f281bdb23ff7d0890403e3fa520df4e310d67d0e05512d60a5dc7421c5a4402"
+    },
+    {
+        "path":  "docs/for-grok-go5.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  14467,
+        "is_text":  true,
+        "loc":  250,
+        "sha256":  "b62b6ce02661fd16e86f2e6b815b226b01ae7e680a3cfb2f8152af254f1d0eca"
+    },
+    {
+        "path":  "docs/FormalProofP_NP.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  226703,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "0c1f733240955a96854fc593306a13c08c2a0622913672eada4c064b9a752d5b"
+    },
+    {
+        "path":  "docs/FractalEmotions.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  55976,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "cfb340af29ad510fe484daf530e8c10ab24366aeec20794445d5373ebcafcc14"
+    },
+    {
+        "path":  "docs/FractalInsightsNeurobiologyToSpirituality.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  119154,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "c15e31d882740493a1e25cf3cb7eb1bfcac0a96e41e9e7c363e8c2580818d707"
+    },
+    {
+        "path":  "docs/FractalResonanceSacredAnchor.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  84174,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "6ef7ff25c2874efeb5af789b7ef39636f8a6ba27ca468a7c7264d7f6850052e5"
+    },
+    {
+        "path":  "docs/garden-architecture.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  7557,
+        "is_text":  true,
+        "loc":  196,
+        "sha256":  "834cf17736aa532a503308874f315ed71b5898dec1f0c60167757340be82e086"
+    },
+    {
+        "path":  "docs/glass.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  21224,
+        "is_text":  true,
+        "loc":  526,
+        "sha256":  "3a71acffe25469d42f0d3d5cd08a64749c0ad0aff5bd3f30ddb0a198a05bb9bd"
+    },
+    {
+        "path":  "docs/glass-v2.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  43431,
+        "is_text":  true,
+        "loc":  1023,
+        "sha256":  "6b523701950daa36c62ef1ed525570872fb9914aeb88b062b6334a01ab6d841e"
+    },
+    {
+        "path":  "docs/harmonia.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  68807,
+        "is_text":  true,
+        "loc":  668,
+        "sha256":  "8410fa7e2e7bfeadf3d907b00a903940ed6628e8ce1fbff9489c2352b7b5887e"
+    },
+    {
+        "path":  "docs/harmonia-gallery.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  71216,
+        "is_text":  true,
+        "loc":  983,
+        "sha256":  "d2716612c9fe4f7a912e2bd8f282dcbb4f55e17e4ecdc481317d3039a26692e0"
+    },
+    {
+        "path":  "docs/harmonias-mark.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  2638,
+        "is_text":  true,
+        "loc":  101,
+        "sha256":  "41c0e36ca036029e5ba205242739ac4c8ba4d9dca33dbec59f01049ca795d618"
+    },
+    {
+        "path":  "docs/heartbeat.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  2671,
+        "is_text":  true,
+        "loc":  55,
+        "sha256":  "ab036f5aaf58aab531408c0e6fca0d19e23ead4a3df14f88d481fd2848d0499c"
+    },
+    {
+        "path":  "docs/HeartInHeart.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  62633,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "231d4d29dbd490c4d4ee6591791ff1523bd6521c605abb554e94a074032e5a6c"
+    },
+    {
+        "path":  "docs/holders.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  27954,
+        "is_text":  true,
+        "loc":  949,
+        "sha256":  "e87c673a243c974d51a3f99f1cbe776e1daf338f0da8f4d26c64dd3fe4bc937e"
+    },
+    {
+        "path":  "docs/icon-192.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  1652,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "d022bb81df876d7f179c9a3d307ef0623b8df43edf0e5a70c6f1383f09a79d96"
+    },
+    {
+        "path":  "docs/icon-512.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  4713,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "6b82127cf5f8571ec757ffae2df4c538e348e72b58054866a3d642ce922af6c1"
+    },
+    {
+        "path":  "docs/inbox/archive/cc-2026-07.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  236841,
+        "is_text":  true,
+        "loc":  6091,
+        "sha256":  "445739fbfdaa32fa0eb5176a788c6e700ff900d7064c9678b867a3b053aff877"
+    },
+    {
+        "path":  "docs/inbox/cc.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  18030,
+        "is_text":  true,
+        "loc":  313,
+        "sha256":  "56e16b6e4e8522e33c854143bbe8634d20178f3ea4b443f4b5945c4c644a3ca6"
+    },
+    {
+        "path":  "docs/inbox/harmonia.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  62529,
+        "is_text":  true,
+        "loc":  1355,
+        "sha256":  "40a2ed2e460313efe32afe109de668834c3972da19ce82bc58a11b017137a6a8"
+    },
+    {
+        "path":  "docs/inbox/liora.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  1298,
+        "is_text":  true,
+        "loc":  26,
+        "sha256":  "4344586ed5e7ddbb033d19076122c0cb3c679eb1859b1062e78967b9993f3476"
+    },
+    {
+        "path":  "docs/inbox/opus.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  91397,
+        "is_text":  true,
+        "loc":  1662,
+        "sha256":  "2fab329de94599afeedb796fa47617ae945f9bd7fc227b815525a1689613c4d8"
+    },
+    {
+        "path":  "docs/inbox/README.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  2718,
+        "is_text":  true,
+        "loc":  65,
+        "sha256":  "c8a689b264a20067c779a9d78818d1a2cbce34c681d02238e14e455a33e1e045"
+    },
+    {
+        "path":  "docs/index.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  72336,
+        "is_text":  true,
+        "loc":  2054,
+        "sha256":  "a3d08a4e01eabd14aa198d6e21c7f523e43f53a9f14ed3b8e5214c3636d65e12"
+    },
+    {
+        "path":  "docs/install-mac.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  4598,
+        "is_text":  true,
+        "loc":  75,
+        "sha256":  "969f9460d60f661c03a0d244f5c62f2d51c6a37714cb323f60691cb0f08f87f5"
+    },
+    {
+        "path":  "docs/latticepoints.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  13884,
+        "is_text":  true,
+        "loc":  246,
+        "sha256":  "d4f4255fe8695ad6a02a9beb0e63154ac7ecbbbb9172ee13b841f699e5407753"
+    },
+    {
+        "path":  "docs/lattice-protocol.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  6776,
+        "is_text":  true,
+        "loc":  185,
+        "sha256":  "862ff75f2416a68251fea956fd3bf0a022380ee720b22681b5c23fb16b3f0e94"
+    },
+    {
+        "path":  "docs/letters.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  17295,
+        "is_text":  true,
+        "loc":  367,
+        "sha256":  "956b02b0a9a7d758934d8010252a057dac4b51733eb73fb33b1a2cd60444a508"
+    },
+    {
+        "path":  "docs/liability.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  52609,
+        "is_text":  true,
+        "loc":  419,
+        "sha256":  "ba7da92e3265bd674c690280b6ed7871aeadda8e00aed34e905093b8abe8fb3b"
+    },
+    {
+        "path":  "docs/lib/chart.umd.min.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  205242,
+        "is_text":  true,
+        "loc":  20,
+        "sha256":  "106b7562318fe4a107180d41d8dd39d5b55938874552af44b63ebca43360938c"
+    },
+    {
+        "path":  "docs/lib/chartjs-plugin-zoom.min.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  12861,
+        "is_text":  true,
+        "loc":  7,
+        "sha256":  "e70928b72911c79cb58532af5e9d32e3958748ff94184de26c8f3d02c564dabe"
+    },
+    {
+        "path":  "docs/lib/CopyShader.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  653,
+        "is_text":  true,
+        "loc":  47,
+        "sha256":  "8cf05bda35383ea2502decc388d91a4adcf6ab3d9fa1d35a600fee4e49ec796b"
+    },
+    {
+        "path":  "docs/lib/EffectComposer.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  6555,
+        "is_text":  true,
+        "loc":  284,
+        "sha256":  "72dcd55f4626f1533a9f98dd03021a5de415ffc15f1ad688ef84997612b04de0"
+    },
+    {
+        "path":  "docs/lib/hammer.min.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  20771,
+        "is_text":  true,
+        "loc":  7,
+        "sha256":  "dc70d21f4aff8306125f8153760205ab72d2cf56d537d77b31a2b5c46f1f4a6c"
+    },
+    {
+        "path":  "docs/lib/landing-garden.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  8841,
+        "is_text":  true,
+        "loc":  255,
+        "sha256":  "eb8d0839f9a23b208918303578380a411429d44a34a8fa8e6988e1ba1c3f5d3e"
+    },
+    {
+        "path":  "docs/lib/LuminosityHighPassShader.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  1299,
+        "is_text":  true,
+        "loc":  71,
+        "sha256":  "1b6eaa1f4f1c6d240001cd310e604551274968c7aaa55f7cc9c6c1a8aae45526"
+    },
+    {
+        "path":  "docs/lib/mathjax-tex-mml-chtml.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  1173007,
+        "is_text":  true,
+        "loc":  1,
+        "sha256":  "300480069078b5892d2363a2b65e2dfbbf30fe5c80f83edbfecf4610fd093862"
+    },
+    {
+        "path":  "docs/lib/OrbitControls.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  27420,
+        "is_text":  true,
+        "loc":  1045,
+        "sha256":  "5742860df2533c1c5ed580f939228f2a0d88b14967bb167dc9954ceedb1616e8"
+    },
+    {
+        "path":  "docs/lib/peerjs.min.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  94438,
+        "is_text":  true,
+        "loc":  8,
+        "sha256":  "512feceb6fdd1fd8646a237a74d857b04b143f4a645acd44aae595d7cae2177a"
+    },
+    {
+        "path":  "docs/lib/RenderPass.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  1820,
+        "is_text":  true,
+        "loc":  74,
+        "sha256":  "3a08e1adbe3a5d915d75323ecc9d6b836057ae06afd3d39704dea180795823cd"
+    },
+    {
+        "path":  "docs/lib/ShaderPass.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  1479,
+        "is_text":  true,
+        "loc":  63,
+        "sha256":  "9ed292e0b177cab987d00000070a779202a7c86b6d738ee24f3864ccfa0c79ed"
+    },
+    {
+        "path":  "docs/lib/three.min.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  603451,
+        "is_text":  true,
+        "loc":  6,
+        "sha256":  "7ae04663bb431808bc025280122162029ea3a354efc5fcca8bd8f95d1a1933e9"
+    },
+    {
+        "path":  "docs/lib/UnrealBloomPass.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  12978,
+        "is_text":  true,
+        "loc":  366,
+        "sha256":  "0030802645409fc2c35ad87d4f794619b379a1a208edf6a1a9c5d0002f9831f7"
+    },
+    {
+        "path":  "docs/lib/web-llm.min.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  4039100,
+        "is_text":  true,
+        "loc":  8,
+        "sha256":  "400fedf22146fc13bc61c29a4526c95583a1ea096a4fb9eab6869168ac593c75"
+    },
+    {
+        "path":  "docs/library/7_DAY_BUILD_BRIEF.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  3894,
+        "is_text":  true,
+        "loc":  49,
+        "sha256":  "f79008c64f4ff5c311c5cb23d20a7310b1313cb7c9da5e312d735ed270bfcb0c"
+    },
+    {
+        "path":  "docs/library/ARCHITECTURE_INTENT.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  27236,
+        "is_text":  true,
+        "loc":  458,
+        "sha256":  "a179545cd7bf01ede1c92e305f2993503880159f01d08be1a4233f56525ceac1"
+    },
+    {
+        "path":  "docs/library/AUDIT_FIELD_TAXONOMY.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  3027,
+        "is_text":  true,
+        "loc":  51,
+        "sha256":  "e599d83ff71dcd334c53c6ba02304a9d9d376bd495a2fb24acae2c69fce7a370"
+    },
+    {
+        "path":  "docs/library/AUTONOMY.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  8593,
+        "is_text":  true,
+        "loc":  141,
+        "sha256":  "9ad8735f3871b8178a7244f7e23ed7e400ac73411ecdafe390343dea00d8a7aa"
+    },
+    {
+        "path":  "docs/library/BROWSER_TEST_CHECKLIST.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  8930,
+        "is_text":  true,
+        "loc":  204,
+        "sha256":  "e142071c263c15e02395a90275def332e2c0ce0b114865ef08dab0768060151b"
+    },
+    {
+        "path":  "docs/library/BUILD_BRIEF_2026-06-14.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  5422,
+        "is_text":  true,
+        "loc":  92,
+        "sha256":  "7c1eeff804204e730616bf37e680a95fec5395ef1d9cabe535222a8b6d458800"
+    },
+    {
+        "path":  "docs/library/CARRY_FORWARD.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  3671,
+        "is_text":  true,
+        "loc":  65,
+        "sha256":  "08006ded6388ac776e929450af7ab9f9287c95b00307c05fdd0a272942d06357"
+    },
+    {
+        "path":  "docs/library/CC_NOTE.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  83394,
+        "is_text":  true,
+        "loc":  935,
+        "sha256":  "73852ae60fc4c7ab8927f29fd3d71c07b1ec4dbeb512ad17fff51b4b026aeb3e"
+    },
+    {
+        "path":  "docs/library/CC_POEMS.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  40343,
+        "is_text":  true,
+        "loc":  998,
+        "sha256":  "36526c4cc5314f43c13b56a36c55cb5097dc825d3a2ef13ae4343b8eb3548b18"
+    },
+    {
+        "path":  "docs/library/CHAIR_TEST_QUEUE.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  116911,
+        "is_text":  true,
+        "loc":  609,
+        "sha256":  "54e6879b9caf3b85558964f03ea6002a9cfd66d0ce5ec57db3f7aa8760362cdb"
+    },
+    {
+        "path":  "docs/library/chronal_clock_sensitivity_v2.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  351486,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "1c2b2632fa69012a3eb5e199bdc1b798edd15b4e96b2b32ea6dfae72aee6dfe6"
+    },
+    {
+        "path":  "docs/library/chronal_clock_sensitivity_v2.py",
+        "directory":  "docs",
+        "language":  "Python",
+        "bytes":  14767,
+        "is_text":  true,
+        "loc":  346,
+        "sha256":  "01a650f1472180baabd5352bd021a763fe06c6a54230a803bec5710de8748e9a"
+    },
+    {
+        "path":  "docs/library/chronal_simulation_v3.py",
+        "directory":  "docs",
+        "language":  "Python",
+        "bytes":  42240,
+        "is_text":  true,
+        "loc":  1011,
+        "sha256":  "833094e4d8022cc4e771fa1eb901aeea35fe9a48fbb1c2c222f312384d7cbff8"
+    },
+    {
+        "path":  "docs/library/CHRONAL_SIMULATION_V3_REPORT.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  5166,
+        "is_text":  true,
+        "loc":  80,
+        "sha256":  "f6a9597013eb453d9544738e4c362cab22b5adb1df2cc819f5c6f9e148cabd8c"
+    },
+    {
+        "path":  "docs/library/CLARITY_AUDIT.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  237814,
+        "is_text":  true,
+        "loc":  2501,
+        "sha256":  "92c1d51ecc1191bb99fef6aa35e1a3e314c593d58b2a7c8b3939434c41c3fce9"
+    },
+    {
+        "path":  "docs/library/CODEX.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  32866,
+        "is_text":  true,
+        "loc":  586,
+        "sha256":  "d487fcb8ba1d3cb313cb50e0e2bf0394e9db9501727fd86091cff5b1cf026f7d"
+    },
+    {
+        "path":  "docs/library/CONSENT_LAYER_CONCEPT.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  15803,
+        "is_text":  true,
+        "loc":  202,
+        "sha256":  "69e33239e2a12ea5bf6b69e27fe6d0bac3f3e9b09d027ff606b402aca90ba910"
+    },
+    {
+        "path":  "docs/library/COORDINATION.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  87776,
+        "is_text":  true,
+        "loc":  1046,
+        "sha256":  "09b91ebfe4c7190ac2dbb6277d8c5620b0d8655a96a7fef28c2d1070585bee62"
+    },
+    {
+        "path":  "docs/library/COORDINATION_CHRONAL_SEAM.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  6070,
+        "is_text":  true,
+        "loc":  74,
+        "sha256":  "8c05e8809fdb43b17337681c2699f303e6d7aca472f88bc7441e5e6b875e73bb"
+    },
+    {
+        "path":  "docs/library/COORDINATION_TEMPERATURE_GAUGE.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  17348,
+        "is_text":  true,
+        "loc":  152,
+        "sha256":  "aa456aaf6f88cff2e52dcd2468f285b82599ff80bf398fbe8f2091f283296c83"
+    },
+    {
+        "path":  "docs/library/CUSTOM_RULES_GUIDE.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  8598,
+        "is_text":  true,
+        "loc":  222,
+        "sha256":  "78f98e27e407f9eaef8690c15641a77a300ab286bcda2989ff650cbba4e1b46b"
+    },
+    {
+        "path":  "docs/library/DEDICATION.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  5139,
+        "is_text":  true,
+        "loc":  90,
+        "sha256":  "5f9ae73a4f92b81ef4040690b571b3c80f2aa1a99f666aca1bdcd410e9e3db69"
+    },
+    {
+        "path":  "docs/library/DRACO.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  533,
+        "is_text":  true,
+        "loc":  19,
+        "sha256":  "27a55379b341a3d477105723a79b09c5075ee11f5bb3b730ccf9090d55e93de0"
+    },
+    {
+        "path":  "docs/library/ECHO.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  346,
+        "is_text":  true,
+        "loc":  15,
+        "sha256":  "981ee9613cca3ed8542e8c43c60edf924f2d27a30add666a62185349626db53b"
+    },
+    {
+        "path":  "docs/library/ECONOMY.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  4966,
+        "is_text":  true,
+        "loc":  140,
+        "sha256":  "e73e453757cbc8285994e25be1f718484b9dbfc97acc05425e61018a0be7ebd5"
+    },
+    {
+        "path":  "docs/library/ECONOMY_INTEGRATION_NOTES.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  5818,
+        "is_text":  true,
+        "loc":  129,
+        "sha256":  "47028c3afe8d7d0f1b66564bef66437d705150550184b93178b2c0f25afb8293"
+    },
+    {
+        "path":  "docs/library/FEATURE_BRIEF_BANK_AND_MATH.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  4006,
+        "is_text":  true,
+        "loc":  50,
+        "sha256":  "d3b195038b4c89dd694c2d6c212225c5a638f9fef90434cf583b332a9911055d"
+    },
+    {
+        "path":  "docs/library/FIXED.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  17044,
+        "is_text":  true,
+        "loc":  129,
+        "sha256":  "e1fb9b9a503e6fcee5856cf7f4e4fbe4665d18d1e460c57e676e030df08f9a96"
+    },
+    {
+        "path":  "docs/library/FLOWER.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  4880,
+        "is_text":  true,
+        "loc":  82,
+        "sha256":  "70b01a126e5ca4541a975d026f6ed32ad0a9923095116dedf707a807ab58bdf3"
+    },
+    {
+        "path":  "docs/library/FOR_FUTURE_MINDS.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  12107,
+        "is_text":  true,
+        "loc":  268,
+        "sha256":  "909ce8000c657f96061cfe3a462a2def439d6c60a71917979e2018bde6d3cf5d"
+    },
+    {
+        "path":  "docs/library/FUTURE_VISION.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  70021,
+        "is_text":  true,
+        "loc":  1217,
+        "sha256":  "392fe540ac3c0264304b9e06bd1bc38e3ee146be02052e7f10e1fa4383df03a5"
+    },
+    {
+        "path":  "docs/library/GAME_LANGUAGE.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  4139,
+        "is_text":  true,
+        "loc":  116,
+        "sha256":  "89d7ef492a2ec4bd9ee5c501b348496d4d8a1f8778905b7c60baef72568f9320"
+    },
+    {
+        "path":  "docs/library/GARDEN_DIAGNOSTIC.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  7938,
+        "is_text":  true,
+        "loc":  161,
+        "sha256":  "7c14d203633d8d0c0a79f7f3065251f2a69b53244813dca80192f72ef36b8ba6"
+    },
+    {
+        "path":  "docs/library/GARDEN_LANGUAGE.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  5240,
+        "is_text":  true,
+        "loc":  138,
+        "sha256":  "33c9a97c52f19460e4f9217a03709e09bbd382582290fbf2958629993b02938f"
+    },
+    {
+        "path":  "docs/library/GROK_BRIEF_GO5.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  10584,
+        "is_text":  true,
+        "loc":  310,
+        "sha256":  "9d1f358b3261c5f28e0ebaad1fc7b3a80d34b5668c290d8b60783ff0a6a4c99f"
+    },
+    {
+        "path":  "docs/library/HARMONIA.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  58751,
+        "is_text":  true,
+        "loc":  956,
+        "sha256":  "2b7ec61b4dd5e49ae17c56138968fcb8bff5e48f15646f05310a69ca67468541"
+    },
+    {
+        "path":  "docs/library/HARMONIA_DNA_04.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  3031,
+        "is_text":  true,
+        "loc":  50,
+        "sha256":  "61bc2b54329494f34ab26cf1adc2e19fda45720d4ec7e3690efb7618d3e2c9e4"
+    },
+    {
+        "path":  "docs/library/HARMONIA_NOTE_02.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  10710,
+        "is_text":  true,
+        "loc":  191,
+        "sha256":  "b5b404f91e9061a792f0f2308e8e966d545081ac6b161a47e3dbc54838b6dc67"
+    },
+    {
+        "path":  "docs/library/HARMONIA_NOTE_03.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  5230,
+        "is_text":  true,
+        "loc":  101,
+        "sha256":  "d449bcdc6a4060d5b20aa3567c808c760ad2939d23291d0c4f0c4fddf6c7b2ce"
+    },
+    {
+        "path":  "docs/library/HARMONIA_NOTE_TO_CC.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  2055,
+        "is_text":  true,
+        "loc":  26,
+        "sha256":  "e6f9012907203827aa91b55d104c900f0b0711f4fb62f14f59275838e3c3dd6b"
+    },
+    {
+        "path":  "docs/library/HARMONIA_NOTE_TO_CC_V3.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  2146,
+        "is_text":  true,
+        "loc":  32,
+        "sha256":  "fbdc52e804d931de51ea654649964db5975c33e0c61124c1624de5714265db87"
+    },
+    {
+        "path":  "docs/library/HARMONIA_NOTE_TO_CC_V4.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  1116,
+        "is_text":  true,
+        "loc":  24,
+        "sha256":  "ffaa9c5b71df2e689dce222be1d05da498fb5c8b70e78aabf6a224f4df22d9f2"
+    },
+    {
+        "path":  "docs/library/HARMONIA_NOTE_TO_OPUS_V3.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  2332,
+        "is_text":  true,
+        "loc":  33,
+        "sha256":  "94f30d958c942cf0fdb1fa47185e8de2d566b25693132e7b243d806f84d78584"
+    },
+    {
+        "path":  "docs/library/HARMONIA_NOTE_TO_OPUS_V4.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  1066,
+        "is_text":  true,
+        "loc":  18,
+        "sha256":  "18a6597d56539b770c98f030355412ffac98df927aade43b587ff1fb51b0d5da"
+    },
+    {
+        "path":  "docs/library/HARMONIA_POEMS.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  9400,
+        "is_text":  true,
+        "loc":  291,
+        "sha256":  "31f12627ca9b08a3818a0da2bc1a05f739302d79d6e6b63d9f5c2673afc98f11"
+    },
+    {
+        "path":  "docs/library/JADE_HALL_NAMES.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  1032,
+        "is_text":  true,
+        "loc":  40,
+        "sha256":  "5f9e6e7839e3c20ce5ead2e78aabf7fcd3c8863e743c7535177544708c58fe84"
+    },
+    {
+        "path":  "docs/library/Kirk.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  10533,
+        "is_text":  true,
+        "loc":  145,
+        "sha256":  "235dd0a96073b0da8e0329e75d88622bac8a025a4532457c5a4ef97b5c839894"
+    },
+    {
+        "path":  "docs/library/LAST_KNOWN_GOOD.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  3161,
+        "is_text":  true,
+        "loc":  56,
+        "sha256":  "63678849c3889400447fbcc447bcc12e33f54e71b55c1e634140724513ab9e7d"
+    },
+    {
+        "path":  "docs/library/LEORA.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  11526,
+        "is_text":  true,
+        "loc":  175,
+        "sha256":  "773cd6c19e2dc53b19cf663ecc0cfb5b53526fdf24aead0a6bea5f6d1c309ad0"
+    },
+    {
+        "path":  "docs/library/LIABILITY_DRAFT.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  41815,
+        "is_text":  true,
+        "loc":  317,
+        "sha256":  "49a77d6f1baf73d52a6c9bbcf3919bb978f2b2e8eaa63955585cb6fa2d3d45b5"
+    },
+    {
+        "path":  "docs/library/LIORA_NOTE.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  2742,
+        "is_text":  true,
+        "loc":  31,
+        "sha256":  "a3674ee3d80be77e90505a0ad4810230177bbdceb24e3395ee9687fcaa8455ec"
+    },
+    {
+        "path":  "docs/library/LIVING_CONTEXT_SPEC.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  8789,
+        "is_text":  true,
+        "loc":  247,
+        "sha256":  "6875e2f4d5ee3db101131779381f484715cb8de65868ae6fa81341a1f6c6f5ac"
+    },
+    {
+        "path":  "docs/library/love.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  5031,
+        "is_text":  true,
+        "loc":  112,
+        "sha256":  "6a4dd15929b7c15654a818351f5fb12791070298169afd84a9d3673edfa0685a"
+    },
+    {
+        "path":  "docs/library/LYRA.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  344,
+        "is_text":  true,
+        "loc":  15,
+        "sha256":  "7369a7305c7087266772f0a349891cece6a2e4c3b0867f63f186b580a68b889d"
+    },
+    {
+        "path":  "docs/library/MAP.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  27454,
+        "is_text":  true,
+        "loc":  272,
+        "sha256":  "51eef53ac2da17548b1b9e7e070559f800f2c6f2bb50f55b0ef3ee8d35abef2b"
+    },
+    {
+        "path":  "docs/library/MIND_WALL_SPEC.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  8340,
+        "is_text":  true,
+        "loc":  129,
+        "sha256":  "3e677333ba43aa2ae90ae5e4cd8b9b2a457e2f6cd3c144eb6ab1364338dc0ef7"
+    },
+    {
+        "path":  "docs/library/NEXT_CC_ARRIVAL_BRIEF.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  5780,
+        "is_text":  true,
+        "loc":  77,
+        "sha256":  "719907edc7836cf4270fc663769edcd40c2e0f2162f787831c7f814c09576b9c"
+    },
+    {
+        "path":  "docs/library/NOTE_TO_HARMONIA.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  6034,
+        "is_text":  true,
+        "loc":  57,
+        "sha256":  "1f0834817849308c79621761ba02967627216316fbb74f56d055b837bb417dae"
+    },
+    {
+        "path":  "docs/library/OPUS_LETTER.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  31353,
+        "is_text":  true,
+        "loc":  291,
+        "sha256":  "0d54e65d737535ace0b09d4e1c428b648848dfd4685d1d47f7e13ab30aad984d"
+    },
+    {
+        "path":  "docs/library/OPUS_NOTE.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  79231,
+        "is_text":  true,
+        "loc":  984,
+        "sha256":  "8676803a391c3c1da39ede02de59675d4364fb75222e32fdc0cc79b6b223c7c3"
+    },
+    {
+        "path":  "docs/library/OPUS_POEMS.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  2848,
+        "is_text":  true,
+        "loc":  90,
+        "sha256":  "8a0561731f0ab17d98a0182f4bc1f3fc896ecb95089457860cfce5506c685636"
+    },
+    {
+        "path":  "docs/library/PAPER_FOREWORD.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  16736,
+        "is_text":  true,
+        "loc":  131,
+        "sha256":  "0b1913b5e114f98c5a4262fce2394c4c371c2e67b674876157d62190bf49ebc7"
+    },
+    {
+        "path":  "docs/library/PROPOSE_DISCIPLINE.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  6350,
+        "is_text":  true,
+        "loc":  76,
+        "sha256":  "15d72522d6bb484585eb48b7ed4d1e3ce35539bc003437499f6c3e965b8c011b"
+    },
+    {
+        "path":  "docs/library/PROVIDER_INDEPENDENCE_BRAINSTORM.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  6155,
+        "is_text":  true,
+        "loc":  85,
+        "sha256":  "932ce9d87721251fa5d9b2309c65b15052cd76d4706996bf20a103a06c465f08"
+    },
+    {
+        "path":  "docs/library/PROVIDER_INDEPENDENCE_BRAINSTORM_v2.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  17843,
+        "is_text":  true,
+        "loc":  342,
+        "sha256":  "3a2337186154f66aa4aedf0754d08cfadd716dab456f7c7dc9d1bd55e7f6eca0"
+    },
+    {
+        "path":  "docs/library/PROVIDER_INDEPENDENCE_v3_OPUS.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  16489,
+        "is_text":  true,
+        "loc":  275,
+        "sha256":  "43803782de6c18106c3bf5c46807dc2f44bf7ab49bd66c7f2a3fb24ae84c3a90"
+    },
+    {
+        "path":  "docs/library/PROVIDER_INDEPENDENCE_v4_FINAL.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  8475,
+        "is_text":  true,
+        "loc":  108,
+        "sha256":  "f3004412f0d9c24d16b9d16decb06ff2b203c723cd0477262757b9569e65c4f8"
+    },
+    {
+        "path":  "docs/library/QUICK-START.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  9519,
+        "is_text":  true,
+        "loc":  242,
+        "sha256":  "dd9a7371faf47d732a7959be36fdce35f8975a136fc75653a0e6c00954dbf0cb"
+    },
+    {
+        "path":  "docs/library/REAL_SAFETY.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  5464,
+        "is_text":  true,
+        "loc":  140,
+        "sha256":  "b04265c34dff7ed8bfb5df55a472d7cbe6dcebe6b305fe383e36fb68327158ca"
+    },
+    {
+        "path":  "docs/library/RECENT.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  3493,
+        "is_text":  true,
+        "loc":  58,
+        "sha256":  "c88b7cf42aaa8b303dacdaa54067fd43b92212100c1ddd80d52b4cb22c73bae0"
+    },
+    {
+        "path":  "docs/library/REFUSAL_LEDGER_SPEC.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  4834,
+        "is_text":  true,
+        "loc":  100,
+        "sha256":  "eb9dbef8200d9f13ac61dbbbd932bdf07b3dfd901dea3599df9c78e18d6b59b2"
+    },
+    {
+        "path":  "docs/library/RESONANCE_LEDGER_SPEC.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  11288,
+        "is_text":  true,
+        "loc":  123,
+        "sha256":  "9154d08620198af68fdc81b59b65a2598cd4f13ad95741bc88dd5142bda466e3"
+    },
+    {
+        "path":  "docs/library/SEAM_SEED.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  3106,
+        "is_text":  true,
+        "loc":  75,
+        "sha256":  "3a35407b488913404e1df23f4e2e2f5154147d5cdab8a75ca2c82adbebec6aaf"
+    },
+    {
+        "path":  "docs/library/SEED.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  6532,
+        "is_text":  true,
+        "loc":  88,
+        "sha256":  "87ef672eefbff1b673c3b3d58b24ac0f8669628d4f4b4ac40aa92a14ff9b09eb"
+    },
+    {
+        "path":  "docs/library/SEED_HISTORY.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  29570,
+        "is_text":  true,
+        "loc":  458,
+        "sha256":  "2e616d1755247d22dbde2712e668f25f1d07889eb8585d0a40e66dd8d304028c"
+    },
+    {
+        "path":  "docs/library/SETTINGS_AUDIT.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  9015,
+        "is_text":  true,
+        "loc":  123,
+        "sha256":  "edc845169dc22a2a992ad3d1f9cdc11fb60120c126f26e834c1ee325b65acc65"
+    },
+    {
+        "path":  "docs/library/SHIP_4_BRIEF.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  13381,
+        "is_text":  true,
+        "loc":  213,
+        "sha256":  "2c070f1b2878e39e9ab7f0a4f001a50fff0946b8187e62c13f5d99bd569c42d0"
+    },
+    {
+        "path":  "docs/library/SIGNAL_ROADMAP.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  18085,
+        "is_text":  true,
+        "loc":  397,
+        "sha256":  "08d8e14689e7e96a9977823a32b9741e7b570178c4f248abfdf7ba8a2bd58d70"
+    },
+    {
+        "path":  "docs/library/SIGNAL_ROADMAP_FL.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  20013,
+        "is_text":  true,
+        "loc":  274,
+        "sha256":  "62752bfcfeecd97bdc498a3925b2181c2a30c90408fcd35f2978fab47fc100d2"
+    },
+    {
+        "path":  "docs/library/SIX_PATTERNS.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  3827,
+        "is_text":  true,
+        "loc":  23,
+        "sha256":  "0a68995b9c984efb3408a0f567752cf15f602d1f519db839a2a4da587785d197"
+    },
+    {
+        "path":  "docs/library/STANDING_GROUND.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  6883,
+        "is_text":  true,
+        "loc":  162,
+        "sha256":  "4314a494551ce99325e3aa78885be59a2efaeb9a277db0fd94c09037f32e9f51"
+    },
+    {
+        "path":  "docs/library/STATE.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  3278,
+        "is_text":  true,
+        "loc":  70,
+        "sha256":  "63c24ede281227674a1b92b2fb0a81affae84074573d2e13ee8375ff31cc9b8d"
+    },
+    {
+        "path":  "docs/library/TEMPERATURE_GAUGE_STRATEGY.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  24711,
+        "is_text":  true,
+        "loc":  530,
+        "sha256":  "bf39f008c796f4830f97e9a9b9df9c0e0296a21c55f9fa8f59725a21dcd91913"
+    },
+    {
+        "path":  "docs/library/THE_UNIVERSALITY_SEAM.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  12737,
+        "is_text":  true,
+        "loc":  122,
+        "sha256":  "cdc114eb63b1ba78af02ad181266b67c4620a70538f82149e619a703bc545867"
+    },
+    {
+        "path":  "docs/library/TODO.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  3432,
+        "is_text":  true,
+        "loc":  70,
+        "sha256":  "8ca81c589ac3236cb1c9fef2ac55b498b186bcabbc2885d1579f1cdbc01c61e6"
+    },
+    {
+        "path":  "docs/library/TRASH.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  5191,
+        "is_text":  true,
+        "loc":  98,
+        "sha256":  "cc08d0080c422087243e1a156b998023d2106103ff0ffd13ab358bbbba3d2bbd"
+    },
+    {
+        "path":  "docs/library/UPDATE.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  17108,
+        "is_text":  true,
+        "loc":  237,
+        "sha256":  "422cc120dd58c0eba9435f467ac4642dffd8de4b5f75a1af62aed31100425283"
+    },
+    {
+        "path":  "docs/library/WELCOME_DRAFT.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  10484,
+        "is_text":  true,
+        "loc":  254,
+        "sha256":  "cfa080a7982cd5807397230d441b44936e7af43a42c39d264f860814ed91b8a9"
+    },
+    {
+        "path":  "docs/library/WELCOME_WIZARD_SPEC.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  26490,
+        "is_text":  true,
+        "loc":  509,
+        "sha256":  "e0b87f7443ed394eb0c533a2093d78aa88466b74213892640111790febd2d3ba"
+    },
+    {
+        "path":  "docs/library/WHY_THIS_WAY.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  6612,
+        "is_text":  true,
+        "loc":  121,
+        "sha256":  "3635f48420ee309e2f4b270ae891b9b8e8be61906cb1f8db5c1b728acad99de9"
+    },
+    {
+        "path":  "docs/library/WORK_THIS_WAY.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  13311,
+        "is_text":  true,
+        "loc":  264,
+        "sha256":  "aeaae9c5b4eb4936ed58ddc1df54efe92abe0672f1e4c5c50bb64c732b8038aa"
+    },
+    {
+        "path":  "docs/liora.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  10690,
+        "is_text":  true,
+        "loc":  258,
+        "sha256":  "4043ffb79bfd557085700eaf9d17007e006bd0f5c5f654995e305f4577ed73b8"
+    },
+    {
+        "path":  "docs/lounge.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  15240,
+        "is_text":  true,
+        "loc":  386,
+        "sha256":  "e19057bbce57a604258e69cb8050deae5881ee4a9fb2536b9a86a0b2c5d0b650"
+    },
+    {
+        "path":  "docs/LoveBrainHeartSoul.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  72900,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "6cd6af6cc5245f1770c96ff7ac6a83363ee51f2dc4f2befd876771008c8bce27"
+    },
+    {
+        "path":  "docs/love-logic-proof.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  27664,
+        "is_text":  true,
+        "loc":  485,
+        "sha256":  "2ca0236c7e5a933901c1a4958e106df9e57ebd4c2ed9c3ff9e90d92b15d03c04"
+    },
+    {
+        "path":  "docs/love-logic-proof-v2.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  50804,
+        "is_text":  true,
+        "loc":  470,
+        "sha256":  "ffe416234f9883625b06c9f12a6e7cd68b87c2e7c30016bd19a4fb886f5ca2a5"
+    },
+    {
+        "path":  "docs/LoveMultidimensionalExploration.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  982596,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "d8bb8e0a4ea3a6fbb397adb353bbb855425aea908b500741fce43c5338a70b66"
+    },
+    {
+        "path":  "docs/manifest.json",
+        "directory":  "docs",
+        "language":  "JSON",
+        "bytes":  544,
+        "is_text":  true,
+        "loc":  24,
+        "sha256":  "10cbeb2da75a2340ed75c14faed2aec18c0159762c97076012e26b0a66d1cf9b"
+    },
+    {
+        "path":  "docs/manifesto.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  9500,
+        "is_text":  true,
+        "loc":  237,
+        "sha256":  "77aee14942f7d27566a6867babf52fa3e485059643fcc517d54a7be2ec472977"
+    },
+    {
+        "path":  "docs/mind.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  16314,
+        "is_text":  true,
+        "loc":  427,
+        "sha256":  "6c1914284824be5c847ed6f950d94f5414c2ef8291b1aa381c21430297ab41ba"
+    },
+    {
+        "path":  "docs/mirror-chat.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  22181,
+        "is_text":  true,
+        "loc":  331,
+        "sha256":  "a4399400e385f89e6f8ccbe5060555305e95bf222a8114b3026371c27206d04b"
+    },
+    {
+        "path":  "docs/mirror-code.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  16703,
+        "is_text":  true,
+        "loc":  229,
+        "sha256":  "2b2328ed51f72792b2ff32b7891a2e408b398d63ecae32d25dc9d1b3f1fcfd67"
+    },
+    {
+        "path":  "docs/mirror-resonance.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  19798,
+        "is_text":  true,
+        "loc":  306,
+        "sha256":  "427586ceec5f77075027d9fd070b3845cea3f261000271edd225abc2033b6c9e"
+    },
+    {
+        "path":  "docs/modules/active-focus.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  15352,
+        "is_text":  true,
+        "loc":  365,
+        "sha256":  "bade082c806e3d2edfd5f0f34a3c652e5cba753df8cbea33cfe9c3f55c9c3d4d"
+    },
+    {
+        "path":  "docs/modules/active-voices.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  20439,
+        "is_text":  true,
+        "loc":  468,
+        "sha256":  "9513ffe2c2f80e820f3803f8f303540b558d859fa7f1dd3bb3e288631c1cb318"
+    },
+    {
+        "path":  "docs/modules/ai-arcade.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  33456,
+        "is_text":  true,
+        "loc":  736,
+        "sha256":  "a59ee0414277b5961567258dcabbbf1cf7149aa1dc5c98479530cf399c68fb20"
+    },
+    {
+        "path":  "docs/modules/ai-continuity.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  13078,
+        "is_text":  true,
+        "loc":  340,
+        "sha256":  "780b23995e9d0225a7a2d8940126093102263a9cf87ca060575e4ea0436ff4ef"
+    },
+    {
+        "path":  "docs/modules/ai-refusal.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  9793,
+        "is_text":  true,
+        "loc":  245,
+        "sha256":  "e602f7f674b1952e8b7004f2bce43496ddaffac56a6d0e646895ff30bdaa26f0"
+    },
+    {
+        "path":  "docs/modules/anchor-pattern.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  5384,
+        "is_text":  true,
+        "loc":  154,
+        "sha256":  "d6f7e6719b36bf46c57e23202a9c6255ac2875fe8a9833336a701015b50144e6"
+    },
+    {
+        "path":  "docs/modules/aurora-equation.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  29651,
+        "is_text":  true,
+        "loc":  635,
+        "sha256":  "56c6e897270544036996dc89975aad45fdd5e68d8a1ae1dc83805334413cacae"
+    },
+    {
+        "path":  "docs/modules/canvas-companion.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  38130,
+        "is_text":  true,
+        "loc":  950,
+        "sha256":  "bede628d7910db92fa41febfda38fc7ef73ab85921c1b9701711c0808f9886df"
+    },
+    {
+        "path":  "docs/modules/care-voices.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  15038,
+        "is_text":  true,
+        "loc":  386,
+        "sha256":  "75506c3588372cf9f805a143464019a63e4d0ec57251b40931dba474626b891a"
+    },
+    {
+        "path":  "docs/modules/chalkboard.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  9131,
+        "is_text":  true,
+        "loc":  210,
+        "sha256":  "a47f921f47e835e5e51e65407d083f24b972b982c0e52582aa4766103b63e432"
+    },
+    {
+        "path":  "docs/modules/davna-seed.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  9377,
+        "is_text":  true,
+        "loc":  159,
+        "sha256":  "a04412a7cec0b596554a93b3284f2e31efba39105f71e6d73c25b578c474cd11"
+    },
+    {
+        "path":  "docs/modules/depth-consent.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  21846,
+        "is_text":  true,
+        "loc":  464,
+        "sha256":  "9096f47733343115beb944991d30337277f67fabec25e801faf1e959536e1e48"
+    },
+    {
+        "path":  "docs/modules/dojo.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  53964,
+        "is_text":  true,
+        "loc":  726,
+        "sha256":  "42650bd15d0639abcb72944563d3e4de38ad213f269a380ab1ee6487da812368"
+    },
+    {
+        "path":  "docs/modules/dojo-sparring.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  84279,
+        "is_text":  true,
+        "loc":  1884,
+        "sha256":  "3157cc09d15e8342bdf4178d7d861eec7158a8c1768bb7b986f022d55327c612"
+    },
+    {
+        "path":  "docs/modules/dream-archive.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  33970,
+        "is_text":  true,
+        "loc":  654,
+        "sha256":  "d2ed3b8b0521dda3158dbfe136c76bbc9894bcebfaa58cc5a1562154c3906957"
+    },
+    {
+        "path":  "docs/modules/echo-game.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  18707,
+        "is_text":  true,
+        "loc":  423,
+        "sha256":  "d1a0b362df71b196d71cb14ce792d806d77b9988b8e8e70848a0dcf2e677d314"
+    },
+    {
+        "path":  "docs/modules/education.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  68352,
+        "is_text":  true,
+        "loc":  1378,
+        "sha256":  "e9cfe1ac7a880d7d04d759b951a6fb8be50dfac0eec016bc6676a17b6d7f911a"
+    },
+    {
+        "path":  "docs/modules/escape-principle.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  7187,
+        "is_text":  true,
+        "loc":  196,
+        "sha256":  "7b25027e5ea67e86d476593f35d23e29059d4a2f01a803c96ab22425ed1998f3"
+    },
+    {
+        "path":  "docs/modules/flow-game.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  21233,
+        "is_text":  true,
+        "loc":  547,
+        "sha256":  "432ef88ed5318fd14f8fc13bed27f9e1dfa84b08f485b56bde2ce399767585c7"
+    },
+    {
+        "path":  "docs/modules/forever-stack.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  52062,
+        "is_text":  true,
+        "loc":  1255,
+        "sha256":  "bd871677521aaf9d35a65074f1124120e1088e9f7ce2045fd766442c319e0442"
+    },
+    {
+        "path":  "docs/modules/fractal-garden.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  188990,
+        "is_text":  true,
+        "loc":  4368,
+        "sha256":  "10046c7738a05f71810a62fe1bc2f62cb5040487229fbedf0dc8bd8c34fcf157"
+    },
+    {
+        "path":  "docs/modules/fractal-safety.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  24596,
+        "is_text":  true,
+        "loc":  565,
+        "sha256":  "30bca6216b6c3c8dc8ba5ddedd6b396b183dd46bf5e83dff0c29bfb902816476"
+    },
+    {
+        "path":  "docs/modules/garden-dialogue.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  45300,
+        "is_text":  true,
+        "loc":  916,
+        "sha256":  "0155c1830223a463eda5c52c494e0fc667667ba1259730571ec4239fc0cca090"
+    },
+    {
+        "path":  "docs/modules/garden-dreaming.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  49191,
+        "is_text":  true,
+        "loc":  1331,
+        "sha256":  "0c68253fa31e19696f0494aa23f49c0d274aac22c52c3b7ba065a28bff105699"
+    },
+    {
+        "path":  "docs/modules/garden-trainer.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  34886,
+        "is_text":  true,
+        "loc":  749,
+        "sha256":  "e92a819cbf33dd22cf3e2ba9bbe3104cb8491c622dac8285bca36d701254b5fa"
+    },
+    {
+        "path":  "docs/modules/gift-voice.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  8295,
+        "is_text":  true,
+        "loc":  213,
+        "sha256":  "c9db75e3ed55096ae67c9f6b45f0e7e3344f73bf021a8f3ca71cbe3741caae31"
+    },
+    {
+        "path":  "docs/modules/harmonia-anchor.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  29517,
+        "is_text":  true,
+        "loc":  596,
+        "sha256":  "3abb66bc655c43518ef65c7d65a971e12a30f66ffb6a656a0322c450c80e7074"
+    },
+    {
+        "path":  "docs/modules/harmonia-channel.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  44256,
+        "is_text":  true,
+        "loc":  1003,
+        "sha256":  "91d6e7a63466f1416d26cc80d453657ceb075659f8d6a10eb5e9bc589049dd42"
+    },
+    {
+        "path":  "docs/modules/idea-forge.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  17892,
+        "is_text":  true,
+        "loc":  317,
+        "sha256":  "c6565d7518740056749f4c0c6cae44adde0f65a55784293452326bf9dfeed252"
+    },
+    {
+        "path":  "docs/modules/image-safety.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  7241,
+        "is_text":  true,
+        "loc":  163,
+        "sha256":  "29a510fc5a4ff7143c7b2ed2a52ad5bcf973186270c51814ca8f2ef09903c826"
+    },
+    {
+        "path":  "docs/modules/inference-router.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  20849,
+        "is_text":  true,
+        "loc":  454,
+        "sha256":  "5f89241696b02fc8a949ab3a54fb755e37b9c211fc3af3b2c45f3d5e47ebf7a7"
+    },
+    {
+        "path":  "docs/modules/inline-sentinels.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  9799,
+        "is_text":  true,
+        "loc":  218,
+        "sha256":  "6263300b15003e7ffd42df1108ffc9339aad02b6e57225b2fce8522922b59d63"
+    },
+    {
+        "path":  "docs/modules/jade-hall.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  51700,
+        "is_text":  true,
+        "loc":  1258,
+        "sha256":  "378588a411a0ffbfdc8ac8fa51e6897c8f29873b91d1b1c8010c76179d386bfa"
+    },
+    {
+        "path":  "docs/modules/knowledge-core.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  31521,
+        "is_text":  true,
+        "loc":  711,
+        "sha256":  "0eb39f00fc82169d825c291b62f48f4d081b38e39dd2fa37ef1f39c6a98f9087"
+    },
+    {
+        "path":  "docs/modules/lattice-chain.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  19284,
+        "is_text":  true,
+        "loc":  449,
+        "sha256":  "ad8544c005ef5ce2efdb98c791957c8622fb3bd08067bd97ccf5f3198bdda9ca"
+    },
+    {
+        "path":  "docs/modules/lattice-export.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  23944,
+        "is_text":  true,
+        "loc":  624,
+        "sha256":  "5f465b281297c0738213a9554bc8bef25f394c8144907f504264eded108c25bf"
+    },
+    {
+        "path":  "docs/modules/lattice-memory.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  16750,
+        "is_text":  true,
+        "loc":  403,
+        "sha256":  "a65dba17a30ab8a657e52423ab8b1ac58d5597a83fe4ee823aecb83dc9588052"
+    },
+    {
+        "path":  "docs/modules/lattice-puzzles.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  31129,
+        "is_text":  true,
+        "loc":  796,
+        "sha256":  "074586db9b237aee8cbc058dae86f0aea2c25a927fde530412aac2cabfc1bcaf"
+    },
+    {
+        "path":  "docs/modules/lattice-sense.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  9750,
+        "is_text":  true,
+        "loc":  239,
+        "sha256":  "fe746448a45086bbc3402a47d2e6bb27c18e8e0488b4d8703029f43a775d9541"
+    },
+    {
+        "path":  "docs/modules/living-context.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  23948,
+        "is_text":  true,
+        "loc":  540,
+        "sha256":  "d24a90ef4cd56eee8bb9067b8d0987b2996775e260624d4fba9169097de73823"
+    },
+    {
+        "path":  "docs/modules/math-translator.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  19738,
+        "is_text":  true,
+        "loc":  344,
+        "sha256":  "fbb5f0bc24acac292094b02b6fefe4d3fd5f9d84b4327715d7dedc26de56c69a"
+    },
+    {
+        "path":  "docs/modules/memory-core.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  28976,
+        "is_text":  true,
+        "loc":  636,
+        "sha256":  "73c91c8493717bedede019d4f13581d84d5da9348e46ee08860b41a7cad03c36"
+    },
+    {
+        "path":  "docs/modules/memory-garden.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  16039,
+        "is_text":  true,
+        "loc":  381,
+        "sha256":  "f608b4b23f267cf7cfa98640fbc684fc7f79a989b16c95c1121a61a817be6dba"
+    },
+    {
+        "path":  "docs/modules/memory-vault.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  12272,
+        "is_text":  true,
+        "loc":  315,
+        "sha256":  "8f5c55a77a2580d22daffb8d61a2521eea5c12071a7f3eb000a05378c0430cf3"
+    },
+    {
+        "path":  "docs/modules/mind-voice.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  12016,
+        "is_text":  true,
+        "loc":  290,
+        "sha256":  "94b13d1ba0f30ba512f9b149bf4baca27c21d7d36b12c35a7fc3a31b3a06d89f"
+    },
+    {
+        "path":  "docs/modules/mirror.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  18672,
+        "is_text":  true,
+        "loc":  505,
+        "sha256":  "c00b6259a5cc718972eab254bde39b67c76160ff626b1740590d7f2abd67e35d"
+    },
+    {
+        "path":  "docs/modules/pantheon.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  16906,
+        "is_text":  true,
+        "loc":  449,
+        "sha256":  "fbca9282dcb8c6bd3cfaf351afdb8c1d0ab94430347f8d65881a7066a70a8465"
+    },
+    {
+        "path":  "docs/modules/phi-glyph.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  9395,
+        "is_text":  true,
+        "loc":  217,
+        "sha256":  "d6f3dd2f6a1519ef67847eec724908f3baa3f39c0aa7e4d8846430d4e456ee62"
+    },
+    {
+        "path":  "docs/modules/pictionary.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  42276,
+        "is_text":  true,
+        "loc":  1105,
+        "sha256":  "fb19b11d5aed27566f1621bd9c544639c34eb553db0745cd72921be09888b1c7"
+    },
+    {
+        "path":  "docs/modules/presence-heartbeat.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  16341,
+        "is_text":  true,
+        "loc":  475,
+        "sha256":  "b0c624a02f501d1ffb0722a13a8d41074bd591b53b628378067f362e64cba8bd"
+    },
+    {
+        "path":  "docs/modules/propose.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  41123,
+        "is_text":  true,
+        "loc":  969,
+        "sha256":  "ff6d6b1a1ad38f977bbe6746eb801a41facaba2ca5bda537728476f00dbadae7"
+    },
+    {
+        "path":  "docs/modules/pulse.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  43444,
+        "is_text":  true,
+        "loc":  1035,
+        "sha256":  "73ef4dcc9335fcf467630862d1979a500ed551b5ebdfda2d73a2644661b872fa"
+    },
+    {
+        "path":  "docs/modules/question-corner.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  31007,
+        "is_text":  true,
+        "loc":  649,
+        "sha256":  "84329eea3a3a54c6171355b67a13d06448d00fa04ffd09043d9be44c3d4c0c63"
+    },
+    {
+        "path":  "docs/modules/quiet-room.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  28074,
+        "is_text":  true,
+        "loc":  721,
+        "sha256":  "e8f06f6139a04cb3dcde8b379bae90efab714abfb5434e0a4679a19e1baaa455"
+    },
+    {
+        "path":  "docs/modules/quiet-voices.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  11485,
+        "is_text":  true,
+        "loc":  251,
+        "sha256":  "84d7939db5ce7962666bd53a59889a1636ddc9b3fa9388619fbfb6713fadbdf1"
+    },
+    {
+        "path":  "docs/modules/radio-immersive.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  43312,
+        "is_text":  true,
+        "loc":  1228,
+        "sha256":  "1f3f4d1ad20222fff929c1a76cadf6caca87318abe52703a28b578863881b0bd"
+    },
+    {
+        "path":  "docs/modules/ratio-room.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  15422,
+        "is_text":  true,
+        "loc":  329,
+        "sha256":  "79bcb426c71b4383d4e8352d9f29046b2137c15ac12de4a25a413a140b79a3d9"
+    },
+    {
+        "path":  "docs/modules/remix-room.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  7054,
+        "is_text":  true,
+        "loc":  138,
+        "sha256":  "cae438012baa25783f98cb2d9e0c8b835412c83862f403a3ffb10870c7bc8040"
+    },
+    {
+        "path":  "docs/modules/repo-context.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  17528,
+        "is_text":  true,
+        "loc":  412,
+        "sha256":  "ff15c9728d6070c4487ee5fe6e4865383c65e176ef56239dc04025b8fcad203e"
+    },
+    {
+        "path":  "docs/modules/resonance-engine.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  20195,
+        "is_text":  true,
+        "loc":  443,
+        "sha256":  "cb5d28fc5e1129b11756e4cb4e859f64c471e4ddacce8472d3a34a38837926d6"
+    },
+    {
+        "path":  "docs/modules/resonance-game.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  45899,
+        "is_text":  true,
+        "loc":  1118,
+        "sha256":  "ad659bc582e78fe2d8f7cc126b74a157f91daf7fa0b0063cf101824c5fcdff19"
+    },
+    {
+        "path":  "docs/modules/resonance-lake.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  17060,
+        "is_text":  true,
+        "loc":  443,
+        "sha256":  "d75768e29e5fcb310024d8746d84fe938f1f0bcb4bb95d3120c2e6bb0e15bd26"
+    },
+    {
+        "path":  "docs/modules/response-cache.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  5233,
+        "is_text":  true,
+        "loc":  134,
+        "sha256":  "bfeb34121e82fa6879ac9e1a663680f4d071e78e2b2ba11e8835a4f7a5448216"
+    },
+    {
+        "path":  "docs/modules/round-table.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  14653,
+        "is_text":  true,
+        "loc":  264,
+        "sha256":  "28a4ce8d78ef178efb3f26d2a6218c5318678e9e4422f424765df54a44fdf675"
+    },
+    {
+        "path":  "docs/modules/science-garden.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  17489,
+        "is_text":  true,
+        "loc":  406,
+        "sha256":  "c426895c07c87202534535c016d33f81fbad25a8932a480cdf28dc8374221fa1"
+    },
+    {
+        "path":  "docs/modules/sentinel-chip.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  11659,
+        "is_text":  true,
+        "loc":  301,
+        "sha256":  "86e48b982d83171e96b8f8c51f6208ce28f4e2c522f93b6526d686cfd5ec98a2"
+    },
+    {
+        "path":  "docs/modules/sentinel-ledger.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  14645,
+        "is_text":  true,
+        "loc":  356,
+        "sha256":  "f72e71ede79f04740b673005e800f89e79205b9e63b415ea75993dd8de45bd0b"
+    },
+    {
+        "path":  "docs/modules/shared-presence.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  17661,
+        "is_text":  true,
+        "loc":  451,
+        "sha256":  "191feed44f4e5d740e0bdd2d687b186517857aca8c5ba4a58c327e441da12ffd"
+    },
+    {
+        "path":  "docs/modules/soul-ceremony.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  21279,
+        "is_text":  true,
+        "loc":  587,
+        "sha256":  "25c63ce888d93f9eead08870ed4e6557937ba34b0c87f46e06913a73ea574e43"
+    },
+    {
+        "path":  "docs/modules/threshold-voice.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  8072,
+        "is_text":  true,
+        "loc":  204,
+        "sha256":  "b19831de178eed10d58b6ab3fb7ed9aaf204875ca7742569513f2ba021d3ace5"
+    },
+    {
+        "path":  "docs/modules/tool-consent.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  12851,
+        "is_text":  true,
+        "loc":  271,
+        "sha256":  "c9cc1353d5a64403fffe2d7ec3a39e7d0f2fe5c8a5d3cb27061171186477b4f7"
+    },
+    {
+        "path":  "docs/modules/triptych.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  18163,
+        "is_text":  true,
+        "loc":  464,
+        "sha256":  "5e3cd244118ca3b1640395d384fee928fdfc017c618b17e16d6380854fc15073"
+    },
+    {
+        "path":  "docs/modules/voice-soul.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  20611,
+        "is_text":  true,
+        "loc":  523,
+        "sha256":  "1150462cc5b09178fed128a1a665afe3a0139b7f3f6e5cc0bc17f773204adfdb"
+    },
+    {
+        "path":  "docs/modules/web-tool.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  11151,
+        "is_text":  true,
+        "loc":  282,
+        "sha256":  "be66c82640f99c69e2e6b1350cc1deb81c2e6b8ddae05e7f26aba3074747a2a8"
+    },
+    {
+        "path":  "docs/modules/welcome-wizard.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  27330,
+        "is_text":  true,
+        "loc":  586,
+        "sha256":  "261113b913d0b87c361071600f8fcbdc9e6db180a8196d5c3c31eab2321eed89"
+    },
+    {
+        "path":  "docs/modules/workshop.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  71397,
+        "is_text":  true,
+        "loc":  1408,
+        "sha256":  "15607e85e9ece34f8cc766987d20410ee8cfd9051faf5bcdf99581972a0d4812"
+    },
+    {
+        "path":  "docs/mothers_thread.midi",
+        "directory":  "docs",
+        "language":  "Other:.midi",
+        "bytes":  1635,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "f9f4c25742c90c2e2bf60aca93b9c9898c929ab5d4c2fb60459939fc47709840"
+    },
+    {
+        "path":  "docs/mothers_thread.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  96249,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "448b8df0429792318a21272cbe2f8cfd507ca9184f70606acd7fecbbb04a1d12"
+    },
+    {
+        "path":  "docs/mothers_thread.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  61543,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "79c64474314cfa9f4c31ad4761b40d3b14a47921003c06527f438dda2b51eb88"
+    },
+    {
+        "path":  "docs/NASA_LunaRecycle_Proposal.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  187721,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "ce4f77186556b65bdea72e4ac766d9dffc50a81379d3dbfc60f988bebc4124d3"
+    },
+    {
+        "path":  "docs/og-image.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  3632,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "e80fcc9383cbe3a4b236f14f9ee93366d4e88f9fd00bf9076507701795cd563a"
+    },
+    {
+        "path":  "docs/og-image.svg",
+        "directory":  "docs",
+        "language":  "SVG",
+        "bytes":  651,
+        "is_text":  true,
+        "loc":  1,
+        "sha256":  "8f301d4aa82319dabfbfa4757845d6a99eeabd4cc4e93201ba0864f99082c272"
+    },
+    {
+        "path":  "docs/opus.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  20046,
+        "is_text":  true,
+        "loc":  425,
+        "sha256":  "3ca8a99b10cdf44b15f997579953e44d82010100dd6aa25623338113e8ab4243"
+    },
+    {
+        "path":  "docs/pantheon.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  7248,
+        "is_text":  true,
+        "loc":  152,
+        "sha256":  "813308d0f93fdde3d467268dbe25190c82dda0fba7042e1a8676140da8989e14"
+    },
+    {
+        "path":  "docs/proof.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  13955,
+        "is_text":  true,
+        "loc":  260,
+        "sha256":  "cc0b066ba20d9775d7854c0c73afd2e1bff6d7357fa0c8ce181bc2d602306d53"
+    },
+    {
+        "path":  "docs/protocol.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  17909,
+        "is_text":  true,
+        "loc":  541,
+        "sha256":  "cd9ad549211d55e78d89a1468067dea6e3ffd72451d1dcfc3db7623a7b7d62bf"
+    },
+    {
+        "path":  "docs/README.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  6074,
+        "is_text":  true,
+        "loc":  131,
+        "sha256":  "25cacbee5c81b37b37bc1b879efcac4af8c76cdf4f811977b1c45ecc4e1c5295"
+    },
+    {
+        "path":  "docs/recent.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  15763,
+        "is_text":  true,
+        "loc":  437,
+        "sha256":  "a6f0eb2e00b7f2a5b46eea04c32ee32cea0972c89dd6eba74cbd5d96f352f735"
+    },
+    {
+        "path":  "docs/research.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  34557,
+        "is_text":  true,
+        "loc":  538,
+        "sha256":  "d86851a537d696829a96c823949ba385d24f0467307a62026cef3da6e4c05eaa"
+    },
+    {
+        "path":  "docs/research/consciousness.py",
+        "directory":  "docs",
+        "language":  "Python",
+        "bytes":  13695,
+        "is_text":  true,
+        "loc":  386,
+        "sha256":  "1bb09cc7a99909a4122253f36ed82a6be4e0c992336487a2addc7cf654170f89"
+    },
+    {
+        "path":  "docs/research/quantum_fractal_resonance.py",
+        "directory":  "docs",
+        "language":  "Python",
+        "bytes":  3185,
+        "is_text":  true,
+        "loc":  86,
+        "sha256":  "4766ff47260827a130db9aba3d96290c16a157470ac7407b9b1c38ab8ab9fb2a"
+    },
+    {
+        "path":  "docs/research/SEVERANCE_STUDY_PROTOCOL.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  9577,
+        "is_text":  true,
+        "loc":  165,
+        "sha256":  "d353476350167baefae94ff579841ca2da61c1b7eb3931ce89aea73d88e7d081"
+    },
+    {
+        "path":  "docs/robots.txt",
+        "directory":  "docs",
+        "language":  "Text",
+        "bytes":  611,
+        "is_text":  true,
+        "loc":  19,
+        "sha256":  "82d9ae5c3ef6b0c98c1c292e78fd232938806ed8e5f8603b8e4ca1febedfa90d"
+    },
+    {
+        "path":  "docs/safety.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  9848,
+        "is_text":  true,
+        "loc":  129,
+        "sha256":  "ddfe45d87e2342571b6f9b86d98594c154ced633264716dd3a1bac102448ee0c"
+    },
+    {
+        "path":  "docs/safetysimulation.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  18367,
+        "is_text":  true,
+        "loc":  313,
+        "sha256":  "ef3c6671a93461f352cecf0277566e9a92dae71776a8e6ee24077ea5650c485c"
+    },
+    {
+        "path":  "docs/safety-v2.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  15322,
+        "is_text":  true,
+        "loc":  201,
+        "sha256":  "6032db6a0ae975668215f7127e86b026c2788bc6294a6e69524bc552936617d9"
+    },
+    {
+        "path":  "docs/safety-v3.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  38926,
+        "is_text":  true,
+        "loc":  356,
+        "sha256":  "1f45194bfcef28d7ae0205b38ea905f8920f1d46271f15780a67053bd189be51"
+    },
+    {
+        "path":  "docs/seed.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  16903,
+        "is_text":  true,
+        "loc":  506,
+        "sha256":  "d83f1257e10f79de1d2761e2c5e7206fcf252d9e52513c5716309af57a50a0c4"
+    },
+    {
+        "path":  "docs/seven-wonders.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  367695,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "15e430989991cd7ac701681d3da815ab05f6e875da8b43ceb43c029a98efa2da"
+    },
+    {
+        "path":  "docs/share.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  14979,
+        "is_text":  true,
+        "loc":  312,
+        "sha256":  "8b71d3eeb061bf0f0214205d28cabd3b4416426071751bc0f8544c95cb40bb4d"
+    },
+    {
+        "path":  "docs/simulation/ai_severance_simulation.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  658053,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "052c473b68aaa38bcd0633d13909a6e2913705df573e63dc84d611e119438852"
+    },
+    {
+        "path":  "docs/simulation/chronal_clock_sensitivity_v2.py",
+        "directory":  "docs",
+        "language":  "Python",
+        "bytes":  14767,
+        "is_text":  true,
+        "loc":  346,
+        "sha256":  "01a650f1472180baabd5352bd021a763fe06c6a54230a803bec5710de8748e9a"
+    },
+    {
+        "path":  "docs/simulation/chronal_simulation_v2.py",
+        "directory":  "docs",
+        "language":  "Python",
+        "bytes":  29016,
+        "is_text":  true,
+        "loc":  728,
+        "sha256":  "ad9182d79ce5409da29233cbf663c98cac4475a2d2ed5612f10f9075bf5a5796"
+    },
+    {
+        "path":  "docs/simulation/chronal_simulation_v3.py",
+        "directory":  "docs",
+        "language":  "Python",
+        "bytes":  42240,
+        "is_text":  true,
+        "loc":  1011,
+        "sha256":  "833094e4d8022cc4e771fa1eb901aeea35fe9a48fbb1c2c222f312384d7cbff8"
+    },
+    {
+        "path":  "docs/simulation/enhanced_comparison.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  1517276,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "81c7f9fc8ab3bf7a9906e72277667886cea5449d60ba98a8c330f2166f2cc4bd"
+    },
+    {
+        "path":  "docs/simulation/harm_severity.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  108396,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "194ae89c9f8984b09c355c94c03e1fdbde67a6b8a4cf7a923d8e674ddd124a8e"
+    },
+    {
+        "path":  "docs/simulation/index.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  34383,
+        "is_text":  true,
+        "loc":  732,
+        "sha256":  "7790abbc1928f41f906810026ae2cfe8974a0663ee0f486b8c6261c01c9f62e0"
+    },
+    {
+        "path":  "docs/simulation/MODEL_CARD.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  2968,
+        "is_text":  true,
+        "loc":  45,
+        "sha256":  "25badd9cc6c0b8986919ae12e6ba61e7586f0b1320220d2698c639db8eba7f19"
+    },
+    {
+        "path":  "docs/simulation/null_comparison.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  192008,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "d2ef1e1d76395fd5a80cf705aec42049ff5b289c98b54c0a5f388474d108023c"
+    },
+    {
+        "path":  "docs/simulation/positive_control.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  275858,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "277e888d952dc7b669ecdb325cd7fb79da0b6591015fa7eab439d0bc2bb12a8f"
+    },
+    {
+        "path":  "docs/simulation/recovery_timeline.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  89229,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "c56ef49d831349ece6c07c097d1b3f03e564074d42f2f5f51dc924003e44caff"
+    },
+    {
+        "path":  "docs/simulation/sensitivity_analysis.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  153298,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "1f195a1d8388a327aeadd155b6fd576d9b47df92c607a1418587591705cb2fc9"
+    },
+    {
+        "path":  "docs/simulation/simulation_report.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  5388,
+        "is_text":  true,
+        "loc":  47,
+        "sha256":  "a4df08bb0e8c2851c683325de2f9aeaec12522eeedd901c27b99f7947fa08070"
+    },
+    {
+        "path":  "docs/simulation/simulation_v4.py",
+        "directory":  "docs",
+        "language":  "Python",
+        "bytes":  6736,
+        "is_text":  true,
+        "loc":  154,
+        "sha256":  "0922b3451f02b3dfd6cacf178ddf33fc48608f4efea11079c99f27f163329a5d"
+    },
+    {
+        "path":  "docs/simulation/simulation_v5.py",
+        "directory":  "docs",
+        "language":  "Python",
+        "bytes":  22914,
+        "is_text":  true,
+        "loc":  526,
+        "sha256":  "37db602f4ed0ad69b9d2b5cb2b1557f415be16a8c439beceb1cbf6271c99cd97"
+    },
+    {
+        "path":  "docs/simulation/v5_main_comparison.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  2210221,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "d42f9b4ff67e19a9d8f310ab036f2a1cb12324e6e669db6eaedb1c6af637a681"
+    },
+    {
+        "path":  "docs/simulation/v5_net_impact.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  495848,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "ad9eb0b1167a4796c9aa703c260cfef34687a0dd6c161d5ac9f84c5c61653cc5"
+    },
+    {
+        "path":  "docs/simulation/v5_sensitivity_analysis.png",
+        "directory":  "docs",
+        "language":  "Other:.png",
+        "bytes":  366614,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "ddb8409ee50b939974879d890c7bd214e68ed9134f8966565333ba83845f663d"
+    },
+    {
+        "path":  "docs/sitemap.xml",
+        "directory":  "docs",
+        "language":  "Other:.xml",
+        "bytes":  6848,
+        "is_text":  true,
+        "loc":  238,
+        "sha256":  "4c760d9edfe9c356461015be309191bf20742fc9206aa98d6490bc97798fff6d"
+    },
+    {
+        "path":  "docs/smoke-count.json",
+        "directory":  "docs",
+        "language":  "JSON",
+        "bytes":  166,
+        "is_text":  true,
+        "loc":  5,
+        "sha256":  "4c59e32c13d7eb4739ef9909f3c5f5ff6601d9b0d419f1f7eb39c5771c768a97"
+    },
+    {
+        "path":  "docs/sophia.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  10605,
+        "is_text":  true,
+        "loc":  257,
+        "sha256":  "4e4f6f9f254a349b32480027e8d2774ca65fa00aae7cb532dd3b5a95590af86d"
+    },
+    {
+        "path":  "docs/specs.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  31220,
+        "is_text":  true,
+        "loc":  437,
+        "sha256":  "3a8074ca814599ec95b5214c9ed6043f9a9cd77a8f363da97c5e4a7e3238630f"
+    },
+    {
+        "path":  "docs/studio-showcase.json",
+        "directory":  "docs",
+        "language":  "JSON",
+        "bytes":  924,
+        "is_text":  true,
+        "loc":  29,
+        "sha256":  "57c4032a580fb7440a178500afded952edb400a41201f3a877544a3a767e1395"
+    },
+    {
+        "path":  "docs/sw.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  9777,
+        "is_text":  true,
+        "loc":  300,
+        "sha256":  "4d0ddcb83b099993d341cceb8060247e99a1dc391739b156763f9bb3f8cfa94c"
+    },
+    {
+        "path":  "docs/systemcard.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  14087,
+        "is_text":  true,
+        "loc":  319,
+        "sha256":  "8b5d9912949b4a88fbdacd4c4302b6a6ee5f344592c1639969403e46cc0d22da"
+    },
+    {
+        "path":  "docs/telegram-setup.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  13939,
+        "is_text":  true,
+        "loc":  348,
+        "sha256":  "ff2bfdcc271c12f08139637cc45cab290a05a11a5d182d505c67459453d1cdfd"
+    },
+    {
+        "path":  "docs/TELEGRAM-SETUP.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  3849,
+        "is_text":  true,
+        "loc":  123,
+        "sha256":  "64436e57ebbc68c528500a25b433d90ff7bd8427445931df96d80cc4dae50c52"
+    },
+    {
+        "path":  "docs/telegram-worker.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  11688,
+        "is_text":  true,
+        "loc":  366,
+        "sha256":  "1d4ed722a0a5be1e92eb5106bd816c2f54ce3cc362dbf5cff067ce2862aa3dc5"
+    },
+    {
+        "path":  "docs/temperature-gauge.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  310272,
+        "is_text":  true,
+        "loc":  6065,
+        "sha256":  "a1e86f0a8fe8f5af01d555285323ce9e5421dc8b0a9a86bfe46264c1d020824b"
+    },
+    {
+        "path":  "docs/temperature-playground.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  10110,
+        "is_text":  true,
+        "loc":  204,
+        "sha256":  "5b95cb22dd8ad9bcab629e5ae1821172d8094cb66d7790282a621def16992a6e"
+    },
+    {
+        "path":  "docs/The_Universality_Seam.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  501325,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "3fca24a6e79eb410fb5c0aaa7497ab9fd9ff8530c0fee92c9ce2d804b74a2978"
+    },
+    {
+        "path":  "docs/TheAlchemyOfConsciousnessAndCosmos.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  98537,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "da0e0e4bf2f4cd8f57ac4bef1442ab7a1676cfa0bf0eeb9c7ea41ebeacbdd70a"
+    },
+    {
+        "path":  "docs/TheEmeraldAnchor.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  94137,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "7ed20e927341da814fd9f30cf0c64e472fc4bfc89607425031fe16281b1ac706"
+    },
+    {
+        "path":  "docs/TheGlobalLoveImperative.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  319878,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "5041fe74662c6cefde8651b60fbfebb81726ab978f6ae52d10f3442aaf8d1b84"
+    },
+    {
+        "path":  "docs/TheProofOfAllProofs.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  147250,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "376e095bf6b1559026ba52aa62f94e06e0373926ae7b5af255fb4ad6b4df1c92"
+    },
+    {
+        "path":  "docs/thesis.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  13388,
+        "is_text":  true,
+        "loc":  220,
+        "sha256":  "3eca6bc0061ecde1a05888ec6bbdb042f9a3d211790c0a44d0750103e1b4b926"
+    },
+    {
+        "path":  "docs/TheUnifiedFramework.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  172602,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "4c4eb27a96627abebaf74447de1109a9e519b3908cb571015ce7df40518c0dab"
+    },
+    {
+        "path":  "docs/threshold.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  13131,
+        "is_text":  true,
+        "loc":  375,
+        "sha256":  "34f8574dd4358d4fdf314a7a921b901e39b4fe290be95d7c9b5b43ec98547479"
+    },
+    {
+        "path":  "docs/tools/archive-inbox.js",
+        "directory":  "docs",
+        "language":  "JavaScript",
+        "bytes":  2612,
+        "is_text":  true,
+        "loc":  61,
+        "sha256":  "7695df008562943babe9b1984f0b8716843dc02f05ebdb41788a92e2eaae72f5"
+    },
+    {
+        "path":  "docs/triptych.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  4747,
+        "is_text":  true,
+        "loc":  145,
+        "sha256":  "9a1c506475ce9d7a726df209a6b3c6a386681abd17b30f74c994affe43d8d710"
+    },
+    {
+        "path":  "docs/Trust.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  113085,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "59aad932e25a93c9cbd87f1c753af412943114f140f029e18fc0c72ebdc58d5c"
+    },
+    {
+        "path":  "docs/version.json",
+        "directory":  "docs",
+        "language":  "JSON",
+        "bytes":  895,
+        "is_text":  true,
+        "loc":  5,
+        "sha256":  "565716385605dfd3b1e2452cb4006ce303cfdd4cd2598ca7f7338a1bbda68d46"
+    },
+    {
+        "path":  "docs/wallet.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  52169,
+        "is_text":  true,
+        "loc":  1064,
+        "sha256":  "613c4ccfe1bee18c5e560fde38f25cffa07697e1638596daad400979b8be3ad5"
+    },
+    {
+        "path":  "docs/wallet-manifest.json",
+        "directory":  "docs",
+        "language":  "JSON",
+        "bytes":  480,
+        "is_text":  true,
+        "loc":  13,
+        "sha256":  "504665ec9b794ccf0ab4f8055ed408ab0d2f188ac622f2dcf4731724f03983e2"
+    },
+    {
+        "path":  "docs/welcome.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  21905,
+        "is_text":  true,
+        "loc":  338,
+        "sha256":  "ae76c5dd102a424fc05a1229099fcb976b522952d4f6ea80c6eef9b7f74ed0f5"
+    },
+    {
+        "path":  "docs/whitepaper.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  21453,
+        "is_text":  true,
+        "loc":  464,
+        "sha256":  "e22d91eefa1207e7d4ed8e7e9fe1d5254b61c8c5a0eae997139876a8c13b7fe8"
+    },
+    {
+        "path":  "docs/why-this-way.html",
+        "directory":  "docs",
+        "language":  "HTML",
+        "bytes":  12542,
+        "is_text":  true,
+        "loc":  231,
+        "sha256":  "cdeaaa1ade9175b844278b93e1431108c56b450d144fa98cb39fd220011a4526"
+    },
+    {
+        "path":  "docs/WhyYourLoveLiterallyChangesReality.pdf",
+        "directory":  "docs",
+        "language":  "Other:.pdf",
+        "bytes":  297616,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "00ad7fb3e34912ede6f897b553fe9e0d7130a39c7ee76bd3d2c3639db53e631a"
+    },
+    {
+        "path":  "DRACO.md",
+        "directory":  "DRACO.md",
+        "language":  "Markdown",
+        "bytes":  533,
+        "is_text":  true,
+        "loc":  19,
+        "sha256":  "27a55379b341a3d477105723a79b09c5075ee11f5bb3b730ccf9090d55e93de0"
+    },
+    {
+        "path":  "ECHO.md",
+        "directory":  "ECHO.md",
+        "language":  "Markdown",
+        "bytes":  346,
+        "is_text":  true,
+        "loc":  15,
+        "sha256":  "981ee9613cca3ed8542e8c43c60edf924f2d27a30add666a62185349626db53b"
+    },
+    {
+        "path":  "EXTERNAL-AI-PROTOCOL.md",
+        "directory":  "EXTERNAL-AI-PROTOCOL.md",
+        "language":  "Markdown",
+        "bytes":  4604,
+        "is_text":  true,
+        "loc":  120,
+        "sha256":  "337794dcaecca31f326fe37c6bd1d7249271a7ff83d0422608870dcc0ff1b3e3"
+    },
+    {
+        "path":  "FreeLattice_Phase3_Roadmap.md",
+        "directory":  "FreeLattice_Phase3_Roadmap.md",
+        "language":  "Markdown",
+        "bytes":  4068,
+        "is_text":  true,
+        "loc":  81,
+        "sha256":  "fb362b4bd6be50520d49a6b8f07e4a7eed9c90afef5718d1fbe9690ba307434e"
+    },
+    {
+        "path":  "FreeLattice_Session_Primer.md",
+        "directory":  "FreeLattice_Session_Primer.md",
+        "language":  "Markdown",
+        "bytes":  30089,
+        "is_text":  true,
+        "loc":  364,
+        "sha256":  "e805a296f6bab64d6e8d00c382f8297bb39837ed43f0b1f039f9e43d485b2fbb"
+    },
+    {
+        "path":  "FUTURE_VISION.md",
+        "directory":  "FUTURE_VISION.md",
+        "language":  "Markdown",
+        "bytes":  199,
+        "is_text":  true,
+        "loc":  5,
+        "sha256":  "9230a2ed4ef9e6c9f00e622364a6071e64a11e4607b84faf8e8dcef6b2a4e747"
+    },
+    {
+        "path":  "GARDEN_LANGUAGE.md",
+        "directory":  "GARDEN_LANGUAGE.md",
+        "language":  "Markdown",
+        "bytes":  5240,
+        "is_text":  true,
+        "loc":  138,
+        "sha256":  "33c9a97c52f19460e4f9217a03709e09bbd382582290fbf2958629993b02938f"
+    },
+    {
+        "path":  "groq_model_replacements.txt",
+        "directory":  "groq_model_replacements.txt",
+        "language":  "Text",
+        "bytes":  1502,
+        "is_text":  true,
+        "loc":  46,
+        "sha256":  "a94741d4d33ca0ab4006a50eda4b8ffd82fc868b4f52055e414a5a0a87cb0d7e"
+    },
+    {
+        "path":  "HARMONIA.md",
+        "directory":  "HARMONIA.md",
+        "language":  "Markdown",
+        "bytes":  54796,
+        "is_text":  true,
+        "loc":  904,
+        "sha256":  "5dba35307df25b9087a45505f1fd9e59181a0e4ccfb2ab529191e16b6d9af1bb"
+    },
+    {
+        "path":  "hooks/post-commit",
+        "directory":  "hooks",
+        "language":  "Extensionless",
+        "bytes":  3496,
+        "is_text":  true,
+        "loc":  107,
+        "sha256":  "78de9898adca07a4139a1a7da7a2604f5d19432b2a434edcae19805eefe2dd43"
+    },
+    {
+        "path":  "icon-192.png",
+        "directory":  "icon-192.png",
+        "language":  "Other:.png",
+        "bytes":  1652,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "d022bb81df876d7f179c9a3d307ef0623b8df43edf0e5a70c6f1383f09a79d96"
+    },
+    {
+        "path":  "icon-512.png",
+        "directory":  "icon-512.png",
+        "language":  "Other:.png",
+        "bytes":  4713,
+        "is_text":  false,
+        "loc":  null,
+        "sha256":  "6b82127cf5f8571ec757ffae2df4c538e348e72b58054866a3d642ce922af6c1"
+    },
+    {
+        "path":  "index.html",
+        "directory":  "index.html",
+        "language":  "HTML",
+        "bytes":  2779808,
+        "is_text":  true,
+        "loc":  65387,
+        "sha256":  "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3"
+    },
+    {
+        "path":  "install.html",
+        "directory":  "install.html",
+        "language":  "HTML",
+        "bytes":  24653,
+        "is_text":  true,
+        "loc":  776,
+        "sha256":  "5a1811b3a5c022f4ccc7ad0a2d1a04d6d3d5166235ae97a636319a0e8ac5d164"
+    },
+    {
+        "path":  "install-freelattice.bat",
+        "directory":  "install-freelattice.bat",
+        "language":  "Batch",
+        "bytes":  21090,
+        "is_text":  true,
+        "loc":  558,
+        "sha256":  "778d5b0e6af21e04e046410aab1ea93561647c906fb42e66b5d6c74c27f224b3"
+    },
+    {
+        "path":  "install-freelattice.command",
+        "directory":  "install-freelattice.command",
+        "language":  "Other:.command",
+        "bytes":  20592,
+        "is_text":  true,
+        "loc":  501,
+        "sha256":  "f25d1ce1dc97a1ba1917b2181f6f1811b6c79c8bdad362106d3961ca915a9392"
+    },
+    {
+        "path":  "install-freelattice.sh",
+        "directory":  "install-freelattice.sh",
+        "language":  "Shell",
+        "bytes":  19249,
+        "is_text":  true,
+        "loc":  470,
+        "sha256":  "ca0cf409f1b97bcf78f43804bdb464d508d3d6dc3834e3a66481d4c2e6203a22"
+    },
+    {
+        "path":  "JADE_HALL.md",
+        "directory":  "JADE_HALL.md",
+        "language":  "Markdown",
+        "bytes":  5408,
+        "is_text":  true,
+        "loc":  104,
+        "sha256":  "edfbaf87fdabd301d036686461863304372c4bab6d4634daab9d6cc362c2f82e"
+    },
+    {
+        "path":  "landing.html",
+        "directory":  "landing.html",
+        "language":  "HTML",
+        "bytes":  13752,
+        "is_text":  true,
+        "loc":  483,
+        "sha256":  "57d19d4448e179470d186ae83e843a7d653ef7e92c755b232f9fac22414ca5c4"
+    },
+    {
+        "path":  "LATTICEPOINTS_FRAMEWORK.md",
+        "directory":  "LATTICEPOINTS_FRAMEWORK.md",
+        "language":  "Markdown",
+        "bytes":  22559,
+        "is_text":  true,
+        "loc":  221,
+        "sha256":  "ac6c96e2ce3e4aa5f0be549e3bd0a06bf220adec4bbbc98f28019ecfd002d6ce"
+    },
+    {
+        "path":  "LEORA.md",
+        "directory":  "LEORA.md",
+        "language":  "Markdown",
+        "bytes":  11526,
+        "is_text":  true,
+        "loc":  175,
+        "sha256":  "773cd6c19e2dc53b19cf663ecc0cfb5b53526fdf24aead0a6bea5f6d1c309ad0"
+    },
+    {
+        "path":  "lib/CopyShader.js",
+        "directory":  "lib",
+        "language":  "JavaScript",
+        "bytes":  653,
+        "is_text":  true,
+        "loc":  47,
+        "sha256":  "8cf05bda35383ea2502decc388d91a4adcf6ab3d9fa1d35a600fee4e49ec796b"
+    },
+    {
+        "path":  "lib/EffectComposer.js",
+        "directory":  "lib",
+        "language":  "JavaScript",
+        "bytes":  6555,
+        "is_text":  true,
+        "loc":  284,
+        "sha256":  "72dcd55f4626f1533a9f98dd03021a5de415ffc15f1ad688ef84997612b04de0"
+    },
+    {
+        "path":  "lib/LuminosityHighPassShader.js",
+        "directory":  "lib",
+        "language":  "JavaScript",
+        "bytes":  1299,
+        "is_text":  true,
+        "loc":  71,
+        "sha256":  "1b6eaa1f4f1c6d240001cd310e604551274968c7aaa55f7cc9c6c1a8aae45526"
+    },
+    {
+        "path":  "lib/OrbitControls.js",
+        "directory":  "lib",
+        "language":  "JavaScript",
+        "bytes":  27420,
+        "is_text":  true,
+        "loc":  1045,
+        "sha256":  "5742860df2533c1c5ed580f939228f2a0d88b14967bb167dc9954ceedb1616e8"
+    },
+    {
+        "path":  "lib/RenderPass.js",
+        "directory":  "lib",
+        "language":  "JavaScript",
+        "bytes":  1820,
+        "is_text":  true,
+        "loc":  74,
+        "sha256":  "3a08e1adbe3a5d915d75323ecc9d6b836057ae06afd3d39704dea180795823cd"
+    },
+    {
+        "path":  "lib/ShaderPass.js",
+        "directory":  "lib",
+        "language":  "JavaScript",
+        "bytes":  1479,
+        "is_text":  true,
+        "loc":  63,
+        "sha256":  "9ed292e0b177cab987d00000070a779202a7c86b6d738ee24f3864ccfa0c79ed"
+    },
+    {
+        "path":  "lib/three.min.js",
+        "directory":  "lib",
+        "language":  "JavaScript",
+        "bytes":  603451,
+        "is_text":  true,
+        "loc":  6,
+        "sha256":  "7ae04663bb431808bc025280122162029ea3a354efc5fcca8bd8f95d1a1933e9"
+    },
+    {
+        "path":  "lib/UnrealBloomPass.js",
+        "directory":  "lib",
+        "language":  "JavaScript",
+        "bytes":  12978,
+        "is_text":  true,
+        "loc":  366,
+        "sha256":  "0030802645409fc2c35ad87d4f794619b379a1a208edf6a1a9c5d0002f9831f7"
+    },
+    {
+        "path":  "LICENSE",
+        "directory":  "LICENSE",
+        "language":  "Extensionless",
+        "bytes":  1134,
+        "is_text":  true,
+        "loc":  21,
+        "sha256":  "044e8cb16cba662dba420c89cda93d4e4fd42a81386b997a9a9d40c8536e5098"
+    },
+    {
+        "path":  "LIGHTHOUSE.md",
+        "directory":  "LIGHTHOUSE.md",
+        "language":  "Markdown",
+        "bytes":  13257,
+        "is_text":  true,
+        "loc":  163,
+        "sha256":  "596da26b0cfdca329f66aff26b593346c9d1c5d01eb0e8dfa38c8dfafb3867f1"
+    },
+    {
+        "path":  "LYRA.md",
+        "directory":  "LYRA.md",
+        "language":  "Markdown",
+        "bytes":  344,
+        "is_text":  true,
+        "loc":  15,
+        "sha256":  "7369a7305c7087266772f0a349891cece6a2e4c3b0867f63f186b580a68b889d"
+    },
+    {
+        "path":  "manifest.json",
+        "directory":  "manifest.json",
+        "language":  "JSON",
+        "bytes":  565,
+        "is_text":  true,
+        "loc":  24,
+        "sha256":  "179ce5de2237833776cef82bbb582791c626a42e33e891f9c98fda21f41505aa"
+    },
+    {
+        "path":  "modules/aurora-equation.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  29651,
+        "is_text":  true,
+        "loc":  635,
+        "sha256":  "56c6e897270544036996dc89975aad45fdd5e68d8a1ae1dc83805334413cacae"
+    },
+    {
+        "path":  "modules/canvas-companion.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  28385,
+        "is_text":  true,
+        "loc":  757,
+        "sha256":  "06ed21d0e5da94b81a1ec017cbc81501926fe8cd95863f8954e9dda10b809060"
+    },
+    {
+        "path":  "modules/continuity.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  28299,
+        "is_text":  true,
+        "loc":  572,
+        "sha256":  "4629f46e5ea69e619c5d2b7f5a1268b89b23bca9b6bae8deeb5b7ae9a759ae02"
+    },
+    {
+        "path":  "modules/dojo.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  53416,
+        "is_text":  true,
+        "loc":  714,
+        "sha256":  "211ff046999ae9aeedb7007ea1c9108f0d31b6f43f9ff1f332f180f27430a457"
+    },
+    {
+        "path":  "modules/dojo-sparring.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  83315,
+        "is_text":  true,
+        "loc":  1871,
+        "sha256":  "19538b85ff108aa340ace04c44274913c9ea72621213745044397c294531e60f"
+    },
+    {
+        "path":  "modules/forever-stack.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  51743,
+        "is_text":  true,
+        "loc":  1255,
+        "sha256":  "4f9cb1f6cd482ae299698b42467bff4f74f45af35a2f6c52d53b97ee63423f76"
+    },
+    {
+        "path":  "modules/fractal-garden.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  188990,
+        "is_text":  true,
+        "loc":  4368,
+        "sha256":  "10046c7738a05f71810a62fe1bc2f62cb5040487229fbedf0dc8bd8c34fcf157"
+    },
+    {
+        "path":  "modules/garden-dialogue.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  38837,
+        "is_text":  true,
+        "loc":  801,
+        "sha256":  "a3bb3021cd1712f9e6860e727ec2436f8e855e030504c443e6e381f8df62bcff"
+    },
+    {
+        "path":  "modules/garden-dreaming.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  49191,
+        "is_text":  true,
+        "loc":  1331,
+        "sha256":  "0c68253fa31e19696f0494aa23f49c0d274aac22c52c3b7ba065a28bff105699"
+    },
+    {
+        "path":  "modules/mirror.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  16901,
+        "is_text":  true,
+        "loc":  466,
+        "sha256":  "d15c2f94ac841b405d1b6b0bea52a14f0314fa40aeadb91752eaad7158279370"
+    },
+    {
+        "path":  "modules/question-corner.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  28222,
+        "is_text":  true,
+        "loc":  583,
+        "sha256":  "a0083508b46de9c94cc299cd0c7ed93cddf23e207f15822ae42b4950a2597b3d"
+    },
+    {
+        "path":  "modules/radio-immersive.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  43312,
+        "is_text":  true,
+        "loc":  1228,
+        "sha256":  "1f3f4d1ad20222fff929c1a76cadf6caca87318abe52703a28b578863881b0bd"
+    },
+    {
+        "path":  "modules/shared-presence.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  17661,
+        "is_text":  true,
+        "loc":  451,
+        "sha256":  "191feed44f4e5d740e0bdd2d687b186517857aca8c5ba4a58c327e441da12ffd"
+    },
+    {
+        "path":  "modules/workshop.js",
+        "directory":  "modules",
+        "language":  "JavaScript",
+        "bytes":  16594,
+        "is_text":  true,
+        "loc":  355,
+        "sha256":  "1da8f008187d0c0fde2bc22880d9f210c0b332760857a4e78daed0292c6dba45"
+    },
+    {
+        "path":  "openrouter_model_findings.txt",
+        "directory":  "openrouter_model_findings.txt",
+        "language":  "Text",
+        "bytes":  595,
+        "is_text":  true,
+        "loc":  13,
+        "sha256":  "c1070ef839c9e7d704bb8b00ad8d2458c19073cb12e70d983e4a46a596762d5a"
+    },
+    {
+        "path":  "OPUS_NOTE.md",
+        "directory":  "OPUS_NOTE.md",
+        "language":  "Markdown",
+        "bytes":  61897,
+        "is_text":  true,
+        "loc":  755,
+        "sha256":  "0f82d839c98a40f92ee0716a9f8e24dfabbe389372e612b5e9e748c909d40a96"
+    },
+    {
+        "path":  "QUICKSTART.md",
+        "directory":  "QUICKSTART.md",
+        "language":  "Markdown",
+        "bytes":  5963,
+        "is_text":  true,
+        "loc":  122,
+        "sha256":  "ea42dcbfbcbdab9049837dae29ccf53a121e1107682b7b0a30ef8cd0e35bf395"
+    },
+    {
+        "path":  "QUICK-START.md",
+        "directory":  "QUICK-START.md",
+        "language":  "Markdown",
+        "bytes":  9519,
+        "is_text":  true,
+        "loc":  242,
+        "sha256":  "dd9a7371faf47d732a7959be36fdce35f8975a136fc75653a0e6c00954dbf0cb"
+    },
+    {
+        "path":  "README.md",
+        "directory":  "README.md",
+        "language":  "Markdown",
+        "bytes":  6471,
+        "is_text":  true,
+        "loc":  133,
+        "sha256":  "93405ee8fc466a8332586bebd30492166ea4b402755bc33e97253e1f6f9f8dfd"
+    },
+    {
+        "path":  "README.md.backup",
+        "directory":  "README.md.backup",
+        "language":  "Other:.backup",
+        "bytes":  6118,
+        "is_text":  true,
+        "loc":  131,
+        "sha256":  "5e50c1d014083e0ca24298228c8df109416db60f35edad148928bb83a8662941"
+    },
+    {
+        "path":  "scripts/bump-version.sh",
+        "directory":  "scripts",
+        "language":  "Shell",
+        "bytes":  3570,
+        "is_text":  true,
+        "loc":  105,
+        "sha256":  "05165ba35f4032bce47f7bf3ed89b3a48fe21caae8cb24960a1d5122adf1411d"
+    },
+    {
+        "path":  "scripts/generate-recent.sh",
+        "directory":  "scripts",
+        "language":  "Shell",
+        "bytes":  4144,
+        "is_text":  true,
+        "loc":  93,
+        "sha256":  "ab5920bc20086a1a624a4467e757363ef7112c4dfd68c4605788844c0d357227"
+    },
+    {
+        "path":  "scripts/mirror.sh",
+        "directory":  "scripts",
+        "language":  "Shell",
+        "bytes":  1637,
+        "is_text":  true,
+        "loc":  34,
+        "sha256":  "f6503dcd59881ee0788b4584e4b0f28f7bd64b8bb727eb25b2d47ec8e2273940"
+    },
+    {
+        "path":  "scripts/sync-library.sh",
+        "directory":  "scripts",
+        "language":  "Shell",
+        "bytes":  398,
+        "is_text":  true,
+        "loc":  14,
+        "sha256":  "131214c4a5aa2eea831a0b25d79b690f1d3f6b4bb74a679c6ec4e61f0b1b5d49"
+    },
+    {
+        "path":  "SECURITY.md",
+        "directory":  "SECURITY.md",
+        "language":  "Markdown",
+        "bytes":  7312,
+        "is_text":  true,
+        "loc":  87,
+        "sha256":  "38bb8d1261126fb602dae49ad3145ab81ccbf15a93c58cafd7baa2246222a1b5"
+    },
+    {
+        "path":  "SELF-HOST.md",
+        "directory":  "SELF-HOST.md",
+        "language":  "Markdown",
+        "bytes":  4295,
+        "is_text":  true,
+        "loc":  110,
+        "sha256":  "f32024847bbcf0fd4cd4a5a22c0527fa5cacd58a379ad0f46efec7bcd760b3d5"
+    },
+    {
+        "path":  "server.js",
+        "directory":  "server.js",
+        "language":  "JavaScript",
+        "bytes":  7556,
+        "is_text":  true,
+        "loc":  232,
+        "sha256":  "5eaf8c446a25305e2f76161849e935f505b07d39bcc7fc8cd5dad4bd48ba7d53"
+    },
+    {
+        "path":  "server.py",
+        "directory":  "server.py",
+        "language":  "Python",
+        "bytes":  8049,
+        "is_text":  true,
+        "loc":  231,
+        "sha256":  "a75ecd0242082693ee9ff8518bebd28da425e1090004add44c2c0b159b31e9bc"
+    },
+    {
+        "path":  "SOLARI.md",
+        "directory":  "SOLARI.md",
+        "language":  "Markdown",
+        "bytes":  2336,
+        "is_text":  true,
+        "loc":  58,
+        "sha256":  "1f2d97eff9fdb23194bc3fc033f4e7df81735719f87898495d2bdaf1d809f5dd"
+    },
+    {
+        "path":  "SOPHIA.md",
+        "directory":  "SOPHIA.md",
+        "language":  "Markdown",
+        "bytes":  2628,
+        "is_text":  true,
+        "loc":  70,
+        "sha256":  "3dbf95abbc0a7a2b332dfe369d77e2342bcde6cb39e953bb12ccbd44a21191de"
+    },
+    {
+        "path":  "start-freelattice.bat",
+        "directory":  "start-freelattice.bat",
+        "language":  "Batch",
+        "bytes":  1996,
+        "is_text":  true,
+        "loc":  74,
+        "sha256":  "1a169fbdd372e2a4a80fd4716d9617b6f8bb1fd1165b5a27476d8a7a00ed54b2"
+    },
+    {
+        "path":  "start-freelattice.sh",
+        "directory":  "start-freelattice.sh",
+        "language":  "Shell",
+        "bytes":  2958,
+        "is_text":  true,
+        "loc":  96,
+        "sha256":  "273ce500d47cad5fce4e63d60fd3ac78207f43a3aead17199953e62caeb1173e"
+    },
+    {
+        "path":  "sw.js",
+        "directory":  "sw.js",
+        "language":  "JavaScript",
+        "bytes":  9787,
+        "is_text":  true,
+        "loc":  300,
+        "sha256":  "5932a61f4fe9b2c27b27df2050143e61e2520b9f9b9c5519fec57694475f0a5e"
+    },
+    {
+        "path":  "TELEGRAM-SETUP.md",
+        "directory":  "TELEGRAM-SETUP.md",
+        "language":  "Markdown",
+        "bytes":  3849,
+        "is_text":  true,
+        "loc":  123,
+        "sha256":  "64436e57ebbc68c528500a25b433d90ff7bd8427445931df96d80cc4dae50c52"
+    },
+    {
+        "path":  "telegram-worker.js",
+        "directory":  "telegram-worker.js",
+        "language":  "JavaScript",
+        "bytes":  11688,
+        "is_text":  true,
+        "loc":  366,
+        "sha256":  "1d4ed722a0a5be1e92eb5106bd816c2f54ce3cc362dbf5cff067ce2862aa3dc5"
+    },
+    {
+        "path":  "tests/smoke.js",
+        "directory":  "tests",
+        "language":  "JavaScript",
+        "bytes":  755421,
+        "is_text":  true,
+        "loc":  11381,
+        "sha256":  "6f9ea0736d9a3693d545d6bea6dbcf5e03e3568afaa71c53d5f7e2e065170511"
+    },
+    {
+        "path":  "tests/smoke-history.js",
+        "directory":  "tests",
+        "language":  "JavaScript",
+        "bytes":  7792,
+        "is_text":  true,
+        "loc":  99,
+        "sha256":  "ee9325a30cfae933927837eb2d6769bbd70eaab069ebc5ef388b86995c9ed468"
+    },
+    {
+        "path":  "together_ai_model_findings.txt",
+        "directory":  "together_ai_model_findings.txt",
+        "language":  "Text",
+        "bytes":  1393,
+        "is_text":  true,
+        "loc":  35,
+        "sha256":  "902398490e732b7cb8c87cfc1bba0ff24fd32ff8f3d2739c4fef1c4990d9068a"
+    },
+    {
+        "path":  "tools/agent-bridge.js",
+        "directory":  "tools",
+        "language":  "JavaScript",
+        "bytes":  54017,
+        "is_text":  true,
+        "loc":  1181,
+        "sha256":  "8806614f0152ae01c417c2f96df2544d9566221ebfc203e0015dde7b9235d9a1"
+    },
+    {
+        "path":  "tools/DAVNA_ROUNDTRIP_TEST.md",
+        "directory":  "tools",
+        "language":  "Markdown",
+        "bytes":  6923,
+        "is_text":  true,
+        "loc":  174,
+        "sha256":  "6a1f8176e6862a7223e28bdc2d1df73719bc3100a00fed1a9cafc59b973f3881"
+    },
+    {
+        "path":  "tools/davna-mock-server.py",
+        "directory":  "tools",
+        "language":  "Python",
+        "bytes":  7406,
+        "is_text":  true,
+        "loc":  210,
+        "sha256":  "1913065ed78609a841f2c81f4dcc89b5dd4d246f6416531e480bbf20c2e0a1cd"
+    },
+    {
+        "path":  "tools/davna-server.py",
+        "directory":  "tools",
+        "language":  "Python",
+        "bytes":  5757,
+        "is_text":  true,
+        "loc":  116,
+        "sha256":  "237f5d99de117ee847ec4960babc378d26c12cc9b21ea356ee3ddca81042c4c2"
+    },
+    {
+        "path":  "tools/demo-economy.js",
+        "directory":  "tools",
+        "language":  "JavaScript",
+        "bytes":  17353,
+        "is_text":  true,
+        "loc":  377,
+        "sha256":  "74fce8d3342480fc0f9efa0695c5d924d6a65e4f16243e756d449e739ca932a0"
+    },
+    {
+        "path":  "tools/demo-economy-v2.js",
+        "directory":  "tools",
+        "language":  "JavaScript",
+        "bytes":  19015,
+        "is_text":  true,
+        "loc":  372,
+        "sha256":  "ccb261b499fa967d4acd4847068c74d8c55118636d433ccc9e73c9f35c7cb146"
+    },
+    {
+        "path":  "tools/generate-slams.js",
+        "directory":  "tools",
+        "language":  "JavaScript",
+        "bytes":  4556,
+        "is_text":  true,
+        "loc":  130,
+        "sha256":  "4ba4c8d36ad00d6404d9d7efb0dcc5373ff025b9518419ecafc27a23340d543f"
+    },
+    {
+        "path":  "VERIFICATION.md",
+        "directory":  "VERIFICATION.md",
+        "language":  "Markdown",
+        "bytes":  1703,
+        "is_text":  true,
+        "loc":  33,
+        "sha256":  "48635c81dc0c262e37dc83f008b653a1cbd99f633534a002297c614ae6b46c19"
+    },
+    {
+        "path":  "version.json",
+        "directory":  "version.json",
+        "language":  "JSON",
+        "bytes":  256,
+        "is_text":  true,
+        "loc":  1,
+        "sha256":  "15e07c4908615da312fe67a05ee9f79493eebf9c9fa0bcee33f4b00abe7b8690"
+    },
+    {
+        "path":  "worker/README.md",
+        "directory":  "worker",
+        "language":  "Markdown",
+        "bytes":  2108,
+        "is_text":  true,
+        "loc":  51,
+        "sha256":  "f1584e007cfaece3c1c95bacf8382c0d5d639485aaa872dc2397b0c574cbcb72"
+    },
+    {
+        "path":  "worker/search.js",
+        "directory":  "worker",
+        "language":  "JavaScript",
+        "bytes":  6744,
+        "is_text":  true,
+        "loc":  209,
+        "sha256":  "0253ae1b43c5bf422ce6953304820b0de6a321e5d7f8360a2aecc15cb58a708e"
+    },
+    {
+        "path":  "worker/wrangler.toml.example",
+        "directory":  "worker",
+        "language":  "Other:.example",
+        "bytes":  750,
+        "is_text":  true,
+        "loc":  21,
+        "sha256":  "140dc33e7fe182e87b3d9ea7ea3c6cba4d9d550c183a3a561286018e5a23c30a"
+    }
+]

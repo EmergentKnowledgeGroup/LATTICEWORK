@@ -1,0 +1,277 @@
+[
+  {
+    "path": ".github/ISSUE_TEMPLATE/audit_finding.yml",
+    "bytes": 1519,
+    "status": null
+  },
+  {
+    "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+    "bytes": 1462,
+    "status": null
+  },
+  {
+    "path": ".github/ISSUE_TEMPLATE/compatibility_regression.yml",
+    "bytes": 1445,
+    "status": null
+  },
+  {
+    "path": ".github/ISSUE_TEMPLATE/config.yml",
+    "bytes": 236,
+    "status": null
+  },
+  {
+    "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+    "bytes": 1077,
+    "status": null
+  },
+  {
+    "path": ".github/PULL_REQUEST_TEMPLATE.md",
+    "bytes": 1274,
+    "status": null
+  },
+  {
+    "path": "AGENTS.md",
+    "bytes": 3849,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "BRAND.md",
+    "bytes": 1692,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "bytes": 1733,
+    "status": null
+  },
+  {
+    "path": "CODE_OF_CONDUCT.md",
+    "bytes": 1476,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "CONTRIBUTING.md",
+    "bytes": 2168,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "DOCS_MANIFEST.md",
+    "bytes": 5149,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "GOVERNANCE.md",
+    "bytes": 2297,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "LICENSE",
+    "bytes": 1134,
+    "status": null
+  },
+  {
+    "path": "NOTICE.md",
+    "bytes": 1069,
+    "status": "LIVING"
+  },
+  {
+    "path": "ORIGIN.md",
+    "bytes": 1592,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "PACK_INSTALLATION.md",
+    "bytes": 1630,
+    "status": null
+  },
+  {
+    "path": "PRINCIPLES.md",
+    "bytes": 2575,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "PRIVACY.md",
+    "bytes": 1356,
+    "status": "LIVING"
+  },
+  {
+    "path": "PROJECT_CHARTER.md",
+    "bytes": 3272,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "PROJECT_STATE.md",
+    "bytes": 7208,
+    "status": "LIVING"
+  },
+  {
+    "path": "PROVENANCE.md",
+    "bytes": 2254,
+    "status": "LIVING"
+  },
+  {
+    "path": "README.md",
+    "bytes": 3684,
+    "status": null
+  },
+  {
+    "path": "ROADMAP.md",
+    "bytes": 2443,
+    "status": "LIVING"
+  },
+  {
+    "path": "SECURITY.md",
+    "bytes": 1557,
+    "status": "LIVING"
+  },
+  {
+    "path": "UPSTREAM.md",
+    "bytes": 1722,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "VOICE_AND_POSITIONING.md",
+    "bytes": 2562,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "docs/ARCHITECTURE.md",
+    "bytes": 8422,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/AUDIT_FINDINGS.md",
+    "bytes": 5801,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/AUDIT_METHODOLOGY.md",
+    "bytes": 2695,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "docs/BASELINE.md",
+    "bytes": 6919,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/CLAIMS_LEDGER.md",
+    "bytes": 2339,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/COMPARISON.md",
+    "bytes": 4529,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/COMPATIBILITY.md",
+    "bytes": 7223,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/CONTEXT_ENGINEERING.md",
+    "bytes": 2776,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "docs/DATA_AND_STORAGE.md",
+    "bytes": 4106,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/DEPENDENCY_INVENTORY.md",
+    "bytes": 5722,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/DIVERGENCES.md",
+    "bytes": 1458,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/DOCUMENTATION_STANDARD.md",
+    "bytes": 2390,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "docs/KNOWN_LIMITATIONS.md",
+    "bytes": 3570,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/METRICS_AND_BENCHMARKS.md",
+    "bytes": 4112,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/MIGRATION.md",
+    "bytes": 2329,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/PUBLIC_FAQ.md",
+    "bytes": 2154,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/README.md",
+    "bytes": 960,
+    "status": null
+  },
+  {
+    "path": "docs/REENGINEERING_METHOD.md",
+    "bytes": 2472,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "docs/RELEASE_PROCESS.md",
+    "bytes": 1451,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "docs/TESTING_AND_VERIFICATION.md",
+    "bytes": 9897,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/UPSTREAM_SYNC_LOG.md",
+    "bytes": 1626,
+    "status": "LIVING"
+  },
+  {
+    "path": "docs/agents/HANDOFF_TEMPLATE.md",
+    "bytes": 643,
+    "status": null
+  },
+  {
+    "path": "docs/agents/README.md",
+    "bytes": 716,
+    "status": null
+  },
+  {
+    "path": "docs/agents/SESSION_TEMPLATE.md",
+    "bytes": 652,
+    "status": null
+  },
+  {
+    "path": "docs/agents/SWARM_PROTOCOL.md",
+    "bytes": 2690,
+    "status": "CANONICAL"
+  },
+  {
+    "path": "docs/agents/WORK_CLAIM_TEMPLATE.md",
+    "bytes": 686,
+    "status": null
+  },
+  {
+    "path": "docs/decisions/0000-template.md",
+    "bytes": 812,
+    "status": null
+  },
+  {
+    "path": "docs/decisions/README.md",
+    "bytes": 555,
+    "status": null
+  }
+]

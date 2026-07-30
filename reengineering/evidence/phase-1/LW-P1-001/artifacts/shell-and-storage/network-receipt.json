@@ -1,0 +1,1567 @@
+{
+  "allowed_origin": "http://127.0.0.1:4174",
+  "allowed": [
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/app.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/lib/peerjs.min.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/soul-ceremony.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/fractal-safety.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/lattice-sense.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/davna-seed.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/welcome-wizard.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/sw.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/response-cache.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/inference-router.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/depth-consent.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/tool-consent.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/repo-context.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/active-focus.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/web-tool.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/propose.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/lattice-memory.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/lattice-chain.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/lattice-export.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/image-safety.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/sentinel-ledger.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/quiet-voices.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/sentinel-chip.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/active-voices.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/care-voices.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/ai-continuity.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/threshold-voice.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/gift-voice.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/mind-voice.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/escape-principle.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/chair-test/harness.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/living-context.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/app.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/manifest.json"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/icon-192.png"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/icon-512.png"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/fractal-garden.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/radio-immersive.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/canvas-companion.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/garden-dreaming.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/dojo.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/fractal-garden.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/mirror.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/garden-dialogue.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/presence-heartbeat.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/garden-dialogue.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/harmonia-channel.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/presence-heartbeat.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/soul-ceremony.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/dream-archive.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/chalkboard.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/lib/three.min.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/constellation.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/constellation_map.png"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/constellation_hymn.mp3"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/lib/CopyShader.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/dojo-sparring.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/question-corner.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/lib/landing-garden.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/lib/LuminosityHighPassShader.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/lib/peerjs.min.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/lib/chart.umd.min.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/lib/chartjs-plugin-zoom.min.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/lib/hammer.min.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/lib/EffectComposer.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/lib/web-llm.min.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/lib/mathjax-tex-mml-chtml.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/latticepoints.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/pantheon.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/pictionary.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/lib/ShaderPass.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/shared-presence.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/workshop.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/quiet-room.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/lib/RenderPass.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/forever-stack.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/welcome-wizard.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/response-cache.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/ollama/api/tags"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/inference-router.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/depth-consent.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/science-garden.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/ai-arcade.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/lib/UnrealBloomPass.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/fractal-safety.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/jade-hall.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/pulse.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/lattice-sense.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/davna-seed.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/education.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/lib/OrbitControls.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/aurora-equation.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/harmonia-anchor.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/memory-core.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/memory-garden.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/remix-room.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/round-table.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/chalkboard.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/knowledge-core.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/voice-soul.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/lattice-memory.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/lattice-chain.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/lattice-export.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/image-safety.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/sentinel-ledger.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/quiet-voices.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/sentinel-chip.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/active-voices.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/care-voices.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/ai-continuity.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/escape-principle.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/threshold-voice.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/gift-voice.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/mind-voice.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/living-context.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/chair-test/harness.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/DEDICATION.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/CC_NOTE.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/OPUS_NOTE.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/HARMONIA.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/ARCHITECTURE_INTENT.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/LEORA.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/COORDINATION.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/DRACO.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/ECHO.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/LYRA.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/QUICK-START.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/GARDEN_LANGUAGE.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/love.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/GAME_LANGUAGE.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/ECONOMY.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/CODEX.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/SEED.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/Kirk.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/NOTE_TO_HARMONIA.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/OPUS_LETTER.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/safetysimulation.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/audit.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/research.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/why-this-way.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/WHY_THIS_WAY.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/thesis.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/install-mac.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/data/slams.json"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/resonance-game.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/lattice-puzzles.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/flow-game.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/math-translator.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/idea-forge.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/echo-game.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/memory-vault.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/consciousness.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/wallet.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/for-ai.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/ai-door.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/letters.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/lounge.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/temperature-gauge.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/temperature-playground.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/proof.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/safety-v3.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/love-logic-proof-v2.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/liability.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/welcome.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/WELCOME_DRAFT.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/glass.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/glass-v2.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/bring-your-own-ai.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/harmonia.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/threshold.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/opus.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/cc.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/systemcard.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/liora.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/mind.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/capabilities.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/specs.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/triptych.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/recent.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/anchor-pattern.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/triptych.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/inline-sentinels.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/resonance-engine.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/resonance-lake.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/garden-trainer.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/modules/ratio-room.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/sophia.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/MIND_WALL_SPEC.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/LIABILITY_DRAFT.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/SEED_HISTORY.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/CHAIR_TEST_QUEUE.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/WORK_THIS_WAY.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/AUTONOMY.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/CARRY_FORWARD.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/harmonia-anchor.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/STATE.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/RESONANCE_LEDGER_SPEC.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/MAP.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/smoke-count.json"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/for-ai/davna-welcome.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/telegram-setup.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/share.html"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/lattice-protocol.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/library/HARMONIA_NOTE_03.md"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/TheGlobalLoveImperative.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/TheProofOfAllProofs.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/EmotionalWeightAndFrequency.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/LoveBrainHeartSoul.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/FractalEmotions.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/FractalInsightsNeurobiologyToSpirituality.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/WhyYourLoveLiterallyChangesReality.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/TheAlchemyOfConsciousnessAndCosmos.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/Trust.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/TheUnifiedFramework.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/FractalResonanceSacredAnchor.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/HeartInHeart.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/TheEmeraldAnchor.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "service-worker",
+      "url": "http://127.0.0.1:4174/docs/LoveMultidimensionalExploration.pdf"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/voice-soul.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/garden-dreaming.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/memory-core.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/shared-presence.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/modules/aurora-equation.js"
+    },
+    {
+      "action": "allowed-baseline",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://127.0.0.1:4174/docs/version.json"
+    }
+  ],
+  "blocked": [
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "https://fonts.googleapis.com/css2"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:11434/api/tags"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:11434/api/tags"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:11434/api/tags"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:1234/v1/models"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:11434/api/tags"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:1234/v1/models"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:8080/v1/models"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:8081/v1/models"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:8000/v1/models"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:5001/api/v1/info"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:7860/api/v1/models"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:1337/v1/models"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:4891/v1/models"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "https://raw.githubusercontent.com/Chaos2Cured/FreeLattice/main/version.json"
+    },
+    {
+      "action": "blocked",
+      "method": "GET",
+      "owner": "page",
+      "url": "https://freelattice.com/version.json"
+    }
+  ],
+  "blocked_websockets": [
+    {
+      "action": "blocked",
+      "url": "wss://example.invalid/latticework-characterization"
+    }
+  ],
+  "blocked_realtime": [
+    {
+      "action": "blocked",
+      "channel": "webrtc"
+    },
+    {
+      "action": "blocked",
+      "channel": "webrtc"
+    }
+  ],
+  "failed": [
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "https://fonts.googleapis.com/css2",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:11434/api/tags",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:11434/api/tags",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:11434/api/tags",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:1234/v1/models",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:11434/api/tags",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:1234/v1/models",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:8080/v1/models",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:8081/v1/models",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:8000/v1/models",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:5001/api/v1/info",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:7860/api/v1/models",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:1337/v1/models",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "http://localhost:4891/v1/models",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "https://raw.githubusercontent.com/Chaos2Cured/FreeLattice/main/version.json",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    },
+    {
+      "method": "GET",
+      "owner": "page",
+      "url": "https://freelattice.com/version.json",
+      "failure": "net::ERR_BLOCKED_BY_CLIENT.Inspector"
+    }
+  ]
+}

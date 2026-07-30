@@ -1,0 +1,6 @@
+- heading "Signal Report" [level=3]
+- button "×"
+- paragraph: If chat is stuck or broken, tap Copy and send this to whoever helps you. No message content is included — only what your browser is doing.
+- text: "── FreeLattice Signal Report ── Time: 2026-07-30T10:10:15.848Z Version: v5.79.22 Provider: groq — model: llama User agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.7922.34 Safari/537 Last 0 chat attempts (privacy-locked — no message content): (none yet) Last 0 browser errors: (none captured) ── End of Report — safe to send Kirk ──"
+- button "Copied ✓"
+- button "Close"

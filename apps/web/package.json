@@ -1,0 +1,16 @@
+{
+  "name": "@latticework/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --project tsconfig.json",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --strictPort"
+  },
+  "dependencies": {
+    "@latticework/contracts": "0.0.0",
+    "@latticework/kernel": "0.0.0",
+    "lit": "3.3.3"
+  }
+}

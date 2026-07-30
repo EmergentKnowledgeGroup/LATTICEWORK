@@ -1,0 +1,16 @@
+{
+  "name": "@latticework/kernel",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --test src/kernel.test.mjs"
+  },
+  "dependencies": {
+    "@latticework/contracts": "0.0.0"
+  }
+}

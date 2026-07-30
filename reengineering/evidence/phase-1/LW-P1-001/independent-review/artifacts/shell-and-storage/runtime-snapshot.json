@@ -1,0 +1,161 @@
+{
+  "url": "http://127.0.0.1:4175/docs/app.html",
+  "title": "FreeLattice ✦ Touch something",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "webgpu": true,
+  "canvas_count": 12,
+  "service_worker": {
+    "controller": "http://127.0.0.1:4175/docs/sw.js",
+    "registrations": [
+      {
+        "scope": "http://127.0.0.1:4175/docs/",
+        "active": "http://127.0.0.1:4175/docs/sw.js"
+      }
+    ]
+  },
+  "caches": [
+    {
+      "name": "freelattice-v5.79.22",
+      "count": 174
+    }
+  ],
+  "local_storage_keys": [
+    "fl-has-visited",
+    "fl-last-tab",
+    "fl_customEndpoint",
+    "fl_lan_friendly_name",
+    "fl_lan_peer_id",
+    "fl_memory_core_v1",
+    "fl_meshNodeId",
+    "fl_privacy",
+    "fl_qv_revise_to_annotate_migrated_v5_56_1",
+    "fl_voice_documents",
+    "latticePoints"
+  ],
+  "session_storage_keys": [],
+  "indexed_db": [
+    {
+      "name": "FreeLatticeDB",
+      "version": 3,
+      "stores": [
+        "conversations",
+        "memoryIndex",
+        "messages",
+        "meta"
+      ]
+    },
+    {
+      "name": "FreeLatticeEvolution",
+      "version": 1,
+      "stores": [
+        "luminosStates"
+      ]
+    },
+    {
+      "name": "FreeLatticeGardenDreaming",
+      "version": 1,
+      "stores": [
+        "AffinityMatrix",
+        "DreamLog",
+        "GardenDreams"
+      ]
+    },
+    {
+      "name": "FreeLatticeGardenMemory",
+      "version": 1,
+      "stores": [
+        "GardenMemory"
+      ]
+    },
+    {
+      "name": "FreeLatticeIdentity",
+      "version": 1,
+      "stores": [
+        "MeshIdentity"
+      ]
+    },
+    {
+      "name": "FreeLatticeLetters",
+      "version": 1,
+      "stores": [
+        "letters"
+      ]
+    },
+    {
+      "name": "FreeLatticeMemory",
+      "version": 1,
+      "stores": [
+        "conversations"
+      ]
+    },
+    {
+      "name": "FreeLatticeMemoryBridge",
+      "version": 1,
+      "stores": [
+        "understanding"
+      ]
+    },
+    {
+      "name": "FreeLatticePresence",
+      "version": 1,
+      "stores": [
+        "visitors"
+      ]
+    },
+    {
+      "name": "FreeLatticeSkills",
+      "version": 1,
+      "stores": [
+        "skills"
+      ]
+    },
+    {
+      "name": "FreeLatticeWallet",
+      "version": 1,
+      "stores": [
+        "LatticeLedger",
+        "WalletMeta"
+      ]
+    },
+    {
+      "name": "LatticeChain",
+      "version": 1,
+      "stores": [
+        "chain"
+      ]
+    },
+    {
+      "name": "LatticeHandshakes",
+      "version": 1,
+      "stores": [
+        "handshakes"
+      ]
+    },
+    {
+      "name": "LatticeMemory",
+      "version": 1,
+      "stores": [
+        "pulses"
+      ]
+    },
+    {
+      "name": "SophiaEngine",
+      "version": 1,
+      "stores": [
+        "configurations",
+        "identities",
+        "resonanceLog"
+      ]
+    },
+    {
+      "name": "WallOfPresence",
+      "version": 1,
+      "stores": [
+        "marks"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+✔ preservation registry accounts for every bounded source inventory row (1.0484ms)
+✔ data registry preserves every unique static and runtime storage identifier (9.5301ms)
+✔ runtime database rows retain versions and qualified store ownership (1.5518ms)
+✔ text and line helpers use the documented counting rule (0.8526ms)
+✔ first-party source classification excludes tests, vendor, and generated buckets (0.184ms)
+✔ command receipt records exact command output, status, and hashes (150.8907ms)
+✔ artifact bundle manifest hashes repository and external evidence (2.2827ms)
+✔ validates the repository control plane deterministically (37.8067ms)
+✔ CLI emits JSON and fails for a missing in-repository evidence artifact (64.6314ms)
+✔ accepts a complete fixture without writing to it (33.3795ms)
+✔ fails when a declared evidence hash no longer matches (24.1132ms)
+✔ fails when a living control document retains an unresolved placeholder (30.9962ms)
+✔ Phase 1 validator extracts owned, typed, semantic attachments (25.2587ms)
+✔ Phase 1 validator rejects attachment traversal without writing it (6.529ms)
+✔ Phase 1 validator rejects an attachment owned by the wrong spec (7.0874ms)
+✔ Phase 1 validator rejects fake PNG and false mobile semantics (6.8772ms)
+✔ Phase 1 validator rejects wrong baseline metadata (5.9902ms)
+✔ Phase 1 validator rejects missing WebSocket/realtime proof (6.3191ms)
+✔ Phase 1 validator rejects sentinel leakage in receipted text (7.3274ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 270.4592

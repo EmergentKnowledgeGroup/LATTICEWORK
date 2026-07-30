@@ -1,0 +1,13 @@
+{
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "generator_command": "powershell -NoProfile -ExecutionPolicy Bypass -File Z:\\LATTICEWORK\\reengineering\\evidence\\phase-0\\LW-M0-INV-001\\inventory.ps1 -Baseline Z:\\LATTICEWORK_BASELINE_e7585999 -OutDir Z:\\LATTICEWORK\\reengineering\\evidence\\phase-0\\LW-M0-INV-001",
+  "why_external": "These raw regex-hit outputs are reproducible but are high-volume line-level evidence (approximately 59 MB combined). They are preserved outside the candidate repository to keep the Phase 0 evidence change reviewable; compact identifier and assignment summaries remain in-repository.",
+  "artifacts": [
+    {"name":"external-cdn-hints.csv","external_absolute_path":"Z:\\LATTICEWORK_PRESERVATION\\phase-0\\LW-M0-INV-001\\external-cdn-hints.csv","bytes":6723908,"sha256":"535191f0bb5041c661f78d9c4e60a89f813fdd4b03ba105503252ffc481aaceb"},
+    {"name":"external-cdn-hints.json","external_absolute_path":"Z:\\LATTICEWORK_PRESERVATION\\phase-0\\LW-M0-INV-001\\external-cdn-hints.json","bytes":7042338,"sha256":"2048c0a5fc679346114c5d758809d96ae16c435165706cdd7ae38cdfef85ef22"},
+    {"name":"storage-hits.csv","external_absolute_path":"Z:\\LATTICEWORK_PRESERVATION\\phase-0\\LW-M0-INV-001\\storage-hits.csv","bytes":9535160,"sha256":"15901bffdcd64418578049c94fbb94d84d0e22ee3ee42e3dc4a6306add9d0834"},
+    {"name":"storage-hits.json","external_absolute_path":"Z:\\LATTICEWORK_PRESERVATION\\phase-0\\LW-M0-INV-001\\storage-hits.json","bytes":9853212,"sha256":"e47eddc092776eb0e2488dae8681503fc8facd3998cf4e13e4e3f36daac48c8e"},
+    {"name":"window-hits.csv","external_absolute_path":"Z:\\LATTICEWORK_PRESERVATION\\phase-0\\LW-M0-INV-001\\window-hits.csv","bytes":12605115,"sha256":"dbd158fa995bfe059674d3c4537cde6db20f0596ddcb08f14754b67bf753a2db"},
+    {"name":"window-hits.json","external_absolute_path":"Z:\\LATTICEWORK_PRESERVATION\\phase-0\\LW-M0-INV-001\\window-hits.json","bytes":13170016,"sha256":"9cdebc60290b7e081af096cdb5c9ea48bda7fa93f970a18479251547ff04efd7"}
+  ]
+}

@@ -1,0 +1,14 @@
+- main "Candidate status shell":
+  - paragraph: LATTICEWORK / candidate boundary
+  - heading "Candidate status shell" [level=1]
+  - paragraph: This local-only view is a candidate architecture seam, not a replacement application.
+  - paragraph: Candidate only. No migrated features are available in this shell.
+  - term: Kernel
+  - definition: Ready
+  - term: Lifecycle
+  - definition: Ready
+  - term: Diagnostics
+  - definition: 0 recorded
+  - link "Read the candidate boundary":
+    - /url: "#candidate-details"
+  - paragraph: The preserved legacy runtime remains authoritative. This shell does not access storage, network services, providers, service workers, or migrated routes.

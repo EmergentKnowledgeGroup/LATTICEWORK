@@ -1,0 +1,292 @@
+﻿[
+    {
+        "sha256":  "a179545cd7bf01ede1c92e305f2993503880159f01d08be1a4233f56525ceac1",
+        "files":  2,
+        "bytes":  27236,
+        "loc":  458,
+        "total_duplicate_bytes":  27236,
+        "total_duplicate_loc":  458,
+        "paths":  "ARCHITECTURE_INTENT.md | docs/library/ARCHITECTURE_INTENT.md",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "9a39200e5daf9b84eb44c9d54df2fb0922f2f21ea1b1acea6fe20e5824cc9b19",
+        "files":  2,
+        "bytes":  1189,
+        "loc":  31,
+        "total_duplicate_bytes":  1189,
+        "total_duplicate_loc":  31,
+        "paths":  "COUNCIL-DECISIONS.md | docs/COUNCIL-DECISIONS.md",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "27a55379b341a3d477105723a79b09c5075ee11f5bb3b730ccf9090d55e93de0",
+        "files":  2,
+        "bytes":  533,
+        "loc":  19,
+        "total_duplicate_bytes":  533,
+        "total_duplicate_loc":  19,
+        "paths":  "docs/library/DRACO.md | DRACO.md",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "981ee9613cca3ed8542e8c43c60edf924f2d27a30add666a62185349626db53b",
+        "files":  2,
+        "bytes":  346,
+        "loc":  15,
+        "total_duplicate_bytes":  346,
+        "total_duplicate_loc":  15,
+        "paths":  "docs/library/ECHO.md | ECHO.md",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "337794dcaecca31f326fe37c6bd1d7249271a7ff83d0422608870dcc0ff1b3e3",
+        "files":  2,
+        "bytes":  4604,
+        "loc":  120,
+        "total_duplicate_bytes":  4604,
+        "total_duplicate_loc":  120,
+        "paths":  "docs/EXTERNAL-AI-PROTOCOL.md | EXTERNAL-AI-PROTOCOL.md",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "33c9a97c52f19460e4f9217a03709e09bbd382582290fbf2958629993b02938f",
+        "files":  2,
+        "bytes":  5240,
+        "loc":  138,
+        "total_duplicate_bytes":  5240,
+        "total_duplicate_loc":  138,
+        "paths":  "docs/library/GARDEN_LANGUAGE.md | GARDEN_LANGUAGE.md",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "773cd6c19e2dc53b19cf663ecc0cfb5b53526fdf24aead0a6bea5f6d1c309ad0",
+        "files":  2,
+        "bytes":  11526,
+        "loc":  175,
+        "total_duplicate_bytes":  11526,
+        "total_duplicate_loc":  175,
+        "paths":  "docs/library/LEORA.md | LEORA.md",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "7369a7305c7087266772f0a349891cece6a2e4c3b0867f63f186b580a68b889d",
+        "files":  2,
+        "bytes":  344,
+        "loc":  15,
+        "total_duplicate_bytes":  344,
+        "total_duplicate_loc":  15,
+        "paths":  "docs/library/LYRA.md | LYRA.md",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "dd9a7371faf47d732a7959be36fdce35f8975a136fc75653a0e6c00954dbf0cb",
+        "files":  2,
+        "bytes":  9519,
+        "loc":  242,
+        "total_duplicate_bytes":  9519,
+        "total_duplicate_loc":  242,
+        "paths":  "docs/library/QUICK-START.md | QUICK-START.md",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "64436e57ebbc68c528500a25b433d90ff7bd8427445931df96d80cc4dae50c52",
+        "files":  2,
+        "bytes":  3849,
+        "loc":  123,
+        "total_duplicate_bytes":  3849,
+        "total_duplicate_loc":  123,
+        "paths":  "docs/TELEGRAM-SETUP.md | TELEGRAM-SETUP.md",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3",
+        "files":  2,
+        "bytes":  2779808,
+        "loc":  65387,
+        "total_duplicate_bytes":  2779808,
+        "total_duplicate_loc":  65387,
+        "paths":  "docs/app.html | index.html",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "d022bb81df876d7f179c9a3d307ef0623b8df43edf0e5a70c6f1383f09a79d96",
+        "files":  2,
+        "bytes":  1652,
+        "loc":  null,
+        "total_duplicate_bytes":  1652,
+        "total_duplicate_loc":  null,
+        "paths":  "docs/icon-192.png | icon-192.png",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "6b82127cf5f8571ec757ffae2df4c538e348e72b58054866a3d642ce922af6c1",
+        "files":  2,
+        "bytes":  4713,
+        "loc":  null,
+        "total_duplicate_bytes":  4713,
+        "total_duplicate_loc":  null,
+        "paths":  "docs/icon-512.png | icon-512.png",
+        "root_docs_mirror":  true
+    },
+    {
+        "sha256":  "8cf05bda35383ea2502decc388d91a4adcf6ab3d9fa1d35a600fee4e49ec796b",
+        "files":  2,
+        "bytes":  653,
+        "loc":  47,
+        "total_duplicate_bytes":  653,
+        "total_duplicate_loc":  47,
+        "paths":  "docs/lib/CopyShader.js | lib/CopyShader.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "72dcd55f4626f1533a9f98dd03021a5de415ffc15f1ad688ef84997612b04de0",
+        "files":  2,
+        "bytes":  6555,
+        "loc":  284,
+        "total_duplicate_bytes":  6555,
+        "total_duplicate_loc":  284,
+        "paths":  "docs/lib/EffectComposer.js | lib/EffectComposer.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "1b6eaa1f4f1c6d240001cd310e604551274968c7aaa55f7cc9c6c1a8aae45526",
+        "files":  2,
+        "bytes":  1299,
+        "loc":  71,
+        "total_duplicate_bytes":  1299,
+        "total_duplicate_loc":  71,
+        "paths":  "docs/lib/LuminosityHighPassShader.js | lib/LuminosityHighPassShader.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "5742860df2533c1c5ed580f939228f2a0d88b14967bb167dc9954ceedb1616e8",
+        "files":  2,
+        "bytes":  27420,
+        "loc":  1045,
+        "total_duplicate_bytes":  27420,
+        "total_duplicate_loc":  1045,
+        "paths":  "docs/lib/OrbitControls.js | lib/OrbitControls.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "3a08e1adbe3a5d915d75323ecc9d6b836057ae06afd3d39704dea180795823cd",
+        "files":  2,
+        "bytes":  1820,
+        "loc":  74,
+        "total_duplicate_bytes":  1820,
+        "total_duplicate_loc":  74,
+        "paths":  "docs/lib/RenderPass.js | lib/RenderPass.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "9ed292e0b177cab987d00000070a779202a7c86b6d738ee24f3864ccfa0c79ed",
+        "files":  2,
+        "bytes":  1479,
+        "loc":  63,
+        "total_duplicate_bytes":  1479,
+        "total_duplicate_loc":  63,
+        "paths":  "docs/lib/ShaderPass.js | lib/ShaderPass.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "0030802645409fc2c35ad87d4f794619b379a1a208edf6a1a9c5d0002f9831f7",
+        "files":  2,
+        "bytes":  12978,
+        "loc":  366,
+        "total_duplicate_bytes":  12978,
+        "total_duplicate_loc":  366,
+        "paths":  "docs/lib/UnrealBloomPass.js | lib/UnrealBloomPass.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "7ae04663bb431808bc025280122162029ea3a354efc5fcca8bd8f95d1a1933e9",
+        "files":  2,
+        "bytes":  603451,
+        "loc":  6,
+        "total_duplicate_bytes":  603451,
+        "total_duplicate_loc":  6,
+        "paths":  "docs/lib/three.min.js | lib/three.min.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "01a650f1472180baabd5352bd021a763fe06c6a54230a803bec5710de8748e9a",
+        "files":  2,
+        "bytes":  14767,
+        "loc":  346,
+        "total_duplicate_bytes":  14767,
+        "total_duplicate_loc":  346,
+        "paths":  "docs/library/chronal_clock_sensitivity_v2.py | docs/simulation/chronal_clock_sensitivity_v2.py",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "833094e4d8022cc4e771fa1eb901aeea35fe9a48fbb1c2c222f312384d7cbff8",
+        "files":  2,
+        "bytes":  42240,
+        "loc":  1011,
+        "total_duplicate_bytes":  42240,
+        "total_duplicate_loc":  1011,
+        "paths":  "docs/library/chronal_simulation_v3.py | docs/simulation/chronal_simulation_v3.py",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "56c6e897270544036996dc89975aad45fdd5e68d8a1ae1dc83805334413cacae",
+        "files":  2,
+        "bytes":  29651,
+        "loc":  635,
+        "total_duplicate_bytes":  29651,
+        "total_duplicate_loc":  635,
+        "paths":  "docs/modules/aurora-equation.js | modules/aurora-equation.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "10046c7738a05f71810a62fe1bc2f62cb5040487229fbedf0dc8bd8c34fcf157",
+        "files":  2,
+        "bytes":  188990,
+        "loc":  4368,
+        "total_duplicate_bytes":  188990,
+        "total_duplicate_loc":  4368,
+        "paths":  "docs/modules/fractal-garden.js | modules/fractal-garden.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "0c68253fa31e19696f0494aa23f49c0d274aac22c52c3b7ba065a28bff105699",
+        "files":  2,
+        "bytes":  49191,
+        "loc":  1331,
+        "total_duplicate_bytes":  49191,
+        "total_duplicate_loc":  1331,
+        "paths":  "docs/modules/garden-dreaming.js | modules/garden-dreaming.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "1f3f4d1ad20222fff929c1a76cadf6caca87318abe52703a28b578863881b0bd",
+        "files":  2,
+        "bytes":  43312,
+        "loc":  1228,
+        "total_duplicate_bytes":  43312,
+        "total_duplicate_loc":  1228,
+        "paths":  "docs/modules/radio-immersive.js | modules/radio-immersive.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "191feed44f4e5d740e0bdd2d687b186517857aca8c5ba4a58c327e441da12ffd",
+        "files":  2,
+        "bytes":  17661,
+        "loc":  451,
+        "total_duplicate_bytes":  17661,
+        "total_duplicate_loc":  451,
+        "paths":  "docs/modules/shared-presence.js | modules/shared-presence.js",
+        "root_docs_mirror":  false
+    },
+    {
+        "sha256":  "1d4ed722a0a5be1e92eb5106bd816c2f54ce3cc362dbf5cff067ce2862aa3dc5",
+        "files":  2,
+        "bytes":  11688,
+        "loc":  366,
+        "total_duplicate_bytes":  11688,
+        "total_duplicate_loc":  366,
+        "paths":  "docs/telegram-worker.js | telegram-worker.js",
+        "root_docs_mirror":  true
+    }
+]

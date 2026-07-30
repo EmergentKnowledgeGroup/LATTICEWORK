@@ -1,0 +1,66 @@
+name: Audit finding
+description: Submit a reproducible candidate finding
+title: "[AUDIT] "
+labels:
+  - audit
+body:
+  - type: input
+    id: baseline
+    attributes:
+      label: Baseline commit
+      placeholder: Full upstream or LATTICEWORK SHA
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence_type
+    attributes:
+      label: Evidence type
+      options:
+        - OBSERVED
+        - MEASURED
+        - INFERRED
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Precise claim
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Reproduction method
+      description: Include exact commands, tool versions, and environment
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Raw output or artifact
+      description: Remove secrets and personal data before attaching logs, artifacts, or other evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative explanations tested
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Limitations
+    validations:
+      required: true
+  - type: checkboxes
+    id: redaction
+    attributes:
+      label: Redaction check
+      options:
+        - label: I removed secrets and personal data
+          required: true

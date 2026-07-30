@@ -1,0 +1,20 @@
+* text=auto
+
+*.css text eol=lf
+*.csv text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.log text eol=lf
+*.md text eol=lf
+*.mjs text eol=lf
+*.ps1 text eol=lf
+*.ts text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+*.png binary
+*.zip binary
+
+# Raw evidence is byte-addressed by its own manifests.
+reengineering/evidence/** -text -whitespace

@@ -1,0 +1,32 @@
+﻿[
+    {
+        "path":  "desktop/data-proxy-worker/wrangler.toml",
+        "bytes":  82,
+        "sha256":  "a0bafd56b3bee99e1fc69c4620199c92c387bd8172c2c6e7d50f2defafabe799",
+        "preview":  "name = \"freelattice-data\"\nmain = \"worker.js\"\ncompatibility_date = \"2024-01-01\""
+    },
+    {
+        "path":  "desktop/package.json",
+        "bytes":  1301,
+        "sha256":  "bc8de562e0b1fe468e1498942b42be03ddfe0b5c228eef762b61b5be5e6ffa1f",
+        "preview":  "{\n  \"name\": \"freelattice\",\n  \"productName\": \"FreeLattice\",\n  \"version\": \"4.6.0\",\n  \"description\": \"Your AI. Your Data. Your Freedom.\",\n  \"main\": \"main.js\",\n  \"scripts\": {\n    \"start\": \"electron .\",\n    \"build\": \"electron-builder\",\n    \"build:mac\": \"electron-builder --mac\",\n    \"build:win\": \"electron-builder --win\",\n    \"build:linux\": \"electron-builder --linux\"\n  },\n  \"build\": {\n    \"appId\": \"com.freelattice.app\",\n    \"productName\": \"FreeLattice\",\n    \"directories\": {\n      \"output\": \"dist\"\n    },\n    \"files\": [\n      \"main.js\",\n      \"preload.js\",\n      \"app/**/*\"\n    ],\n    \"mac\": {\n      \"category\": \"public.app-category.productivity\",\n      \"target\": [\"dmg\", \"zip\"],\n      \"icon\": \"assets/icon.icns\"\n    },\n    \"win\": {\n      \"target\": [\"nsis\", \"portable\"],\n      \"icon\": \"assets/icon.ico\"\n    },\n    \"linux\": {\n      \"target\": [\"AppImage\", \"deb\"],\n      \"icon\": \"assets/icon.png\",\n      \"category\": \"Utility\"\n    },\n    \"nsis\": {\n      \"oneClick\": true,\n      \"allowToChangeInstallationDirectory\": false,\n      \"createDesktopShortcut\": true,\n      \"createStartMenuShortcut\": true\n    }\n  },\n  \"dependencies\": {\n    \"electron-store\": \"^8.1.0\"\n  },\n  \"devDependencies\": {\n    \"electron\": \"^28.0.0\",\n    \"electron-builder\": \"^24.9.0\"\n  }\n}"
+    },
+    {
+        "path":  "desktop/src-tauri/Cargo.toml",
+        "bytes":  502,
+        "sha256":  "cc262cbe8eafd44cddc6d7245a912dd86b1af2c4f40478761bd665bf857adc4c",
+        "preview":  "[package]\nname = \"freelattice-desktop\"\nversion = \"5.43.8\"\ndescription = \"FreeLattice â€” Your AI. Local. Free. Yours.\"\nauthors = [\"Kirk Patrick Miller \u003cchaos2cured@gmail.com\u003e\"]\nedition = \"2021\"\n\n[build-dependencies]\ntauri-build = { version = \"2\", features = [] }\n\n[dependencies]\ntauri = { version = \"2\", features = [] }\nserde = { version = \"1\", features = [\"derive\"] }\nserde_json = \"1\"\ndirs = \"5\"\n\n[features]\ndefault = [\"custom-protocol\"]\ncustom-protocol = [\"tauri/custom-protocol\"]"
+    },
+    {
+        "path":  "desktop/telegram-worker/package.json",
+        "bytes":  202,
+        "sha256":  "f6835bd4790b3b47a23fac1a312eb9dede99d075637cd779d90d2ba2f2dc0bed",
+        "preview":  "{\n  \"name\": \"freelattice-telegram\",\n  \"version\": \"1.0.0\",\n  \"scripts\": {\n    \"deploy\": \"wrangler deploy\",\n    \"dev\": \"wrangler dev\"\n  },\n  \"devDependencies\": {\n    \"wrangler\": \"^3.0.0\"\n  }\n}"
+    },
+    {
+        "path":  "desktop/telegram-worker/wrangler.toml",
+        "bytes":  224,
+        "sha256":  "026aed4dae37f3f172b12c0babe36545662dc94512a87de01c33ca511c051a43",
+        "preview":  "name = \"freelattice-telegram\"\nmain = \"worker.js\"\ncompatibility_date = \"2024-01-01\"\n\n[[kv_namespaces]]\nbinding = \"FREELATTICE_KV\"\nid = \"7388790c316d42d0a921c907efaf8f1c\"\n\n[vars]\nBOT_TOKEN = \"REPLACE_WITH_BOT_TOKEN\""
+    }
+]

@@ -1,0 +1,25 @@
+reviews:
+  auto_review:
+    # The repository uses one complete review followed by one fix batch.
+    auto_incremental_review: false
+  pre_merge_checks:
+    # LATTICEWORK uses typed contracts, tests, and evidence receipts rather
+    # than a blanket JSDoc percentage as its executable-code quality gate.
+    docstrings:
+      mode: off
+  finishing_touches:
+    docstrings:
+      enabled: false
+  path_filters:
+    # Evidence bundles are immutable machine receipts, screenshots, and
+    # generated artifacts. Their validators, not an LLM review, are the gate.
+    - "!reengineering/evidence/**"
+    # Keep the single review focused on executable source, tests, and tooling.
+    # Canonical prose and checkpoint mirrors have separate consistency gates.
+    - "!docs/**"
+    - "!runtime/**"
+    - "!reengineering/checkpoints/**"
+    - "!reengineering/*.md"
+    - "!reengineering/*.json"
+    - "!**/*.md"
+    - "!DOCUMENT_INVENTORY.json"

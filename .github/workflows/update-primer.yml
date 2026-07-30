@@ -105,3 +105,19 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "ci: Update Primer deployment state [$(date -u +%Y-%m-%d)]"
           git push
+
+  phase2-kernel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup TypeScript-capable Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24.13.0'
+
+      - name: Install workspace dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+
+      - name: Run typed kernel tests
+        run: npm run p2:test

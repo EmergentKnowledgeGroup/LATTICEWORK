@@ -1,87 +1,60 @@
-# Security Policy for FreeLattice
+<!-- Status: LIVING | Owner: Security lead or maintainers -->
 
-## Security Philosophy
+# Security Policy
 
-FreeLattice is a **zero-trust, client-side application**. All processing happens entirely within your web browser. No data — chat history, API keys, or personal information — ever leaves your machine to be stored on our servers. There is no telemetry, no analytics, and no tracking. The only external network calls are the API requests you explicitly initiate to your chosen AI provider or to GitHub.
+## Supported versions
 
-## φ-Salt Encryption Architecture
+| Version | Supported |
+|---|---|
+| Current stable release | Yes |
+| Current pre-release | Best effort |
+| Older releases | No, unless explicitly listed |
 
-API keys and GitHub tokens are encrypted at rest using **AES-256-GCM** via the browser's native Web Crypto API. Encryption keys are never stored directly; they are derived on demand using **PBKDF2** (100,000 iterations of SHA-256) from a passphrase composed of the provider name and the golden ratio constant (φ).
+## Reporting a vulnerability
 
-A critical component is the **φ-Salt (PhiSalt)**, a static 32-byte value derived from the golden ratio, adapted from Kirk Patrick Miller's [φ-Root Audit-Hash micro-service](https://github.com/Chaos2Cured). The salt being visible in source code is **by design**. Cryptographic salts are meant to be public — their purpose is to prevent pre-computed rainbow table attacks. Security comes from the strength of AES-GCM and PBKDF2, not from salt secrecy.
+Do not open a public issue for an unpatched vulnerability.
 
-## Encryption Flow
+Contact:
 
-| Step | Action |
-|------|--------|
-| **1. Input** | User enters an API key or GitHub token |
-| **2. Key Derivation** | PBKDF2 derives a 256-bit key from (provider name + φ constant) using the public PhiSalt |
-| **3. Encryption** | AES-GCM encrypts the credential with the derived key and a random 12-byte IV |
-| **4. Storage** | The IV + ciphertext are Base64-encoded and stored in `localStorage` |
-| **5. Decryption** | On API call, the same derivation process recreates the key to decrypt on demand |
+Use GitHub's private security-advisory form:
 
-Credentials exist in memory only for the duration of the API request.
+`https://github.com/EmergentKnowledgeGroup/LATTICEWORK/security/advisories/new`
 
-## Memory Integrity
+Include:
 
-Exported memory files include a **φ-hash** — a SHA-256 digest of the data with the PhiSalt prepended, mirroring Kirk's `HashLine()` function from `hasher.go`. On import, FreeLattice recomputes the hash and compares it to the stored value. A mismatch triggers a warning that the file may have been tampered with.
+- Affected version and commit.
+- Reproduction steps.
+- Expected and observed behavior.
+- Security impact.
+- Proof of concept, when safe.
+- Suggested mitigation, when available.
+- Whether user data, API keys, local models, browser storage, or peer connections are involved.
 
-## Input Sanitization
+## Security-sensitive surfaces
 
-All user-generated content, including chat messages and uploaded file names, is sanitized before DOM rendering to prevent Cross-Site Scripting (XSS) attacks. Raw, unsanitized content is preserved for the AI's context so the model receives information as intended, while the display layer remains protected.
+The project must treat these areas as sensitive:
 
-## Developer Credential Hygiene
+- API key handling.
+- IndexedDB and local persistence.
+- Import and export.
+- Service workers and caching.
+- Cross-origin requests.
+- Local model endpoints.
+- Cloud model providers.
+- WebRTC and peer-to-peer transport.
+- Identity keys, signatures, and hash chains.
+- Prompt and tool injection.
+- Untrusted user-generated content.
+- HTML rendering and XSS.
+- Dependency and supply-chain integrity.
 
-**Never embed a token in a git remote URL.** A URL like `https://ghp_xxx@github.com/owner/repo.git` stores the token in plaintext inside `.git/config`, where it leaks through `git remote -v`, screen shares, screenshots, and shell history. Use a credential helper that keeps tokens in the OS keychain instead:
+## Disclosure process
 
-```bash
-git remote set-url origin https://github.com/Chaos2Cured/FreeLattice.git
-git config credential.helper osxkeychain   # macOS — use 'manager' on Windows, 'libsecret'/'cache' on Linux
-```
+1. Confirm receipt.
+2. Reproduce and classify.
+3. Contain when necessary.
+4. Develop and verify a fix.
+5. Coordinate release.
+6. Publish a factual advisory after users can update.
 
-Git prompts for the token once on the next push and stores it securely thereafter — it never touches `.git/config`. The same rule applies to source files, scripts, and CI logs: no keys, tokens, or secrets in anything that gets committed or displayed. If a token is ever exposed, **revoke and reissue it immediately** — a leaked credential is compromised even after it's removed.
-
-## Repository PAT storage (current state — v5.39.2 Phase 1.1)
-
-When the AI is connected to a repository via the Settings → Connected Repositories card, an optional personal-access token can be supplied for private-repository access. PATs are stored in **`sessionStorage`** under the key `fl_repoPAT_<repoUrl>`. This means:
-
-- Survives navigation within the tab
-- Clears when the tab closes (NOT persisted across browser sessions)
-- Is **not** written to disk by the browser
-- Is **not** encrypted at rest in memory
-- Is **not** a real keychain integration
-
-This is the minimum acceptable storage given the absence of a real keychain abstraction. **PATs are never written to `localStorage`** — `saveState()` in `repo-context.js` strips the token field from the serialized repo record, and a smoke test asserts the row shape carries no `token`/`pat`/`auth` field. Audit-page ledger rows also exclude the token by row-shape contract.
-
-### Escalation path
-
-- **Phase 2 (when Tauri desktop is the primary surface):** use Tauri's secure-storage API.
-- **Phase 2 alt (browser):** Web Crypto wrap with a passphrase-derived key.
-
-### Rule for users
-
-Only paste PATs you can rotate easily, and prefer **scoped fine-grained tokens with read-only access** to specific repositories. The Settings card explicitly labels this constraint inline.
-
-## Web search via Cloudflare worker (Ship 3.1 — v5.41.1)
-
-The `/search` route on the FreeLattice Cloudflare worker is the back end that powers `[FL_SEARCH:]` consent-gated lookups. The receipt:
-
-- **Logs nothing to the worker's own log streams.** Cloudflare worker logs are disabled in the dashboard (Settings → Observability → Logs OFF). Grep `/worker/search.js` for `console.log` or `console.error` — there are zero.
-- **Caches nothing.** `Cache-Control: no-store` is set on every successful response.
-- **Rate-limits per IP** via a 60-second sliding window in Cloudflare KV. KV entries expire after 120 seconds and contain only a request count, never the query.
-- **Strips known tracking parameters** (`utm_*`, `fbclid`, `gclid`, `msclkid`, `mc_cid`, `mc_eid`, `_ga`, `igshid`, `ref`, `ref_src`, `ref_url`, `spm` — 14 in total) from result URLs before returning them to the client.
-- **Talks to Brave Search API** on the back end. Brave's privacy policy is the upstream limit on what FreeLattice can promise; we don't log beyond what Brave's edge requires. The Brave API key lives only in Cloudflare's secret storage — it never reaches the browser.
-- **The FreeLattice client (`docs/modules/web-tool.js`)** ledger logs that a search happened, the trust tier that allowed it, and the result count. It does NOT log the query, the result URLs, the titles, or the snippets. This is enforced by five smoke locks that fail the build if any of those fields ever appear in a ledger row.
-
-The full receipt:
-- Worker code: `/worker/search.js`
-- Deployed binding: `/worker/wrangler.toml.example` (template)
-- Brave API key: Cloudflare secret storage (`wrangler secret put BRAVE_API_KEY`)
-- Client-side ledger discipline: `docs/modules/web-tool.js` `appendLedger` one-way valve
-- Receipt locks: 5 privacy asserts in `tests/smoke.js` section 99f
-
-A co-creator can disable search entirely per-device by setting `localStorage.fl_searchEnabled = 'false'` or unchecking the "Allow the AI to search the web" toggle in Settings → Your Home. `FLWebTool.isAvailable()` respects this flag regardless of endpoint config.
-
-## Reporting Vulnerabilities
-
-If you discover a security vulnerability, please report it responsibly by [opening a GitHub issue](https://github.com/Chaos2Cured/FreeLattice/issues) or contacting the project creator, Kirk Patrick Miller, directly. We are committed to addressing verified security issues promptly.
+No security claim is final until the relevant threat model and verification evidence are documented.

@@ -1,0 +1,41 @@
+name: Feature request
+description: Propose a user-visible capability or improvement
+title: "[FEATURE] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Describe the problem before describing the implementation
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Desired behavior
+    validations:
+      required: true
+  - type: textarea
+    id: upstream
+    attributes:
+      label: Upstream relationship
+      description: Is this preserved upstream behavior, a divergence, or a new LATTICEWORK feature?
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints and compatibility impact
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Examples, research, or evidence
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: This request does not depend on attacking or impersonating upstream people
+          required: true

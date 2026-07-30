@@ -1,0 +1,46 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P2-001-lockfile-generate",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/s",
+    "/c",
+    "npm install --package-lock-only --ignore-scripts"
+  ],
+  "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"npm install --package-lock-only --ignore-scripts\"",
+  "cwd": "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\phase2-verification-4183\\lockfile-replay",
+  "started_at": "2026-07-30T12:40:33.737Z",
+  "ended_at": "2026-07-30T12:40:34.744Z",
+  "duration_ms": 1006.9107,
+  "timeout_ms": 300000,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "7e928bba605e0309273989bf8fd1303d2a822923",
+  "repository": {
+    "head": "7e928bba605e0309273989bf8fd1303d2a822923",
+    "status": "## HEAD (no branch)"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 21,
+      "sha256": "1653885425e247129fa2bb964669593cf6d691dc8d8f20c6cffd79a04682b6c9"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

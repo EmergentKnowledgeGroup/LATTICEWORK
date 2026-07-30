@@ -1,0 +1,268 @@
+{
+  "schema": "latticework.phase0-control-validation.v1",
+  "valid": true,
+  "repo_root": "Z:/LATTICEWORK",
+  "checks": {
+    "documents": [
+      {
+        "path": "AGENTS.md",
+        "exists": true,
+        "bytes": 3849,
+        "sha256": "75305388ce0e5497bdc26811cb9126f349e282c64243d6c3e558bc1cb0ec94ff",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "PROJECT_STATE.md",
+        "exists": true,
+        "bytes": 4099,
+        "sha256": "5924a5025f96f66d01902e3f6f0e9eeaf901d75125fe687fc3ff10e3f39c58b7",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "PROJECT_CHARTER.md",
+        "exists": true,
+        "bytes": 3272,
+        "sha256": "5ca36d21078e5ce17194a1964d37b75a63767080ec87cc995ea0d41ea0e24309",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "PRINCIPLES.md",
+        "exists": true,
+        "bytes": 2575,
+        "sha256": "dfae60f87398fe4921c764daf8eb0707549b90806c15514593ff9056a757686c",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "docs/BASELINE.md",
+        "exists": true,
+        "bytes": 6736,
+        "sha256": "40741e8a6ecb7ca6815b15f94caada70ecf03145d9eb82d6a3d477fe6e0c8ec9",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "docs/COMPATIBILITY.md",
+        "exists": true,
+        "bytes": 5168,
+        "sha256": "8e6547e09289e24bc1edbcbc0dfc9637d95e50719b2b6a832efe62593639e5bf",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "docs/ARCHITECTURE.md",
+        "exists": true,
+        "bytes": 7064,
+        "sha256": "ab45552c3857a4946eccfb83bd378a5e603253231bb24739bd637b4aedba0f34",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "docs/TESTING_AND_VERIFICATION.md",
+        "exists": true,
+        "bytes": 4872,
+        "sha256": "093c1e3734df82b1706ec60b216b5c5fdeb12798fa0816bc9a29031849057bf3",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "docs/METRICS_AND_BENCHMARKS.md",
+        "exists": true,
+        "bytes": 3330,
+        "sha256": "8c3fa9ceffc718c388b61951c73a17e3c19fb10d6cbab2d9e7a8b34aa03f1b18",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "docs/COMPARISON.md",
+        "exists": true,
+        "bytes": 4303,
+        "sha256": "e6134971a736605b45db17e3ce4a796856beb16a1a2afadc574e371e94585fb4",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "docs/CLAIMS_LEDGER.md",
+        "exists": true,
+        "bytes": 1499,
+        "sha256": "7bf792e3e031410c0fe65e1a77e12f826a73549ecd5ea4552cc795316b5b4420",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "PROVENANCE.md",
+        "exists": true,
+        "bytes": 2254,
+        "sha256": "4ae7330b8ae7778df9d5aafe9b9090578be1759a49968cc29d2d068fa813d382",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "reengineering/BASELINE_CAPABILITY_CONTRACT.md",
+        "exists": true,
+        "bytes": 2893,
+        "sha256": "54879df87524a2e1e1b9dbdef73a31700634449d530c750c630bf92d6abe381e",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "reengineering/BASELINE_TEST_REQUIREMENT_MANIFEST.md",
+        "exists": true,
+        "bytes": 1429,
+        "sha256": "c28e00cd80e076b5d546b5fdc297d15a320009a57932255637eb5074485566f2",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "reengineering/DATA_INVENTORY.md",
+        "exists": true,
+        "bytes": 2755,
+        "sha256": "6dd43b32801dbbe3170931a5c6c61cfffab6a20084b01801981468b3a6aa0111",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "reengineering/SECURITY_BOUNDARY_MAP.md",
+        "exists": true,
+        "bytes": 2054,
+        "sha256": "56a96899dfd9c34273d4b646e532104d9e6f3b8af691d5cb3d17a1f34a01801e",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "reengineering/LEGACY_SOURCE_MAP.md",
+        "exists": true,
+        "bytes": 1619,
+        "sha256": "d484ddfbeec960377daddfab9fd26e484eb98bf970488977f24d9037b52d6a83",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "reengineering/FEATURE_STATUS_REGISTRY.md",
+        "exists": true,
+        "bytes": 2592,
+        "sha256": "a4e96d286c1b965ba50e0616e1c1528d6300c26584b9a2b2ca50de049b47f5f3",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "reengineering/PARITY_MATRIX.md",
+        "exists": true,
+        "bytes": 1906,
+        "sha256": "e9ea486b459241b927c8ca87233d8a429192d83767247540df1520c6bce63c96",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "reengineering/EXECUTION_CHECKLIST.md",
+        "exists": true,
+        "bytes": 4181,
+        "sha256": "b76a2e65c3ec53a2f296d46ac76f087602f3188c1c7a86831353fa590d9d36c5",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "reengineering/BLOCKERBOARD.md",
+        "exists": true,
+        "bytes": 1812,
+        "sha256": "a1acaa38de9fdbc96fa964d91ba7a688194b3cc098408669eaf8a1e966c404ce",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "reengineering/RELEASE_READINESS.md",
+        "exists": true,
+        "bytes": 1401,
+        "sha256": "7c00118bc67a24675ada1a3e11cf6e9b61de6a1acbb9a31169109ad9c376e4df",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "reengineering/PERFORMANCE_PLAN.md",
+        "exists": true,
+        "bytes": 6560,
+        "sha256": "409ebe0d6f79e6547b1a5f96e9bf9cb654972bedca50a5dc7e1aec6a9d898291",
+        "unresolved_placeholder": false
+      },
+      {
+        "path": "reengineering/PLATFORM_SUPPORT_MATRIX.md",
+        "exists": true,
+        "bytes": 4628,
+        "sha256": "d945667797332d90db5992824e6dfb9162d1a2d1ba4993f28b74b41e8c0cdd78",
+        "unresolved_placeholder": false
+      }
+    ],
+    "adrs": [
+      {
+        "path": "docs/decisions/0001-canonical-source-and-build-strategy.md",
+        "bytes": 6672,
+        "sha256": "7d1bd6a0531027aead0311c5ed59076a7c93c748fdbced7b7231205b26e2f532",
+        "status": "Proposed",
+        "missing_sections": []
+      },
+      {
+        "path": "docs/decisions/0002-typescript-module-architecture.md",
+        "bytes": 5715,
+        "sha256": "42503ac3f57b3ff491a1ab196cac5d810afd6344443e9980790de58adcd7d486",
+        "status": "Proposed",
+        "missing_sections": []
+      },
+      {
+        "path": "docs/decisions/0003-ui-rendering-strategy.md",
+        "bytes": 6369,
+        "sha256": "e9ef5e8a30a9d1782c10167bdbbe4e13f8b40f4bdb77292ab69717c7202a97d1",
+        "status": "Proposed",
+        "missing_sections": []
+      }
+    ],
+    "checkpoints": [
+      {
+        "path": "runtime/checkpoints/LATEST.json",
+        "bytes": 4602,
+        "sha256": "b78c0c27e2c5cf51aefa2c04b10b4859183dd60ae46fb19929ea038925dd46cd",
+        "current_track": "LW_P1_CHARACTERIZATION WORK",
+        "track_count": 2
+      },
+      {
+        "path": "reengineering/checkpoints/LATEST.json",
+        "bytes": 4602,
+        "sha256": "b78c0c27e2c5cf51aefa2c04b10b4859183dd60ae46fb19929ea038925dd46cd",
+        "current_track": "LW_P1_CHARACTERIZATION WORK",
+        "track_count": 2
+      }
+    ],
+    "capability_registry": {
+      "path": "reengineering/CAPABILITY_PRESERVATION_REGISTRY.json",
+      "bytes": 130047,
+      "sha256": "ddc5abe4db58845943f4d63b88ede7b7c9069e504828f976f174ac4f146f2c3f",
+      "row_count": 278,
+      "duplicate_ids": []
+    },
+    "data_registry": {
+      "path": "reengineering/DATA_PRESERVATION_REGISTRY.json",
+      "bytes": 164981,
+      "sha256": "a93f77e0ec3cc4b1221702f3d3923875c01a070f50e9c1b348bc13e00afaeded",
+      "row_count": 252,
+      "duplicate_ids": []
+    },
+    "evidence_manifests": [
+      {
+        "path": "reengineering/evidence/phase-0/LW-P0-001/manifest.json",
+        "artifact_count": 3,
+        "repository_artifacts_checked": 2
+      },
+      {
+        "path": "reengineering/evidence/phase-0/LW-P0-001-environment/manifest.json",
+        "artifact_count": 2,
+        "repository_artifacts_checked": 2
+      },
+      {
+        "path": "reengineering/evidence/phase-0/LW-P0-002-smoke/manifest.json",
+        "artifact_count": 2,
+        "repository_artifacts_checked": 2
+      },
+      {
+        "path": "reengineering/evidence/phase-0/LW-P0-002-smoke-history/manifest.json",
+        "artifact_count": 2,
+        "repository_artifacts_checked": 2
+      },
+      {
+        "path": "reengineering/evidence/phase-0/LW-P0-003-browser/manifest.json",
+        "artifact_count": 33,
+        "repository_artifacts_checked": 32
+      },
+      {
+        "path": "reengineering/evidence/phase-0/LW-M0-INV-001/manifest.json",
+        "artifact_count": 19,
+        "repository_artifacts_checked": 19
+      },
+      {
+        "path": "reengineering/evidence/phase-0/LW-M0-BEH-001/manifest.json",
+        "artifact_count": 2,
+        "repository_artifacts_checked": 2
+      }
+    ]
+  },
+  "failures": []
+}

@@ -1,0 +1,26 @@
+{
+  "browserBoundary": {
+    "blockedCapabilities": [],
+    "blockedOutOfOriginRequests": [],
+    "consoleErrors": [],
+    "openedWebSockets": [],
+    "outOfOriginRequests": [],
+    "pageErrors": [],
+    "sameOriginRequests": [
+      "/",
+      "/assets/index-CMIAtJto.js",
+      "/assets/index-DPPYCueY.css"
+    ]
+  },
+  "loadedResources": [
+    "http://127.0.0.1:4183/assets/index-CMIAtJto.js",
+    "http://127.0.0.1:4183/assets/index-DPPYCueY.css"
+  ],
+  "runtimeState": {
+    "cacheNames": [],
+    "indexedDatabases": [],
+    "localStorageEntries": 0,
+    "sessionStorageEntries": 0,
+    "serviceWorkers": []
+  }
+}

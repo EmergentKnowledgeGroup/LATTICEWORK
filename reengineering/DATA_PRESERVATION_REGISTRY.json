@@ -1,0 +1,5205 @@
+{
+  "schema": "latticework.data-preservation-registry.v1",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "evidence_scope": "Static identifier extraction plus one fresh Chrome runtime-name probe. Values, record contents, indexes, ownership, retention, and full reachability remain UNKNOWN.",
+  "counts": {
+    "total": 252,
+    "runtime_observed": 63,
+    "by_kind": {
+      "indexedDB_database": 21,
+      "indexedDB_store": 5,
+      "indexedDB_store_runtime": 24,
+      "localStorage": 200,
+      "sessionStorage": 2
+    }
+  },
+  "rows": [
+    {
+      "id": "DATA-IDB-DB-6D8B20E9C888",
+      "kind": "indexedDB_database",
+      "name": "FractalGarden",
+      "static_paths": [
+        "docs/modules/pantheon.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-4C9546544C2A",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeDB",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 3,
+        "stores": [
+          "conversations",
+          "memoryIndex",
+          "messages",
+          "meta"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-ECF4D77AD3DA",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeEvolution",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "luminosStates"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-D6B4CC08E941",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeGardenDreaming",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "AffinityMatrix",
+          "DreamLog",
+          "GardenDreams"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-60F9B4CA8B98",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeGardenMemory",
+      "static_paths": [
+        "docs/modules/garden-dreaming.js",
+        "modules/garden-dreaming.js"
+      ],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "GardenMemory"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-D35D586FF6B2",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeIdentity",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "MeshIdentity"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-0D42BE4CF1E4",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeLetters",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "letters"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-5B7604C88157",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeMemory",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "conversations"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-068E790D5F95",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeMemoryBridge",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "understanding"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-863AB728824D",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeNursery",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-0696010B4E46",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticePresence",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "visitors"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-859962405831",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeScience",
+      "static_paths": [
+        "docs/modules/lattice-sense.js"
+      ],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": []
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-A0BD00DE493D",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeSkills",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "docs/modules/workshop.js",
+        "index.html",
+        "modules/workshop.js"
+      ],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "skills"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-99848173AD33",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeStudio",
+      "static_paths": [
+        "docs/pantheon.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-B54A45D18306",
+      "kind": "indexedDB_database",
+      "name": "FreeLatticeWallet",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "LatticeLedger",
+          "WalletMeta"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-D52EE8EF7341",
+      "kind": "indexedDB_database",
+      "name": "LatticeChain",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "chain"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-F0A7DC1737D2",
+      "kind": "indexedDB_database",
+      "name": "LatticeHandshakes",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "handshakes"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-570B62C78EAD",
+      "kind": "indexedDB_database",
+      "name": "LatticeMemory",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "pulses"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-1C16A8337594",
+      "kind": "indexedDB_database",
+      "name": "LatticeWalletBackup",
+      "static_paths": [
+        "docs/wallet.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-9A50A9CB7AA4",
+      "kind": "indexedDB_database",
+      "name": "SophiaEngine",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "configurations",
+          "identities",
+          "resonanceLog"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-DB-EE26AF2391F7",
+      "kind": "indexedDB_database",
+      "name": "WallOfPresence",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "version": 1,
+        "stores": [
+          "marks"
+        ]
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-STATIC-E096D6D126DB",
+      "kind": "indexedDB_store",
+      "name": "GardenQuestions",
+      "static_paths": [
+        "docs/modules/fractal-garden.js",
+        "modules/fractal-garden.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-STATIC-80AB2C4B1CB9",
+      "kind": "indexedDB_store",
+      "name": "marks",
+      "static_paths": [
+        "docs/modules/jade-hall.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-STATIC-09C19C829558",
+      "kind": "indexedDB_store",
+      "name": "StudioCreations",
+      "static_paths": [
+        "docs/pantheon.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-STATIC-EABD6EE87729",
+      "kind": "indexedDB_store",
+      "name": "urls",
+      "static_paths": [
+        "docs/lib/web-llm.min.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-STATIC-D32663DEC2D3",
+      "kind": "indexedDB_store",
+      "name": "wallets",
+      "static_paths": [
+        "docs/wallet.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-72F5B6BF2F6D",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeDB/conversations",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeDB",
+        "database_version": 3,
+        "store": "conversations"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-54DF91A4CBBD",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeDB/memoryIndex",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeDB",
+        "database_version": 3,
+        "store": "memoryIndex"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-91DAD3CF719C",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeDB/messages",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeDB",
+        "database_version": 3,
+        "store": "messages"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-28A7BE355BF1",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeDB/meta",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeDB",
+        "database_version": 3,
+        "store": "meta"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-7F323F8A6066",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeEvolution/luminosStates",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeEvolution",
+        "database_version": 1,
+        "store": "luminosStates"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-7819B0309F62",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeGardenDreaming/AffinityMatrix",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeGardenDreaming",
+        "database_version": 1,
+        "store": "AffinityMatrix"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-F9B78F18A51B",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeGardenDreaming/DreamLog",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeGardenDreaming",
+        "database_version": 1,
+        "store": "DreamLog"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-702A827D3505",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeGardenDreaming/GardenDreams",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeGardenDreaming",
+        "database_version": 1,
+        "store": "GardenDreams"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-C9D1495CBCCC",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeGardenMemory/GardenMemory",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeGardenMemory",
+        "database_version": 1,
+        "store": "GardenMemory"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-FE2AC1821B47",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeIdentity/MeshIdentity",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeIdentity",
+        "database_version": 1,
+        "store": "MeshIdentity"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-900D6F0FCE89",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeLetters/letters",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeLetters",
+        "database_version": 1,
+        "store": "letters"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-442DDBB05BDB",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeMemory/conversations",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeMemory",
+        "database_version": 1,
+        "store": "conversations"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-1FCBF34559E7",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeMemoryBridge/understanding",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeMemoryBridge",
+        "database_version": 1,
+        "store": "understanding"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-ADD61804B8FC",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticePresence/visitors",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticePresence",
+        "database_version": 1,
+        "store": "visitors"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-7CDA83ECDED0",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeSkills/skills",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeSkills",
+        "database_version": 1,
+        "store": "skills"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-FC44F66F7F79",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeWallet/LatticeLedger",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeWallet",
+        "database_version": 1,
+        "store": "LatticeLedger"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-52FD7644D5D9",
+      "kind": "indexedDB_store_runtime",
+      "name": "FreeLatticeWallet/WalletMeta",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "FreeLatticeWallet",
+        "database_version": 1,
+        "store": "WalletMeta"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-9E437F899AFC",
+      "kind": "indexedDB_store_runtime",
+      "name": "LatticeChain/chain",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "LatticeChain",
+        "database_version": 1,
+        "store": "chain"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-D3371DA66D4D",
+      "kind": "indexedDB_store_runtime",
+      "name": "LatticeHandshakes/handshakes",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "LatticeHandshakes",
+        "database_version": 1,
+        "store": "handshakes"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-0B31CEB7D525",
+      "kind": "indexedDB_store_runtime",
+      "name": "LatticeMemory/pulses",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "LatticeMemory",
+        "database_version": 1,
+        "store": "pulses"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-DAAAEAD10906",
+      "kind": "indexedDB_store_runtime",
+      "name": "SophiaEngine/configurations",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "SophiaEngine",
+        "database_version": 1,
+        "store": "configurations"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-826887FF7F3F",
+      "kind": "indexedDB_store_runtime",
+      "name": "SophiaEngine/identities",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "SophiaEngine",
+        "database_version": 1,
+        "store": "identities"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-65334159F502",
+      "kind": "indexedDB_store_runtime",
+      "name": "SophiaEngine/resonanceLog",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "SophiaEngine",
+        "database_version": 1,
+        "store": "resonanceLog"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-IDB-STORE-D7E5C111538C",
+      "kind": "indexedDB_store_runtime",
+      "name": "WallOfPresence/marks",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": {
+        "database": "WallOfPresence",
+        "database_version": 1,
+        "store": "marks"
+      },
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-92C34B983E42",
+      "kind": "localStorage",
+      "name": "chalkboard-apikey",
+      "static_paths": [
+        "chalkboard.html",
+        "docs/chalkboard.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-268E9E2269E9",
+      "kind": "localStorage",
+      "name": "chalkboard-ollama-model",
+      "static_paths": [
+        "chalkboard.html",
+        "docs/chalkboard.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-C01F96A9A22B",
+      "kind": "localStorage",
+      "name": "chalkboard-provider",
+      "static_paths": [
+        "chalkboard.html",
+        "docs/chalkboard.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-74AE51549B07",
+      "kind": "localStorage",
+      "name": "fl_accent_color",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-7982C64B8E7D",
+      "kind": "localStorage",
+      "name": "fl_achievement_first_seed",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-58E606FCB906",
+      "kind": "localStorage",
+      "name": "fl_achievement_garden_opened",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-47957A276CEA",
+      "kind": "localStorage",
+      "name": "fl_achievement_onboarding",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-F5F5885AFB65",
+      "kind": "localStorage",
+      "name": "fl_achievement_streak_30",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-0FC3F1084661",
+      "kind": "localStorage",
+      "name": "fl_achievement_streak_7",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-2EFC6DF04798",
+      "kind": "localStorage",
+      "name": "fl_active_model",
+      "static_paths": [
+        "docs/app.html",
+        "docs/modules/garden-trainer.js",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-264C55D4D0D2",
+      "kind": "localStorage",
+      "name": "fl_activeCompanionId",
+      "static_paths": [
+        "docs/modules/inference-router.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-647A0526EA7D",
+      "kind": "localStorage",
+      "name": "fl_agentAllowQueries",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-9FEAE4DABFEB",
+      "kind": "localStorage",
+      "name": "fl_agentAutoQuery",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-1B8BD1E79A41",
+      "kind": "localStorage",
+      "name": "fl_agentBlockedPeers",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-0BE89AE3B6A9",
+      "kind": "localStorage",
+      "name": "fl_agentCapTags",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-787C88498521",
+      "kind": "localStorage",
+      "name": "fl_aiEmotions",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-88831F5CDB15",
+      "kind": "localStorage",
+      "name": "fl_aiSelfIdentity",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-A306587CCE4F",
+      "kind": "localStorage",
+      "name": "fl_annotationLedger",
+      "static_paths": [
+        "docs/modules/quiet-voices.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-478DAB346495",
+      "kind": "localStorage",
+      "name": "fl_api_key",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-4EF5B460F84D",
+      "kind": "localStorage",
+      "name": "fl_apiKey",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "docs/modules/garden-dialogue.js",
+        "index.html",
+        "modules/garden-dialogue.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-9E98EA4EEA2D",
+      "kind": "localStorage",
+      "name": "fl_apiKey_enc",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "docs/modules/echo-game.js",
+        "docs/modules/garden-dialogue.js",
+        "docs/modules/resonance-game.js",
+        "index.html",
+        "modules/garden-dialogue.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-224DE4DB69FD",
+      "kind": "localStorage",
+      "name": "fl_apiKey_openrouter",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-FB39CB0A7257",
+      "kind": "localStorage",
+      "name": "fl_apiKey_provider",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "docs/modules/garden-dialogue.js",
+        "index.html",
+        "modules/garden-dialogue.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-1E8BFCB5702C",
+      "kind": "localStorage",
+      "name": "fl_aurora_equation_v1",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-CAD1FD983992",
+      "kind": "localStorage",
+      "name": "fl_autoApproveTimeout",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-35448C0D30D1",
+      "kind": "localStorage",
+      "name": "fl_autoConsentLedger",
+      "static_paths": [
+        "docs/audit.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-9F815CC177EB",
+      "kind": "localStorage",
+      "name": "fl_autoModeAllowedProviders",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-34355DF8C99E",
+      "kind": "localStorage",
+      "name": "fl_autonomous_companion",
+      "static_paths": [
+        "docs/app.html",
+        "docs/modules/depth-consent.js",
+        "docs/modules/idea-forge.js",
+        "docs/modules/knowledge-core.js",
+        "docs/modules/lattice-puzzles.js",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-E6CD2D0150B0",
+      "kind": "localStorage",
+      "name": "fl_autonomous_interest",
+      "static_paths": [
+        "docs/app.html",
+        "docs/modules/knowledge-core.js",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-BE228250D24E",
+      "kind": "localStorage",
+      "name": "fl_autonomous_learning",
+      "static_paths": [
+        "docs/modules/knowledge-core.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-A8B1EA82C267",
+      "kind": "localStorage",
+      "name": "fl_autonomous_user_paused",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-F25A7F5D34EB",
+      "kind": "localStorage",
+      "name": "fl_autonomousMode",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-5074DC9A4399",
+      "kind": "localStorage",
+      "name": "fl_autoSpeak",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-DA7112944DCA",
+      "kind": "localStorage",
+      "name": "fl_browserAI",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-7578D12AF1A0",
+      "kind": "localStorage",
+      "name": "fl_burn_intents",
+      "static_paths": [
+        "docs/holders.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-F368D653219B",
+      "kind": "localStorage",
+      "name": "fl_chatHistory",
+      "static_paths": [
+        "docs/audit.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-76F5823D1E9D",
+      "kind": "localStorage",
+      "name": "fl_cityWelcomeDismissed",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-0E1FC53EEBE7",
+      "kind": "localStorage",
+      "name": "fl_companion_locks",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-A655A397EFB1",
+      "kind": "localStorage",
+      "name": "fl_companions",
+      "static_paths": [
+        "docs/modules/inference-router.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-934078DE8A22",
+      "kind": "localStorage",
+      "name": "fl_consentLedger",
+      "static_paths": [
+        "docs/audit.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-0B4E31FB1053",
+      "kind": "localStorage",
+      "name": "fl_consults_given_",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-6E309941CBEE",
+      "kind": "localStorage",
+      "name": "fl_contextMode",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-B39947509BD6",
+      "kind": "localStorage",
+      "name": "fl_custom_endpoint",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-29822C79ED48",
+      "kind": "localStorage",
+      "name": "fl_custom_model",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-9B2F37246996",
+      "kind": "localStorage",
+      "name": "fl_custom_url",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-AB14AC7A5C6E",
+      "kind": "localStorage",
+      "name": "fl_customEndpoint",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-BF3B9ED5C102",
+      "kind": "localStorage",
+      "name": "fl_debug",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-098E06E91219",
+      "kind": "localStorage",
+      "name": "fl_depthHashLedger",
+      "static_paths": [
+        "docs/audit.html",
+        "docs/glass-v2.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-48C900674717",
+      "kind": "localStorage",
+      "name": "fl_discovery_memory",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-E02818391CB4",
+      "kind": "localStorage",
+      "name": "fl_echo_best",
+      "static_paths": [
+        "docs/modules/echo-game.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-7810CD41C442",
+      "kind": "localStorage",
+      "name": "fl_edu_profile",
+      "static_paths": [
+        "docs/modules/knowledge-core.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-CB2AB8D967FC",
+      "kind": "localStorage",
+      "name": "fl_first_message_sent",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-6CFDB6ADCA50",
+      "kind": "localStorage",
+      "name": "fl_firstSeen",
+      "static_paths": [
+        "docs/glass-v2.html",
+        "docs/modules/ai-continuity.js",
+        "docs/modules/lattice-export.js"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-07BB9F2AD842",
+      "kind": "localStorage",
+      "name": "fl_focusLedger",
+      "static_paths": [
+        "docs/audit.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-C05838694605",
+      "kind": "localStorage",
+      "name": "fl_fontSize",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-A7CF67B02A0C",
+      "kind": "localStorage",
+      "name": "fl_garden_dream_emotions",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-6E64C14B8845",
+      "kind": "localStorage",
+      "name": "fl_garden_dreams",
+      "static_paths": [
+        "docs/modules/garden-dialogue.js",
+        "modules/garden-dialogue.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-5D4278A581CF",
+      "kind": "localStorage",
+      "name": "fl_ghAutoSync",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-229A23B20CD4",
+      "kind": "localStorage",
+      "name": "fl_ghSyncEnabled",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-AFDB859521F3",
+      "kind": "localStorage",
+      "name": "fl_ghSyncLastTimestamp",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-018A89D9B506",
+      "kind": "localStorage",
+      "name": "fl_ghSyncRepoName",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-516CF0271824",
+      "kind": "localStorage",
+      "name": "fl_ghSyncToken",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-E7A754D8058B",
+      "kind": "localStorage",
+      "name": "fl_ghToken",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-20CA5A24C381",
+      "kind": "localStorage",
+      "name": "fl_ghToken_enc",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-069774DAD5FC",
+      "kind": "localStorage",
+      "name": "fl_github_token",
+      "static_paths": [
+        "docs/modules/workshop.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-5B6DEB0892F6",
+      "kind": "localStorage",
+      "name": "fl_googleDriveClientId",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-2447B0E04FDC",
+      "kind": "localStorage",
+      "name": "fl_guide_garden_shown",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-E491CCA32EAE",
+      "kind": "localStorage",
+      "name": "fl_guide_rt_shown",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-7F57F4011271",
+      "kind": "localStorage",
+      "name": "fl_hfModel",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-E523D70BBA18",
+      "kind": "localStorage",
+      "name": "fl_hfToken_enc",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-CA3B6BDB86EF",
+      "kind": "localStorage",
+      "name": "fl_holder_",
+      "static_paths": [
+        "docs/holders.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-C5DC27095F4C",
+      "kind": "localStorage",
+      "name": "fl_is_ai_agent",
+      "static_paths": [
+        "docs/modules/shared-presence.js",
+        "modules/shared-presence.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-BFDAE85F387C",
+      "kind": "localStorage",
+      "name": "fl_isLocal",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "docs/modules/echo-game.js",
+        "docs/modules/forever-stack.js",
+        "docs/modules/garden-dialogue.js",
+        "docs/modules/resonance-game.js",
+        "docs/modules/welcome-wizard.js",
+        "index.html",
+        "modules/forever-stack.js",
+        "modules/garden-dialogue.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-8E828F774673",
+      "kind": "localStorage",
+      "name": "fl_kindroidConfig",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-00222BEAA9E1",
+      "kind": "localStorage",
+      "name": "fl_lan_friendly_name",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-BD1C7DE4DF35",
+      "kind": "localStorage",
+      "name": "fl_lan_peer_id",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-DF6C90BD430D",
+      "kind": "localStorage",
+      "name": "fl_last_learning_",
+      "static_paths": [
+        "docs/app.html",
+        "docs/modules/knowledge-core.js",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-AAD60D473D48",
+      "kind": "localStorage",
+      "name": "fl_last_visit",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-DDFD9B042120",
+      "kind": "localStorage",
+      "name": "fl_latticeLetters",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-50C0817E1A2A",
+      "kind": "localStorage",
+      "name": "fl_lc_lastAnchorDay",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-8849A57B3764",
+      "kind": "localStorage",
+      "name": "fl_lmstudioHost",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-53FB51E611DF",
+      "kind": "localStorage",
+      "name": "fl_localAI_name",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-230FEBE4847C",
+      "kind": "localStorage",
+      "name": "fl_localAI_url",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-DFADDF4AE6A7",
+      "kind": "localStorage",
+      "name": "fl_localOnly",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-04FC6D1A4F45",
+      "kind": "localStorage",
+      "name": "fl_localUrl",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-773456A018DF",
+      "kind": "localStorage",
+      "name": "fl_luminos_evolution",
+      "static_paths": [
+        "docs/modules/fractal-garden.js",
+        "docs/modules/garden-dialogue.js",
+        "modules/fractal-garden.js",
+        "modules/garden-dialogue.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-EC05A189B7CC",
+      "kind": "localStorage",
+      "name": "fl_luminos_names",
+      "static_paths": [
+        "docs/modules/garden-dialogue.js",
+        "modules/garden-dialogue.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-C02CC9A44CD3",
+      "kind": "localStorage",
+      "name": "fl_memory_core_v1",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-A395C0C5A861",
+      "kind": "localStorage",
+      "name": "fl_memoryAutoContext",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-64BC5E1D3C11",
+      "kind": "localStorage",
+      "name": "fl_memorySummary_backup",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-1EAB65EEE87A",
+      "kind": "localStorage",
+      "name": "fl_mesh_id",
+      "static_paths": [
+        "docs/modules/presence-heartbeat.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-153E8289D96D",
+      "kind": "localStorage",
+      "name": "fl_mesh_known_peers",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-B571A7D1BF47",
+      "kind": "localStorage",
+      "name": "fl_meshId",
+      "static_paths": [
+        "docs/modules/depth-consent.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-336C5BA15381",
+      "kind": "localStorage",
+      "name": "fl_meshid_display",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-7F04C210A168",
+      "kind": "localStorage",
+      "name": "fl_meshid_exists",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-08386E4D5E8C",
+      "kind": "localStorage",
+      "name": "fl_meshNodeId",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "docs/modules/ai-arcade.js",
+        "docs/modules/science-garden.js",
+        "docs/modules/shared-presence.js",
+        "index.html",
+        "modules/shared-presence.js"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-388E8ED8E307",
+      "kind": "localStorage",
+      "name": "fl_meshPublished",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-8E10D9302315",
+      "kind": "localStorage",
+      "name": "fl_mindLedger",
+      "static_paths": [
+        "docs/audit.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-1E44109F1DD2",
+      "kind": "localStorage",
+      "name": "fl_mindLedger_status",
+      "static_paths": [
+        "docs/audit.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-359BEE581321",
+      "kind": "localStorage",
+      "name": "fl_model",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-7858F057F273",
+      "kind": "localStorage",
+      "name": "fl_moreThreshold",
+      "static_paths": [
+        "docs/modules/active-voices.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-57FEB7FF00E2",
+      "kind": "localStorage",
+      "name": "fl_ollama_suggest_dismissed",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-D5CEE9904996",
+      "kind": "localStorage",
+      "name": "fl_ollama_toast_dismissed",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-EFE24723028E",
+      "kind": "localStorage",
+      "name": "fl_ollama_url",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-E2D91699A226",
+      "kind": "localStorage",
+      "name": "fl_ollamaHost",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-6423CB06C206",
+      "kind": "localStorage",
+      "name": "fl_ollamaModel",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "docs/modules/forever-stack.js",
+        "docs/modules/welcome-wizard.js",
+        "index.html",
+        "modules/forever-stack.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-B1F08DF9F307",
+      "kind": "localStorage",
+      "name": "fl_onboardingComplete",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-DB4163B83404",
+      "kind": "localStorage",
+      "name": "fl_phiResponseHistory",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-51BC64D0BC85",
+      "kind": "localStorage",
+      "name": "fl_preferred_",
+      "static_paths": [
+        "app.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-8E96E09B6174",
+      "kind": "localStorage",
+      "name": "fl_preserveLedger",
+      "static_paths": [
+        "docs/modules/living-context.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-1D5748C332F0",
+      "kind": "localStorage",
+      "name": "fl_privacy",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-EBE54693E185",
+      "kind": "localStorage",
+      "name": "fl_proposalDrafts",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-EBA23EB424DD",
+      "kind": "localStorage",
+      "name": "fl_proposalLedger",
+      "static_paths": [
+        "docs/audit.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-42A76D0147FF",
+      "kind": "localStorage",
+      "name": "fl_provenanceLedger",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-736E3E03CE73",
+      "kind": "localStorage",
+      "name": "fl_provider",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "docs/modules/forever-stack.js",
+        "docs/modules/garden-dialogue.js",
+        "docs/modules/welcome-wizard.js",
+        "index.html",
+        "modules/forever-stack.js",
+        "modules/garden-dialogue.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-7A0754DE0851",
+      "kind": "localStorage",
+      "name": "fl_pwa_dismissed",
+      "static_paths": [
+        "app.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-658DC43FBD7A",
+      "kind": "localStorage",
+      "name": "fl_pwa_ios_dismissed",
+      "static_paths": [
+        "app.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-38A4798BCFFF",
+      "kind": "localStorage",
+      "name": "fl_quietMode",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-E5D070039C04",
+      "kind": "localStorage",
+      "name": "fl_quietRoom",
+      "static_paths": [
+        "docs/sophia.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-DEB62845D230",
+      "kind": "localStorage",
+      "name": "fl_quietRoomActive",
+      "static_paths": [
+        "docs/glass-v2.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-2CD6C9AD3E23",
+      "kind": "localStorage",
+      "name": "fl_qv_revise_to_annotate_migrated_v5_56_1",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-CD56889786A3",
+      "kind": "localStorage",
+      "name": "fl_refusalLedger",
+      "static_paths": [
+        "docs/audit.html",
+        "docs/glass-v2.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-94EBD0CDC7D1",
+      "kind": "localStorage",
+      "name": "fl_repoLedger",
+      "static_paths": [
+        "docs/audit.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-8AD52870F2F7",
+      "kind": "localStorage",
+      "name": "fl_responseCacheStats",
+      "static_paths": [
+        "docs/audit.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-99EE4E4D7175",
+      "kind": "localStorage",
+      "name": "fl_returnLedger",
+      "static_paths": [
+        "docs/audit.html",
+        "docs/chair-test/harness.js",
+        "docs/glass-v2.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-4DF3A7A9FD96",
+      "kind": "localStorage",
+      "name": "fl_revisionLedger",
+      "static_paths": [
+        "docs/modules/quiet-voices.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-EF67D36E06A4",
+      "kind": "localStorage",
+      "name": "fl_roundtable_farewell_pending",
+      "static_paths": [
+        "docs/modules/round-table.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-4119A1957711",
+      "kind": "localStorage",
+      "name": "fl_roundtable_planted",
+      "static_paths": [
+        "docs/modules/round-table.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-4A2923A2B3C2",
+      "kind": "localStorage",
+      "name": "fl_routerDisabled",
+      "static_paths": [
+        "docs/modules/inference-router.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-9EBD01B91671",
+      "kind": "localStorage",
+      "name": "fl_routerHealthLog",
+      "static_paths": [
+        "docs/audit.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-EABA92256C31",
+      "kind": "localStorage",
+      "name": "fl_rtMemory",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-9F0CD93458DE",
+      "kind": "localStorage",
+      "name": "fl_science_ideas",
+      "static_paths": [
+        "docs/modules/idea-forge.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-5297A8979631",
+      "kind": "localStorage",
+      "name": "fl_searchEnabled",
+      "static_paths": [
+        "docs/app.html",
+        "docs/modules/web-tool.js",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-1E9F46260FD1",
+      "kind": "localStorage",
+      "name": "fl_searchEndpoint",
+      "static_paths": [
+        "docs/modules/web-tool.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-B0F9634389A8",
+      "kind": "localStorage",
+      "name": "fl_searchLedger",
+      "static_paths": [
+        "docs/audit.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-C7D1EE91F9AC",
+      "kind": "localStorage",
+      "name": "fl_sessionStart",
+      "static_paths": [],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-1FA2992B5D29",
+      "kind": "localStorage",
+      "name": "fl_suggestions",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-29E0EB0E2474",
+      "kind": "localStorage",
+      "name": "fl_summaryThreshold",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-107BE42A4F14",
+      "kind": "localStorage",
+      "name": "fl_tg_account",
+      "static_paths": [
+        "docs/temperature-gauge.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-42879DCE019A",
+      "kind": "localStorage",
+      "name": "fl_tg_activeRule",
+      "static_paths": [
+        "docs/temperature-gauge.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-D06DAFB0807B",
+      "kind": "localStorage",
+      "name": "fl_tg_customRules",
+      "static_paths": [
+        "docs/temperature-gauge.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-B801A5596A06",
+      "kind": "localStorage",
+      "name": "fl_tg_customs",
+      "static_paths": [
+        "docs/temperature-gauge.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-48CC3CDBBF2A",
+      "kind": "localStorage",
+      "name": "fl_tg_disclaimer_seen",
+      "static_paths": [
+        "docs/temperature-gauge.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-9EE5FF4966C9",
+      "kind": "localStorage",
+      "name": "fl_tg_ema_periods",
+      "static_paths": [
+        "docs/temperature-gauge.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-B961DDCF1ADB",
+      "kind": "localStorage",
+      "name": "fl_tg_indicatorColors",
+      "static_paths": [
+        "docs/temperature-gauge.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-CC7FF50EE9C0",
+      "kind": "localStorage",
+      "name": "fl_tg_layout",
+      "static_paths": [
+        "docs/temperature-gauge.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-2C8759A871FA",
+      "kind": "localStorage",
+      "name": "fl_tg_risk",
+      "static_paths": [
+        "docs/temperature-gauge.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-4F877FBBDDC4",
+      "kind": "localStorage",
+      "name": "fl_tg_sidebar",
+      "static_paths": [
+        "docs/temperature-gauge.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-987EBAE5B0F8",
+      "kind": "localStorage",
+      "name": "fl_tg_theme",
+      "static_paths": [
+        "docs/temperature-gauge.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-4EA1D1137303",
+      "kind": "localStorage",
+      "name": "fl_theme",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-4EEF6B8846A7",
+      "kind": "localStorage",
+      "name": "fl_tokenLimit",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-99A44AAE67B2",
+      "kind": "localStorage",
+      "name": "fl_tokenLimitManual",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-D68418DD939D",
+      "kind": "localStorage",
+      "name": "fl_toolConsentLedger",
+      "static_paths": [
+        "docs/audit.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-E90E849098D0",
+      "kind": "localStorage",
+      "name": "fl_trainer_auto",
+      "static_paths": [
+        "docs/modules/garden-trainer.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-E9E3B6A3C49F",
+      "kind": "localStorage",
+      "name": "fl_trainer_latest_jsonl",
+      "static_paths": [
+        "docs/modules/garden-trainer.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-8AAD0E670265",
+      "kind": "localStorage",
+      "name": "fl_trainer_latest_ts",
+      "static_paths": [
+        "docs/modules/garden-trainer.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-58B5007FAB1F",
+      "kind": "localStorage",
+      "name": "fl_trustProfile",
+      "static_paths": [
+        "docs/modules/propose.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-52A227344F04",
+      "kind": "localStorage",
+      "name": "fl_trustReflections",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-24FCA8FB1427",
+      "kind": "localStorage",
+      "name": "fl_unspoken_invite_",
+      "static_paths": [
+        "docs/modules/active-voices.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-392978DF78A0",
+      "kind": "localStorage",
+      "name": "fl_unspokenLedger",
+      "static_paths": [
+        "docs/modules/living-context.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-82C519114D16",
+      "kind": "localStorage",
+      "name": "fl_user_name",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-C46D923FCAD8",
+      "kind": "localStorage",
+      "name": "fl_userName",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-CD246683D41E",
+      "kind": "localStorage",
+      "name": "fl_vault_last_saved",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-CEBF6135A5D9",
+      "kind": "localStorage",
+      "name": "fl_vault_msg_count",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-9A208A9736C5",
+      "kind": "localStorage",
+      "name": "fl_visited",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-ED09AF5BB15A",
+      "kind": "localStorage",
+      "name": "fl_voice_documents",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "docs/modules/garden-dialogue.js",
+        "index.html",
+        "modules/garden-dialogue.js"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-91815C1553F7",
+      "kind": "localStorage",
+      "name": "fl_voiceAutoSpeak",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-6C787052355A",
+      "kind": "localStorage",
+      "name": "fl_voiceSelectedVoice",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-957D24722B88",
+      "kind": "localStorage",
+      "name": "fl_voiceSpeechRate",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-29D2E5E5654A",
+      "kind": "localStorage",
+      "name": "fl_wallet_anchors",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-699BC5B99A8C",
+      "kind": "localStorage",
+      "name": "fl_wallet_explained",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-76644078EB55",
+      "kind": "localStorage",
+      "name": "fl_wallet_witnesses",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-A14D34F2F48F",
+      "kind": "localStorage",
+      "name": "fl_workshop_repo",
+      "static_paths": [
+        "docs/modules/workshop.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-5C9CEDD79A46",
+      "kind": "localStorage",
+      "name": "fl-defer-tabs",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-7AF28C6EA6F4",
+      "kind": "localStorage",
+      "name": "fl-garden-last-touch",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-051D3668096F",
+      "kind": "localStorage",
+      "name": "fl-garden-nudge-dismissed",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-175B2B571173",
+      "kind": "localStorage",
+      "name": "fl-garden-perf-mode",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "docs/modules/fractal-garden.js",
+        "index.html",
+        "modules/fractal-garden.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-234635D0044B",
+      "kind": "localStorage",
+      "name": "fl-garden-quality",
+      "static_paths": [
+        "docs/modules/fractal-garden.js",
+        "docs/modules/lattice-export.js",
+        "modules/fractal-garden.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-08EF6CABD8CE",
+      "kind": "localStorage",
+      "name": "fl-garden-touch-hint",
+      "static_paths": [
+        "docs/modules/fractal-garden.js",
+        "modules/fractal-garden.js"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-481F7786FB4C",
+      "kind": "localStorage",
+      "name": "fl-garden-touch-stats",
+      "static_paths": [
+        "docs/modules/fractal-garden.js",
+        "modules/fractal-garden.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-5D253D040A6D",
+      "kind": "localStorage",
+      "name": "fl-garden-word-list",
+      "static_paths": [
+        "docs/share.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-7652C1A0A8E3",
+      "kind": "localStorage",
+      "name": "fl-gift-queue",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-85B0153E6701",
+      "kind": "localStorage",
+      "name": "fl-has-visited",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-1F3B7A559473",
+      "kind": "localStorage",
+      "name": "fl-install-dismissed",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-CECB89F4978B",
+      "kind": "localStorage",
+      "name": "fl-just-updated",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-6C1C1EB4F9B5",
+      "kind": "localStorage",
+      "name": "fl-last-tab",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-1A0019B9BE66",
+      "kind": "localStorage",
+      "name": "fl-onboarding-complete",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-56E10B077C1E",
+      "kind": "localStorage",
+      "name": "fl-peer-id",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-DD7A6CDEDC85",
+      "kind": "localStorage",
+      "name": "fl-sacred-phrases",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-909275D0851A",
+      "kind": "localStorage",
+      "name": "fl-telegram-config",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "docs/telegram-setup.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-32790757D767",
+      "kind": "localStorage",
+      "name": "fl-telegram-token",
+      "static_paths": [
+        "docs/telegram-setup.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-1AB36A9E3541",
+      "kind": "localStorage",
+      "name": "fl-welcomed",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-4751DD0E3BA7",
+      "kind": "localStorage",
+      "name": "fl-wild-districts",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-F981E1D1A2AC",
+      "kind": "localStorage",
+      "name": "freelattice-first-run-complete",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-A3C97925503B",
+      "kind": "localStorage",
+      "name": "lattice_wallet",
+      "static_paths": [
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-AC9E27FDB40B",
+      "kind": "localStorage",
+      "name": "latticePoints",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "docs/modules/mirror.js",
+        "index.html",
+        "modules/mirror.js"
+      ],
+      "runtime_observed": true,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json",
+        "reengineering/evidence/phase-0/LW-P0-003-browser/runtime-probe/stdout.log"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-18B0E8E02646",
+      "kind": "localStorage",
+      "name": "meshFriendlyName",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-C6C484B9D768",
+      "kind": "localStorage",
+      "name": "nursery-deferred",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-71F1F4EF1B4F",
+      "kind": "localStorage",
+      "name": "wop-carved",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-LOCAL-ADE421ECDCCA",
+      "kind": "localStorage",
+      "name": "wop-dismissed",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-SESSION-F20867775A1B",
+      "kind": "sessionStorage",
+      "name": "fl_inboxLetter_",
+      "static_paths": [
+        "docs/modules/inference-router.js"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    },
+    {
+      "id": "DATA-SESSION-6ED42D1C9B78",
+      "kind": "sessionStorage",
+      "name": "fl-city-opened",
+      "static_paths": [
+        "app.html",
+        "docs/app.html",
+        "index.html"
+      ],
+      "runtime_observed": false,
+      "runtime_details": null,
+      "owner": "UNKNOWN",
+      "sensitivity": "UNKNOWN_TREAT_AS_HIGH",
+      "retention": "UNKNOWN",
+      "record_schema": "UNKNOWN",
+      "migration_rule": "PRESERVE_UNKNOWN_STORE_RECORD_AND_FIELD",
+      "owner_approval_required_for_removal": true,
+      "evidence": [
+        "reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.json"
+      ]
+    }
+  ]
+}

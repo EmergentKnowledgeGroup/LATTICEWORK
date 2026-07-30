@@ -1,0 +1,62 @@
+name: Compatibility regression
+description: Report behavior that differs from the pinned upstream baseline
+title: "[COMPAT] "
+labels:
+  - compatibility
+  - regression
+body:
+  - type: input
+    id: upstream
+    attributes:
+      label: Upstream baseline commit
+    validations:
+      required: true
+  - type: input
+    id: latticework
+    attributes:
+      label: LATTICEWORK commit
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow and fixture
+    validations:
+      required: true
+  - type: textarea
+    id: upstream_behavior
+    attributes:
+      label: Upstream behavior
+    validations:
+      required: true
+  - type: textarea
+    id: latticework_behavior
+    attributes:
+      label: LATTICEWORK behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Reproduction and evidence
+      description: Remove secrets and personal data before attaching logs, artifacts, or other evidence.
+    validations:
+      required: true
+  - type: dropdown
+    id: data_impact
+    attributes:
+      label: Data or migration impact
+      options:
+        - None known
+        - Possible
+        - Confirmed
+        - Unknown
+    validations:
+      required: true
+  - type: checkboxes
+    id: redaction
+    attributes:
+      label: Redaction check
+      options:
+        - label: I removed secrets and personal data
+          required: true

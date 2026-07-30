@@ -1,0 +1,26 @@
+﻿{
+    "baseline":  "Z:\\LATTICEWORK_BASELINE_e7585999",
+    "sha":  "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "branch_status":  "## HEAD (no branch)",
+    "generated_utc":  "2026-07-30T07:56:42.4550189Z",
+    "files":  514,
+    "text_files":  431,
+    "text_loc":  365685,
+    "binary_files":  83,
+    "exclusions":  [
+                       "Only git-tracked paths from git ls-files; no ignored/untracked files. LOC is physical non-binary line count and includes blank/comment lines. Text heuristic treats any NUL byte as binary. Storage/window results are static regex hits, not runtime reachability."
+                   ],
+    "tools":  {
+                  "powershell":  "5.1.19041.7548",
+                  "git":  "git version 2.50.1.windows.1",
+                  "node":  "v24.13.0",
+                  "python":  "Python 3.13.12",
+                  "rg":  "ripgrep 15.1.0 (rev af60c2de9d)"
+              },
+    "commands":  [
+                     "git -C \u003cbaseline\u003e rev-parse HEAD",
+                     "git -C \u003cbaseline\u003e status --short --branch",
+                     "git -C \u003cbaseline\u003e ls-files -z",
+                     "powershell -ExecutionPolicy Bypass -File inventory.ps1 -Baseline \u003cbaseline\u003e -OutDir \u003coutdir\u003e"
+                 ]
+}

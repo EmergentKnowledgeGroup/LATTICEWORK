@@ -1,0 +1,17 @@
+- heading "✦ Welcome to FreeLattice" [level=1]
+- paragraph: Your AI. Local. Free. Yours.
+- link "Why we built it this way →":
+  - /url: why-this-way.html
+- textbox "What should I call you? (optional)"
+- text: "Connect to an AI: 🏠 Local (most private) — runs on your computer"
+- button "Ollama Free, open-source, ~5 min setup"
+- button "LM Studio GUI app, drag-and-drop models"
+- text: ☁️ Free cloud (fastest start)
+- button "Groq Free, fast, no credit card"
+- button "Hugging Face Free, thousands of models"
+- text: 🔑 I have an API key
+- button "Gemini"
+- button "OpenAI"
+- button "Claude"
+- button "Grok"
+- button "Skip — just explore ✦"

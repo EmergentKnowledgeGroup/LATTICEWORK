@@ -1,0 +1,388 @@
+{
+  "schema": "latticework.evidence.artifact-bundle.v1",
+  "receipt_id": "LW-P1-001",
+  "captured_at": "2026-07-30T10:16:50.387Z",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": null,
+  "directory": "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-1\\LW-P1-001",
+  "artifacts": [
+    {
+      "path": "artifacts/chat-signal-report/console-receipt.json",
+      "bytes": 2958,
+      "sha256": "ca31a61952c19d1422330c53d79ace9172a9d3440e1165c56fcbf18b5cdde02c",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/chat-signal-report/network-receipt.json",
+      "bytes": 43608,
+      "sha256": "e26fa2946a067f68c20eb2e542dbb6b6ccfb0c5a6b661c14e2227b3ca869f63a",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/chat-signal-report/signal-report-aria.yml",
+      "bytes": 669,
+      "sha256": "6cdf1acef61f1dca159aaceb8f9d9f47a50d0e7d8323012d3df31a6243311f68",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/chat-signal-report/signal-report.png",
+      "bytes": 57621,
+      "sha256": "2031a74f794d12f1e70acc38b54047695c7171acbcb0aa3c7311bd6a396a0a57",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/degraded-gpu/console-receipt.json",
+      "bytes": 2167,
+      "sha256": "887dc0f4a4492abba38cae6ab5255fc73e91c77de96ce862287c3782c484b496",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/degraded-gpu/garden-no-webgpu.png",
+      "bytes": 104581,
+      "sha256": "ecc8a9b99c9eb603af6644a4fc10cb572f798eab3e72c8bb111cf8ad87d82c3f",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/degraded-gpu/network-receipt.json",
+      "bytes": 43312,
+      "sha256": "9d69c4dec3a185bef967d2869a9ae1b0922b067fcd24bcf23629c1212e9ff6c0",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/garden/console-receipt.json",
+      "bytes": 2167,
+      "sha256": "887dc0f4a4492abba38cae6ab5255fc73e91c77de96ce862287c3782c484b496",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/garden/garden-after-skip.png",
+      "bytes": 106156,
+      "sha256": "aafb17f9c034d459485d63ac4b83d1975bfc0e1d231e0862a82e638db932e9ac",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/garden/network-receipt.json",
+      "bytes": 43312,
+      "sha256": "c070048cb5855d8bcc9f164d16c7b0d4b76f3772477bab3e4fb2dbb52d5880f0",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/mobile/console-receipt.json",
+      "bytes": 2273,
+      "sha256": "ee544ad5a09afc8eb9c3805c38808bcc1df8a5a0b8679ebed0ff84bbe7b5eabe",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/mobile/garden-mobile-390x844.png",
+      "bytes": 451970,
+      "sha256": "0420b4313b8e727376287697c8650054fda9d8cb7d9b83fdac0a930526ea2381",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/mobile/mobile-overlap.json",
+      "bytes": 875,
+      "sha256": "4985ada0907c6a3ecf58094aaea4a765f379731e5b2ca64df41bb978de368be5",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/mobile/network-receipt.json",
+      "bytes": 43758,
+      "sha256": "1586d30a728ddca9cc05e80ae33f94170af88b16f492f23e01b73d5d3960e8cf",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/offline/console-receipt.json",
+      "bytes": 954,
+      "sha256": "3694ca8afa479bf103568fa2910219db24acd0b3cbc9d1bbe3f63cd37cd9b2df",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/offline/network-receipt.json",
+      "bytes": 45359,
+      "sha256": "99da7e9e8167b86be16e79bfa18649a7df45ae25f95a68902a049648c7e1a29e",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/offline/offline-reload-failure.png",
+      "bytes": 5851,
+      "sha256": "99db2a93b06fa1bf617f5c495e02dcf6c0b76961108491217e2cf4fed8699d35",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/offline/offline-reload-observation.json",
+      "bytes": 231,
+      "sha256": "47e542b9bc29e3d7383c92e1443c99847039330da69939828384717d7adff287",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/shell-and-storage/console-receipt.json",
+      "bytes": 1827,
+      "sha256": "c71d599a89ec033a42ba4e18b47ceb7877dc66baa3175422e35ef02c15f92cd4",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/shell-and-storage/network-receipt.json",
+      "bytes": 42746,
+      "sha256": "f21a8e40b031cd03dbff39436c17ac99692a8946d375ae805288b8ad52be0f67",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/shell-and-storage/onboarding-aria.yml",
+      "bytes": 659,
+      "sha256": "3cc2cc15809cb5f46a0b7d1163852db8518885a86fd2f724cb54209b822689f5",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/shell-and-storage/onboarding-first-run.png",
+      "bytes": 218996,
+      "sha256": "41dd8f966760f1ba9a2038d85f6c43beaf93d2cec0d20cf3813d77d513595cbb",
+      "repository_artifact": true
+    },
+    {
+      "path": "artifacts/shell-and-storage/runtime-snapshot.json",
+      "bytes": 2890,
+      "sha256": "287b86523ea8d0b353a4b9acf6053e420185f793ceee662bfd76f5bf9e17ff00",
+      "repository_artifact": true
+    },
+    {
+      "path": "command/manifest.json",
+      "bytes": 2655,
+      "sha256": "d2cafc044da72b1be7b48ed8408f31606b289b675713e4826a4b70fb155c07d9",
+      "repository_artifact": true
+    },
+    {
+      "path": "command/stderr.log",
+      "bytes": 164,
+      "sha256": "2cd5cb98cf0d250ee7ea548877d10d69e286c706c3555b9205037a804e447d76",
+      "repository_artifact": true
+    },
+    {
+      "path": "command/stdout.log",
+      "bytes": 1296,
+      "sha256": "aab543a650c1021e2c1c32bc1135cabe319f2d2f4142e30d5102fc4916e5db84",
+      "repository_artifact": true
+    },
+    {
+      "path": "control-plane/manifest.json",
+      "bytes": 2499,
+      "sha256": "c51faade0f02480cce25dde12c4f1db33e409079c1f43123a27da92b54334626",
+      "repository_artifact": true
+    },
+    {
+      "path": "control-plane/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "control-plane/stdout.log",
+      "bytes": 8955,
+      "sha256": "76f833b24da412a6934364a135724932a2fd7b92aae520cc22c74e3aa7715740",
+      "repository_artifact": true
+    },
+    {
+      "path": "controls/manifest.json",
+      "bytes": 2978,
+      "sha256": "4bf1f8dbe3f0dad3dd7bb2f3b659f9c13a7c9656a107f593286fbf39f093b1d5",
+      "repository_artifact": true
+    },
+    {
+      "path": "controls/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "controls/stdout.log",
+      "bytes": 1610,
+      "sha256": "478b5c98877fe38394e0e7052c1d534619c36661a93710403efedf1421a9eac9",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/chat-signal-report/console-receipt.json",
+      "bytes": 2958,
+      "sha256": "48a205bdfd3626030e2e445c9210fa801b71a2e6230d1ddfee0ebfa39d24c122",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/chat-signal-report/network-receipt.json",
+      "bytes": 43608,
+      "sha256": "8f3a16e6dfd812eb20c69c9723856e06460663eed75624f558db9e76b31af68b",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/chat-signal-report/signal-report-aria.yml",
+      "bytes": 669,
+      "sha256": "d0e50e2b67a6ed7902426a6d71898409a05398ec3451ac7f1ca3403bad6e983f",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/chat-signal-report/signal-report.png",
+      "bytes": 48958,
+      "sha256": "c4a672bb8b5ac5b2c0bd327b2a863b7ec7a64d28da8dd35734ea9a3938155f13",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/degraded-gpu/console-receipt.json",
+      "bytes": 2167,
+      "sha256": "887dc0f4a4492abba38cae6ab5255fc73e91c77de96ce862287c3782c484b496",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/degraded-gpu/garden-no-webgpu.png",
+      "bytes": 107576,
+      "sha256": "332845568d05304ee11eb710f4d6292fd75301f7a3dbe31c87ba8103ac338420",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/degraded-gpu/network-receipt.json",
+      "bytes": 43312,
+      "sha256": "56c17c8a72061b018c94ca078a3aa5616390b55e7c6a7dac147e3901d5402631",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/garden/console-receipt.json",
+      "bytes": 2273,
+      "sha256": "ee544ad5a09afc8eb9c3805c38808bcc1df8a5a0b8679ebed0ff84bbe7b5eabe",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/garden/garden-after-skip.png",
+      "bytes": 109753,
+      "sha256": "65a31aa818293bd70e6d31876c1f8e4868858cfa2b412986f75a38021d08b542",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/garden/network-receipt.json",
+      "bytes": 43608,
+      "sha256": "62cbf98744cd0efd7e50b5b93bca1922b6bad789fffa89a04c516db232473f76",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/mobile/console-receipt.json",
+      "bytes": 2273,
+      "sha256": "ee544ad5a09afc8eb9c3805c38808bcc1df8a5a0b8679ebed0ff84bbe7b5eabe",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/mobile/garden-mobile-390x844.png",
+      "bytes": 492327,
+      "sha256": "1375231daabab0631367cf7d1d26e2dd69634bad8569698a1740543faac6fcb5",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/mobile/mobile-overlap.json",
+      "bytes": 875,
+      "sha256": "4985ada0907c6a3ecf58094aaea4a765f379731e5b2ca64df41bb978de368be5",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/mobile/network-receipt.json",
+      "bytes": 43758,
+      "sha256": "6f11b7e97c8a0d6693f614a77ed1348311621f5662467b9d43749b399bf53a23",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/offline/console-receipt.json",
+      "bytes": 954,
+      "sha256": "3694ca8afa479bf103568fa2910219db24acd0b3cbc9d1bbe3f63cd37cd9b2df",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/offline/network-receipt.json",
+      "bytes": 45035,
+      "sha256": "7ef9ac4de916c7515ef37c8bca570ba6c93a379c59b1225e0b6517fb77944ac4",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/offline/offline-reload-failure.png",
+      "bytes": 5851,
+      "sha256": "99db2a93b06fa1bf617f5c495e02dcf6c0b76961108491217e2cf4fed8699d35",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/offline/offline-reload-observation.json",
+      "bytes": 231,
+      "sha256": "7ec07d5758f56a64f3c94fda893473dcfab0a583cbcb991441c6f3953de77f7b",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/shell-and-storage/console-receipt.json",
+      "bytes": 1827,
+      "sha256": "c71d599a89ec033a42ba4e18b47ceb7877dc66baa3175422e35ef02c15f92cd4",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/shell-and-storage/network-receipt.json",
+      "bytes": 42746,
+      "sha256": "42eb962bc7a7e7844e655d642abba461d4f1e3b924663d2e290a04b19331bf86",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/shell-and-storage/onboarding-aria.yml",
+      "bytes": 659,
+      "sha256": "3cc2cc15809cb5f46a0b7d1163852db8518885a86fd2f724cb54209b822689f5",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/shell-and-storage/onboarding-first-run.png",
+      "bytes": 216201,
+      "sha256": "a6498fcbf293c40fd74136401dddb997029f0b129e5381038836faa514bfaa09",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/artifacts/shell-and-storage/runtime-snapshot.json",
+      "bytes": 2890,
+      "sha256": "659b08a7355a67bfb6c90e485eeb0db33ac7ec073966bc715a1f4a1ddf8af9ee",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/manifest.json",
+      "bytes": 5848,
+      "sha256": "56442fd118a1caf67e1a88072472a4020c5bba4be3a8a5a9b93e74ad32afd5ea",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/playwright/playwright-results.json",
+      "bytes": 1696168,
+      "sha256": "2a2d6686de41656ce7c137ea8ffec24adf2074399d0d47508051d4c3760606e6",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/README.md",
+      "bytes": 2453,
+      "sha256": "97df3b5637d2ac93c784c7a31d809c31f2f27f48ebdb6efe7aa3a283601f2140",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/summary.json",
+      "bytes": 11825,
+      "sha256": "f6b686dd16193b022f08df035b10064a1f1cd6d38557e4f170263ed3bb48e772",
+      "repository_artifact": true
+    },
+    {
+      "path": "playwright/playwright-results.json",
+      "bytes": 1648721,
+      "sha256": "915116ae352f2c190f8eaf9cd753fa67ee8b98616d694322cee58b4c5eb8dc6d",
+      "repository_artifact": true
+    },
+    {
+      "path": "playwright/test-results/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "repository_artifact": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 3577,
+      "sha256": "3e77298e09f18efb65f0b2f1c16b451943d796b9f1b4389ead72c9bacf35afdd",
+      "repository_artifact": true
+    },
+    {
+      "path": "summary.json",
+      "bytes": 11825,
+      "sha256": "5dfec0cea07608217976ae2fe9b7f726f8b512af79769e77577fe2b4e9aa0c49",
+      "repository_artifact": true
+    }
+  ]
+}

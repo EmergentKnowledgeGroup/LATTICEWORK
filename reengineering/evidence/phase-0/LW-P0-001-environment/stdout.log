@@ -1,0 +1,48 @@
+{
+  "schema": "latticework.environment.windows.v1",
+  "captured_at": "2026-07-30T08:07:28Z",
+  "operating_system": {
+    "description": "Microsoft Windows 10.0.19045",
+    "version": "Microsoft Windows NT 10.0.19045.0",
+    "architecture": "X64"
+  },
+  "cpu": {
+    "name": "12th Gen Intel(R) Core(TM) i9-12900K",
+    "logical_processors": 24
+  },
+  "memory": {
+    "total_bytes": 68423118848
+  },
+  "gpu": [
+    {
+      "name": "Intel(R) UHD Graphics 770",
+      "driver_version": "32.0.101.7076",
+      "adapter_ram": 2147479552
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3090 Ti",
+      "driver_version": "32.0.15.6636",
+      "adapter_ram": 4293918720
+    }
+  ],
+  "browsers": [
+    {
+      "name": "Google Chrome",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "version": "150.0.7871.187"
+    },
+    {
+      "name": "Microsoft Edge",
+      "path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "version": "150.0.4078.105"
+    }
+  ],
+  "tools": {
+    "powershell": "7.6.3",
+    "node": "v24.13.0",
+    "npm": "11.6.2",
+    "git": "git version 2.50.1.windows.1",
+    "ripgrep": "ripgrep 15.1.0 (rev af60c2de9d)",
+    "python": "Python 3.13.12"
+  }
+}

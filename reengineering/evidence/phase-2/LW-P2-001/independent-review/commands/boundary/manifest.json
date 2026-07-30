@@ -1,0 +1,51 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P2-001-boundary",
+  "command": [
+    "node.exe",
+    "tools/reengineering/verify-phase2-boundary.mjs",
+    "--workspace-root",
+    "Z:\\LATTICEWORK_QA_7e928bb",
+    "--baseline-root",
+    "Z:\\LATTICEWORK_BASELINE_e7585999",
+    "--baseline-sha",
+    "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "--output",
+    "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence\\boundary.json"
+  ],
+  "command_display": "\"node.exe\" \"tools/reengineering/verify-phase2-boundary.mjs\" \"--workspace-root\" \"Z:\\\\LATTICEWORK_QA_7e928bb\" \"--baseline-root\" \"Z:\\\\LATTICEWORK_BASELINE_e7585999\" \"--baseline-sha\" \"e7585999fc1af2707f410ae87356cf2b52e08d9c\" \"--output\" \"Z:\\\\LATTICEWORK_QA_7e928bb\\\\runtime\\\\tmp\\\\independent-phase2-final\\\\evidence\\\\boundary.json\"",
+  "cwd": "Z:\\LATTICEWORK_QA_7e928bb",
+  "started_at": "2026-07-30T12:41:02.053Z",
+  "ended_at": "2026-07-30T12:41:03.778Z",
+  "duration_ms": 1724.6533,
+  "timeout_ms": 300000,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "7e928bba605e0309273989bf8fd1303d2a822923",
+  "repository": {
+    "head": "7e928bba605e0309273989bf8fd1303d2a822923",
+    "status": "## HEAD (no branch)"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 3559,
+      "sha256": "3004361b5a26f80615a7d0a876414171d51ef82a7b6d584036d323bc4d6fee59"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

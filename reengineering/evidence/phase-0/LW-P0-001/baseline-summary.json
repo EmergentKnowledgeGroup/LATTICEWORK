@@ -1,0 +1,453 @@
+{
+  "schema": "latticework.baseline.summary.v1",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "captured_at": "2026-07-30T08:05:14.580Z",
+  "counts": {
+    "tracked_files": 514,
+    "tracked_directories": 32,
+    "tracked_text_files": 431,
+    "tracked_text_lines": 365685,
+    "first_party_source_files": 220,
+    "first_party_source_lines": 302560,
+    "exact_duplicate_source_groups": 9,
+    "redundant_exact_source_files": 9,
+    "redundant_exact_source_lines": 75123
+  },
+  "source_by_language": {
+    "HTML": {
+      "files": 87,
+      "lines": 226472
+    },
+    "Shell": {
+      "files": 8,
+      "lines": 1117
+    },
+    "Python": {
+      "files": 13,
+      "lines": 5224
+    },
+    "JavaScript": {
+      "files": 107,
+      "lines": 68428
+    },
+    "Rust": {
+      "files": 2,
+      "lines": 186
+    },
+    "Batch": {
+      "files": 2,
+      "lines": 632
+    },
+    "Command script": {
+      "files": 1,
+      "lines": 501
+    }
+  },
+  "text_by_top_level": {
+    ".github": {
+      "files": 1,
+      "lines": 107
+    },
+    "(root)": {
+      "files": 57,
+      "lines": 130316
+    },
+    "bin": {
+      "files": 1,
+      "lines": 203
+    },
+    "desktop": {
+      "files": 20,
+      "lines": 7356
+    },
+    "docs": {
+      "files": 313,
+      "lines": 195686
+    },
+    "hooks": {
+      "files": 1,
+      "lines": 107
+    },
+    "lib": {
+      "files": 8,
+      "lines": 1956
+    },
+    "modules": {
+      "files": 14,
+      "lines": 15387
+    },
+    "scripts": {
+      "files": 4,
+      "lines": 246
+    },
+    "tests": {
+      "files": 2,
+      "lines": 11480
+    },
+    "tools": {
+      "files": 7,
+      "lines": 2560
+    },
+    "worker": {
+      "files": 3,
+      "lines": 281
+    }
+  },
+  "largest_source_files": [
+    {
+      "path": "docs/app.html",
+      "bytes": 2779808,
+      "sha256": "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3",
+      "text": true,
+      "lines": 65387,
+      "first_party_source": true
+    },
+    {
+      "path": "index.html",
+      "bytes": 2779808,
+      "sha256": "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3",
+      "text": true,
+      "lines": 65387,
+      "first_party_source": true
+    },
+    {
+      "path": "app.html",
+      "bytes": 1997992,
+      "sha256": "ffa5a3d35d71049d6433627ce46e9f971faf5912ae5153fcc8fcdefe9c2cf4f9",
+      "text": true,
+      "lines": 51684,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/temperature-gauge.html",
+      "bytes": 310272,
+      "sha256": "a1e86f0a8fe8f5af01d555285323ce9e5421dc8b0a9a86bfe46264c1d020824b",
+      "text": true,
+      "lines": 6065,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/modules/fractal-garden.js",
+      "bytes": 188990,
+      "sha256": "10046c7738a05f71810a62fe1bc2f62cb5040487229fbedf0dc8bd8c34fcf157",
+      "text": true,
+      "lines": 4368,
+      "first_party_source": true
+    },
+    {
+      "path": "modules/fractal-garden.js",
+      "bytes": 188990,
+      "sha256": "10046c7738a05f71810a62fe1bc2f62cb5040487229fbedf0dc8bd8c34fcf157",
+      "text": true,
+      "lines": 4368,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/index.html",
+      "bytes": 72336,
+      "sha256": "a3d08a4e01eabd14aa198d6e21c7f523e43f53a9f14ed3b8e5214c3636d65e12",
+      "text": true,
+      "lines": 2054,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/modules/dojo-sparring.js",
+      "bytes": 84279,
+      "sha256": "3157cc09d15e8342bdf4178d7d861eec7158a8c1768bb7b986f022d55327c612",
+      "text": true,
+      "lines": 1884,
+      "first_party_source": true
+    },
+    {
+      "path": "modules/dojo-sparring.js",
+      "bytes": 83315,
+      "sha256": "19538b85ff108aa340ace04c44274913c9ea72621213745044397c294531e60f",
+      "text": true,
+      "lines": 1871,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/chronal-simulation-v2.html",
+      "bytes": 62888,
+      "sha256": "b6e5e14229dde5a0c1014a01bf867fe9e25c5e534b9188db0a5e6372dd3b24d5",
+      "text": true,
+      "lines": 1859,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/audit.html",
+      "bytes": 88505,
+      "sha256": "0d6bd3bd7961c3af223ce6d8bfa1b570e3b07bf457ca9dcf986cb39d3b619440",
+      "text": true,
+      "lines": 1698,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/chalkboard.html",
+      "bytes": 55177,
+      "sha256": "d5b4b9490bf5f40c62f77c13626ce85c75a7a674b49334d627bb8bda15eb697e",
+      "text": true,
+      "lines": 1448,
+      "first_party_source": true
+    },
+    {
+      "path": "chalkboard.html",
+      "bytes": 54993,
+      "sha256": "bbc70669618e53cb99af025cb6a1ab37d13cea42ca4b8cb405be24baef3c7677",
+      "text": true,
+      "lines": 1446,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/modules/workshop.js",
+      "bytes": 71397,
+      "sha256": "15607e85e9ece34f8cc766987d20410ee8cfd9051faf5bcdf99581972a0d4812",
+      "text": true,
+      "lines": 1408,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/modules/education.js",
+      "bytes": 68352,
+      "sha256": "e9cfe1ac7a880d7d04d759b951a6fb8be50dfac0eec016bc6676a17b6d7f911a",
+      "text": true,
+      "lines": 1378,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/modules/garden-dreaming.js",
+      "bytes": 49191,
+      "sha256": "0c68253fa31e19696f0494aa23f49c0d274aac22c52c3b7ba065a28bff105699",
+      "text": true,
+      "lines": 1331,
+      "first_party_source": true
+    },
+    {
+      "path": "modules/garden-dreaming.js",
+      "bytes": 49191,
+      "sha256": "0c68253fa31e19696f0494aa23f49c0d274aac22c52c3b7ba065a28bff105699",
+      "text": true,
+      "lines": 1331,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/modules/jade-hall.js",
+      "bytes": 51700,
+      "sha256": "378588a411a0ffbfdc8ac8fa51e6897c8f29873b91d1b1c8010c76179d386bfa",
+      "text": true,
+      "lines": 1258,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/modules/forever-stack.js",
+      "bytes": 52062,
+      "sha256": "bd871677521aaf9d35a65074f1124120e1088e9f7ce2045fd766442c319e0442",
+      "text": true,
+      "lines": 1255,
+      "first_party_source": true
+    },
+    {
+      "path": "modules/forever-stack.js",
+      "bytes": 51743,
+      "sha256": "4f9cb1f6cd482ae299698b42467bff4f74f45af35a2f6c52d53b97ee63423f76",
+      "text": true,
+      "lines": 1255,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/modules/radio-immersive.js",
+      "bytes": 43312,
+      "sha256": "1f3f4d1ad20222fff929c1a76cadf6caca87318abe52703a28b578863881b0bd",
+      "text": true,
+      "lines": 1228,
+      "first_party_source": true
+    },
+    {
+      "path": "modules/radio-immersive.js",
+      "bytes": 43312,
+      "sha256": "1f3f4d1ad20222fff929c1a76cadf6caca87318abe52703a28b578863881b0bd",
+      "text": true,
+      "lines": 1228,
+      "first_party_source": true
+    },
+    {
+      "path": "tools/agent-bridge.js",
+      "bytes": 54017,
+      "sha256": "8806614f0152ae01c417c2f96df2544d9566221ebfc203e0015dde7b9235d9a1",
+      "text": true,
+      "lines": 1181,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/modules/resonance-game.js",
+      "bytes": 45899,
+      "sha256": "ad659bc582e78fe2d8f7cc126b74a157f91daf7fa0b0063cf101824c5fcdff19",
+      "text": true,
+      "lines": 1118,
+      "first_party_source": true
+    },
+    {
+      "path": "docs/modules/pictionary.js",
+      "bytes": 42276,
+      "sha256": "fb19b11d5aed27566f1621bd9c544639c34eb553db0745cd72921be09888b1c7",
+      "text": true,
+      "lines": 1105,
+      "first_party_source": true
+    }
+  ],
+  "exact_duplicate_source_groups": [
+    {
+      "sha256": "3163bdd6da5fe5a9c8fbe50c634518c1547b0bb164847339060d101f0971cde3",
+      "files": [
+        {
+          "path": "docs/app.html",
+          "lines": 65387,
+          "bytes": 2779808
+        },
+        {
+          "path": "index.html",
+          "lines": 65387,
+          "bytes": 2779808
+        }
+      ],
+      "redundant_files": 1,
+      "redundant_lines": 65387
+    },
+    {
+      "sha256": "10046c7738a05f71810a62fe1bc2f62cb5040487229fbedf0dc8bd8c34fcf157",
+      "files": [
+        {
+          "path": "docs/modules/fractal-garden.js",
+          "lines": 4368,
+          "bytes": 188990
+        },
+        {
+          "path": "modules/fractal-garden.js",
+          "lines": 4368,
+          "bytes": 188990
+        }
+      ],
+      "redundant_files": 1,
+      "redundant_lines": 4368
+    },
+    {
+      "sha256": "0c68253fa31e19696f0494aa23f49c0d274aac22c52c3b7ba065a28bff105699",
+      "files": [
+        {
+          "path": "docs/modules/garden-dreaming.js",
+          "lines": 1331,
+          "bytes": 49191
+        },
+        {
+          "path": "modules/garden-dreaming.js",
+          "lines": 1331,
+          "bytes": 49191
+        }
+      ],
+      "redundant_files": 1,
+      "redundant_lines": 1331
+    },
+    {
+      "sha256": "1f3f4d1ad20222fff929c1a76cadf6caca87318abe52703a28b578863881b0bd",
+      "files": [
+        {
+          "path": "docs/modules/radio-immersive.js",
+          "lines": 1228,
+          "bytes": 43312
+        },
+        {
+          "path": "modules/radio-immersive.js",
+          "lines": 1228,
+          "bytes": 43312
+        }
+      ],
+      "redundant_files": 1,
+      "redundant_lines": 1228
+    },
+    {
+      "sha256": "833094e4d8022cc4e771fa1eb901aeea35fe9a48fbb1c2c222f312384d7cbff8",
+      "files": [
+        {
+          "path": "docs/library/chronal_simulation_v3.py",
+          "lines": 1011,
+          "bytes": 42240
+        },
+        {
+          "path": "docs/simulation/chronal_simulation_v3.py",
+          "lines": 1011,
+          "bytes": 42240
+        }
+      ],
+      "redundant_files": 1,
+      "redundant_lines": 1011
+    },
+    {
+      "sha256": "56c6e897270544036996dc89975aad45fdd5e68d8a1ae1dc83805334413cacae",
+      "files": [
+        {
+          "path": "docs/modules/aurora-equation.js",
+          "lines": 635,
+          "bytes": 29651
+        },
+        {
+          "path": "modules/aurora-equation.js",
+          "lines": 635,
+          "bytes": 29651
+        }
+      ],
+      "redundant_files": 1,
+      "redundant_lines": 635
+    },
+    {
+      "sha256": "191feed44f4e5d740e0bdd2d687b186517857aca8c5ba4a58c327e441da12ffd",
+      "files": [
+        {
+          "path": "docs/modules/shared-presence.js",
+          "lines": 451,
+          "bytes": 17661
+        },
+        {
+          "path": "modules/shared-presence.js",
+          "lines": 451,
+          "bytes": 17661
+        }
+      ],
+      "redundant_files": 1,
+      "redundant_lines": 451
+    },
+    {
+      "sha256": "1d4ed722a0a5be1e92eb5106bd816c2f54ce3cc362dbf5cff067ce2862aa3dc5",
+      "files": [
+        {
+          "path": "docs/telegram-worker.js",
+          "lines": 366,
+          "bytes": 11688
+        },
+        {
+          "path": "telegram-worker.js",
+          "lines": 366,
+          "bytes": 11688
+        }
+      ],
+      "redundant_files": 1,
+      "redundant_lines": 366
+    },
+    {
+      "sha256": "01a650f1472180baabd5352bd021a763fe06c6a54230a803bec5710de8748e9a",
+      "files": [
+        {
+          "path": "docs/library/chronal_clock_sensitivity_v2.py",
+          "lines": 346,
+          "bytes": 14767
+        },
+        {
+          "path": "docs/simulation/chronal_clock_sensitivity_v2.py",
+          "lines": 346,
+          "bytes": 14767
+        }
+      ],
+      "redundant_files": 1,
+      "redundant_lines": 346
+    }
+  ]
+}

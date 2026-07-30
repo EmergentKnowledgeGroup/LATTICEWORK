@@ -1,0 +1,47 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P2-001-supply-chain",
+  "command": [
+    "node.exe",
+    "tools/reengineering/collect-phase2-supply-chain.mjs",
+    "--workspace-root",
+    "Z:\\LATTICEWORK_QA_7e928bb",
+    "--output",
+    "Z:\\LATTICEWORK_QA_7e928bb\\runtime\\tmp\\independent-phase2-final\\evidence\\supply-chain.json"
+  ],
+  "command_display": "\"node.exe\" \"tools/reengineering/collect-phase2-supply-chain.mjs\" \"--workspace-root\" \"Z:\\\\LATTICEWORK_QA_7e928bb\" \"--output\" \"Z:\\\\LATTICEWORK_QA_7e928bb\\\\runtime\\\\tmp\\\\independent-phase2-final\\\\evidence\\\\supply-chain.json\"",
+  "cwd": "Z:\\LATTICEWORK_QA_7e928bb",
+  "started_at": "2026-07-30T12:41:01.833Z",
+  "ended_at": "2026-07-30T12:41:01.906Z",
+  "duration_ms": 73.2691,
+  "timeout_ms": 300000,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "7e928bba605e0309273989bf8fd1303d2a822923",
+  "repository": {
+    "head": "7e928bba605e0309273989bf8fd1303d2a822923",
+    "status": "## HEAD (no branch)"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 34348,
+      "sha256": "d1dd7259db0a57bd89c83b7da85f6a019d216b47b3e812170a2dc50d95465535"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
