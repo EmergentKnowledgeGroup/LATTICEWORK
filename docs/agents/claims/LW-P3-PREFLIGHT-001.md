@@ -1,6 +1,6 @@
 # Work Claim — `LW-P3-PREFLIGHT-001`
 
-**Status:** Claimed
+**Status:** Completed
 **Owner:** Codex root controller
 **Coordinator:** Codex root controller
 **Base commit:** `6fa553ee3f5c7d1952f7aed836873467c4626068`

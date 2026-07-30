@@ -52,7 +52,7 @@ decision/control documentation and tests.
 | `LW-P2-PREFLIGHT-001` | Accepted architecture and exact Phase 2 execution packet | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-PREFLIGHT-001.md` |
 | `LW-P2-001` | Isolated typed kernel/contracts/status-shell candidate | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-001.md` |
 | `LW-P3-DEC-001` | Phase 3 storage/provider/security decision packet | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — DISPOSITION PENDING` | `docs/agents/handoffs/LW-P3-DEC-001.md` |
-| `LW-P3-PREFLIGHT-001` | Exact synthetic storage/provider implementation preflight | Codex root controller | `reengineering/p3-decision-packet` | `INDEPENDENT REVIEW PENDING` | `reengineering/PHASE3_PREFLIGHT.md` |
+| `LW-P3-PREFLIGHT-001` | Exact synthetic storage/provider implementation preflight | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P3-PREFLIGHT-001.md` |
 
 ## Completed in current milestone
 
@@ -117,6 +117,9 @@ decision/control documentation and tests.
 - **OBSERVED:** the preflight still records `implementation_authorized: false`.
   No storage/provider package, implementation fixture, real-data read,
   credential, provider call, listener, route, feature, or cutover exists.
+- **VERIFIED:** independent QA reproduced the canonical validator, 39 focused
+  controls, 91 full controls, syntax/JSON/link/diff gates, and returned GREEN
+  with no actionable finding.
 
 ## Blockers
 
