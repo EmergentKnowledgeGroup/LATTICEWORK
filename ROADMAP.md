@@ -9,8 +9,9 @@
   characterization continues as migration reaches each surface.
 - `M2`: accepted architecture and feature-free typed foundation independently
   verified, reviewed once, and merged.
-- `M3`: decision packet in progress. ADR-004 through ADR-006 are Proposed;
-  structural implementation has not started.
+- `M3`: decision packet validated and independently reviewed. ADR-004 through
+  ADR-006 are Proposed and await maintainer disposition; structural
+  implementation has not started.
 - `M4` and later: not started; blocked by their recorded decision/evidence
   gates.
 

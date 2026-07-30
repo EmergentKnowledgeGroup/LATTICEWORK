@@ -1,0 +1,76 @@
+{
+  "schema": "latticework.evidence.artifact-bundle.v1",
+  "receipt_id": "LW-P3-DEC-001",
+  "captured_at": "2026-07-30T13:37:05.921Z",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "22c3742cdc7863f16bf190ee23ddc67eabc20ec1",
+  "directory": "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-3\\LW-P3-DEC-001",
+  "artifacts": [
+    {
+      "path": "commands/controls/manifest.json",
+      "bytes": 1330,
+      "sha256": "cb5e7410db7b5c24a1e20b4ee6d70204d7631ee64b89d0fdb589ddeb232e74d6",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/controls/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/controls/stdout.log",
+      "bytes": 14385,
+      "sha256": "a0ae4b191373b955039dfd8ef84b6c066ee3855a9fb213a36a0d6da7f722938e",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/focused/manifest.json",
+      "bytes": 1318,
+      "sha256": "1b831b452af9581f0fb8a415f286dc779b151289e5eeee2446ea0e8bfa588737",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/focused/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/focused/stdout.log",
+      "bytes": 1714,
+      "sha256": "6b7f9a320316ed04d62a9956e42cc03d1fe5dd8dd17a2c25ba287df834f641a7",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/validator/manifest.json",
+      "bytes": 1302,
+      "sha256": "eb7cf3ff35cf693433f5c67bba92f06c7706fb5e213c1f6cae5eff06648f2bab",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/validator/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/validator/stdout.log",
+      "bytes": 370,
+      "sha256": "747f6e179b914324ccbdf00520033f9f322625995b9ce3ecb529ddbd7c273c27",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review.md",
+      "bytes": 1711,
+      "sha256": "6bf03be0d3a7238a0b9b33225581b16e6dc5ddb77d52f38935f5cd56b318372b",
+      "repository_artifact": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 2593,
+      "sha256": "92cbcd4b4ceb52f0a298ac830a3a76129a23ac4c211eeda2c28be7c1c4834363",
+      "repository_artifact": true
+    }
+  ]
+}

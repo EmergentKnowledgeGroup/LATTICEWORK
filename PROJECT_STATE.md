@@ -24,15 +24,15 @@ LATTICEWORK
 
 ## Last verified commit
 
-`6704dd502a140fce2fe8e06f8db336d0bd3839a5` (Phase 2 merge checkpoint)
+`22c3742cdc7863f16bf190ee23ddc67eabc20ec1` (`LW-P3-DEC-001` proposal candidate)
 
-The last verified implementation merge is
+The last verified runtime implementation merge is
 `c48505c5437c6b9cf67a652cdc2d8c81778c15a1`; the later commit changes only
-post-merge control documentation.
+decision/control documentation and tests.
 
 ## Last verified date
 
-`2026-07-30 12:50 UTC`
+`2026-07-30 13:35 UTC`
 
 ## Locked constraints
 
@@ -51,7 +51,7 @@ post-merge control documentation.
 | `LW-P1-001` | Executable baseline characterization and fixtures | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P1-001.md` |
 | `LW-P2-PREFLIGHT-001` | Accepted architecture and exact Phase 2 execution packet | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-PREFLIGHT-001.md` |
 | `LW-P2-001` | Isolated typed kernel/contracts/status-shell candidate | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-001.md` |
-| `LW-P3-DEC-001` | Phase 3 storage/provider/security decision packet | Codex root controller | `reengineering/p3-decision-packet` | `IN_PROGRESS` | `reengineering/PHASE3_DECISION_PACKET.md` |
+| `LW-P3-DEC-001` | Phase 3 storage/provider/security decision packet | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — DISPOSITION PENDING` | `docs/agents/handoffs/LW-P3-DEC-001.md` |
 
 ## Completed in current milestone
 
@@ -102,6 +102,13 @@ post-merge control documentation.
   `reengineering/PHASE3_DECISION_PACKET.*` now describe the bounded Phase 3
   storage, provider, and optional-proxy contracts. They have not been accepted
   and authorize no runtime, storage, provider, listener, or cutover change.
+- **MEASURED:** the Phase 3 proposal validator is valid and scope-checked, 23
+  focused controls and 75 full repository controls pass with zero fail/skip,
+  and the evidence bundle is stored under
+  `reengineering/evidence/phase-3/LW-P3-DEC-001/`.
+- **VERIFIED:** independent final QA reproduced the decision gates and returned
+  GREEN with no actionable findings. Explicit maintainer dispositions remain
+  the only authority gate.
 
 ## Blockers
 

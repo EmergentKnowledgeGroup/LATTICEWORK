@@ -1,0 +1,15 @@
+{
+  "schema": "latticework.phase3-decision-packet-validation.v1",
+  "valid": true,
+  "status": "PROPOSED",
+  "implementation_authorized": false,
+  "git_scope_checked": true,
+  "git_scope_base": "6704dd502a140fce2fe8e06f8db336d0bd3839a5",
+  "checks": {
+    "adrs": 3,
+    "blockers": 3,
+    "preservation_rows": 252,
+    "required_invariants": 12
+  },
+  "failures": []
+}

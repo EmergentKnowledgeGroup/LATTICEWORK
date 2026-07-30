@@ -1,6 +1,6 @@
 # Work Claim — `LW-P3-DEC-001`
 
-**Status:** Claimed
+**Status:** Completed — proposal validated; maintainer disposition pending
 **Owner:** Codex root controller
 **Coordinator:** Codex root controller
 **Base commit:** `6704dd502a140fce2fe8e06f8db336d0bd3839a5`

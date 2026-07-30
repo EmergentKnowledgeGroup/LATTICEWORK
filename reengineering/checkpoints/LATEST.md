@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-30T12:55:05Z`
+Updated: `2026-07-30T13:35:25Z`
 
 ## CURRENT
 
 Track: `LW_P3_DECISION_PACKET WORK`
-Step: `phase3-decision-packet-start`
-Note: The bounded Phase 3 decision-only work unit is claimed; data, provider/security, and cutover semantics remain unchanged and blocked pending explicit ADR dispositions.
+Step: `phase3-decision-packet-post-green`
+Note: ADR-004 through ADR-006 and the Phase 3 packet are proposal-only, machine-validated, and independently reviewed GREEN; runtime semantics remain unchanged and explicit maintainer dispositions are the next authority gate.
 Branch: `reengineering/p3-decision-packet`
-Head: `6704dd502a140fce2fe8e06f8db336d0bd3839a5`
-Next command: `Draft proposed ADR-004 through ADR-006, add decision-packet controls, and validate the proposal without implementing any runtime semantics.`
+Head: `22c3742cdc7863f16bf190ee23ddc67eabc20ec1`
+Next command: `Record explicit maintainer acceptance or rejection for ADR-004, ADR-005, and ADR-006; do not implement or close a blocker before those receipts exist.`
 
 ## LW_M0_BASELINE WORK
 
@@ -125,11 +125,11 @@ Next command: `Begin the Phase 3 data, provider/security, and cutover decision p
 
 ## LW_P3_DECISION_PACKET WORK
 
-Step: `phase3-decision-packet-start`
-Note: The bounded Phase 3 decision-only work unit is claimed; data, provider/security, and cutover semantics remain unchanged and blocked pending explicit ADR dispositions.
+Step: `phase3-decision-packet-post-green`
+Note: ADR-004 through ADR-006 and the Phase 3 packet are proposal-only, machine-validated, and independently reviewed GREEN; runtime semantics remain unchanged and explicit maintainer dispositions are the next authority gate.
 Branch: `reengineering/p3-decision-packet`
-Head: `6704dd502a140fce2fe8e06f8db336d0bd3839a5`
-Next command: `Draft proposed ADR-004 through ADR-006, add decision-packet controls, and validate the proposal without implementing any runtime semantics.`
+Head: `22c3742cdc7863f16bf190ee23ddc67eabc20ec1`
+Next command: `Record explicit maintainer acceptance or rejection for ADR-004, ADR-005, and ADR-006; do not implement or close a blocker before those receipts exist.`
 
 ### Validations
 
@@ -137,9 +137,14 @@ Next command: `Draft proposed ADR-004 through ADR-006, add decision-packet contr
 - **OBSERVED** — `LW-BLK-005` through `LW-BLK-007` remain open.
 - **OBSERVED** — `docs/agents/claims/LW-P3-DEC-001.md` claims only documentation, decision records, controls, and living-state updates.
 - **VERIFIED** — no storage, provider, security, worker, route, deployment, or legacy runtime file changed at phase start.
+- **MEASURED** — canonical packet validator returned `valid: true`, checked Git scope from base `6704dd502a140fce2fe8e06f8db336d0bd3839a5`, and reported `implementation_authorized: false`.
+- **MEASURED** — focused Phase 3 decision controls passed 23/23; full repository controls passed 75/75 with zero fail or skip against the immutable baseline.
+- **VERIFIED** — independent final QA reproduced validator, focused/full controls, CLI scope rejection, and `git diff --check`; verdict GREEN with no actionable findings.
+- **OBSERVED** — ADR-004, ADR-005, and ADR-006 remain Proposed with PENDING receipts; all affected blockers remain OPEN.
+- **VERIFIED** — evidence is stored under `reengineering/evidence/phase-3/LW-P3-DEC-001/`.
 
 ### Blockers
 
-- `LW-BLK-005` requires an accepted versioned data/storage and migration ADR before implementation.
-- `LW-BLK-006` requires accepted provider/security decisions and tests before optional gateway/worker/mesh implementation.
-- `LW-BLK-007` requires explicit owner approval before any default-route cutover or capability retirement.
+- `LW-BLK-005` requires accepted ADR-004 plus expanded inventory and independently verified synthetic migration fixtures.
+- `LW-BLK-006` requires accepted ADR-006 and ADR-012 plus gateway/LAN/worker/peer/Telegram security tests.
+- `LW-BLK-007` requires future ADR-009, full evidence, and explicit owner approval before cutover or capability retirement.

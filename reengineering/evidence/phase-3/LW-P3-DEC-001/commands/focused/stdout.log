@@ -1,0 +1,31 @@
+✔ canonical Phase 3 decision packet is complete, proposal-only, and scope-safe (137.3236ms)
+✔ validator rejects implementation authority without a maintainer disposition (8.7174ms)
+✔ validator rejects a weakened preservation registry (9.0108ms)
+✔ validator permits additive registry expansion while retaining the pinned floor (9.0014ms)
+✔ validator rejects premature blocker closure (7.3489ms)
+✔ validator rejects an ADR marked Accepted without a decision receipt (6.2033ms)
+✔ validator rejects removal of a required decision invariant (7.4923ms)
+✔ validator rejects unstable versioned dataset ID (7.3957ms)
+✔ validator rejects credential-bearing export policy (5.9846ms)
+✔ validator rejects journal deletion during rollback (5.2512ms)
+✔ validator rejects unstaged import promotion (5.9791ms)
+✔ validator rejects exported real-data digests (5.593ms)
+✔ validator rejects real provider traffic (6.9368ms)
+✔ validator rejects implicit retry (7.0522ms)
+✔ validator rejects credential resolution before an exact egress grant (7.6513ms)
+✔ validator rejects Phase 3 proxy listener (6.9783ms)
+✔ validator rejects ambient pairing bootstrap (6.6799ms)
+✔ validator rejects removed real-data prohibition (7.5468ms)
+✔ validator rejects a weakened blocker condition (6.5325ms)
+✔ validator rejects a semantically weakened invariant statement (5.4205ms)
+✔ validator rejects removal of an ADR safety clause (5.9414ms)
+✔ validator rejects Markdown that drifts from the structured packet (6.9862ms)
+✔ canonical CLI cannot disable or rebase Git scope validation (65.166ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 455.2142
