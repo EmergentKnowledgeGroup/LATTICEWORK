@@ -1,0 +1,41 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P0-003-control-validator",
+  "command": [
+    "node",
+    "tools/reengineering/validate-phase0-control.mjs"
+  ],
+  "command_display": "\"node\" \"tools/reengineering/validate-phase0-control.mjs\"",
+  "cwd": "Z:\\LATTICEWORK",
+  "started_at": "2026-07-30T09:32:07.678Z",
+  "ended_at": "2026-07-30T09:32:07.763Z",
+  "duration_ms": 84.9208,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "repository": {
+    "head": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "status": "## reengineering/m0-baseline-characterization\n M .gitignore\n M README.md\n M SECURITY.md\n M docs/README.md\n?? .github/ISSUE_TEMPLATE/\n?? .github/PULL_REQUEST_TEMPLATE.md\n?? .playwright-cli/\n?? AGENTS.md\n?? BRAND.md\n?? CHANGELOG.md\n?? CODE_OF_CONDUCT.md\n?? CONTRIBUTING.md\n?? DOCS_MANIFEST.md\n?? DOCUMENT_INVENTORY.json\n?? FREELATTICE_REENGINEERING_GOAL_PROMPT.md\n?? GOVERNANCE.md\n?? LATTICEWORK_Documentation_Pack.zip\n?? NOTICE.md\n?? ORIGIN.md\n?? PACK_INSTALLATION.md\n?? PRINCIPLES.md\n?? PRIVACY.md\n?? PROJECT_CHARTER.md\n?? PROJECT_STATE.md\n?? PROVENANCE.md\n?? ROADMAP.md\n?? UPSTREAM.md\n?? VOICE_AND_POSITIONING.md\n?? docs/ARCHITECTURE.md\n?? docs/AUDIT_FINDINGS.md\n?? docs/AUDIT_METHODOLOGY.md\n?? docs/BASELINE.md\n?? docs/CLAIMS_LEDGER.md\n?? docs/COMPARISON.md\n?? docs/COMPATIBILITY.md\n?? docs/CONTEXT_ENGINEERING.md\n?? docs/DATA_AND_STORAGE.md\n?? docs/DEPENDENCY_INVENTORY.md\n?? docs/DIVERGENCES.md\n?? docs/DOCUMENTATION_STANDARD.md\n?? docs/KNOWN_LIMITATIONS.md\n?? docs/METRICS_AND_BENCHMARKS.md\n?? docs/MIGRATION.md\n?? docs/PUBLIC_FAQ.md\n?? docs/REENGINEERING_METHOD.md\n?? docs/RELEASE_PROCESS.md\n?? docs/TESTING_AND_VERIFICATION.md\n?? docs/UPSTREAM_SYNC_LOG.md\n?? docs/adr/\n?? docs/agents/\n?? docs/decisions/\n?? reengineering/\n?? runtime/\n?? tests/reengineering/\n?? tools/reengineering/"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1"
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 8955,
+      "sha256": "101057d81b612777a01bbf448621fb105f57d9f8a50c6a47bcf9021117bac3fc"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

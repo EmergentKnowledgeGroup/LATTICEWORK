@@ -1,0 +1,50 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P0-003-file-launch-probe",
+  "command": [
+    "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "--headless=new",
+    "--disable-breakpad",
+    "--disable-component-update",
+    "--no-first-run",
+    "--user-data-dir=Z:\\LATTICEWORK\\runtime\\tmp\\chrome-file-phase0-profile-minimal",
+    "--window-size=1440,900",
+    "--virtual-time-budget=10000",
+    "--log-level=2",
+    "--screenshot=Z:\\LATTICEWORK\\reengineering\\evidence\\phase-0\\LW-P0-003-browser\\artifacts\\onboarding-file-direct.png",
+    "file:///Z:/LATTICEWORK_BASELINE_e7585999/docs/app.html"
+  ],
+  "command_display": "\"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" \"--headless=new\" \"--disable-breakpad\" \"--disable-component-update\" \"--no-first-run\" \"--user-data-dir=Z:\\\\LATTICEWORK\\\\runtime\\\\tmp\\\\chrome-file-phase0-profile-minimal\" \"--window-size=1440,900\" \"--virtual-time-budget=10000\" \"--log-level=2\" \"--screenshot=Z:\\\\LATTICEWORK\\\\reengineering\\\\evidence\\\\phase-0\\\\LW-P0-003-browser\\\\artifacts\\\\onboarding-file-direct.png\" \"file:///Z:/LATTICEWORK_BASELINE_e7585999/docs/app.html\"",
+  "cwd": "Z:\\LATTICEWORK_BASELINE_e7585999",
+  "started_at": "2026-07-30T09:10:17.396Z",
+  "ended_at": "2026-07-30T09:10:30.852Z",
+  "duration_ms": 13455.6098,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "repository": {
+    "head": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "status": "## HEAD (no branch)"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1"
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 276,
+      "sha256": "5bb0d9f818c5d419e8bb6a01174496e756da0cd4fa411195e41af93a80a7e0bd"
+    }
+  ]
+}

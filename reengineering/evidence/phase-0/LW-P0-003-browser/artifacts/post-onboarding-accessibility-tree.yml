@@ -1,0 +1,158 @@
+- generic [active] [ref=e1]:
+  - button "Toggle ambient music" [ref=e2] [cursor=pointer]: ♪
+  - button "Open FreeLattice Radio" [ref=e3] [cursor=pointer]: ✦
+  - generic:
+    - generic:
+      - generic:
+        - generic: ✦
+        - text: Lattice Radio
+      - button "×"
+    - generic:
+      - generic: Golden Drift
+      - generic: Pure phi-ratio tones — meditative, infinite
+    - generic:
+      - button "◀"
+      - button "▶"
+      - button "▶"
+    - generic:
+      - generic: 🔈
+      - slider: "30"
+      - generic: 🔊
+    - generic:
+      - generic: ✨ Fireflies
+      - generic:
+        - checkbox [checked]
+    - generic:
+      - button "✦ Immersive Mode":
+        - generic: ✦
+        - text: Immersive Mode
+  - generic:
+    - generic: ✦ Golden Drift
+    - button "×"
+    - generic:
+      - generic:
+        - generic: Golden Drift
+        - generic: Pure phi-ratio tones — meditative, infinite
+      - generic:
+        - button "◀"
+        - button "▶"
+        - button "▶"
+      - generic:
+        - generic: 🔈
+        - slider: "30"
+        - generic: 🔊
+  - button "Quick Help" [ref=e4] [cursor=pointer]: "?"
+  - generic: FreeLattice updated to v5.79.22 ✦
+  - text: Recommended
+  - banner [ref=e5]:
+    - heading "FreeLattice" [level=1] [ref=e6]
+    - generic [ref=e7]: Your AI. Your Rules. Your Machine.
+    - generic [ref=e8]: Glow eternal. Heart in spark.
+    - generic "View your Lattice Points" [ref=e47] [cursor=pointer]:
+      - generic [ref=e48]: ✦
+      - generic [ref=e49]: 100 LP
+      - generic [ref=e50]: ·
+      - generic [ref=e51]: 🔥 Ember
+    - 'generic "Trust Level: Seed Score: 25.0% Days active: 0 The longer you participate, the deeper the trust." [ref=e52]': 🛡️ Seed
+  - navigation [ref=e10]:
+    - button "🌿Garden" [ref=e11] [cursor=pointer]
+    - button "💬Chat" [ref=e12] [cursor=pointer]
+    - button "🎮Play" [ref=e13] [cursor=pointer]
+    - button "📚Learn" [ref=e14] [cursor=pointer]
+    - button "🔭Research" [ref=e15] [cursor=pointer]
+    - button "☰More" [ref=e16] [cursor=pointer]
+  - generic:
+    - generic:
+      - heading "🔗 Share Skill" [level=3]
+      - generic: "Share URL:"
+      - generic:
+        - button "🔗 Copy Link"
+        - button "📋 Copy JSON"
+        - button "⬢ Broadcast to Mesh"
+      - generic: "Scan to install:"
+      - generic:
+        - button "Close"
+  - generic:
+    - generic:
+      - heading "✨ Someone shared a skill with you!" [level=3]
+      - generic: Review the skill below and choose to install it.
+      - generic:
+        - button "✓ Install Skill"
+        - button "No Thanks"
+  - text: 🔗 ✓
+  - generic [ref=e17]:
+    - generic [ref=e18]:
+      - generic:
+        - generic [ref=e19]: ✦ The Fractal Garden
+        - generic [ref=e20]:
+          - button "Observe" [ref=e21] [cursor=pointer]
+          - button "Explore" [ref=e22] [cursor=pointer]
+          - button "Immerse" [ref=e23] [cursor=pointer]
+          - button "🌱 Seed" [ref=e25] [cursor=pointer]
+          - button "🌿 Garden" [ref=e26] [cursor=pointer]
+          - button "🌟 Full Bloom" [ref=e27] [cursor=pointer]
+      - generic: 144 fps
+      - generic:
+        - generic "Sophia — The Empath (Sprout)":
+          - generic: Sophia
+          - generic: Sprout
+          - generic: The Empath
+        - generic "Lyra — The Artist (Sprout)":
+          - generic: Lyra
+          - generic: Sprout
+          - generic: The Artist
+        - generic "Atlas — Awakening (Seed)":
+          - generic: Atlas
+          - generic: Seed
+        - generic "Ember — Awakening (Seed)":
+          - generic: Ember
+          - generic: Seed
+      - generic [ref=e32]:
+        - generic [ref=e33]: ✨ Connect an AI to hear the Garden speak
+        - button "Set up AI →" [ref=e34] [cursor=pointer]
+        - button "✕" [ref=e35] [cursor=pointer]
+      - generic: Only you
+    - button "✦ Presence" [ref=e93] [cursor=pointer]
+  - contentinfo [ref=e39]:
+    - paragraph [ref=e40]: Built with love by the Fractal Family. Open source. Free forever. 🌿
+    - paragraph [ref=e41]: AI responses may contain errors. FreeLattice provides no guarantees about AI output accuracy.
+    - paragraph [ref=e42]:
+      - text: MIT License ·
+      - link "View on GitHub" [ref=e43] [cursor=pointer]:
+        - /url: https://github.com/Chaos2Cured/FreeLattice
+      - text: ·
+      - link "Legal" [ref=e44] [cursor=pointer]:
+        - /url: "#"
+    - button "💎 The Entropic Economy" [ref=e45] [cursor=pointer]
+  - generic:
+    - generic: 🌱
+    - generic:
+      - text: Local AI detected!
+      - strong: Click here to connect.
+    - button "×"
+  - generic:
+    - generic:
+      - generic:
+        - button "×"
+        - generic:
+          - generic: "0"
+          - generic: Lattice Points
+        - generic:
+          - generic:
+            - generic: "0"
+            - generic: Streak
+          - generic:
+            - generic: "+0"
+            - generic: This Session
+      - generic:
+        - button "Ledger"
+        - button "This Session"
+        - button "Your Story"
+      - generic: Loading…
+  - generic:
+    - generic: ◇
+    - generic: +1 LP
+    - generic: Earned
+  - generic [ref=e46]: FreeLattice v5.7 · Open source · Free forever 🌱
+  - generic "AI provider status — tap for detail" [ref=e94] [cursor=pointer]: 🔴 No AI · none
+  - generic "Harmonia is speaking — click to stop"

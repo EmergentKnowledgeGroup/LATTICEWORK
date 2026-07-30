@@ -1,0 +1,326 @@
+{
+  "schema": "latticework.characterization.phase1-validation.v2",
+  "valid": true,
+  "evidence_label": "MEASURED",
+  "validated_at": "2026-07-30T10:10:46.681Z",
+  "source_results": {
+    "path": "playwright/playwright-results.json",
+    "bytes": 1696168,
+    "sha256": "2a2d6686de41656ce7c137ea8ffec24adf2074399d0d47508051d4c3760606e6"
+  },
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "baseline_root": "Z:\\LATTICEWORK_BASELINE_e7585999",
+  "baseline_worktree": {
+    "exists": true,
+    "head": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "dirty": false,
+    "error": null
+  },
+  "allowed_origin": "http://127.0.0.1:4175",
+  "playwright_version": "1.62.0",
+  "stats": {
+    "startTime": "2026-07-30T10:10:10.463Z",
+    "duration": 31306.586,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "file": "chat-signal-report.spec.mjs",
+      "title": "Chat exposes a privacy-bounded Signal Report and working copy action",
+      "status": "expected",
+      "result_statuses": [
+        "passed"
+      ],
+      "durations_ms": [
+        5204
+      ]
+    },
+    {
+      "file": "contracts.spec.mjs",
+      "title": "safe characterization contracts are pinned and synthetic",
+      "status": "expected",
+      "result_statuses": [
+        "passed"
+      ],
+      "durations_ms": [
+        2
+      ]
+    },
+    {
+      "file": "degraded-gpu.spec.mjs",
+      "title": "Garden still renders through its fallback when navigator.gpu is unavailable",
+      "status": "expected",
+      "result_statuses": [
+        "passed"
+      ],
+      "durations_ms": [
+        4650
+      ]
+    },
+    {
+      "file": "garden.spec.mjs",
+      "title": "skip opens the initialized Garden and writes completion state",
+      "status": "expected",
+      "result_statuses": [
+        "passed"
+      ],
+      "durations_ms": [
+        5063
+      ]
+    },
+    {
+      "file": "mobile.spec.mjs",
+      "title": "mobile preserves the observed Garden crowding and Presence overlap",
+      "status": "expected",
+      "result_statuses": [
+        "passed"
+      ],
+      "durations_ms": [
+        7251
+      ]
+    },
+    {
+      "file": "offline.spec.mjs",
+      "title": "warm offline reload preserves the observed navigation failure",
+      "status": "expected",
+      "result_statuses": [
+        "passed"
+      ],
+      "durations_ms": [
+        2905
+      ]
+    },
+    {
+      "file": "shell-and-storage.spec.mjs",
+      "title": "first run initializes storage while HTTP, WebSocket, and realtime egress stay blocked",
+      "status": "expected",
+      "result_statuses": [
+        "passed"
+      ],
+      "durations_ms": [
+        4621
+      ]
+    }
+  ],
+  "safety": {
+    "network_receipts": 6,
+    "blocked_http_requests": 97,
+    "blocked_websocket_attempts": 1,
+    "blocked_realtime_attempts": 8,
+    "allowed_external_network_requests": 0,
+    "synthetic_private_sentinel_leaked": false
+  },
+  "attachments": [
+    {
+      "spec": "chat-signal-report.spec.mjs",
+      "test": "Chat exposes a privacy-bounded Signal Report and working copy action",
+      "name": "signal-report-aria.yml",
+      "content_type": "text/plain",
+      "path": "artifacts/chat-signal-report/signal-report-aria.yml",
+      "bytes": 669,
+      "sha256": "d0e50e2b67a6ed7902426a6d71898409a05398ec3451ac7f1ca3403bad6e983f"
+    },
+    {
+      "spec": "chat-signal-report.spec.mjs",
+      "test": "Chat exposes a privacy-bounded Signal Report and working copy action",
+      "name": "signal-report.png",
+      "content_type": "image/png",
+      "path": "artifacts/chat-signal-report/signal-report.png",
+      "bytes": 48958,
+      "sha256": "c4a672bb8b5ac5b2c0bd327b2a863b7ec7a64d28da8dd35734ea9a3938155f13"
+    },
+    {
+      "spec": "chat-signal-report.spec.mjs",
+      "test": "Chat exposes a privacy-bounded Signal Report and working copy action",
+      "name": "network-receipt.json",
+      "content_type": "application/json",
+      "path": "artifacts/chat-signal-report/network-receipt.json",
+      "bytes": 43608,
+      "sha256": "8f3a16e6dfd812eb20c69c9723856e06460663eed75624f558db9e76b31af68b"
+    },
+    {
+      "spec": "chat-signal-report.spec.mjs",
+      "test": "Chat exposes a privacy-bounded Signal Report and working copy action",
+      "name": "console-receipt.json",
+      "content_type": "application/json",
+      "path": "artifacts/chat-signal-report/console-receipt.json",
+      "bytes": 2958,
+      "sha256": "48a205bdfd3626030e2e445c9210fa801b71a2e6230d1ddfee0ebfa39d24c122"
+    },
+    {
+      "spec": "degraded-gpu.spec.mjs",
+      "test": "Garden still renders through its fallback when navigator.gpu is unavailable",
+      "name": "garden-no-webgpu.png",
+      "content_type": "image/png",
+      "path": "artifacts/degraded-gpu/garden-no-webgpu.png",
+      "bytes": 107576,
+      "sha256": "332845568d05304ee11eb710f4d6292fd75301f7a3dbe31c87ba8103ac338420"
+    },
+    {
+      "spec": "degraded-gpu.spec.mjs",
+      "test": "Garden still renders through its fallback when navigator.gpu is unavailable",
+      "name": "network-receipt.json",
+      "content_type": "application/json",
+      "path": "artifacts/degraded-gpu/network-receipt.json",
+      "bytes": 43312,
+      "sha256": "56c17c8a72061b018c94ca078a3aa5616390b55e7c6a7dac147e3901d5402631"
+    },
+    {
+      "spec": "degraded-gpu.spec.mjs",
+      "test": "Garden still renders through its fallback when navigator.gpu is unavailable",
+      "name": "console-receipt.json",
+      "content_type": "application/json",
+      "path": "artifacts/degraded-gpu/console-receipt.json",
+      "bytes": 2167,
+      "sha256": "887dc0f4a4492abba38cae6ab5255fc73e91c77de96ce862287c3782c484b496"
+    },
+    {
+      "spec": "garden.spec.mjs",
+      "test": "skip opens the initialized Garden and writes completion state",
+      "name": "garden-after-skip.png",
+      "content_type": "image/png",
+      "path": "artifacts/garden/garden-after-skip.png",
+      "bytes": 109753,
+      "sha256": "65a31aa818293bd70e6d31876c1f8e4868858cfa2b412986f75a38021d08b542"
+    },
+    {
+      "spec": "garden.spec.mjs",
+      "test": "skip opens the initialized Garden and writes completion state",
+      "name": "network-receipt.json",
+      "content_type": "application/json",
+      "path": "artifacts/garden/network-receipt.json",
+      "bytes": 43608,
+      "sha256": "62cbf98744cd0efd7e50b5b93bca1922b6bad789fffa89a04c516db232473f76"
+    },
+    {
+      "spec": "garden.spec.mjs",
+      "test": "skip opens the initialized Garden and writes completion state",
+      "name": "console-receipt.json",
+      "content_type": "application/json",
+      "path": "artifacts/garden/console-receipt.json",
+      "bytes": 2273,
+      "sha256": "ee544ad5a09afc8eb9c3805c38808bcc1df8a5a0b8679ebed0ff84bbe7b5eabe"
+    },
+    {
+      "spec": "mobile.spec.mjs",
+      "test": "mobile preserves the observed Garden crowding and Presence overlap",
+      "name": "mobile-overlap.json",
+      "content_type": "application/json",
+      "path": "artifacts/mobile/mobile-overlap.json",
+      "bytes": 875,
+      "sha256": "4985ada0907c6a3ecf58094aaea4a765f379731e5b2ca64df41bb978de368be5"
+    },
+    {
+      "spec": "mobile.spec.mjs",
+      "test": "mobile preserves the observed Garden crowding and Presence overlap",
+      "name": "garden-mobile-390x844.png",
+      "content_type": "image/png",
+      "path": "artifacts/mobile/garden-mobile-390x844.png",
+      "bytes": 492327,
+      "sha256": "1375231daabab0631367cf7d1d26e2dd69634bad8569698a1740543faac6fcb5"
+    },
+    {
+      "spec": "mobile.spec.mjs",
+      "test": "mobile preserves the observed Garden crowding and Presence overlap",
+      "name": "network-receipt.json",
+      "content_type": "application/json",
+      "path": "artifacts/mobile/network-receipt.json",
+      "bytes": 43758,
+      "sha256": "6f11b7e97c8a0d6693f614a77ed1348311621f5662467b9d43749b399bf53a23"
+    },
+    {
+      "spec": "mobile.spec.mjs",
+      "test": "mobile preserves the observed Garden crowding and Presence overlap",
+      "name": "console-receipt.json",
+      "content_type": "application/json",
+      "path": "artifacts/mobile/console-receipt.json",
+      "bytes": 2273,
+      "sha256": "ee544ad5a09afc8eb9c3805c38808bcc1df8a5a0b8679ebed0ff84bbe7b5eabe"
+    },
+    {
+      "spec": "offline.spec.mjs",
+      "test": "warm offline reload preserves the observed navigation failure",
+      "name": "offline-reload-observation.json",
+      "content_type": "application/json",
+      "path": "artifacts/offline/offline-reload-observation.json",
+      "bytes": 231,
+      "sha256": "7ec07d5758f56a64f3c94fda893473dcfab0a583cbcb991441c6f3953de77f7b"
+    },
+    {
+      "spec": "offline.spec.mjs",
+      "test": "warm offline reload preserves the observed navigation failure",
+      "name": "offline-reload-failure.png",
+      "content_type": "image/png",
+      "path": "artifacts/offline/offline-reload-failure.png",
+      "bytes": 5851,
+      "sha256": "99db2a93b06fa1bf617f5c495e02dcf6c0b76961108491217e2cf4fed8699d35"
+    },
+    {
+      "spec": "offline.spec.mjs",
+      "test": "warm offline reload preserves the observed navigation failure",
+      "name": "network-receipt.json",
+      "content_type": "application/json",
+      "path": "artifacts/offline/network-receipt.json",
+      "bytes": 45035,
+      "sha256": "7ef9ac4de916c7515ef37c8bca570ba6c93a379c59b1225e0b6517fb77944ac4"
+    },
+    {
+      "spec": "offline.spec.mjs",
+      "test": "warm offline reload preserves the observed navigation failure",
+      "name": "console-receipt.json",
+      "content_type": "application/json",
+      "path": "artifacts/offline/console-receipt.json",
+      "bytes": 954,
+      "sha256": "3694ca8afa479bf103568fa2910219db24acd0b3cbc9d1bbe3f63cd37cd9b2df"
+    },
+    {
+      "spec": "shell-and-storage.spec.mjs",
+      "test": "first run initializes storage while HTTP, WebSocket, and realtime egress stay blocked",
+      "name": "runtime-snapshot.json",
+      "content_type": "application/json",
+      "path": "artifacts/shell-and-storage/runtime-snapshot.json",
+      "bytes": 2890,
+      "sha256": "659b08a7355a67bfb6c90e485eeb0db33ac7ec073966bc715a1f4a1ddf8af9ee"
+    },
+    {
+      "spec": "shell-and-storage.spec.mjs",
+      "test": "first run initializes storage while HTTP, WebSocket, and realtime egress stay blocked",
+      "name": "onboarding-aria.yml",
+      "content_type": "text/plain",
+      "path": "artifacts/shell-and-storage/onboarding-aria.yml",
+      "bytes": 659,
+      "sha256": "3cc2cc15809cb5f46a0b7d1163852db8518885a86fd2f724cb54209b822689f5"
+    },
+    {
+      "spec": "shell-and-storage.spec.mjs",
+      "test": "first run initializes storage while HTTP, WebSocket, and realtime egress stay blocked",
+      "name": "onboarding-first-run.png",
+      "content_type": "image/png",
+      "path": "artifacts/shell-and-storage/onboarding-first-run.png",
+      "bytes": 216201,
+      "sha256": "a6498fcbf293c40fd74136401dddb997029f0b129e5381038836faa514bfaa09"
+    },
+    {
+      "spec": "shell-and-storage.spec.mjs",
+      "test": "first run initializes storage while HTTP, WebSocket, and realtime egress stay blocked",
+      "name": "network-receipt.json",
+      "content_type": "application/json",
+      "path": "artifacts/shell-and-storage/network-receipt.json",
+      "bytes": 42746,
+      "sha256": "42eb962bc7a7e7844e655d642abba461d4f1e3b924663d2e290a04b19331bf86"
+    },
+    {
+      "spec": "shell-and-storage.spec.mjs",
+      "test": "first run initializes storage while HTTP, WebSocket, and realtime egress stay blocked",
+      "name": "console-receipt.json",
+      "content_type": "application/json",
+      "path": "artifacts/shell-and-storage/console-receipt.json",
+      "bytes": 1827,
+      "sha256": "c71d599a89ec033a42ba4e18b47ceb7877dc66baa3175422e35ef02c15f92cd4"
+    }
+  ],
+  "failures": []
+}

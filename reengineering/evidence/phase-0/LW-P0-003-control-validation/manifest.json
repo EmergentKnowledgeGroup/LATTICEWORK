@@ -1,0 +1,46 @@
+{
+  "schema": "latticework.evidence.artifact-bundle.v1",
+  "receipt_id": "LW-P0-003-control-validation",
+  "captured_at": "2026-07-30T09:32:07.923Z",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "directory": "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-0\\LW-P0-003-control-validation",
+  "artifacts": [
+    {
+      "path": "tests/manifest.json",
+      "bytes": 2507,
+      "sha256": "62594ec20b15d1e1df831721fd0a0df183bc76000f21a4227001a0e84e627400",
+      "repository_artifact": true
+    },
+    {
+      "path": "tests/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "tests/stdout.log",
+      "bytes": 1083,
+      "sha256": "c25c91fdf517a595bbed8d81433cdb96f699f25a942aa593b3691720d5f02134",
+      "repository_artifact": true
+    },
+    {
+      "path": "validator/manifest.json",
+      "bytes": 2513,
+      "sha256": "6db038dc73d6bbac0da558eb8bb95765a66999d02ed7a658bfc26d608239e503",
+      "repository_artifact": true
+    },
+    {
+      "path": "validator/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "validator/stdout.log",
+      "bytes": 8955,
+      "sha256": "101057d81b612777a01bbf448621fb105f57d9f8a50c6a47bcf9021117bac3fc",
+      "repository_artifact": true
+    }
+  ]
+}

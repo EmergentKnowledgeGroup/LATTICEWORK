@@ -1,0 +1,47 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "title": {
+    "x": 13,
+    "y": 299.5625,
+    "width": 79.796875,
+    "height": 65.953125
+  },
+  "controls": {
+    "x": 92.796875,
+    "y": 261.546875,
+    "width": 284.203125,
+    "height": 142
+  },
+  "observe": {
+    "x": 92.796875,
+    "y": 261.546875,
+    "width": 84.53125,
+    "height": 44
+  },
+  "explore": {
+    "x": 182.328125,
+    "y": 261.546875,
+    "width": 82.796875,
+    "height": 44
+  },
+  "presence": {
+    "x": 294.1875,
+    "y": 669.09375,
+    "width": 83.8125,
+    "height": 31.40625
+  },
+  "presence_button": {
+    "x": 12,
+    "y": 309.546875,
+    "width": 102.265625,
+    "height": 44
+  },
+  "title_controls_intersection": 0,
+  "observe_explore_intersection": 0,
+  "title_presence_intersection": 0,
+  "controls_presence_intersection": 0,
+  "title_presence_button_intersection": 3511.0625
+}

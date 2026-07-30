@@ -1,0 +1,45 @@
+{
+  "schema": "latticework.evidence.baseline.v1",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "started_at": "2026-07-30T08:05:14.223Z",
+  "ended_at": "2026-07-30T08:05:14.667Z",
+  "repository": {
+    "path": "Z:\\LATTICEWORK_BASELINE_e7585999",
+    "status": "",
+    "commit": "e7585999fc1af2707f410ae87356cf2b52e08d9c\n2026-07-30T01:05:26Z\n2026-07-30T01:05:26Z\nHarmonia\nLedger entry 47: He Used His Voice",
+    "tags": [
+      "v0.0.0-upstream-baseline"
+    ]
+  },
+  "archive_reused": true,
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1"
+  },
+  "artifacts": [
+    {
+      "path": "tracked-tree.json",
+      "bytes": 121649,
+      "sha256": "d6dee607a61ec7f76d262cc53f7f457c5cbedce0a7f57aae7485534a9aa8750c",
+      "absolute_path": "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-0\\LW-P0-001\\tracked-tree.json",
+      "repository_artifact": true
+    },
+    {
+      "path": "baseline-summary.json",
+      "bytes": 11469,
+      "sha256": "287400bbb7af257fd3e2d58c1b9ec89706b23f7bb901c4aff3887ecc3fa5ffdc",
+      "absolute_path": "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-0\\LW-P0-001\\baseline-summary.json",
+      "repository_artifact": true
+    },
+    {
+      "path": "../../../../../LATTICEWORK_PRESERVATION/freelattice-baseline-e7585999fc1af2707f410ae87356cf2b52e08d9c.zip",
+      "bytes": 124714814,
+      "sha256": "fe7c401aee963051993fd7c0794bfe9de9deb8f8ebbba203a6ee4ce1e1302861",
+      "absolute_path": "Z:\\LATTICEWORK_PRESERVATION\\freelattice-baseline-e7585999fc1af2707f410ae87356cf2b52e08d9c.zip",
+      "repository_artifact": false
+    }
+  ]
+}

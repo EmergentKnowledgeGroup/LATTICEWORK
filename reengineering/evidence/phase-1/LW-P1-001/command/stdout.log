@@ -1,0 +1,25 @@
+Installing pinned characterization dependencies from package-lock.json...
+
+added 3 packages, and audited 4 packages in 800ms
+
+found 0 vulnerabilities
+Ensuring the pinned Playwright Chromium build is present on Z:...
+Running characterization against Z:\LATTICEWORK_BASELINE_e7585999 at e7585999fc1af2707f410ae87356cf2b52e08d9c...
+
+> latticework-baseline-characterization@0.0.0 test
+> playwright test --config=playwright.config.mjs
+
+
+Running 7 tests using 1 worker
+
+
+
+[1/7] specs\chat-signal-report.spec.mjs:12:1 › Chat exposes a privacy-bounded Signal Report and working copy action
+[2/7] specs\contracts.spec.mjs:8:1 › safe characterization contracts are pinned and synthetic
+[3/7] specs\degraded-gpu.spec.mjs:12:1 › Garden still renders through its fallback when navigator.gpu is unavailable
+[4/7] specs\garden.spec.mjs:12:1 › skip opens the initialized Garden and writes completion state
+[5/7] specs\mobile.spec.mjs:19:1 › mobile preserves the observed Garden crowding and Presence overlap
+[6/7] specs\offline.spec.mjs:10:1 › warm offline reload preserves the observed navigation failure
+[7/7] specs\shell-and-storage.spec.mjs:15:1 › first run initializes storage while HTTP, WebSocket, and realtime egress stay blocked
+  7 passed (31.2s)
+Playwright characterization exit code: 0

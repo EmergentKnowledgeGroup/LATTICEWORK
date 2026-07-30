@@ -1,0 +1,124 @@
+{
+  "schema": "latticework.evidence.artifact-bundle.v1",
+  "receipt_id": "LW-M0-INV-001",
+  "captured_at": "2026-07-30T08:51:34.325Z",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "directory": "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-0\\LW-M0-INV-001",
+  "artifacts": [
+    {
+      "path": "dependency-manifests.json",
+      "bytes": 3553,
+      "sha256": "a58a6ca168b528b6524b687f6f07f14b34d5f1eca7773b49d09ad89b1c587b4d",
+      "repository_artifact": true
+    },
+    {
+      "path": "entrypoint-evidence.json",
+      "bytes": 45777,
+      "sha256": "a9eb51f082ad0dd1f9f5d166a3711f5e3fdc3af8c7d16a1a03d75c17b7f4c269",
+      "repository_artifact": true
+    },
+    {
+      "path": "exact-duplicates.csv",
+      "bytes": 4673,
+      "sha256": "9d8258a8ebe5427e43a1a0366f34f998aa98dca31dcd46ba4601492ad024dc78",
+      "repository_artifact": true
+    },
+    {
+      "path": "exact-duplicates.json",
+      "bytes": 10426,
+      "sha256": "db141cc8c70240fbef951c8fe57ff302f883dd10042a5abf74e0fca34ee4b35b",
+      "repository_artifact": true
+    },
+    {
+      "path": "inventory-meta.json",
+      "bytes": 1331,
+      "sha256": "37efbd30323aea817808c83d2224fefa530bd620a6446e5119705e2f1b16e0cf",
+      "repository_artifact": true
+    },
+    {
+      "path": "inventory.ps1",
+      "bytes": 9021,
+      "sha256": "ad20169b064ab5204cef1a94904ba37a61af42cc8c061df53f01099b07739631",
+      "repository_artifact": true
+    },
+    {
+      "path": "language-summary.csv",
+      "bytes": 832,
+      "sha256": "de206d4cd7b86c713cbea0a0eec4716b0f1161391d30469f0db9bfe38301c591",
+      "repository_artifact": true
+    },
+    {
+      "path": "largest-files.csv",
+      "bytes": 7010,
+      "sha256": "7e33fb34778beec86fe2eec6f6ad79b4ea008dc754356edf0d4adc4dcf75c9b4",
+      "repository_artifact": true
+    },
+    {
+      "path": "LW-M0-INV-001.md",
+      "bytes": 8092,
+      "sha256": "9c47599c438fa68fbfffe8fcdf047039c17cc356a391c06fe45d4d01fe8db6f7",
+      "repository_artifact": true
+    },
+    {
+      "path": "path-summary.csv",
+      "bytes": 2468,
+      "sha256": "06a5a3f12d532d140c64801f80f30dc02253b0eeaaca89ee22454b7ab6e11a87",
+      "repository_artifact": true
+    },
+    {
+      "path": "raw-artifact-manifest.json",
+      "bytes": 2031,
+      "sha256": "feef085314c5e17653dc2661080c46d588429a2821cd6dfee9b0ec23a7d06a7e",
+      "repository_artifact": true
+    },
+    {
+      "path": "storage-identifiers.csv",
+      "bytes": 25944,
+      "sha256": "1d48b5ff900c7ade56de9ee9d41091418a8a41ee0a8fa9b42c519af9b61c4fac",
+      "repository_artifact": true
+    },
+    {
+      "path": "storage-identifiers.json",
+      "bytes": 59877,
+      "sha256": "4fba1ab5d04981cadd17f8e54c15191a6e36c35487ad7a94a9dfd6057e2b57eb",
+      "repository_artifact": true
+    },
+    {
+      "path": "test-inventory.csv",
+      "bytes": 1478,
+      "sha256": "f74f66462570319f7ea898c95b31c186bc9235b00cafb027947473ec32c5e6da",
+      "repository_artifact": true
+    },
+    {
+      "path": "test-inventory.json",
+      "bytes": 2959,
+      "sha256": "15789bf1502e1727e2cc5e8bc56767bded1d3795607f81f2a0fece37ee1ea41c",
+      "repository_artifact": true
+    },
+    {
+      "path": "tracked-files.csv",
+      "bytes": 70404,
+      "sha256": "4520843963554097f17ef274335f85b38c96ed7f489a249cddf2cbc2c405f569",
+      "repository_artifact": true
+    },
+    {
+      "path": "tracked-files.json",
+      "bytes": 149999,
+      "sha256": "92ca5e08b74f911b15896c98b74285154cda53f18edfcf6e0c0f62120f3dcb91",
+      "repository_artifact": true
+    },
+    {
+      "path": "window-symbol-assignments.csv",
+      "bytes": 20913,
+      "sha256": "3989b392a8101966613eb41e883535d9b9d8e79121e381ebd5a52239a6d458f6",
+      "repository_artifact": true
+    },
+    {
+      "path": "window-symbol-assignments.json",
+      "bytes": 48832,
+      "sha256": "348aed929a41dadfc6abe749e7c412d1e6f3eb8f435594c532ef1ab92ddd91eb",
+      "repository_artifact": true
+    }
+  ]
+}

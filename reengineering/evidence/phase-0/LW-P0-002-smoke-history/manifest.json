@@ -1,0 +1,41 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "baseline-smoke-history",
+  "command": [
+    "node",
+    "tests/smoke-history.js"
+  ],
+  "command_display": "\"node\" \"tests/smoke-history.js\"",
+  "cwd": "Z:\\LATTICEWORK_BASELINE_e7585999",
+  "started_at": "2026-07-30T08:06:45.546Z",
+  "ended_at": "2026-07-30T08:06:45.598Z",
+  "duration_ms": 52.578,
+  "exit_code": 1,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "repository": {
+    "head": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "status": "## HEAD (no branch)"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1"
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 844,
+      "sha256": "a4975b30fe2115626f4c09b8a58fe1af582a184918355b629af220bd4789eb2b"
+    }
+  ]
+}

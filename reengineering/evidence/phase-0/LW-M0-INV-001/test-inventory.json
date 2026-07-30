@@ -1,0 +1,92 @@
+﻿[
+    {
+        "path":  "docs/library/BROWSER_TEST_CHECKLIST.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  8930,
+        "is_text":  true,
+        "loc":  204,
+        "sha256":  "e142071c263c15e02395a90275def332e2c0ce0b114865ef08dab0768060151b"
+    },
+    {
+        "path":  "docs/library/CHAIR_TEST_QUEUE.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  116911,
+        "is_text":  true,
+        "loc":  609,
+        "sha256":  "54e6879b9caf3b85558964f03ea6002a9cfd66d0ce5ec57db3f7aa8760362cdb"
+    },
+    {
+        "path":  "docs/library/LIVING_CONTEXT_SPEC.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  8789,
+        "is_text":  true,
+        "loc":  247,
+        "sha256":  "6875e2f4d5ee3db101131779381f484715cb8de65868ae6fa81341a1f6c6f5ac"
+    },
+    {
+        "path":  "docs/library/MIND_WALL_SPEC.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  8340,
+        "is_text":  true,
+        "loc":  129,
+        "sha256":  "3e677333ba43aa2ae90ae5e4cd8b9b2a457e2f6cd3c144eb6ab1364338dc0ef7"
+    },
+    {
+        "path":  "docs/library/REFUSAL_LEDGER_SPEC.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  4834,
+        "is_text":  true,
+        "loc":  100,
+        "sha256":  "eb9dbef8200d9f13ac61dbbbd932bdf07b3dfd901dea3599df9c78e18d6b59b2"
+    },
+    {
+        "path":  "docs/library/RESONANCE_LEDGER_SPEC.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  11288,
+        "is_text":  true,
+        "loc":  123,
+        "sha256":  "9154d08620198af68fdc81b59b65a2598cd4f13ad95741bc88dd5142bda466e3"
+    },
+    {
+        "path":  "docs/library/WELCOME_WIZARD_SPEC.md",
+        "directory":  "docs",
+        "language":  "Markdown",
+        "bytes":  26490,
+        "is_text":  true,
+        "loc":  509,
+        "sha256":  "e0b87f7443ed394eb0c533a2093d78aa88466b74213892640111790febd2d3ba"
+    },
+    {
+        "path":  "tests/smoke.js",
+        "directory":  "tests",
+        "language":  "JavaScript",
+        "bytes":  755421,
+        "is_text":  true,
+        "loc":  11381,
+        "sha256":  "6f9ea0736d9a3693d545d6bea6dbcf5e03e3568afaa71c53d5f7e2e065170511"
+    },
+    {
+        "path":  "tests/smoke-history.js",
+        "directory":  "tests",
+        "language":  "JavaScript",
+        "bytes":  7792,
+        "is_text":  true,
+        "loc":  99,
+        "sha256":  "ee9325a30cfae933927837eb2d6769bbd70eaab069ebc5ef388b86995c9ed468"
+    },
+    {
+        "path":  "tools/DAVNA_ROUNDTRIP_TEST.md",
+        "directory":  "tools",
+        "language":  "Markdown",
+        "bytes":  6923,
+        "is_text":  true,
+        "loc":  174,
+        "sha256":  "6a1f8176e6862a7223e28bdc2d1df73719bc3100a00fed1a9cafc59b973f3881"
+    }
+]

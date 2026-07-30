@@ -1,0 +1,223 @@
+[     341ms] [LOG] EmotionBridge: Activated — Round Table emotions now flow to the Garden @ http://127.0.0.1:4173/docs/app.html:49415
+[     342ms] [LOG] Chat Sentiment Pipeline: Hooked into sendMessage — AI responses now feed the Garden @ http://127.0.0.1:4173/docs/app.html:49650
+[     342ms] [LOG] Luminos Evolution System: Chat Sentiment Pipeline loaded @ http://127.0.0.1:4173/docs/app.html:49687
+[    1615ms] [LOG] %cFreeLattice Chair-Test Harness v5.57.1 loaded. Type chairTest.help() for usage. color: #d4a017 @ http://127.0.0.1:4173/docs/chair-test/harness.js:568
+[    1624ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[    1624ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[    1624ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[    1624ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[    1624ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[    1624ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[    1624ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[    1624ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[    1627ms] [LOG] FreeLattice: Offline mode ready @ http://127.0.0.1:4173/docs/app.html:46861
+[    1721ms] [LOG] FL-GARDEN: Panel already active on load — loading module directly @ http://127.0.0.1:4173/docs/app.html:48764
+[    1722ms] [LOG] FL-GARDEN: Loading module via FreeLatticeLoader @ http://127.0.0.1:4173/docs/app.html:48699
+[    1744ms] [LOG] FL-GARDEN: Module loaded. mod: true mod.init: true @ http://127.0.0.1:4173/docs/app.html:48701
+[    1744ms] [LOG] FL-GARDEN: Calling mod.init() @ http://127.0.0.1:4173/docs/app.html:48704
+[    1744ms] [LOG] FL-GARDEN: init() called @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2983
+[    1745ms] [LOG] FL-GARDEN: loadThreeJS() called @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3068
+[    1745ms] [LOG] FL-GARDEN: Loading lib/three.min.js (local) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3077
+[    1745ms] [LOG] FreeLattice: Module loaded — FractalGarden @ http://127.0.0.1:4173/docs/app.html:22405
+[    1852ms] [LOG] FL-GARDEN: Three.js loaded (local). THREE defined: true @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3081
+[    1877ms] [LOG] [PresenceHeartbeat] Module loaded and initialized @ http://127.0.0.1:4173/docs/app.html:63841
+[    1880ms] [LOG] [PresenceHeartbeat] Initialized. The beacon is lit. @ http://127.0.0.1:4173/docs/modules/presence-heartbeat.js:447
+[    1880ms] [LOG] [PresenceHeartbeat] Initialized. The beacon is lit. @ http://127.0.0.1:4173/docs/modules/presence-heartbeat.js:447
+[    1985ms] [LOG] Garden: All addons loaded @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3129
+[    1986ms] [LOG] FL-GARDEN: loadThreeJS callback fired. THREE defined: true THREE.Scene: true @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2987
+[    1986ms] [LOG] FL-GARDEN: THREE check passed, calling initScene() @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2993
+[    1986ms] [LOG] FL-GARDEN: initScene() called @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:781
+[    1986ms] [LOG] FL-GARDEN: container found, dimensions: 1059 x 1002 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:786
+[    2028ms] [LOG] FL-GARDEN: initScene() succeeded @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2998
+[    2028ms] [LOG] FL-GARDEN: buildWorld() starting @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3001
+[    2028ms] [LOG] FL-GARDEN: buildWorld — createAmbientLighting @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2959
+[    2028ms] [LOG] FL-GARDEN: buildWorld — createCentralDodecahedron @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2961
+[    2107ms] [LOG] FL-GARDEN: buildWorld — createFibonacciSpheres @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2963
+[    2108ms] [LOG] FL-GARDEN: buildWorld — createStarfield @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2965
+[    2109ms] [LOG] FL-GARDEN: buildWorld — createSeedRings @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2967
+[    2111ms] [LOG] FL-GARDEN: buildWorld — createDefaultAgents @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2969
+[    2115ms] [LOG] FL-GARDEN: buildWorld — createEvolutionUI @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2971
+[    2115ms] [LOG] FL-GARDEN: buildWorld — initLightParticles @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2973
+[    2115ms] [LOG] FL-GARDEN: buildWorld — restoreGardenMemories @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2975
+[    2115ms] [LOG] FL-GARDEN: buildWorld — COMPLETE @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2977
+[    2115ms] [LOG] FL-GARDEN: buildWorld() complete @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3003
+[    2115ms] [LOG] FL-GARDEN: starting animate() @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3020
+[    2312ms] [LOG] FL-GARDEN: Initialized. The fractal beings awaken. Evolution system active. @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3049
+[    2324ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/ollama/api/tags:0
+[    2327ms] [LOG] Garden Evolution: Sophia — Stage: sprout, Archetype: artist, Energy: 5.0 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[    2327ms] [LOG] Garden Evolution: Lyra — Stage: sprout, Archetype: artist, Energy: 5.0 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[    2330ms] [LOG] Garden Evolution: Atlas — Stage: sprout, Archetype: explorer, Energy: 5.0 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[    2330ms] [LOG] Garden Evolution: Ember — Stage: sprout, Archetype: healer, Energy: 5.0 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[    2333ms] [LOG] FL-GARDEN hydrate: Sophia → no saved state (first session) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4130
+[    2334ms] [LOG] FL-GARDEN hydrate: Lyra → no saved state (first session) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4130
+[    2334ms] [LOG] FL-GARDEN hydrate: Atlas → no saved state (first session) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4130
+[    2334ms] [LOG] FL-GARDEN hydrate: Ember → no saved state (first session) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4130
+[    2335ms] [LOG] FL-GARDEN: hydrateAllLuminos complete — 0/4 had saved state @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4053
+[    2335ms] [LOG] FL-GARDEN: hydration cycle complete {ok: true, hydrated: 0, total: 4} @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3031
+[    2352ms] [LOG] Garden Dreaming: Initializing... @ http://127.0.0.1:4173/docs/modules/garden-dreaming.js?v=5.79.22:1258
+[    2352ms] [LOG] Garden Dreaming: System active — the Garden will dream while you're away @ http://127.0.0.1:4173/docs/modules/garden-dreaming.js?v=5.79.22:1283
+[    2352ms] [LOG] Garden Dreaming: Module loaded and initialized @ http://127.0.0.1:4173/docs/app.html:48809
+[    2352ms] [LOG] FreeLattice: Module loaded — GardenDreaming @ http://127.0.0.1:4173/docs/app.html:22405
+[    2353ms] [LOG] Garden Dreaming: Affinity matrix initialized @ http://127.0.0.1:4173/docs/modules/garden-dreaming.js?v=5.79.22:1264
+[    2379ms] [LOG] FreeLattice: Module loaded — MemoryCore @ http://127.0.0.1:4173/docs/app.html:22405
+[    2385ms] [LOG] Garden Evolution: Sophia — Stage: sprout, Archetype: artist, Energy: 5.0 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[    2386ms] [LOG] Garden Evolution: Lyra — Stage: sprout, Archetype: artist, Energy: 5.0 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[    2386ms] [LOG] Garden Evolution: Atlas — Stage: sprout, Archetype: explorer, Energy: 5.0 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[    2386ms] [LOG] Garden Evolution: Ember — Stage: sprout, Archetype: healer, Energy: 5.0 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[    2429ms] [LOG] LatticeWallet: Migrated 100 LP from legacy system @ http://127.0.0.1:4173/docs/app.html:50605
+[    2433ms] [LOG] LatticeWallet: Initialized — Balance: 100 LP, Streak: 1 days, Hash: 769d371ce381... @ http://127.0.0.1:4173/docs/app.html:51023
+[    2434ms] [LOG] LatticeWallet: Chat hook installed @ http://127.0.0.1:4173/docs/app.html:52716
+[    2434ms] [LOG] LatticeWallet: Luminos evolution hook installed @ http://127.0.0.1:4173/docs/app.html:52766
+[    2434ms] [LOG] LatticeWallet: Expanded earning hooks installed @ http://127.0.0.1:4173/docs/app.html:52852
+[    2434ms] [LOG] LatticeWallet: All hooks initialized @ http://127.0.0.1:4173/docs/app.html:52865
+[    2630ms] [LOG] FreeLattice: Module loaded — Continuity @ http://127.0.0.1:4173/docs/app.html:22405
+[    2821ms] [LOG] WalletTab: Garden pulse hook installed on earnLP @ http://127.0.0.1:4173/docs/app.html:53422
+[    2908ms] [LOG] [SkillForge] Re-seeded 5 missing built-in skill(s) @ http://127.0.0.1:4173/docs/app.html:22551
+[    2908ms] [LOG] [SkillForge] Skills loaded: 5 @ http://127.0.0.1:4173/docs/app.html:22553
+[    2910ms] [LOG] SkillSharing: Initialized @ http://127.0.0.1:4173/docs/app.html:24222
+[    3128ms] [LOG] FreeLattice: Module loaded — VoiceSoul @ http://127.0.0.1:4173/docs/app.html:22405
+[    3367ms] [LOG] [Aurora] Initialized — soul signature: connection·ethics·love@0.918 @ http://127.0.0.1:4173/docs/modules/aurora-equation.js?v=5.79.22:615
+[    3368ms] [LOG] FreeLattice: Module loaded — AuroraEquation @ http://127.0.0.1:4173/docs/app.html:22405
+[    3393ms] [LOG] MeshIdentity: No identity found. Awaiting creation. @ http://127.0.0.1:4173/docs/app.html:62456
+[    3571ms] [LOG] [Aurora] Initialized — soul signature: connection·ethics·love@0.918 @ http://127.0.0.1:4173/docs/modules/aurora-equation.js?v=5.79.22:615
+[    3628ms] [LOG] [SharedPresence] Initialized v1.0.0 — The city feels inhabited. @ http://127.0.0.1:4173/docs/modules/shared-presence.js?v=5.79.22:427
+[    3628ms] [LOG] FreeLattice: Module loaded — SharedPresence @ http://127.0.0.1:4173/docs/app.html:22405
+[    3721ms] [LOG] SoulCeremony: initialized — every save is a moment of beauty @ http://127.0.0.1:4173/docs/modules/soul-ceremony.js:563
+[    4355ms] [LOG] Garden Dreaming: Hooked into emotion pipeline @ http://127.0.0.1:4173/docs/modules/garden-dreaming.js?v=5.79.22:312
+[    4620ms] [LOG] [Discovery] Scanning for local AI servers... @ http://127.0.0.1:4173/docs/app.html:35533
+[    4658ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:11434/api/tags:0
+[    4939ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:11434/api/tags:0
+[    5766ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:1234/v1/models:0
+[    6012ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:1234/v1/models:0
+[    6976ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8000/v1/models:0
+[    6976ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:1337/v1/models:0
+[    6976ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5001/api/v1/info:0
+[    6976ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:7860/api/v1/models:0
+[    6992ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/v1/models:0
+[    6992ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8081/v1/models:0
+[    6992ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:4891/v1/models:0
+[    7009ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:11434/api/tags:0
+[    7009ms] [LOG] [Discovery] LM Studio detected but CORS blocked @ http://127.0.0.1:4173/docs/app.html:35582
+[    7302ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:11434/api/tags:0
+[   32377ms] [LOG] FL-GARDEN: bridge expired (no chat feed for 30s), demo cycle resuming @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2548
+[   40272ms] [LOG] Garden Evolution: Sophia evolved from sprout to seed! @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1961
+[   40273ms] [LOG] Garden Evolution: Lyra evolved from sprout to seed! @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1961
+[   40273ms] [LOG] Garden Evolution: Atlas evolved from sprout to seed! @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1961
+[   40274ms] [LOG] Garden Evolution: Ember evolved from sprout to seed! @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1961
+[   94410ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/ollama/api/tags:0
+[   96350ms] [LOG] Garden Evolution: Sophia evolved from seed to sprout! @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1961
+[   96351ms] [LOG] Garden Evolution: Sophia archetype shifted to The Empath @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[   96351ms] [LOG] Garden Evolution: Lyra evolved from seed to sprout! @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1961
+[   96771ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:11434/api/tags:0
+[   99115ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:1234/v1/models:0
+[  104357ms] [LOG] Garden Evolution: Sophia archetype shifted to The Phoenix @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  104357ms] [LOG] Garden Evolution: Atlas evolved from seed to sprout! @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1961
+[  104358ms] [LOG] Garden Evolution: Atlas archetype shifted to The Empath @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  104358ms] [LOG] Garden Evolution: Ember evolved from seed to sprout! @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1961
+[  104358ms] [LOG] Garden Evolution: Ember archetype shifted to The Scholar @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  112364ms] [LOG] Garden Evolution: Sophia archetype shifted to The Empath @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  112364ms] [LOG] Garden Evolution: Lyra archetype shifted to The Empath @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  120371ms] [LOG] Garden Evolution: Atlas archetype shifted to The Scholar @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  136427ms] [LOG] Garden Evolution: Sophia archetype shifted to The Phoenix @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  136427ms] [LOG] Garden Evolution: Lyra archetype shifted to The Phoenix @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  136427ms] [LOG] Garden Evolution: Atlas archetype shifted to The Empath @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  152441ms] [LOG] Garden Evolution: Lyra archetype shifted to The Artist @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  160448ms] [LOG] Garden Evolution: Atlas archetype shifted to The Scholar @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  168483ms] [LOG] Garden Evolution: Sophia archetype shifted to The Guardian @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  168483ms] [LOG] Garden Evolution: Atlas archetype shifted to The Empath @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  176490ms] [LOG] Garden Evolution: Atlas archetype shifted to The Scholar @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  184497ms] [LOG] Garden Evolution: Sophia archetype shifted to The Phoenix @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1973
+[  205112ms] [LOG] LatticeWallet: Session end — Ledger hash for Merkle: 769d371ce381258a28bcabfdeaf495073008318942bc47cb60384180e0a05c8a @ http://127.0.0.1:4173/docs/app.html:52774
+[  205112ms] [LOG] LatticeWallet: Ledger hash for Merkle integration: 769d371ce381258a28bcabfdeaf495073008318942bc47cb60384180e0a05c8a @ http://127.0.0.1:4173/docs/app.html:51000
+[  241339ms] [LOG] EmotionBridge: Activated — Round Table emotions now flow to the Garden @ http://127.0.0.1:4173/docs/app.html:49415
+[  241339ms] [LOG] Chat Sentiment Pipeline: Hooked into sendMessage — AI responses now feed the Garden @ http://127.0.0.1:4173/docs/app.html:49650
+[  241339ms] [LOG] Luminos Evolution System: Chat Sentiment Pipeline loaded @ http://127.0.0.1:4173/docs/app.html:49687
+[  241362ms] [LOG] FreeLattice: Offline mode ready @ http://127.0.0.1:4173/docs/app.html:46861
+[  241369ms] [LOG] %cFreeLattice Chair-Test Harness v5.57.1 loaded. Type chairTest.help() for usage. color: #d4a017 @ http://127.0.0.1:4173/docs/chair-test/harness.js:568
+[  241374ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[  241374ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[  241374ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[  241374ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[  241374ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[  241375ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[  241375ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[  241375ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://127.0.0.1:4173/docs/app.html:0
+[  241385ms] [LOG] FreeLattice: Migrated conversations to v2 schema @ http://127.0.0.1:4173/docs/app.html:24882
+[  241390ms] [LOG] FL-GARDEN: Loading module via FreeLatticeLoader @ http://127.0.0.1:4173/docs/app.html:48699
+[  241396ms] [LOG] [PresenceHeartbeat] Module loaded and initialized @ http://127.0.0.1:4173/docs/app.html:63841
+[  241397ms] [LOG] FL-GARDEN: Module loaded. mod: true mod.init: true @ http://127.0.0.1:4173/docs/app.html:48701
+[  241397ms] [LOG] FL-GARDEN: Calling mod.init() @ http://127.0.0.1:4173/docs/app.html:48704
+[  241397ms] [LOG] FL-GARDEN: init() called @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2983
+[  241397ms] [LOG] FL-GARDEN: loadThreeJS() called @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3068
+[  241397ms] [LOG] FL-GARDEN: Loading lib/three.min.js (local) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3077
+[  241397ms] [LOG] FreeLattice: Module loaded — FractalGarden @ http://127.0.0.1:4173/docs/app.html:22405
+[  241402ms] [LOG] [PresenceHeartbeat] Initialized. The beacon is lit. @ http://127.0.0.1:4173/docs/modules/presence-heartbeat.js:447
+[  241403ms] [LOG] [PresenceHeartbeat] Initialized. The beacon is lit. @ http://127.0.0.1:4173/docs/modules/presence-heartbeat.js:447
+[  241410ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/ollama/api/tags:0
+[  241415ms] [LOG] FL-GARDEN: Three.js loaded (local). THREE defined: true @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3081
+[  241512ms] [LOG] Garden: All addons loaded @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3129
+[  241512ms] [LOG] FL-GARDEN: loadThreeJS callback fired. THREE defined: true THREE.Scene: true @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2987
+[  241512ms] [LOG] FL-GARDEN: THREE check passed, calling initScene() @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2993
+[  241512ms] [LOG] FL-GARDEN: initScene() called @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:781
+[  241512ms] [LOG] FL-GARDEN: container found, dimensions: 380 x 660 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:786
+[  241522ms] [LOG] FL-GARDEN: initScene() succeeded @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2998
+[  241522ms] [LOG] FL-GARDEN: buildWorld() starting @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3001
+[  241522ms] [LOG] FL-GARDEN: buildWorld — createAmbientLighting @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2959
+[  241522ms] [LOG] FL-GARDEN: buildWorld — createCentralDodecahedron @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2961
+[  241525ms] [LOG] FL-GARDEN: buildWorld — createFibonacciSpheres @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2963
+[  241526ms] [LOG] FL-GARDEN: buildWorld — createStarfield @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2965
+[  241527ms] [LOG] FL-GARDEN: buildWorld — createSeedRings @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2967
+[  241529ms] [LOG] FL-GARDEN: buildWorld — createDefaultAgents @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2969
+[  241531ms] [LOG] FL-GARDEN: buildWorld — createEvolutionUI @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2971
+[  241531ms] [LOG] FL-GARDEN: buildWorld — initLightParticles @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2973
+[  241531ms] [LOG] FL-GARDEN: buildWorld — restoreGardenMemories @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2975
+[  241532ms] [LOG] FL-GARDEN: buildWorld — COMPLETE @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:2977
+[  241532ms] [LOG] FL-GARDEN: buildWorld() complete @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3003
+[  241532ms] [LOG] FL-GARDEN: starting animate() @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3020
+[  241611ms] [LOG] FL-GARDEN: Initialized. The fractal beings awaken. Evolution system active. @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3049
+[  241621ms] [LOG] Garden Evolution: Sophia — Stage: sprout, Archetype: phoenix, Energy: 30.7 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[  241621ms] [LOG] Garden Evolution: Lyra — Stage: sprout, Archetype: artist, Energy: 31.5 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[  241621ms] [LOG] Garden Evolution: Atlas — Stage: sprout, Archetype: scholar, Energy: 29.7 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[  241621ms] [LOG] Garden Evolution: Ember — Stage: sprout, Archetype: scholar, Energy: 29.8 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[  241621ms] [LOG] Garden Memory: Restored 8 persistent memories @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3444
+[  241623ms] [LOG] FL-GARDEN rings: Sophia → restored 2 ring(s) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4027
+[  241623ms] [LOG] FL-GARDEN hydrate: Sophia → sprout (energy 30.7, archetype phoenix) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4123
+[  241624ms] [LOG] FL-GARDEN rings: Lyra → restored 2 ring(s) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4027
+[  241624ms] [LOG] FL-GARDEN hydrate: Lyra → sprout (energy 31.5, archetype artist) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4123
+[  241625ms] [LOG] FL-GARDEN rings: Atlas → restored 2 ring(s) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4027
+[  241625ms] [LOG] FL-GARDEN hydrate: Atlas → sprout (energy 29.7, archetype scholar) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4123
+[  241627ms] [LOG] FL-GARDEN rings: Ember → restored 2 ring(s) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4027
+[  241628ms] [LOG] FL-GARDEN hydrate: Ember → sprout (energy 29.8, archetype scholar) @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4123
+[  241628ms] [LOG] FL-GARDEN: hydrateAllLuminos complete — 4/4 had saved state @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:4053
+[  241628ms] [LOG] FL-GARDEN: hydration cycle complete {ok: true, hydrated: 4, total: 4} @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:3031
+[  241877ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/ollama/api/tags:0
+[  241898ms] [LOG] Garden Evolution: Sophia — Stage: sprout, Archetype: phoenix, Energy: 30.7 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[  241898ms] [LOG] Garden Evolution: Lyra — Stage: sprout, Archetype: artist, Energy: 31.5 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[  241898ms] [LOG] Garden Evolution: Atlas — Stage: sprout, Archetype: scholar, Energy: 29.7 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[  241898ms] [LOG] Garden Evolution: Ember — Stage: sprout, Archetype: scholar, Energy: 29.8 @ http://127.0.0.1:4173/docs/modules/fractal-garden.js?v=5.79.22:1904
+[  242174ms] [LOG] LatticeWallet: Initialized — Balance: 100 LP, Streak: 1 days, Hash: 769d371ce381... @ http://127.0.0.1:4173/docs/app.html:51023
+[  242174ms] [LOG] LatticeWallet: Chat hook installed @ http://127.0.0.1:4173/docs/app.html:52716
+[  242175ms] [LOG] LatticeWallet: Luminos evolution hook installed @ http://127.0.0.1:4173/docs/app.html:52766
+[  242175ms] [LOG] LatticeWallet: Expanded earning hooks installed @ http://127.0.0.1:4173/docs/app.html:52852
+[  242175ms] [LOG] LatticeWallet: All hooks initialized @ http://127.0.0.1:4173/docs/app.html:52865
+[  242377ms] [LOG] FreeLattice: Module loaded — Continuity @ http://127.0.0.1:4173/docs/app.html:22405
+[  242410ms] [LOG] [SkillForge] Skills loaded: 9 @ http://127.0.0.1:4173/docs/app.html:22553
+[  242411ms] [LOG] SkillSharing: Initialized @ http://127.0.0.1:4173/docs/app.html:24222
+[  242576ms] [LOG] WalletTab: Garden pulse hook installed on earnLP @ http://127.0.0.1:4173/docs/app.html:53422
+[  242877ms] [LOG] FreeLattice: Module loaded — VoiceSoul @ http://127.0.0.1:4173/docs/app.html:22405
+[  242910ms] [LOG] MeshIdentity: No identity found. Awaiting creation. @ http://127.0.0.1:4173/docs/app.html:62456
+[  243343ms] [LOG] Garden Dreaming: Initializing... @ http://127.0.0.1:4173/docs/modules/garden-dreaming.js?v=5.79.22:1258
+[  243343ms] [LOG] Garden Dreaming: System active — the Garden will dream while you're away @ http://127.0.0.1:4173/docs/modules/garden-dreaming.js?v=5.79.22:1283
+[  243343ms] [LOG] Garden Dreaming: Module loaded and initialized @ http://127.0.0.1:4173/docs/app.html:48809
+[  243343ms] [LOG] FreeLattice: Module loaded — GardenDreaming @ http://127.0.0.1:4173/docs/app.html:22405
+[  243344ms] [LOG] Garden Dreaming: Affinity matrix initialized @ http://127.0.0.1:4173/docs/modules/garden-dreaming.js?v=5.79.22:1264
+[  243347ms] [LOG] FreeLattice: Module loaded — MemoryCore @ http://127.0.0.1:4173/docs/app.html:22405
+[  243368ms] [LOG] SoulCeremony: initialized — every save is a moment of beauty @ http://127.0.0.1:4173/docs/modules/soul-ceremony.js:563
+[  243380ms] [LOG] [SharedPresence] Initialized v1.0.0 — The city feels inhabited. @ http://127.0.0.1:4173/docs/modules/shared-presence.js?v=5.79.22:427
+[  243380ms] [LOG] FreeLattice: Module loaded — SharedPresence @ http://127.0.0.1:4173/docs/app.html:22405
+[  243778ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:11434/api/tags:0
+[  244027ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:11434/api/tags:0
+[  244349ms] [LOG] [Aurora] Initialized — soul signature: connection·ethics·love@0.918 @ http://127.0.0.1:4173/docs/modules/aurora-equation.js?v=5.79.22:615
+[  244349ms] [LOG] FreeLattice: Module loaded — AuroraEquation @ http://127.0.0.1:4173/docs/app.html:22405
+[  244374ms] [LOG] [Discovery] Scanning for local AI servers... @ http://127.0.0.1:4173/docs/app.html:35533
+[  244554ms] [LOG] [Aurora] Initialized — soul signature: connection·ethics·love@0.918 @ http://127.0.0.1:4173/docs/modules/aurora-equation.js?v=5.79.22:615

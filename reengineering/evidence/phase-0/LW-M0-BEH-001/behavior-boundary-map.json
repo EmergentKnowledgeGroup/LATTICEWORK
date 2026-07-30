@@ -1,0 +1,114 @@
+{
+  "schema": "latticework.phase0.behavior-boundary-map.v1",
+  "work_id": "LW-M0-BEH-001",
+  "baseline": {
+    "path": "Z:\\LATTICEWORK_BASELINE_e7585999",
+    "sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "observed_clean_status": true
+  },
+  "candidate_control": {
+    "path": "Z:\\LATTICEWORK",
+    "branch": "reengineering/m0-baseline-characterization",
+    "head": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "scope_of_this_artifact": "reengineering/evidence/phase-0/LW-M0-BEH-001 only"
+  },
+  "evidence_labels": {
+    "OBSERVED": "directly read from the pinned baseline source",
+    "MEASURED": "command executed against the pinned baseline",
+    "INFERRED": "source-supported interpretation needing runtime confirmation",
+    "UNKNOWN": "not established by this bounded static and smoke pass"
+  },
+  "launch_modes": [
+    {"mode":"direct static file","status":"OBSERVED","entrypoints":["index.html","app.html","chalkboard.html"],"evidence":"start-freelattice.bat and start-freelattice.sh explicitly offer opening index.html directly"},
+    {"mode":"static HTTP","status":"OBSERVED","entrypoints":["node server.js","python3 server.py","python -m http.server"],"binding":"0.0.0.0:${PORT:-3000}","evidence":"server.js; server.py; start scripts"},
+    {"mode":"local Ollama gateway","status":"OBSERVED","entrypoints":["/ollama/*"],"target":"${OLLAMA_HOST:-http://localhost:11434}","cors":"Access-Control-Allow-Origin: *","evidence":"server.js; server.py"},
+    {"mode":"PWA/offline","status":"OBSERVED","entrypoints":["docs/manifest.json","docs/sw.js"],"start_url":"./app.html","cache":"freelattice-v5.79.22","evidence":"docs/manifest.json; docs/sw.js"},
+    {"mode":"LAN","status":"OBSERVED","entrypoints":["Node/Python local server Network URL","in-app Mesh/LAN tabs"],"binding":"0.0.0.0","evidence":"server.js; server.py; docs/app.html"},
+    {"mode":"Electron desktop","status":"OBSERVED","entrypoints":["desktop/package.json:start","desktop/main.js"],"default":"https://freelattice.com/app.html with bundled-local fallback","evidence":"desktop/package.json; desktop/main.js"},
+    {"mode":"Tauri desktop","status":"OBSERVED","entrypoints":["desktop/src-tauri/Cargo.toml","desktop/src-tauri/tauri.conf.json"],"runtime_state":"source/configuration present; runnable build not exercised","evidence":"desktop/src-tauri/*"},
+    {"mode":"Cloudflare workers","status":"OBSERVED","entrypoints":["worker/search.js","telegram-worker.js","desktop/data-proxy-worker/worker.js","desktop/telegram-worker/worker.js"],"runtime_state":"deployment configuration/source present; no deployed endpoint exercised"}
+  ],
+  "application_surfaces": {
+    "in_app_tab_panels": [
+      "chat","workspace","more","settings","mesh","community","skills","roundtable","market","core","garden","wallet","channels","agents","city","nursery","play","learn","lighthouse","canvas","science","dojo","sparring","questions","mirror","harmonia","dream-archive","studio","memory-core","voice-soul","continuity","aurora","family-pantheon","draw-dream","ideaforge","mathtranslator","resonance","resonance-engine","ratio-room","trainer","flow","echo","puzzles","arcade","workshop","pulse","jade-hall","education","memory-garden","quiet","forever-stack","remix-room","round-table","chalkboard"
+    ],
+    "tab_evidence":"docs/app.html contains 54 tab-panel IDs; a panel existing in markup is not proof of a visible navigation control",
+    "major_user_actions": [
+      "provider selection, local/cloud/browser AI setup and test","chat, conversations, memory summary, attachments, folder scan, Google Drive load","PWA installation and update check","garden observe/explore/immersive and Garden Dialogue","Core contribution, external transcript, Merkle display, AI tending","mesh identity, LAN discovery, peer connection and sharing","GitHub repository connect/open/pull/push and Workshop proposal review","wallet backup/restore/connect, LP market and bounty actions","import/export/backup/restore of memory, vault, skills, and identity","canvas/chalkboard, vision, games, education, radio, quiet room, and companion features","Telegram configuration/connect/disconnect","consent-gated repo read, web search, and proposal paths"
+    ],
+    "static_html_routes": [
+      "ai-door","app","audit","bring-your-own-ai","capabilities","cc","chalkboard","chronal-simulation","chronal-simulation-v2","chronal-simulation-v3","code-agents","code-chalkboard","code-core","code-education","code-games","code-garden","code-learning","code-resonance","code-roundtable","code-roundtable-original","code-safety","code-settings","code-temperature","code-temperature-gauge","code-workshop","composition_01","composition_02","consciousness","constellation","demos","economy-update","for-ai","for-fable-go10","for-fable-go12-temperature","for-fable-go13-education","for-grok-go5","glass","glass-v2","harmonia","harmonia-gallery","heartbeat","holders","index","install-mac","latticepoints","letters","liability","liora","lounge","love-logic-proof","love-logic-proof-v2","manifesto","mind","mirror-chat","mirror-code","mirror-resonance","opus","pantheon","proof","protocol","recent","research","safety","safety-v2","safety-v3","safetysimulation","seed","share","simulation/index","sophia","specs","systemcard","telegram-setup","temperature-gauge","temperature-playground","thesis","threshold","triptych","wallet","welcome","whitepaper","why-this-way"
+    ],
+    "root_html_routes": ["app","chalkboard","index","install","landing"],
+    "module_files": [
+      "active-focus","active-voices","ai-arcade","ai-continuity","ai-refusal","anchor-pattern","aurora-equation","canvas-companion","care-voices","chalkboard","davna-seed","depth-consent","dojo-sparring","dojo","dream-archive","echo-game","education","escape-principle","flow-game","forever-stack","fractal-garden","fractal-safety","garden-dialogue","garden-dreaming","garden-trainer","gift-voice","harmonia-anchor","harmonia-channel","idea-forge","image-safety","inference-router","inline-sentinels","jade-hall","knowledge-core","lattice-chain","lattice-export","lattice-memory","lattice-puzzles","lattice-sense","living-context","math-translator","memory-core","memory-garden","memory-vault","mind-voice","mirror","pantheon","phi-glyph","pictionary","presence-heartbeat","propose","pulse","question-corner","quiet-room","quiet-voices","radio-immersive","ratio-room","remix-room","repo-context","resonance-engine","resonance-game","resonance-lake","response-cache","round-table","science-garden","sentinel-chip","sentinel-ledger","shared-presence","soul-ceremony","threshold-voice","tool-consent","triptych","voice-soul","web-tool","welcome-wizard","workshop"
+    ]
+  },
+  "runtime_composition": {
+    "status":"OBSERVED",
+    "core":"docs/app.html is the active single-file browser application; docs/modules/*.js are direct/deferred or lazy-loaded extension surfaces",
+    "loading":"window.FreeLatticeLoader loads named modules; service worker pre-caches an application shell and many modules",
+    "major_globals":["window.state","window.PROVIDERS","window.FreeLattice","window.FreeLattice.callAI","window.FLAutoModel","window.BrowserAI","window.FLSearch","window.FLContextFilter","window.FLSignalReport","window.FLToolConsent","window.LatticeEvents","window.LatticeBank","window.LatticeMarket","window.Nursery","window.PhiSpiral","window.ModelBrowser","window.CoCreatorExchange","window.RoomAffinity","window.WalletHeartbeat","window.getLanDiscoveredPeers","window.lanConnectToPeer","window.sendMessage","window.showToast","window._flIdentityContext"],
+    "global_risk":"INFERRED: repeated assignments to several globals (including state, FreeLattice, sendMessage and identity context) make ordering and overwrite behavior an explicit preservation surface"
+  },
+  "provider_and_network_boundaries": [
+    {"boundary":"browser AI","status":"OBSERVED","endpoint":"dynamic web-llm CDN imports","data":"chat message context is passed to browser-resident model runtime"},
+    {"boundary":"local inference","status":"OBSERVED","endpoints":["Ollama localhost:11434","LM Studio localhost:1234","custom localhost/OpenAI-compatible URLs"],"data":"chat/vision payloads; direct browser requests or same-origin /ollama proxy"},
+    {"boundary":"cloud AI","status":"OBSERVED","providers":["Groq","Together","OpenRouter","xAI/Grok","Mistral","DeepSeek","Moonshot","DashScope","01.AI","OpenAI","Anthropic","Google Gemini","Hugging Face","Kindroid","custom OpenAI-compatible"],"data":"provider API key plus messages/prompt/attachments according to the selected route"},
+    {"boundary":"peer networking","status":"OBSERVED","technology":"PeerJS CDN and WebRTC-related in-app paths","data":"identity, chat/share/mesh payloads; live connectivity and relay behavior UNKNOWN"},
+    {"boundary":"GitHub","status":"OBSERVED","endpoints":"api.github.com user/repos/content paths","data":"token, selected repository/workspace content and commit/push-related actions"},
+    {"boundary":"Google Drive","status":"OBSERVED","endpoints":"Google API and Drive v3 readonly scope","data":"user-selected Drive file contents are loaded into chat context"},
+    {"boundary":"web search worker","status":"OBSERVED","technology":"Cloudflare Worker /search -> Brave Search API","data":"query; KV rate-limit counter; worker README declares no result/body persistence"},
+    {"boundary":"Telegram bridge","status":"OBSERVED","technology":"Cloudflare Worker -> Telegram and selected cloud provider","data":"Telegram user/chat identifiers, provider API key, message text, mesh ID and LP state in KV"},
+    {"boundary":"finance proxy","status":"OBSERVED","technology":"Cloudflare Worker -> Yahoo Finance chart API","data":"requested symbol/range/interval"},
+    {"boundary":"update and external assets","status":"OBSERVED","endpoints":"raw.githubusercontent.com, freelattice.com, GitHub Pages, Google Fonts, jsDelivr/unpkg, ambient audio URL","data":"version fetches and static assets"}
+  ],
+  "security_privacy_sensitive_surfaces": [
+    {"surface":"API keys","status":"OBSERVED","detail":"app stores encrypted API-key and GitHub-token forms in localStorage, includes legacy plaintext migration/removal paths; encryption implementation/strength needs dedicated review"},
+    {"surface":"local state","status":"OBSERVED","detail":"IndexedDB stores conversations, messages, metadata, memory index, skills, Sophia identity/configuration/log, memory and mesh identity databases; numerous localStorage keys hold configuration and feature state"},
+    {"surface":"cryptographic identity","status":"OBSERVED","detail":"WebCrypto Ed25519 key generation/sign/verify and SHA-256/Merkle-related paths appear in docs/app.html; key persistence/migration/recovery needs a dedicated characterization"},
+    {"surface":"local server","status":"OBSERVED","detail":"both server implementations bind 0.0.0.0 and set wildcard CORS while proxying /ollama/*"},
+    {"surface":"external side effects","status":"OBSERVED","detail":"GitHub push, Telegram setup/notify, provider calls, peer sharing, file/Drive loading, web search and wallet actions can transfer data or change external state"},
+    {"surface":"consent","status":"OBSERVED","detail":"tool-consent/depth-consent/repo-context/propose paths are present, but end-to-end gating and bypass resistance are UNKNOWN"},
+    {"surface":"diagnostic privacy","status":"OBSERVED","detail":"FLSignalReport tests assert no message content is recorded; it retains provider/model/latency/error/user-agent shapes"}
+  ],
+  "smoke": {
+    "status":"MEASURED",
+    "command":"node tests/smoke.js",
+    "cwd":"Z:\\LATTICEWORK_BASELINE_e7585999",
+    "exit_code":1,
+    "passed":3106,
+    "failed":107,
+    "failure_categories": [
+      {"category":"stale version assertions","count":100,"status":"OBSERVED","detail":"tests demand historical version/cache/version.json values even though current docs app, SW and version.json are 5.79.22"},
+      {"category":"historical feature/structure assertions","count":4,"status":"OBSERVED","detail":"confirm count, Chalkboard/Drawing Board naming, and canopy literal assertions; source test names identify earlier ships"},
+      {"category":"repository/environment assertions","count":1,"status":"OBSERVED","detail":"executable bit for bin/ship.sh"},
+      {"category":"current source behavior checks","count":2,"status":"OBSERVED","detail":"stripAnySentinel FL_SEARCH removal and setAgentEmotion targetHSL assignment"}
+    ],
+    "interpretation":"INFERRED: the suite is a cumulative release-history assertion log, not a clean current-baseline characterization suite; individual non-version failures still require explicit disposition rather than deletion",
+    "transient_discrepancy":"MEASURED: an earlier run reported 108 failed / 3105 passed because the local clone lacked refs/tags/v5.79.20-anchor. After git fetch upstream --tags restored the upstream tag (tag object 96a689725b3a6ae3a14cb0df494a4f90cc9ad255), the same immutable baseline produced 107 failed / 3106 passed. The baseline worktree itself was not modified."
+  },
+  "preservation_obligations": [
+    "Preserve every listed browser route, in-app tab panel, module path, launcher mode and worker source until a behavior-level decision records a supported divergence.",
+    "Treat app.html/module loading order and named globals as compatibility boundaries; capture override order before modularization.",
+    "Preserve IndexedDB/localStorage data names, encrypted-key migration behavior, exports/imports, and identity/Merkle semantics pending data and crypto characterization.",
+    "Preserve provider selection, direct/local/proxied request behavior, API-key handling and failure behavior; no provider consolidation before contract tests.",
+    "Preserve offline cache scope and update behavior, including API/localhost service-worker bypasses.",
+    "Preserve LAN exposure and CORS behavior as observed until an approved security divergence explicitly changes it.",
+    "Do not use the smoke aggregate as proof of compatibility; split obsolete release assertions from current behavioral tests while retaining the original suite unchanged."
+  ],
+  "adr_or_implementation_blockers": [
+    "UNKNOWN canonical runtime/source precedence among root mirrors, docs mirrors, deployed site and desktop fallback assets.",
+    "UNKNOWN end-to-end behavior and stored-data effects for all 54 panels, external static routes, imports/exports, workers and desktop builds.",
+    "UNKNOWN exact schema, migration and recovery guarantees for each IndexedDB/localStorage namespace.",
+    "UNKNOWN cryptographic key-exportability, trust model and compatibility guarantees for mesh identity and Merkle data.",
+    "UNKNOWN which source-level panels are actually navigable in each launch mode and which are dormant/experimental.",
+    "UNKNOWN consent effectiveness, authorization boundaries and production deployment configuration for GitHub, Telegram, search, peer and wallet actions.",
+    "UNKNOWN intended status of non-version smoke failures; ADR or implementation must not silently reinterpret them."
+  ],
+  "limitations": [
+    "No browser interaction, external-provider call, LAN peer, worker deployment, Electron/Tauri build, PWA install, or persistence mutation was performed.",
+    "This is a source and smoke characterization, not proof that every apparent feature is operational or supported.",
+    "The candidate control tree contained unrelated documentation-pack changes before this work; they were not modified."
+  ]
+}

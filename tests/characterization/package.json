@@ -1,0 +1,14 @@
+{
+  "name": "latticework-baseline-characterization",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Executable characterization of the immutable FreeLattice baseline.",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test --config=playwright.config.mjs",
+    "test:update": "playwright test --config=playwright.config.mjs --update-snapshots"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.0"
+  }
+}

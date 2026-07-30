@@ -1,0 +1,106 @@
+{
+  "schema": "latticework.characterization.persistence-contract.v1",
+  "evidence_label": "OBSERVED",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "required_local_storage_keys_before_skip": [
+    "fl-has-visited",
+    "fl-last-tab",
+    "fl_customEndpoint",
+    "fl_lan_friendly_name",
+    "fl_lan_peer_id",
+    "fl_memory_core_v1",
+    "fl_meshNodeId",
+    "fl_privacy",
+    "fl_qv_revise_to_annotate_migrated_v5_56_1",
+    "fl_voice_documents",
+    "latticePoints"
+  ],
+  "optional_or_interaction_local_storage_keys": [
+    "fl-garden-touch-hint",
+    "fl_aurora_equation_v1",
+    "fl_discovery_memory",
+    "fl_firstSeen",
+    "fl_garden_dream_emotions",
+    "fl_last_visit",
+    "fl_lc_lastAnchorDay",
+    "fl_wallet_anchors"
+  ],
+  "completion_keys_after_skip": {
+    "fl-welcomed": "true",
+    "fl_onboardingComplete": "true"
+  },
+  "required_indexed_db": [
+    {
+      "name": "FreeLatticeDB",
+      "stores": ["conversations", "memoryIndex", "messages", "meta"]
+    },
+    {
+      "name": "FreeLatticeEvolution",
+      "stores": ["luminosStates"]
+    },
+    {
+      "name": "FreeLatticeGardenDreaming",
+      "stores": ["AffinityMatrix", "DreamLog", "GardenDreams"]
+    },
+    {
+      "name": "FreeLatticeGardenMemory",
+      "stores": ["GardenMemory"]
+    },
+    {
+      "name": "FreeLatticeIdentity",
+      "stores": ["MeshIdentity"]
+    },
+    {
+      "name": "FreeLatticeLetters",
+      "stores": ["letters"]
+    },
+    {
+      "name": "FreeLatticeMemory",
+      "stores": ["conversations"]
+    },
+    {
+      "name": "FreeLatticeMemoryBridge",
+      "stores": ["understanding"]
+    },
+    {
+      "name": "FreeLatticePresence",
+      "stores": ["visitors"]
+    },
+    {
+      "name": "FreeLatticeSkills",
+      "stores": ["skills"]
+    },
+    {
+      "name": "FreeLatticeWallet",
+      "stores": ["LatticeLedger", "WalletMeta"]
+    },
+    {
+      "name": "LatticeChain",
+      "stores": ["chain"]
+    },
+    {
+      "name": "LatticeHandshakes",
+      "stores": ["handshakes"]
+    },
+    {
+      "name": "LatticeMemory",
+      "stores": ["pulses"]
+    },
+    {
+      "name": "SophiaEngine",
+      "stores": ["configurations", "identities", "resonanceLog"]
+    },
+    {
+      "name": "WallOfPresence",
+      "stores": ["marks"]
+    }
+  ],
+  "optional_observed_indexed_db": [
+    {
+      "name": "FreeLatticeScience",
+      "stores": []
+    }
+  ],
+  "expected_cache_name": "freelattice-v5.79.22",
+  "expected_canvas_count": 12
+}

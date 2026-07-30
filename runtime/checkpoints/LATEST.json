@@ -1,0 +1,180 @@
+{
+  "schema": "latticework.context_checkpoint.tracks.v1",
+  "captured_at": "2026-07-30T11:17:49Z",
+  "repo_root": "Z:\\LATTICEWORK",
+  "current_track": "LW_P2_FOUNDATION WORK",
+  "tracks": {
+    "LW_M0_BASELINE WORK": {
+      "track": "LW_M0_BASELINE WORK",
+      "step": "phase0-green",
+      "note": "Immutable baseline, control documents, capability/data registries, platform matrix, performance plan, browser receipts, and ADR-001 through ADR-003 proposals are frozen and hash-validated without upstream runtime changes.",
+      "branch": "reengineering/m0-baseline-characterization",
+      "head": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+      "next_cmd": "Read docs/agents/handoffs/LW-M0-001.md; continue only through the LW_P1_CHARACTERIZATION WORK track.",
+      "validations": [
+        "VERIFIED: origin is EmergentKnowledgeGroup/LATTICEWORK and upstream is Chaos2Cured/FreeLattice.",
+        "VERIFIED: fork main and upstream baseline resolve to e7585999fc1af2707f410ae87356cf2b52e08d9c.",
+        "VERIFIED: local tag v0.0.0-upstream-baseline points at the baseline SHA.",
+        "VERIFIED: detached baseline worktree exists at Z:\\LATTICEWORK_BASELINE_e7585999.",
+        "VERIFIED: all 57 staged documentation-pack files hash-matched the installed overlay.",
+        "VERIFIED: installed LICENSE byte-matches Z:\\FreeLattice\\LICENSE.",
+        "OBSERVED: untouched baseline smoke exited 1 with 3106 passed and 107 failed.",
+        "VERIFIED: Phase 0 control validator reported valid true with 24 living documents, 3 ADR proposals, 2 checkpoint ledgers, 278 capability rows, 252 data rows, and 7 hashed evidence manifests.",
+        "VERIFIED: full reengineering test set passed 12 of 12 before the Phase 0 handoff.",
+        "OBSERVED: bounded Chrome, Edge, direct-file, mobile, degraded, offline, and Signal Report receipts are stored under reengineering/evidence/phase-0/LW-P0-003-browser/.",
+        "VERIFIED: no upstream runtime, deployment, desktop, worker, or baseline smoke-test file was changed."
+      ],
+      "decisions": [
+        "Preserve the exact upstream LICENSE rather than overlaying the text-equivalent but byte-different pack copy.",
+        "Keep Z:\\FreeLattice untouched and characterize the detached baseline worktree."
+      ],
+      "changed_paths": [
+        "Canonical LATTICEWORK documentation pack",
+        "docs/agents/claims/LW-M0-001.md",
+        "docs/agents/handoffs/LW-M0-001.md",
+        "runtime/checkpoints/LATEST.md",
+        "runtime/checkpoints/LATEST.json",
+        "reengineering/checkpoints/LATEST.md",
+        "reengineering/checkpoints/LATEST.json"
+      ],
+      "blockers": [
+        {
+          "id": "LW-BLK-001",
+          "severity": "P0",
+          "status": "CLOSED",
+          "summary": "Phase 0 capability, canonical-source, data, security, platform, and performance obligations are frozen with unknown-preserve defaults and a green validator."
+        }
+      ]
+    },
+    "LW_P1_CHARACTERIZATION WORK": {
+      "track": "LW_P1_CHARACTERIZATION WORK",
+      "step": "phase1-characterization-green",
+      "note": "The bounded Phase 1 Playwright characterization and hardened evidence validator are complete, independently reproduced, and accepted; runtime implementation remains blocked on ADR-001 through ADR-003 maintainer dispositions.",
+      "branch": "reengineering/m0-baseline-characterization",
+      "head": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+      "next_cmd": "Read docs/agents/handoffs/LW-P1-001.md and record explicit maintainer dispositions for ADR-001 through ADR-003 before claiming Phase 2.",
+      "validations": [
+        "VERIFIED: LW_M0_BASELINE WORK completed with a green hash-verifying control receipt.",
+        "MEASURED: canonical Playwright run passed 7 of 7 bounded scenarios in 31.188 seconds with exit 0.",
+        "MEASURED: Phase 1 validator reported valid true, 96 blocked out-of-origin HTTP requests, one blocked external WebSocket attempt, eight blocked realtime attempts, zero allowed external network requests, and no sentinel leak.",
+        "VERIFIED: negative validator fixtures reject traversal, wrong attachment ownership, fake PNG and JSON semantics, wrong baseline metadata, missing egress proof, and sentinel leakage; full reengineering suite passed 19 of 19.",
+        "VERIFIED: independent QA reproduced 19 of 19 control tests and 7 of 7 browser scenarios on loopback port 4175 and accepted the bounded work unit.",
+        "VERIFIED: immutable baseline worktree remains clean at Z:\\LATTICEWORK_BASELINE_e7585999 and the pinned SHA.",
+        "VERIFIED: no upstream runtime, deployment, desktop, worker, smoke-test, or LICENSE file was modified."
+      ],
+      "decisions": [
+        "Characterization may proceed without runtime implementation or architecture acceptance.",
+        "External mutation, real credentials, and personal data remain excluded.",
+        "Automated receipts remain MEASURED; the bounded work unit becomes VERIFIED only through the independent reproduction receipt.",
+        "C2 advancement is limited to the exact executable subflows; broad capability rows remain observed or uncharacterized."
+      ],
+      "changed_paths": [
+        "tests/characterization/**",
+        "tools/reengineering/run-phase1-characterization.ps1",
+        "tools/reengineering/validate-phase1-characterization.mjs",
+        "tests/reengineering/phase1-characterization-validation.test.mjs",
+        "reengineering/evidence/phase-1/LW-P1-001/**",
+        "docs/agents/claims/LW-P1-001.md",
+        "docs/agents/handoffs/LW-P1-001.md",
+        "PROJECT_STATE.md and evidence-linked living documents",
+        "runtime/checkpoints/LATEST.md",
+        "runtime/checkpoints/LATEST.json",
+        "reengineering/checkpoints/LATEST.md",
+        "reengineering/checkpoints/LATEST.json"
+      ],
+      "blockers": [
+        {
+          "id": "LW-BLK-002..LW-BLK-004",
+          "severity": "P1",
+          "status": "OPEN",
+          "summary": "ADR-001 through ADR-003 require explicit maintainer dispositions before Phase 2 runtime implementation."
+        }
+      ]
+    },
+    "LW_P2_PREFLIGHT WORK": {
+      "track": "LW_P2_PREFLIGHT WORK",
+      "step": "preflight-green",
+      "note": "The maintainer accepted ADR-001 through ADR-003; the exact owned paths, dependency pins, no-touch fence, tests, evidence, stop conditions, and rollback are frozen for bounded Phase 2 execution.",
+      "branch": "reengineering/m0-baseline-characterization",
+      "head": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+      "next_cmd": "Continue only through LW_P2_FOUNDATION WORK and follow reengineering/PHASE2_PREFLIGHT.md.",
+      "validations": [
+        "VERIFIED: LW_P1_CHARACTERIZATION WORK is green and independently reproduced.",
+        "VERIFIED: docs/agents/claims/LW-P2-PREFLIGHT-001.md is completed and its handoff points to the exact implementation packet.",
+        "OBSERVED: the maintainer explicitly accepted ADR-001, ADR-002, and ADR-003 on 2026-07-30 and directed execution to continue.",
+        "MEASURED: npm registry metadata was captured under Node 24.13.0 and npm 11.6.2, and Vite, Lit, and TypeScript documentation was queried through Docker MCP Toolkit Context7.",
+        "VERIFIED: no candidate runtime, workspace, package, dependency, generated artifact, or legacy runtime edit has been made in this workstream."
+      ],
+      "decisions": [
+        "The maintainer accepted ADR-001 through ADR-003.",
+        "Phase 2 may proceed only through the exact bounded preflight contract."
+      ],
+      "changed_paths": [
+        "docs/agents/claims/LW-P2-PREFLIGHT-001.md",
+        "docs/agents/handoffs/LW-P2-PREFLIGHT-001.md",
+        "reengineering/PHASE2_PREFLIGHT.md",
+        "docs/decisions/0001-canonical-source-and-build-strategy.md",
+        "docs/decisions/0002-typescript-module-architecture.md",
+        "docs/decisions/0003-ui-rendering-strategy.md",
+        "runtime/checkpoints/LATEST.md",
+        "runtime/checkpoints/LATEST.json",
+        "reengineering/checkpoints/LATEST.md",
+        "reengineering/checkpoints/LATEST.json"
+      ],
+      "blockers": [
+        {
+          "id": "LW-BLK-002..LW-BLK-004",
+          "severity": "P1",
+          "status": "CLOSED",
+          "summary": "ADR-001 through ADR-003 were explicitly accepted on 2026-07-30."
+        }
+      ]
+    },
+    "LW_P2_FOUNDATION WORK": {
+      "track": "LW_P2_FOUNDATION WORK",
+      "step": "precommit-green",
+      "note": "The bounded typed contracts, lifecycle kernel, Lit status shell, safety-hardened verification runner, and strict evidence validator are locally green; the candidate implementation is staged for its first commit so canonical evidence can identify a real candidate SHA.",
+      "branch": "reengineering/m0-baseline-characterization",
+      "head": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+      "next_cmd": "Commit the staged candidate implementation, then run canonical Phase 2 verification against that committed candidate SHA before living-doc and handoff updates.",
+      "validations": [
+        "VERIFIED: LW_P1_CHARACTERIZATION WORK and LW_P2_PREFLIGHT WORK are green.",
+        "OBSERVED: ADR-001 through ADR-003 are Accepted.",
+        "OBSERVED: docs/agents/claims/LW-P2-001.md claims the bounded candidate paths and no-touch fence.",
+        "VERIFIED: the legacy baseline remains pinned at e7585999fc1af2707f410ae87356cf2b52e08d9c and no Phase 2 runtime file existed at phase start.",
+        "VERIFIED: strict TypeScript checks pass for the web, contracts, and kernel workspaces.",
+        "VERIFIED: the lifecycle kernel suite passes 5 of 5 tests and the repository-control suite passes 37 of 37 tests.",
+        "MEASURED: the complete Phase 2 smoke runner passes clean install, isolated byte-identical lockfile replay, typecheck, unit/control suites, two byte-identical builds, 6 of 6 browser scenarios, zero-vulnerability audit, CycloneDX SBOM, supply-chain inventory, protected-boundary verification, and strict bundle validation.",
+        "VERIFIED: candidate output rejects symbolic-link or junction traversal before Vite emptyOutDir can run.",
+        "VERIFIED: browser QA aborts out-of-origin traffic before transmission and blocks realtime, worker, EventSource, and sendBeacon capability use.",
+        "VERIFIED: the independent pre-commit QA findings were addressed; remaining acceptance gates are committed candidate identity, canonical evidence, and separate-port independent reproduction.",
+        "VERIFIED: staged diff contains no protected legacy path, local-only AGENTS.md, bootstrap archive, generated output, runtime temp, or Playwright scratch path."
+      ],
+      "decisions": [
+        "Use exact direct pins Vite 8.1.5, TypeScript 6.0.3, Lit 3.3.3, and isolated Playwright 1.62.0.",
+        "Keep candidate output under ignored output/lw-p2-001/web and leave legacy deployment mirrors untouched."
+      ],
+      "changed_paths": [
+        "Root npm workspace, exact lockfile, and shared TypeScript policy",
+        "apps/web/**",
+        "packages/contracts/**",
+        "packages/kernel/**",
+        "tests/phase2/**",
+        "Phase 2 tools and repository-control tests",
+        "docs/agents/claims/LW-P2-001.md",
+        "runtime/checkpoints/LATEST.md",
+        "runtime/checkpoints/LATEST.json",
+        "reengineering/checkpoints/LATEST.md",
+        "reengineering/checkpoints/LATEST.json"
+      ],
+      "blockers": [
+        {
+          "id": "LW-BLK-005..LW-BLK-007",
+          "severity": "P1",
+          "status": "OPEN_FOR_LATER_PHASES",
+          "summary": "Data, provider and security, and cutover decisions remain blocked but do not prevent the bounded Phase 2 status-shell slice."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "latticework.evidence.artifact-bundle.v1",
+  "receipt_id": "LW-M0-BEH-001",
+  "captured_at": "2026-07-30T08:51:34.378Z",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "directory": "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-0\\LW-M0-BEH-001",
+  "artifacts": [
+    {
+      "path": "behavior-boundary-map.json",
+      "bytes": 15512,
+      "sha256": "02eaa3d8a81dc9d480f41709ee0c0b959d8cfdc08aedaebf2647cc398a7301a1",
+      "repository_artifact": true
+    },
+    {
+      "path": "behavior-boundary-map.md",
+      "bytes": 9432,
+      "sha256": "bccfe1d1217d91180c12d08c1d285c0db684c7bedcdf0f255349b4e34c52f75a",
+      "repository_artifact": true
+    }
+  ]
+}

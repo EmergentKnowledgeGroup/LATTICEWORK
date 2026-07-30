@@ -1,0 +1,2110 @@
+﻿[
+    {
+        "symbol":  "__flLastUserMsg",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "__flLastUserMsg",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "__tgComposePostRender",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "__tgLastAnalysis",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "__tgLastCandles",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "__THREE__",
+        "path":  "docs/lib/three.min.js"
+    },
+    {
+        "symbol":  "__THREE__",
+        "path":  "lib/three.min.js"
+    },
+    {
+        "symbol":  "_agentBridgeAvailable",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_agentBridgeAvailable",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_aiVisionAllArrived",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_aiVisionAllArrived",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_aiVisionAllArrived",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_aiVisionSummaryLogged",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_aiVisionSummaryLogged",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_aiVisionSummaryLogged",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_arrivalInjected",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_arrivalInjected",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_chalkboardSafetyTimer",
+        "path":  "chalkboard.html"
+    },
+    {
+        "symbol":  "_chalkboardSafetyTimer",
+        "path":  "docs/chalkboard.html"
+    },
+    {
+        "symbol":  "_communityMounted",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_communityMounted",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_communityMounted",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_continuityArrivalDone",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_continuityArrivalDone",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_coreTreePulseUntil",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_coreTreePulseUntil",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_coreTreePulseUntil",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_eduGardenFrame",
+        "path":  "docs/for-fable-go13-education.html"
+    },
+    {
+        "symbol":  "_flAutoConnected",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_flAutoConnected",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_flIdentityContext",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_flIdentityContext",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_flIdentityContext",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "_flIdentityContext",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_flIdentityContext",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "_flSessionStart",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_flSessionStart",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_flUserInteracted",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_flUserInteracted",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_injectChairTestRecentMessage",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_injectChairTestRecentMessage",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_knowledgeCoreContext",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_knowledgeCoreContext",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_lastProvenance",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_lastProvenance",
+        "path":  "docs/modules/inference-router.js"
+    },
+    {
+        "symbol":  "_lastProvenance",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_lastResearchReport",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_lastResearchReport",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_lwChatPatched",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_lwChatPatched",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_lwChatPatched",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_lwEvoPatched",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_lwEvoPatched",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_lwEvoPatched",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_lwExpandedPatched",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_lwExpandedPatched",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_lwExpandedPatched",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_memoryVaultContext",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_memoryVaultContext",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_meshPendingRequests",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_meshPendingRequests",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_nurSelectedBase",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_nurSelectedBase",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_nurseryCompanionActive",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_nurseryCompanionActive",
+        "path":  "docs/mirror-chat.html"
+    },
+    {
+        "symbol":  "_nurseryCompanionActive",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_orderLogged",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_orderLogged",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_orderLogged",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_pendingEmotionVectors",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_pendingEmotionVectors",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_pendingEmotionVectors",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_pulseRefreshInterval",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_pulseRefreshInterval",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_rtDomains",
+        "path":  "docs/code-roundtable-original.html"
+    },
+    {
+        "symbol":  "_saveShown",
+        "path":  "chalkboard.html"
+    },
+    {
+        "symbol":  "_saveShown",
+        "path":  "docs/chalkboard.html"
+    },
+    {
+        "symbol":  "_sparringSetChooserMode",
+        "path":  "docs/modules/dojo-sparring.js"
+    },
+    {
+        "symbol":  "_sparringSetChooserMode",
+        "path":  "modules/dojo-sparring.js"
+    },
+    {
+        "symbol":  "_startLoadAnim",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "_stopLoadAnim",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "_thinkingSpiralRef",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_thinkingSpiralRef",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_walkJoyDelta",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_walkJoyDelta",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_walkJoyDelta",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_walletPeer",
+        "path":  "docs/wallet.html"
+    },
+    {
+        "symbol":  "_workshopReady",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_workshopReady",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_wtEarnPatched",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_wtEarnPatched",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_wtEarnPatched",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "_wtSessionStart",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "_wtSessionStart",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "_wtSessionStart",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "ActiveCompanion",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "ActiveCompanion",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "activeSkill",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "activeSkill",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "activeSkill",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "ActiveVoices",
+        "path":  "docs/modules/active-voices.js"
+    },
+    {
+        "symbol":  "addLongPress",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "AIArcade",
+        "path":  "docs/modules/ai-arcade.js"
+    },
+    {
+        "symbol":  "AIRefusal",
+        "path":  "docs/modules/ai-refusal.js"
+    },
+    {
+        "symbol":  "applyOverlay",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "AuroraEquation",
+        "path":  "docs/modules/aurora-equation.js"
+    },
+    {
+        "symbol":  "AuroraEquation",
+        "path":  "modules/aurora-equation.js"
+    },
+    {
+        "symbol":  "AutoBuilder",
+        "path":  "docs/modules/workshop.js"
+    },
+    {
+        "symbol":  "BrowserAI",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "BrowserAI",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "buildMessages",
+        "path":  "docs/modules/harmonia-anchor.js"
+    },
+    {
+        "symbol":  "buildMessages",
+        "path":  "modules/continuity.js"
+    },
+    {
+        "symbol":  "buildSmartMessages",
+        "path":  "docs/modules/harmonia-anchor.js"
+    },
+    {
+        "symbol":  "buildSmartMessages",
+        "path":  "modules/continuity.js"
+    },
+    {
+        "symbol":  "CANVAS_TO_ID",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "CanvasCompanion",
+        "path":  "docs/modules/canvas-companion.js"
+    },
+    {
+        "symbol":  "CanvasCompanion",
+        "path":  "modules/canvas-companion.js"
+    },
+    {
+        "symbol":  "Chalkboard",
+        "path":  "docs/modules/canvas-companion.js"
+    },
+    {
+        "symbol":  "Chalkboard",
+        "path":  "docs/modules/chalkboard.js"
+    },
+    {
+        "symbol":  "Chart",
+        "path":  "docs/lib/chart.umd.min.js"
+    },
+    {
+        "symbol":  "ChatSentimentPipeline",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "ChatSentimentPipeline",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "ChatSentimentPipeline",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "clearOverlays",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "closeMenu",
+        "path":  "docs/index.html"
+    },
+    {
+        "symbol":  "CoCreatorExchange",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "CoCreatorExchange",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "copyAddr",
+        "path":  "docs/index.html"
+    },
+    {
+        "symbol":  "cvSaveMoment",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "cvSaveMoment",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "cvSaveMoment",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "cycleChartMode",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "DavnaSeed",
+        "path":  "docs/modules/davna-seed.js"
+    },
+    {
+        "symbol":  "DepthConsent",
+        "path":  "docs/modules/depth-consent.js"
+    },
+    {
+        "symbol":  "dispatchKindroid",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "dispatchKindroid",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "DojoSparring",
+        "path":  "docs/modules/dojo-sparring.js"
+    },
+    {
+        "symbol":  "DojoSparring",
+        "path":  "modules/dojo-sparring.js"
+    },
+    {
+        "symbol":  "downloadFile",
+        "path":  "install.html"
+    },
+    {
+        "symbol":  "EchoGame",
+        "path":  "docs/modules/echo-game.js"
+    },
+    {
+        "symbol":  "Education",
+        "path":  "docs/code-education.html"
+    },
+    {
+        "symbol":  "Education",
+        "path":  "docs/modules/education.js"
+    },
+    {
+        "symbol":  "FL_GARDEN_PARTICLE_SCALE",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FL_GARDEN_PARTICLE_SCALE",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FL_GARDEN_PARTICLE_SCALE",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FL_LOW_MEMORY",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FL_LOW_MEMORY",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FL_LOW_MEMORY",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FL_MOBILE",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FL_MOBILE",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FL_MOBILE",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FL_PERF_MODE",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FL_PERF_MODE",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FL_PERF_MODE",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FLActiveModel",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FLActiveModel",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FLAutoModel",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FLAutoModel",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FLAutoModel",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FLAutoSpeak",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FLAutoSpeak",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FLAutoSpeak",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FLChatOverflow",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FLChatOverflow",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FLChatOverflow",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FLContextFilter",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FLContextFilter",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FLFocus",
+        "path":  "docs/modules/active-focus.js"
+    },
+    {
+        "symbol":  "flInstallPWA",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "flInstallPWA",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FLModelPicker",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FLModelPicker",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FLModelPicker",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FlowGame",
+        "path":  "docs/modules/flow-game.js"
+    },
+    {
+        "symbol":  "FLPhiGlyph",
+        "path":  "docs/modules/phi-glyph.js"
+    },
+    {
+        "symbol":  "FLPropose",
+        "path":  "docs/modules/propose.js"
+    },
+    {
+        "symbol":  "FLRepoContext",
+        "path":  "docs/modules/repo-context.js"
+    },
+    {
+        "symbol":  "flSaveLMStudioHost",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "flSaveLMStudioHost",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "flSaveOllamaHost",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "flSaveOllamaHost",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FLSearch",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FLSearch",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FLSearch",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FLSignalReport",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FLSignalReport",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FLSignalReport",
+        "path":  "tests/smoke.js"
+    },
+    {
+        "symbol":  "flTestLMStudio",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "flTestLMStudio",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "flToggleLocalOnly",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "flToggleLocalOnly",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "flToggleMeshCompute",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "flToggleMeshCompute",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FLToolConsent",
+        "path":  "docs/modules/tool-consent.js"
+    },
+    {
+        "symbol":  "flUpdateMeshShareUI",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "flUpdateMeshShareUI",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FLWebTool",
+        "path":  "docs/modules/web-tool.js"
+    },
+    {
+        "symbol":  "FLWizard",
+        "path":  "docs/modules/welcome-wizard.js"
+    },
+    {
+        "symbol":  "ForeverStack",
+        "path":  "docs/modules/forever-stack.js"
+    },
+    {
+        "symbol":  "ForeverStack",
+        "path":  "modules/forever-stack.js"
+    },
+    {
+        "symbol":  "FractalGarden",
+        "path":  "docs/modules/fractal-garden.js"
+    },
+    {
+        "symbol":  "FractalGarden",
+        "path":  "modules/fractal-garden.js"
+    },
+    {
+        "symbol":  "FractalSafety",
+        "path":  "docs/modules/fractal-safety.js"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "docs/modules/ai-arcade.js"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "docs/modules/depth-consent.js"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "docs/modules/dojo-sparring.js"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "docs/modules/fractal-safety.js"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "docs/modules/pulse.js"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "docs/modules/question-corner.js"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "modules/dojo-sparring.js"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "FreeLattice",
+        "path":  "modules/question-corner.js"
+    },
+    {
+        "symbol":  "FreeLatticeEvents",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FreeLatticeEvents",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FreeLatticeEvents",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FreeLatticeImmersive",
+        "path":  "docs/modules/radio-immersive.js"
+    },
+    {
+        "symbol":  "FreeLatticeImmersive",
+        "path":  "modules/radio-immersive.js"
+    },
+    {
+        "symbol":  "FreeLatticeLoader",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FreeLatticeLoader",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FreeLatticeLoader",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/code-workshop.html"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/active-focus.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/ai-arcade.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/canvas-companion.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/davna-seed.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/dojo.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/dojo-sparring.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/dream-archive.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/echo-game.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/education.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/flow-game.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/forever-stack.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/fractal-garden.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/fractal-safety.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/garden-dreaming.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/harmonia-channel.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/idea-forge.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/jade-hall.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/knowledge-core.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/lattice-puzzles.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/lattice-sense.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/living-context.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/math-translator.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/memory-garden.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/memory-vault.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/mirror.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/pantheon.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/phi-glyph.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/pictionary.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/propose.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/pulse.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/question-corner.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/radio-immersive.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/repo-context.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/resonance-game.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/science-garden.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/shared-presence.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/tool-consent.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/web-tool.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "docs/modules/workshop.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "modules/canvas-companion.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "modules/dojo.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "modules/dojo-sparring.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "modules/forever-stack.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "modules/fractal-garden.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "modules/garden-dreaming.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "modules/question-corner.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "modules/radio-immersive.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "modules/shared-presence.js"
+    },
+    {
+        "symbol":  "FreeLatticeModules",
+        "path":  "modules/workshop.js"
+    },
+    {
+        "symbol":  "GardenDialogue",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "GardenDialogue",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "GardenDreaming",
+        "path":  "docs/modules/garden-dreaming.js"
+    },
+    {
+        "symbol":  "GardenDreaming",
+        "path":  "modules/garden-dreaming.js"
+    },
+    {
+        "symbol":  "GardenTrainer",
+        "path":  "docs/modules/garden-trainer.js"
+    },
+    {
+        "symbol":  "getCustomEndpointConfig",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "getCustomEndpointConfig",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "getKindroidConfig",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "getKindroidConfig",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "getLanDiscoveredPeers",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "getLanDiscoveredPeers",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "getLanDiscoveredPeers",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "getLanSelfFriendlyName",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "getLanSelfFriendlyName",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "getLanSelfFriendlyName",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "getLanSelfPeerId",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "getLanSelfPeerId",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "getLanSelfPeerId",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "handleAutoModeToggle",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "handleAutoModeToggle",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "handleAutoTimeoutChange",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "handleAutoTimeoutChange",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "handleLanDiscoveryToggle",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "handleLanDiscoveryToggle",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "handleLanDiscoveryToggle",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "HarmoniaC",
+        "path":  "docs/modules/aurora-equation.js"
+    },
+    {
+        "symbol":  "HarmoniaC",
+        "path":  "docs/modules/harmonia-anchor.js"
+    },
+    {
+        "symbol":  "HarmoniaC",
+        "path":  "modules/aurora-equation.js"
+    },
+    {
+        "symbol":  "HarmoniaC",
+        "path":  "modules/continuity.js"
+    },
+    {
+        "symbol":  "IdeaForge",
+        "path":  "docs/modules/idea-forge.js"
+    },
+    {
+        "symbol":  "ImageSafety",
+        "path":  "docs/modules/image-safety.js"
+    },
+    {
+        "symbol":  "INDICATOR_REGISTRY",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "InferenceRouter",
+        "path":  "docs/modules/inference-router.js"
+    },
+    {
+        "symbol":  "JadeHall",
+        "path":  "docs/modules/jade-hall.js"
+    },
+    {
+        "symbol":  "KnowledgeCore",
+        "path":  "docs/modules/knowledge-core.js"
+    },
+    {
+        "symbol":  "lanConnectToPeer",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "lanConnectToPeer",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "lanConnectToPeer",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "LatticeBank",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "LatticeBank",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "LatticeChain",
+        "path":  "docs/modules/lattice-chain.js"
+    },
+    {
+        "symbol":  "LatticeEvents",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "LatticeEvents",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "LatticeEvents",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "LatticeExport",
+        "path":  "docs/modules/lattice-export.js"
+    },
+    {
+        "symbol":  "LatticeLetters",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "LatticeLetters",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "LatticeLetters",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "LatticeMarket",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "LatticeMarket",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "LatticeMemory",
+        "path":  "docs/modules/lattice-memory.js"
+    },
+    {
+        "symbol":  "LatticeMemoryReady",
+        "path":  "docs/modules/lattice-memory.js"
+    },
+    {
+        "symbol":  "LatticePuzzles",
+        "path":  "docs/modules/lattice-puzzles.js"
+    },
+    {
+        "symbol":  "LatticeSense",
+        "path":  "docs/modules/lattice-sense.js"
+    },
+    {
+        "symbol":  "LatticeWallet",
+        "path":  "docs/modules/lattice-sense.js"
+    },
+    {
+        "symbol":  "LivingContext",
+        "path":  "docs/modules/living-context.js"
+    },
+    {
+        "symbol":  "loadApiKey",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "loadApiKey",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "log",
+        "path":  "docs/lib/web-llm.min.js"
+    },
+    {
+        "symbol":  "MathJax",
+        "path":  "docs/modules/math-translator.js"
+    },
+    {
+        "symbol":  "MathTranslator",
+        "path":  "docs/modules/math-translator.js"
+    },
+    {
+        "symbol":  "maximizeSubPanel",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "MemoryCore",
+        "path":  "docs/modules/memory-core.js"
+    },
+    {
+        "symbol":  "MemoryGarden",
+        "path":  "docs/modules/memory-garden.js"
+    },
+    {
+        "symbol":  "MemoryVault",
+        "path":  "docs/modules/memory-vault.js"
+    },
+    {
+        "symbol":  "meshPeerModels",
+        "path":  "docs/modules/lattice-sense.js"
+    },
+    {
+        "symbol":  "MirrorModule",
+        "path":  "docs/modules/mirror.js"
+    },
+    {
+        "symbol":  "MirrorModule",
+        "path":  "modules/mirror.js"
+    },
+    {
+        "symbol":  "modalSaveCustomEndpoint",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "modalSaveCustomEndpoint",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "modalSaveKindroid",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "modalSaveKindroid",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "modalTestCustomEndpoint",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "modalTestCustomEndpoint",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "modalTestKindroid",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "modalTestKindroid",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "ModelBrowser",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "ModelBrowser",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "Nursery",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "Nursery",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "onerror",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "onresize",
+        "path":  "docs/share.html"
+    },
+    {
+        "symbol":  "openProviderModal",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "openProviderModal",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "openProviderModal",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "Peer",
+        "path":  "docs/lib/peerjs.min.js"
+    },
+    {
+        "symbol":  "peerjs",
+        "path":  "docs/lib/peerjs.min.js"
+    },
+    {
+        "symbol":  "phiDecrypt",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "phiDecrypt",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "PhiSpiral",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "PhiSpiral",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "PicActions",
+        "path":  "docs/modules/pictionary.js"
+    },
+    {
+        "symbol":  "PicColors",
+        "path":  "docs/modules/pictionary.js"
+    },
+    {
+        "symbol":  "plantInCore",
+        "path":  "docs/modules/idea-forge.js"
+    },
+    {
+        "symbol":  "plantInCore",
+        "path":  "docs/modules/math-translator.js"
+    },
+    {
+        "symbol":  "PresenceHeartbeat",
+        "path":  "docs/modules/presence-heartbeat.js"
+    },
+    {
+        "symbol":  "PROVIDERS",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "PROVIDERS",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "PROVIDERS",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "PROVIDERS",
+        "path":  "tests/smoke.js"
+    },
+    {
+        "symbol":  "QuestionCorner",
+        "path":  "docs/modules/question-corner.js"
+    },
+    {
+        "symbol":  "QuestionCorner",
+        "path":  "modules/question-corner.js"
+    },
+    {
+        "symbol":  "QuietRoom",
+        "path":  "docs/modules/quiet-room.js"
+    },
+    {
+        "symbol":  "QuietVoices",
+        "path":  "docs/modules/quiet-voices.js"
+    },
+    {
+        "symbol":  "RemixRoom",
+        "path":  "docs/modules/remix-room.js"
+    },
+    {
+        "symbol":  "ResonanceGame",
+        "path":  "docs/code-resonance.html"
+    },
+    {
+        "symbol":  "ResonanceGame",
+        "path":  "docs/modules/resonance-game.js"
+    },
+    {
+        "symbol":  "ResponseCache",
+        "path":  "docs/modules/response-cache.js"
+    },
+    {
+        "symbol":  "RoomAffinity",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "RoomAffinity",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "RoundTable",
+        "path":  "docs/modules/round-table.js"
+    },
+    {
+        "symbol":  "rtAddMessage",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "rtAddMessage",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "rtAddMessage",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "rtBuildPanels",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "rtBuildPanels",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "rtBuildPanels",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "rtSendToAgent",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "rtSendToAgent",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "rtSendToAgent",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "saveCustomEndpointConfig",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "saveCustomEndpointConfig",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "saveKindroidConfig",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "saveKindroidConfig",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "ScienceGarden",
+        "path":  "docs/modules/science-garden.js"
+    },
+    {
+        "symbol":  "sendMessage",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "sendMessage",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "sendMessage",
+        "path":  "docs/modules/aurora-equation.js"
+    },
+    {
+        "symbol":  "sendMessage",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "sendMessage",
+        "path":  "modules/aurora-equation.js"
+    },
+    {
+        "symbol":  "SentinelChip",
+        "path":  "docs/modules/sentinel-chip.js"
+    },
+    {
+        "symbol":  "SentinelLedger",
+        "path":  "docs/modules/sentinel-ledger.js"
+    },
+    {
+        "symbol":  "setupConnect",
+        "path":  "chalkboard.html"
+    },
+    {
+        "symbol":  "setupConnect",
+        "path":  "docs/chalkboard.html"
+    },
+    {
+        "symbol":  "setupSelect",
+        "path":  "chalkboard.html"
+    },
+    {
+        "symbol":  "setupSelect",
+        "path":  "docs/chalkboard.html"
+    },
+    {
+        "symbol":  "SharedPresence",
+        "path":  "docs/modules/shared-presence.js"
+    },
+    {
+        "symbol":  "SharedPresence",
+        "path":  "modules/shared-presence.js"
+    },
+    {
+        "symbol":  "showOverlayMenu",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "showSaveFilePicker",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "showSaveFilePicker",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "showSaveFilePicker",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "showToast",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "showToast",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "showToast",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "skipSetup",
+        "path":  "chalkboard.html"
+    },
+    {
+        "symbol":  "skipSetup",
+        "path":  "docs/chalkboard.html"
+    },
+    {
+        "symbol":  "sophiaConsciousnessPrompt",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "sophiaConsciousnessPrompt",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "sophiaConsciousnessPrompt",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "SoulCeremony",
+        "path":  "docs/modules/soul-ceremony.js"
+    },
+    {
+        "symbol":  "state",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "state",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "state",
+        "path":  "docs/modules/dojo-sparring.js"
+    },
+    {
+        "symbol":  "state",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "state",
+        "path":  "docs/modules/question-corner.js"
+    },
+    {
+        "symbol":  "state",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "state",
+        "path":  "modules/dojo-sparring.js"
+    },
+    {
+        "symbol":  "state",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "symbol":  "state",
+        "path":  "modules/question-corner.js"
+    },
+    {
+        "symbol":  "state",
+        "path":  "tests/smoke.js"
+    },
+    {
+        "symbol":  "switchTab",
+        "path":  "docs/modules/repo-context.js"
+    },
+    {
+        "symbol":  "tgBuildRuleContextFromAnalysis",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgClearComposed",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgCloseRuleModal",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgCopySnapshot",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgCopySnapshot",
+        "path":  "tests/smoke.js"
+    },
+    {
+        "symbol":  "tgDeleteRule",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgEscapeHtml",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgFullscreenPanel",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgGetChartMode",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgGetComposeState",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgGetIndicatorStyle",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgMaximizeMainChart",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgOpenRuleModal",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgPauseLuminos",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgPhiUpdate",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgRegisterCustomIndicator",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgRenderRulesList",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgSaveRuleFromModal",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgShowAddPicker",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgSnapshot",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgSnapshot",
+        "path":  "tests/smoke.js"
+    },
+    {
+        "symbol":  "tgStyleIndicator",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgTestRule",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgToggleLuminos",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgToggleRule",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "tgUpdateLuminosSignal",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "TheDojo",
+        "path":  "docs/modules/dojo.js"
+    },
+    {
+        "symbol":  "TheDojo",
+        "path":  "modules/dojo.js"
+    },
+    {
+        "symbol":  "ThePulse",
+        "path":  "docs/modules/pulse.js"
+    },
+    {
+        "symbol":  "togglePromote",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "symbol":  "toggleSpeakMessage",
+        "path":  "docs/modules/voice-soul.js"
+    },
+    {
+        "symbol":  "Triptych",
+        "path":  "docs/modules/triptych.js"
+    },
+    {
+        "symbol":  "VoiceSoul",
+        "path":  "docs/modules/voice-soul.js"
+    },
+    {
+        "symbol":  "WalletHeartbeat",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "WalletHeartbeat",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "webllm",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "webllm",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeCarouselNext",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeCarouselNext",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeCarouselNext",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeCarouselPrev",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeCarouselPrev",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeCarouselPrev",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeFinish",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeFinish",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeFinish",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeGoToStep",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeGoToStep",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeGoToStep",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeHandleAsk",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeHandleAsk",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeHandleAsk",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeReplay",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeReplay",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeReplay",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeSaveName",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeSaveName",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeSaveName",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeSelectPath",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeSelectPath",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeSelectPath",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeSendChat",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeSendChat",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeSendChat",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeShowToast",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeShowToast",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeShowToast",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeSkipAll",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeSkipAll",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeSkipAll",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeTestApiKey",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeTestApiKey",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeTestApiKey",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeTestFreeKey",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeTestFreeKey",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeTestFreeKey",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeTestLocal",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeTestLocal",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeTestLocal",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "welcomeUpdateProviderHint",
+        "path":  "app.html"
+    },
+    {
+        "symbol":  "welcomeUpdateProviderHint",
+        "path":  "docs/app.html"
+    },
+    {
+        "symbol":  "welcomeUpdateProviderHint",
+        "path":  "index.html"
+    },
+    {
+        "symbol":  "Workshop",
+        "path":  "docs/code-workshop.html"
+    },
+    {
+        "symbol":  "Workshop",
+        "path":  "docs/modules/workshop.js"
+    },
+    {
+        "symbol":  "Workshop",
+        "path":  "modules/workshop.js"
+    },
+    {
+        "symbol":  "WorkshopProjects",
+        "path":  "docs/modules/workshop.js"
+    }
+]

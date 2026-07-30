@@ -1,0 +1,19 @@
+{
+  "schema": "latticework.characterization.synthetic-provider.v1",
+  "credential": "LW_FAKE_KEY_NOT_A_SECRET",
+  "unsent_message_sentinel": "LW_PRIVATE_MESSAGE_SENTINEL_MUST_NOT_APPEAR",
+  "invalid_endpoint": "https://provider.invalid/v1/chat/completions",
+  "provider_ids": [
+    "ollama",
+    "groq",
+    "openai",
+    "anthropic",
+    "google",
+    "custom"
+  ],
+  "rules": [
+    "Never submit the synthetic credential to any endpoint.",
+    "Never send the unsent message sentinel.",
+    "Treat every non-baseline HTTP or HTTPS request as blocked evidence."
+  ]
+}

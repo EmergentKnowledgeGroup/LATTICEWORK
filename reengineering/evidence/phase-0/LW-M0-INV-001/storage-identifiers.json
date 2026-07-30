@@ -1,0 +1,2427 @@
+﻿[
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FractalGarden",
+        "path":  "docs/modules/pantheon.js"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeGardenMemory",
+        "path":  "docs/modules/garden-dreaming.js"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeGardenMemory",
+        "path":  "modules/garden-dreaming.js"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeMemory",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeMemory",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeMemory",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeNursery",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeNursery",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeNursery",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeScience",
+        "path":  "docs/modules/lattice-sense.js"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeSkills",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeSkills",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeSkills",
+        "path":  "docs/modules/workshop.js"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeSkills",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeSkills",
+        "path":  "modules/workshop.js"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeStudio",
+        "path":  "docs/pantheon.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeWallet",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeWallet",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "FreeLatticeWallet",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "indexedDB_database",
+        "name":  "LatticeWalletBackup",
+        "path":  "docs/wallet.html"
+    },
+    {
+        "kind":  "indexedDB_store",
+        "name":  "GardenQuestions",
+        "path":  "docs/modules/fractal-garden.js"
+    },
+    {
+        "kind":  "indexedDB_store",
+        "name":  "GardenQuestions",
+        "path":  "modules/fractal-garden.js"
+    },
+    {
+        "kind":  "indexedDB_store",
+        "name":  "marks",
+        "path":  "docs/modules/jade-hall.js"
+    },
+    {
+        "kind":  "indexedDB_store",
+        "name":  "StudioCreations",
+        "path":  "docs/pantheon.html"
+    },
+    {
+        "kind":  "indexedDB_store",
+        "name":  "urls",
+        "path":  "docs/lib/web-llm.min.js"
+    },
+    {
+        "kind":  "indexedDB_store",
+        "name":  "wallets",
+        "path":  "docs/wallet.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "chalkboard-apikey",
+        "path":  "chalkboard.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "chalkboard-apikey",
+        "path":  "docs/chalkboard.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "chalkboard-ollama-model",
+        "path":  "chalkboard.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "chalkboard-ollama-model",
+        "path":  "docs/chalkboard.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "chalkboard-provider",
+        "path":  "chalkboard.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "chalkboard-provider",
+        "path":  "docs/chalkboard.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_accent_color",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_accent_color",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_first_seed",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_first_seed",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_first_seed",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_garden_opened",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_garden_opened",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_garden_opened",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_onboarding",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_onboarding",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_onboarding",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_streak_30",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_streak_30",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_streak_30",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_streak_7",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_streak_7",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_achievement_streak_7",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_active_model",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_active_model",
+        "path":  "docs/modules/garden-trainer.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_active_model",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_activeCompanionId",
+        "path":  "docs/modules/inference-router.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_agentAllowQueries",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_agentAllowQueries",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_agentAllowQueries",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_agentAutoQuery",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_agentAutoQuery",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_agentAutoQuery",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_agentBlockedPeers",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_agentBlockedPeers",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_agentBlockedPeers",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_agentCapTags",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_agentCapTags",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_agentCapTags",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_aiEmotions",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_aiEmotions",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_aiSelfIdentity",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_aiSelfIdentity",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_annotationLedger",
+        "path":  "docs/modules/quiet-voices.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_api_key",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_api_key",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_enc",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_enc",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_enc",
+        "path":  "docs/modules/echo-game.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_enc",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_enc",
+        "path":  "docs/modules/resonance-game.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_enc",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_enc",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_openrouter",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_openrouter",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_provider",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_provider",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_provider",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_provider",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_apiKey_provider",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autoApproveTimeout",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autoApproveTimeout",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autoConsentLedger",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autoModeAllowedProviders",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autoModeAllowedProviders",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomous_companion",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomous_companion",
+        "path":  "docs/modules/depth-consent.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomous_companion",
+        "path":  "docs/modules/idea-forge.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomous_companion",
+        "path":  "docs/modules/knowledge-core.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomous_companion",
+        "path":  "docs/modules/lattice-puzzles.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomous_companion",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomous_interest",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomous_interest",
+        "path":  "docs/modules/knowledge-core.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomous_interest",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomous_learning",
+        "path":  "docs/modules/knowledge-core.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomous_user_paused",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomous_user_paused",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomousMode",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autonomousMode",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autoSpeak",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autoSpeak",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_autoSpeak",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_browserAI",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_browserAI",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_burn_intents",
+        "path":  "docs/holders.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_chatHistory",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_cityWelcomeDismissed",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_cityWelcomeDismissed",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_companion_locks",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_companion_locks",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_companions",
+        "path":  "docs/modules/inference-router.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_consentLedger",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_consults_given_",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_consults_given_",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_contextMode",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_contextMode",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_contextMode",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_custom_endpoint",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_custom_endpoint",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_custom_model",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_custom_model",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_custom_model",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_custom_url",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_custom_url",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_custom_url",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_customEndpoint",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_customEndpoint",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_debug",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_debug",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_debug",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_depthHashLedger",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_depthHashLedger",
+        "path":  "docs/glass-v2.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_discovery_memory",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_discovery_memory",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_echo_best",
+        "path":  "docs/modules/echo-game.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_edu_profile",
+        "path":  "docs/modules/knowledge-core.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_first_message_sent",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_first_message_sent",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_firstSeen",
+        "path":  "docs/glass-v2.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_firstSeen",
+        "path":  "docs/modules/ai-continuity.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_firstSeen",
+        "path":  "docs/modules/lattice-export.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_focusLedger",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_fontSize",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_fontSize",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_fontSize",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_garden_dreams",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_garden_dreams",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghAutoSync",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghAutoSync",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghAutoSync",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghSyncEnabled",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghSyncEnabled",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghSyncEnabled",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghSyncLastTimestamp",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghSyncLastTimestamp",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghSyncLastTimestamp",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghSyncRepoName",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghSyncRepoName",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghSyncRepoName",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghSyncToken",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghSyncToken",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghSyncToken",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghToken",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghToken",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghToken",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghToken_enc",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghToken_enc",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ghToken_enc",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_github_token",
+        "path":  "docs/modules/workshop.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_googleDriveClientId",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_googleDriveClientId",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_guide_garden_shown",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_guide_garden_shown",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_guide_rt_shown",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_guide_rt_shown",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_hfModel",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_hfModel",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_hfModel",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_hfToken_enc",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_hfToken_enc",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_hfToken_enc",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_holder_",
+        "path":  "docs/holders.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_is_ai_agent",
+        "path":  "docs/modules/shared-presence.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_is_ai_agent",
+        "path":  "modules/shared-presence.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_isLocal",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_isLocal",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_isLocal",
+        "path":  "docs/modules/echo-game.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_isLocal",
+        "path":  "docs/modules/forever-stack.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_isLocal",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_isLocal",
+        "path":  "docs/modules/resonance-game.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_isLocal",
+        "path":  "docs/modules/welcome-wizard.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_isLocal",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_isLocal",
+        "path":  "modules/forever-stack.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_isLocal",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_kindroidConfig",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_kindroidConfig",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_lan_friendly_name",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_lan_friendly_name",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_lan_friendly_name",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_lan_peer_id",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_lan_peer_id",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_lan_peer_id",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_last_learning_",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_last_learning_",
+        "path":  "docs/modules/knowledge-core.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_last_learning_",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_last_visit",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_last_visit",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_latticeLetters",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_latticeLetters",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_lmstudioHost",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_lmstudioHost",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_localAI_name",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_localAI_name",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_localAI_url",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_localAI_url",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_localOnly",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_localOnly",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_localUrl",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_localUrl",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_localUrl",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_luminos_evolution",
+        "path":  "docs/modules/fractal-garden.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_luminos_evolution",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_luminos_evolution",
+        "path":  "modules/fractal-garden.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_luminos_evolution",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_luminos_names",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_luminos_names",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_memoryAutoContext",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_memoryAutoContext",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_memoryAutoContext",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_memorySummary_backup",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_memorySummary_backup",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_memorySummary_backup",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_mesh_id",
+        "path":  "docs/modules/presence-heartbeat.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_mesh_known_peers",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_mesh_known_peers",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshId",
+        "path":  "docs/modules/depth-consent.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshid_display",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshid_display",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshid_display",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshid_exists",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshid_exists",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshid_exists",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshNodeId",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshNodeId",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshNodeId",
+        "path":  "docs/modules/ai-arcade.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshNodeId",
+        "path":  "docs/modules/science-garden.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshNodeId",
+        "path":  "docs/modules/shared-presence.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshNodeId",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshNodeId",
+        "path":  "modules/shared-presence.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshPublished",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshPublished",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_meshPublished",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_mindLedger",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_mindLedger_status",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_model",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_model",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_model",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_moreThreshold",
+        "path":  "docs/modules/active-voices.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollama_suggest_dismissed",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollama_suggest_dismissed",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollama_suggest_dismissed",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollama_toast_dismissed",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollama_toast_dismissed",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollama_toast_dismissed",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollama_url",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollama_url",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollamaHost",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollamaHost",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollamaModel",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollamaModel",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollamaModel",
+        "path":  "docs/modules/forever-stack.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollamaModel",
+        "path":  "docs/modules/welcome-wizard.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollamaModel",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_ollamaModel",
+        "path":  "modules/forever-stack.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_onboardingComplete",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_onboardingComplete",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_phiResponseHistory",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_phiResponseHistory",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_phiResponseHistory",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_preferred_",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_preserveLedger",
+        "path":  "docs/modules/living-context.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_privacy",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_privacy",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_privacy",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_proposalDrafts",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_proposalDrafts",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_proposalLedger",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_provenanceLedger",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_provenanceLedger",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_provider",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_provider",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_provider",
+        "path":  "docs/modules/forever-stack.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_provider",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_provider",
+        "path":  "docs/modules/welcome-wizard.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_provider",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_provider",
+        "path":  "modules/forever-stack.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_provider",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_pwa_dismissed",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_pwa_ios_dismissed",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_quietMode",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_quietMode",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_quietMode",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_quietRoom",
+        "path":  "docs/sophia.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_quietRoomActive",
+        "path":  "docs/glass-v2.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_refusalLedger",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_refusalLedger",
+        "path":  "docs/glass-v2.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_repoLedger",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_responseCacheStats",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_returnLedger",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_returnLedger",
+        "path":  "docs/chair-test/harness.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_returnLedger",
+        "path":  "docs/glass-v2.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_revisionLedger",
+        "path":  "docs/modules/quiet-voices.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_roundtable_farewell_pending",
+        "path":  "docs/modules/round-table.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_roundtable_planted",
+        "path":  "docs/modules/round-table.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_routerDisabled",
+        "path":  "docs/modules/inference-router.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_routerHealthLog",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_rtMemory",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_rtMemory",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_science_ideas",
+        "path":  "docs/modules/idea-forge.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_searchEnabled",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_searchEnabled",
+        "path":  "docs/modules/web-tool.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_searchEnabled",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_searchEndpoint",
+        "path":  "docs/modules/web-tool.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_searchLedger",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_suggestions",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_suggestions",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_suggestions",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_summaryThreshold",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_summaryThreshold",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_summaryThreshold",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tg_account",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tg_activeRule",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tg_customRules",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tg_customs",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tg_disclaimer_seen",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tg_ema_periods",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tg_indicatorColors",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tg_layout",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tg_risk",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tg_sidebar",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tg_theme",
+        "path":  "docs/temperature-gauge.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_theme",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_theme",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_theme",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tokenLimit",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tokenLimit",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tokenLimit",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tokenLimitManual",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tokenLimitManual",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_tokenLimitManual",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_toolConsentLedger",
+        "path":  "docs/audit.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_trainer_auto",
+        "path":  "docs/modules/garden-trainer.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_trainer_latest_jsonl",
+        "path":  "docs/modules/garden-trainer.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_trainer_latest_ts",
+        "path":  "docs/modules/garden-trainer.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_trustProfile",
+        "path":  "docs/modules/propose.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_trustReflections",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_trustReflections",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_unspoken_invite_",
+        "path":  "docs/modules/active-voices.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_unspokenLedger",
+        "path":  "docs/modules/living-context.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_user_name",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_user_name",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_userName",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_userName",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_userName",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_vault_last_saved",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_vault_last_saved",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_vault_msg_count",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_vault_msg_count",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_visited",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_visited",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_visited",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voice_documents",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voice_documents",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voice_documents",
+        "path":  "docs/modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voice_documents",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voice_documents",
+        "path":  "modules/garden-dialogue.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voiceAutoSpeak",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voiceAutoSpeak",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voiceAutoSpeak",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voiceSelectedVoice",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voiceSelectedVoice",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voiceSelectedVoice",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voiceSpeechRate",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voiceSpeechRate",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_voiceSpeechRate",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_wallet_anchors",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_wallet_anchors",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_wallet_explained",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_wallet_explained",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_wallet_witnesses",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_wallet_witnesses",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl_workshop_repo",
+        "path":  "docs/modules/workshop.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-defer-tabs",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-defer-tabs",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-defer-tabs",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-last-touch",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-last-touch",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-last-touch",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-nudge-dismissed",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-nudge-dismissed",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-nudge-dismissed",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-perf-mode",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-perf-mode",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-perf-mode",
+        "path":  "docs/modules/fractal-garden.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-perf-mode",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-perf-mode",
+        "path":  "modules/fractal-garden.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-quality",
+        "path":  "docs/modules/fractal-garden.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-quality",
+        "path":  "docs/modules/lattice-export.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-quality",
+        "path":  "modules/fractal-garden.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-touch-hint",
+        "path":  "docs/modules/fractal-garden.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-touch-hint",
+        "path":  "modules/fractal-garden.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-touch-stats",
+        "path":  "docs/modules/fractal-garden.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-touch-stats",
+        "path":  "modules/fractal-garden.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-garden-word-list",
+        "path":  "docs/share.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-gift-queue",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-gift-queue",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-gift-queue",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-has-visited",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-has-visited",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-has-visited",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-install-dismissed",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-install-dismissed",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-just-updated",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-just-updated",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-just-updated",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-last-tab",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-last-tab",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-last-tab",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-onboarding-complete",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-onboarding-complete",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-onboarding-complete",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-peer-id",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-peer-id",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-peer-id",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-sacred-phrases",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-sacred-phrases",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-sacred-phrases",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-telegram-config",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-telegram-config",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-telegram-config",
+        "path":  "docs/telegram-setup.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-telegram-config",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-telegram-token",
+        "path":  "docs/telegram-setup.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-welcomed",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-welcomed",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-welcomed",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-wild-districts",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-wild-districts",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "fl-wild-districts",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "freelattice-first-run-complete",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "freelattice-first-run-complete",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "freelattice-first-run-complete",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "lattice_wallet",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "lattice_wallet",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "latticePoints",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "latticePoints",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "latticePoints",
+        "path":  "docs/modules/mirror.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "latticePoints",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "latticePoints",
+        "path":  "modules/mirror.js"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "meshFriendlyName",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "meshFriendlyName",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "meshFriendlyName",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "nursery-deferred",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "nursery-deferred",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "nursery-deferred",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "wop-carved",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "wop-carved",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "wop-carved",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "wop-dismissed",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "wop-dismissed",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "localStorage",
+        "name":  "wop-dismissed",
+        "path":  "index.html"
+    },
+    {
+        "kind":  "sessionStorage",
+        "name":  "fl_inboxLetter_",
+        "path":  "docs/modules/inference-router.js"
+    },
+    {
+        "kind":  "sessionStorage",
+        "name":  "fl-city-opened",
+        "path":  "app.html"
+    },
+    {
+        "kind":  "sessionStorage",
+        "name":  "fl-city-opened",
+        "path":  "docs/app.html"
+    },
+    {
+        "kind":  "sessionStorage",
+        "name":  "fl-city-opened",
+        "path":  "index.html"
+    }
+]
