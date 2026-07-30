@@ -8,7 +8,7 @@ Track: `LW_P4_PREFLIGHT WORK`
 Step: `phase4-preflight-locked-green`
 Note: Phase 4 primary-Chat characterization preflight version 1.0 is locked after SpecSwarm consolidation, control repair, 116/116 repository controls, and independent post-repair guardrail GREEN; implementation remains blocked.
 Branch: `reengineering/p4-chat-vertical-slice-preflight`
-Head: `e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd`
+Head: `03dfdfc381365201fd53a32c9c5c057f0cdbf953`
 Next command: `Create docs/agents/claims/LW-P4-CHAR-001.md, transition the active-scope validator test-first to the exact locked characterization path set, and execute only the additive characterization packet.`
 
 ## LW_M0_BASELINE WORK
@@ -229,7 +229,7 @@ Next command: `Read docs/agents/handoffs/LW-P3-001.md and claim a separate Phase
 Step: `phase4-preflight-locked-green`
 Note: Phase 4 primary-Chat characterization preflight version 1.0 is locked after SpecSwarm consolidation, control repair, 116/116 repository controls, and independent post-repair guardrail GREEN; implementation remains blocked.
 Branch: `reengineering/p4-chat-vertical-slice-preflight`
-Head: `e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd`
+Head: `03dfdfc381365201fd53a32c9c5c057f0cdbf953`
 Next command: `Create docs/agents/claims/LW-P4-CHAR-001.md, transition the active-scope validator test-first to the exact locked characterization path set, and execute only the additive characterization packet.`
 
 ### Validations
@@ -243,6 +243,7 @@ Next command: `Create docs/agents/claims/LW-P4-CHAR-001.md, transition the activ
 - **VERIFIED** — the phase-closed and active-scope controls pass 48 of 48 focused tests and independent post-repair guardrail QA is GREEN.
 - **VERIFIED** — the full repository-control suite passes 116 of 116 with zero fail, skip, or todo; `git diff --check` is clean.
 - **VERIFIED** — `reengineering/PHASE4_PREFLIGHT.md` version 1.0 is locked with `implementation_authorized: false`.
+- **VERIFIED** — candidate commit `03dfdfc381365201fd53a32c9c5c057f0cdbf953` contains the exact locked packet and control repair; later checkpoint/evidence commits are receipts, not a new authority surface.
 
 ### Blockers
 
@@ -255,7 +256,7 @@ Next command: `Create docs/agents/claims/LW-P4-CHAR-001.md, transition the activ
 Step: `phase4-control-closure-green`
 Note: Historical Phase 3 validation is closed base-to-terminal and active Phase 4 scope is claim-specific and fail-closed across committed, staged, unstaged, untracked, add-then-delete, and force-added ignored paths.
 Branch: `reengineering/p4-chat-vertical-slice-preflight`
-Head: `e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd`
+Head: `03dfdfc381365201fd53a32c9c5c057f0cdbf953`
 Next command: `Read docs/agents/handoffs/LW-P4-CTRL-001.md before transitioning active ownership to the exact LW-P4-CHAR-001 path set.`
 
 ### Validations
@@ -266,6 +267,7 @@ Next command: `Read docs/agents/handoffs/LW-P4-CTRL-001.md before transitioning 
 - **VERIFIED** — focused scope controls pass 48 of 48 and full repository controls pass 116 of 116.
 - **VERIFIED** — add-then-delete paths are retained; committed, staged, unstaged, untracked, and force-added ignored paths are inspected.
 - **VERIFIED** — independent post-repair guardrail QA is GREEN and the Phase 3 allowlists were not widened.
+- **VERIFIED** — candidate commit `03dfdfc381365201fd53a32c9c5c057f0cdbf953` contains the exact control repair; later checkpoint/evidence commits are receipts only.
 
 ### Blockers
 

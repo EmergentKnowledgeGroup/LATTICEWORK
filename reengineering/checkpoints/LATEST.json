@@ -421,7 +421,7 @@
       "step": "phase4-preflight-locked-green",
       "note": "Phase 4 primary-Chat characterization preflight version 1.0 is locked after SpecSwarm consolidation, control repair, 116/116 repository controls, and independent post-repair guardrail GREEN; implementation remains blocked.",
       "branch": "reengineering/p4-chat-vertical-slice-preflight",
-      "head": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+      "head": "03dfdfc381365201fd53a32c9c5c057f0cdbf953",
       "next_cmd": "Create docs/agents/claims/LW-P4-CHAR-001.md, transition the active-scope validator test-first to the exact locked characterization path set, and execute only the additive characterization packet.",
       "validations": [
         "VERIFIED: LW-P3-001 is merged, post-merge GREEN, and its packages remain inactive.",
@@ -432,7 +432,8 @@
         "VERIFIED: SpecSwarm reviews and final consolidation left no unresolved packet defect after the 39-subcase/16-group wording correction.",
         "VERIFIED: the phase-closed and active-scope controls pass 48 of 48 focused tests and independent post-repair guardrail QA is GREEN.",
         "VERIFIED: the full repository-control suite passes 116 of 116 with zero fail, skip, or todo; git diff --check is clean.",
-        "VERIFIED: reengineering/PHASE4_PREFLIGHT.md version 1.0 is locked with implementation_authorized false."
+        "VERIFIED: reengineering/PHASE4_PREFLIGHT.md version 1.0 is locked with implementation_authorized false.",
+        "VERIFIED: candidate commit 03dfdfc381365201fd53a32c9c5c057f0cdbf953 contains the exact locked packet and control repair; later checkpoint/evidence commits are receipts, not a new authority surface."
       ],
       "decisions": [
         "Use LW-P4-PREFLIGHT-001 for the separately claimed Phase 4 characterization/preflight package.",
@@ -479,7 +480,7 @@
       "step": "phase4-control-closure-green",
       "note": "Historical Phase 3 validation is closed base-to-terminal and active Phase 4 scope is claim-specific and fail-closed across committed, staged, unstaged, untracked, add-then-delete, and force-added ignored paths.",
       "branch": "reengineering/p4-chat-vertical-slice-preflight",
-      "head": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+      "head": "03dfdfc381365201fd53a32c9c5c057f0cdbf953",
       "next_cmd": "Read docs/agents/handoffs/LW-P4-CTRL-001.md before transitioning active ownership to the exact LW-P4-CHAR-001 path set.",
       "validations": [
         "OBSERVED: full repository controls are 105/107 solely because both historical Phase 3 scope validators diff their old base through current HEAD and include current untracked Phase 4 files.",
@@ -487,7 +488,8 @@
         "PROPOSED: pin the Phase 3 terminal commit to e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd, preserve semantic controls and exact Phase 3 allowlists, and add positive/negative regression tests.",
         "VERIFIED: focused scope controls pass 48 of 48 and full repository controls pass 116 of 116.",
         "VERIFIED: add-then-delete paths are retained; committed, staged, unstaged, untracked, and force-added ignored paths are inspected.",
-        "VERIFIED: independent post-repair guardrail QA is GREEN and the Phase 3 allowlists were not widened."
+        "VERIFIED: independent post-repair guardrail QA is GREEN and the Phase 3 allowlists were not widened.",
+        "VERIFIED: candidate commit 03dfdfc381365201fd53a32c9c5c057f0cdbf953 contains the exact control repair; later checkpoint/evidence commits are receipts only."
       ],
       "decisions": [
         "Repair historical validation with a closed base-to-terminal range rather than widening Phase 3 allowlists.",

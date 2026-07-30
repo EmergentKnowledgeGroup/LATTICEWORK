@@ -7,7 +7,6 @@
 - **Status:** LOCKED — SPEC SWARM AND CONTROL QA GREEN
 - **Version:** `1.0`
 - **Locked at:** `2026-07-30T21:15:43Z`
-- **Version:** `0.1-draft`
 - **Date:** `2026-07-30`
 - **Source:** `docs/agents/handoffs/LW-P3-001.md`
 - **Base commit:** `e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd`

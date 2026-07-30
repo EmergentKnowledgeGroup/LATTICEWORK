@@ -3,7 +3,7 @@
 **From:** Codex root controller
 **To:** `LW-P4-CHAR-001` controller
 **Date:** `2026-07-30T21:15:43Z`
-**Current commit:** `e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd` plus verified preflight working tree
+**Verified candidate commit:** `03dfdfc381365201fd53a32c9c5c057f0cdbf953`
 **Branch:** `reengineering/p4-chat-vertical-slice-preflight`
 
 ## State in one paragraph
