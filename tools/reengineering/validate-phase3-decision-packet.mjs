@@ -231,7 +231,9 @@ const ALLOWED_SCOPE_PATHS = new Set([
   "docs/KNOWN_LIMITATIONS.md",
   "docs/TESTING_AND_VERIFICATION.md",
   "docs/agents/claims/LW-P3-DEC-001.md",
+  "docs/agents/claims/LW-P3-PREFLIGHT-001.md",
   "docs/agents/handoffs/LW-P3-DEC-001.md",
+  "docs/agents/handoffs/LW-P3-PREFLIGHT-001.md",
   "docs/decisions/README.md",
   "docs/decisions/0004-versioned-storage-and-migration.md",
   "docs/decisions/0005-provider-abstraction-and-provenance.md",
@@ -244,6 +246,8 @@ const ALLOWED_SCOPE_PATHS = new Set([
   "reengineering/PHASE3_BASELINE_PRESERVATION_IDS.json",
   "reengineering/PHASE3_DECISION_PACKET.json",
   "reengineering/PHASE3_DECISION_PACKET.md",
+  "reengineering/PHASE3_PREFLIGHT.json",
+  "reengineering/PHASE3_PREFLIGHT.md",
   "reengineering/SECURITY_BOUNDARY_MAP.md",
   "reengineering/checkpoints/LATEST.json",
   "reengineering/checkpoints/LATEST.md",
@@ -262,7 +266,9 @@ const ALLOWED_SCOPE_PATHS = new Set([
   "runtime/checkpoints/LATEST.json",
   "runtime/checkpoints/LATEST.md",
   "tests/reengineering/phase3-decision-packet.test.mjs",
+  "tests/reengineering/phase3-preflight.test.mjs",
   "tools/reengineering/validate-phase3-decision-packet.mjs",
+  "tools/reengineering/validate-phase3-preflight.mjs",
 ]);
 const SECRET_PATTERNS = [
   /\bsk-[A-Za-z0-9_-]{16,}\b/,

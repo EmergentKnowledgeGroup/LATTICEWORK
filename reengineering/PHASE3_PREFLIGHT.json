@@ -1,0 +1,302 @@
+{
+  "schema": "latticework.phase3-preflight.v1",
+  "work_id": "LW-P3-PREFLIGHT-001",
+  "status": "READY_PENDING_ACCEPTANCE",
+  "date": "2026-07-30",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "base_commit": "6fa553ee3f5c7d1952f7aed836873467c4626068",
+  "decision_packet": "reengineering/PHASE3_DECISION_PACKET.json",
+  "authority": {
+    "maintainer_disposition": "PENDING",
+    "required_accepted_adrs": [
+      "ADR-004",
+      "ADR-005"
+    ],
+    "optional_proxy_contract_adr": "ADR-006",
+    "implementation_authorized": false,
+    "listener_authorized": false,
+    "cutover_authorized": false
+  },
+  "intended_invariant": "The bounded Phase 3 candidate may exercise only synthetic conversation storage and deterministic in-process provider mocks. Legacy data and runtime remain authoritative and untouched; no real credential, provider endpoint, listener, route, feature, or cutover is used.",
+  "packages": [
+    {
+      "name": "@latticework/storage",
+      "path": "packages/storage",
+      "dependencies": [
+        "@latticework/contracts"
+      ],
+      "runtime_dependencies": []
+    },
+    {
+      "name": "@latticework/providers",
+      "path": "packages/providers",
+      "dependencies": [
+        "@latticework/contracts"
+      ],
+      "runtime_dependencies": []
+    }
+  ],
+  "scope": {
+    "implementation_owned_paths": [
+      "package.json",
+      "package-lock.json",
+      "packages/contracts/src/index.ts",
+      "packages/contracts/src/storage.ts",
+      "packages/contracts/src/provider.ts",
+      "packages/storage/",
+      "packages/providers/",
+      "tests/phase3/",
+      "tests/reengineering/phase3-storage-boundary.test.mjs",
+      "tests/reengineering/phase3-provider-boundary.test.mjs",
+      "tests/reengineering/phase3-evidence-validation.test.mjs",
+      "tools/reengineering/run-phase3-verification.ps1",
+      "tools/reengineering/verify-phase3-boundary.mjs",
+      "tools/reengineering/validate-phase3-evidence.mjs",
+      "reengineering/evidence/phase-3/LW-P3-001/",
+      "docs/agents/claims/LW-P3-001.md",
+      "docs/agents/handoffs/LW-P3-001.md",
+      "PROJECT_STATE.md",
+      "docs/ARCHITECTURE.md",
+      "docs/COMPATIBILITY.md",
+      "docs/DATA_AND_STORAGE.md",
+      "docs/TESTING_AND_VERIFICATION.md",
+      "reengineering/BLOCKERBOARD.md",
+      "reengineering/DECISION_LOG.md",
+      "reengineering/EXECUTION_CHECKLIST.md",
+      "reengineering/MIGRATION_LEDGER.md",
+      "runtime/checkpoints/LATEST.md",
+      "runtime/checkpoints/LATEST.json",
+      "reengineering/checkpoints/LATEST.md",
+      "reengineering/checkpoints/LATEST.json"
+    ],
+    "forbidden_path_prefixes": [
+      "app.html",
+      "index.html",
+      "docs/app.html",
+      "modules/",
+      "docs/modules/",
+      "sw.js",
+      "docs/sw.js",
+      "server.js",
+      "server.py",
+      "desktop/",
+      "worker/",
+      "telegram-worker.js",
+      "tests/smoke",
+      "tests/characterization/",
+      "apps/web/"
+    ],
+    "immutable_external_roots": [
+      "Z:\\LATTICEWORK_BASELINE_e7585999",
+      "Z:\\FreeLattice"
+    ]
+  },
+  "safety": {
+    "real_user_data": "forbidden",
+    "real_provider_traffic": "forbidden",
+    "real_credentials": "forbidden",
+    "listener": "forbidden",
+    "cutover": "forbidden",
+    "legacy_mutation": "forbidden",
+    "external_egress": "deny-by-test",
+    "fixtures": "synthetic-only",
+    "candidate_registration": "none",
+    "legacy_read_owner": "unchanged"
+  },
+  "storage": {
+    "dataset": {
+      "id": "conversation",
+      "schema_version": 1,
+      "owner": "@latticework/storage",
+      "source_database": "FreeLatticeDB",
+      "source_database_version": 3,
+      "owned_legacy_stores": [
+        "conversations",
+        "messages"
+      ],
+      "characterization_only_stores": [
+        "meta",
+        "memoryIndex"
+      ],
+      "target_database": "latticework::conversation",
+      "target_activation": "forbidden"
+    },
+    "source_schema": {
+      "conversations": {
+        "key_path": "id",
+        "auto_increment": false,
+        "indexes": [
+          {
+            "name": "updatedAt",
+            "key_path": "updatedAt",
+            "unique": false
+          }
+        ]
+      },
+      "messages": {
+        "key_path": "id",
+        "auto_increment": true,
+        "indexes": [
+          {
+            "name": "conversationId",
+            "key_path": "conversationId",
+            "unique": false
+          }
+        ]
+      }
+    },
+    "namespaces": [
+      "latticework::conversation",
+      "latticework::migration",
+      "latticework::staging::<operation-id>::conversation"
+    ],
+    "unknown_value_policy": "typed-projection-plus-native-structured-clone",
+    "journal_states": [
+      "planned",
+      "copying",
+      "validating",
+      "ready",
+      "failed",
+      "rolled-back"
+    ],
+    "migration": {
+      "mode": "copy-on-write",
+      "batch_checkpointed": true,
+      "idempotent": true,
+      "resumable": true,
+      "legacy_writes": 0,
+      "activation": "not-part-of-phase3"
+    },
+    "transfer": {
+      "format_id": "latticework.conversation",
+      "format_version": 1,
+      "hostile_input_staging_required": true,
+      "verified_promotion": "after-complete-validation-only",
+      "arbitrary_names_from_input": false,
+      "excluded_dataset_export": false
+    },
+    "rollback": {
+      "candidate": "close-and-delete-or-quarantine-exact-candidate-or-staging-namespace",
+      "journal": "retain-immutable-terminal-receipt",
+      "legacy": "untouched"
+    }
+  },
+  "providers": {
+    "contracts_path": "packages/contracts/src/provider.ts",
+    "implementation_path": "packages/providers",
+    "adapters": [
+      "deterministic-local-mock",
+      "deterministic-cloud-mock"
+    ],
+    "transport": "in-process-scripted-no-fetch",
+    "wire_attempts_per_adapter_invocation": 1,
+    "identity": {
+      "operation_id": "stable-per-logical-request",
+      "attempt_id": "unique-per-attempt"
+    },
+    "retry": {
+      "owner": "router",
+      "default_count": 0,
+      "after_first_delta": false,
+      "post_dispatch": "proven-idempotency-or-explicit-caller-authorization"
+    },
+    "fallback": {
+      "implicit": false,
+      "cross_trust": "explicit-visible-consent-required"
+    },
+    "credentials": {
+      "kind": "synthetic-reference-only",
+      "resolve_after_grant": true,
+      "binding_fields": [
+        "provider-id",
+        "adapter-id-and-version",
+        "exact-origin",
+        "trust-class",
+        "authentication-scheme"
+      ],
+      "secret_material": "never-present"
+    },
+    "events": [
+      "started",
+      "delta",
+      "usage",
+      "completed",
+      "failed",
+      "cancelled"
+    ],
+    "terminal_outcome_count": 1,
+    "cancellation_scopes": [
+      "transport-aborted",
+      "provider-cancel-acknowledged"
+    ],
+    "provenance": "content-free-per-operation-and-attempt",
+    "legacy_registration": "none"
+  },
+  "dependencies": {
+    "new_runtime_dependencies": [],
+    "exact_existing_pins": {
+      "typescript": "6.0.3",
+      "vite": "8.1.5",
+      "lit": "3.3.3",
+      "@playwright/test": "1.62.0"
+    },
+    "node_test_runner": "node:24.13.0",
+    "indexeddb_test_runtime": "native-browser-via-playwright"
+  },
+  "verification": {
+    "required_gates": [
+      "strict-typecheck",
+      "node-unit",
+      "browser-indexeddb",
+      "provider-no-egress",
+      "protected-boundary",
+      "deterministic-build",
+      "lockfile-replay",
+      "supply-chain",
+      "full-repository-controls",
+      "evidence-manifest",
+      "independent-clean-worktree",
+      "diff-and-json-hygiene"
+    ],
+    "browser_cases": [
+      "fresh-synthetic-v3-source",
+      "unknown-native-values-round-trip",
+      "excluded-stores-untouched",
+      "interrupt-every-batch-checkpoint",
+      "retry-idempotence",
+      "future-version-abstention",
+      "malformed-and-partial-input",
+      "blocked-upgrade",
+      "quota-failure",
+      "staging-cleanup-or-quarantine",
+      "candidate-inactive",
+      "zero-external-egress"
+    ],
+    "provider_cases": [
+      "event-order-and-one-terminal",
+      "fragmented-and-malformed-streams",
+      "normalized-errors",
+      "zero-default-retry",
+      "no-retry-after-delta",
+      "stable-operation-unique-attempt",
+      "capability-mismatch-before-egress",
+      "credential-grant-before-resolution",
+      "binding-mismatch-refusal",
+      "honest-cancellation-scope",
+      "exactly-once-callback-wrapper",
+      "content-and-secret-sentinel-scan"
+    ],
+    "evidence_path": "reengineering/evidence/phase-3/LW-P3-001",
+    "independent_review_required": true
+  },
+  "stop_conditions": [
+    "ADR-004 or ADR-005 is not explicitly accepted",
+    "a separate LW-P3-001 work claim is absent",
+    "real data, credentials, provider traffic, or a listener would be required",
+    "legacy storage, routes, feature code, or default behavior would change",
+    "unknown in-scope values cannot be preserved losslessly",
+    "candidate activation or cutover would be implied",
+    "a new dependency is required without a separate pinned supply-chain decision",
+    "evidence would contain private content or secrets"
+  ]
+}

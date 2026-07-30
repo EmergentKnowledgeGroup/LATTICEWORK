@@ -431,3 +431,28 @@ test("canonical CLI cannot disable or rebase Git scope validation", () => {
     /always checks Git scope from the packet base commit/i,
   );
 });
+
+test("proposal validator permits only the claimed Phase 3 preflight control files", () => {
+  const validator = fs.readFileSync(
+    path.join(
+      REPO_ROOT,
+      "tools",
+      "reengineering",
+      "validate-phase3-decision-packet.mjs",
+    ),
+    "utf8",
+  );
+
+  for (const relativePath of [
+    "docs/agents/claims/LW-P3-PREFLIGHT-001.md",
+    "docs/agents/handoffs/LW-P3-PREFLIGHT-001.md",
+    "reengineering/PHASE3_PREFLIGHT.json",
+    "reengineering/PHASE3_PREFLIGHT.md",
+    "tests/reengineering/phase3-preflight.test.mjs",
+    "tools/reengineering/validate-phase3-preflight.mjs",
+  ]) {
+    assert.match(validator, new RegExp(relativePath.replaceAll(".", "\\.")));
+  }
+  assert.doesNotMatch(validator, /"packages\/storage\/"/);
+  assert.doesNotMatch(validator, /"packages\/providers\/"/);
+});

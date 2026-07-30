@@ -16,7 +16,7 @@ LATTICEWORK
 
 ## Current target
 
-`reengineering/p3-decision-packet`
+`LW-P3-PREFLIGHT-001 — exact synthetic implementation preflight`
 
 ## Upstream baseline
 
@@ -52,6 +52,7 @@ decision/control documentation and tests.
 | `LW-P2-PREFLIGHT-001` | Accepted architecture and exact Phase 2 execution packet | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-PREFLIGHT-001.md` |
 | `LW-P2-001` | Isolated typed kernel/contracts/status-shell candidate | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-001.md` |
 | `LW-P3-DEC-001` | Phase 3 storage/provider/security decision packet | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — DISPOSITION PENDING` | `docs/agents/handoffs/LW-P3-DEC-001.md` |
+| `LW-P3-PREFLIGHT-001` | Exact synthetic storage/provider implementation preflight | Codex root controller | `reengineering/p3-decision-packet` | `INDEPENDENT REVIEW PENDING` | `reengineering/PHASE3_PREFLIGHT.md` |
 
 ## Completed in current milestone
 
@@ -109,6 +110,13 @@ decision/control documentation and tests.
 - **VERIFIED:** independent final QA reproduced the decision gates and returned
   GREEN with no actionable findings. Explicit maintainer dispositions remain
   the only authority gate.
+- **MEASURED:** `reengineering/PHASE3_PREFLIGHT.*` freezes exactly two
+  candidate packages, three storage namespaces, 12 required verification
+  gates, and 15 forbidden legacy/runtime prefixes. Its 15 focused controls and
+  the 91-test full repository-control suite pass with zero fail/skip.
+- **OBSERVED:** the preflight still records `implementation_authorized: false`.
+  No storage/provider package, implementation fixture, real-data read,
+  credential, provider call, listener, route, feature, or cutover exists.
 
 ## Blockers
 
@@ -155,11 +163,12 @@ decision/control documentation and tests.
 
 ## Next handoff
 
-**Next action:** Validate `LW-P3-DEC-001`, record independent review, and obtain
-explicit maintainer dispositions for proposed ADR-004 through ADR-006 before
-opening the separately claimed `LW-P3-001` implementation.
+**Next action:** Independently review `LW-P3-PREFLIGHT-001`, then record the
+maintainer's explicit ADR-004 through ADR-006 dispositions before opening the
+separately claimed `LW-P3-001` implementation.
 
-**Read first:** `reengineering/PHASE3_DECISION_PACKET.md`,
+**Read first:** `reengineering/PHASE3_PREFLIGHT.md`,
+`reengineering/PHASE3_DECISION_PACKET.md`,
 `docs/decisions/0004-versioned-storage-and-migration.md`,
 `docs/decisions/0005-provider-abstraction-and-provenance.md`, and
 `docs/decisions/0006-optional-local-proxy-security.md`.
@@ -168,8 +177,8 @@ opening the separately claimed `LW-P3-001` implementation.
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** the proposal validator and full repository-control suite
-are green, independent reviewers report no unresolved issue, and maintainer
-acceptance or rejection is recorded without weakening any blocker.
+**Success condition:** the preflight validator and full repository-control
+suite are green, independent QA reports no unresolved issue, and maintainer
+acceptance or rejection is recorded without weakening any future gate.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`

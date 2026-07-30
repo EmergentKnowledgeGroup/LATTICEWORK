@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-30T13:35:25Z`
+Updated: `2026-07-30T13:42:21Z`
 
 ## CURRENT
 
-Track: `LW_P3_DECISION_PACKET WORK`
-Step: `phase3-decision-packet-post-green`
-Note: ADR-004 through ADR-006 and the Phase 3 packet are proposal-only, machine-validated, and independently reviewed GREEN; runtime semantics remain unchanged and explicit maintainer dispositions are the next authority gate.
+Track: `LW_P3_PREFLIGHT WORK`
+Step: `phase3-preflight-start`
+Note: Preparing the exact synthetic storage/provider implementation preflight while ADR-004 through ADR-006 remain Proposed and no implementation authority exists.
 Branch: `reengineering/p3-decision-packet`
-Head: `22c3742cdc7863f16bf190ee23ddc67eabc20ec1`
-Next command: `Record explicit maintainer acceptance or rejection for ADR-004, ADR-005, and ADR-006; do not implement or close a blocker before those receipts exist.`
+Head: `6fa553ee3f5c7d1952f7aed836873467c4626068`
+Next command: `Draft and validate PHASE3_PREFLIGHT.* plus negative scope/authority controls; do not create implementation packages.`
 
 ## LW_M0_BASELINE WORK
 
@@ -148,3 +148,23 @@ Next command: `Record explicit maintainer acceptance or rejection for ADR-004, A
 - `LW-BLK-005` requires accepted ADR-004 plus expanded inventory and independently verified synthetic migration fixtures.
 - `LW-BLK-006` requires accepted ADR-006 and ADR-012 plus gateway/LAN/worker/peer/Telegram security tests.
 - `LW-BLK-007` requires future ADR-009, full evidence, and explicit owner approval before cutover or capability retirement.
+
+## LW_P3_PREFLIGHT WORK
+
+Step: `phase3-preflight-start`
+Note: Preparing the exact synthetic storage/provider implementation preflight while ADR-004 through ADR-006 remain Proposed and no implementation authority exists.
+Branch: `reengineering/p3-decision-packet`
+Head: `6fa553ee3f5c7d1952f7aed836873467c4626068`
+Next command: `Draft and validate PHASE3_PREFLIGHT.* plus negative scope/authority controls; do not create implementation packages.`
+
+### Validations
+
+- **VERIFIED** — `LW-P3-DEC-001` is complete, pushed, independently GREEN, and still proposal-only.
+- **OBSERVED** — ADR-004, ADR-005, and ADR-006 remain Proposed with PENDING receipts.
+- **OBSERVED** — `docs/agents/claims/LW-P3-PREFLIGHT-001.md` authorizes documentation, controls, and mapping only.
+- **VERIFIED** — no implementation package, real-data fixture, provider call, credential, listener, legacy path, or route change exists at phase start.
+
+### Blockers
+
+- `LW-P3-001` remains blocked until explicit ADR-004 and ADR-005 acceptance.
+- ADR-006 acceptance would freeze a future proxy contract but would not authorize a Phase 3 listener.
