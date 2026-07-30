@@ -30,13 +30,18 @@
 | Phase 0 Edge/direct-file launch | Playwright CLI for Edge; isolated Chrome headless for `file://` | first-run shell, runtime names, network requests, direct-file first render | Windows 10; Edge/Chrome 150 | two bounded launch flows | Partial C1 observations; interaction/cross-browser parity not established | [receipt](../reengineering/evidence/phase-0/LW-P0-003-browser/README.md) |
 | Phase 0 fixed performance profiles | commands to be captured per profile | cold/warm desktop, emulated mobile, accessibility, offline warm, GPU cleanup | pinned by profile | five runs per applicable profile | PROPOSED; execution pending | [measurement contract](../reengineering/PERFORMANCE_PLAN.md) |
 | Phase 1 executable characterization | `powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/reengineering/run-phase1-characterization.ps1` | HTTP first run/skip, fresh storage shape, Garden, Chat shell, Signal Report, mobile, no-WebGPU, warm offline reload, denied network | Windows 10; Node 24.13.0; Playwright 1.62.0; bundled Chromium 151; immutable baseline | 7 | 7 pass; 0 skip/unexpected/flaky; exit 0; 31.188 s | [measured summary](../reengineering/evidence/phase-1/LW-P1-001/summary.json) |
-| Repository control tests | `node --test --test-reporter=tap tests/reengineering/*.test.mjs` | evidence tooling, registries, Phase 0/1 controls, Phase 2 boundary/build/supply-chain/evidence validators, and negative safety fixtures | Windows 10; Node 24.13.0 | 52 | 52 pass; 0 fail/skip | [Phase 2 command receipt](../reengineering/evidence/phase-2/LW-P2-001/commands/controls/manifest.json) |
+| Repository control tests | `node --test --test-reporter=tap tests/reengineering/*.test.mjs` | evidence tooling, registries, Phase 0/1 controls, Phase 2 boundary/build/supply-chain/evidence validators, Phase 3 decision/preflight controls, and negative safety fixtures | Windows 10; Node 24.13.0; immutable baseline root supplied | 91 | 91 pass; 0 fail/skip | [Phase 3 preflight receipt](../reengineering/evidence/phase-3/LW-P3-PREFLIGHT-001/commands/controls/manifest.json); [decision receipt](../reengineering/evidence/phase-3/LW-P3-DEC-001/commands/controls/manifest.json); [Phase 2 receipt](../reengineering/evidence/phase-2/LW-P2-001/commands/controls/manifest.json) preserves the earlier 52-test gate |
 | Phase 2 strict typecheck | `npm run p2:typecheck` | candidate web, contracts, and kernel workspaces | Windows 10; Node 24.13.0; TypeScript 6.0.3 | 3 workspaces | pass; exit 0 | [receipt](../reengineering/evidence/phase-2/LW-P2-001/commands/typecheck/manifest.json) |
 | Phase 2 kernel unit tests | `npm run p2:test` | lifecycle order, duplicate rejection, reverse stop, and safe failure diagnostics | same | 5 | 5 pass | [receipt](../reengineering/evidence/phase-2/LW-P2-001/commands/unit/manifest.json) |
 | Phase 2 deterministic build | two clean `npm run p2:build` runs plus verifier | relative Vite output paths and raw/gzip/Brotli artifact bytes | same; Vite 8.1.5 | 4 artifacts per build | byte-identical; valid | [comparison](../reengineering/evidence/phase-2/LW-P2-001/build-comparison.json) |
 | Phase 2 candidate browser gate | `npm run p2:browser` | desktop, 390 x 844 mobile, keyboard, reduced motion, forced colors, no egress/storage/worker/legacy, and provisional performance | Windows 10; Playwright 1.62.0; bundled Chromium | 6 | 6 pass; 0 skip/unexpected/flaky | [summary](../reengineering/evidence/phase-2/LW-P2-001/summary.json) |
 | Phase 2 supply-chain gate | `npm audit --workspaces --include-workspace-root --json`, CycloneDX SBOM, and repository collector | exact lockfile integrity, licenses, optional packages, lifecycle scripts, and vulnerability count | same | 58 external lockfile packages | valid; 0 audit vulnerabilities | [receipt](../reengineering/evidence/phase-2/LW-P2-001/supply-chain.json) |
 | Phase 2 evidence validator | `node tools/reengineering/validate-phase2-evidence.mjs ...` | command receipts, hashes, identity, browser artifacts, protected paths, and sentinel safety | same | 16 commands; 8 protected paths; 8 required browser artifacts | valid; 0 failures | [validation](../reengineering/evidence/phase-2/LW-P2-001/validation.json) |
+| Phase 3 decision/preflight acceptance controls | `node --test tests/reengineering/phase3-decision-packet.test.mjs tests/reengineering/phase3-preflight.test.mjs` | exact maintainer receipt, accepted bounded authority, additive registry floor, blockers, exact safety contracts/invariants, implementation scope fence, Markdown projection, and unsafe mutation rejection | Windows 10; Node 24.13.0 | 39 | 39 pass | Acceptance run on 2026-07-30; [implementation evidence](../reengineering/evidence/phase-3/LW-P3-001/summary.json) |
+| Phase 3 strict typecheck | `npm run p3:typecheck` | web, contracts, kernel, storage, provider, and browser-harness TypeScript projects | Windows 10; Node 24.13.0; TypeScript 6.0.3 | 6 workspaces | pass; exit 0 | [canonical receipt](../reengineering/evidence/phase-3/LW-P3-001/commands/strict-typecheck/manifest.json) |
+| Phase 3 storage/provider tests | `npm run p3:test` | storage migration/import/journal/native-value behavior; provider routing/stream/retry/deadline/cancellation/provenance; no-egress and namespace boundaries | same | 51 | 51 pass; 0 fail/skip | [canonical receipt](../reengineering/evidence/phase-3/LW-P3-001/commands/node-unit/manifest.json) |
+| Phase 3 native IndexedDB browser gate | `npm run p3:browser` | synthetic v3 copy, every checkpoint resume, rollback, future abstention, hostile staging, blocked upgrade, quota failure, source equivalence, and no egress | Windows 10; Playwright 1.62.0; bundled Chromium | 5 | 5 pass; 0 skip/unexpected/flaky | [canonical receipt](../reengineering/evidence/phase-3/LW-P3-001/commands/browser-indexeddb/manifest.json) |
+| Phase 3 evidence-validator controls | `node --test tests/reengineering/phase3-evidence-validation.test.mjs` | hash/identity/gate/review/secret/completeness acceptance, clean-worktree receipt validation, isolated replay descendant proof, restored workspace lifecycle scripts, and negative fixtures | Windows 10; Node 24.13.0 | 10 | 10 pass | [canonical receipt](../reengineering/evidence/phase-3/LW-P3-001/commands/full-repository-controls/manifest.json) |
 
 ## Characterization tests
 
@@ -137,6 +142,38 @@ browser boundary. Receipt:
 The Phase 2 result is a feature-free architecture foundation. It does not
 upgrade any legacy compatibility level or establish real provider, stored-data,
 PWA, desktop, full accessibility, or release behavior.
+
+**MEASURED:** the combined Phase 3 decision/preflight acceptance controls pass
+39 of 39 positive and negative cases. They prove the exact accepted receipt,
+bounded implementation authority, safety contract, and scope fence while
+preventing accidental blocker closure or wider authority. They do not test a
+storage repository, provider adapter, migration, proxy, or cutover because none
+is implemented or authorized.
+
+**VERIFIED:** independent final QA at
+`22c3742cdc7863f16bf190ee23ddc67eabc20ec1` reproduced the validator, 23
+focused controls, 75 full repository controls, CLI scope-bypass rejection, and
+`git diff --check`; it returned GREEN with no actionable findings. Receipt:
+[`independent-review.md`](../reengineering/evidence/phase-3/LW-P3-DEC-001/independent-review.md).
+
+**VERIFIED:** the accepted `LW-P3-001` candidate
+`d746b96225a3eaf59a5b5937e3f531e2cad280ef` satisfies all 12 frozen
+Phase 3 gates. The canonical run records 107 of 107 repository controls with
+zero fail/skip/todo, six workspace typechecks, 51 storage/provider/boundary
+tests, ten evidence-validator controls, five native Chromium IndexedDB
+scenarios, byte-identical builds and isolated lock replay, zero audit
+vulnerabilities, protected-boundary/no-egress receipts, and a 138-artifact
+hash manifest. A separate clean detached worktree reproduced the required
+gates and returned GREEN with no findings. Receipts:
+[summary](../reengineering/evidence/phase-3/LW-P3-001/summary.json),
+[manifest](../reengineering/evidence/phase-3/LW-P3-001/manifest.json), and
+[independent review](../reengineering/evidence/phase-3/LW-P3-001/independent-review/REVIEW.md).
+
+The storage gate uses only generated synthetic records and native browser
+IndexedDB; the provider gate uses only deterministic in-process adapters and
+source-enforced no-egress boundaries. No package is registered into the
+application. This is not evidence of real provider behavior, real-data
+migration, feature parity, activation, cutover, or release readiness.
 
 **UNKNOWN:** the Phase 1 result does not establish real provider behavior,
 message send/stream/cancel/retry, persisted-record values or migrations,

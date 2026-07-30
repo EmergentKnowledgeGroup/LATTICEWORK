@@ -1,0 +1,16 @@
+{
+  "schema": "latticework.phase3-preflight-validation.v1",
+  "valid": true,
+  "status": "READY_PENDING_ACCEPTANCE",
+  "implementationAuthorized": false,
+  "gitScopeChecked": true,
+  "gitScopeBase": "6fa553ee3f5c7d1952f7aed836873467c4626068",
+  "checks": {
+    "packages": 2,
+    "requiredAcceptedAdrs": 2,
+    "namespaces": 3,
+    "requiredGates": 12,
+    "forbiddenPathPrefixes": 15
+  },
+  "failures": []
+}

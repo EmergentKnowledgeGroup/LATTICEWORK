@@ -28,3 +28,31 @@ Receipt: `evidence/phase-0/LW-P0-003-browser/`.
 
 These observations sharpen investigation targets; they are not published
 vulnerability findings.
+
+## Phase 3 proposed contracts
+
+**PROPOSED — no runtime boundary changed:**
+
+- ADR-005 separates provider wire adapters, routing/retry/fallback policy,
+  credential resolution, and egress policy. One adapter invocation is one wire
+  attempt; the router owns zero-default retry. A stable operation ID and unique
+  attempt IDs make provenance and replay behavior explicit.
+- Credential resolution requires a prior immutable egress grant and an exact
+  match across provider, adapter/version, parsed origin, trust class, and
+  authentication scheme. Phase 3 permits synthetic references and deterministic
+  mocks only.
+- Cancellation distinguishes local `transport-aborted` from
+  `provider-cancel-acknowledged`; a browser `AbortSignal` is not proof that
+  remote computation stopped.
+- ADR-006 keeps a future proxy optional, disabled, loopback-only,
+  authenticated, exactly allowlisted, bounded, and content-free in diagnostics.
+  The only unauthenticated routes are a content-free health read and a narrowly
+  constrained pairing bootstrap with exact Origin, non-GET, single-use
+  short-lived code, rate limits, no upstream action, and sanitized output.
+- LAN, worker, peer, Telegram, production listener, installer, and broader
+  trust behavior remain blocked by ADR-012 and Phase 7 verification.
+
+The exact machine-checkable boundary is
+[`PHASE3_DECISION_PACKET.json`](PHASE3_DECISION_PACKET.json). ADR-005 and
+ADR-006 remain Proposed; this map does not authorize real credentials,
+provider traffic, a listener, or a legacy gateway change.

@@ -8,15 +8,15 @@ LATTICEWORK
 
 ## Project state
 
-`BOUNDED IMPLEMENTATION`
+`BOUNDED FOUNDATION VERIFIED / NOT ACTIVATED`
 
 ## Current milestone
 
-`M2 — Typed candidate foundation`
+`M3 — Synthetic storage/provider foundation`
 
 ## Current target
 
-`reengineering/m0-baseline-characterization`
+`LW-P3-001 — verified; PR #2 open`
 
 ## Upstream baseline
 
@@ -24,11 +24,16 @@ LATTICEWORK
 
 ## Last verified commit
 
-`7e928bba605e0309273989bf8fd1303d2a822923` (`LW-P2-001` candidate)
+`d746b96225a3eaf59a5b5937e3f531e2cad280ef` (`LW-P3-001` verified implementation candidate)
+
+The last verified merged runtime implementation remains
+`c48505c5437c6b9cf67a652cdc2d8c81778c15a1`. The independently verified
+Phase 3 candidate is not registered into the runtime and has not yet merged.
+It begins from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 
 ## Last verified date
 
-`2026-07-30 11:26 UTC`
+`2026-07-30 15:59 UTC`
 
 ## Locked constraints
 
@@ -47,6 +52,9 @@ LATTICEWORK
 | `LW-P1-001` | Executable baseline characterization and fixtures | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P1-001.md` |
 | `LW-P2-PREFLIGHT-001` | Accepted architecture and exact Phase 2 execution packet | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-PREFLIGHT-001.md` |
 | `LW-P2-001` | Isolated typed kernel/contracts/status-shell candidate | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-001.md` |
+| `LW-P3-DEC-001` | Phase 3 storage/provider/security decision packet | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — ACCEPTED` | `docs/agents/handoffs/LW-P3-DEC-001.md` |
+| `LW-P3-PREFLIGHT-001` | Exact synthetic storage/provider implementation preflight | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P3-PREFLIGHT-001.md` |
+| `LW-P3-001` | Synthetic conversation storage and deterministic provider foundation | Codex root controller | `reengineering/p3-storage-provider-foundation` | `COMPLETED — VERIFIED` | `docs/agents/handoffs/LW-P3-001.md` |
 
 ## Completed in current milestone
 
@@ -86,19 +94,66 @@ LATTICEWORK
   detached Z:-local worktree on port 4182 and accepted the bounded work unit.
   This does not establish feature parity, migration, cutover, or release
   readiness.
+- Pull request
+  [`#1`](https://github.com/EmergentKnowledgeGroup/LATTICEWORK/pull/1)
+  received the single authorized CodeRabbit review, resolved all 19 review
+  threads, passed its required checks, and merged at
+  `c48505c5437c6b9cf67a652cdc2d8c81778c15a1`.
+- The post-merge control checkpoint was pushed to `main` at
+  `6704dd502a140fce2fe8e06f8db336d0bd3839a5`.
+- **OBSERVED:** the maintainer accepted ADR-004 through ADR-006 on 2026-07-30
+  with the receipt `approved choices - continue`. ADR-004/005 authorize only
+  the exact synthetic/mock `LW-P3-001` preflight scope; ADR-006 freezes a future
+  proxy contract and authorizes no listener.
+- **MEASURED:** the Phase 3 proposal validator is valid and scope-checked, 23
+  focused controls and 75 full repository controls pass with zero fail/skip,
+  and the evidence bundle is stored under
+  `reengineering/evidence/phase-3/LW-P3-DEC-001/`.
+- **VERIFIED:** independent final QA reproduced the decision and preflight
+  gates and returned GREEN with no actionable findings.
+- **MEASURED:** `reengineering/PHASE3_PREFLIGHT.*` freezes exactly two
+  candidate packages, three storage namespaces, 12 required verification
+  gates, and 15 forbidden legacy/runtime prefixes. Its 15 focused controls and
+  the 91-test full repository-control suite pass with zero fail/skip.
+- **OBSERVED:** the accepted preflight records
+  `implementation_authorized: true` only for its exact synthetic/mock package
+  surface. Real-data reads, credentials, provider calls, listeners, legacy
+  routes/features, activation, and cutover remain forbidden.
+- **VERIFIED:** independent QA reproduced the canonical validator, 39 focused
+  controls, 91 full controls, syntax/JSON/link/diff gates, and returned GREEN
+  with no actionable finding.
+- **VERIFIED:** the bounded `LW-P3-001` candidate
+  `d746b96225a3eaf59a5b5937e3f531e2cad280ef` contains additive
+  `@latticework/storage` and `@latticework/providers` packages plus shared
+  contracts. Canonical and separate clean-worktree gates pass all 12 frozen
+  requirements: six workspace typechecks, 26 storage tests, 19 provider tests,
+  six boundary tests, ten evidence-validator controls, five native Chromium
+  IndexedDB scenarios, and 107 of 107 repository controls with zero
+  fail/skip/todo. The evidence manifest contains 138 hashed artifacts and the
+  independent review is GREEN with no findings.
+- **OBSERVED:** no Phase 3 package is imported by `apps/web` or a legacy
+  runtime path. The implementation has no real-data fixture, provider
+  transport, listener, ambient credential read, activation API, feature
+  registration, or cutover.
+- **OBSERVED:** pull request
+  [`#2`](https://github.com/EmergentKnowledgeGroup/LATTICEWORK/pull/2)
+  is open against `main` from verified branch head
+  `f009842574a6df8210ed7c49c812d1b85bb78774`.
 
 ## Blockers
 
 - `LW-BLK-002` through `LW-BLK-004` are closed by explicit acceptance of
   ADR-001 through ADR-003.
-- `LW-BLK-005` remains open for Phase 3 data/storage work.
+- `LW-BLK-005` remains open for broader data ownership/schema/retention
+  inventory and every real-data migration; the bounded synthetic conversation
+  slice is verified but does not close those obligations.
 - `LW-BLK-006` remains open for optional gateway/worker/mesh work.
 - `LW-BLK-007` remains open for eventual cutover.
 
 ## Open decisions
 
-- A versioned data/storage and migration ADR before Phase 3.
-- Provider and security boundary decisions before provider/worker work.
+- ADR-012 remains required before LAN/worker/peer/Telegram or optional-proxy
+  runtime implementation.
 - Browser, desktop, launch-mode, and eventual cutover dispositions.
 
 ## AI work allowed without new approval
@@ -109,14 +164,13 @@ LATTICEWORK
 - Documentation accuracy improvements.
 - Reproducible measurement tooling.
 - Documentation and evidence corrections that do not change product semantics.
-- Read-only Phase 3 data/provider characterization and ADR drafting.
+- Evidence-linked documentation and review/merge work for the completed
+  bounded synthetic-only `LW-P3-001` claim.
 
 ## Human decision required
 
-- A versioned data/storage and migration ADR is required before Phase 3
-  implementation.
-- Provider/security implementation and any default-route cutover require
-  separate accepted decisions.
+- Real-data migration, optional-proxy runtime, provider activation, and any
+  default-route cutover require separate accepted decisions and evidence.
 
 ## Risks
 
@@ -129,20 +183,23 @@ LATTICEWORK
 
 ## Next handoff
 
-**Next action:** Read the completed Phase 2 handoff, then prepare the bounded
-Phase 3 data/storage and provider-contract decision packet without mutating
-stored data or external-service behavior.
+**Next action:** Commit the finalized hash-pinned evidence and terminal
+documentation, open one review-ready pull request for the verified
+`LW-P3-001` candidate, pass required CI without requesting another CodeRabbit
+review, merge, and verify `main`.
 
-**Read first:** `docs/agents/handoffs/LW-P2-001.md`,
-`reengineering/BLOCKERBOARD.md`, `reengineering/DATA_INVENTORY.md`, and
-`reengineering/SECURITY_BOUNDARY_MAP.md`.
+**Read first:** `reengineering/PHASE3_PREFLIGHT.md`,
+`reengineering/PHASE3_DECISION_PACKET.md`,
+`docs/decisions/0004-versioned-storage-and-migration.md`,
+`docs/decisions/0005-provider-abstraction-and-provenance.md`, and
+`docs/decisions/0006-optional-local-proxy-security.md`.
 
 **Do not touch:** stored-data/provider/security semantics, default routes,
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** the next decision packet states versioning, ownership,
-unknown-field preservation, rollback, provider trust boundaries, and executable
-verification before any implementation claim is opened.
+**Success condition:** the single Phase 3 pull request is merged, `main`
+contains the verified candidate and evidence, post-merge controls remain
+green, and no candidate runtime path has been activated.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`

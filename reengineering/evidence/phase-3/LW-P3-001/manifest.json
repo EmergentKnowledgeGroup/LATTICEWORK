@@ -1,0 +1,838 @@
+{
+  "schema": "latticework.evidence.artifact-bundle.v1",
+  "receipt_id": "LW-P3-001-bundle",
+  "captured_at": "2026-07-30T15:58:14.756Z",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "d746b96225a3eaf59a5b5937e3f531e2cad280ef",
+  "directory": "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-3\\LW-P3-001",
+  "artifacts": [
+    {
+      "path": "browser/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "repository_artifact": true
+    },
+    {
+      "path": "browser/results.json",
+      "bytes": 7390,
+      "sha256": "799c5ee972d182cb4c300286a17e77d2f894d8e5430d64df1ab6ef9e0e6ad12e",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/audit/manifest.json",
+      "bytes": 1363,
+      "sha256": "1003343c977b34cc344e29f3fbe7aaef2b5125a6a46154c9e6501bdab95a87ad",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/audit/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/audit/stdout.log",
+      "bytes": 362,
+      "sha256": "5e2bde04cd5e0084753f0ea8eafc195d09bef49e99d5cbb5728204e4c2325a4d",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/browser-indexeddb/manifest.json",
+      "bytes": 1307,
+      "sha256": "c2bbac37fd9938ede9193f25bda4788612b8e9c2f1345f8b3c35f60bc5b584e7",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/browser-indexeddb/stderr.log",
+      "bytes": 352,
+      "sha256": "2445513b70d2d5e4aeeacc594f23525b58029664d31fa6823b0c191f5a4f47e0",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/browser-indexeddb/stdout.log",
+      "bytes": 1259,
+      "sha256": "1b789b4e82b8f962913bb3539a7f5db040138ec13c7518e526b43bf9282773d8",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/browser-install/manifest.json",
+      "bytes": 1326,
+      "sha256": "f025ccc867bcc71099b012c9b316b9306c7a7e1a9911a68429790186d821d493",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/browser-install/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/browser-install/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/deterministic-build-1/manifest.json",
+      "bytes": 1303,
+      "sha256": "abacd2077fc71638776f143a0a33442ec4a5431e3c615088d254587199012abe",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/deterministic-build-1/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/deterministic-build-1/stdout.log",
+      "bytes": 614,
+      "sha256": "cd4d4e58b0bc664f00707b2fd5a0f4d10af151d094fdaed230e8dbb4082e8b74",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/deterministic-build-2/manifest.json",
+      "bytes": 1303,
+      "sha256": "53fa8e3e4b58ecee9538f14548743217372b26311f573b999878177917d0b02b",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/deterministic-build-2/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/deterministic-build-2/stdout.log",
+      "bytes": 794,
+      "sha256": "8edb2b3d998c6abe990bc5a4e1877fcb910b2b5049ac0ec405c9cce7cc5b7a63",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/deterministic-build/manifest.json",
+      "bytes": 1987,
+      "sha256": "5953c062267eaa433a0dc67b530b908bbfb7b1b8cff459a06e27f4f9eb9da0c9",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/deterministic-build/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/deterministic-build/stdout.log",
+      "bytes": 1993,
+      "sha256": "0544c6f24430b889d8fcd770505d92113f3cf4a728ac010945361a15a3788b24",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/diff-and-json-hygiene/manifest.json",
+      "bytes": 1763,
+      "sha256": "13dc04dbc5c466181063c7277410cb69a920647dde3229da51cc8375fdf8912e",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/diff-and-json-hygiene/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/diff-and-json-hygiene/stdout.log",
+      "bytes": 783,
+      "sha256": "514d8c8525a92a12714110100d7cd3d6b4acf7ca17b6cfa7fb66b24647716682",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/environment/manifest.json",
+      "bytes": 1413,
+      "sha256": "91159cdbf9b22154b4d410bb4bb8052ceeb892d2a4275fa1d4f1fc34f8be8e63",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/environment/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/environment/stdout.log",
+      "bytes": 61,
+      "sha256": "4db553f9098791379d5ae839236013f75c9925b7dfba60f4142250b24cc2c098",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/evidence-manifest/manifest.json",
+      "bytes": 2095,
+      "sha256": "4d06da5fa3988fa4ee108038c64ed85c59fde80378da0fe353e235f85cab180a",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/evidence-manifest/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/evidence-manifest/stdout.log",
+      "bytes": 78,
+      "sha256": "6e89b5e3ff68b403c67a7afb93e063bf1f6dbe296b6011ea4df6fbe3f3cfd5e5",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/full-repository-controls/manifest.json",
+      "bytes": 1364,
+      "sha256": "8c3fed0aeae10771565941217ae520c91b672023d3a2afcfc541b0fa92b8cb07",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/full-repository-controls/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/full-repository-controls/stdout.log",
+      "bytes": 20179,
+      "sha256": "b0badd074274f6a071f5331a7d35b43472b696c761fef572a4a816f547859fed",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/independent-clean-worktree/manifest.json",
+      "bytes": 1742,
+      "sha256": "db866faf0d319957e946ae97289c49a521ae381a60a20a3db35e3a326ec69a8a",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/independent-clean-worktree/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/independent-clean-worktree/stdout.log",
+      "bytes": 923,
+      "sha256": "75fb5688dd099188648747d1205733033707b49078dd60a0a2d827f057f8d691",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/install/manifest.json",
+      "bytes": 1303,
+      "sha256": "e6cf970d6cfb142c920215c1bf0c96c41aaab0392424e789a45d9d2b46df2293",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/install/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/install/stdout.log",
+      "bytes": 25,
+      "sha256": "b0395a4bee2e5ab18a9dd621db70d65e7d218fa1140ae08cad4e60aacc43140b",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/lockfile-replay/manifest.json",
+      "bytes": 1430,
+      "sha256": "413b8b946cb266cdbd99b861d128de54d5f449dce98842a92c3be2db43a89ea7",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/lockfile-replay/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/lockfile-replay/stdout.log",
+      "bytes": 21,
+      "sha256": "a84c540c4dfb2de042224f4402ec0b2a1e54ec296c371b0d4dca8423007f679b",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/node-unit/manifest.json",
+      "bytes": 1291,
+      "sha256": "17be2146c119028c3a90bc12ce0e378096ecbc3f8232dea2e340a4e57dac2d24",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/node-unit/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/node-unit/stdout.log",
+      "bytes": 5368,
+      "sha256": "85b79036a1d9acb41d360e33e4ee02a948f1b60fdb48dff0ea0a9f6bc2221b93",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/protected-boundary/manifest.json",
+      "bytes": 1312,
+      "sha256": "30282f1a78dedc6ae24e2ac101ceb51f62d7ddb2981d40912d0569c47b468b97",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/protected-boundary/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/protected-boundary/stdout.log",
+      "bytes": 4707,
+      "sha256": "e33f0d2b124023baa0bbfc873e24840991dfacb7cbd2232ee337d808419bb8ce",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/provider-no-egress/manifest.json",
+      "bytes": 1350,
+      "sha256": "7f5bc9976b6dd42709bc72160526d8fd7c32370fed1e1c696f1e9678f12f0fd7",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/provider-no-egress/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/provider-no-egress/stdout.log",
+      "bytes": 291,
+      "sha256": "4c5ffd08c70a5f1d5b280e29183d6fc3aa2e985a833bffc9563b377efe502af8",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/sbom/manifest.json",
+      "bytes": 1320,
+      "sha256": "2a1d06d3c1b62edc2d86c5825b52a642677f5c9f06da78c675a6c377ea07471e",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/sbom/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/sbom/stdout.log",
+      "bytes": 39177,
+      "sha256": "3fd919fcb1a27778e401205dd53c2e55ef2485dbcd85bd4dcbdf2546b66b9da2",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/strict-typecheck/manifest.json",
+      "bytes": 1307,
+      "sha256": "6636f5acec361f79b79b7b81d456c873e1b53f8e35ddfb8e85404e1842006ebc",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/strict-typecheck/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/strict-typecheck/stdout.log",
+      "bytes": 478,
+      "sha256": "a77ec90e43b52a8aea09d7dde4b0c8cbf667c279c778503cb85926f82bd53040",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/supply-chain/manifest.json",
+      "bytes": 1618,
+      "sha256": "800021dd237a15cb4d67753144fa589579757ba25cd316d5eff05c1eac5afb60",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/supply-chain/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/supply-chain/stdout.log",
+      "bytes": 34359,
+      "sha256": "cbcc970e92a53284df24a41f047f838d926033d85b68eb520af33035c521f341",
+      "repository_artifact": true
+    },
+    {
+      "path": "generated/phase2-build-2/.vite/manifest.json",
+      "bytes": 185,
+      "sha256": "b7d8e8bc36d19475696a4329597e23445dc514d057698b8577c2ceecc132c009",
+      "repository_artifact": true
+    },
+    {
+      "path": "generated/phase2-build-2/assets/index-CMIAtJto.js",
+      "bytes": 22607,
+      "sha256": "6614cc064c05bb23e9a97afec82be2e23be88ffa3643eb13530519c9a2d25c16",
+      "repository_artifact": true
+    },
+    {
+      "path": "generated/phase2-build-2/assets/index-DPPYCueY.css",
+      "bytes": 655,
+      "sha256": "f44d2e40170126660778c6c967cb29508e6ae9a27eb2a058c4ba9d7c77aa00a2",
+      "repository_artifact": true
+    },
+    {
+      "path": "generated/phase2-build-2/index.html",
+      "bytes": 571,
+      "sha256": "e1b63129b4804ae324057ab655227b955afe06125d803aebf4e7d99ed3291f66",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/automation.json",
+      "bytes": 3635,
+      "sha256": "a35e3275ba8994fdc38dd9a8db47bf3f1114bc03310a6f99b772e31054e1527f",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/browser/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/browser/results.json",
+      "bytes": 7477,
+      "sha256": "1f1f912ebbb80841a50d1983dbad66a9bf45dd440b89a4e90e36aad76441e293",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/audit/manifest.json",
+      "bytes": 1303,
+      "sha256": "c8fe8593634b1f13c13d7c4189859fa8a980c27774f74f5211ae72f9e73680bd",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/audit/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/audit/stdout.log",
+      "bytes": 362,
+      "sha256": "5e2bde04cd5e0084753f0ea8eafc195d09bef49e99d5cbb5728204e4c2325a4d",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/browser-indexeddb/manifest.json",
+      "bytes": 1247,
+      "sha256": "3c41b4e65bfaa1a66ffb4601895456ebbf7eefa2189e50ee4c4cd08b377ee420",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/browser-indexeddb/stderr.log",
+      "bytes": 351,
+      "sha256": "6094e8685ea008e0fe61193dc72d2802aeeaf3008677670921e5dcf12d7a2b7e",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/browser-indexeddb/stdout.log",
+      "bytes": 1259,
+      "sha256": "ccd995b15bf99cb733b59afc5de343e1eaec01ccf2907658f89c6e755ff8c36f",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/browser-install/manifest.json",
+      "bytes": 1269,
+      "sha256": "2297150ae5d20d5c06d96be5e9588fb33ad1824d41bc1be05f0949cb8f1ce3fd",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/browser-install/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/browser-install/stdout.log",
+      "bytes": 9015,
+      "sha256": "2903a623444efffc1d28a7e707760bd9eaa1cc68983a53b1711e24f5b398512d",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/deterministic-build-1/manifest.json",
+      "bytes": 1243,
+      "sha256": "9087aee7b6f9251fa1d69bd903efaf16ed3850ae1188197aec9cf51f324292ad",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/deterministic-build-1/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/deterministic-build-1/stdout.log",
+      "bytes": 614,
+      "sha256": "11eac7a577397ea0410a873aa89b8d58de2bbcb7e68c9464df66083e90e4e153",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/deterministic-build-2/manifest.json",
+      "bytes": 1242,
+      "sha256": "5dacaaf81404010ac52257347a73dfd22e9572dcfa27e2f0ed17c9e1b0c676d9",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/deterministic-build-2/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/deterministic-build-2/stdout.log",
+      "bytes": 802,
+      "sha256": "7d69a7dc4d538b49d9d7c5d430cb9ba29f15d6a69a70e17aaf48e6f0ed38884b",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/deterministic-build/manifest.json",
+      "bytes": 2039,
+      "sha256": "f0295a8bbfd42880934ccc31a5cf870b1cdf5fc6bc38d49f017e22a3b79734bb",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/deterministic-build/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/deterministic-build/stdout.log",
+      "bytes": 2036,
+      "sha256": "1ddbc74eea61de4cce3e5909b6cd84a4f6dd413f1651a31ae6b740bd4f379e28",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/diff-and-json-hygiene/manifest.json",
+      "bytes": 1705,
+      "sha256": "5738fd27809d0b87d55aa19e80a9300a1d391e4b119ba087694f4b74f3e48fb4",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/diff-and-json-hygiene/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/diff-and-json-hygiene/stdout.log",
+      "bytes": 783,
+      "sha256": "514d8c8525a92a12714110100d7cd3d6b4acf7ca17b6cfa7fb66b24647716682",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/environment/manifest.json",
+      "bytes": 1354,
+      "sha256": "c3529d86bd8809b9beefe628ee3e16729b045ba3292744632892a872b55eaea3",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/environment/stderr.log",
+      "bytes": 91,
+      "sha256": "1345d3463775a4bfdea77ede8ee98c25668545e2587a9d5ff86691cd603b65b7",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/environment/stdout.log",
+      "bytes": 61,
+      "sha256": "4db553f9098791379d5ae839236013f75c9925b7dfba60f4142250b24cc2c098",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/full-repository-controls/manifest.json",
+      "bytes": 1304,
+      "sha256": "87d556a2c6c0bf56b107244fbc5c4c1131d68c848fb434f8ccc18bc8ee9e1a3b",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/full-repository-controls/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/full-repository-controls/stdout.log",
+      "bytes": 20179,
+      "sha256": "473e55bf5c0b4e4a7fa6caefbed9c699d751ce49d512e5a5e297a16426b4fe10",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/install/manifest.json",
+      "bytes": 1243,
+      "sha256": "0b2dfc75ea8466eacff6558d727b822ad8bbf31725f22e7438c25a075fa6b15f",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/install/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/install/stdout.log",
+      "bytes": 25,
+      "sha256": "3545bb93e21701798a49d8c6a59fa32b9ee19726e83a0cfa6651cb76a665eba6",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/lockfile-replay/manifest.json",
+      "bytes": 1358,
+      "sha256": "1bffa8bbab52ff68a3e6ef2492373ce2e90fa92208e5fa8a9d645631e8c2055b",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/lockfile-replay/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/lockfile-replay/stdout.log",
+      "bytes": 21,
+      "sha256": "41d3e5acc3bcd243aa798bf66718ac7376dc5bf4e748a4c8755ef274bd70239c",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/node-unit/manifest.json",
+      "bytes": 1231,
+      "sha256": "4fc812bb890cfad9ef6fac4ad150b3b95e572dd81a2dcbb12b3d023096f8f0e1",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/node-unit/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/node-unit/stdout.log",
+      "bytes": 5370,
+      "sha256": "658c0fe46970d1d05fecf0eb37e101049f328cea6ee8f26042cdd72ab5860d71",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/protected-boundary/manifest.json",
+      "bytes": 1252,
+      "sha256": "9c36124ac26b50a848e069c83273831a1cfccc777b46a0feebb8a5e924182767",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/protected-boundary/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/protected-boundary/stdout.log",
+      "bytes": 3219,
+      "sha256": "36b365be9211bc47f31f68197dc183e2a202c69ea7f02b11816a51ce93ab036d",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/provider-no-egress/manifest.json",
+      "bytes": 1290,
+      "sha256": "b28ece42695644db34185c170839908871d71f7499113fb99041a268a95ce77e",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/provider-no-egress/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/provider-no-egress/stdout.log",
+      "bytes": 291,
+      "sha256": "8971cc2719e6b4bccc150a1523e9c3e74dc4fbb5e12d092d86fc53a800a333e3",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/sbom/manifest.json",
+      "bytes": 1260,
+      "sha256": "7b73e0776b2e5bb0acc85a367ac0049d67c1ed57cef2dbed9473d9a5cf01b94f",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/sbom/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/sbom/stdout.log",
+      "bytes": 39191,
+      "sha256": "8eb719820f33fff79e2e75555b81e2c22838655af90537689a6cccf594cdfeb8",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/strict-typecheck/manifest.json",
+      "bytes": 1247,
+      "sha256": "14a779e365227d3a5c78f9d26f716931c463523a001eee54ecd69f9588bfdfd9",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/strict-typecheck/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/strict-typecheck/stdout.log",
+      "bytes": 478,
+      "sha256": "a77ec90e43b52a8aea09d7dde4b0c8cbf667c279c778503cb85926f82bd53040",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/supply-chain/manifest.json",
+      "bytes": 1614,
+      "sha256": "cecbd292e200994ebc9006472eb080b06286e0cda8321f58ad77334258a4fd5b",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/supply-chain/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/supply-chain/stdout.log",
+      "bytes": 34373,
+      "sha256": "44a8d475b75ba1975f1f14f5e97b33708c3d982cafa5225a2ec51814f9d6fa6e",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/worktree-end/manifest.json",
+      "bytes": 1199,
+      "sha256": "c072f77ae06eb3da93a99c0173bc2a665143de8a37da0cebe6e656f012363ee4",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/worktree-end/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/worktree-end/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/worktree-start/manifest.json",
+      "bytes": 1201,
+      "sha256": "56514ab4d7ec370c29bca78256cae1e079ac5f16a43cbae0084bead3ea4ae193",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/worktree-start/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/commands/worktree-start/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/generated/phase2-build-2/.vite/manifest.json",
+      "bytes": 185,
+      "sha256": "b7d8e8bc36d19475696a4329597e23445dc514d057698b8577c2ceecc132c009",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/generated/phase2-build-2/assets/index-CMIAtJto.js",
+      "bytes": 22607,
+      "sha256": "6614cc064c05bb23e9a97afec82be2e23be88ffa3643eb13530519c9a2d25c16",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/generated/phase2-build-2/assets/index-DPPYCueY.css",
+      "bytes": 655,
+      "sha256": "f44d2e40170126660778c6c967cb29508e6ae9a27eb2a058c4ba9d7c77aa00a2",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/generated/phase2-build-2/index.html",
+      "bytes": 571,
+      "sha256": "e1b63129b4804ae324057ab655227b955afe06125d803aebf4e7d99ed3291f66",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/npm-audit.json",
+      "bytes": 362,
+      "sha256": "5e2bde04cd5e0084753f0ea8eafc195d09bef49e99d5cbb5728204e4c2325a4d",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/phase2-build-comparison.json",
+      "bytes": 2036,
+      "sha256": "1ddbc74eea61de4cce3e5909b6cd84a4f6dd413f1651a31ae6b740bd4f379e28",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/README.md",
+      "bytes": 330,
+      "sha256": "30bd19d61ce2ce0716fd8dad88df19458d3143f3ddb7bbdb4ee15e9c59ebac85",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/REVIEW.md",
+      "bytes": 2588,
+      "sha256": "d9d47c510306b9c2b5bf671e8d1139dd6e2b6dcb07b246faa02aaca23d460414",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/sbom.cdx.json",
+      "bytes": 39191,
+      "sha256": "8eb719820f33fff79e2e75555b81e2c22838655af90537689a6cccf594cdfeb8",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/supply-chain.json",
+      "bytes": 34373,
+      "sha256": "44a8d475b75ba1975f1f14f5e97b33708c3d982cafa5225a2ec51814f9d6fa6e",
+      "repository_artifact": true
+    },
+    {
+      "path": "npm-audit.json",
+      "bytes": 362,
+      "sha256": "5e2bde04cd5e0084753f0ea8eafc195d09bef49e99d5cbb5728204e4c2325a4d",
+      "repository_artifact": true
+    },
+    {
+      "path": "phase2-build-comparison.json",
+      "bytes": 1993,
+      "sha256": "0544c6f24430b889d8fcd770505d92113f3cf4a728ac010945361a15a3788b24",
+      "repository_artifact": true
+    },
+    {
+      "path": "sbom.cdx.json",
+      "bytes": 39177,
+      "sha256": "3fd919fcb1a27778e401205dd53c2e55ef2485dbcd85bd4dcbdf2546b66b9da2",
+      "repository_artifact": true
+    },
+    {
+      "path": "summary.json",
+      "bytes": 4075,
+      "sha256": "892578c686a29d65519d2ff855626c37cfd0246d8685db9b1e0cac75b506e09d",
+      "repository_artifact": true
+    },
+    {
+      "path": "supply-chain.json",
+      "bytes": 34359,
+      "sha256": "cbcc970e92a53284df24a41f047f838d926033d85b68eb520af33035c521f341",
+      "repository_artifact": true
+    }
+  ]
+}

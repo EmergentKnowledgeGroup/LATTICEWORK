@@ -74,5 +74,61 @@ not been exercised. No credential was captured in Phase 0 evidence.
 
 Link every preserved or changed upstream data format to `COMPATIBILITY.md` and `DIVERGENCES.md`.
 
-No LATTICEWORK data migration is implemented or authorized. ADR-004 remains a
-blocking decision.
+No LATTICEWORK real-data migration or activation is implemented or authorized.
+ADR-004 is accepted only for the exact synthetic `LW-P3-001` fixture surface.
+
+## Phase 3 accepted synthetic slice
+
+**OBSERVED:** the 252-row preservation registry is a name-level safety floor,
+not a complete schema catalog:
+
+- computed database/key names can escape literal extraction;
+- a fresh run observed 17 databases and 24 object stores while static
+  extraction found additional names;
+- every row still has unknown owner, schema, retention, and removal
+  disposition;
+- the legacy generic backup covers fewer databases than the runtime probe,
+  exports all localStorage including credential/crypto-adjacent values, and
+  has no atomic restore or rollback proof.
+
+**OBSERVED:** accepted ADR-004 uses per-dataset descriptors and a separate
+namespaced candidate repository.
+
+**VERIFIED:** at candidate
+`d746b96225a3eaf59a5b5937e3f531e2cad280ef`, `packages/storage`
+implements the first bounded synthetic slice:
+
+- an injected, inventory-guarded, read-only `FreeLatticeDB` v3 reader for only
+  `conversations` and `messages`;
+- an inactive `latticework::conversation` schema-version-1 candidate and a
+  separate `latticework::migration` journal;
+- copy-on-write bounded batches, monotonic checkpoints, idempotent resume,
+  local-only full-snapshot source verification identity, ready-candidate
+  revalidation, full keyed/native-value validation, exact candidate rollback,
+  automatic failed-candidate disposal, and immutable failed receipts;
+- fixed-format hostile import parsing and
+  `latticework::staging::<operation-id>::conversation` staging with exact
+  cleanup on failure;
+- one shared, fail-closed native structured-clone verification contract for
+  primitives, Unicode, sparse arrays, dates, regular expressions, serialized
+  errors and causes, blobs/files, array buffers and views, ordered maps/sets,
+  cycles/shared references, and plain/null-prototype objects; unsupported host
+  and class objects reject instead of collapsing to an empty representation;
+- immutable migration-ID binding even when source reads fail, so a mismatched
+  caller cannot discard, fail, or reuse another operation;
+- explicit exclusion of `meta` and `memoryIndex`.
+
+Five Chromium scenarios exercise fresh copy, every batch interruption,
+future-version abstention, hostile/partial import rejection, blocked upgrade,
+quota failure, and source/schema equivalence. Twenty-six package tests separately
+cover malformed/duplicate/dangling keys, journal tampering, same-count
+candidate/source corruption, ready-candidate reuse, source-read failure,
+operation-binding failure, native-value mutation, and staging reread failure.
+The [canonical evidence](../reengineering/evidence/phase-3/LW-P3-001/summary.json)
+and [independent review](../reengineering/evidence/phase-3/LW-P3-001/independent-review/REVIEW.md)
+cover only generated synthetic records and are GREEN.
+
+This accepted bounded slice does not authorize reading or modifying real user data, changing
+a legacy version/store/key, importing an untrusted file into live state, or
+activating the candidate copy. See
+[`PHASE3_DECISION_PACKET.md`](../reengineering/PHASE3_DECISION_PACKET.md).

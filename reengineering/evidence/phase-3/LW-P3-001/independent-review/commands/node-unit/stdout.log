@@ -1,0 +1,87 @@
+
+> latticework@0.0.0 p3:test
+> npm run test --workspace @latticework/storage && npm run test --workspace @latticework/providers && node --test tests/reengineering/phase3-storage-boundary.test.mjs tests/reengineering/phase3-provider-boundary.test.mjs
+
+
+> @latticework/storage@0.0.0 test
+> node --test src/*.test.mjs
+
+✔ the descriptor keeps the candidate inactive and confines the synthetic source (1.3256ms)
+✔ the journal graph is fail-closed (0.1575ms)
+✔ preserved records retain a native structured clone independently of projections (0.1998ms)
+✔ candidate repository names are an allowlist, not an inferred namespace (0.4556ms)
+✔ portable transfer parsing rejects hostile or unsupported envelopes (0.7932ms)
+✔ hostile transfer rejects invalid, duplicate, inconsistent, and dangling records before staging (0.6099ms)
+✔ staging rereads native values and discards its exact namespace on same-count corruption (1.4642ms)
+✔ staging rejects Blob projection/source inconsistency before opening IndexedDB (0.413ms)
+✔ native equivalence distinguishes Date, Blob, ArrayBuffer, and typed-array corruption (0.5912ms)
+✔ native value equivalence and source identity distinguish RegExp source and flags but ignore lastIndex (6.3076ms)
+✔ native value equivalence and source identity distinguish Error name, message, and cause (0.8953ms)
+✔ native value contract preserves File metadata when supported (0.4728ms)
+✔ native value contract supports cycles and plain/null-prototype objects but rejects class instances (0.3771ms)
+✔ native value contract covers primitives, sparse arrays, Map, Set, and DataView (0.5534ms)
+✔ journal validation freezes identity, failed receipts, and monotonic progress (0.8082ms)
+✔ migration checkpoints, resumes idempotently, and never activates the candidate (3.8703ms)
+✔ future source versions abstain before candidate or journal writes (0.1738ms)
+✔ same-count candidate corruption fails validation instead of becoming ready (0.7139ms)
+✔ a failed synthetic migration discards its exact candidate and retains immutable terminal evidence (0.5548ms)
+✔ a same-count source mutation cannot reuse a ready operation (1.0628ms)
+✔ a ready operation is revalidated before idempotent reuse (1.0113ms)
+✔ a ready operation is not reported ready when its source cannot be verified (0.3004ms)
+✔ source failure cannot mutate an active operation bound to another migration id (0.1477ms)
+✔ source failure cannot return a terminal operation bound to another migration id (0.1645ms)
+✔ source failure creates planned then failed journal evidence without candidate writes (0.1665ms)
+✔ rollback discards an exact candidate when the repository exposes discard semantics (0.1548ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 123.2839
+
+> @latticework/providers@0.0.0 test
+> node --test src/*.test.mjs
+
+✔ authorizes an exact immutable binding before synthetic credential resolution (3.9853ms)
+✔ refuses a mismatched grant before resolving a credential or invoking an adapter (0.3162ms)
+✔ does not retry after a delta, keeps operation identity stable, and terminates once (0.2332ms)
+✔ retries a pre-delta retryable failure only with explicit authorization and assigns a new attempt id (0.3079ms)
+✔ callback compatibility invokes the callback once for a terminal stream (0.3142ms)
+✔ defaults to one invocation and rejects invalid retry limits (0.3427ms)
+✔ normalizes malformed scripted events with one terminal event (0.2547ms)
+✔ rejects malformed iterator results and event payloads with one terminal event (0.9169ms)
+✔ pre-abort and mid-stream abort have one honest cancellation terminal (0.7105ms)
+✔ a stalled iterator terminates promptly on local abort, closes, and never claims provider acknowledgement (25.515ms)
+✔ only an explicit per-attempt adapter event may acknowledge provider cancellation (0.2582ms)
+✔ all pre-dispatch exits start and terminate once with unavailable provenance (0.8087ms)
+✔ exact required capabilities are grant-bound before credential resolution (0.29ms)
+✔ absolute deadlines fail closed before dispatch and terminate a stalled attempt (29.9526ms)
+✔ local abort promptly terminates stalled policy and credential work without invoking the adapter (32.3736ms)
+✔ absolute deadline promptly terminates stalled policy and credential work without invoking the adapter (61.4708ms)
+✔ never falls back implicitly or crosses trust classes (0.2686ms)
+✔ credential source independently refuses a binding mismatch (0.7601ms)
+✔ duplicate provider identifiers fail closed at router construction (0.2988ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 417.3582
+✔ capability mismatch is rejected before policy, credential, or adapter work (2.0427ms)
+✔ provider package contains no network, listener, or ambient credential API (1.3061ms)
+✔ conversation descriptor freezes the synthetic FreeLatticeDB v3 boundary (0.9014ms)
+✔ staging namespace rejects untrusted operation identifiers (0.3567ms)
+✔ migration journal transition graph is fail-closed (0.0919ms)
+✔ storage source contains no legacy mutation or activation hooks (1.5385ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 106.2167

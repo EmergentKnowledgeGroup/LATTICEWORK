@@ -1,0 +1,30 @@
+
+> latticework@0.0.0 p3:browser
+> npm run test --workspace @latticework/phase3-browser
+
+
+> @latticework/phase3-browser@0.0.0 pretest
+> vite build --config vite.config.ts
+
+vite v8.1.5 building client environment for production...
+[2Ktransforming...✓ 16 modules transformed.
+rendering chunks...
+computing gzip size...
+../../runtime/tmp/phase3-browser-dist/index.html                 0.45 kB │ gzip: 0.30 kB
+../../runtime/tmp/phase3-browser-dist/assets/index-jpB9uoxw.js  30.40 kB │ gzip: 8.68 kB
+
+✓ built in 45ms
+
+> @latticework/phase3-browser@0.0.0 test
+> playwright test
+
+
+Running 5 tests using 1 worker
+
+  ok 1 storage.spec.ts:101:1 › fresh v3 migration preserves native values, source schema, and excluded stores without activation (212ms)
+  ok 2 storage.spec.ts:167:1 › every batch interruption resumes idempotently and rollback removes only the candidate (300ms)
+  ok 3 storage.spec.ts:270:1 › future source versions abstain before candidate or journal writes (152ms)
+  ok 4 storage.spec.ts:314:1 › hostile and partial transfers are rejected before staging; valid staging is disposable (162ms)
+  ok 5 storage.spec.ts:555:1 › blocked upgrades wait safely and quota failures produce inactive terminal evidence (172ms)
+
+  5 passed (2.3s)

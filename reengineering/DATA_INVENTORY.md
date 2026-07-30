@@ -25,3 +25,35 @@ the bounded Chrome runtime probe. Each unresolved row is explicitly
 unknown-preserve, treats sensitivity as high until characterized, and requires
 owner approval before removal. That registry freezes names; it does not claim
 that schemas, values, owners, retention, or full reachability are known.
+
+## Phase 3 decision findings
+
+**OBSERVED:**
+
+- The registry is a pinned 252-row minimum, not a completeness claim. Computed
+  prefixes such as repository-derived keys and dynamically assembled database
+  names can escape literal extraction.
+- The fresh runtime created 17 databases and 24 stores, while the legacy
+  generic backup names only nine databases.
+- Generic backup exports all localStorage, which can include credential,
+  device-key, identity, and crypto-adjacent values.
+- Generic restore writes localStorage before database restore, guesses unknown
+  key paths, swallows some failures, and has no atomic commit or rollback
+  receipt.
+
+The immutable baseline ID set is
+[`PHASE3_BASELINE_PRESERVATION_IDS.json`](PHASE3_BASELINE_PRESERVATION_IDS.json).
+The live registry may only grow from that set; a correct discovery expansion
+must not fail merely because the total exceeds 252.
+
+**PROPOSED:** ADR-004 begins with stable dataset ID `conversation`, schema
+version 1, and only the `conversations` and `messages` stores from synthetic
+`FreeLatticeDB` v3 fixtures. `meta` and `memoryIndex` require separate
+descriptors. Hostile imports stage under
+`latticework::staging::<operation-id>::<dataset-id>`. Credential, device-key,
+identity/crypto, wallet/chain, session-token, cache, desktop, and remote
+datasets remain untouched and cannot be emitted by Phase 3 copy/export
+writers. Rollback retains a terminal journal receipt.
+
+ADR-004 remains Proposed. No real record has been read, copied, exported,
+restored, activated, or deleted by `LW-P3-DEC-001`.

@@ -1,0 +1,31 @@
+{
+  "schema": "latticework.phase3-decision-packet-validation.v1",
+  "valid": true,
+  "status": "ACCEPTED",
+  "implementation_authorized": true,
+  "git_scope_checked": true,
+  "git_scope_base": "6704dd502a140fce2fe8e06f8db336d0bd3839a5",
+  "checks": {
+    "adrs": 3,
+    "blockers": 3,
+    "preservation_rows": 252,
+    "required_invariants": 12
+  },
+  "failures": []
+}
+{
+  "schema": "latticework.phase3-preflight-validation.v1",
+  "valid": true,
+  "status": "ACCEPTED_FOR_BOUNDED_EXECUTION",
+  "implementationAuthorized": true,
+  "gitScopeChecked": true,
+  "gitScopeBase": "93a36626f786a880210c53b8486c961e8b86e9ea",
+  "checks": {
+    "packages": 2,
+    "requiredAcceptedAdrs": 2,
+    "namespaces": 3,
+    "requiredGates": 12,
+    "forbiddenPathPrefixes": 15
+  },
+  "failures": []
+}

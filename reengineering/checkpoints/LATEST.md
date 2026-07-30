@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-30T12:52:12Z`
+Updated: `2026-07-30T16:08:27Z`
 
 ## CURRENT
 
-Track: `LW_P2_FOUNDATION WORK`
-Step: `phase2-merged`
-Note: PR #1 merged after one CodeRabbit review, one consolidated fix pass, resolution of all 19 review threads, and clean canonical plus detached-clone verification.
-Branch: `main`
-Head: `c48505c5437c6b9cf67a652cdc2d8c81778c15a1`
-Next command: `Begin the Phase 3 data, provider/security, and cutover decision packet; do not alter those semantics until the required maintainer ADR dispositions are recorded.`
+Track: `LW_P3_IMPLEMENTATION WORK`
+Step: `phase3-pr-open`
+Note: PR #2 is open and review-ready at f009842574a6df8210ed7c49c812d1b85bb78774 with finalized candidate evidence; the single automatic review/check cycle is pending.
+Branch: `reengineering/p3-storage-provider-foundation`
+Head: `f009842574a6df8210ed7c49c812d1b85bb78774`
+Next command: `Push this PR-open checkpoint, then inspect PR #2 checks and the single automatic CodeRabbit review; fix actionable findings once, verify, and merge when green.`
 
 ## LW_M0_BASELINE WORK
 
@@ -122,3 +122,98 @@ Next command: `Begin the Phase 3 data, provider/security, and cutover decision p
 
 - No open blocker prevents `LW-P2-001`.
 - `LW-BLK-005` through `LW-BLK-007` continue to block later data, provider/security, and cutover work.
+
+## LW_P3_DECISION_PACKET WORK
+
+Step: `phase3-decision-packet-post-green`
+Note: ADR-004 through ADR-006 and the Phase 3 packet are proposal-only, machine-validated, and independently reviewed GREEN; runtime semantics remain unchanged and explicit maintainer dispositions are the next authority gate.
+Branch: `reengineering/p3-decision-packet`
+Head: `22c3742cdc7863f16bf190ee23ddc67eabc20ec1`
+Next command: `Record explicit maintainer acceptance or rejection for ADR-004, ADR-005, and ADR-006; do not implement or close a blocker before those receipts exist.`
+
+### Validations
+
+- **VERIFIED** — Phase 2 is merged and its post-merge checkpoint is present on `main`.
+- **OBSERVED** — `LW-BLK-005` through `LW-BLK-007` remain open.
+- **OBSERVED** — `docs/agents/claims/LW-P3-DEC-001.md` claims only documentation, decision records, controls, and living-state updates.
+- **VERIFIED** — no storage, provider, security, worker, route, deployment, or legacy runtime file changed at phase start.
+- **MEASURED** — canonical packet validator returned `valid: true`, checked Git scope from base `6704dd502a140fce2fe8e06f8db336d0bd3839a5`, and reported `implementation_authorized: false`.
+- **MEASURED** — focused Phase 3 decision controls passed 23/23; full repository controls passed 75/75 with zero fail or skip against the immutable baseline.
+- **VERIFIED** — independent final QA reproduced validator, focused/full controls, CLI scope rejection, and `git diff --check`; verdict GREEN with no actionable findings.
+- **OBSERVED** — ADR-004, ADR-005, and ADR-006 remain Proposed with PENDING receipts; all affected blockers remain OPEN.
+- **VERIFIED** — evidence is stored under `reengineering/evidence/phase-3/LW-P3-DEC-001/`.
+
+### Blockers
+
+- `LW-BLK-005` requires accepted ADR-004 plus expanded inventory and independently verified synthetic migration fixtures.
+- `LW-BLK-006` requires accepted ADR-006 and ADR-012 plus gateway/LAN/worker/peer/Telegram security tests.
+- `LW-BLK-007` requires future ADR-009, full evidence, and explicit owner approval before cutover or capability retirement.
+
+## LW_P3_PREFLIGHT WORK
+
+Step: `phase3-preflight-green`
+Note: The exact synthetic storage/provider preflight is scope-validated and independently GREEN; it remains implementation-unauthorized until the maintainer dispositions are recorded.
+Branch: `reengineering/p3-decision-packet`
+Head: `a431384891db5526c297ac1a4220e2ab308966ca`
+Next command: `Record the maintainer's ADR-004, ADR-005, and ADR-006 acceptance receipt, then claim and checkpoint LW-P3-001 before implementation.`
+
+### Validations
+
+- **VERIFIED** — `LW-P3-DEC-001` is complete, pushed, independently GREEN, and still proposal-only.
+- **OBSERVED** — ADR-004, ADR-005, and ADR-006 remain Proposed with PENDING receipts.
+- **OBSERVED** — `docs/agents/claims/LW-P3-PREFLIGHT-001.md` authorizes documentation, controls, and mapping only.
+- **VERIFIED** — no implementation package, real-data fixture, provider call, credential, listener, legacy path, or route change exists at phase start.
+- **MEASURED** — canonical preflight validator returned valid, scope-checked, `READY_PENDING_ACCEPTANCE`, and `implementationAuthorized: false`.
+- **MEASURED** — focused decision/preflight controls passed 39/39 and full repository controls passed 91/91 with zero fail/skip.
+- **VERIFIED** — independent QA reproduced validator, focused/full controls, syntax, JSON, links, and diff hygiene at `a431384891db5526c297ac1a4220e2ab308966ca`; verdict GREEN with no finding.
+- **VERIFIED** — no implementation package, real data, credential, provider traffic, listener, legacy mutation, route, feature, activation, or cutover exists after preflight.
+
+### Blockers
+
+- `LW-P3-001` remains blocked until explicit ADR-004 and ADR-005 acceptance.
+- ADR-006 acceptance would freeze a future proxy contract but would not authorize a Phase 3 listener.
+
+## LW_P3_IMPLEMENTATION WORK
+
+Step: `phase3-pr-open`
+Note: PR #2 is open and review-ready at f009842574a6df8210ed7c49c812d1b85bb78774 with finalized candidate evidence; the single automatic review/check cycle is pending.
+Branch: `reengineering/p3-storage-provider-foundation`
+Head: `f009842574a6df8210ed7c49c812d1b85bb78774`
+Next command: `Push this PR-open checkpoint, then inspect PR #2 checks and the single automatic CodeRabbit review; fix actionable findings once, verify, and merge when green.`
+
+### Validations
+
+- **VERIFIED** — `LW-P3-PREFLIGHT-001` is pushed, independently GREEN, and hash-evidenced.
+- **OBSERVED** — the maintainer replied `approved choices - continue` after reviewing the proposed choices; this is the ADR-004/005/006 acceptance receipt.
+- **OBSERVED** — `docs/agents/claims/LW-P3-001.md` owns only the exact preflight paths and preserves its no-touch fence.
+- **VERIFIED** — no storage/provider package, implementation fixture, real-data read, credential, provider call, listener, legacy registration, route, feature, activation, or cutover exists at phase start.
+- **VERIFIED** — decision validator reports `ACCEPTED`, exact maintainer receipt, `implementation_authorized: true`, 252 preservation rows, 12 invariants, and zero failures.
+- **VERIFIED** — preflight validator reports `ACCEPTED_FOR_BOUNDED_EXECUTION`, implementation base `93a36626f786a880210c53b8486c961e8b86e9ea`, exact two-package scope, and zero failures.
+- **MEASURED** — combined decision/preflight controls pass 39/39 with zero fail, skip, or todo.
+- **MEASURED** — full repository-control suite passes 91/91 with the immutable baseline root supplied and zero fail, skip, or todo.
+- **OBSERVED** — additive `packages/storage`, `packages/providers`, shared contracts, Phase 3 boundary controls, and an isolated browser harness are present in the claimed worktree; no protected legacy or `apps/web` path is modified.
+- **VERIFIED** — Docker Engine is reachable locally and reports server version `29.5.3`; the Docker Desktop MCP profile screen is not a Phase 3 blocker.
+- **MEASURED** — `npm run p3:typecheck` passes all six TypeScript workspace projects.
+- **MEASURED** — the integrated Node gate passes 26 storage, 19 provider, and six storage/provider boundary tests with zero fail or skip.
+- **MEASURED** — the Phase 3 evidence-validator suite passes ten positive/negative cases.
+- **MEASURED** — native Chromium passes five IndexedDB scenarios covering fresh copy, every checkpoint resume, rollback, future-version abstention, hostile staging, blocked upgrade, quota failure, and zero external egress.
+- **VERIFIED** — the Phase 3 boundary verifier reports `valid: true`; no protected legacy or `apps/web` path is modified.
+- **OBSERVED** — the packages remain unused by the application and contain no real-data fixture, provider transport, listener, ambient credential read, activation API, or cutover.
+- **OBSERVED** — independent precommit QA returned findings before commit: failed migration cleanup/disposition, operation reuse without source identity, insufficient independent-clean-worktree attestation, and missing fallback/retry-authorization provenance.
+- **VERIFIED** — failed migrations discard the exact inactive candidate before writing immutable terminal evidence; ready operations bind a local-only full-snapshot identity and revalidate the candidate before reuse.
+- **VERIFIED** — one shared fail-closed native-value contract distinguishes regular expressions, serialized errors/causes, files/blobs, buffers/views, ordered maps/sets, cycles/shared references, and rejects unsupported host/class objects.
+- **VERIFIED** — provider terminal provenance records immutable fallback chains and retry authorization for dispatched and pre-dispatch outcomes.
+- **VERIFIED** — source-read failure cannot mutate or return an operation bound to another migration ID; active and terminal regressions assert zero discard and zero journal writes.
+- **MEASURED** — the final precommit matrix passes six workspace typechecks, 51 integrated Node tests, ten evidence controls, 107 repository controls, the valid boundary gate, five Chromium scenarios, zero audit vulnerabilities, JSON/parser checks, and `git diff --check`.
+- **VERIFIED** — clean-detached-worktree execution exposed and regression-locked two evidence-runner assumptions: workspace lifecycle scripts are restored after `npm ci --ignore-scripts`, and isolated lockfile replay is accepted only from a strict descendant of the attested worktree.
+- **VERIFIED** — the canonical finalizer reports `valid: true` for exact candidate `d746b96225a3eaf59a5b5937e3f531e2cad280ef`, all 12 frozen gates, 138 hashed artifacts, required independent review, and zero failures.
+- **VERIFIED** — separate clean-detached-worktree QA reproduced 26 storage, 19 provider, six boundary, two focused no-egress, five Chromium, and 107 repository-control tests with zero fail/skip/todo; six typechecks, deterministic builds/replay, and zero audit vulnerabilities are GREEN.
+- **VERIFIED** — terminal living documents, `LW-P3-001` claim, execution checklist, migration ledger, blockerboard, and handoff describe only the bounded synthetic/mock foundation and retain every real-data/provider/listener/activation/cutover prohibition.
+- **MEASURED** — post-document controls pass 107/107 with the immutable baseline supplied and zero fail/skip/todo; the Phase 3 boundary and finalized evidence validators are valid; checkpoint JSON and `git diff --check` are clean.
+- **OBSERVED** — PR #2 is open and review-ready against `main` from pushed head `f009842574a6df8210ed7c49c812d1b85bb78774`; automatic CodeRabbit status is pending and no extra review was requested.
+
+### Blockers
+
+- `LW-BLK-005` remains open for broader data ownership/schema/retention inventory and every real-data migration; the bounded synthetic conversation slice is independently verified.
+- `LW-BLK-006` remains open for ADR-012 plus later gateway/LAN/worker/peer/Telegram security implementation; Phase 3 starts no listener.
+- `LW-BLK-007` remains open for future ADR-009, compatibility evidence, and explicit cutover approval.

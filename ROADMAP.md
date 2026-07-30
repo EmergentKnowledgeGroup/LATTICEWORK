@@ -8,8 +8,11 @@
 - `M1`: bounded baseline characterization complete; feature-by-feature
   characterization continues as migration reaches each surface.
 - `M2`: accepted architecture and feature-free typed foundation independently
-  verified.
-- `M3` and later: not started; blocked by their recorded decision/evidence
+  verified, reviewed once, and merged.
+- `M3`: ADR-004 through ADR-006 are accepted, the exact preflight is
+  independently verified, and bounded synthetic/mock implementation is in
+  progress.
+- `M4` and later: not started; blocked by their recorded decision/evidence
   gates.
 
 ## M0 — Upstream baseline
@@ -46,6 +49,13 @@ Exit criteria:
 - Migration sequence and rollback plan approved.
 
 ## M3 — Structural extraction
+
+Current gate:
+
+- `LW-P3-001` may implement only the exact accepted synthetic conversation
+  storage and deterministic in-process provider-mock surface.
+- ADR-006 defines a later optional-proxy boundary and does not authorize a
+  listener in Phase 3.
 
 Exit criteria:
 
