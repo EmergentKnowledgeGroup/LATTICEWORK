@@ -1,0 +1,48 @@
+{
+  "schema": "latticework.phase4-control-closure.v1",
+  "work_id": "LW-P4-CTRL-001",
+  "status": "VERIFIED",
+  "base_commit": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  "candidate_commit": "03dfdfc381365201fd53a32c9c5c057f0cdbf953",
+  "receipt_commit": "7fb35354ee12374025cb72f1af3df31ee655217a",
+  "captured_at": "2026-07-30T21:15:43Z",
+  "invariants": [
+    "Phase 3 scope is inspected only across its pinned base-to-terminal history.",
+    "Add-then-delete paths remain visible to historical scope validation.",
+    "Phase 4 active scope includes committed, staged, unstaged, untracked, and force-added ignored paths.",
+    "Active authority is limited to the current work claims.",
+    "No Phase 3 allowlist was widened."
+  ],
+  "commands": [
+    {
+      "command": "node --test tests/reengineering/phase3-preflight.test.mjs tests/reengineering/phase3-decision-packet.test.mjs tests/reengineering/phase4-active-scope.test.mjs",
+      "exit_code": 0,
+      "result": "48 passed; 0 failed; 0 skipped; 0 todo"
+    },
+    {
+      "command": "node --test <all tests/reengineering/*.test.mjs>",
+      "environment": {
+        "LATTICEWORK_BASELINE_ROOT": "Z:\\LATTICEWORK_BASELINE_e7585999",
+        "TEMP": "Z:\\LATTICEWORK\\runtime\\tmp\\p4-control-full",
+        "TMP": "Z:\\LATTICEWORK\\runtime\\tmp\\p4-control-full"
+      },
+      "exit_code": 0,
+      "result": "116 passed; 0 failed; 0 skipped; 0 todo"
+    },
+    {
+      "command": "node tools/reengineering/validate-phase4-active-scope.mjs",
+      "exit_code": 0,
+      "result": "valid=true; scopeChecked=true; failures=[]"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "clean"
+    }
+  ],
+  "independent_review": {
+    "verdict": "GREEN",
+    "reviewer": "native Codex guardrail reviewer",
+    "receipt": "independent-review/REVIEW.md"
+  }
+}

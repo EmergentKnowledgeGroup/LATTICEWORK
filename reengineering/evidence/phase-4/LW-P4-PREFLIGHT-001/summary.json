@@ -1,0 +1,50 @@
+{
+  "schema": "latticework.phase4-preflight-lock.v1",
+  "work_id": "LW-P4-PREFLIGHT-001",
+  "status": "VERIFIED",
+  "version": "1.0",
+  "base_commit": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  "candidate_commit": "03dfdfc381365201fd53a32c9c5c057f0cdbf953",
+  "receipt_commit": "7fb35354ee12374025cb72f1af3df31ee655217a",
+  "captured_at": "2026-07-30T21:15:43Z",
+  "characterization_authorized": true,
+  "implementation_authorized": false,
+  "mandatory_reporting_groups": 16,
+  "mandatory_atomic_subcases": 39,
+  "green_requires_all_pass": true,
+  "real_data_authorized": false,
+  "real_credentials_authorized": false,
+  "real_provider_traffic_authorized": false,
+  "commands": [
+    {
+      "command": "node --test <all tests/reengineering/*.test.mjs>",
+      "environment": {
+        "LATTICEWORK_BASELINE_ROOT": "Z:\\LATTICEWORK_BASELINE_e7585999",
+        "TEMP": "Z:\\LATTICEWORK\\runtime\\tmp\\p4-lock-green",
+        "TMP": "Z:\\LATTICEWORK\\runtime\\tmp\\p4-lock-green"
+      },
+      "exit_code": 0,
+      "result": "116 passed; 0 failed; 0 skipped; 0 todo"
+    },
+    {
+      "command": "node tools/reengineering/validate-phase4-active-scope.mjs",
+      "exit_code": 0,
+      "result": "valid=true; scopeChecked=true; failures=[]"
+    },
+    {
+      "command": "ConvertFrom-Json runtime/checkpoints/LATEST.json and reengineering/checkpoints/LATEST.json",
+      "exit_code": 0,
+      "result": "both parse and agree"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "clean"
+    }
+  ],
+  "independent_review": {
+    "verdict": "GREEN",
+    "reviewer": "fresh native Codex final QA",
+    "receipt": "independent-review/REVIEW.md"
+  }
+}
