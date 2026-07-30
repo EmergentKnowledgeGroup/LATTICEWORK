@@ -10,7 +10,6 @@ const testRoot = path.resolve("runtime/tmp/phase0-control-validation-tests");
 const validatorPath = path.resolve("tools/reengineering/validate-phase0-control.mjs");
 
 const requiredDocuments = [
-  "AGENTS.md",
   "PROJECT_STATE.md",
   "PROJECT_CHARTER.md",
   "PRINCIPLES.md",

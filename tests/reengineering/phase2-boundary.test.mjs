@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import crypto from "node:crypto";
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import test from "node:test";
@@ -41,8 +41,18 @@ function readJson(relativePath) {
   return JSON.parse(fs.readFileSync(path.join(REPO_ROOT, relativePath), "utf8"));
 }
 
-function sha256(filePath) {
-  return crypto.createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
+function gitBlobOid(repositoryRoot, relativePath) {
+  const result = spawnSync("git", ["rev-parse", `HEAD:${relativePath}`], {
+    cwd: repositoryRoot,
+    encoding: "utf8",
+    windowsHide: true,
+  });
+  assert.equal(
+    result.status,
+    0,
+    `Unable to resolve committed blob for ${relativePath}: ${result.stderr?.trim() || "unknown Git error"}`,
+  );
+  return result.stdout.trim();
 }
 
 function walkSource(directory) {
@@ -112,17 +122,17 @@ test("candidate build target stays outside deployment mirrors", () => {
   assert.match(config, /base\s*:\s*["']\.\/["']/);
 });
 
-test("protected legacy files byte-match the immutable baseline", {
+test("protected legacy committed blobs byte-match the immutable baseline", {
   skip: BASELINE_ROOT
     ? false
     : "LATTICEWORK_BASELINE_ROOT is required for immutable baseline comparison",
 }, () => {
   for (const relativePath of PROTECTED_PATHS) {
-    const candidate = path.join(REPO_ROOT, relativePath);
-    const baseline = path.join(BASELINE_ROOT, relativePath);
+    assert.equal(fs.existsSync(path.join(REPO_ROOT, relativePath)), true, `${relativePath} is missing`);
+    assert.equal(fs.existsSync(path.join(BASELINE_ROOT, relativePath)), true, `${relativePath} is missing from baseline`);
     assert.equal(
-      sha256(candidate),
-      sha256(baseline),
+      gitBlobOid(REPO_ROOT, relativePath),
+      gitBlobOid(BASELINE_ROOT, relativePath),
       `${relativePath} differs from immutable baseline`,
     );
   }

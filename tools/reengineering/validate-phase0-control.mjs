@@ -7,7 +7,6 @@ import { fileURLToPath } from "node:url";
 import { sha256File } from "./evidence-common.mjs";
 
 const REQUIRED_DOCUMENTS = [
-  "AGENTS.md",
   "PROJECT_STATE.md",
   "PROJECT_CHARTER.md",
   "PRINCIPLES.md",

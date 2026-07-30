@@ -8,32 +8,32 @@
   "artifacts": [
     {
       "path": "dependency-manifests.json",
-      "bytes": 3553,
-      "sha256": "a58a6ca168b528b6524b687f6f07f14b34d5f1eca7773b49d09ad89b1c587b4d",
+      "bytes": 3521,
+      "sha256": "8af31d798239d24aa80071224893275cbee2ff54c914caa8cdbbb85439493a5c",
       "repository_artifact": true
     },
     {
       "path": "entrypoint-evidence.json",
-      "bytes": 45777,
-      "sha256": "a9eb51f082ad0dd1f9f5d166a3711f5e3fdc3af8c7d16a1a03d75c17b7f4c269",
+      "bytes": 45731,
+      "sha256": "b1a9b5fe8df9be1c100b73c4759a29383b01e35a61fc5d6976b3114568df287c",
       "repository_artifact": true
     },
     {
       "path": "exact-duplicates.csv",
-      "bytes": 4673,
-      "sha256": "9d8258a8ebe5427e43a1a0366f34f998aa98dca31dcd46ba4601492ad024dc78",
+      "bytes": 4643,
+      "sha256": "5cf8dadc60d974ae2482f146f1d602a6e9d25775d3479f7fbefd5856c98504ad",
       "repository_artifact": true
     },
     {
       "path": "exact-duplicates.json",
-      "bytes": 10426,
-      "sha256": "db141cc8c70240fbef951c8fe57ff302f883dd10042a5abf74e0fca34ee4b35b",
+      "bytes": 10134,
+      "sha256": "7aad3c79176f24dcfa146e2e390956ecfc0bca5af342f3d1e7db21781e478e1a",
       "repository_artifact": true
     },
     {
       "path": "inventory-meta.json",
-      "bytes": 1331,
-      "sha256": "37efbd30323aea817808c83d2224fefa530bd620a6446e5119705e2f1b16e0cf",
+      "bytes": 1305,
+      "sha256": "0603edc0d25ce16b110ea96014150a9644172e9c6e01b1e743e0a03691f75558",
       "repository_artifact": true
     },
     {
@@ -44,14 +44,14 @@
     },
     {
       "path": "language-summary.csv",
-      "bytes": 832,
-      "sha256": "de206d4cd7b86c713cbea0a0eec4716b0f1161391d30469f0db9bfe38301c591",
+      "bytes": 805,
+      "sha256": "6a628319af460341bcaa9f286773bc03136c15ab4c53e0310b7933a46fa812ef",
       "repository_artifact": true
     },
     {
       "path": "largest-files.csv",
-      "bytes": 7010,
-      "sha256": "7e33fb34778beec86fe2eec6f6ad79b4ea008dc754356edf0d4adc4dcf75c9b4",
+      "bytes": 6959,
+      "sha256": "dddfd0e59611a1c32dba011f02dab89b7154aacfce1e1d53d6a282aa97c91e67",
       "repository_artifact": true
     },
     {
@@ -62,8 +62,8 @@
     },
     {
       "path": "path-summary.csv",
-      "bytes": 2468,
-      "sha256": "06a5a3f12d532d140c64801f80f30dc02253b0eeaaca89ee22454b7ab6e11a87",
+      "bytes": 2397,
+      "sha256": "fc02c43b400f1ff4df63a12d6255d64246c930a17b16874c7987174a25147753",
       "repository_artifact": true
     },
     {
@@ -74,50 +74,50 @@
     },
     {
       "path": "storage-identifiers.csv",
-      "bytes": 25944,
-      "sha256": "1d48b5ff900c7ade56de9ee9d41091418a8a41ee0a8fa9b42c519af9b61c4fac",
+      "bytes": 25458,
+      "sha256": "0d9798b558c31728e538673daa9d471801b5ac4ae528f6f2afe0d073d179c90f",
       "repository_artifact": true
     },
     {
       "path": "storage-identifiers.json",
-      "bytes": 59877,
-      "sha256": "4fba1ab5d04981cadd17f8e54c15191a6e36c35487ad7a94a9dfd6057e2b57eb",
+      "bytes": 57450,
+      "sha256": "b5946ebfd931685d29c74075ee7c506d9464b5f7a1ee6c3f4daa2acb6c48076c",
       "repository_artifact": true
     },
     {
       "path": "test-inventory.csv",
-      "bytes": 1478,
-      "sha256": "f74f66462570319f7ea898c95b31c186bc9235b00cafb027947473ec32c5e6da",
+      "bytes": 1467,
+      "sha256": "724431773f28b1ef3a2b34b60f0b30e1150f4e830580aaa10b9b51c9baf11df6",
       "repository_artifact": true
     },
     {
       "path": "test-inventory.json",
-      "bytes": 2959,
-      "sha256": "15789bf1502e1727e2cc5e8bc56767bded1d3795607f81f2a0fece37ee1ea41c",
+      "bytes": 2867,
+      "sha256": "3ccb59eade025874d9e5c24ba623f95c956832b27d95eaccd144f629040e6e19",
       "repository_artifact": true
     },
     {
       "path": "tracked-files.csv",
-      "bytes": 70404,
-      "sha256": "4520843963554097f17ef274335f85b38c96ed7f489a249cddf2cbc2c405f569",
+      "bytes": 69889,
+      "sha256": "5113891e31236df8357010d56cf4d070b93c3614b98a183f5f7e78c2fd63b108",
       "repository_artifact": true
     },
     {
       "path": "tracked-files.json",
-      "bytes": 149999,
-      "sha256": "92ca5e08b74f911b15896c98b74285154cda53f18edfcf6e0c0f62120f3dcb91",
+      "bytes": 145371,
+      "sha256": "688372209a8e22c073f40571f760eda65c753c4bc174aca1f0a6381fc8a95c1a",
       "repository_artifact": true
     },
     {
       "path": "window-symbol-assignments.csv",
-      "bytes": 20913,
-      "sha256": "3989b392a8101966613eb41e883535d9b9d8e79121e381ebd5a52239a6d458f6",
+      "bytes": 20385,
+      "sha256": "2d9d4e16fb0fa1ab50184cd2aba8bf6719dbe1628c8dec8a75a49175a72c45a8",
       "repository_artifact": true
     },
     {
       "path": "window-symbol-assignments.json",
-      "bytes": 48832,
-      "sha256": "348aed929a41dadfc6abe749e7c412d1e6f3eb8f435594c532ef1ab92ddd91eb",
+      "bytes": 46722,
+      "sha256": "c6201e27fa53909a0a2fe28c5108cec614dde2674a57d629e260977c4724040d",
       "repository_artifact": true
     }
   ]

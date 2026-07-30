@@ -5,7 +5,13 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
-import { findReparsePoint, isStrictDescendant, parseNamedArgs, sha256File, writeJson } from "./evidence-common.mjs";
+import {
+  findReparsePoint,
+  isStrictDescendant,
+  parseNamedArgs,
+  sha256Buffer,
+  writeJson,
+} from "./evidence-common.mjs";
 
 const PROTECTED_PATHS = [
   "app.html",
@@ -47,6 +53,30 @@ function runGit(args, cwd) {
     exit_code: result.status,
     stdout: result.stdout?.trim() ?? "",
     stderr: result.stderr?.trim() ?? "",
+  };
+}
+
+function readCommittedBlob(relativePath, cwd) {
+  const object = runGit(["rev-parse", `HEAD:${relativePath}`], cwd);
+  if (object.exit_code !== 0 || !object.stdout) {
+    return {
+      exit_code: object.exit_code,
+      object_id: null,
+      bytes: null,
+      stderr: object.stderr || `Unable to resolve HEAD:${relativePath}`,
+    };
+  }
+  const result = spawnSync("git", ["cat-file", "blob", object.stdout], {
+    cwd,
+    encoding: null,
+    maxBuffer: 32 * 1024 * 1024,
+    windowsHide: true,
+  });
+  return {
+    exit_code: result.status,
+    object_id: object.stdout,
+    bytes: result.status === 0 ? result.stdout : null,
+    stderr: result.stderr?.toString("utf8").trim() ?? "",
   };
 }
 
@@ -111,14 +141,32 @@ export function verifyPhase2Boundary({
       failures.push(`protected file traverses symbolic link or junction: ${relativePath}`);
       continue;
     }
-    const workspaceHash = sha256File(workspacePath);
-    const baselineHash = sha256File(baselinePath);
-    const matches = workspaceHash === baselineHash;
+    const workspaceBlob = readCommittedBlob(relativePath, resolvedWorkspace);
+    const baselineBlob = readCommittedBlob(relativePath, resolvedBaseline);
+    if (
+      workspaceBlob.exit_code !== 0
+      || baselineBlob.exit_code !== 0
+      || !workspaceBlob.bytes
+      || !baselineBlob.bytes
+    ) {
+      failures.push(`protected file committed blob is unreadable: ${relativePath}`);
+      continue;
+    }
+    const unstaged = runGit(["diff", "--quiet", "--", relativePath], resolvedWorkspace);
+    const staged = runGit(["diff", "--cached", "--quiet", "--", relativePath], resolvedWorkspace);
+    if (unstaged.exit_code !== 0 || staged.exit_code !== 0) {
+      failures.push(`protected file has uncommitted workspace changes: ${relativePath}`);
+    }
+    const workspaceHash = sha256Buffer(workspaceBlob.bytes);
+    const baselineHash = sha256Buffer(baselineBlob.bytes);
+    const matches = workspaceBlob.object_id === baselineBlob.object_id;
     if (!matches) {
       failures.push(`protected file differs from immutable baseline: ${relativePath}`);
     }
     protectedFiles.push({
       path: relativePath,
+      workspace_blob: workspaceBlob.object_id,
+      baseline_blob: baselineBlob.object_id,
       workspace_sha256: workspaceHash,
       baseline_sha256: baselineHash,
       matches,
