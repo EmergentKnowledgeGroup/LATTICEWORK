@@ -1,0 +1,10 @@
+✔ capability mismatch is rejected before policy, credential, or adapter work (2.193ms)
+✔ provider package contains no network, listener, or ambient credential API (1.6121ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 120.4823

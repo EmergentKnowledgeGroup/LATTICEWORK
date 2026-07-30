@@ -94,8 +94,9 @@ not a complete schema catalog:
 **OBSERVED:** accepted ADR-004 uses per-dataset descriptors and a separate
 namespaced candidate repository.
 
-**MEASURED, FINAL EVIDENCE PENDING:** `packages/storage` implements the first
-bounded synthetic slice:
+**VERIFIED:** at candidate
+`d746b96225a3eaf59a5b5937e3f531e2cad280ef`, `packages/storage`
+implements the first bounded synthetic slice:
 
 - an injected, inventory-guarded, read-only `FreeLatticeDB` v3 reader for only
   `conversations` and `messages`;
@@ -123,6 +124,9 @@ quota failure, and source/schema equivalence. Twenty-six package tests separatel
 cover malformed/duplicate/dangling keys, journal tampering, same-count
 candidate/source corruption, ready-candidate reuse, source-read failure,
 operation-binding failure, native-value mutation, and staging reread failure.
+The [canonical evidence](../reengineering/evidence/phase-3/LW-P3-001/summary.json)
+and [independent review](../reengineering/evidence/phase-3/LW-P3-001/independent-review/REVIEW.md)
+cover only generated synthetic records and are GREEN.
 
 This accepted bounded slice does not authorize reading or modifying real user data, changing
 a legacy version/store/key, importing an untrusted file into live state, or

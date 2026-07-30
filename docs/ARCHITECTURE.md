@@ -4,7 +4,7 @@
 
 ## Status
 
-`ACCEPTED TARGET / PHASE 3 SYNTHETIC-MOCK FOUNDATION IMPLEMENTED / FINAL EVIDENCE PENDING`
+`ACCEPTED TARGET / PHASE 3 SYNTHETIC-MOCK FOUNDATION VERIFIED / INACTIVE`
 
 This document must describe implemented reality and clearly separate current state from target state.
 
@@ -162,8 +162,8 @@ flowchart LR
 
 ### Accepted bounded Phase 3 storage/provider spine
 
-**IMPLEMENTED IN THE BOUNDED `LW-P3-001` CANDIDATE — FINAL CANONICAL AND
-INDEPENDENT EVIDENCE PENDING:**
+**VERIFIED IN THE BOUNDED `LW-P3-001` CANDIDATE
+`d746b96225a3eaf59a5b5937e3f531e2cad280ef`:**
 
 ```mermaid
 flowchart LR
@@ -198,6 +198,9 @@ flowchart LR
   source/schema preservation, checkpoint resume, rollback, future-version
   abstention, hostile-import rejection, blocked upgrades, quota failure, and
   zero external egress.
+- The canonical 12-gate evidence bundle and separate clean-worktree GREEN
+  review are stored under
+  [`LW-P3-001`](../reengineering/evidence/phase-3/LW-P3-001/).
 - ADR-006 accepts an optional, disabled, loopback-only, authenticated and
   exactly allowlisted proxy boundary for later work. It does not authorize a
   listener. Broader LAN/worker/peer/Telegram behavior remains blocked by
@@ -210,8 +213,8 @@ The accepted decisions and executable scope controls live in
 [`PHASE3_DECISION_PACKET.md`](../reengineering/PHASE3_DECISION_PACKET.md).
 No feature imports or registers these packages. The implemented application
 therefore remains the Phase 2 feature-free status shell; the new packages are
-an unused, synthetic/mock-only architecture seam pending final Phase 3
-evidence and later feature-specific work claims.
+an unused, verified synthetic/mock-only architecture seam pending later
+feature-specific work claims.
 
 ## Architecture invariants
 
@@ -232,5 +235,5 @@ evidence and later feature-specific work claims.
 | `ARCH-003` | Rendering, state, storage, providers, and security are mixed | [boundary map](../reengineering/evidence/phase-0/LW-M0-BEH-001/behavior-boundary-map.md) | Hard-to-characterize migrations | view-model and adapter seams | Open; ADR-002/003 accepted, feature migration not started |
 | `ARCH-004` | Electron and Tauri overlap without a supported-platform decision | [legacy source map](../reengineering/LEGACY_SOURCE_MAP.md) | Double maintenance and unclear release claims | ADR-007 bounded spike | Open |
 | `ARCH-005` | PWA and launch-mode compatibility are unverified | [compatibility contract](COMPATIBILITY.md) | Data/offline/rollback risk | ADR-008/009/011 | Open |
-| `ARCH-006` | Most legacy storage owners/schemas and every real-data migration remain unverified | [Phase 3 packet](../reengineering/PHASE3_DECISION_PACKET.md) | Data loss or silent reinterpretation | accepted ADR-004 plus per-dataset descriptors | Open; one synthetic conversation repository/migration/staging seam is implemented, unused, and awaiting final evidence |
-| `ARCH-007` | Real provider protocols, fallback compatibility, credentials, and proxy behavior remain uncharacterized | [Phase 3 packet](../reengineering/PHASE3_DECISION_PACKET.md) | Trust-boundary crossing and unprovable failures | accepted ADR-005/006 | Open; deterministic no-egress mock router/provenance seam is implemented, unused, and awaiting final evidence |
+| `ARCH-006` | Most legacy storage owners/schemas and every real-data migration remain unverified | [Phase 3 evidence](../reengineering/evidence/phase-3/LW-P3-001/summary.json) | Data loss or silent reinterpretation | accepted ADR-004 plus per-dataset descriptors | Open; one synthetic conversation repository/migration/staging seam is verified and unused, while real-data migration remains unverified |
+| `ARCH-007` | Real provider protocols, fallback compatibility, credentials, and proxy behavior remain uncharacterized | [Phase 3 evidence](../reengineering/evidence/phase-3/LW-P3-001/summary.json) | Trust-boundary crossing and unprovable failures | accepted ADR-005/006 | Open; deterministic no-egress mock router/provenance seam is verified and unused, while real protocols/traffic/listener behavior remain unverified |

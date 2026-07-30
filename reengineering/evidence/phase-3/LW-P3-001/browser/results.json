@@ -1,0 +1,261 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "Z:\\LATTICEWORK\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "Z:\\LATTICEWORK\\tests\\phase3\\playwright.config.ts",
+    "rootDir": "Z:/LATTICEWORK/tests/phase3",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "Z:/LATTICEWORK/reengineering/evidence/phase-3/LW-P3-001/browser",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "Z:/LATTICEWORK/tests/phase3",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-3\\LW-P3-001\\browser\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.0",
+    "workers": 12,
+    "webServer": {
+      "command": "vite preview --config vite.config.ts",
+      "cwd": ".",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "url": "http://127.0.0.1:4193"
+    }
+  },
+  "suites": [
+    {
+      "title": "storage.spec.ts",
+      "file": "storage.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fresh v3 migration preserves native values, source schema, and excluded stores without activation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 212,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:52:29.823Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b48019861cf9d71d9131-5d082578ea22bbb39fc9",
+          "file": "storage.spec.ts",
+          "line": 101,
+          "column": 1
+        },
+        {
+          "title": "every batch interruption resumes idempotently and rollback removes only the candidate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 300,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:52:30.121Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b48019861cf9d71d9131-4cbd8015a7258e491a34",
+          "file": "storage.spec.ts",
+          "line": 167,
+          "column": 1
+        },
+        {
+          "title": "future source versions abstain before candidate or journal writes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 152,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:52:30.427Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b48019861cf9d71d9131-d221efe13333f5b5c7e6",
+          "file": "storage.spec.ts",
+          "line": 270,
+          "column": 1
+        },
+        {
+          "title": "hostile and partial transfers are rejected before staging; valid staging is disposable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 162,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:52:30.586Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b48019861cf9d71d9131-a2236e543562c3838d33",
+          "file": "storage.spec.ts",
+          "line": 314,
+          "column": 1
+        },
+        {
+          "title": "blocked upgrades wait safely and quota failures produce inactive terminal evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 172,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-30T15:52:30.755Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b48019861cf9d71d9131-82711f852633f134de76",
+          "file": "storage.spec.ts",
+          "line": 555,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-30T15:52:28.992Z",
+    "duration": 2326.402,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

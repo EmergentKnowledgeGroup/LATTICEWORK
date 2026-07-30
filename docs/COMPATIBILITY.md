@@ -78,7 +78,8 @@ real-data, credential, listener, legacy-integration, activation, or cutover
 authority is recorded. Only the exact synthetic/mock `LW-P3-001` preflight
 surface is implementation-authorized.
 
-**MEASURED, FINAL EVIDENCE PENDING:** the bounded candidate now passes strict
+**VERIFIED:** the bounded candidate
+`d746b96225a3eaf59a5b5937e3f531e2cad280ef` passes strict
 typecheck; 26 storage tests; 19 provider tests; six storage/provider boundary
 tests; ten evidence-validator tests; and five native Chromium IndexedDB
 scenarios. The tests use generated synthetic records and deterministic
@@ -86,7 +87,11 @@ in-process mocks only. They cover copy-on-write checkpoint/resume/rollback,
 native unknown-value preservation, hostile import staging, blocked/quota
 failure, exact egress/credential binding, normalized terminal streams,
 retry/deadline/cancellation, content-free provenance, and zero external
-provider capability.
+provider capability. All 12 frozen gates are represented in the
+[canonical summary](../reengineering/evidence/phase-3/LW-P3-001/summary.json)
+and [manifest](../reengineering/evidence/phase-3/LW-P3-001/manifest.json);
+the [independent review](../reengineering/evidence/phase-3/LW-P3-001/independent-review/REVIEW.md)
+is GREEN.
 
 This is architecture-contract evidence, not legacy compatibility evidence. It
 changes no compatibility level in the table above. Real conversation values,

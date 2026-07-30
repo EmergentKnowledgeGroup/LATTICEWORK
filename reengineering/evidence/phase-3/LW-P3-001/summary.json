@@ -1,0 +1,75 @@
+{
+    "schema":  "latticework.phase3-summary.v1",
+    "evidence_label":  "MEASURED",
+    "work_id":  "LW-P3-001",
+    "valid":  true,
+    "baseline_sha":  "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "implementation_base_commit":  "93a36626f786a880210c53b8486c961e8b86e9ea",
+    "candidate_sha":  "d746b96225a3eaf59a5b5937e3f531e2cad280ef",
+    "safety":  {
+                   "real_user_data":  "not-accessed",
+                   "real_provider_traffic":  "none",
+                   "real_credentials":  "none",
+                   "listener":  "none",
+                   "legacy_mutation":  "none",
+                   "candidate_activation":  "none",
+                   "cutover":  "none"
+               },
+    "gates":  {
+                  "strict-typecheck":  {
+                                           "valid":  true,
+                                           "receipt":  "commands/strict-typecheck/manifest.json"
+                                       },
+                  "node-unit":  {
+                                    "valid":  true,
+                                    "receipt":  "commands/node-unit/manifest.json"
+                                },
+                  "browser-indexeddb":  {
+                                            "valid":  true,
+                                            "receipt":  "commands/browser-indexeddb/manifest.json"
+                                        },
+                  "provider-no-egress":  {
+                                             "valid":  true,
+                                             "receipt":  "commands/provider-no-egress/manifest.json"
+                                         },
+                  "protected-boundary":  {
+                                             "valid":  true,
+                                             "receipt":  "commands/protected-boundary/manifest.json"
+                                         },
+                  "deterministic-build":  {
+                                              "valid":  true,
+                                              "receipt":  "commands/deterministic-build/manifest.json"
+                                          },
+                  "lockfile-replay":  {
+                                          "valid":  true,
+                                          "receipt":  "commands/lockfile-replay/manifest.json"
+                                      },
+                  "supply-chain":  {
+                                       "valid":  true,
+                                       "receipt":  "commands/supply-chain/manifest.json"
+                                   },
+                  "full-repository-controls":  {
+                                                   "valid":  true,
+                                                   "receipt":  "commands/full-repository-controls/manifest.json"
+                                               },
+                  "diff-and-json-hygiene":  {
+                                                "valid":  true,
+                                                "receipt":  "commands/diff-and-json-hygiene/manifest.json"
+                                            },
+                  "independent-clean-worktree":  {
+                                                     "valid":  true,
+                                                     "receipt":  "commands/independent-clean-worktree/manifest.json"
+                                                 },
+                  "evidence-manifest":  {
+                                            "valid":  true,
+                                            "receipt":  "commands/evidence-manifest/manifest.json"
+                                        }
+              },
+    "repository_controls":  {
+                                "tests":  107,
+                                "pass":  107,
+                                "fail":  0,
+                                "skipped":  0,
+                                "todo":  0
+                            }
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P3-001-audit",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/s",
+    "/c",
+    "npm audit --workspaces --include-workspace-root --json"
+  ],
+  "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"npm audit --workspaces --include-workspace-root --json\"",
+  "cwd": "Z:\\LATTICEWORK",
+  "started_at": "2026-07-30T15:52:31.508Z",
+  "ended_at": "2026-07-30T15:52:32.381Z",
+  "duration_ms": 872.5369,
+  "timeout_ms": 300000,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "d746b96225a3eaf59a5b5937e3f531e2cad280ef",
+  "repository": {
+    "head": "d746b96225a3eaf59a5b5937e3f531e2cad280ef",
+    "status": "## reengineering/p3-storage-provider-foundation\n?? reengineering/evidence/phase-3/LW-P3-001/"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 362,
+      "sha256": "5e2bde04cd5e0084753f0ea8eafc195d09bef49e99d5cbb5728204e4c2325a4d"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

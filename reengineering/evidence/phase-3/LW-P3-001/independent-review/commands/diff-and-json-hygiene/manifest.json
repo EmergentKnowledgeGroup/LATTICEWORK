@@ -1,0 +1,46 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P3-001-diff-and-json-hygiene",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/s",
+    "/c",
+    "git diff --check 93a36626f786a880210c53b8486c961e8b86e9ea -- && node --check tools/reengineering/validate-phase3-evidence.mjs && node tools/reengineering/validate-phase3-decision-packet.mjs && node tools/reengineering/validate-phase3-preflight.mjs"
+  ],
+  "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"git diff --check 93a36626f786a880210c53b8486c961e8b86e9ea -- && node --check tools/reengineering/validate-phase3-evidence.mjs && node tools/reengineering/validate-phase3-decision-packet.mjs && node tools/reengineering/validate-phase3-preflight.mjs\"",
+  "cwd": "Z:\\LATTICEWORK_P3_QA_d746b96",
+  "started_at": "2026-07-30T15:54:12.280Z",
+  "ended_at": "2026-07-30T15:54:12.685Z",
+  "duration_ms": 405.5835,
+  "timeout_ms": 300000,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "d746b96225a3eaf59a5b5937e3f531e2cad280ef",
+  "repository": {
+    "head": "d746b96225a3eaf59a5b5937e3f531e2cad280ef",
+    "status": "## HEAD (no branch)"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 783,
+      "sha256": "514d8c8525a92a12714110100d7cd3d6b4acf7ca17b6cfa7fb66b24647716682"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

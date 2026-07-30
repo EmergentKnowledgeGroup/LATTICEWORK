@@ -1,0 +1,25 @@
+{
+  "schema": "latticework.phase3-independent-review-validation.v1",
+  "valid": true,
+  "candidateSha": "d746b96225a3eaf59a5b5937e3f531e2cad280ef",
+  "requiredArtifacts": [
+    "REVIEW.md",
+    "automation.json",
+    "commands/browser-indexeddb/manifest.json",
+    "commands/deterministic-build/manifest.json",
+    "commands/diff-and-json-hygiene/manifest.json",
+    "commands/full-repository-controls/manifest.json",
+    "commands/install/manifest.json",
+    "commands/lockfile-replay/manifest.json",
+    "commands/node-unit/manifest.json",
+    "commands/protected-boundary/manifest.json",
+    "commands/provider-no-egress/manifest.json",
+    "commands/strict-typecheck/manifest.json",
+    "commands/supply-chain/manifest.json",
+    "commands/worktree-end/manifest.json",
+    "commands/worktree-end/stdout.log",
+    "commands/worktree-start/manifest.json",
+    "commands/worktree-start/stdout.log"
+  ],
+  "failures": []
+}

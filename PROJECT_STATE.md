@@ -8,15 +8,15 @@ LATTICEWORK
 
 ## Project state
 
-`BOUNDED IMPLEMENTATION`
+`BOUNDED FOUNDATION VERIFIED / NOT ACTIVATED`
 
 ## Current milestone
 
-`M3 — Data/provider/security decision gate`
+`M3 — Synthetic storage/provider foundation`
 
 ## Current target
 
-`LW-P3-001 — synthetic storage/provider foundation`
+`LW-P3-001 — verified; review and merge pending`
 
 ## Upstream baseline
 
@@ -24,16 +24,16 @@ LATTICEWORK
 
 ## Last verified commit
 
-`93a36626f786a880210c53b8486c961e8b86e9ea` (`LW-P3-PREFLIGHT-001` verified preflight)
+`d746b96225a3eaf59a5b5937e3f531e2cad280ef` (`LW-P3-001` verified implementation candidate)
 
-The last verified runtime implementation merge is
-`c48505c5437c6b9cf67a652cdc2d8c81778c15a1`; later verified commits change
-only decision/preflight controls and evidence. Phase 3 implementation begins
-from `93a36626f786a880210c53b8486c961e8b86e9ea`.
+The last verified merged runtime implementation remains
+`c48505c5437c6b9cf67a652cdc2d8c81778c15a1`. The independently verified
+Phase 3 candidate is not registered into the runtime and has not yet merged.
+It begins from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 
 ## Last verified date
 
-`2026-07-30 13:35 UTC`
+`2026-07-30 15:59 UTC`
 
 ## Locked constraints
 
@@ -54,7 +54,7 @@ from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 | `LW-P2-001` | Isolated typed kernel/contracts/status-shell candidate | Codex root controller | `reengineering/m0-baseline-characterization` | `COMPLETED` | `docs/agents/handoffs/LW-P2-001.md` |
 | `LW-P3-DEC-001` | Phase 3 storage/provider/security decision packet | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — ACCEPTED` | `docs/agents/handoffs/LW-P3-DEC-001.md` |
 | `LW-P3-PREFLIGHT-001` | Exact synthetic storage/provider implementation preflight | Codex root controller | `reengineering/p3-decision-packet` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P3-PREFLIGHT-001.md` |
-| `LW-P3-001` | Synthetic conversation storage and deterministic provider foundation | Codex root controller | `reengineering/p3-storage-provider-foundation` | `IN PROGRESS` | `docs/agents/claims/LW-P3-001.md` |
+| `LW-P3-001` | Synthetic conversation storage and deterministic provider foundation | Codex root controller | `reengineering/p3-storage-provider-foundation` | `COMPLETED — VERIFIED` | `docs/agents/handoffs/LW-P3-001.md` |
 
 ## Completed in current milestone
 
@@ -122,11 +122,15 @@ from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 - **VERIFIED:** independent QA reproduced the canonical validator, 39 focused
   controls, 91 full controls, syntax/JSON/link/diff gates, and returned GREEN
   with no actionable finding.
-- **MEASURED, FINAL EVIDENCE PENDING:** the bounded `LW-P3-001` candidate now
-  contains additive `@latticework/storage` and `@latticework/providers`
-  packages plus shared contracts. Integrated local gates pass six workspace
-  typechecks, 26 storage tests, 19 provider tests, six boundary tests, ten
-  evidence-validator tests, and five native Chromium IndexedDB scenarios.
+- **VERIFIED:** the bounded `LW-P3-001` candidate
+  `d746b96225a3eaf59a5b5937e3f531e2cad280ef` contains additive
+  `@latticework/storage` and `@latticework/providers` packages plus shared
+  contracts. Canonical and separate clean-worktree gates pass all 12 frozen
+  requirements: six workspace typechecks, 26 storage tests, 19 provider tests,
+  six boundary tests, ten evidence-validator controls, five native Chromium
+  IndexedDB scenarios, and 107 of 107 repository controls with zero
+  fail/skip/todo. The evidence manifest contains 138 hashed artifacts and the
+  independent review is GREEN with no findings.
 - **OBSERVED:** no Phase 3 package is imported by `apps/web` or a legacy
   runtime path. The implementation has no real-data fixture, provider
   transport, listener, ambient credential read, activation API, feature
@@ -136,7 +140,9 @@ from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 
 - `LW-BLK-002` through `LW-BLK-004` are closed by explicit acceptance of
   ADR-001 through ADR-003.
-- `LW-BLK-005` remains open for Phase 3 data/storage work.
+- `LW-BLK-005` remains open for broader data ownership/schema/retention
+  inventory and every real-data migration; the bounded synthetic conversation
+  slice is verified but does not close those obligations.
 - `LW-BLK-006` remains open for optional gateway/worker/mesh work.
 - `LW-BLK-007` remains open for eventual cutover.
 
@@ -154,8 +160,8 @@ from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 - Documentation accuracy improvements.
 - Reproducible measurement tooling.
 - Documentation and evidence corrections that do not change product semantics.
-- Bounded synthetic-only `LW-P3-001` implementation under the accepted
-  preflight and active work claim.
+- Evidence-linked documentation and review/merge work for the completed
+  bounded synthetic-only `LW-P3-001` claim.
 
 ## Human decision required
 
@@ -173,10 +179,10 @@ from `93a36626f786a880210c53b8486c961e8b86e9ea`.
 
 ## Next handoff
 
-**Next action:** Freeze the green `LW-P3-001` implementation candidate, capture
-the canonical hash-pinned evidence bundle, obtain independent clean-worktree
-reproduction for that exact SHA, then finalize the evidence and open one
-review-ready pull request.
+**Next action:** Commit the finalized hash-pinned evidence and terminal
+documentation, open one review-ready pull request for the verified
+`LW-P3-001` candidate, pass required CI without requesting another CodeRabbit
+review, merge, and verify `main`.
 
 **Read first:** `reengineering/PHASE3_PREFLIGHT.md`,
 `reengineering/PHASE3_DECISION_PACKET.md`,
@@ -188,9 +194,8 @@ review-ready pull request.
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** the complete Phase 3 verification runner, browser
-IndexedDB scenarios, provider no-egress controls, evidence validator, full
-repository controls, and independent clean-worktree reproduction are green
-without activating any candidate runtime path.
+**Success condition:** the single Phase 3 pull request is merged, `main`
+contains the verified candidate and evidence, post-merge controls remain
+green, and no candidate runtime path has been activated.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`
