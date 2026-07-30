@@ -31,11 +31,11 @@
     "listener": "test-only 127.0.0.1 OS-selected run-owned synthetic fixture"
   },
   "validation": {
-    "focused_tests": "8/8 pass",
-    "repository_controls": "133/133 pass; zero fail/skip/todo",
+    "focused_tests": "13/13 pass",
+    "repository_controls": "138/138 pass; zero fail/skip/todo",
     "amendment_validator": "valid true",
     "active_scope_validator": "valid true",
     "diff_check": "pass",
-    "independent_review": "GREEN; 8/8 focused tests, validator valid, diff check clean"
+    "independent_review": "GREEN before PR review; CodeRabbit's single finding was fixed with isolated negative tests"
   }
 }

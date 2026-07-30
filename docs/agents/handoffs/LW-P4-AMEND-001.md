@@ -29,14 +29,17 @@ no-egress, and absent from application runtime.
 
 ## Verification
 
-- focused amendment tests: `8/8` pass;
-- full repository controls with immutable baseline: `133/133` pass, zero
+- focused amendment tests: `13/13` pass;
+- full repository controls with immutable baseline: `138/138` pass, zero
   fail/skip/todo;
 - amendment validator: `valid: true`;
 - Phase 4 active-scope validator: `valid: true`;
 - `git diff --check`: pass;
 - independent read-only spec QA: `GREEN`; reproduced 8/8 focused tests,
   validator validity, all four isolated negative locks, and clean diff hygiene.
+- the single CodeRabbit review found one combined-negative-test weakness; it
+  was fixed by splitting every affected authorization, listener, divergence,
+  entrypoint, and path lock into one-mutation/one-failure tests.
 
 ## Blockers
 

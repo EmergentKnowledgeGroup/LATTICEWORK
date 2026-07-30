@@ -31,24 +31,52 @@ test("accepts the locked no-runtime amendment and packet", () => {
   assert.equal(result.valid, true, result.failures.join("\n"));
 });
 
-test("rejects implementation, provider traffic, and deployment authority", () => {
-  const target = copyFixture("runtime-authority");
+test("rejects implementation authority", () => {
+  const target = copyFixture("implementation-authority");
   replace(target, "PHASE4_IMPLEMENTATION_PACKET.md", '"implementation_authorized": false', '"implementation_authorized": true');
+  const result = validatePhase4Amendment(target);
+  assert.equal(result.valid, false);
+  assert.match(result.failures.join("\n"), /implementation_authorized/i);
+});
+
+test("rejects real provider traffic authority", () => {
+  const target = copyFixture("provider-authority");
   replace(target, "PHASE4_IMPLEMENTATION_PACKET.md", '"real_provider_traffic_authorized": false', '"real_provider_traffic_authorized": true');
+  const result = validatePhase4Amendment(target);
+  assert.equal(result.valid, false);
+  assert.match(result.failures.join("\n"), /real_provider_traffic_authorized/i);
+});
+
+test("rejects deployment authority", () => {
+  const target = copyFixture("deployment-authority");
   replace(target, "PHASE4_IMPLEMENTATION_PACKET.md", '"deployment_authorized": false', '"deployment_authorized": true');
   const result = validatePhase4Amendment(target);
   assert.equal(result.valid, false);
-  assert.match(result.failures.join("\n"), /implementation_authorized|provider|deployment/i);
+  assert.match(result.failures.join("\n"), /deployment_authorized/i);
 });
 
-test("rejects wildcard listener, fixed port, and application listener", () => {
-  const target = copyFixture("listener");
+test("rejects a wildcard listener", () => {
+  const target = copyFixture("listener-bind");
   replace(target, "PHASE4_CHARACTERIZATION_AMENDMENT.md", '"bind": "127.0.0.1"', '"bind": "0.0.0.0"');
+  const result = validatePhase4Amendment(target);
+  assert.equal(result.valid, false);
+  assert.match(result.failures.join("\n"), /listener bind/i);
+});
+
+test("rejects a fixed listener port", () => {
+  const target = copyFixture("listener-port");
   replace(target, "PHASE4_CHARACTERIZATION_AMENDMENT.md", '"port": "os-selected"', '"port": 8080');
+  const result = validatePhase4Amendment(target);
+  assert.equal(result.valid, false);
+  assert.match(result.failures.join("\n"), /listener port/i);
+});
+
+test("rejects an application listener", () => {
+  const target = copyFixture("application-listener");
   replace(target, "PHASE4_IMPLEMENTATION_PACKET.md", '"application_listener_authorized": false', '"application_listener_authorized": true');
   const result = validatePhase4Amendment(target);
   assert.equal(result.valid, false);
-  assert.match(result.failures.join("\n"), /bind|port|application_listener/i);
+  assert.match(result.failures.join("\n"), /application_listener_authorized/i);
 });
 
 test("rejects a non-fixture amendment listener", () => {
@@ -67,13 +95,20 @@ test("rejects a non-synthetic packet listener", () => {
   assert.match(result.failures.join("\n"), /synthetic-only/i);
 });
 
-test("rejects divergence drift and default entrypoint", () => {
-  const target = copyFixture("scope-drift");
+test("rejects divergence drift", () => {
+  const target = copyFixture("divergence-drift");
   replace(target, "PHASE4_CHARACTERIZATION_AMENDMENT.md", '"P4-CHAT-002A",', "");
+  const result = validatePhase4Amendment(target);
+  assert.equal(result.valid, false);
+  assert.match(result.failures.join("\n"), /divergence/i);
+});
+
+test("rejects a default candidate entrypoint", () => {
+  const target = copyFixture("default-entrypoint");
   replace(target, "PHASE4_IMPLEMENTATION_PACKET.md", '"entrypoint_default": false', '"entrypoint_default": true');
   const result = validatePhase4Amendment(target);
   assert.equal(result.valid, false);
-  assert.match(result.failures.join("\n"), /divergence|entrypoint/i);
+  assert.match(result.failures.join("\n"), /entrypoint/i);
 });
 
 test("rejects owned path drift", () => {

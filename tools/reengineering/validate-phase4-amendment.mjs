@@ -70,7 +70,7 @@ export function validatePhase4Amendment(root) {
     assert.equal(packet.application_listener_authorized, false, "application_listener_authorized must be false");
     assert.equal(packet.test_listener.synthetic_only, true, "packet test listener must be synthetic-only");
     assert.equal(packet.entrypoint, "apps/web/p4.html");
-    assert.equal(packet.entrypoint_default, false);
+    assert.equal(packet.entrypoint_default, false, "entrypoint_default must be false");
     assert.equal(packet.production_build_authorized, false);
     assert.equal(packet.candidate_storage, "latticework::conversation");
     assert.equal(packet.candidate_storage_synthetic_only, true);

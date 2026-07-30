@@ -316,11 +316,12 @@ Next command: `Review PR #4 once, address actionable findings in one batch, then
 - **ACCEPTED** — maintainer authorized documented defect divergences and a run-owned loopback-only synthetic streaming fixture.
 - **OBSERVED** — real data, credentials, provider traffic, activation, deployment, and cutover remain disabled.
 - **VERIFIED** — eight original defects are accepted divergences, eleven cases remain bounded retests, and all 39 original results remain immutable.
-- **MEASURED** — amendment controls pass 8/8 and full repository controls pass 133/133 with zero fail, skip, or todo.
+- **MEASURED** — post-review amendment controls pass 13/13 and full repository controls pass 138/138 with zero fail, skip, or todo.
 - **VERIFIED** — amendment and active-scope validators are valid; negative controls reject runtime authority, unsafe listeners, scope drift, and owned/protected-path drift.
 - **VERIFIED** — independent QA's one finding was fixed by machine-locking fixture/synthetic-only flags and exact owned/protected paths.
 - **VERIFIED** — final independent read-only QA returned GREEN after reproducing 8/8 focused tests, validator validity, all isolated negative locks, and clean diff hygiene.
 - **VERIFIED** — PR #4 opened against `EmergentKnowledgeGroup/LATTICEWORK:main` from pushed commit `99bc4409606d3af1b9d6a2ac938859bba58c3517`.
+- **VERIFIED** — the single CodeRabbit review's one actionable testing finding was fixed by splitting combined negative cases into one mutation and one specific assertion each.
 
 ### Blockers
 
