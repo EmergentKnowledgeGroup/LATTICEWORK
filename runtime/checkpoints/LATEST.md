@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-30T23:36:49Z`
+Updated: `2026-07-30T23:39:48Z`
 
 ## CURRENT
 
 Track: `LW_P4_AMENDMENT WORK`
-Step: `phase4-amendment-post-green`
-Note: The control-only amendment and corrected implementation proposal are machine-valid and full controls are GREEN; eleven bounded characterization retests and explicit packet acceptance remain required.
+Step: `phase4-amendment-pr-open`
+Note: PR #4 contains the independently GREEN control-only amendment and corrected implementation proposal; no runtime authority is granted.
 Branch: `reengineering/p4-characterization-amendment`
-Head: `a9f8cdd877e835f7bd86edd49d44ba0b711ef205`
-Next command: `Execute only the eleven retests frozen in reengineering/PHASE4_CHARACTERIZATION_AMENDMENT.md; do not begin LW-P4-001.`
+Head: `99bc4409606d3af1b9d6a2ac938859bba58c3517`
+Next command: `Review PR #4 once, address actionable findings in one batch, then merge only if checks remain GREEN; do not begin LW-P4-001.`
 
 ## LW_M0_BASELINE WORK
 
@@ -304,11 +304,11 @@ Next command: `Obtain maintainer disposition for a separately claimed Phase 4 ch
 
 ## LW_P4_AMENDMENT WORK
 
-Step: `phase4-amendment-post-green`
-Note: The control-only amendment and corrected implementation proposal are machine-valid and full controls are GREEN; eleven bounded characterization retests and explicit packet acceptance remain required.
+Step: `phase4-amendment-pr-open`
+Note: PR #4 contains the independently GREEN control-only amendment and corrected implementation proposal; no runtime authority is granted.
 Branch: `reengineering/p4-characterization-amendment`
-Head: `a9f8cdd877e835f7bd86edd49d44ba0b711ef205`
-Next command: `Execute only the eleven retests frozen in reengineering/PHASE4_CHARACTERIZATION_AMENDMENT.md; do not begin LW-P4-001.`
+Head: `99bc4409606d3af1b9d6a2ac938859bba58c3517`
+Next command: `Review PR #4 once, address actionable findings in one batch, then merge only if checks remain GREEN; do not begin LW-P4-001.`
 
 ### Validations
 
@@ -320,6 +320,7 @@ Next command: `Execute only the eleven retests frozen in reengineering/PHASE4_CH
 - **VERIFIED** — amendment and active-scope validators are valid; negative controls reject runtime authority, unsafe listeners, scope drift, and owned/protected-path drift.
 - **VERIFIED** — independent QA's one finding was fixed by machine-locking fixture/synthetic-only flags and exact owned/protected paths.
 - **VERIFIED** — final independent read-only QA returned GREEN after reproducing 8/8 focused tests, validator validity, all isolated negative locks, and clean diff hygiene.
+- **VERIFIED** — PR #4 opened against `EmergentKnowledgeGroup/LATTICEWORK:main` from pushed commit `99bc4409606d3af1b9d6a2ac938859bba58c3517`.
 
 ### Blockers
 
