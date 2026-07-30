@@ -7,12 +7,14 @@
 - `M0`: complete.
 - `M1`: bounded shell characterization is complete; `LW-P4-CHAR-001` executed
   all 39 primary-Chat cases but is aggregate BLOCKED at 20 PASS, 16 UNKNOWN,
-  and 3 FAIL.
+  and 3 FAIL. The maintainer accepted eight confirmed defects as divergences;
+  eleven bounded retests remain.
 - `M2`: accepted architecture and feature-free typed foundation independently
   verified, reviewed once, and merged.
 - `M3`: ADR-004 through ADR-006 are accepted and the bounded synthetic/mock
   foundation is merged but inactive. Candidate integration remains blocked
-  pending a separately accepted Phase 4 characterization amendment.
+  pending amended characterization GREEN and explicit acceptance of the
+  corrected implementation packet.
 - `M4` and later: not started; blocked by their recorded decision/evidence
   gates.
 
@@ -40,8 +42,9 @@ Current gate:
 - `LW-P4-001` remains blocked until characterization is fully GREEN and a
   later implementation packet is explicitly accepted.
 - The next work unit requires maintainer disposition of a new characterization
-  amendment; the current lock does not permit silently relabeling UNKNOWN or
-  FAIL results.
+  amendment; that disposition now exists in
+  `reengineering/PHASE4_CHARACTERIZATION_AMENDMENT.md`. Original UNKNOWN/FAIL
+  receipts remain unchanged while bounded retests are pending.
 
 Exit criteria:
 

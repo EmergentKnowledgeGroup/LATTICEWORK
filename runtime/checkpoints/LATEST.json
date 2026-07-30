@@ -1,8 +1,8 @@
 {
   "schema": "latticework.context_checkpoint.tracks.v1",
-  "captured_at": "2026-07-30T22:32:57Z",
+  "captured_at": "2026-07-30T23:36:49Z",
   "repo_root": "Z:\\LATTICEWORK",
-  "current_track": "LW_P4_CHARACTERIZATION WORK",
+  "current_track": "LW_P4_AMENDMENT WORK",
   "tracks": {
     "LW_M0_BASELINE WORK": {
       "track": "LW_M0_BASELINE WORK",
@@ -585,7 +585,54 @@
       ],
       "updated_at": "2026-07-30T22:32:57Z",
       "captured_at": "2026-07-30T22:32:57Z"
+    },
+    "LW_P4_AMENDMENT WORK": {
+      "track": "LW_P4_AMENDMENT WORK",
+      "step": "phase4-amendment-post-green",
+      "note": "The control-only amendment and corrected implementation proposal are machine-valid and full controls are GREEN; eleven bounded characterization retests and explicit packet acceptance remain required.",
+      "branch": "reengineering/p4-characterization-amendment",
+      "head": "a9f8cdd877e835f7bd86edd49d44ba0b711ef205",
+      "next_cmd": "Execute only the eleven retests frozen in reengineering/PHASE4_CHARACTERIZATION_AMENDMENT.md; do not begin LW-P4-001.",
+      "validations": [
+        "VERIFIED: PR #3 merged the original blocked characterization evidence.",
+        "ACCEPTED: maintainer authorized documented defect divergences and a run-owned loopback-only synthetic streaming fixture.",
+        "OBSERVED: real data, credentials, provider traffic, activation, deployment, and cutover remain disabled.",
+        "VERIFIED: eight original defects are accepted divergences, eleven cases remain bounded retests, and all 39 original results remain immutable.",
+        "MEASURED: amendment controls pass 8/8 and full repository controls pass 133/133 with zero fail, skip, or todo.",
+        "VERIFIED: amendment and active-scope validators are valid; negative controls reject runtime authority, unsafe listeners, scope drift, and owned/protected-path drift.",
+        "VERIFIED: independent QA findings were fixed by machine-locking fixture/synthetic-only flags and exact owned/protected paths with isolated negative tests.",
+        "VERIFIED: final independent read-only QA returned GREEN after reproducing 8/8 focused tests, validator validity, all isolated negative locks, and clean diff hygiene."
+      ],
+      "decisions": [
+        "Treat confirmed baseline defects as documented divergences rather than compatibility requirements.",
+        "Permit one run-owned 127.0.0.1 synthetic streaming fixture only."
+      ],
+      "changed_paths": [
+        "docs/agents/claims/LW-P4-AMEND-001.md",
+        "reengineering/PHASE4_CHARACTERIZATION_AMENDMENT.md",
+        "reengineering/PHASE4_IMPLEMENTATION_PACKET.md",
+        "additive amendment validators/tests/evidence",
+        "Phase 4 living docs",
+        "docs/agents/handoffs/LW-P4-AMEND-001.md",
+        "both checkpoint surfaces"
+      ],
+      "blockers": [
+        {
+          "id": "LW-BLK-009",
+          "severity": "P1",
+          "status": "OPEN",
+          "summary": "Eleven bounded retests and independent reproduction remain required."
+        },
+        {
+          "id": "LW-BLK-010",
+          "severity": "P1",
+          "status": "OPEN",
+          "summary": "Implementation packet requires separate maintainer acceptance."
+        }
+      ],
+      "updated_at": "2026-07-30T23:36:49Z",
+      "captured_at": "2026-07-30T23:36:49Z"
     }
   },
-  "updated": "2026-07-30T22:32:57Z"
+  "updated": "2026-07-30T23:36:49Z"
 }

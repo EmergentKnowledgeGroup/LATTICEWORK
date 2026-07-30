@@ -7,9 +7,9 @@
 | HTTP launch, first run, and skip | `evidence/phase-1/LW-P1-001/` | none | C2 | none | Phase 3/4 data-provider and vertical-slice gates |
 | Edge and direct-file first render | `evidence/phase-0/LW-P0-003-browser/` | none | C1 | none | platform/cutover decision |
 | Local model connection | `evidence/phase-4/LW-P4-CHAR-001/` | none | C0 | none | exact intercepted Ollama request observed; timed fragmentation remains UNKNOWN and no real provider was contacted |
-| Cloud provider connection | `evidence/phase-4/LW-P4-CHAR-001/` | none | C0 | none | visible OpenAI choice dispatched Groq and was blocked before transmission; real-provider compatibility remains untested |
+| Cloud provider connection | `evidence/phase-4/LW-P4-CHAR-001/` | none | D/C0 | OpenAI choice dispatching Groq is an accepted baseline divergence | candidate must preserve explicit mock selection; real-provider compatibility remains untested |
 | Chat shell | `evidence/phase-1/LW-P1-001/` | none | C2 | none | Phase 4 feature migration |
-| Chat send/stream/cancel/retry and persistence | `evidence/phase-4/LW-P4-CHAR-001/` | none | C0 | none | mixed 20 PASS / 16 UNKNOWN / 3 FAIL packet; no visible cancel control and no aggregate GREEN |
+| Chat send/stream/cancel/retry and persistence | `evidence/phase-4/LW-P4-CHAR-001/` | none | D/C0 | missing visible cancellation is an accepted baseline divergence | eleven bounded retests and candidate evidence remain; no aggregate GREEN |
 | Identity, memory, continuity | pending | none | C0 | none | data/security decisions and Phase 5 |
 | Fresh storage initialization shape | `evidence/phase-1/LW-P1-001/artifacts/shell-and-storage/runtime-snapshot.json` | none | C2 | none | LW-BLK-005 |
 | Garden boot/render and no-WebGPU fallback | `evidence/phase-1/LW-P1-001/` | none | C2 | none | Phase 5/6 feature migration |

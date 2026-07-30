@@ -18,15 +18,19 @@ const ALLOWED_PATHS = new Set([
   "docs/agents/claims/LW-P4-CTRL-001.md",
   "docs/agents/claims/LW-P4-PREFLIGHT-001.md",
   "docs/agents/claims/LW-P4-CHAR-001.md",
+  "docs/agents/claims/LW-P4-AMEND-001.md",
   "docs/agents/handoffs/LW-P4-CTRL-001.md",
   "docs/agents/handoffs/LW-P4-PREFLIGHT-001.md",
   "docs/agents/handoffs/LW-P4-CHAR-001.md",
+  "docs/agents/handoffs/LW-P4-AMEND-001.md",
   "docs/COMPATIBILITY.md",
   "reengineering/MIGRATION_LEDGER.md",
   "reengineering/PARITY_MATRIX.md",
   "reengineering/BLOCKERBOARD.md",
   "reengineering/EXECUTION_CHECKLIST.md",
   "reengineering/PHASE4_PREFLIGHT.md",
+  "reengineering/PHASE4_CHARACTERIZATION_AMENDMENT.md",
+  "reengineering/PHASE4_IMPLEMENTATION_PACKET.md",
   "reengineering/checkpoints/LATEST.json",
   "reengineering/checkpoints/LATEST.md",
   "runtime/checkpoints/LATEST.json",
@@ -38,18 +42,21 @@ const ALLOWED_PATHS = new Set([
   "tests/reengineering/phase3-preflight.test.mjs",
   "tests/reengineering/phase4-active-scope.test.mjs",
   "tests/reengineering/phase4-characterization-validation.test.mjs",
+  "tests/reengineering/phase4-amendment.test.mjs",
   "tools/reengineering/git-scope-common.mjs",
   "tools/reengineering/run-phase4-characterization.ps1",
   "tools/reengineering/validate-phase3-decision-packet.mjs",
   "tools/reengineering/validate-phase3-preflight.mjs",
   "tools/reengineering/validate-phase4-active-scope.mjs",
   "tools/reengineering/validate-phase4-characterization.mjs",
+  "tools/reengineering/validate-phase4-amendment.mjs",
 ]);
 
 const ALLOWED_PREFIXES = [
   "reengineering/evidence/phase-4/LW-P4-CTRL-001/",
   "reengineering/evidence/phase-4/LW-P4-PREFLIGHT-001/",
   "reengineering/evidence/phase-4/LW-P4-CHAR-001/",
+  "reengineering/evidence/phase-4/LW-P4-AMEND-001/",
 ];
 
 export function findUnauthorizedPhase4Paths(paths) {
