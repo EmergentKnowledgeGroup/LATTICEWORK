@@ -87,9 +87,12 @@ characterization result grants candidate implementation authority.
 - **OBSERVED:** the visible OpenAI onboarding choice dispatches the Groq Chat
   Completions target instead of the locked OpenAI target; all such requests
   were blocked before transmission.
-- **VERIFIED:** strict GREEN validation rejects the bundle, all 122 repository
+- **VERIFIED:** strict GREEN validation rejects the bundle, all 125 repository
   controls pass, the immutable baseline remains clean, raw profiles/staging are
   deleted, and no real data, credential, or provider traffic was used.
+- **VERIFIED:** independent read-only source QA passed after three
+  evidence-integrity defects were repaired; this blocked packet does not claim
+  a separate clean-worktree full browser reproduction.
 - `LW-BLK-009` and `LW-BLK-010` remain open. This completed characterization
   work unit grants no implementation authority.
 

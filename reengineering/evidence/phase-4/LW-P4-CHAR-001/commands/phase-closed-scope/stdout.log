@@ -1,0 +1,298 @@
+TAP version 13
+# Subtest: canonical Phase 3 decision packet records bounded maintainer acceptance
+ok 1 - canonical Phase 3 decision packet records bounded maintainer acceptance
+  ---
+  duration_ms: 150.1145
+  type: 'test'
+  ...
+# Subtest: validator rejects accepted status without implementation authority
+ok 2 - validator rejects accepted status without implementation authority
+  ---
+  duration_ms: 6.9402
+  type: 'test'
+  ...
+# Subtest: validator rejects a weakened preservation registry
+ok 3 - validator rejects a weakened preservation registry
+  ---
+  duration_ms: 7.0797
+  type: 'test'
+  ...
+# Subtest: validator permits additive registry expansion while retaining the pinned floor
+ok 4 - validator permits additive registry expansion while retaining the pinned floor
+  ---
+  duration_ms: 6.6978
+  type: 'test'
+  ...
+# Subtest: validator rejects premature blocker closure
+ok 5 - validator rejects premature blocker closure
+  ---
+  duration_ms: 5.6725
+  type: 'test'
+  ...
+# Subtest: validator rejects an Accepted ADR without the exact decision receipt
+ok 6 - validator rejects an Accepted ADR without the exact decision receipt
+  ---
+  duration_ms: 5.3789
+  type: 'test'
+  ...
+# Subtest: validator rejects removal of a required decision invariant
+ok 7 - validator rejects removal of a required decision invariant
+  ---
+  duration_ms: 5.8265
+  type: 'test'
+  ...
+# Subtest: validator rejects unstable versioned dataset ID
+ok 8 - validator rejects unstable versioned dataset ID
+  ---
+  duration_ms: 5.7571
+  type: 'test'
+  ...
+# Subtest: validator rejects credential-bearing export policy
+ok 9 - validator rejects credential-bearing export policy
+  ---
+  duration_ms: 5.3954
+  type: 'test'
+  ...
+# Subtest: validator rejects journal deletion during rollback
+ok 10 - validator rejects journal deletion during rollback
+  ---
+  duration_ms: 5.2589
+  type: 'test'
+  ...
+# Subtest: validator rejects unstaged import promotion
+ok 11 - validator rejects unstaged import promotion
+  ---
+  duration_ms: 5.171
+  type: 'test'
+  ...
+# Subtest: validator rejects exported real-data digests
+ok 12 - validator rejects exported real-data digests
+  ---
+  duration_ms: 5.3438
+  type: 'test'
+  ...
+# Subtest: validator rejects real provider traffic
+ok 13 - validator rejects real provider traffic
+  ---
+  duration_ms: 5.052
+  type: 'test'
+  ...
+# Subtest: validator rejects implicit retry
+ok 14 - validator rejects implicit retry
+  ---
+  duration_ms: 5.0493
+  type: 'test'
+  ...
+# Subtest: validator rejects credential resolution before an exact egress grant
+ok 15 - validator rejects credential resolution before an exact egress grant
+  ---
+  duration_ms: 5.5215
+  type: 'test'
+  ...
+# Subtest: validator rejects Phase 3 proxy listener
+ok 16 - validator rejects Phase 3 proxy listener
+  ---
+  duration_ms: 6.6624
+  type: 'test'
+  ...
+# Subtest: validator rejects ambient pairing bootstrap
+ok 17 - validator rejects ambient pairing bootstrap
+  ---
+  duration_ms: 5.4127
+  type: 'test'
+  ...
+# Subtest: validator rejects removed real-data prohibition
+ok 18 - validator rejects removed real-data prohibition
+  ---
+  duration_ms: 5.9928
+  type: 'test'
+  ...
+# Subtest: validator rejects a weakened blocker condition
+ok 19 - validator rejects a weakened blocker condition
+  ---
+  duration_ms: 6.0342
+  type: 'test'
+  ...
+# Subtest: validator rejects a semantically weakened invariant statement
+ok 20 - validator rejects a semantically weakened invariant statement
+  ---
+  duration_ms: 4.9884
+  type: 'test'
+  ...
+# Subtest: validator rejects removal of an ADR safety clause
+ok 21 - validator rejects removal of an ADR safety clause
+  ---
+  duration_ms: 5.0028
+  type: 'test'
+  ...
+# Subtest: validator rejects Markdown that drifts from the structured packet
+ok 22 - validator rejects Markdown that drifts from the structured packet
+  ---
+  duration_ms: 5.1456
+  type: 'test'
+  ...
+# Subtest: canonical CLI cannot disable or rebase Git scope validation
+ok 23 - canonical CLI cannot disable or rebase Git scope validation
+  ---
+  duration_ms: 52.5815
+  type: 'test'
+  ...
+# Subtest: decision packet closed historical scope still rejects an over-broad earlier range
+ok 24 - decision packet closed historical scope still rejects an over-broad earlier range
+  ---
+  duration_ms: 167.3793
+  type: 'test'
+  ...
+# Subtest: decision packet closed historical scope rejects a non-ancestor terminal
+ok 25 - decision packet closed historical scope rejects a non-ancestor terminal
+  ---
+  duration_ms: 33.052
+  type: 'test'
+  ...
+# Subtest: accepted validator permits only the exact bounded Phase 3 implementation surface
+ok 26 - accepted validator permits only the exact bounded Phase 3 implementation surface
+  ---
+  duration_ms: 0.4523
+  type: 'test'
+  ...
+# Subtest: canonical Phase 3 preflight freezes the accepted bounded implementation slice
+ok 27 - canonical Phase 3 preflight freezes the accepted bounded implementation slice
+  ---
+  duration_ms: 140.3796
+  type: 'test'
+  ...
+# Subtest: preflight rejects implementation authority without the accepted disposition
+ok 28 - preflight rejects implementation authority without the accepted disposition
+  ---
+  duration_ms: 2.2843
+  type: 'test'
+  ...
+# Subtest: preflight rejects real user data
+ok 29 - preflight rejects real user data
+  ---
+  duration_ms: 1.4457
+  type: 'test'
+  ...
+# Subtest: preflight rejects real provider traffic
+ok 30 - preflight rejects real provider traffic
+  ---
+  duration_ms: 1.5283
+  type: 'test'
+  ...
+# Subtest: preflight rejects real credentials
+ok 31 - preflight rejects real credentials
+  ---
+  duration_ms: 1.717
+  type: 'test'
+  ...
+# Subtest: preflight rejects a Phase 3 listener
+ok 32 - preflight rejects a Phase 3 listener
+  ---
+  duration_ms: 1.4314
+  type: 'test'
+  ...
+# Subtest: preflight rejects a candidate cutover
+ok 33 - preflight rejects a candidate cutover
+  ---
+  duration_ms: 1.7697
+  type: 'test'
+  ...
+# Subtest: preflight rejects legacy mutation
+ok 34 - preflight rejects legacy mutation
+  ---
+  duration_ms: 1.3699
+  type: 'test'
+  ...
+# Subtest: preflight rejects drift in the conversation dataset contract
+ok 35 - preflight rejects drift in the conversation dataset contract
+  ---
+  duration_ms: 1.4992
+  type: 'test'
+  ...
+# Subtest: preflight rejects weakened provider identity, retry, or egress rules
+ok 36 - preflight rejects weakened provider identity, retry, or egress rules
+  ---
+  duration_ms: 1.6426
+  type: 'test'
+  ...
+# Subtest: preflight rejects an owned implementation path outside the frozen package surface
+ok 37 - preflight rejects an owned implementation path outside the frozen package surface
+  ---
+  duration_ms: 1.7474
+  type: 'test'
+  ...
+# Subtest: preflight rejects a removed legacy no-touch prefix
+ok 38 - preflight rejects a removed legacy no-touch prefix
+  ---
+  duration_ms: 1.4527
+  type: 'test'
+  ...
+# Subtest: preflight rejects a missing required verification gate
+ok 39 - preflight rejects a missing required verification gate
+  ---
+  duration_ms: 1.6844
+  type: 'test'
+  ...
+# Subtest: preflight rejects Markdown projection drift
+ok 40 - preflight rejects Markdown projection drift
+  ---
+  duration_ms: 1.4215
+  type: 'test'
+  ...
+# Subtest: canonical CLI cannot disable or rebase Git scope validation
+ok 41 - canonical CLI cannot disable or rebase Git scope validation
+  ---
+  duration_ms: 52.152
+  type: 'test'
+  ...
+# Subtest: preflight closed historical scope still rejects an over-broad earlier range
+ok 42 - preflight closed historical scope still rejects an over-broad earlier range
+  ---
+  duration_ms: 161.7718
+  type: 'test'
+  ...
+# Subtest: preflight closed historical scope rejects a non-ancestor terminal
+ok 43 - preflight closed historical scope rejects a non-ancestor terminal
+  ---
+  duration_ms: 30.737
+  type: 'test'
+  ...
+# Subtest: canonical Phase 4 active scope accepts the currently claimed packet
+ok 44 - canonical Phase 4 active scope accepts the currently claimed packet
+  ---
+  duration_ms: 205.3906
+  type: 'test'
+  ...
+# Subtest: active scope rejects unauthorized tracked and untracked path classes
+ok 45 - active scope rejects unauthorized tracked and untracked path classes
+  ---
+  duration_ms: 0.7442
+  type: 'test'
+  ...
+# Subtest: Git range collection retains add-then-delete paths and all active states
+ok 46 - Git range collection retains add-then-delete paths and all active states
+  ---
+  duration_ms: 726.3271
+  type: 'test'
+  ...
+# Subtest: active scope rejects a real current untracked unauthorized path
+ok 47 - active scope rejects a real current untracked unauthorized path
+  ---
+  duration_ms: 209.616
+  type: 'test'
+  ...
+# Subtest: canonical Phase 4 active-scope CLI cannot disable or rebase validation
+ok 48 - canonical Phase 4 active-scope CLI cannot disable or rebase validation
+  ---
+  duration_ms: 51.1038
+  type: 'test'
+  ...
+1..48
+# tests 48
+# suites 0
+# pass 48
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1258.157

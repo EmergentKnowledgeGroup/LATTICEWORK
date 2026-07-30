@@ -1,0 +1,50 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "evidence_label": "MEASURED",
+  "gate": "offline-denied-egress",
+  "status": "BLOCKED",
+  "exit_code": 1,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "base_commit": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  "candidate_sha": "6151404511facb3916541512da78f74f3a2e6ec6",
+  "command": [
+    "phase4-aggregate",
+    "offline-denied-egress"
+  ],
+  "details": {
+    "results": [
+      {
+        "id": "P4-DEG-001A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-EGR-001A",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-EGR-001B",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-EGR-001C",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-EGR-001D",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-EGR-001E",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-EGR-001F",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-EGR-001G",
+        "status": "PASS"
+      }
+    ]
+  }
+}

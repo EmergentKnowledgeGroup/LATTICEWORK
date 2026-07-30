@@ -1,0 +1,35 @@
+{
+  "allowed_origin": "http://127.0.0.1:4184",
+  "expected_target": null,
+  "expected_requests": [],
+  "fixture_probes": [],
+  "blocked": [
+    {
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "resource_type": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:1234/v1/models",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://phase4.invalid/navigation",
+      "resource_type": "document"
+    },
+    {
+      "method": "GET",
+      "url": "https://raw.githubusercontent.com/Chaos2Cured/FreeLattice/main/version.json",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://freelattice.com/version.json",
+      "resource_type": "fetch"
+    }
+  ],
+  "blocked_websockets": [],
+  "console": []
+}

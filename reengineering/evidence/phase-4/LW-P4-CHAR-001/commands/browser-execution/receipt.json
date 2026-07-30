@@ -1,0 +1,23 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "evidence_label": "MEASURED",
+  "gate": "browser-execution",
+  "status": "PASS",
+  "exit_code": 0,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "base_commit": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  "candidate_sha": "6151404511facb3916541512da78f74f3a2e6ec6",
+  "command": [
+    "Z:\\LATTICEWORK\\tests\\characterization\\node_modules\\.bin\\playwright.cmd",
+    "test",
+    "specs/phase4-chat.spec.mjs",
+    "--config",
+    "playwright.config.mjs",
+    "--workers=1",
+    "--retries=0"
+  ],
+  "details": {
+    "stdout": "commands/browser-execution/stdout.log",
+    "stderr": "commands/browser-execution/stderr.log"
+  }
+}

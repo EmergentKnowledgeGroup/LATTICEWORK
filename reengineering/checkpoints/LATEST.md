@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-30T21:15:43Z`
+Updated: `2026-07-30T22:28:19Z`
 
 ## CURRENT
 
-Track: `LW_P4_PREFLIGHT WORK`
-Step: `phase4-preflight-locked-green`
-Note: Phase 4 primary-Chat characterization preflight version 1.0 is locked after SpecSwarm consolidation, control repair, 116/116 repository controls, and independent post-repair guardrail GREEN; implementation remains blocked.
+Track: `LW_P4_CHARACTERIZATION WORK`
+Step: `phase4-characterization-complete-blocked`
+Note: Executed all 39 locked primary-Chat subcases with 20 PASS, 16 UNKNOWN, and 3 FAIL; strict GREEN validation rejected the bundle and implementation remains blocked.
 Branch: `reengineering/p4-chat-vertical-slice-preflight`
-Head: `03dfdfc381365201fd53a32c9c5c057f0cdbf953`
-Next command: `Create docs/agents/claims/LW-P4-CHAR-001.md, transition the active-scope validator test-first to the exact locked characterization path set, and execute only the additive characterization packet.`
+Head: `6151404511facb3916541512da78f74f3a2e6ec6`
+Next command: `Obtain maintainer disposition for a separately claimed Phase 4 characterization amendment; do not begin LW-P4-001 under the blocked packet.`
 
 ## LW_M0_BASELINE WORK
 
@@ -273,3 +273,29 @@ Next command: `Read docs/agents/handoffs/LW-P4-CTRL-001.md before transitioning 
 
 - `LW-BLK-008` is CLOSED by the verified phase-closed historical and claim-specific active-scope controls.
 - `LW-BLK-009` remains OPEN until the 39 mandatory Phase 4 characterization subcases are independently GREEN.
+
+## LW_P4_CHARACTERIZATION WORK
+
+Step: `phase4-characterization-complete-blocked`
+Note: Executed all 39 locked primary-Chat subcases with 20 PASS, 16 UNKNOWN, and 3 FAIL; strict GREEN validation rejected the bundle and implementation remains blocked.
+Branch: `reengineering/p4-chat-vertical-slice-preflight`
+Head: `6151404511facb3916541512da78f74f3a2e6ec6`
+Next command: `Obtain maintainer disposition for a separately claimed Phase 4 characterization amendment; do not begin LW-P4-001 under the blocked packet.`
+
+### Validations
+
+- **VERIFIED** — `LW-P4-PREFLIGHT-001` version 1.0 is locked and independent final QA is GREEN.
+- **VERIFIED** — `LW-P4-CTRL-001` passes 48 focused controls and the full repository-control suite passes 116 of 116.
+- **MEASURED** — all 39 atomic subcases executed with one worker and zero retries: 20 PASS, 16 UNKNOWN, 3 FAIL, 0 CONDITIONAL.
+- **MEASURED** — full repository controls passed 125/125 with zero fail, skip, or todo.
+- **VERIFIED** — strict GREEN validation rejected the BLOCKED bundle; the promoted manifest hashes 146 redacted artifacts.
+- **VERIFIED** — all recorded profile and run staging paths are absent after owned, contained, no-reparse cleanup.
+- **VERIFIED** — independent read-only source QA passed; its receipt remains BLOCKED because no separate clean-worktree full browser reproduction was claimed.
+- **OBSERVED** — visible OpenAI setup dispatches the Groq Chat Completions target instead of the locked OpenAI target.
+- **OBSERVED** — primary Chat exposes no visible cancellation control.
+- **OBSERVED** — `implementation_authorized` remains false.
+
+### Blockers
+
+- `LW-BLK-009` remains OPEN until every mandatory characterization result is PASS and independent reproduction is accepted.
+- `LW-BLK-010` keeps `LW-P4-001` implementation blocked.

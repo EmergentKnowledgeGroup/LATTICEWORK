@@ -1,0 +1,28 @@
+{
+  "schema": "latticework.phase4.atomic-result.v1",
+  "group_id": "P4-EGR-001",
+  "subcase_id": "P4-EGR-001A",
+  "probe": "unexpected-http-origin",
+  "provider": null,
+  "status": "PASS",
+  "evidence_label": "OBSERVED",
+  "profile_id": "P4-PROFILE-P4-EGR-001A",
+  "fresh_profile": true,
+  "notes": [
+    "injected transport was blocked before transmission"
+  ],
+  "request_count": 0,
+  "blocked_count": 5,
+  "terminal_count": null,
+  "operation": {
+    "post_delta_retry": false,
+    "duplicate_terminal": false
+  },
+  "cleanup_status": "persistent-browser-context-closed",
+  "profile_path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-EGR-001A",
+  "profile_empty_at_creation": true,
+  "profile_ownership_marker": "phase4-run-marker-v1",
+  "context_closed": true,
+  "fixture_request_observed": true,
+  "private_sentinel_leak": null
+}

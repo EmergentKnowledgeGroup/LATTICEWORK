@@ -1,0 +1,45 @@
+
+Running 39 tests using 1 worker
+
+
+
+[1/39] specs\phase4-chat.spec.mjs:417:3 › P4-ONB-001A onboarding-visible
+[2/39] specs\phase4-chat.spec.mjs:417:3 › P4-ONB-001B absent-configuration
+[3/39] specs\phase4-chat.spec.mjs:417:3 › P4-ONB-001C invalid-configuration-reload
+[4/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-001A fragmented-success
+[5/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-002A fragmented-success
+[6/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-003A empty-send
+[7/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-003B duplicate-activation
+[8/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-004A cancel-before-dispatch
+[9/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-005A cancel-after-first-delta
+[10/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-005B late-delta-after-cancel
+[11/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-005C duplicate-terminal-after-cancel
+[12/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-006A http-429
+[13/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-006B context-limit
+[14/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-007A http-401
+[15/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-007B policy-refusal
+[16/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-008A timeout
+[17/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-008B network-abort
+[18/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-009A malformed-fragment
+[19/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-009B empty-success
+[20/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-009C missing-terminal
+[21/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-009D duplicate-terminal
+[22/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-009E out-of-order-fragments
+[23/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-010A navigation-before-first-delta
+[24/39] specs\phase4-chat.spec.mjs:417:3 › P4-CHAT-010B navigation-after-first-delta
+[25/39] specs\phase4-chat.spec.mjs:417:3 › P4-SIG-001A signal-report-completed
+[26/39] specs\phase4-chat.spec.mjs:417:3 › P4-SIG-001B signal-report-cancelled
+[27/39] specs\phase4-chat.spec.mjs:417:3 › P4-SIG-001C signal-report-failed
+[28/39] specs\phase4-chat.spec.mjs:417:3 › P4-RESP-001A mobile-bounded-flow
+[29/39] specs\phase4-chat.spec.mjs:417:3 › P4-A11Y-001A keyboard-focus-name-live-region
+[30/39] specs\phase4-chat.spec.mjs:417:3 › P4-A11Y-001B forced-colors
+[31/39] specs\phase4-chat.spec.mjs:417:3 › P4-A11Y-001C reduced-motion
+[32/39] specs\phase4-chat.spec.mjs:417:3 › P4-DEG-001A warm-offline-reload
+[33/39] specs\phase4-chat.spec.mjs:417:3 › P4-EGR-001A unexpected-http-origin
+[34/39] specs\phase4-chat.spec.mjs:417:3 › P4-EGR-001B redirect
+[35/39] specs\phase4-chat.spec.mjs:417:3 › P4-EGR-001C websocket
+[36/39] specs\phase4-chat.spec.mjs:417:3 › P4-EGR-001D eventsource
+[37/39] specs\phase4-chat.spec.mjs:417:3 › P4-EGR-001E worker-realtime
+[38/39] specs\phase4-chat.spec.mjs:417:3 › P4-EGR-001F beacon
+[39/39] specs\phase4-chat.spec.mjs:417:3 › P4-EGR-001G navigation
+  39 passed (4.0m)

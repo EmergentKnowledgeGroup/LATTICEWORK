@@ -1,0 +1,102 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "evidence_label": "MEASURED",
+  "gate": "chat-send-stream-cancel-retry-error",
+  "status": "BLOCKED",
+  "exit_code": 1,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "base_commit": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  "candidate_sha": "6151404511facb3916541512da78f74f3a2e6ec6",
+  "command": [
+    "phase4-aggregate",
+    "chat-send-stream-cancel-retry-error"
+  ],
+  "details": {
+    "results": [
+      {
+        "id": "P4-CHAT-001A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-002A",
+        "status": "FAIL"
+      },
+      {
+        "id": "P4-CHAT-003A",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-003B",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-004A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-005A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-005B",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-005C",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-006A",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-006B",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-007A",
+        "status": "FAIL"
+      },
+      {
+        "id": "P4-CHAT-007B",
+        "status": "FAIL"
+      },
+      {
+        "id": "P4-CHAT-008A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-008B",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-009A",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-009B",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-009C",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-009D",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-009E",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-010A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-010B",
+        "status": "UNKNOWN"
+      }
+    ]
+  }
+}

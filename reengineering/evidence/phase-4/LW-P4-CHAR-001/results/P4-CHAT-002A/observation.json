@@ -1,0 +1,28 @@
+{
+  "schema": "latticework.phase4.atomic-result.v1",
+  "group_id": "P4-CHAT-002",
+  "subcase_id": "P4-CHAT-002A",
+  "probe": "fragmented-success",
+  "provider": "P4-PRV-OPENAI",
+  "status": "FAIL",
+  "evidence_label": "OBSERVED",
+  "profile_id": "P4-PROFILE-P4-CHAT-002A",
+  "fresh_profile": true,
+  "notes": [
+    "visible OpenAI setup dispatched https://api.groq.com/openai/v1/chat/completions instead of the locked OpenAI target; the unexpected request was blocked before transmission"
+  ],
+  "request_count": 0,
+  "blocked_count": 7,
+  "terminal_count": null,
+  "operation": {
+    "post_delta_retry": false,
+    "duplicate_terminal": false
+  },
+  "cleanup_status": "persistent-browser-context-closed",
+  "profile_path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-002A",
+  "profile_empty_at_creation": true,
+  "profile_ownership_marker": "phase4-run-marker-v1",
+  "context_closed": true,
+  "fixture_request_observed": false,
+  "private_sentinel_leak": null
+}

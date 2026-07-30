@@ -1,0 +1,35 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "evidence_label": "MEASURED",
+  "gate": "repository-controls",
+  "status": "PASS",
+  "exit_code": 0,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "base_commit": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  "candidate_sha": "6151404511facb3916541512da78f74f3a2e6ec6",
+  "command": [
+    "node.exe",
+    "--test",
+    "--test-reporter=tap",
+    "tests\\reengineering\\capability-registry.test.mjs",
+    "tests\\reengineering\\data-registry.test.mjs",
+    "tests\\reengineering\\evidence-tools.test.mjs",
+    "tests\\reengineering\\phase0-control-validation.test.mjs",
+    "tests\\reengineering\\phase1-characterization-validation.test.mjs",
+    "tests\\reengineering\\phase2-boundary.test.mjs",
+    "tests\\reengineering\\phase2-build-verification.test.mjs",
+    "tests\\reengineering\\phase2-evidence-validation.test.mjs",
+    "tests\\reengineering\\phase2-supply-chain.test.mjs",
+    "tests\\reengineering\\phase3-decision-packet.test.mjs",
+    "tests\\reengineering\\phase3-evidence-validation.test.mjs",
+    "tests\\reengineering\\phase3-preflight.test.mjs",
+    "tests\\reengineering\\phase3-provider-boundary.test.mjs",
+    "tests\\reengineering\\phase3-storage-boundary.test.mjs",
+    "tests\\reengineering\\phase4-active-scope.test.mjs",
+    "tests\\reengineering\\phase4-characterization-validation.test.mjs"
+  ],
+  "details": {
+    "stdout": "commands/repository-controls/stdout.log",
+    "stderr": "commands/repository-controls/stderr.log"
+  }
+}

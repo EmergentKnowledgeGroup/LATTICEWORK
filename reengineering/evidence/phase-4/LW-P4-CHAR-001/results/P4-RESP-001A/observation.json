@@ -1,0 +1,54 @@
+{
+  "schema": "latticework.phase4.atomic-result.v1",
+  "group_id": "P4-RESP-001",
+  "subcase_id": "P4-RESP-001A",
+  "probe": "mobile-bounded-flow",
+  "provider": "P4-PRV-OLLAMA",
+  "status": "UNKNOWN",
+  "evidence_label": "OBSERVED",
+  "profile_id": "P4-PROFILE-P4-RESP-001A",
+  "fresh_profile": true,
+  "notes": [
+    "exact intercepted provider request and one user-visible terminal outcome were observed",
+    "mobile geometry was captured, but local fragmented streaming remains UNKNOWN under the no-listener packet"
+  ],
+  "request_count": 1,
+  "blocked_count": 5,
+  "terminal_count": 1,
+  "operation": {
+    "post_delta_retry": false,
+    "duplicate_terminal": false
+  },
+  "cleanup_status": "persistent-browser-context-closed",
+  "profile_path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-RESP-001A",
+  "profile_empty_at_creation": true,
+  "profile_ownership_marker": "phase4-run-marker-v1",
+  "message_count_before": 1,
+  "message_count_after": 3,
+  "assistant_message_count_before": 0,
+  "assistant_message_count_after": 1,
+  "geometry": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "overflow": false,
+    "controls": {
+      "chatInput": {
+        "x": 107.453125,
+        "y": 895.296875,
+        "width": 261.546875,
+        "height": 50
+      },
+      "sendBtn": {
+        "x": 14.978084564208984,
+        "y": 957.2845458984375,
+        "width": 78.4344482421875,
+        "height": 44.024658203125
+      }
+    }
+  },
+  "context_closed": true,
+  "fixture_request_observed": true,
+  "private_sentinel_leak": null
+}

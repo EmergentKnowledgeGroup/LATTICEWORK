@@ -3,7 +3,7 @@
 **From:** Codex root controller
 **To:** Maintainer / next available characterization owner
 **Date:** `2026-07-30T22:08:00Z`
-**Current commit:** pending candidate freeze
+**Current commit:** `6151404511facb3916541512da78f74f3a2e6ec6`
 **Branch:** `reengineering/p4-chat-vertical-slice-preflight`
 
 ## State in one paragraph
@@ -33,13 +33,17 @@ validator rejects the bundle and `LW-P4-001` remains blocked.
 - **MEASURED:** Playwright executed `39/39` in approximately four minutes with
   one worker and zero retries.
 - **MEASURED:** result counts are `20 PASS`, `16 UNKNOWN`, `3 FAIL`.
-- **MEASURED:** repository controls pass `122/122` with zero fail, skip, or todo.
+- **MEASURED:** repository controls pass `125/125` with zero fail, skip, or todo.
 - **VERIFIED:** the strict GREEN validator returns invalid for the BLOCKED
   bundle.
 - **VERIFIED:** the immutable baseline worktree remains clean at
   `e7585999fc1af2707f410ae87356cf2b52e08d9c`.
 - **VERIFIED:** raw run/profile roots are deleted; the promoted manifest hashes
   146 redacted artifacts and the content scan reports zero findings.
+- **VERIFIED:** independent read-only source QA passed after operation,
+  cleanup, and independent-review proof mechanics were hardened. The review
+  receipt remains BLOCKED because it is not a separate clean-worktree full
+  browser reproduction.
 - **OBSERVED:** selecting OpenAI through visible onboarding dispatches
   `https://api.groq.com/openai/v1/chat/completions`; the request is blocked
   before transmission and the locked OpenAI target is never exercised.
