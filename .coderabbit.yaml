@@ -1,0 +1,14 @@
+reviews:
+  path_filters:
+    # Evidence bundles are immutable machine receipts, screenshots, and
+    # generated artifacts. Their validators, not an LLM review, are the gate.
+    - "!reengineering/evidence/**"
+    # Keep the single review focused on executable source, tests, and tooling.
+    # Canonical prose and checkpoint mirrors have separate consistency gates.
+    - "!docs/**"
+    - "!runtime/**"
+    - "!reengineering/checkpoints/**"
+    - "!reengineering/*.md"
+    - "!reengineering/*.json"
+    - "!**/*.md"
+    - "!DOCUMENT_INVENTORY.json"
