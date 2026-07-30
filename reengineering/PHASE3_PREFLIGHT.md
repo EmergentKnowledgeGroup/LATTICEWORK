@@ -1,8 +1,8 @@
 # Phase 3 implementation preflight — `LW-P3-001`
 
-**Status:** READY PENDING MAINTAINER ACCEPTANCE  
-**Date:** 2026-07-30  
-**Base:** `6fa553ee3f5c7d1952f7aed836873467c4626068`  
+**Status:** READY PENDING MAINTAINER ACCEPTANCE
+**Date:** 2026-07-30
+**Base:** `6fa553ee3f5c7d1952f7aed836873467c4626068`
 **Decision gate:** ADR-004 and ADR-005 must be explicitly accepted
 
 ## Authority
@@ -148,4 +148,3 @@ Stop if ADR-004/005 acceptance or an `LW-P3-001` claim is missing; if real data,
 credentials, traffic, a listener, a new dependency, a legacy edit, activation,
 or cutover becomes necessary; if unknown values cannot be preserved; or if
 evidence could contain private content.
-
