@@ -3,7 +3,7 @@
 **From:** Codex root controller
 **To:** Maintainer / next available characterization owner
 **Date:** `2026-07-30T22:08:00Z`
-**Current commit:** `6151404511facb3916541512da78f74f3a2e6ec6`
+**Current commit:** `baf82dc59edbe065d3c62d3ea08fe2941438fc96`
 **Branch:** `reengineering/p4-chat-vertical-slice-preflight`
 
 ## State in one paragraph
@@ -116,6 +116,9 @@ Record maintainer disposition for a separately claimed Phase 4 characterization
 amendment that explicitly handles definitive baseline absences, the
 OpenAI-to-Groq wrong-target defect, and any observation requiring a capability
 forbidden by the current packet.
+
+PR #3 merged this completed characterization package into `main` at
+`baf82dc59edbe065d3c62d3ea08fe2941438fc96`.
 
 ## Success condition
 

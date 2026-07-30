@@ -24,8 +24,8 @@ LATTICEWORK
 
 ## Last verified commit
 
-`e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd` (Phase 3 post-merge
-checkpoint; Phase 4 control/preflight working tree independently green)
+`baf82dc59edbe065d3c62d3ea08fe2941438fc96` (PR #3 merged; Phase 4
+characterization evidence remains honestly BLOCKED)
 
 The verified Phase 3 candidate
 `d746b96225a3eaf59a5b5937e3f531e2cad280ef` is contained in the merged
@@ -41,7 +41,7 @@ activation, migration, and cutover remain unauthorized.
 
 ## Last verified date
 
-`2026-07-30 21:15 UTC`
+`2026-07-30 22:32 UTC`
 
 ## Locked constraints
 

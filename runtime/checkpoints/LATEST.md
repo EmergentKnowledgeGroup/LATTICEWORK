@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-30T22:30:55Z`
+Updated: `2026-07-30T22:32:57Z`
 
 ## CURRENT
 
 Track: `LW_P4_CHARACTERIZATION WORK`
-Step: `phase4-characterization-pr-open`
-Note: PR #3 is open with the complete BLOCKED characterization packet; one CodeRabbit/CI review cycle is authorized before merge.
-Branch: `reengineering/p4-chat-vertical-slice-preflight`
-Head: `7e42c6637dc2f39eec602c8c390902203bcfd5a1`
-Next command: `Inspect PR #3 checks and the single CodeRabbit review; fix actionable findings once, then merge if green.`
+Step: `phase4-characterization-post-merge`
+Note: PR #3 merged the complete BLOCKED characterization packet; LW-P4-001 remains blocked pending a separately accepted amendment.
+Branch: `main`
+Head: `baf82dc59edbe065d3c62d3ea08fe2941438fc96`
+Next command: `Obtain maintainer disposition for a separately claimed Phase 4 characterization amendment; do not begin LW-P4-001 under the blocked packet.`
 
 ## LW_M0_BASELINE WORK
 
@@ -276,11 +276,11 @@ Next command: `Read docs/agents/handoffs/LW-P4-CTRL-001.md before transitioning 
 
 ## LW_P4_CHARACTERIZATION WORK
 
-Step: `phase4-characterization-pr-open`
-Note: PR #3 is open with the complete BLOCKED characterization packet; one CodeRabbit/CI review cycle is authorized before merge.
-Branch: `reengineering/p4-chat-vertical-slice-preflight`
-Head: `7e42c6637dc2f39eec602c8c390902203bcfd5a1`
-Next command: `Inspect PR #3 checks and the single CodeRabbit review; fix actionable findings once, then merge if green.`
+Step: `phase4-characterization-post-merge`
+Note: PR #3 merged the complete BLOCKED characterization packet; LW-P4-001 remains blocked pending a separately accepted amendment.
+Branch: `main`
+Head: `baf82dc59edbe065d3c62d3ea08fe2941438fc96`
+Next command: `Obtain maintainer disposition for a separately claimed Phase 4 characterization amendment; do not begin LW-P4-001 under the blocked packet.`
 
 ### Validations
 
@@ -295,6 +295,7 @@ Next command: `Inspect PR #3 checks and the single CodeRabbit review; fix action
 - **OBSERVED** — primary Chat exposes no visible cancellation control.
 - **OBSERVED** — `implementation_authorized` remains false.
 - **VERIFIED** — PR #3 opened against `EmergentKnowledgeGroup/LATTICEWORK:main` with the complete characterization and evidence packet.
+- **VERIFIED** — PR #3 merged at `baf82dc59edbe065d3c62d3ea08fe2941438fc96`; the CodeRabbit check completed successfully but reported its temporary review-rate limit and produced no findings.
 
 ### Blockers
 
