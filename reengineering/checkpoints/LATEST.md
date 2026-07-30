@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-30T12:52:12Z`
+Updated: `2026-07-30T12:55:05Z`
 
 ## CURRENT
 
-Track: `LW_P2_FOUNDATION WORK`
-Step: `phase2-merged`
-Note: PR #1 merged after one CodeRabbit review, one consolidated fix pass, resolution of all 19 review threads, and clean canonical plus detached-clone verification.
-Branch: `main`
-Head: `c48505c5437c6b9cf67a652cdc2d8c81778c15a1`
-Next command: `Begin the Phase 3 data, provider/security, and cutover decision packet; do not alter those semantics until the required maintainer ADR dispositions are recorded.`
+Track: `LW_P3_DECISION_PACKET WORK`
+Step: `phase3-decision-packet-start`
+Note: The bounded Phase 3 decision-only work unit is claimed; data, provider/security, and cutover semantics remain unchanged and blocked pending explicit ADR dispositions.
+Branch: `reengineering/p3-decision-packet`
+Head: `6704dd502a140fce2fe8e06f8db336d0bd3839a5`
+Next command: `Draft proposed ADR-004 through ADR-006, add decision-packet controls, and validate the proposal without implementing any runtime semantics.`
 
 ## LW_M0_BASELINE WORK
 
@@ -122,3 +122,24 @@ Next command: `Begin the Phase 3 data, provider/security, and cutover decision p
 
 - No open blocker prevents `LW-P2-001`.
 - `LW-BLK-005` through `LW-BLK-007` continue to block later data, provider/security, and cutover work.
+
+## LW_P3_DECISION_PACKET WORK
+
+Step: `phase3-decision-packet-start`
+Note: The bounded Phase 3 decision-only work unit is claimed; data, provider/security, and cutover semantics remain unchanged and blocked pending explicit ADR dispositions.
+Branch: `reengineering/p3-decision-packet`
+Head: `6704dd502a140fce2fe8e06f8db336d0bd3839a5`
+Next command: `Draft proposed ADR-004 through ADR-006, add decision-packet controls, and validate the proposal without implementing any runtime semantics.`
+
+### Validations
+
+- **VERIFIED** — Phase 2 is merged and its post-merge checkpoint is present on `main`.
+- **OBSERVED** — `LW-BLK-005` through `LW-BLK-007` remain open.
+- **OBSERVED** — `docs/agents/claims/LW-P3-DEC-001.md` claims only documentation, decision records, controls, and living-state updates.
+- **VERIFIED** — no storage, provider, security, worker, route, deployment, or legacy runtime file changed at phase start.
+
+### Blockers
+
+- `LW-BLK-005` requires an accepted versioned data/storage and migration ADR before implementation.
+- `LW-BLK-006` requires accepted provider/security decisions and tests before optional gateway/worker/mesh implementation.
+- `LW-BLK-007` requires explicit owner approval before any default-route cutover or capability retirement.

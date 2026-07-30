@@ -1,8 +1,8 @@
 {
   "schema": "latticework.context_checkpoint.tracks.v1",
-  "captured_at": "2026-07-30T12:52:12Z",
+  "captured_at": "2026-07-30T12:55:05Z",
   "repo_root": "Z:\\LATTICEWORK",
-  "current_track": "LW_P2_FOUNDATION WORK",
+  "current_track": "LW_P3_DECISION_PACKET WORK",
   "tracks": {
     "LW_M0_BASELINE WORK": {
       "track": "LW_M0_BASELINE WORK",
@@ -196,7 +196,51 @@
       ],
       "updated_at": "2026-07-30T12:52:12Z",
       "captured_at": "2026-07-30T12:52:12Z"
+    },
+    "LW_P3_DECISION_PACKET WORK": {
+      "track": "LW_P3_DECISION_PACKET WORK",
+      "step": "phase3-decision-packet-start",
+      "note": "The bounded Phase 3 decision-only work unit is claimed; data, provider/security, and cutover semantics remain unchanged and blocked pending explicit ADR dispositions.",
+      "branch": "reengineering/p3-decision-packet",
+      "head": "6704dd502a140fce2fe8e06f8db336d0bd3839a5",
+      "next_cmd": "Draft proposed ADR-004 through ADR-006, add decision-packet controls, and validate the proposal without implementing any runtime semantics.",
+      "validations": [
+        "VERIFIED: Phase 2 is merged and its post-merge checkpoint is present on main.",
+        "OBSERVED: LW-BLK-005 through LW-BLK-007 remain open.",
+        "OBSERVED: docs/agents/claims/LW-P3-DEC-001.md claims only documentation, decision records, controls, and living-state updates.",
+        "VERIFIED: no storage, provider, security, worker, route, deployment, or legacy runtime file changed at phase start."
+      ],
+      "decisions": [],
+      "changed_paths": [
+        "docs/agents/claims/LW-P3-DEC-001.md",
+        "runtime/checkpoints/LATEST.md",
+        "runtime/checkpoints/LATEST.json",
+        "reengineering/checkpoints/LATEST.md",
+        "reengineering/checkpoints/LATEST.json"
+      ],
+      "blockers": [
+        {
+          "id": "LW-BLK-005",
+          "severity": "P1",
+          "status": "OPEN",
+          "summary": "Accepted versioned data/storage and migration ADR required before implementation."
+        },
+        {
+          "id": "LW-BLK-006",
+          "severity": "P1",
+          "status": "OPEN",
+          "summary": "Accepted provider/security decisions and tests required before optional gateway/worker/mesh implementation."
+        },
+        {
+          "id": "LW-BLK-007",
+          "severity": "P1",
+          "status": "OPEN",
+          "summary": "Explicit owner approval required before default-route cutover or capability retirement."
+        }
+      ],
+      "updated_at": "2026-07-30T12:55:05Z",
+      "captured_at": "2026-07-30T12:55:05Z"
     }
   },
-  "updated": "2026-07-30T12:52:12Z"
+  "updated": "2026-07-30T12:55:05Z"
 }
