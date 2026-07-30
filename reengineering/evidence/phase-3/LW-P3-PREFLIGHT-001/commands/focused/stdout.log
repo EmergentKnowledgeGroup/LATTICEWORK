@@ -1,0 +1,47 @@
+✔ canonical Phase 3 decision packet is complete, proposal-only, and scope-safe (106.7874ms)
+✔ validator rejects implementation authority without a maintainer disposition (6.3649ms)
+✔ validator rejects a weakened preservation registry (5.8928ms)
+✔ validator permits additive registry expansion while retaining the pinned floor (6.1335ms)
+✔ validator rejects premature blocker closure (5.1501ms)
+✔ validator rejects an ADR marked Accepted without a decision receipt (5.5946ms)
+✔ validator rejects removal of a required decision invariant (4.8537ms)
+✔ validator rejects unstable versioned dataset ID (6.2451ms)
+✔ validator rejects credential-bearing export policy (5.7006ms)
+✔ validator rejects journal deletion during rollback (5.5139ms)
+✔ validator rejects unstaged import promotion (5.3546ms)
+✔ validator rejects exported real-data digests (4.652ms)
+✔ validator rejects real provider traffic (4.9555ms)
+✔ validator rejects implicit retry (5.1485ms)
+✔ validator rejects credential resolution before an exact egress grant (7.217ms)
+✔ validator rejects Phase 3 proxy listener (8.8982ms)
+✔ validator rejects ambient pairing bootstrap (5.3491ms)
+✔ validator rejects removed real-data prohibition (8.236ms)
+✔ validator rejects a weakened blocker condition (6.4644ms)
+✔ validator rejects a semantically weakened invariant statement (6.3848ms)
+✔ validator rejects removal of an ADR safety clause (7.3625ms)
+✔ validator rejects Markdown that drifts from the structured packet (6.4345ms)
+✔ canonical CLI cannot disable or rebase Git scope validation (54.3454ms)
+✔ proposal validator permits only the claimed Phase 3 preflight control files (0.5489ms)
+✔ canonical Phase 3 preflight freezes an implementation-ready but unauthorized slice (104.0117ms)
+✔ preflight rejects implementation authority before ADR acceptance (2.5128ms)
+✔ preflight rejects real user data (1.4222ms)
+✔ preflight rejects real provider traffic (1.3771ms)
+✔ preflight rejects real credentials (1.4672ms)
+✔ preflight rejects a Phase 3 listener (1.3841ms)
+✔ preflight rejects a candidate cutover (1.513ms)
+✔ preflight rejects legacy mutation (1.3449ms)
+✔ preflight rejects drift in the conversation dataset contract (1.4543ms)
+✔ preflight rejects weakened provider identity, retry, or egress rules (1.8051ms)
+✔ preflight rejects an owned implementation path outside the frozen package surface (1.6004ms)
+✔ preflight rejects a removed legacy no-touch prefix (1.4557ms)
+✔ preflight rejects a missing required verification gate (1.5845ms)
+✔ preflight rejects Markdown projection drift (1.7618ms)
+✔ canonical CLI cannot disable or rebase Git scope validation (51.988ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 368.0823

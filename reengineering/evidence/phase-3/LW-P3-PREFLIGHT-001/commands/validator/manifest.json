@@ -1,0 +1,43 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P3-PREFLIGHT-001-validator",
+  "command": [
+    "node",
+    "tools/reengineering/validate-phase3-preflight.mjs"
+  ],
+  "command_display": "\"node\" \"tools/reengineering/validate-phase3-preflight.mjs\"",
+  "cwd": "Z:\\LATTICEWORK",
+  "started_at": "2026-07-30T14:00:42.369Z",
+  "ended_at": "2026-07-30T14:00:42.541Z",
+  "duration_ms": 171.4712,
+  "timeout_ms": 300000,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "814c7a2",
+  "repository": {
+    "head": "814c7a21aad275fbcc1c77a6ba337c954281eeab",
+    "status": "## reengineering/p3-decision-packet...origin/reengineering/p3-decision-packet [ahead 2]\n?? reengineering/evidence/phase-3/LW-P3-PREFLIGHT-001/commands/"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 409,
+      "sha256": "32721e8a0dfdc1a7f83c916ad1f18c4e635050a9fb38f4b8cea67c470c94eda1"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
