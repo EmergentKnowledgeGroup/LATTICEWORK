@@ -1,0 +1,30 @@
+{
+  "schema": "latticework.phase4.atomic-result.v1",
+  "group_id": "P4-SIG-001",
+  "subcase_id": "P4-SIG-001B",
+  "probe": "signal-report-cancelled",
+  "provider": "P4-PRV-OLLAMA",
+  "status": "UNKNOWN",
+  "evidence_label": "OBSERVED",
+  "profile_id": "P4-PROFILE-P4-SIG-001B",
+  "fresh_profile": true,
+  "notes": [
+    "primary Chat exposes no visible cancellation or abort control; the locked packet forbids simulating one"
+  ],
+  "request_count": 0,
+  "blocked_count": 2,
+  "terminal_count": null,
+  "operation": {
+    "post_delta_retry": false,
+    "duplicate_terminal": false
+  },
+  "cleanup_status": "persistent-browser-context-closed",
+  "profile_path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-SIG-001B",
+  "profile_empty_at_creation": true,
+  "profile_ownership_marker": "phase4-run-marker-v1",
+  "control_count": 36,
+  "cancel_control_count": 0,
+  "context_closed": true,
+  "fixture_request_observed": false,
+  "private_sentinel_leak": null
+}

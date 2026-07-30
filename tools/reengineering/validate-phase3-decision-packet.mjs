@@ -6,9 +6,12 @@ import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual } from "node:util";
 
 import { isStrictDescendant, parseNamedArgs, writeJson } from "./evidence-common.mjs";
+import { collectClosedRangePaths } from "./git-scope-common.mjs";
 
 const EXPECTED_BASELINE_SHA = "e7585999fc1af2707f410ae87356cf2b52e08d9c";
 const EXPECTED_BASE_COMMIT = "6704dd502a140fce2fe8e06f8db336d0bd3839a5";
+const EXPECTED_PHASE3_TERMINAL_COMMIT =
+  "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd";
 const BASELINE_PRESERVATION_IDS_PATH =
   "reengineering/PHASE3_BASELINE_PRESERVATION_IDS.json";
 const EXPECTED_BASELINE_IDS_SHA256 =
@@ -330,22 +333,6 @@ function readText(filePath, failures, label) {
   }
 }
 
-function runGit(workspaceRoot, args, failures, label) {
-  const result = spawnSync("git", args, {
-    cwd: workspaceRoot,
-    encoding: "utf8",
-    windowsHide: true,
-  });
-  if (result.status !== 0) {
-    failures.push(`${label} failed: ${result.stderr?.trim() || "unknown Git error"}`);
-    return [];
-  }
-  return result.stdout
-    .split(/\r?\n/)
-    .map((item) => item.trim().replaceAll("\\", "/"))
-    .filter(Boolean);
-}
-
 function normalizeWhitespace(value) {
   return String(value).replace(/\s+/g, " ").trim();
 }
@@ -648,31 +635,43 @@ function validateAuthority(packet, failures) {
   validateStructuredContracts(packet, failures);
 }
 
-function validateGitScope(workspaceRoot, baseSha, failures) {
-  const ancestry = spawnSync("git", ["merge-base", "--is-ancestor", baseSha, "HEAD"], {
-    cwd: workspaceRoot,
-    encoding: "utf8",
-    windowsHide: true,
-  });
-  if (ancestry.status !== 0) {
-    failures.push(`base commit ${baseSha} is not an ancestor of HEAD`);
+function validateGitScope(workspaceRoot, baseSha, terminalSha, failures) {
+  const phaseAncestry = spawnSync(
+    "git",
+    ["merge-base", "--is-ancestor", baseSha, terminalSha],
+    {
+      cwd: workspaceRoot,
+      encoding: "utf8",
+      windowsHide: true,
+    },
+  );
+  if (phaseAncestry.status !== 0) {
+    failures.push(
+      `base commit ${baseSha} is not an ancestor of Phase 3 terminal commit ${terminalSha}`,
+    );
     return;
   }
-  const changed = runGit(
-    workspaceRoot,
-    ["diff", "--name-only", baseSha, "--"],
-    failures,
-    "changed-path query",
+  const descendantAncestry = spawnSync(
+    "git",
+    ["merge-base", "--is-ancestor", terminalSha, "HEAD"],
+    {
+      cwd: workspaceRoot,
+      encoding: "utf8",
+      windowsHide: true,
+    },
   );
-  const untracked = runGit(
-    workspaceRoot,
-    ["ls-files", "--others", "--exclude-standard"],
-    failures,
-    "untracked-path query",
-  );
-  const scope = new Set([...changed, ...untracked]);
-  for (const relativePath of scope) {
-    if (relativePath.startsWith("runtime/tmp/")) continue;
+  if (descendantAncestry.status !== 0) {
+    failures.push(`Phase 3 terminal commit ${terminalSha} is not an ancestor of HEAD`);
+    return;
+  }
+  let changed = [];
+  try {
+    changed = collectClosedRangePaths(workspaceRoot, baseSha, terminalSha);
+  } catch (error) {
+    failures.push(error.message);
+    return;
+  }
+  for (const relativePath of new Set(changed)) {
     const allowedByPrefix = ALLOWED_SCOPE_PREFIXES.some((prefix) =>
       relativePath.startsWith(prefix),
     );
@@ -687,6 +686,7 @@ export function validatePhase3DecisionPacket({
   packetPath = "reengineering/PHASE3_DECISION_PACKET.json",
   checkGitScope = true,
   baseSha,
+  terminalSha,
 }) {
   const root = path.resolve(workspaceRoot);
   const resolvedPacket = path.resolve(root, packetPath);
@@ -705,7 +705,10 @@ export function validatePhase3DecisionPacket({
   const preservationRows = packet ? validateRegistry(root, packet, failures) : 0;
   const gitScopeBase =
     baseSha ?? packet?.base_commit ?? EXPECTED_BASE_COMMIT;
-  if (checkGitScope) validateGitScope(root, gitScopeBase, failures);
+  const gitScopeTerminal = terminalSha ?? EXPECTED_PHASE3_TERMINAL_COMMIT;
+  if (checkGitScope) {
+    validateGitScope(root, gitScopeBase, gitScopeTerminal, failures);
+  }
 
   return {
     schema: "latticework.phase3-decision-packet-validation.v1",
@@ -715,6 +718,7 @@ export function validatePhase3DecisionPacket({
       packet?.authority?.implementation_authorized ?? null,
     git_scope_checked: checkGitScope,
     git_scope_base: checkGitScope ? gitScopeBase : null,
+    git_scope_terminal: checkGitScope ? gitScopeTerminal : null,
     checks: {
       adrs: REQUIRED_ADRS.length,
       blockers: REQUIRED_BLOCKERS.length,
@@ -738,10 +742,11 @@ if (isMain()) {
     if (command.length > 0) throw new Error("Unexpected command arguments");
     if (
       Object.prototype.hasOwnProperty.call(options, "check-git-scope") ||
-      Object.prototype.hasOwnProperty.call(options, "base-sha")
+      Object.prototype.hasOwnProperty.call(options, "base-sha") ||
+      Object.prototype.hasOwnProperty.call(options, "terminal-sha")
     ) {
       throw new Error(
-        "canonical CLI validation always checks Git scope from the packet base commit",
+        "canonical CLI validation always checks Git scope from the pinned packet base and terminal commits",
       );
     }
     const workspaceRoot = options["workspace-root"]

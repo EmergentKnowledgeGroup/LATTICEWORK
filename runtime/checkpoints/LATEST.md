@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-30T16:13:06Z`
+Updated: `2026-07-30T22:30:55Z`
 
 ## CURRENT
 
-Track: `LW_P3_IMPLEMENTATION WORK`
-Step: `phase3-post-merge-green`
-Note: PR #2 is merged at 67e960d6671fb2f55e8c795ef472d4fb2ba36f6e and post-merge verification is GREEN; the bounded Phase 3 packages remain inactive and all later-phase blockers remain open.
-Branch: `main`
-Head: `67e960d6671fb2f55e8c795ef472d4fb2ba36f6e`
-Next command: `Read docs/agents/handoffs/LW-P3-001.md and claim a separate Phase 4 preflight before proposing any runtime integration, real-data migration, provider transport, listener, activation, or cutover.`
+Track: `LW_P4_CHARACTERIZATION WORK`
+Step: `phase4-characterization-pr-open`
+Note: PR #3 is open with the complete BLOCKED characterization packet; one CodeRabbit/CI review cycle is authorized before merge.
+Branch: `reengineering/p4-chat-vertical-slice-preflight`
+Head: `7e42c6637dc2f39eec602c8c390902203bcfd5a1`
+Next command: `Inspect PR #3 checks and the single CodeRabbit review; fix actionable findings once, then merge if green.`
 
 ## LW_M0_BASELINE WORK
 
@@ -223,3 +223,80 @@ Next command: `Read docs/agents/handoffs/LW-P3-001.md and claim a separate Phase
 - `LW-BLK-005` remains open for broader data ownership/schema/retention inventory and every real-data migration; the bounded synthetic conversation slice is independently verified.
 - `LW-BLK-006` remains open for ADR-012 plus later gateway/LAN/worker/peer/Telegram security implementation; Phase 3 starts no listener.
 - `LW-BLK-007` remains open for future ADR-009, compatibility evidence, and explicit cutover approval.
+
+## LW_P4_PREFLIGHT WORK
+
+Step: `phase4-preflight-locked-green`
+Note: Phase 4 primary-Chat characterization preflight version 1.0 is locked after SpecSwarm consolidation, control repair, 116/116 repository controls, and independent post-repair guardrail GREEN; implementation remains blocked.
+Branch: `reengineering/p4-chat-vertical-slice-preflight`
+Head: `03dfdfc381365201fd53a32c9c5c057f0cdbf953`
+Next command: `Create docs/agents/claims/LW-P4-CHAR-001.md, transition the active-scope validator test-first to the exact locked characterization path set, and execute only the additive characterization packet.`
+
+### Validations
+
+- **VERIFIED** — `LW-P3-001` is merged, post-merge GREEN, and its packages remain inactive.
+- **OBSERVED** — the maintainer explicitly reaffirmed acceptance of ADR-004, ADR-005, and ADR-006 and directed continued execution under their packet limits.
+- **OBSERVED** — `LW-P4-001` remains `BLOCKED`; no canonical Phase 4 preflight identifier existed, so this track claims `LW-P4-PREFLIGHT-001`.
+- **VERIFIED** — branch `reengineering/p4-chat-vertical-slice-preflight` starts cleanly from `main` commit `e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd`.
+- **INFERRED** — the narrowest safe next package is synthetic-profile, denied-egress characterization plus a decision-complete vertical-slice preflight; it is not feature implementation.
+- **VERIFIED** — SpecSwarm reviews and final consolidation left no unresolved packet defect after the 39-subcase/16-group wording correction.
+- **VERIFIED** — the phase-closed and active-scope controls pass 48 of 48 focused tests and independent post-repair guardrail QA is GREEN.
+- **VERIFIED** — the full repository-control suite passes 116 of 116 with zero fail, skip, or todo; `git diff --check` is clean.
+- **VERIFIED** — `reengineering/PHASE4_PREFLIGHT.md` version 1.0 is locked with `implementation_authorized: false`.
+- **VERIFIED** — candidate commit `03dfdfc381365201fd53a32c9c5c057f0cdbf953` contains the exact locked packet and control repair; later checkpoint/evidence commits are receipts, not a new authority surface.
+
+### Blockers
+
+- `LW-BLK-005` remains open; this work may use only disposable synthetic profiles and may not read or migrate real user data.
+- `LW-BLK-006` remains open; this work may use deterministic mocks and denied egress but may not start a listener or contact a provider.
+- `LW-BLK-007` remains open; the legacy route remains default and no activation or cutover is authorized.
+
+## LW_P4_CONTROL_CLOSURE WORK
+
+Step: `phase4-control-closure-green`
+Note: Historical Phase 3 validation is closed base-to-terminal and active Phase 4 scope is claim-specific and fail-closed across committed, staged, unstaged, untracked, add-then-delete, and force-added ignored paths.
+Branch: `reengineering/p4-chat-vertical-slice-preflight`
+Head: `03dfdfc381365201fd53a32c9c5c057f0cdbf953`
+Next command: `Read docs/agents/handoffs/LW-P4-CTRL-001.md before transitioning active ownership to the exact LW-P4-CHAR-001 path set.`
+
+### Validations
+
+- **OBSERVED** — full repository controls are 105/107 solely because both historical Phase 3 scope validators diff their old base through current HEAD and include current untracked Phase 4 files.
+- **VERIFIED** — three independent Phase 4 preflight reviews reject adding Phase 4 paths to Phase 3 allowlists and recommend a pinned Phase 3 terminal commit plus a separate active Phase 4 scope validator.
+- **PROPOSED** — pin the Phase 3 terminal commit to `e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd`, preserve semantic controls and exact Phase 3 allowlists, and add positive/negative regression tests.
+- **VERIFIED** — focused scope controls pass 48 of 48 and full repository controls pass 116 of 116.
+- **VERIFIED** — add-then-delete paths are retained; committed, staged, unstaged, untracked, and force-added ignored paths are inspected.
+- **VERIFIED** — independent post-repair guardrail QA is GREEN and the Phase 3 allowlists were not widened.
+- **VERIFIED** — candidate commit `03dfdfc381365201fd53a32c9c5c057f0cdbf953` contains the exact control repair; later checkpoint/evidence commits are receipts only.
+
+### Blockers
+
+- `LW-BLK-008` is CLOSED by the verified phase-closed historical and claim-specific active-scope controls.
+- `LW-BLK-009` remains OPEN until the 39 mandatory Phase 4 characterization subcases are independently GREEN.
+
+## LW_P4_CHARACTERIZATION WORK
+
+Step: `phase4-characterization-pr-open`
+Note: PR #3 is open with the complete BLOCKED characterization packet; one CodeRabbit/CI review cycle is authorized before merge.
+Branch: `reengineering/p4-chat-vertical-slice-preflight`
+Head: `7e42c6637dc2f39eec602c8c390902203bcfd5a1`
+Next command: `Inspect PR #3 checks and the single CodeRabbit review; fix actionable findings once, then merge if green.`
+
+### Validations
+
+- **VERIFIED** — `LW-P4-PREFLIGHT-001` version 1.0 is locked and independent final QA is GREEN.
+- **VERIFIED** — `LW-P4-CTRL-001` passes 48 focused controls and the full repository-control suite passes 116 of 116.
+- **MEASURED** — all 39 atomic subcases executed with one worker and zero retries: 20 PASS, 16 UNKNOWN, 3 FAIL, 0 CONDITIONAL.
+- **MEASURED** — full repository controls passed 125/125 with zero fail, skip, or todo.
+- **VERIFIED** — strict GREEN validation rejected the BLOCKED bundle; the promoted manifest hashes 146 redacted artifacts.
+- **VERIFIED** — all recorded profile and run staging paths are absent after owned, contained, no-reparse cleanup.
+- **VERIFIED** — independent read-only source QA passed; its receipt remains BLOCKED because no separate clean-worktree full browser reproduction was claimed.
+- **OBSERVED** — visible OpenAI setup dispatches the Groq Chat Completions target instead of the locked OpenAI target.
+- **OBSERVED** — primary Chat exposes no visible cancellation control.
+- **OBSERVED** — `implementation_authorized` remains false.
+- **VERIFIED** — PR #3 opened against `EmergentKnowledgeGroup/LATTICEWORK:main` with the complete characterization and evidence packet.
+
+### Blockers
+
+- `LW-BLK-009` remains OPEN until every mandatory characterization result is PASS and independent reproduction is accepted.
+- `LW-BLK-010` keeps `LW-P4-001` implementation blocked.

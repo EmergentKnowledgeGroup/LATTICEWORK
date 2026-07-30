@@ -1,0 +1,24 @@
+{
+  "allowed_origin": "http://127.0.0.1:4184",
+  "expected_target": null,
+  "expected_requests": [],
+  "fixture_probes": [],
+  "blocked": [
+    {
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "resource_type": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:1234/v1/models",
+      "resource_type": "fetch"
+    }
+  ],
+  "blocked_websockets": [
+    {
+      "url": "wss://phase4.invalid/socket"
+    }
+  ],
+  "console": []
+}

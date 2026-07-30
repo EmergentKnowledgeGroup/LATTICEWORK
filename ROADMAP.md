@@ -5,13 +5,14 @@
 ## Current position
 
 - `M0`: complete.
-- `M1`: bounded baseline characterization complete; feature-by-feature
-  characterization continues as migration reaches each surface.
+- `M1`: bounded shell characterization is complete; `LW-P4-CHAR-001` executed
+  all 39 primary-Chat cases but is aggregate BLOCKED at 20 PASS, 16 UNKNOWN,
+  and 3 FAIL.
 - `M2`: accepted architecture and feature-free typed foundation independently
   verified, reviewed once, and merged.
-- `M3`: ADR-004 through ADR-006 are accepted, the exact preflight is
-  independently verified, and bounded synthetic/mock implementation is in
-  progress.
+- `M3`: ADR-004 through ADR-006 are accepted and the bounded synthetic/mock
+  foundation is merged but inactive. Candidate integration remains blocked
+  pending a separately accepted Phase 4 characterization amendment.
 - `M4` and later: not started; blocked by their recorded decision/evidence
   gates.
 
@@ -28,6 +29,19 @@ Exit criteria:
 - No upstream behavior changed.
 
 ## M1 — Characterization
+
+Current gate:
+
+- `LW-P4-CHAR-001` is complete with a truthful BLOCKED result; its evidence is
+  the current baseline receipt.
+- Every atomic subcase uses a fresh synthetic profile with external egress
+  denied. Mocked provider observations are baseline behavior evidence, not
+  real-provider compatibility.
+- `LW-P4-001` remains blocked until characterization is fully GREEN and a
+  later implementation packet is explicitly accepted.
+- The next work unit requires maintainer disposition of a new characterization
+  amendment; the current lock does not permit silently relabeling UNKNOWN or
+  FAIL results.
 
 Exit criteria:
 

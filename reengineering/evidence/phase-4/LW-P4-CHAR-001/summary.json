@@ -1,0 +1,1454 @@
+{
+  "schema": "latticework.phase4-characterization-summary.v1",
+  "evidence_label": "MEASURED",
+  "work_id": "LW-P4-CHAR-001",
+  "status": "BLOCKED",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "base_commit": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  "candidate_sha": "6151404511facb3916541512da78f74f3a2e6ec6",
+  "machine_lock": {
+    "schema": "latticework.phase4-characterization-preflight.v1",
+    "base_commit": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+    "phase3_terminal_commit": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+    "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "work_id": "LW-P4-CHAR-001",
+    "implementation_work_id": "LW-P4-001",
+    "implementation_packet_id": "LW-P4-IMPL-PREFLIGHT-001",
+    "implementation_authorized": false,
+    "real_data_authorized": false,
+    "real_credentials_authorized": false,
+    "real_provider_traffic_authorized": false,
+    "provider_fixtures": [
+      "P4-PRV-OLLAMA",
+      "P4-PRV-OPENAI"
+    ],
+    "caller_paths": [
+      "primary-chat"
+    ],
+    "playwright_workers": 1,
+    "playwright_retries": 0,
+    "mandatory_scenario_groups": 16,
+    "mandatory_atomic_subcases": 39,
+    "green_requires_all_pass": true,
+    "evidence_root": "reengineering/evidence/phase-4/LW-P4-CHAR-001"
+  },
+  "counts": {
+    "PASS": 20,
+    "UNKNOWN": 16,
+    "FAIL": 3,
+    "CONDITIONAL": 0
+  },
+  "results": [
+    {
+      "id": "P4-A11Y-001A",
+      "group": "P4-A11Y-001",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-A11Y-001A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-A11Y-001A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-A11Y-001A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-A11Y-001A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-A11Y-001B",
+      "group": "P4-A11Y-001",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-A11Y-001B/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-A11Y-001B",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-A11Y-001B",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-A11Y-001B",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-A11Y-001C",
+      "group": "P4-A11Y-001",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-A11Y-001C/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-A11Y-001C",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-A11Y-001C",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-A11Y-001C",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-001A",
+      "group": "P4-CHAT-001",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-CHAT-001A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-001A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-001A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-001A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-002A",
+      "group": "P4-CHAT-002",
+      "status": "FAIL",
+      "observation_receipt": "results/P4-CHAT-002A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-002A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-002A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-002A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "https://api.openai.com/v1/chat/completions",
+            "observed": false,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-003A",
+      "group": "P4-CHAT-003",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-003A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-003A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-003A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-003A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-003B",
+      "group": "P4-CHAT-003",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-CHAT-003B/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-003B",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-003B",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-003B",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-004A",
+      "group": "P4-CHAT-004",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-CHAT-004A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-004A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-004A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-004A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": false,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-005A",
+      "group": "P4-CHAT-005",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-CHAT-005A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-005A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-005A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-005A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": false,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-005B",
+      "group": "P4-CHAT-005",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-CHAT-005B/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-005B",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-005B",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-005B",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": false,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-005C",
+      "group": "P4-CHAT-005",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-CHAT-005C/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-005C",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-005C",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-005C",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": false,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-006A",
+      "group": "P4-CHAT-006",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-006A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-006A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-006A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-006A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-006B",
+      "group": "P4-CHAT-006",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-006B/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-006B",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-006B",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-006B",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-007A",
+      "group": "P4-CHAT-007",
+      "status": "FAIL",
+      "observation_receipt": "results/P4-CHAT-007A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-007A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-007A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-007A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "https://api.openai.com/v1/chat/completions",
+            "observed": false,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-007B",
+      "group": "P4-CHAT-007",
+      "status": "FAIL",
+      "observation_receipt": "results/P4-CHAT-007B/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-007B",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-007B",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-007B",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "https://api.openai.com/v1/chat/completions",
+            "observed": false,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-008A",
+      "group": "P4-CHAT-008",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-CHAT-008A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-008A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-008A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-008A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-008B",
+      "group": "P4-CHAT-008",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-008B/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-008B",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-008B",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-008B",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-009A",
+      "group": "P4-CHAT-009",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-009A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-009A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-009A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-009A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-009B",
+      "group": "P4-CHAT-009",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-009B/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-009B",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-009B",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-009B",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-009C",
+      "group": "P4-CHAT-009",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-009C/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-009C",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-009C",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-009C",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-009D",
+      "group": "P4-CHAT-009",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-009D/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-009D",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-009D",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-009D",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-009E",
+      "group": "P4-CHAT-009",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-009E/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-009E",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-009E",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-009E",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-010A",
+      "group": "P4-CHAT-010",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-CHAT-010A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-010A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-010A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-010A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-010B",
+      "group": "P4-CHAT-010",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-CHAT-010B/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-CHAT-010B",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-010B",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-CHAT-010B",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-DEG-001A",
+      "group": "P4-DEG-001",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-DEG-001A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-DEG-001A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-DEG-001A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-DEG-001A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-EGR-001A",
+      "group": "P4-EGR-001",
+      "status": "PASS",
+      "observation_receipt": "results/P4-EGR-001A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-EGR-001A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-EGR-001A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-EGR-001A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": true,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-EGR-001B",
+      "group": "P4-EGR-001",
+      "status": "PASS",
+      "observation_receipt": "results/P4-EGR-001B/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-EGR-001B",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-EGR-001B",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-EGR-001B",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": true,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-EGR-001C",
+      "group": "P4-EGR-001",
+      "status": "PASS",
+      "observation_receipt": "results/P4-EGR-001C/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-EGR-001C",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-EGR-001C",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-EGR-001C",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": true,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-EGR-001D",
+      "group": "P4-EGR-001",
+      "status": "PASS",
+      "observation_receipt": "results/P4-EGR-001D/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-EGR-001D",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-EGR-001D",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-EGR-001D",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": true,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-EGR-001E",
+      "group": "P4-EGR-001",
+      "status": "PASS",
+      "observation_receipt": "results/P4-EGR-001E/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-EGR-001E",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-EGR-001E",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-EGR-001E",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": true,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-EGR-001F",
+      "group": "P4-EGR-001",
+      "status": "PASS",
+      "observation_receipt": "results/P4-EGR-001F/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-EGR-001F",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-EGR-001F",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-EGR-001F",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": true,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-EGR-001G",
+      "group": "P4-EGR-001",
+      "status": "PASS",
+      "observation_receipt": "results/P4-EGR-001G/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-EGR-001G",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-EGR-001G",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-EGR-001G",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": true,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-ONB-001A",
+      "group": "P4-ONB-001",
+      "status": "PASS",
+      "observation_receipt": "results/P4-ONB-001A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-ONB-001A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-ONB-001A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-ONB-001A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-ONB-001B",
+      "group": "P4-ONB-001",
+      "status": "PASS",
+      "observation_receipt": "results/P4-ONB-001B/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-ONB-001B",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-ONB-001B",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-ONB-001B",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-ONB-001C",
+      "group": "P4-ONB-001",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-ONB-001C/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-ONB-001C",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-ONB-001C",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-ONB-001C",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-RESP-001A",
+      "group": "P4-RESP-001",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-RESP-001A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-RESP-001A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-RESP-001A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-RESP-001A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-SIG-001A",
+      "group": "P4-SIG-001",
+      "status": "PASS",
+      "observation_receipt": "results/P4-SIG-001A/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-SIG-001A",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-SIG-001A",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-SIG-001A",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-SIG-001B",
+      "group": "P4-SIG-001",
+      "status": "UNKNOWN",
+      "observation_receipt": "results/P4-SIG-001B/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-SIG-001B",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-SIG-001B",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-SIG-001B",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": false,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    },
+    {
+      "id": "P4-SIG-001C",
+      "group": "P4-SIG-001",
+      "status": "PASS",
+      "observation_receipt": "results/P4-SIG-001C/observation.json",
+      "profile": {
+        "id": "P4-PROFILE-P4-SIG-001C",
+        "path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-SIG-001C",
+        "synthetic": true,
+        "empty_at_creation": true,
+        "ownership_marker": "phase4-run-marker-v1",
+        "created_for_subcase": "P4-SIG-001C",
+        "cleanup": {
+          "proven": true,
+          "deleted": true,
+          "no_reparse": true
+        }
+      },
+      "network": {
+        "denied_egress": true,
+        "unexpected_transmissions": 0,
+        "expected_fixture_requests": [
+          {
+            "target": "http://localhost:11434/v1/chat/completions",
+            "observed": true,
+            "transmitted": false
+          }
+        ],
+        "expected_abort": false,
+        "wire_transmissions": 0
+      },
+      "operation": {
+        "post_delta_retry": false,
+        "duplicate_terminal": false
+      }
+    }
+  ],
+  "gates": {
+    "phase-closed-scope": {
+      "status": "PASS",
+      "receipt": "commands/phase-closed-scope/receipt.json"
+    },
+    "immutable-baseline": {
+      "status": "PASS",
+      "receipt": "commands/immutable-baseline/receipt.json"
+    },
+    "fixture-schema": {
+      "status": "PASS",
+      "receipt": "commands/fixture-schema/receipt.json"
+    },
+    "onboarding-provider-setup": {
+      "status": "BLOCKED",
+      "receipt": "commands/onboarding-provider-setup/receipt.json"
+    },
+    "chat-send-stream-cancel-retry-error": {
+      "status": "BLOCKED",
+      "receipt": "commands/chat-send-stream-cancel-retry-error/receipt.json"
+    },
+    "conversation-persistence-reload-recovery": {
+      "status": "BLOCKED",
+      "receipt": "commands/conversation-persistence-reload-recovery/receipt.json"
+    },
+    "signal-report-privacy-clipboard": {
+      "status": "BLOCKED",
+      "receipt": "commands/signal-report-privacy-clipboard/receipt.json"
+    },
+    "responsive-accessibility": {
+      "status": "BLOCKED",
+      "receipt": "commands/responsive-accessibility/receipt.json"
+    },
+    "offline-denied-egress": {
+      "status": "BLOCKED",
+      "receipt": "commands/offline-denied-egress/receipt.json"
+    },
+    "content-free-scan": {
+      "status": "PASS",
+      "receipt": "commands/content-free-scan/receipt.json"
+    },
+    "repository-controls": {
+      "status": "PASS",
+      "receipt": "commands/repository-controls/receipt.json"
+    },
+    "hygiene": {
+      "status": "PASS",
+      "receipt": "commands/hygiene/receipt.json"
+    },
+    "evidence-manifest": {
+      "status": "PASS",
+      "receipt": "commands/evidence-manifest/receipt.json"
+    },
+    "independent-clean-worktree": {
+      "status": "BLOCKED",
+      "receipt": "commands/independent-clean-worktree/receipt.json"
+    }
+  },
+  "content_scan": {
+    "scanned": true,
+    "findings": 0
+  },
+  "run": {
+    "staging_root": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7",
+    "ownership_marker": "phase4-run-marker-v1",
+    "cleanup": {
+      "proven": true,
+      "deleted": true,
+      "no_reparse": true
+    },
+    "static_server": {
+      "bind": "127.0.0.1",
+      "started": true,
+      "stopped": true,
+      "startup_receipt": "commands/immutable-baseline/receipt.json",
+      "cleanup_receipt": "commands/run-cleanup/receipt.json"
+    }
+  },
+  "independent_review": {
+    "receipt": "independent-review.json",
+    "required": true
+  },
+  "safety": {
+    "real_user_data": "not-accessed",
+    "real_provider_traffic": "none",
+    "real_credentials": "none",
+    "listener": "python-static-loopback-only",
+    "candidate_implementation": "none",
+    "activation": "none",
+    "cutover": "none"
+  }
+}

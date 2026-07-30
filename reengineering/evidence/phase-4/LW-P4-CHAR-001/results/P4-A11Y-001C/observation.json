@@ -1,0 +1,34 @@
+{
+  "schema": "latticework.phase4.atomic-result.v1",
+  "group_id": "P4-A11Y-001",
+  "subcase_id": "P4-A11Y-001C",
+  "probe": "reduced-motion",
+  "provider": null,
+  "status": "UNKNOWN",
+  "evidence_label": "OBSERVED",
+  "profile_id": "P4-PROFILE-P4-A11Y-001C",
+  "fresh_profile": true,
+  "notes": [
+    "runtime semantics were captured; the baseline lacks an explicit primary-Chat live region and the locked accessibility contract is not fully established"
+  ],
+  "request_count": 0,
+  "blocked_count": 2,
+  "terminal_count": null,
+  "operation": {
+    "post_delta_retry": false,
+    "duplicate_terminal": false
+  },
+  "cleanup_status": "persistent-browser-context-closed",
+  "profile_path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-A11Y-001C",
+  "profile_empty_at_creation": true,
+  "profile_ownership_marker": "phase4-run-marker-v1",
+  "accessibility": {
+    "input_label": null,
+    "send_name": "Send ✦",
+    "live_regions": 0,
+    "signal_report_name": "Signal Report"
+  },
+  "context_closed": true,
+  "fixture_request_observed": true,
+  "private_sentinel_leak": null
+}

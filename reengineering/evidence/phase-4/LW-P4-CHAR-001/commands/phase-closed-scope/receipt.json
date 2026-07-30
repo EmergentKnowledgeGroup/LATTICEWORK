@@ -1,0 +1,22 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "evidence_label": "MEASURED",
+  "gate": "phase-closed-scope",
+  "status": "PASS",
+  "exit_code": 0,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "base_commit": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  "candidate_sha": "6151404511facb3916541512da78f74f3a2e6ec6",
+  "command": [
+    "node.exe",
+    "--test",
+    "--test-reporter=tap",
+    "tests/reengineering/phase3-decision-packet.test.mjs",
+    "tests/reengineering/phase3-preflight.test.mjs",
+    "tests/reengineering/phase4-active-scope.test.mjs"
+  ],
+  "details": {
+    "stdout": "commands/phase-closed-scope/stdout.log",
+    "stderr": "commands/phase-closed-scope/stderr.log"
+  }
+}

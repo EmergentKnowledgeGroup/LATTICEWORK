@@ -1,0 +1,32 @@
+{
+  "schema": "latticework.phase4.atomic-result.v1",
+  "group_id": "P4-CHAT-008",
+  "subcase_id": "P4-CHAT-008B",
+  "probe": "network-abort",
+  "provider": "P4-PRV-OLLAMA",
+  "status": "PASS",
+  "evidence_label": "OBSERVED",
+  "profile_id": "P4-PROFILE-P4-CHAT-008B",
+  "fresh_profile": true,
+  "notes": [
+    "exact intercepted provider request and one user-visible terminal outcome were observed"
+  ],
+  "request_count": 1,
+  "blocked_count": 5,
+  "terminal_count": 0,
+  "operation": {
+    "post_delta_retry": false,
+    "duplicate_terminal": false
+  },
+  "cleanup_status": "persistent-browser-context-closed",
+  "profile_path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-20260730T222252Z-2bb3f1e7\\profiles\\P4-CHAT-008B",
+  "profile_empty_at_creation": true,
+  "profile_ownership_marker": "phase4-run-marker-v1",
+  "message_count_before": 1,
+  "message_count_after": 5,
+  "assistant_message_count_before": 0,
+  "assistant_message_count_after": 0,
+  "context_closed": true,
+  "fixture_request_observed": true,
+  "private_sentinel_leak": null
+}

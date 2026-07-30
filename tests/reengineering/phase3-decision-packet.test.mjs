@@ -68,6 +68,10 @@ test("canonical Phase 3 decision packet records bounded maintainer acceptance", 
     result.git_scope_base,
     "6704dd502a140fce2fe8e06f8db336d0bd3839a5",
   );
+  assert.equal(
+    result.git_scope_terminal,
+    "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  );
 });
 
 test("validator rejects accepted status without implementation authority", () => {
@@ -413,6 +417,8 @@ test("canonical CLI cannot disable or rebase Git scope validation", () => {
       "false",
       "--base-sha",
       "HEAD",
+      "--terminal-sha",
+      "HEAD",
     ],
     {
       cwd: REPO_ROOT,
@@ -424,8 +430,34 @@ test("canonical CLI cannot disable or rebase Git scope validation", () => {
   assert.equal(result.status, 2);
   assert.match(
     `${result.stdout}\n${result.stderr}`,
-    /always checks Git scope from the packet base commit/i,
+    /always checks Git scope from the pinned packet base and terminal commits/i,
   );
+});
+
+test("decision packet closed historical scope still rejects an over-broad earlier range", () => {
+  const result = validatePhase3DecisionPacket({
+    workspaceRoot: REPO_ROOT,
+    checkGitScope: true,
+    baseSha: "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    terminalSha: "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  });
+
+  assert.equal(result.valid, false);
+  assert.match(
+    result.failures.join("\n"),
+    /Phase 3 accepted scope contains an unauthorized path/i,
+  );
+});
+
+test("decision packet closed historical scope rejects a non-ancestor terminal", () => {
+  const result = validatePhase3DecisionPacket({
+    workspaceRoot: REPO_ROOT,
+    checkGitScope: true,
+    terminalSha: "0000000000000000000000000000000000000000",
+  });
+
+  assert.equal(result.valid, false);
+  assert.match(result.failures.join("\n"), /terminal commit|ancestor/i);
 });
 
 test("accepted validator permits only the exact bounded Phase 3 implementation surface", () => {

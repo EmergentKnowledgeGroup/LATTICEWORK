@@ -58,6 +58,10 @@ test("canonical Phase 3 preflight freezes the accepted bounded implementation sl
     result.gitScopeBase,
     "93a36626f786a880210c53b8486c961e8b86e9ea",
   );
+  assert.equal(
+    result.gitScopeTerminal,
+    "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  );
   assert.deepEqual(result.checks, {
     packages: 2,
     requiredAcceptedAdrs: 2,
@@ -246,6 +250,8 @@ test("canonical CLI cannot disable or rebase Git scope validation", () => {
       "false",
       "--base-sha",
       "HEAD",
+      "--terminal-sha",
+      "HEAD",
     ],
     {
       cwd: REPO_ROOT,
@@ -257,6 +263,32 @@ test("canonical CLI cannot disable or rebase Git scope validation", () => {
   assert.equal(result.status, 2);
   assert.match(
     `${result.stdout}\n${result.stderr}`,
-    /always checks Git scope from the preflight base commit/i,
+    /always checks Git scope from the pinned preflight base and terminal commits/i,
   );
+});
+
+test("preflight closed historical scope still rejects an over-broad earlier range", () => {
+  const result = validatePhase3Preflight({
+    workspaceRoot: REPO_ROOT,
+    checkGitScope: true,
+    gitScopeBase: "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    gitScopeTerminal: "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  });
+
+  assert.equal(result.valid, false);
+  assert.match(
+    result.failures.join("\n"),
+    /accepted implementation scope contains an unauthorized path/i,
+  );
+});
+
+test("preflight closed historical scope rejects a non-ancestor terminal", () => {
+  const result = validatePhase3Preflight({
+    workspaceRoot: REPO_ROOT,
+    checkGitScope: true,
+    gitScopeTerminal: "0000000000000000000000000000000000000000",
+  });
+
+  assert.equal(result.valid, false);
+  assert.match(result.failures.join("\n"), /terminal commit|ancestor/i);
 });

@@ -1,0 +1,138 @@
+{
+  "schema": "latticework.phase4.chat-characterization.v1",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "providers": {
+    "P4-PRV-OLLAMA": {
+      "kind": "local",
+      "target": "http://localhost:11434/v1/chat/completions",
+      "model": "latticework-synthetic-local"
+    },
+    "P4-PRV-OPENAI": {
+      "kind": "cloud",
+      "target": "https://api.openai.com/v1/chat/completions",
+      "model": "latticework-synthetic-cloud"
+    }
+  },
+  "allowed_result_statuses": ["PASS", "CONDITIONAL", "UNKNOWN", "FAIL"],
+  "groups": [
+    {
+      "id": "P4-ONB-001",
+      "subcases": [
+        {"id": "P4-ONB-001A", "probe": "onboarding-visible"},
+        {"id": "P4-ONB-001B", "probe": "absent-configuration"},
+        {"id": "P4-ONB-001C", "probe": "invalid-configuration-reload"}
+      ]
+    },
+    {
+      "id": "P4-CHAT-001",
+      "subcases": [
+        {"id": "P4-CHAT-001A", "probe": "fragmented-success", "provider": "P4-PRV-OLLAMA"}
+      ]
+    },
+    {
+      "id": "P4-CHAT-002",
+      "subcases": [
+        {"id": "P4-CHAT-002A", "probe": "fragmented-success", "provider": "P4-PRV-OPENAI"}
+      ]
+    },
+    {
+      "id": "P4-CHAT-003",
+      "subcases": [
+        {"id": "P4-CHAT-003A", "probe": "empty-send"},
+        {"id": "P4-CHAT-003B", "probe": "duplicate-activation", "provider": "P4-PRV-OLLAMA"}
+      ]
+    },
+    {
+      "id": "P4-CHAT-004",
+      "subcases": [
+        {"id": "P4-CHAT-004A", "probe": "cancel-before-dispatch", "provider": "P4-PRV-OLLAMA"}
+      ]
+    },
+    {
+      "id": "P4-CHAT-005",
+      "subcases": [
+        {"id": "P4-CHAT-005A", "probe": "cancel-after-first-delta", "provider": "P4-PRV-OLLAMA"},
+        {"id": "P4-CHAT-005B", "probe": "late-delta-after-cancel", "provider": "P4-PRV-OLLAMA"},
+        {"id": "P4-CHAT-005C", "probe": "duplicate-terminal-after-cancel", "provider": "P4-PRV-OLLAMA"}
+      ]
+    },
+    {
+      "id": "P4-CHAT-006",
+      "subcases": [
+        {"id": "P4-CHAT-006A", "probe": "http-429", "provider": "P4-PRV-OLLAMA"},
+        {"id": "P4-CHAT-006B", "probe": "context-limit", "provider": "P4-PRV-OLLAMA"}
+      ]
+    },
+    {
+      "id": "P4-CHAT-007",
+      "subcases": [
+        {"id": "P4-CHAT-007A", "probe": "http-401", "provider": "P4-PRV-OPENAI"},
+        {"id": "P4-CHAT-007B", "probe": "policy-refusal", "provider": "P4-PRV-OPENAI"}
+      ]
+    },
+    {
+      "id": "P4-CHAT-008",
+      "subcases": [
+        {"id": "P4-CHAT-008A", "probe": "timeout", "provider": "P4-PRV-OLLAMA"},
+        {"id": "P4-CHAT-008B", "probe": "network-abort", "provider": "P4-PRV-OLLAMA"}
+      ]
+    },
+    {
+      "id": "P4-CHAT-009",
+      "subcases": [
+        {"id": "P4-CHAT-009A", "probe": "malformed-fragment", "provider": "P4-PRV-OLLAMA"},
+        {"id": "P4-CHAT-009B", "probe": "empty-success", "provider": "P4-PRV-OLLAMA"},
+        {"id": "P4-CHAT-009C", "probe": "missing-terminal", "provider": "P4-PRV-OLLAMA"},
+        {"id": "P4-CHAT-009D", "probe": "duplicate-terminal", "provider": "P4-PRV-OLLAMA"},
+        {"id": "P4-CHAT-009E", "probe": "out-of-order-fragments", "provider": "P4-PRV-OLLAMA"}
+      ]
+    },
+    {
+      "id": "P4-CHAT-010",
+      "subcases": [
+        {"id": "P4-CHAT-010A", "probe": "navigation-before-first-delta", "provider": "P4-PRV-OLLAMA"},
+        {"id": "P4-CHAT-010B", "probe": "navigation-after-first-delta", "provider": "P4-PRV-OLLAMA"}
+      ]
+    },
+    {
+      "id": "P4-SIG-001",
+      "subcases": [
+        {"id": "P4-SIG-001A", "probe": "signal-report-completed", "provider": "P4-PRV-OLLAMA"},
+        {"id": "P4-SIG-001B", "probe": "signal-report-cancelled", "provider": "P4-PRV-OLLAMA"},
+        {"id": "P4-SIG-001C", "probe": "signal-report-failed", "provider": "P4-PRV-OLLAMA"}
+      ]
+    },
+    {
+      "id": "P4-RESP-001",
+      "subcases": [
+        {"id": "P4-RESP-001A", "probe": "mobile-bounded-flow", "provider": "P4-PRV-OLLAMA"}
+      ]
+    },
+    {
+      "id": "P4-A11Y-001",
+      "subcases": [
+        {"id": "P4-A11Y-001A", "probe": "keyboard-focus-name-live-region"},
+        {"id": "P4-A11Y-001B", "probe": "forced-colors"},
+        {"id": "P4-A11Y-001C", "probe": "reduced-motion"}
+      ]
+    },
+    {
+      "id": "P4-DEG-001",
+      "subcases": [
+        {"id": "P4-DEG-001A", "probe": "warm-offline-reload", "provider": "P4-PRV-OLLAMA"}
+      ]
+    },
+    {
+      "id": "P4-EGR-001",
+      "subcases": [
+        {"id": "P4-EGR-001A", "probe": "unexpected-http-origin"},
+        {"id": "P4-EGR-001B", "probe": "redirect"},
+        {"id": "P4-EGR-001C", "probe": "websocket"},
+        {"id": "P4-EGR-001D", "probe": "eventsource"},
+        {"id": "P4-EGR-001E", "probe": "worker-realtime"},
+        {"id": "P4-EGR-001F", "probe": "beacon"},
+        {"id": "P4-EGR-001G", "probe": "navigation"}
+      ]
+    }
+  ]
+}
