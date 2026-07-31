@@ -1,0 +1,46 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P4-001-browser",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/s",
+    "/c",
+    "npm run p4:browser"
+  ],
+  "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"npm run p4:browser\"",
+  "cwd": "Z:\\LATTICEWORK",
+  "started_at": "2026-07-31T04:28:57.568Z",
+  "ended_at": "2026-07-31T04:29:06.855Z",
+  "duration_ms": 9287.256,
+  "timeout_ms": 300000,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+  "repository": {
+    "head": "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+    "status": "## reengineering/p4-characterization-retests\n?? reengineering/evidence/phase-4/LW-P4-001/"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 1105,
+      "sha256": "75811734bfe545869b8fbfc73cb5438b81173557fd088e2d0e7f2636004e3271"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 1458,
+      "sha256": "b21dfdfd39db7232dfe32b3da0fe70ba70f3124dd2740a50b30e50c8251e1078"
+    }
+  ]
+}

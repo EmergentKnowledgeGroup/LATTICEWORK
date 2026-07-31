@@ -1,0 +1,97 @@
+
+> latticework@0.0.0 p4:test
+> npm run test --workspace @latticework/chat && npm run test:fixture --workspace @latticework/phase4-browser && node --test tests/reengineering/phase4-amendment.test.mjs tests/reengineering/phase4-implementation-scope.test.mjs
+
+
+> @latticework/chat@0.0.0 test
+> node --test src/*.test.mjs
+
+✔ persists the synthetic user before dispatch and commits assistant content only after completed (1.7504ms)
+✔ failed turns retain user and content-free terminal metadata with a sanitized error (1.1039ms)
+✔ cancel before dispatch persists the user and one cancellation terminal without calling the adapter seam (2.3769ms)
+✔ cancel after a delta aborts one controller, emits one terminal, and ignores late or duplicate provider events (32.641ms)
+✔ hydrates persisted candidate state without dispatching another provider operation (0.2687ms)
+✔ a hydrated conversation retains prior candidate messages when the next turn is persisted (0.3597ms)
+✔ hydrate cannot publish a stale read over an overlapping send (14.5225ms)
+✔ sequential sends append both completed turns instead of overwriting the conversation (0.4898ms)
+✔ repository read failure settles as an unsaved failure without provider dispatch (1.0051ms)
+✔ initial user write failure settles as an unsaved failure without provider dispatch (0.3621ms)
+✔ terminal write failure settles as an unsaved failure after one provider dispatch (0.3022ms)
+✔ overlapping sends to one conversation retain every user and assistant message (1.0905ms)
+✔ creates one distinct AbortController signal per operation and never retries or falls back (0.4223ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 145.9633
+
+> @latticework/phase4-browser@0.0.0 test:fixture
+> node --test support/synthetic-stream-fixture.test.mjs
+
+✔ synthetic stream fixture is exact-loopback, synthetic-only, and explicitly releases its port (12.4959ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 91.9867
+✔ accepts the locked no-runtime amendment and packet (1.8311ms)
+✔ rejects removal of accepted implementation authority (3.0555ms)
+✔ rejects real provider traffic authority (1.685ms)
+✔ rejects deployment authority (1.9691ms)
+✔ rejects a wildcard listener (2.0498ms)
+✔ rejects a fixed listener port (1.4751ms)
+✔ rejects an application listener (1.7957ms)
+✔ rejects a non-fixture amendment listener (1.3062ms)
+✔ rejects a non-synthetic packet listener (1.2126ms)
+✔ rejects divergence drift (1.9216ms)
+✔ rejects a default candidate entrypoint (1.398ms)
+✔ rejects owned path drift (1.3782ms)
+✔ rejects protected path drift (1.4294ms)
+✔ canonical accepted packet and active implementation range are valid (804.3532ms)
+✔ Phase 3 boundary stays pinned to its accepted terminal on later descendants (124.3382ms)
+✔ protected paths are rejected even if broad ownership could match (0.1999ms)
+✔ rejects one unowned path (0.5908ms)
+✔ rejects one protected path independently (0.4197ms)
+✔ rejects packet drift: implementation-authority (2.2157ms)
+✔ rejects packet drift: application-listener (1.2096ms)
+✔ rejects packet drift: test-listener (1.0916ms)
+✔ rejects packet drift: wildcard-bind (1.345ms)
+✔ rejects packet drift: fixed-port (1.1119ms)
+✔ rejects packet drift: listener-egress (1.749ms)
+✔ rejects packet drift: browser-harness-port (1.1058ms)
+✔ rejects packet drift: real-provider (0.9599ms)
+✔ rejects packet drift: real-data (0.8996ms)
+✔ rejects packet drift: real-credentials (0.9217ms)
+✔ rejects packet drift: activation (0.8549ms)
+✔ rejects packet drift: deployment (0.8882ms)
+✔ rejects packet drift: cutover (1.018ms)
+✔ rejects omitted narrow existing-file ownership (1.7363ms)
+✔ rejects protected-array drift (1.2658ms)
+✔ rejects candidate source primitive: fetch (1.4099ms)
+✔ rejects candidate source primitive: websocket (1.1411ms)
+✔ rejects candidate source primitive: ambient-env (1.1879ms)
+✔ rejects candidate source primitive: migration (1.5682ms)
+✔ rejects candidate source primitive: deep-import (1.3558ms)
+✔ rejects candidate source primitive: application-listen (1.1946ms)
+✔ accepts only the exact synthetic loopback port-zero listener shape (1.3114ms)
+✔ rejects a test listener without an explicit close lifecycle (1.3468ms)
+✔ rejects unsafe test-listener source (1.4042ms)
+✔ CLI rejects base or scope overrides (150.8999ms)
+✔ Playwright configuration honors the verifier-selected loopback port (325.7588ms)
+✔ Playwright harness creates and removes its contained profile root (0.3063ms)
+✔ Playwright configuration rejects an invalid verifier port (329.8158ms)
+✔ Phase 4 verification runner pins the complete bounded evidence gate (0.4412ms)
+ℹ tests 47
+ℹ suites 0
+ℹ pass 47
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1844.5844

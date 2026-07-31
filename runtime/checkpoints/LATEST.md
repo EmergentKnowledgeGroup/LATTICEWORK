@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-31T03:58:00Z`
+Updated: `2026-07-31T04:33:52Z`
 
 ## CURRENT
 
 Track: `LW_P4_IMPLEMENTATION WORK`
-Step: `phase4-integrated-tests-green`
-Note: The non-default synthetic Chat slice, controller, candidate persistence, test-only fixture, and browser harness are integrated; targeted typecheck, tests, browser scenarios, scope validation, and hygiene are green pending the clean committed evidence run.
+Step: `phase4-canonical-independent-green`
+Note: The exact non-default synthetic Chat candidate is canonical and independently GREEN with failure-safe persistence, serialized hydration/mutations, clean verifier-selected ports, and complete evidence.
 Branch: `reengineering/p4-characterization-retests`
-Head: `e8de177e7f5c3b8a0ca218c4ffe9ac83cec963a1`
-Next command: `Update living docs and handoff, commit the exact implementation range, then run tools/reengineering/run-phase4-verification.ps1 from the clean candidate commit.`
+Head: `cb94b608a7b0c552154ec01a44bda9fa1ea28ec1`
+Next command: `Commit evidence/docs/checkpoints, open one Phase 4 PR, request exactly one CodeRabbit review, apply one consolidated fix pass if required, then merge.`
 
 ## LW_M0_BASELINE WORK
 
@@ -381,11 +381,11 @@ Next command: `Commit the accepted preflight closeout, claim LW-P4-001, checkpoi
 
 ## LW_P4_IMPLEMENTATION WORK
 
-Step: `phase4-integrated-tests-green`
-Note: The non-default synthetic Chat slice, controller, candidate persistence, test-only fixture, and browser harness are integrated; targeted typecheck, tests, browser scenarios, scope validation, and hygiene are green pending the clean committed evidence run.
+Step: `phase4-canonical-independent-green`
+Note: The exact non-default synthetic Chat candidate is canonical and independently GREEN with failure-safe persistence, serialized hydration/mutations, clean verifier-selected ports, and complete evidence.
 Branch: `reengineering/p4-characterization-retests`
-Head: `e8de177e7f5c3b8a0ca218c4ffe9ac83cec963a1`
-Next command: `Update living docs and handoff, commit the exact implementation range, then run tools/reengineering/run-phase4-verification.ps1 from the clean candidate commit.`
+Head: `cb94b608a7b0c552154ec01a44bda9fa1ea28ec1`
+Next command: `Commit evidence/docs/checkpoints, open one Phase 4 PR, request exactly one CodeRabbit review, apply one consolidated fix pass if required, then merge.`
 
 ### Validations
 
@@ -394,10 +394,12 @@ Next command: `Update living docs and handoff, commit the exact implementation r
 - **OBSERVED** — worktree is clean at phase start.
 - **OBSERVED** — real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.
 - **MEASURED** — `npm run p4:typecheck` passed every workspace typecheck.
-- **MEASURED** — `npm run p4:test` passed 8 Chat tests, 1 fixture test, and 42 packet/control tests.
+- **MEASURED** — `npm run p4:test` passed 13 Chat tests, 1 fixture test, and 47 packet/control tests: 61/61.
 - **MEASURED** — `npm run p4:browser` passed 6 active scenarios; the explicit offline-contract scenario skipped because this packet authorizes no service worker.
-- **VERIFIED** — all 181 repository controls pass with zero fail/skip/todo.
-- **VERIFIED** — the active implementation-scope validator is valid across 41 inspected paths and `git diff --check` is clean.
+- **VERIFIED** — all 186 repository controls pass with zero fail/skip/todo.
+- **VERIFIED** — canonical verification passed lock replay, strict typecheck, targeted tests, browser, Phase 3 boundary, deterministic builds, audit, SBOM, supply-chain, hygiene, and manifest generation at candidate `cb94b608a7b0c552154ec01a44bda9fa1ea28ec1`.
+- **VERIFIED** — clean detached-worktree QA on port 4294 reproduced the complete gate, proved profile/listener teardown, and returned GREEN with no actionable findings.
+- **VERIFIED** — real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.
 
 ### Blockers
 

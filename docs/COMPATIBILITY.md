@@ -123,13 +123,17 @@ has changed.
 
 ## Phase 4 non-default primary-Chat candidate
 
-**MEASURED; independent verification pending:** `/p4.html` now exercises a
-synthetic-only Chat controller through the accepted candidate repository and
-two deterministic in-process provider shapes. The evidence currently proves:
+**VERIFIED:** `/p4.html` exercises a synthetic-only Chat controller through the
+accepted candidate repository and two deterministic in-process provider
+shapes. Canonical and clean detached-worktree evidence at
+`cb94b608a7b0c552154ec01a44bda9fa1ea28ec1` proves:
 
 - sequential user/assistant turns append and survive a warm online reload;
 - user content persists before provider dispatch;
 - assistant fragments persist only after `completed`;
+- overlapping send/send and send/hydrate operations cannot replace newer
+  candidate state with a stale read;
+- repository read/write failures settle with sanitized `not-saved` metadata;
 - pre-dispatch and post-delta cancellation never retain partial assistant
   content;
 - failure/cancellation receipts contain safe metadata, not prompt/response

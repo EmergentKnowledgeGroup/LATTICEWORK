@@ -1,0 +1,46 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P4-001-audit",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/s",
+    "/c",
+    "npm audit --workspaces --include-workspace-root --json"
+  ],
+  "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"npm audit --workspaces --include-workspace-root --json\"",
+  "cwd": "Z:\\LATTICEWORK_P4_FINAL_QA_cb94b608",
+  "started_at": "2026-07-31T04:30:10.517Z",
+  "ended_at": "2026-07-31T04:30:11.404Z",
+  "duration_ms": 887.5877,
+  "timeout_ms": 300000,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+  "repository": {
+    "head": "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+    "status": "## HEAD (no branch)"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 362,
+      "sha256": "3b95558049d03948e8cbfe36c65e58f77de1c1b7646b03b3f9d86b7a654fad3b"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

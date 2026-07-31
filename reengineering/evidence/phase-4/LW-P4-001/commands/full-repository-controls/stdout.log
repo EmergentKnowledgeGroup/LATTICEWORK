@@ -1,0 +1,1126 @@
+TAP version 13
+# Subtest: preservation registry accounts for every bounded source inventory row
+ok 1 - preservation registry accounts for every bounded source inventory row
+  ---
+  duration_ms: 2.8812
+  type: 'test'
+  ...
+# Subtest: rejects a boundary map without every required source inventory
+ok 2 - rejects a boundary map without every required source inventory
+  ---
+  duration_ms: 0.5343
+  type: 'test'
+  ...
+# Subtest: data registry preserves every unique static and runtime storage identifier
+ok 3 - data registry preserves every unique static and runtime storage identifier
+  ---
+  duration_ms: 14.8834
+  type: 'test'
+  ...
+# Subtest: propagates the supplied baseline SHA and rejects malformed runtime names
+ok 4 - propagates the supplied baseline SHA and rejects malformed runtime names
+  ---
+  duration_ms: 2.0445
+  type: 'test'
+  ...
+# Subtest: runtime database rows retain versions and qualified store ownership
+ok 5 - runtime database rows retain versions and qualified store ownership
+  ---
+  duration_ms: 3.7813
+  type: 'test'
+  ...
+# Subtest: text and line helpers use the documented counting rule
+ok 6 - text and line helpers use the documented counting rule
+  ---
+  duration_ms: 1.3069
+  type: 'test'
+  ...
+# Subtest: first-party source classification excludes tests, vendor, and generated buckets
+ok 7 - first-party source classification excludes tests, vendor, and generated buckets
+  ---
+  duration_ms: 0.2701
+  type: 'test'
+  ...
+# Subtest: baseline archive reuse is SHA-safe
+ok 8 - baseline archive reuse is SHA-safe
+  ---
+  duration_ms: 1520.8155
+  type: 'test'
+  ...
+# Subtest: command receipt records exact command output, status, and hashes
+ok 9 - command receipt records exact command output, status, and hashes
+  ---
+  duration_ms: 185.937
+  type: 'test'
+  ...
+# Subtest: command receipt preserves a nonzero command result for an explicit gate
+ok 10 - command receipt preserves a nonzero command result for an explicit gate
+  ---
+  duration_ms: 165.9796
+  type: 'test'
+  ...
+# Subtest: command receipts record a bounded command timeout
+ok 11 - command receipts record a bounded command timeout
+  ---
+  duration_ms: 166.6505
+  type: 'test'
+  ...
+# Subtest: artifact bundle manifest hashes repository and external evidence
+ok 12 - artifact bundle manifest hashes repository and external evidence
+  ---
+  duration_ms: 2.2067
+  type: 'test'
+  ...
+# Subtest: artifact manifest rejects symbolic-link traversal
+ok 13 - artifact manifest rejects symbolic-link traversal
+  ---
+  duration_ms: 1.0979
+  type: 'test'
+  ...
+# Subtest: validates the repository control plane deterministically
+ok 14 - validates the repository control plane deterministically
+  ---
+  duration_ms: 65.8159
+  type: 'test'
+  ...
+# Subtest: CLI emits JSON and fails for a missing in-repository evidence artifact
+ok 15 - CLI emits JSON and fails for a missing in-repository evidence artifact
+  ---
+  duration_ms: 108.8958
+  type: 'test'
+  ...
+# Subtest: accepts a complete fixture without writing to it
+ok 16 - accepts a complete fixture without writing to it
+  ---
+  duration_ms: 38.3486
+  type: 'test'
+  ...
+# Subtest: fails when a declared evidence hash no longer matches
+ok 17 - fails when a declared evidence hash no longer matches
+  ---
+  duration_ms: 41.6534
+  type: 'test'
+  ...
+# Subtest: rejects control JSON that is valid JSON but not an object
+ok 18 - rejects control JSON that is valid JSON but not an object
+  ---
+  duration_ms: 31.4923
+  type: 'test'
+  ...
+# Subtest: fails when a living control document retains an unresolved placeholder
+ok 19 - fails when a living control document retains an unresolved placeholder
+  ---
+  duration_ms: 27.915
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator extracts owned, typed, semantic attachments
+ok 20 - Phase 1 validator extracts owned, typed, semantic attachments
+  ---
+  duration_ms: 21.5427
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects attachment traversal without writing it
+ok 21 - Phase 1 validator rejects attachment traversal without writing it
+  ---
+  duration_ms: 29.6803
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects non-canonical base64 attachment bodies
+ok 22 - Phase 1 validator rejects non-canonical base64 attachment bodies
+  ---
+  duration_ms: 12.8387
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects an attachment owned by the wrong spec
+ok 23 - Phase 1 validator rejects an attachment owned by the wrong spec
+  ---
+  duration_ms: 10.3646
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects fake PNG and false mobile semantics
+ok 24 - Phase 1 validator rejects fake PNG and false mobile semantics
+  ---
+  duration_ms: 15.3023
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects wrong baseline metadata
+ok 25 - Phase 1 validator rejects wrong baseline metadata
+  ---
+  duration_ms: 9.8693
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects missing WebSocket/realtime proof
+ok 26 - Phase 1 validator rejects missing WebSocket/realtime proof
+  ---
+  duration_ms: 8.5099
+  type: 'test'
+  ...
+# Subtest: Phase 1 validator rejects sentinel leakage in receipted text
+ok 27 - Phase 1 validator rejects sentinel leakage in receipted text
+  ---
+  duration_ms: 9.375
+  type: 'test'
+  ...
+# Subtest: Phase 2 direct dependency set is exact and workspace-scoped
+ok 28 - Phase 2 direct dependency set is exact and workspace-scoped
+  ---
+  duration_ms: 326.9693
+  type: 'test'
+  ...
+# Subtest: candidate and kernel source contain no privileged or durable runtime APIs
+ok 29 - candidate and kernel source contain no privileged or durable runtime APIs
+  ---
+  duration_ms: 3.3685
+  type: 'test'
+  ...
+# Subtest: candidate build target stays outside deployment mirrors
+ok 30 - candidate build target stays outside deployment mirrors
+  ---
+  duration_ms: 0.5781
+  type: 'test'
+  ...
+# Subtest: protected legacy committed blobs byte-match the immutable baseline
+ok 31 - protected legacy committed blobs byte-match the immutable baseline
+  ---
+  duration_ms: 881.3963
+  type: 'test'
+  ...
+# Subtest: accepts two complete byte-identical candidate builds
+ok 32 - accepts two complete byte-identical candidate builds
+  ---
+  duration_ms: 16.919
+  type: 'test'
+  ...
+# Subtest: rejects a build whose bytes differ at the same declared path
+ok 33 - rejects a build whose bytes differ at the same declared path
+  ---
+  duration_ms: 7.5358
+  type: 'test'
+  ...
+# Subtest: rejects missing required Vite build artifacts
+ok 34 - rejects missing required Vite build artifacts
+  ---
+  duration_ms: 7.4417
+  type: 'test'
+  ...
+# Subtest: refuses build and summary paths outside the repository
+ok 35 - refuses build and summary paths outside the repository
+  ---
+  duration_ms: 2.0637
+  type: 'test'
+  ...
+# Subtest: preview script delegates its port to the guarded Vite configuration
+ok 36 - preview script delegates its port to the guarded Vite configuration
+  ---
+  duration_ms: 0.4912
+  type: 'test'
+  ...
+# Subtest: candidate output rejects a repository-local reparse point
+ok 37 - candidate output rejects a repository-local reparse point
+  ---
+  duration_ms: 1.9322
+  type: 'test'
+  ...
+# Subtest: Playwright output rejects a repository-local reparse point
+ok 38 - Playwright output rejects a repository-local reparse point
+  ---
+  duration_ms: 2.4575
+  type: 'test'
+  ...
+# Subtest: Playwright resolves its preview port through the Vite configuration
+ok 39 - Playwright resolves its preview port through the Vite configuration
+  ---
+  duration_ms: 0.3641
+  type: 'test'
+  ...
+# Subtest: Vite preview port resolver accepts configured values and defaults empty values
+ok 40 - Vite preview port resolver accepts configured values and defaults empty values
+  ---
+  duration_ms: 2.1467
+  type: 'test'
+  ...
+# Subtest: verification runner replays the lockfile and validates the final bundle
+ok 41 - verification runner replays the lockfile and validates the final bundle
+  ---
+  duration_ms: 0.6721
+  type: 'test'
+  ...
+# Subtest: accepts a complete, repository-descendant Phase 2 fixture bundle
+ok 42 - accepts a complete, repository-descendant Phase 2 fixture bundle
+  ---
+  duration_ms: 59.6808
+  type: 'test'
+  ...
+# Subtest: rejects manifest traversal and tampered artifact hashes
+ok 43 - rejects manifest traversal and tampered artifact hashes
+  ---
+  duration_ms: 87.0246
+  type: 'test'
+  ...
+# Subtest: rejects gate failures, wrong receipts, missing visual evidence, and secret sentinels
+ok 44 - rejects gate failures, wrong receipts, missing visual evidence, and secret sentinels
+  ---
+  duration_ms: 37.8933
+  type: 'test'
+  ...
+# Subtest: rejects malformed audit receipts and scans NUL-containing text while excluding PNG artifacts
+ok 45 - rejects malformed audit receipts and scans NUL-containing text while excluding PNG artifacts
+  ---
+  duration_ms: 44.0735
+  type: 'test'
+  ...
+# Subtest: refuses evidence and output paths outside the repository
+ok 46 - refuses evidence and output paths outside the repository
+  ---
+  duration_ms: 21.3742
+  type: 'test'
+  ...
+# Subtest: fails closed when browser evidence is behind a symbolic link
+ok 47 - fails closed when browser evidence is behind a symbolic link
+  ---
+  duration_ms: 35.7745
+  type: 'test'
+  ...
+# Subtest: captures integrity, license, and ignored lifecycle scripts from a lock fixture
+ok 48 - captures integrity, license, and ignored lifecycle scripts from a lock fixture
+  ---
+  duration_ms: 6.9664
+  type: 'test'
+  ...
+# Subtest: records a platform-skipped optional package from lock metadata without failing
+ok 49 - records a platform-skipped optional package from lock metadata without failing
+  ---
+  duration_ms: 2.6506
+  type: 'test'
+  ...
+# Subtest: permits skipped optional metadata without installed license or integrity
+ok 50 - permits skipped optional metadata without installed license or integrity
+  ---
+  duration_ms: 4.4555
+  type: 'test'
+  ...
+# Subtest: discovers nested node_modules packages using their innermost package name
+ok 51 - discovers nested node_modules packages using their innermost package name
+  ---
+  duration_ms: 12.629
+  type: 'test'
+  ...
+# Subtest: reports missing external license and integrity metadata
+ok 52 - reports missing external license and integrity metadata
+  ---
+  duration_ms: 3.7127
+  type: 'test'
+  ...
+# Subtest: canonical Phase 3 decision packet records bounded maintainer acceptance
+ok 53 - canonical Phase 3 decision packet records bounded maintainer acceptance
+  ---
+  duration_ms: 284.3837
+  type: 'test'
+  ...
+# Subtest: validator rejects accepted status without implementation authority
+ok 54 - validator rejects accepted status without implementation authority
+  ---
+  duration_ms: 9.836
+  type: 'test'
+  ...
+# Subtest: validator rejects a weakened preservation registry
+ok 55 - validator rejects a weakened preservation registry
+  ---
+  duration_ms: 11.3199
+  type: 'test'
+  ...
+# Subtest: validator permits additive registry expansion while retaining the pinned floor
+ok 56 - validator permits additive registry expansion while retaining the pinned floor
+  ---
+  duration_ms: 57.4854
+  type: 'test'
+  ...
+# Subtest: validator rejects premature blocker closure
+ok 57 - validator rejects premature blocker closure
+  ---
+  duration_ms: 8.6461
+  type: 'test'
+  ...
+# Subtest: validator rejects an Accepted ADR without the exact decision receipt
+ok 58 - validator rejects an Accepted ADR without the exact decision receipt
+  ---
+  duration_ms: 8.0151
+  type: 'test'
+  ...
+# Subtest: validator rejects removal of a required decision invariant
+ok 59 - validator rejects removal of a required decision invariant
+  ---
+  duration_ms: 8.9911
+  type: 'test'
+  ...
+# Subtest: validator rejects unstable versioned dataset ID
+ok 60 - validator rejects unstable versioned dataset ID
+  ---
+  duration_ms: 9.1299
+  type: 'test'
+  ...
+# Subtest: validator rejects credential-bearing export policy
+ok 61 - validator rejects credential-bearing export policy
+  ---
+  duration_ms: 7.6478
+  type: 'test'
+  ...
+# Subtest: validator rejects journal deletion during rollback
+ok 62 - validator rejects journal deletion during rollback
+  ---
+  duration_ms: 13.3352
+  type: 'test'
+  ...
+# Subtest: validator rejects unstaged import promotion
+ok 63 - validator rejects unstaged import promotion
+  ---
+  duration_ms: 7.9506
+  type: 'test'
+  ...
+# Subtest: validator rejects exported real-data digests
+ok 64 - validator rejects exported real-data digests
+  ---
+  duration_ms: 7.8816
+  type: 'test'
+  ...
+# Subtest: validator rejects real provider traffic
+ok 65 - validator rejects real provider traffic
+  ---
+  duration_ms: 8.5581
+  type: 'test'
+  ...
+# Subtest: validator rejects implicit retry
+ok 66 - validator rejects implicit retry
+  ---
+  duration_ms: 9.3256
+  type: 'test'
+  ...
+# Subtest: validator rejects credential resolution before an exact egress grant
+ok 67 - validator rejects credential resolution before an exact egress grant
+  ---
+  duration_ms: 10.599
+  type: 'test'
+  ...
+# Subtest: validator rejects Phase 3 proxy listener
+ok 68 - validator rejects Phase 3 proxy listener
+  ---
+  duration_ms: 8.2005
+  type: 'test'
+  ...
+# Subtest: validator rejects ambient pairing bootstrap
+ok 69 - validator rejects ambient pairing bootstrap
+  ---
+  duration_ms: 6.9544
+  type: 'test'
+  ...
+# Subtest: validator rejects removed real-data prohibition
+ok 70 - validator rejects removed real-data prohibition
+  ---
+  duration_ms: 7.0894
+  type: 'test'
+  ...
+# Subtest: validator rejects a weakened blocker condition
+ok 71 - validator rejects a weakened blocker condition
+  ---
+  duration_ms: 7.9432
+  type: 'test'
+  ...
+# Subtest: validator rejects a semantically weakened invariant statement
+ok 72 - validator rejects a semantically weakened invariant statement
+  ---
+  duration_ms: 9.5238
+  type: 'test'
+  ...
+# Subtest: validator rejects removal of an ADR safety clause
+ok 73 - validator rejects removal of an ADR safety clause
+  ---
+  duration_ms: 7.2747
+  type: 'test'
+  ...
+# Subtest: validator rejects Markdown that drifts from the structured packet
+ok 74 - validator rejects Markdown that drifts from the structured packet
+  ---
+  duration_ms: 9.3334
+  type: 'test'
+  ...
+# Subtest: canonical CLI cannot disable or rebase Git scope validation
+ok 75 - canonical CLI cannot disable or rebase Git scope validation
+  ---
+  duration_ms: 103.3726
+  type: 'test'
+  ...
+# Subtest: decision packet closed historical scope still rejects an over-broad earlier range
+ok 76 - decision packet closed historical scope still rejects an over-broad earlier range
+  ---
+  duration_ms: 264.5103
+  type: 'test'
+  ...
+# Subtest: decision packet closed historical scope rejects a non-ancestor terminal
+ok 77 - decision packet closed historical scope rejects a non-ancestor terminal
+  ---
+  duration_ms: 87.2998
+  type: 'test'
+  ...
+# Subtest: accepted validator permits only the exact bounded Phase 3 implementation surface
+ok 78 - accepted validator permits only the exact bounded Phase 3 implementation surface
+  ---
+  duration_ms: 0.5962
+  type: 'test'
+  ...
+# Subtest: accepts a complete hash-bound Phase 3 evidence fixture
+ok 79 - accepts a complete hash-bound Phase 3 evidence fixture
+  ---
+  duration_ms: 98.6241
+  type: 'test'
+  ...
+# Subtest: rejects a failed command receipt
+ok 80 - rejects a failed command receipt
+  ---
+  duration_ms: 54.7918
+  type: 'test'
+  ...
+# Subtest: rejects tampered artifact bytes
+ok 81 - rejects tampered artifact bytes
+  ---
+  duration_ms: 45.1345
+  type: 'test'
+  ...
+# Subtest: rejects missing or non-independent final review
+ok 82 - rejects missing or non-independent final review
+  ---
+  duration_ms: 47.7464
+  type: 'test'
+  ...
+# Subtest: rejects secret-like content in receipted text
+ok 83 - rejects secret-like content in receipted text
+  ---
+  duration_ms: 54.7172
+  type: 'test'
+  ...
+# Subtest: rejects files omitted from the artifact manifest
+ok 84 - rejects files omitted from the artifact manifest
+  ---
+  duration_ms: 106.0057
+  type: 'test'
+  ...
+# Subtest: rejects a prose-only GREEN review without clean-worktree receipts
+ok 85 - rejects a prose-only GREEN review without clean-worktree receipts
+  ---
+  duration_ms: 45.1398
+  type: 'test'
+  ...
+# Subtest: rejects dirty or wrong-identity independent worktree receipts
+ok 86 - rejects dirty or wrong-identity independent worktree receipts
+  ---
+  duration_ms: 55.8388
+  type: 'test'
+  ...
+# Subtest: rejects a lockfile replay receipt outside the independent worktree
+ok 87 - rejects a lockfile replay receipt outside the independent worktree
+  ---
+  duration_ms: 69.6834
+  type: 'test'
+  ...
+# Subtest: verification runner produces and validates structured independent worktree evidence
+ok 88 - verification runner produces and validates structured independent worktree evidence
+  ---
+  duration_ms: 0.8458
+  type: 'test'
+  ...
+# Subtest: canonical Phase 3 preflight freezes the accepted bounded implementation slice
+ok 89 - canonical Phase 3 preflight freezes the accepted bounded implementation slice
+  ---
+  duration_ms: 273.0241
+  type: 'test'
+  ...
+# Subtest: preflight rejects implementation authority without the accepted disposition
+ok 90 - preflight rejects implementation authority without the accepted disposition
+  ---
+  duration_ms: 3.1712
+  type: 'test'
+  ...
+# Subtest: preflight rejects real user data
+ok 91 - preflight rejects real user data
+  ---
+  duration_ms: 1.9931
+  type: 'test'
+  ...
+# Subtest: preflight rejects real provider traffic
+ok 92 - preflight rejects real provider traffic
+  ---
+  duration_ms: 2.2153
+  type: 'test'
+  ...
+# Subtest: preflight rejects real credentials
+ok 93 - preflight rejects real credentials
+  ---
+  duration_ms: 2.3339
+  type: 'test'
+  ...
+# Subtest: preflight rejects a Phase 3 listener
+ok 94 - preflight rejects a Phase 3 listener
+  ---
+  duration_ms: 2.266
+  type: 'test'
+  ...
+# Subtest: preflight rejects a candidate cutover
+ok 95 - preflight rejects a candidate cutover
+  ---
+  duration_ms: 50.0988
+  type: 'test'
+  ...
+# Subtest: preflight rejects legacy mutation
+ok 96 - preflight rejects legacy mutation
+  ---
+  duration_ms: 2.62
+  type: 'test'
+  ...
+# Subtest: preflight rejects drift in the conversation dataset contract
+ok 97 - preflight rejects drift in the conversation dataset contract
+  ---
+  duration_ms: 2.5648
+  type: 'test'
+  ...
+# Subtest: preflight rejects weakened provider identity, retry, or egress rules
+ok 98 - preflight rejects weakened provider identity, retry, or egress rules
+  ---
+  duration_ms: 2.6354
+  type: 'test'
+  ...
+# Subtest: preflight rejects an owned implementation path outside the frozen package surface
+ok 99 - preflight rejects an owned implementation path outside the frozen package surface
+  ---
+  duration_ms: 3.0922
+  type: 'test'
+  ...
+# Subtest: preflight rejects a removed legacy no-touch prefix
+ok 100 - preflight rejects a removed legacy no-touch prefix
+  ---
+  duration_ms: 2.3937
+  type: 'test'
+  ...
+# Subtest: preflight rejects a missing required verification gate
+ok 101 - preflight rejects a missing required verification gate
+  ---
+  duration_ms: 2.2715
+  type: 'test'
+  ...
+# Subtest: preflight rejects Markdown projection drift
+ok 102 - preflight rejects Markdown projection drift
+  ---
+  duration_ms: 2.4208
+  type: 'test'
+  ...
+# Subtest: canonical CLI cannot disable or rebase Git scope validation
+ok 103 - canonical CLI cannot disable or rebase Git scope validation
+  ---
+  duration_ms: 95.6275
+  type: 'test'
+  ...
+# Subtest: preflight closed historical scope still rejects an over-broad earlier range
+ok 104 - preflight closed historical scope still rejects an over-broad earlier range
+  ---
+  duration_ms: 294.393
+  type: 'test'
+  ...
+# Subtest: preflight closed historical scope rejects a non-ancestor terminal
+ok 105 - preflight closed historical scope rejects a non-ancestor terminal
+  ---
+  duration_ms: 46.5405
+  type: 'test'
+  ...
+# Subtest: capability mismatch is rejected before policy, credential, or adapter work
+ok 106 - capability mismatch is rejected before policy, credential, or adapter work
+  ---
+  duration_ms: 3.6827
+  type: 'test'
+  ...
+# Subtest: provider package contains no network, listener, or ambient credential API
+ok 107 - provider package contains no network, listener, or ambient credential API
+  ---
+  duration_ms: 2.4906
+  type: 'test'
+  ...
+# Subtest: conversation descriptor freezes the synthetic FreeLatticeDB v3 boundary
+ok 108 - conversation descriptor freezes the synthetic FreeLatticeDB v3 boundary
+  ---
+  duration_ms: 1.9373
+  type: 'test'
+  ...
+# Subtest: staging namespace rejects untrusted operation identifiers
+ok 109 - staging namespace rejects untrusted operation identifiers
+  ---
+  duration_ms: 1.7125
+  type: 'test'
+  ...
+# Subtest: migration journal transition graph is fail-closed
+ok 110 - migration journal transition graph is fail-closed
+  ---
+  duration_ms: 0.2769
+  type: 'test'
+  ...
+# Subtest: storage source contains no legacy mutation or activation hooks
+ok 111 - storage source contains no legacy mutation or activation hooks
+  ---
+  duration_ms: 2.4581
+  type: 'test'
+  ...
+# Subtest: canonical Phase 4 active scope accepts the currently claimed packet
+ok 112 - canonical Phase 4 active scope accepts the currently claimed packet
+  ---
+  duration_ms: 445.9475
+  type: 'test'
+  ...
+# Subtest: active scope rejects unauthorized tracked and untracked path classes
+ok 113 - active scope rejects unauthorized tracked and untracked path classes
+  ---
+  duration_ms: 1.1163
+  type: 'test'
+  ...
+# Subtest: Git range collection retains add-then-delete paths and all active states
+ok 114 - Git range collection retains add-then-delete paths and all active states
+  ---
+  duration_ms: 1122.4544
+  type: 'test'
+  ...
+# Subtest: active scope rejects a real current untracked unauthorized path
+ok 115 - active scope rejects a real current untracked unauthorized path
+  ---
+  duration_ms: 272.9956
+  type: 'test'
+  ...
+# Subtest: canonical Phase 4 active-scope CLI cannot disable or rebase validation
+ok 116 - canonical Phase 4 active-scope CLI cannot disable or rebase validation
+  ---
+  duration_ms: 59.4798
+  type: 'test'
+  ...
+# Subtest: warm-offline retest proves exact worker/cache readiness with bounded navigation
+ok 117 - warm-offline retest proves exact worker/cache readiness with bounded navigation
+  ---
+  duration_ms: 4.6747
+  type: 'test'
+  ...
+# Subtest: atomic observation errors fail the Playwright scenario after receipts attach
+ok 118 - atomic observation errors fail the Playwright scenario after receipts attach
+  ---
+  duration_ms: 0.6992
+  type: 'test'
+  ...
+# Subtest: stream navigation retests trigger bounded committed reloads
+ok 119 - stream navigation retests trigger bounded committed reloads
+  ---
+  duration_ms: 1.694
+  type: 'test'
+  ...
+# Subtest: dispositions preserve original statuses and produce 20 pass, 8 divergence, 11 retest pass
+ok 120 - dispositions preserve original statuses and produce 20 pass, 8 divergence, 11 retest pass
+  ---
+  duration_ms: 10.0508
+  type: 'test'
+  ...
+# Subtest: validator accepts a complete pending-reproduction receipt with immutable original hashes
+ok 121 - validator accepts a complete pending-reproduction receipt with immutable original hashes
+  ---
+  duration_ms: 3.5386
+  type: 'test'
+  ...
+# Subtest: validator rejects changed original status, failed retest, unsafe listener, and missing absence receipt
+ok 122 - validator rejects changed original status, failed retest, unsafe listener, and missing absence receipt
+  ---
+  duration_ms: 2.0637
+  type: 'test'
+  ...
+# Subtest: GREEN requires an independent GREEN reproduction
+ok 123 - GREEN requires an independent GREEN reproduction
+  ---
+  duration_ms: 1.9087
+  type: 'test'
+  ...
+# Subtest: accepts the locked no-runtime amendment and packet
+ok 124 - accepts the locked no-runtime amendment and packet
+  ---
+  duration_ms: 4.1722
+  type: 'test'
+  ...
+# Subtest: rejects removal of accepted implementation authority
+ok 125 - rejects removal of accepted implementation authority
+  ---
+  duration_ms: 9.886
+  type: 'test'
+  ...
+# Subtest: rejects real provider traffic authority
+ok 126 - rejects real provider traffic authority
+  ---
+  duration_ms: 2.2235
+  type: 'test'
+  ...
+# Subtest: rejects deployment authority
+ok 127 - rejects deployment authority
+  ---
+  duration_ms: 2.0576
+  type: 'test'
+  ...
+# Subtest: rejects a wildcard listener
+ok 128 - rejects a wildcard listener
+  ---
+  duration_ms: 4.6922
+  type: 'test'
+  ...
+# Subtest: rejects a fixed listener port
+ok 129 - rejects a fixed listener port
+  ---
+  duration_ms: 2.0491
+  type: 'test'
+  ...
+# Subtest: rejects an application listener
+ok 130 - rejects an application listener
+  ---
+  duration_ms: 2.0448
+  type: 'test'
+  ...
+# Subtest: rejects a non-fixture amendment listener
+ok 131 - rejects a non-fixture amendment listener
+  ---
+  duration_ms: 2.1462
+  type: 'test'
+  ...
+# Subtest: rejects a non-synthetic packet listener
+ok 132 - rejects a non-synthetic packet listener
+  ---
+  duration_ms: 3.7089
+  type: 'test'
+  ...
+# Subtest: rejects divergence drift
+ok 133 - rejects divergence drift
+  ---
+  duration_ms: 7.6607
+  type: 'test'
+  ...
+# Subtest: rejects a default candidate entrypoint
+ok 134 - rejects a default candidate entrypoint
+  ---
+  duration_ms: 3.8149
+  type: 'test'
+  ...
+# Subtest: rejects owned path drift
+ok 135 - rejects owned path drift
+  ---
+  duration_ms: 2.1296
+  type: 'test'
+  ...
+# Subtest: rejects protected path drift
+ok 136 - rejects protected path drift
+  ---
+  duration_ms: 2.0891
+  type: 'test'
+  ...
+# Subtest: accepts a complete, locked, content-free Phase 4 characterization bundle
+ok 137 - accepts a complete, locked, content-free Phase 4 characterization bundle
+  ---
+  duration_ms: 72.147
+  type: 'test'
+  ...
+# Subtest: rejects lock drift, non-PASS state, duplicate profiles, and missing expected provider request
+ok 138 - rejects lock drift, non-PASS state, duplicate profiles, and missing expected provider request
+  ---
+  duration_ms: 36.3103
+  type: 'test'
+  ...
+# Subtest: rejects unsafe profiles, egress, retries, duplicate terminals, and skipped work
+ok 139 - rejects unsafe profiles, egress, retries, duplicate terminals, and skipped work
+  ---
+  duration_ms: 35.3725
+  type: 'test'
+  ...
+# Subtest: rejects leaked content, incomplete manifests, tampering, and a non-independent review
+ok 140 - rejects leaked content, incomplete manifests, tampering, and a non-independent review
+  ---
+  duration_ms: 42.5501
+  type: 'test'
+  ...
+# Subtest: rejects reparse traversal where the recorded profile path still exists
+ok 141 - rejects reparse traversal where the recorded profile path still exists
+  ---
+  duration_ms: 42.8115
+  type: 'test'
+  ...
+# Subtest: rejects cleanup receipts while recorded profile or run paths still exist
+ok 142 - rejects cleanup receipts while recorded profile or run paths still exist
+  ---
+  duration_ms: 80.4541
+  type: 'test'
+  ...
+# Subtest: CLI rejects a traversal evidence root
+ok 143 - CLI rejects a traversal evidence root
+  ---
+  duration_ms: 0.3128
+  type: 'test'
+  ...
+# Subtest: runner propagates observed operations and proves cleanup before summary
+ok 144 - runner propagates observed operations and proves cleanup before summary
+  ---
+  duration_ms: 0.4733
+  type: 'test'
+  ...
+# Subtest: browser probe counts terminal assistant outcomes, not progress notices
+ok 145 - browser probe counts terminal assistant outcomes, not progress notices
+  ---
+  duration_ms: 0.4057
+  type: 'test'
+  ...
+# Subtest: canonical accepted packet and active implementation range are valid
+ok 146 - canonical accepted packet and active implementation range are valid
+  ---
+  duration_ms: 1326.4687
+  type: 'test'
+  ...
+# Subtest: Phase 3 boundary stays pinned to its accepted terminal on later descendants
+ok 147 - Phase 3 boundary stays pinned to its accepted terminal on later descendants
+  ---
+  duration_ms: 134.5801
+  type: 'test'
+  ...
+# Subtest: protected paths are rejected even if broad ownership could match
+ok 148 - protected paths are rejected even if broad ownership could match
+  ---
+  duration_ms: 0.143
+  type: 'test'
+  ...
+# Subtest: rejects one unowned path
+ok 149 - rejects one unowned path
+  ---
+  duration_ms: 0.8966
+  type: 'test'
+  ...
+# Subtest: rejects one protected path independently
+ok 150 - rejects one protected path independently
+  ---
+  duration_ms: 0.5606
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: implementation-authority
+ok 151 - rejects packet drift: implementation-authority
+  ---
+  duration_ms: 2.6745
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: application-listener
+ok 152 - rejects packet drift: application-listener
+  ---
+  duration_ms: 1.4659
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: test-listener
+ok 153 - rejects packet drift: test-listener
+  ---
+  duration_ms: 1.4168
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: wildcard-bind
+ok 154 - rejects packet drift: wildcard-bind
+  ---
+  duration_ms: 2.1932
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: fixed-port
+ok 155 - rejects packet drift: fixed-port
+  ---
+  duration_ms: 1.4071
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: listener-egress
+ok 156 - rejects packet drift: listener-egress
+  ---
+  duration_ms: 1.3506
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: browser-harness-port
+ok 157 - rejects packet drift: browser-harness-port
+  ---
+  duration_ms: 1.504
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: real-provider
+ok 158 - rejects packet drift: real-provider
+  ---
+  duration_ms: 1.2054
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: real-data
+ok 159 - rejects packet drift: real-data
+  ---
+  duration_ms: 1.2063
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: real-credentials
+ok 160 - rejects packet drift: real-credentials
+  ---
+  duration_ms: 1.0718
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: activation
+ok 161 - rejects packet drift: activation
+  ---
+  duration_ms: 1.3419
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: deployment
+ok 162 - rejects packet drift: deployment
+  ---
+  duration_ms: 1.2101
+  type: 'test'
+  ...
+# Subtest: rejects packet drift: cutover
+ok 163 - rejects packet drift: cutover
+  ---
+  duration_ms: 1.2727
+  type: 'test'
+  ...
+# Subtest: rejects omitted narrow existing-file ownership
+ok 164 - rejects omitted narrow existing-file ownership
+  ---
+  duration_ms: 1.3965
+  type: 'test'
+  ...
+# Subtest: rejects protected-array drift
+ok 165 - rejects protected-array drift
+  ---
+  duration_ms: 1.1114
+  type: 'test'
+  ...
+# Subtest: rejects candidate source primitive: fetch
+ok 166 - rejects candidate source primitive: fetch
+  ---
+  duration_ms: 1.2743
+  type: 'test'
+  ...
+# Subtest: rejects candidate source primitive: websocket
+ok 167 - rejects candidate source primitive: websocket
+  ---
+  duration_ms: 1.1133
+  type: 'test'
+  ...
+# Subtest: rejects candidate source primitive: ambient-env
+ok 168 - rejects candidate source primitive: ambient-env
+  ---
+  duration_ms: 1.2944
+  type: 'test'
+  ...
+# Subtest: rejects candidate source primitive: migration
+ok 169 - rejects candidate source primitive: migration
+  ---
+  duration_ms: 1.4861
+  type: 'test'
+  ...
+# Subtest: rejects candidate source primitive: deep-import
+ok 170 - rejects candidate source primitive: deep-import
+  ---
+  duration_ms: 1.454
+  type: 'test'
+  ...
+# Subtest: rejects candidate source primitive: application-listen
+ok 171 - rejects candidate source primitive: application-listen
+  ---
+  duration_ms: 1.2298
+  type: 'test'
+  ...
+# Subtest: accepts only the exact synthetic loopback port-zero listener shape
+ok 172 - accepts only the exact synthetic loopback port-zero listener shape
+  ---
+  duration_ms: 1.6235
+  type: 'test'
+  ...
+# Subtest: rejects a test listener without an explicit close lifecycle
+ok 173 - rejects a test listener without an explicit close lifecycle
+  ---
+  duration_ms: 1.975
+  type: 'test'
+  ...
+# Subtest: rejects unsafe test-listener source
+ok 174 - rejects unsafe test-listener source
+  ---
+  duration_ms: 1.8494
+  type: 'test'
+  ...
+# Subtest: CLI rejects base or scope overrides
+ok 175 - CLI rejects base or scope overrides
+  ---
+  duration_ms: 173.2795
+  type: 'test'
+  ...
+# Subtest: Playwright configuration honors the verifier-selected loopback port
+ok 176 - Playwright configuration honors the verifier-selected loopback port
+  ---
+  duration_ms: 337.5872
+  type: 'test'
+  ...
+# Subtest: Playwright harness creates and removes its contained profile root
+ok 177 - Playwright harness creates and removes its contained profile root
+  ---
+  duration_ms: 0.2869
+  type: 'test'
+  ...
+# Subtest: Playwright configuration rejects an invalid verifier port
+ok 178 - Playwright configuration rejects an invalid verifier port
+  ---
+  duration_ms: 318.1404
+  type: 'test'
+  ...
+# Subtest: Phase 4 verification runner pins the complete bounded evidence gate
+ok 179 - Phase 4 verification runner pins the complete bounded evidence gate
+  ---
+  duration_ms: 0.4425
+  type: 'test'
+  ...
+# Subtest: binds exact loopback on an OS-selected port, streams controlled synthetic fragments, and proves teardown
+ok 180 - binds exact loopback on an OS-selected port, streams controlled synthetic fragments, and proves teardown
+  ---
+  duration_ms: 42.4293
+  type: 'test'
+  ...
+# Subtest: rejects wrong method
+ok 181 - rejects wrong method
+  ---
+  duration_ms: 9.531
+  type: 'test'
+  ...
+# Subtest: rejects wrong path
+ok 182 - rejects wrong path
+  ---
+  duration_ms: 6.0144
+  type: 'test'
+  ...
+# Subtest: rejects wrong fixture ID
+ok 183 - rejects wrong fixture ID
+  ---
+  duration_ms: 7.9139
+  type: 'test'
+  ...
+# Subtest: rejects wrong origin
+ok 184 - rejects wrong origin
+  ---
+  duration_ms: 6.8561
+  type: 'test'
+  ...
+# Subtest: rejects wrong body
+ok 185 - rejects wrong body
+  ---
+  duration_ms: 7.6762
+  type: 'test'
+  ...
+# Subtest: records client closure before the first fragment without emitting a terminal
+ok 186 - records client closure before the first fragment without emitting a terminal
+  ---
+  duration_ms: 7.65
+  type: 'test'
+  ...
+1..186
+# tests 186
+# suites 0
+# pass 186
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2528.5564

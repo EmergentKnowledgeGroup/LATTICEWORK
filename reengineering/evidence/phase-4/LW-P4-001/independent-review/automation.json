@@ -1,0 +1,39 @@
+{
+    "schema":  "latticework.phase4-independent-review.v1",
+    "work_id":  "LW-P4-001",
+    "evidence_label":  "MEASURED",
+    "verdict":  "AUTOMATED_GATES_GREEN_REVIEW_JUDGMENT_PENDING",
+    "valid":  true,
+    "baseline_sha":  "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "implementation_base_commit":  "faf32dbaf8159e8499421fa68d9fba4bede0fdc9",
+    "candidate_sha":  "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+    "repository_controls":  {
+                                "tests":  186,
+                                "pass":  186,
+                                "fail":  0,
+                                "skipped":  0,
+                                "todo":  0
+                            },
+    "browser":  {
+                    "passed":  6,
+                    "skipped":  1,
+                    "skipped_reason":  "Candidate does not declare an offline contract."
+                },
+    "gates":  {
+                  "environment":  "commands/environment/manifest.json",
+                  "lockfile-replay":  "commands/lockfile-replay/manifest.json",
+                  "install":  "commands/install/manifest.json",
+                  "amendment-validator":  "commands/amendment-validator/manifest.json",
+                  "scope-validator":  "commands/scope-validator/manifest.json",
+                  "strict-typecheck":  "commands/strict-typecheck/manifest.json",
+                  "node-unit":  "commands/node-unit/manifest.json",
+                  "browser":  "commands/browser/manifest.json",
+                  "phase3-boundary":  "commands/phase3-boundary/manifest.json",
+                  "full-repository-controls":  "commands/full-repository-controls/manifest.json",
+                  "deterministic-build":  "commands/deterministic-build/manifest.json",
+                  "audit":  "commands/audit/manifest.json",
+                  "sbom":  "commands/sbom/manifest.json",
+                  "supply-chain":  "commands/supply-chain/manifest.json",
+                  "hygiene":  "commands/hygiene/manifest.json"
+              }
+}

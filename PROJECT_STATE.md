@@ -8,7 +8,7 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 4 SYNTHETIC SLICE IMPLEMENTED — CLEAN EVIDENCE RUN PENDING`
+`PHASE 4 SYNTHETIC SLICE VERIFIED — REVIEW AND MERGE PENDING`
 
 ## Current milestone
 
@@ -16,7 +16,7 @@ LATTICEWORK
 
 ## Current target
 
-`LW-P4-001 — canonical and independent verification of the implemented packet`
+`LW-P4-001 — one-review pull-request and merge closeout`
 
 ## Upstream baseline
 
@@ -24,8 +24,8 @@ LATTICEWORK
 
 ## Last verified commit
 
-`55e3731ea1482f37b242da6dc1af8d8181624e9a` (Phase 4 amended
-characterization candidate; canonical and independent evidence are GREEN)
+`cb94b608a7b0c552154ec01a44bda9fa1ea28ec1` (Phase 4 non-default
+synthetic Chat candidate; canonical and independent evidence are GREEN)
 
 The verified Phase 3 candidate
 `d746b96225a3eaf59a5b5937e3f531e2cad280ef` is contained in the merged
@@ -57,11 +57,12 @@ only after a completed terminal, records content-free failure/cancellation
 metadata, uses one operation controller, and performs zero retry/fallback.
 The Lit workbench composes only the accepted in-process mock adapters and
 candidate-only `latticework::conversation` repository. Targeted verification
-passes every workspace typecheck, 60 unit/control assertions, and six active
-Chromium scenarios. The offline-contract scenario is explicitly skipped
-because this packet authorizes no service worker and the candidate makes no
-offline claim. Canonical committed evidence and independent clean-worktree
-review remain pending.
+passes every workspace typecheck, 61 unit/control assertions, and six active
+Chrome scenarios. The offline-contract scenario is explicitly skipped because
+this packet authorizes no service worker and the candidate makes no offline
+claim. Canonical verification passes 186/186 repository controls, deterministic
+build, audit, SBOM, supply-chain, and hygiene gates. Independent QA reproduced
+the complete gate from a new detached worktree on port 4294 and returned GREEN.
 
 ## Last verified date
 
@@ -93,7 +94,7 @@ review remain pending.
 | `LW-P4-AMEND-001` | Characterization amendment and initial implementation proposal | Codex root controller | `main` | `COMPLETED — MERGED / VERIFIED` | `docs/agents/handoffs/LW-P4-AMEND-001.md` |
 | `LW-P4-RETEST-001` | Bounded amended characterization retests | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P4-RETEST-001.md` |
 | `LW-P4-IMPL-PREFLIGHT-001` | Exact bounded implementation packet and range lock | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md` |
-| `LW-P4-001` | Non-default synthetic primary Chat vertical slice | Codex root controller | `reengineering/p4-characterization-retests` | `IN PROGRESS — TARGETED GATES GREEN` | `reengineering/evidence/phase-4/LW-P4-001/` pending |
+| `LW-P4-001` | Non-default synthetic primary Chat vertical slice | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — CANONICAL / INDEPENDENT GREEN` | `reengineering/evidence/phase-4/LW-P4-001/` |
 
 ## Completed in current milestone
 
@@ -210,10 +211,13 @@ review remain pending.
   standing receipt, machine-valid, and independently GREEN after one bounded
   rework round. Focused controls pass 41/41 and full repository controls pass
   180/180.
-- **MEASURED:** the implemented Chat/controller/browser slice passes targeted
-  typecheck, 60 unit/control assertions, and six active browser scenarios with
-  no real provider/data/credential/deployment authority. Canonical and
-  independent committed evidence are still required before completion.
+- **VERIFIED:** the implemented Chat/controller/browser slice at
+  `cb94b608a7b0c552154ec01a44bda9fa1ea28ec1` passes targeted typecheck,
+  61/61 assertions, 186/186 repository controls, six active browser scenarios,
+  one exact accepted offline-contract skip, deterministic builds, audit, SBOM,
+  supply-chain, hygiene, and clean detached-worktree reproduction. No real
+  provider/data/credential/application-listener/activation/deployment/cutover
+  authority was added.
 
 ## Blockers
 
@@ -264,9 +268,9 @@ review remain pending.
 
 ## Next handoff
 
-**Next action:** commit the exact implementation range, run the canonical
-Phase 4 verifier from the clean commit, then reproduce it in a separate clean
-detached worktree.
+**Next action:** commit the canonical/independent evidence and handoff, then
+open one pull request for the single authorized CodeRabbit review/fix/merge
+cycle.
 
 **Read first:** `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md`,
 `reengineering/PHASE4_IMPLEMENTATION_PACKET.md`, and
@@ -276,8 +280,8 @@ detached worktree.
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** the exact non-default synthetic slice passes its full
-typecheck, unit, browser, boundary, evidence, clean-worktree, and independent
-review gates without changing `/` or any protected path.
+**Success condition:** the exact non-default synthetic slice merges after one
+CodeRabbit review and one consolidated fix pass, with all required checks green
+and `/` plus every protected path unchanged.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`

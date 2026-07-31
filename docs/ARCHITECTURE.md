@@ -218,8 +218,9 @@ feature-specific work claims.
 
 ### Implemented non-default Phase 4 Chat slice
 
-**MEASURED; canonical and independent evidence pending:** the accepted
-`LW-P4-001` packet now has one isolated vertical slice at `/p4.html`.
+**VERIFIED:** the accepted `LW-P4-001` packet has one isolated vertical slice
+at `/p4.html`, reproduced by canonical and clean detached-worktree verification
+at candidate `cb94b608a7b0c552154ec01a44bda9fa1ea28ec1`.
 
 ```mermaid
 flowchart LR
@@ -233,7 +234,8 @@ flowchart LR
     ROOT["unchanged / route"] -. "no registration or cutover" .-> UI
 ```
 
-- `packages/chat` owns orchestration only. It reads/appends candidate state,
+- `packages/chat` owns orchestration only. It serializes hydration and mutation
+  publication per conversation, reads/appends candidate state,
   persists the user before dispatch, accumulates assistant fragments in
   memory, commits them only on completion, and writes content-free terminal
   records for failure or cancellation.
