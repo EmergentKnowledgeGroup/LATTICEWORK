@@ -237,6 +237,46 @@ test("a hydrated conversation retains prior candidate messages when the next tur
   assert.deepEqual(store.writes.at(-1).messages.map((message) => message.id), ["user-old", "user-1", "operation-1:assistant"]);
 });
 
+test("hydrate cannot publish a stale read over an overlapping send", async () => {
+  let readCalls = 0;
+  let releaseInitialRead;
+  let saved;
+  const store = {
+    read() {
+      readCalls += 1;
+      if (readCalls === 1) {
+        return new Promise((resolve) => {
+          releaseInitialRead = () => resolve(undefined);
+        });
+      }
+      return new Promise((resolve) => {
+        setTimeout(() => resolve(undefined), 5);
+      });
+    },
+    async write(next) {
+      saved = structuredClone(next);
+    },
+  };
+  const controller = new ChatController({
+    repository: store,
+    router: scriptedRouter([completed()]),
+    now: () => "2026-07-31T00:00:00.000Z",
+  });
+
+  const operation = controller.send(input());
+  const hydration = controller.hydrate("conversation-1");
+  await waitFor(() => typeof releaseInitialRead === "function");
+  releaseInitialRead();
+  await operation.finished;
+  await hydration;
+
+  assert.equal(readCalls, 1);
+  assert.deepEqual(saved.messages.map((message) => message.id), [
+    "user-1",
+    "operation-1:assistant",
+  ]);
+});
+
 test("sequential sends append both completed turns instead of overwriting the conversation", async () => {
   const store = repository();
   const controller = new ChatController({

@@ -79,12 +79,16 @@ export class ChatController {
   }
 
   async hydrate(conversationId: string): Promise<ChatConversationState> {
-    const state = (await this.#repository.read(conversationId)) ?? {
-      conversationId,
-      messages: [],
-    };
-    this.#conversations.set(conversationId, state);
-    return state;
+    return this.#queueConversation(conversationId, async () => {
+      const cached = this.#conversations.get(conversationId);
+      if (cached !== undefined) return cached;
+      const state = (await this.#repository.read(conversationId)) ?? {
+        conversationId,
+        messages: [],
+      };
+      this.#conversations.set(conversationId, state);
+      return state;
+    });
   }
 
   send(input: ChatSendInput): ChatOperation {
@@ -134,8 +138,7 @@ export class ChatController {
     conversationId: string,
     update: (current: ChatConversationState) => ChatConversationState,
   ): Promise<ChatConversationState> {
-    const priorMutation = this.#mutationTails.get(conversationId) ?? Promise.resolve();
-    const mutation = priorMutation.then(async () => {
+    return this.#queueConversation(conversationId, async () => {
       const current = this.#conversations.get(conversationId)
         ?? await this.#repository.read(conversationId)
         ?? { conversationId, messages: [] };
@@ -144,7 +147,15 @@ export class ChatController {
       this.#conversations.set(conversationId, next);
       return next;
     });
-    const settled = mutation.then(
+  }
+
+  #queueConversation<T>(
+    conversationId: string,
+    operation: () => Promise<T>,
+  ): Promise<T> {
+    const priorMutation = this.#mutationTails.get(conversationId) ?? Promise.resolve();
+    const queued = priorMutation.then(operation);
+    const settled = queued.then(
       () => undefined,
       () => undefined,
     );
@@ -154,7 +165,7 @@ export class ChatController {
         this.#mutationTails.delete(conversationId);
       }
     });
-    return mutation;
+    return queued;
   }
 
   async #run(active: ActiveOperation): Promise<void> {
