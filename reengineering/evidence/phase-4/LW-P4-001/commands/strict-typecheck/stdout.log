@@ -30,3 +30,7 @@
 > @latticework/phase3-browser@0.0.0 typecheck
 > tsc -p tsconfig.json
 
+
+> @latticework/phase4-browser@0.0.0 typecheck
+> tsc --project tsconfig.json
+

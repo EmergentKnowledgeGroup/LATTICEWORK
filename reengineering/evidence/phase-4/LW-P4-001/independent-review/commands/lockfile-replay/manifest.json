@@ -9,18 +9,18 @@
     "npm install --package-lock-only --ignore-scripts"
   ],
   "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"npm install --package-lock-only --ignore-scripts\"",
-  "cwd": "Z:\\LATTICEWORK_P4_FINAL_QA_cb94b608\\runtime\\tmp\\phase4-verification-4294\\lockfile-replay",
-  "started_at": "2026-07-31T04:29:42.485Z",
-  "ended_at": "2026-07-31T04:29:43.639Z",
-  "duration_ms": 1154.2745,
+  "cwd": "Z:\\LATTICEWORK_QA_e65ca81_P4FIX\\runtime\\tmp\\phase4-verification-4294\\lockfile-replay",
+  "started_at": "2026-07-31T05:06:00.553Z",
+  "ended_at": "2026-07-31T05:06:02.028Z",
+  "duration_ms": 1475.1432,
   "timeout_ms": 300000,
   "exit_code": 0,
   "signal": null,
   "spawn_error": null,
   "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
-  "candidate_sha": "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+  "candidate_sha": "e65ca81940d50eabd5bb72a403deab3bf37bea93",
   "repository": {
-    "head": "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+    "head": "e65ca81940d50eabd5bb72a403deab3bf37bea93",
     "status": "## HEAD (no branch)"
   },
   "environment": {
@@ -34,8 +34,8 @@
   "artifacts": [
     {
       "path": "stdout.log",
-      "bytes": 67,
-      "sha256": "474e1511fe9639598e77726f9042541e7999b478ff84713ad207f18eb3f8697b"
+      "bytes": 64,
+      "sha256": "8006df73437497273ab17f21abce2f87fa041af9eafc838e460197127f7c3235"
     },
     {
       "path": "stderr.log",

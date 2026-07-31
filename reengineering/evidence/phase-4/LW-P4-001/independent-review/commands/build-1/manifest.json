@@ -9,18 +9,18 @@
     "npm run p2:build"
   ],
   "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"npm run p2:build\"",
-  "cwd": "Z:\\LATTICEWORK_P4_FINAL_QA_cb94b608",
-  "started_at": "2026-07-31T04:30:08.307Z",
-  "ended_at": "2026-07-31T04:30:09.165Z",
-  "duration_ms": 857.922,
+  "cwd": "Z:\\LATTICEWORK_QA_e65ca81_P4FIX",
+  "started_at": "2026-07-31T05:06:31.836Z",
+  "ended_at": "2026-07-31T05:06:32.718Z",
+  "duration_ms": 881.9188,
   "timeout_ms": 300000,
   "exit_code": 0,
   "signal": null,
   "spawn_error": null,
   "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
-  "candidate_sha": "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+  "candidate_sha": "e65ca81940d50eabd5bb72a403deab3bf37bea93",
   "repository": {
-    "head": "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+    "head": "e65ca81940d50eabd5bb72a403deab3bf37bea93",
     "status": "## HEAD (no branch)"
   },
   "environment": {
@@ -35,7 +35,7 @@
     {
       "path": "stdout.log",
       "bytes": 644,
-      "sha256": "e6128b7408836f29edc90acfcdf0a62d8caf3f41b2dca5f6eb016c80a24e5f9b"
+      "sha256": "0f5aed127f527ad8dac4d1c9c69175cbc9d4ce8fdf65ebde439b9db5c5ae9fe8"
     },
     {
       "path": "stderr.log",

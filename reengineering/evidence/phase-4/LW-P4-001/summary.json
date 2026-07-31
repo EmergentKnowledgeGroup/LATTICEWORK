@@ -6,7 +6,7 @@
     "status":  "GREEN",
     "baseline_sha":  "e7585999fc1af2707f410ae87356cf2b52e08d9c",
     "implementation_base_commit":  "faf32dbaf8159e8499421fa68d9fba4bede0fdc9",
-    "candidate_sha":  "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+    "candidate_sha":  "e65ca81940d50eabd5bb72a403deab3bf37bea93",
     "safety":  {
                    "real_user_data":  "not-accessed",
                    "real_provider_traffic":  "none",
@@ -18,14 +18,14 @@
                    "cutover":  "none"
                },
     "repository_controls":  {
-                                "tests":  186,
-                                "pass":  186,
+                                "tests":  187,
+                                "pass":  187,
                                 "fail":  0,
                                 "skipped":  0,
                                 "todo":  0
                             },
     "browser":  {
-                    "passed":  6,
+                    "passed":  7,
                     "skipped":  1,
                     "skipped_reason":  "Candidate does not declare an offline contract."
                 },
@@ -34,7 +34,7 @@
                                "receipt":  "independent-review/REVIEW.md",
                                "automation":  "independent-review/automation.json",
                                "port":  4294,
-                               "worktree":  "Z:\\LATTICEWORK_P4_FINAL_QA_cb94b608"
+                               "worktree":  "Z:\\LATTICEWORK_QA_e65ca81_P4FIX"
                            },
     "gates":  {
                   "environment":  "commands/environment/manifest.json",

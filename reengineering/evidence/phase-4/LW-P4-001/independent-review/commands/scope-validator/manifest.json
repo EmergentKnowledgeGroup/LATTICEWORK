@@ -6,18 +6,18 @@
     "tools/reengineering/validate-phase4-implementation-scope.mjs"
   ],
   "command_display": "\"node.exe\" \"tools/reengineering/validate-phase4-implementation-scope.mjs\"",
-  "cwd": "Z:\\LATTICEWORK_P4_FINAL_QA_cb94b608",
-  "started_at": "2026-07-31T04:29:45.710Z",
-  "ended_at": "2026-07-31T04:29:46.600Z",
-  "duration_ms": 889.9447,
+  "cwd": "Z:\\LATTICEWORK_QA_e65ca81_P4FIX",
+  "started_at": "2026-07-31T05:06:05.578Z",
+  "ended_at": "2026-07-31T05:06:06.604Z",
+  "duration_ms": 1026.2876,
   "timeout_ms": 300000,
   "exit_code": 0,
   "signal": null,
   "spawn_error": null,
   "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
-  "candidate_sha": "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+  "candidate_sha": "e65ca81940d50eabd5bb72a403deab3bf37bea93",
   "repository": {
-    "head": "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+    "head": "e65ca81940d50eabd5bb72a403deab3bf37bea93",
     "status": "## HEAD (no branch)"
   },
   "environment": {
@@ -31,8 +31,8 @@
   "artifacts": [
     {
       "path": "stdout.log",
-      "bytes": 286,
-      "sha256": "0744382648f4fa744bf723dbee0d7a6058eac2d8d112f029ed1d4c04351ed5d7"
+      "bytes": 287,
+      "sha256": "f3275b67b19fac424318a88776bbdb1fdc28469a5adf968d4299c6e1692d2eaa"
     },
     {
       "path": "stderr.log",

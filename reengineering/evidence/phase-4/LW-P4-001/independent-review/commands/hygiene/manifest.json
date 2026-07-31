@@ -9,18 +9,18 @@
     "git diff --check faf32dbaf8159e8499421fa68d9fba4bede0fdc9 -- && node --check tools/reengineering/validate-phase4-implementation-scope.mjs && node --check tools/reengineering/validate-phase4-amendment.mjs"
   ],
   "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"git diff --check faf32dbaf8159e8499421fa68d9fba4bede0fdc9 -- && node --check tools/reengineering/validate-phase4-implementation-scope.mjs && node --check tools/reengineering/validate-phase4-amendment.mjs\"",
-  "cwd": "Z:\\LATTICEWORK_P4_FINAL_QA_cb94b608",
-  "started_at": "2026-07-31T04:30:12.594Z",
-  "ended_at": "2026-07-31T04:30:12.715Z",
-  "duration_ms": 120.6587,
+  "cwd": "Z:\\LATTICEWORK_QA_e65ca81_P4FIX",
+  "started_at": "2026-07-31T05:06:36.869Z",
+  "ended_at": "2026-07-31T05:06:37.050Z",
+  "duration_ms": 181.2839,
   "timeout_ms": 300000,
   "exit_code": 0,
   "signal": null,
   "spawn_error": null,
   "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
-  "candidate_sha": "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+  "candidate_sha": "e65ca81940d50eabd5bb72a403deab3bf37bea93",
   "repository": {
-    "head": "cb94b608a7b0c552154ec01a44bda9fa1ea28ec1",
+    "head": "e65ca81940d50eabd5bb72a403deab3bf37bea93",
     "status": "## HEAD (no branch)"
   },
   "environment": {

@@ -3,7 +3,7 @@
   "valid": true,
   "scopeChecked": true,
   "implementationBaseSha": "faf32dbaf8159e8499421fa68d9fba4bede0fdc9",
-  "inspectedPathCount": 54,
+  "inspectedPathCount": 173,
   "applicationListener": false,
   "testListener": true,
   "failures": []

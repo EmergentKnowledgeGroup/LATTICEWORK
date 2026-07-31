@@ -220,7 +220,7 @@ feature-specific work claims.
 
 **VERIFIED:** the accepted `LW-P4-001` packet has one isolated vertical slice
 at `/p4.html`, reproduced by canonical and clean detached-worktree verification
-at candidate `cb94b608a7b0c552154ec01a44bda9fa1ea28ec1`.
+at candidate `e65ca81940d50eabd5bb72a403deab3bf37bea93`.
 
 ```mermaid
 flowchart LR

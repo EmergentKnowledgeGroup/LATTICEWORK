@@ -1,7 +1,7 @@
 {
   "schema": "latticework.phase2-supply-chain.v1",
   "evidence_label": "MEASURED",
-  "captured_at": "2026-07-31T04:29:14.537Z",
+  "captured_at": "2026-07-31T05:04:19.305Z",
   "valid": true,
   "workspace_root": "Z:\\LATTICEWORK",
   "root_package": {
@@ -21,8 +21,8 @@
     ]
   },
   "lockfile_version": 3,
-  "external_package_count": 58,
-  "installed_external_package_count": 27,
+  "external_package_count": 60,
+  "installed_external_package_count": 29,
   "skipped_optional_package_count": 31,
   "packages_with_lifecycle_scripts": [
     {
@@ -493,6 +493,21 @@
       "dev": true,
       "optional": true,
       "installed": false,
+      "os": [],
+      "cpu": [],
+      "lockfile_has_install_script": false,
+      "lifecycle_scripts": []
+    },
+    {
+      "path": "node_modules/@types/node",
+      "name": "@types/node",
+      "version": "24.3.0",
+      "license": "MIT",
+      "integrity": "sha512-aPTXCrfwnDLj4VvXrm+UUCQjNEvJgNA8s5F1cvwQU+3KNltTOkBm1j30uNLyqqPNe7gE3KFzImYoZEfLhp4Yow==",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-24.3.0.tgz",
+      "dev": true,
+      "optional": false,
+      "installed": true,
       "os": [],
       "cpu": [],
       "lockfile_has_install_script": false,
@@ -1005,6 +1020,21 @@
       "license": "Apache-2.0",
       "integrity": "sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==",
       "resolved": "https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz",
+      "dev": true,
+      "optional": false,
+      "installed": true,
+      "os": [],
+      "cpu": [],
+      "lockfile_has_install_script": false,
+      "lifecycle_scripts": []
+    },
+    {
+      "path": "node_modules/undici-types",
+      "name": "undici-types",
+      "version": "7.10.0",
+      "license": "MIT",
+      "integrity": "sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==",
+      "resolved": "https://registry.npmjs.org/undici-types/-/undici-types-7.10.0.tgz",
       "dev": true,
       "optional": false,
       "installed": true,

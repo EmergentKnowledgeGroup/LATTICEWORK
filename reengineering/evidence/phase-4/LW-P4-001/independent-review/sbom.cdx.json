@@ -5,7 +5,7 @@
   "serialNumber": "urn:uuid:***",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-07-31T04:30:12.161Z",
+    "timestamp": "2026-07-31T05:06:36.298Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -21,7 +21,7 @@
     "component": {
       "bom-ref": "latticework@0.0.0",
       "type": "library",
-      "name": "LATTICEWORK_P4_FINAL_QA_cb94b608",
+      "name": "LATTICEWORK_QA_e65ca81_P4FIX",
       "version": "0.0.0",
       "scope": "required",
       "description": "LATTICEWORK bounded candidate workspace; legacy runtime remains authoritative.",
@@ -342,6 +342,48 @@
         {
           "alg": "SHA-512",
           "content": "da3f5b1ade4987c863faf3ed8333ed97bda3d324711c0cae9a8a3a4cd7c08ec2c1d3852da52bcf6cf703701331cfb9fef42601d1cd46c501716118368e29aa1b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/node@24.3.0",
+      "type": "library",
+      "name": "@types/node",
+      "version": "24.3.0",
+      "scope": "optional",
+      "description": "TypeScript definitions for node",
+      "purl": "pkg:npm/%40types/node@24.3.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:development",
+          "value": "true"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/node/-/node-24.3.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "68f4d70ab7f09c32e3e15bd7ae6f94502423344bc980d03cb3917572fc1053edca365b533a4066d63df4b8d2f2aaa3cd7bb804dca1732266286447cb869e18a3"
         }
       ],
       "licenses": [
@@ -1134,6 +1176,52 @@
       ]
     },
     {
+      "bom-ref": "undici-types@7.10.0",
+      "type": "library",
+      "name": "undici-types",
+      "version": "7.10.0",
+      "scope": "optional",
+      "description": "A stand-alone types package for Undici",
+      "purl": "pkg:npm/undici-types@7.10.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:development",
+          "value": "true"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/undici-types/-/undici-types-7.10.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/nodejs/undici.git"
+        },
+        {
+          "type": "website",
+          "url": "https://undici.nodejs.org"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/nodejs/undici/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b79172fe77e7fb5e0bb8e73628d620ef9bd9a82969022aac715bccca036796c1c1169497749698b5731c74d2e997f42f7373f6701decea5395e759eab05ab86a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
       "bom-ref": "vite@8.1.5",
       "type": "library",
       "name": "vite",
@@ -1364,6 +1452,12 @@
       "dependsOn": []
     },
     {
+      "ref": "@types/node@24.3.0",
+      "dependsOn": [
+        "undici-types@7.10.0"
+      ]
+    },
+    {
       "ref": "@types/trusted-types@2.0.7",
       "dependsOn": []
     },
@@ -1468,8 +1562,13 @@
       "dependsOn": []
     },
     {
+      "ref": "undici-types@7.10.0",
+      "dependsOn": []
+    },
+    {
       "ref": "vite@8.1.5",
       "dependsOn": [
+        "@types/node@24.3.0",
         "lightningcss@1.33.0",
         "picomatch@4.0.5",
         "postcss@8.5.25",
@@ -1524,6 +1623,7 @@
       "ref": "@latticework/phase4-browser@0.0.0",
       "dependsOn": [
         "@playwright/test@1.62.0",
+        "@types/node@24.3.0",
         "typescript@6.0.3"
       ]
     }

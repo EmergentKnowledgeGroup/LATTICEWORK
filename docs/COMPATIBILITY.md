@@ -126,7 +126,7 @@ has changed.
 **VERIFIED:** `/p4.html` exercises a synthetic-only Chat controller through the
 accepted candidate repository and two deterministic in-process provider
 shapes. Canonical and clean detached-worktree evidence at
-`cb94b608a7b0c552154ec01a44bda9fa1ea28ec1` proves:
+`e65ca81940d50eabd5bb72a403deab3bf37bea93` proves:
 
 - sequential user/assistant turns append and survive a warm online reload;
 - user content persists before provider dispatch;

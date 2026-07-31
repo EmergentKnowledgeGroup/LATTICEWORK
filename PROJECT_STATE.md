@@ -24,7 +24,7 @@ LATTICEWORK
 
 ## Last verified commit
 
-`cb94b608a7b0c552154ec01a44bda9fa1ea28ec1` (Phase 4 non-default
+`e65ca81940d50eabd5bb72a403deab3bf37bea93` (Phase 4 non-default
 synthetic Chat candidate; canonical and independent evidence are GREEN)
 
 The verified Phase 3 candidate
@@ -57,10 +57,10 @@ only after a completed terminal, records content-free failure/cancellation
 metadata, uses one operation controller, and performs zero retry/fallback.
 The Lit workbench composes only the accepted in-process mock adapters and
 candidate-only `latticework::conversation` repository. Targeted verification
-passes every workspace typecheck, 61 unit/control assertions, and six active
+passes every workspace typecheck, 63 unit/control assertions, and seven active
 Chrome scenarios. The offline-contract scenario is explicitly skipped because
 this packet authorizes no service worker and the candidate makes no offline
-claim. Canonical verification passes 186/186 repository controls, deterministic
+claim. Canonical verification passes 187/187 repository controls, deterministic
 build, audit, SBOM, supply-chain, and hygiene gates. Independent QA reproduced
 the complete gate from a new detached worktree on port 4294 and returned GREEN.
 
@@ -212,8 +212,8 @@ the complete gate from a new detached worktree on port 4294 and returned GREEN.
   rework round. Focused controls pass 41/41 and full repository controls pass
   180/180.
 - **VERIFIED:** the implemented Chat/controller/browser slice at
-  `cb94b608a7b0c552154ec01a44bda9fa1ea28ec1` passes targeted typecheck,
-  61/61 assertions, 186/186 repository controls, six active browser scenarios,
+  `e65ca81940d50eabd5bb72a403deab3bf37bea93` passes targeted typecheck,
+  63/63 assertions, 187/187 repository controls, seven active browser scenarios,
   one exact accepted offline-contract skip, deterministic builds, audit, SBOM,
   supply-chain, hygiene, and clean detached-worktree reproduction. No real
   provider/data/credential/application-listener/activation/deployment/cutover
@@ -268,9 +268,8 @@ the complete gate from a new detached worktree on port 4294 and returned GREEN.
 
 ## Next handoff
 
-**Next action:** commit the canonical/independent evidence and handoff, then
-open one pull request for the single authorized CodeRabbit review/fix/merge
-cycle.
+**Next action:** finish the one consolidated CodeRabbit fix proof, resolve the
+single review's threads, and merge PR #5 without requesting another review.
 
 **Read first:** `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md`,
 `reengineering/PHASE4_IMPLEMENTATION_PACKET.md`, and
