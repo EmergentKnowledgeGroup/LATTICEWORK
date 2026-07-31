@@ -1,6 +1,6 @@
 {
   "schema": "latticework.context_checkpoint.tracks.v1",
-  "captured_at": "2026-07-31T06:12:52Z",
+  "captured_at": "2026-07-31T06:32:43Z",
   "repo_root": "Z:\\LATTICEWORK",
   "current_track": "LW_P5_LATTICE_MEMORY WORK",
   "tracks": {
@@ -755,11 +755,11 @@
     },
     "LW_P5_LATTICE_MEMORY WORK": {
       "track": "LW_P5_LATTICE_MEMORY WORK",
-      "step": "phase5-lattice-memory-preflight-receipted",
-      "note": "The accepted 69-atom LatticeMemory characterization packet is committed at 3ba1f10 and has repository evidence, independent GREEN review, checklist, blockerboard, and handoff receipts.",
+      "step": "phase5-lattice-memory-characterization-candidate-green",
+      "note": "The additive LatticeMemory characterization candidate reproduces all 69 atoms across 13 Chrome groups with 207 content-free attachments; full repository controls pass 230 of 230 pending committed independent reproduction.",
       "branch": "reengineering/p5-lattice-memory",
-      "head": "3ba1f10af6b8c5a0efe529d198517f8f519da6f8",
-      "next_cmd": "Create LW-P5-MEM-CHAR-001 and implement only the exact additive characterization paths frozen by the accepted packet.",
+      "head": "e34aa4304c51a7a870ab5a4fa1f45a4216cb8d38",
+      "next_cmd": "Commit the exact characterization candidate, reproduce it from a clean independent worktree, then promote and validate the final evidence bundle.",
       "validations": [
         "VERIFIED: Phase 4 PR #5 is merged and post-merge main is GREEN.",
         "OBSERVED: the Phase 4 active validator still scanned through current HEAD, so later Phase 5 work would be falsely classified as Phase 4.",
@@ -774,7 +774,10 @@
         "VERIFIED: the LatticeMemory packet locks 69 unique atomic observations in 13 groups, including observed privacy, aliasing, malformed-filter, readiness, timestamp, loader, and warning divergences.",
         "MEASURED: focused packet and active-scope controls passed 35 of 35; both canonical validators returned valid true; diff hygiene is clean.",
         "VERIFIED: final independent packet seal review is GREEN after exact source-to-contract review; all nine reserved authority flags remain false with isolated negative controls.",
-        "VERIFIED: packet commit 3ba1f10af6b8c5a0efe529d198517f8f519da6f8 contains the exact accepted machine lock; evidence and handoff receipts name that commit."
+        "VERIFIED: packet commit 3ba1f10af6b8c5a0efe529d198517f8f519da6f8 contains the exact accepted machine lock; evidence and handoff receipts name that commit.",
+        "MEASURED: controller Chrome reproduction passed all 13 groups in 12.7 seconds with one worker and zero retries.",
+        "MEASURED: the browser report contains 207 attachments for 69 unique atoms, zero non-PASS atoms, and zero private-sentinel leaks.",
+        "MEASURED: characterization validator negative controls and full repository controls passed 230 of 230 with zero fail, skip, or todo."
       ],
       "decisions": [
         "Repair the Phase 4 to Phase 5 scope boundary before feature work.",
@@ -793,9 +796,9 @@
           "summary": "Real-data migration remains forbidden; exact synthetic characterization and packet authority are required."
         }
       ],
-      "updated_at": "2026-07-31T06:12:52Z",
-      "captured_at": "2026-07-31T06:12:52Z"
+      "updated_at": "2026-07-31T06:32:43Z",
+      "captured_at": "2026-07-31T06:32:43Z"
     }
   },
-  "updated": "2026-07-31T06:12:52Z"
+  "updated": "2026-07-31T06:32:43Z"
 }

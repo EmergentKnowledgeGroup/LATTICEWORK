@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-31T06:12:52Z`
+Updated: `2026-07-31T06:32:43Z`
 
 ## CURRENT
 
 Track: `LW_P5_LATTICE_MEMORY WORK`
-Step: `phase5-lattice-memory-preflight-receipted`
-Note: The accepted 69-atom LatticeMemory characterization packet is committed at 3ba1f10 and has repository evidence, independent GREEN review, checklist, blockerboard, and handoff receipts.
+Step: `phase5-lattice-memory-characterization-candidate-green`
+Note: The additive LatticeMemory characterization candidate reproduces all 69 atoms across 13 Chrome groups with 207 content-free attachments; full repository controls pass 230/230 pending committed independent reproduction.
 Branch: `reengineering/p5-lattice-memory`
-Head: `3ba1f10af6b8c5a0efe529d198517f8f519da6f8`
-Next command: `Create LW-P5-MEM-CHAR-001 and implement only the exact additive characterization paths frozen by the accepted packet.`
+Head: `e34aa4304c51a7a870ab5a4fa1f45a4216cb8d38`
+Next command: `Commit the exact characterization candidate, reproduce it from a clean independent worktree, then promote and validate the final evidence bundle.`
 
 ## LW_M0_BASELINE WORK
 
@@ -411,11 +411,11 @@ Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize
 
 ## LW_P5_LATTICE_MEMORY WORK
 
-Step: `phase5-lattice-memory-preflight-receipted`
-Note: The accepted 69-atom LatticeMemory characterization packet is committed at 3ba1f10 and has repository evidence, independent GREEN review, checklist, blockerboard, and handoff receipts.
+Step: `phase5-lattice-memory-characterization-candidate-green`
+Note: The additive LatticeMemory characterization candidate reproduces all 69 atoms across 13 Chrome groups with 207 content-free attachments; full repository controls pass 230/230 pending committed independent reproduction.
 Branch: `reengineering/p5-lattice-memory`
-Head: `3ba1f10af6b8c5a0efe529d198517f8f519da6f8`
-Next command: `Create LW-P5-MEM-CHAR-001 and implement only the exact additive characterization paths frozen by the accepted packet.`
+Head: `e34aa4304c51a7a870ab5a4fa1f45a4216cb8d38`
+Next command: `Commit the exact characterization candidate, reproduce it from a clean independent worktree, then promote and validate the final evidence bundle.`
 
 ### Validations
 
@@ -433,6 +433,9 @@ Next command: `Create LW-P5-MEM-CHAR-001 and implement only the exact additive c
 - **MEASURED** — focused packet and active-scope controls passed 35/35; both canonical validators returned `valid: true`; diff hygiene is clean.
 - **VERIFIED** — final independent packet seal review is GREEN after exact source-to-contract review; all nine reserved authority flags remain false with isolated negative controls.
 - **VERIFIED** — packet commit `3ba1f10af6b8c5a0efe529d198517f8f519da6f8` contains the exact accepted machine lock; evidence and handoff receipts name that commit.
+- **MEASURED** — controller Chrome reproduction passed all 13 groups in 12.7 seconds with one worker and zero retries.
+- **MEASURED** — the browser report contains 207 attachments for 69 unique atoms, zero non-PASS atoms, and zero private-sentinel leaks.
+- **MEASURED** — characterization validator negative controls and full repository controls passed 230/230 with zero fail/skip/todo.
 
 ### Blockers
 

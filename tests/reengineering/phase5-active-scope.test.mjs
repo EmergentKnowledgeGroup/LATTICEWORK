@@ -73,8 +73,11 @@ test("Phase 5 allowlist is exact and fail-closed", () => {
   assert.deepEqual(
     findUnauthorizedPhase5Paths([
       "docs/agents/claims/LW-P5-CTRL-001.md",
+      "docs/agents/claims/LW-P5-MEM-CHAR-001.md",
+      "tests/characterization/specs/phase5-lattice-memory.spec.mjs",
       "tools/reengineering/validate-phase5-active-scope.mjs",
       "reengineering/evidence/phase-5/LW-P5-CTRL-001/summary.json",
+      "reengineering/evidence/phase-5/LW-P5-MEM-CHAR-001/summary.json",
       "apps/web/src/unauthorized.ts",
       "packages/providers/src/unauthorized.ts",
       "runtime/tmp/private.json",

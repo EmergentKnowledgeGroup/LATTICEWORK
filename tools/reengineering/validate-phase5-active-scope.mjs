@@ -17,9 +17,11 @@ const ALLOWED_PATHS = new Set([
   "docs/agents/claims/LW-P4-001.md",
   "docs/agents/claims/LW-P5-CTRL-001.md",
   "docs/agents/claims/LW-P5-MEM-PREFLIGHT-001.md",
+  "docs/agents/claims/LW-P5-MEM-CHAR-001.md",
   "docs/agents/handoffs/LW-P4-001.md",
   "docs/agents/handoffs/LW-P5-CTRL-001.md",
   "docs/agents/handoffs/LW-P5-MEM-PREFLIGHT-001.md",
+  "docs/agents/handoffs/LW-P5-MEM-CHAR-001.md",
   "reengineering/BLOCKERBOARD.md",
   "reengineering/EXECUTION_CHECKLIST.md",
   "reengineering/PHASE5_LATTICE_MEMORY_PREFLIGHT.md",
@@ -31,15 +33,23 @@ const ALLOWED_PATHS = new Set([
   "tests/reengineering/phase4-implementation-scope.test.mjs",
   "tests/reengineering/phase5-active-scope.test.mjs",
   "tests/reengineering/phase5-lattice-memory-preflight.test.mjs",
+  "tests/reengineering/phase5-lattice-memory-characterization-validation.test.mjs",
+  "tests/characterization/fixtures/phase5-lattice-memory-contract.json",
+  "tests/characterization/phase5-lattice-memory.playwright.config.mjs",
+  "tests/characterization/specs/phase5-lattice-memory.spec.mjs",
+  "tests/characterization/support/phase5-lattice-memory.mjs",
   "tools/reengineering/validate-phase4-active-scope.mjs",
   "tools/reengineering/validate-phase4-implementation-scope.mjs",
   "tools/reengineering/validate-phase5-active-scope.mjs",
   "tools/reengineering/validate-phase5-lattice-memory-preflight.mjs",
+  "tools/reengineering/run-phase5-lattice-memory-characterization.ps1",
+  "tools/reengineering/validate-phase5-lattice-memory-characterization.mjs",
 ]);
 
 const ALLOWED_PREFIXES = [
   "reengineering/evidence/phase-5/LW-P5-CTRL-001/",
   "reengineering/evidence/phase-5/LW-P5-MEM-PREFLIGHT-001/",
+  "reengineering/evidence/phase-5/LW-P5-MEM-CHAR-001/",
 ];
 
 export function findUnauthorizedPhase5Paths(paths) {
