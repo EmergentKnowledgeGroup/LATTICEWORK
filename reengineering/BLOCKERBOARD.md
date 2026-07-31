@@ -42,3 +42,8 @@ historical Phase 4 validators are now closed at merge commit
 `1b7e1d10456e0a1e9aaa91df25db17e236bbea3e`, while a separate Phase 5
 validator owns current committed and dirty paths. No Phase 4 allowlist was
 expanded.
+
+`LW-P5-MEM-PREFLIGHT-001` authorizes only the exact synthetic browser
+characterization of immutable `docs/modules/lattice-memory.js`. It does not
+close `LW-BLK-005` and grants no real-data migration, candidate storage,
+activation, deployment, or cutover authority.

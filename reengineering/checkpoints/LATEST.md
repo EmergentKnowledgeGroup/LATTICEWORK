@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-31T06:11:01Z`
+Updated: `2026-07-31T06:12:52Z`
 
 ## CURRENT
 
 Track: `LW_P5_LATTICE_MEMORY WORK`
-Step: `phase5-lattice-memory-preflight-green`
-Note: The synthetic-only LatticeMemory characterization packet is independently GREEN with 69 exact atomic observations, 13 groups, and all implementation, data, provider, credential, activation, deployment, and cutover authority disabled.
+Step: `phase5-lattice-memory-preflight-receipted`
+Note: The accepted 69-atom LatticeMemory characterization packet is committed at 3ba1f10 and has repository evidence, independent GREEN review, checklist, blockerboard, and handoff receipts.
 Branch: `reengineering/p5-lattice-memory`
-Head: `1108fe5d4a73315cbb71574361c4928b84e394da`
-Next command: `Commit the accepted LW-P5-MEM-PREFLIGHT-001 packet, record its evidence/handoff receipt, then claim LW-P5-MEM-CHAR-001.`
+Head: `3ba1f10af6b8c5a0efe529d198517f8f519da6f8`
+Next command: `Create LW-P5-MEM-CHAR-001 and implement only the exact additive characterization paths frozen by the accepted packet.`
 
 ## LW_M0_BASELINE WORK
 
@@ -411,11 +411,11 @@ Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize
 
 ## LW_P5_LATTICE_MEMORY WORK
 
-Step: `phase5-lattice-memory-preflight-green`
-Note: The synthetic-only LatticeMemory characterization packet is independently GREEN with 69 exact atomic observations, 13 groups, and all implementation, data, provider, credential, activation, deployment, and cutover authority disabled.
+Step: `phase5-lattice-memory-preflight-receipted`
+Note: The accepted 69-atom LatticeMemory characterization packet is committed at 3ba1f10 and has repository evidence, independent GREEN review, checklist, blockerboard, and handoff receipts.
 Branch: `reengineering/p5-lattice-memory`
-Head: `1108fe5d4a73315cbb71574361c4928b84e394da`
-Next command: `Commit the accepted LW-P5-MEM-PREFLIGHT-001 packet, record its evidence/handoff receipt, then claim LW-P5-MEM-CHAR-001.`
+Head: `3ba1f10af6b8c5a0efe529d198517f8f519da6f8`
+Next command: `Create LW-P5-MEM-CHAR-001 and implement only the exact additive characterization paths frozen by the accepted packet.`
 
 ### Validations
 
@@ -432,6 +432,7 @@ Next command: `Commit the accepted LW-P5-MEM-PREFLIGHT-001 packet, record its ev
 - **VERIFIED** — the LatticeMemory packet locks 69 unique atomic observations in 13 groups, including observed privacy, aliasing, malformed-filter, readiness, timestamp, loader, and warning divergences.
 - **MEASURED** — focused packet and active-scope controls passed 35/35; both canonical validators returned `valid: true`; diff hygiene is clean.
 - **VERIFIED** — final independent packet seal review is GREEN after exact source-to-contract review; all nine reserved authority flags remain false with isolated negative controls.
+- **VERIFIED** — packet commit `3ba1f10af6b8c5a0efe529d198517f8f519da6f8` contains the exact accepted machine lock; evidence and handoff receipts name that commit.
 
 ### Blockers
 
