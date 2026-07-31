@@ -2,8 +2,8 @@
 
 **From:** Codex root controller
 **To:** PR reviewer
-**Date:** 2026-07-31 02:40 America/Chicago
-**Current commit:** `e648af05bc3f9cad5c6f13980cbde3fcf40728e0`
+**Date:** 2026-07-31 04:15 America/Chicago
+**Current commit:** `04355c8d2d4cd756f234358f21036f9fdb680a42`
 **Branch:** `reengineering/p5-lattice-memory`
 
 ## State in one paragraph
@@ -11,7 +11,10 @@
 The accepted corrected LatticeMemory packet is implemented as an inactive,
 package-only, synthetic/disposable pulse medium. Canonical and independent
 detached-worktree verification are GREEN and bound to candidate
-`4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2`.
+`04355c8d2d4cd756f234358f21036f9fdb680a42`. The one CodeRabbit command
+produced no review findings and remained rate-limited; one independent
+adversarial pass found six bounded defects, all corrected and regression
+covered as a single consolidated review-fix set.
 
 ## Completed
 
@@ -20,19 +23,23 @@ detached-worktree verification are GREEN and bound to candidate
 - Added unit, scope, packet, evidence, and native Chrome controls.
 - Added a clean-worktree evidence runner with audit, SBOM, prior-phase, and
   content-free receipt gates.
+- Serialized write/clear/close lifecycle work and hardened IndexedDB failed
+  open, schema failure, late success, and version-change cleanup.
+- Replaced assumed browser cleanup and weak evidence/package gates with
+  observed cleanup plus exact inventory, identity, command, and hash binding.
 
 ## Verified
 
 - Strict workspace typecheck passes.
-- Focused Phase 5 controls pass 62/62.
-- Full repository controls pass 287/287.
+- Focused Phase 5 controls pass 70/70.
+- Full repository controls pass 295/295.
 - Native Chrome passes 4/4 with one worker and zero retries.
-- Canonical and independent runs pass 13/13 evidence gates and 288/288
+- Canonical and independent runs pass 13/13 evidence gates and 295/295
   repository controls; the final evidence validator is `valid: true`.
 
 ## Not verified
 
-- PR CI and the single CodeRabbit review.
+- Final pushed-commit PR checks and post-merge replay.
 - Any real-data compatibility, activation, deployment, or cutover.
 
 ## Changed files
@@ -65,13 +72,14 @@ detached-worktree verification are GREEN and bound to candidate
 
 ## Next exact action
 
-Open the bounded PR, permit one CodeRabbit review, consolidate all actionable
-findings into one fix pass, and rerun the complete gate before merge.
+Push the exact candidate and promoted evidence to PR #6, inspect automatic
+checks without issuing another CodeRabbit command, merge when clean, and run
+the post-merge verification/checkpoint.
 
 ## Success condition
 
-CI is GREEN, the one CodeRabbit review is resolved without scope expansion,
-and the PR merges with post-merge evidence.
+The PR merges with no unresolved review thread and `main` receives a
+post-merge checkpoint backed by the same synthetic-only gates.
 
 ## Resume command
 

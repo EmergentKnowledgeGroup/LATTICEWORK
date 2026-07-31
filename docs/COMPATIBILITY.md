@@ -182,3 +182,10 @@ coherent readiness, no global loader coupling, and code-only rejection or
 subscriber diagnostics. This is not a claim that real legacy records are
 compatible: no real record was read, migrated, imported, exported, or
 round-tripped. Legacy storage and the default application remain authoritative.
+
+**VERIFIED:** the consolidated correction pass changes only candidate
+lifecycle, injected IndexedDB failure handling, browser cleanup proof, and
+verification integrity. It does not expand compatibility authority. The exact
+candidate `04355c8d2d4cd756f234358f21036f9fdb680a42` retains all 53 preserved
+matches and 16 accepted corrections under synthetic-only evidence; real stored
+records remain `UNKNOWN` and unauthorized.

@@ -5,7 +5,7 @@
     "valid":  true,
     "status":  "GREEN",
     "implementation_base_commit":  "ac45408307e91ee8d850c24753ce6b4d6e903f12",
-    "candidate_sha":  "4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2",
+    "candidate_sha":  "04355c8d2d4cd756f234358f21036f9fdb680a42",
     "safety":  {
                    "real_credentials":  "none",
                    "real_provider_traffic":  "none",
@@ -17,8 +17,8 @@
                    "deployment":  "none"
                },
     "repository_controls":  {
-                                "tests":  288,
-                                "pass":  288,
+                                "tests":  295,
+                                "pass":  295,
                                 "fail":  0,
                                 "skipped":  0,
                                 "todo":  0
@@ -47,7 +47,7 @@
               },
     "independent_review":  {
                                "verdict":  "GREEN",
-                               "candidate_sha":  "4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2",
+                               "candidate_sha":  "04355c8d2d4cd756f234358f21036f9fdb680a42",
                                "receipt":  "independent-review/review.json"
                            }
 }

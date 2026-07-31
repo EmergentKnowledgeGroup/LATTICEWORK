@@ -77,20 +77,20 @@
 > @latticework/chat@0.0.0 test
 > node --test src/*.test.mjs
 
-✔ persists the synthetic user before dispatch and commits assistant content only after completed (2.8593ms)
-✔ failed turns retain user and content-free terminal metadata with a sanitized error (0.6132ms)
-✔ cancel before dispatch persists the user and one cancellation terminal without calling the adapter seam (3.5648ms)
-✔ cancel after a delta aborts one controller, emits one terminal, and ignores late or duplicate provider events (10.7996ms)
-✔ hydrates persisted candidate state without dispatching another provider operation (0.3365ms)
-✔ a hydrated conversation retains prior candidate messages when the next turn is persisted (0.4644ms)
-✔ hydrate cannot publish a stale read over an overlapping send (15.3297ms)
-✔ sequential sends append both completed turns instead of overwriting the conversation (0.8039ms)
-✔ repository read failure settles as an unsaved failure without provider dispatch (0.8558ms)
-✔ initial user write failure settles as an unsaved failure without provider dispatch (0.2728ms)
-✔ terminal write failure settles as an unsaved failure after one provider dispatch (0.2764ms)
-✔ overlapping sends to one conversation retain every user and assistant message (12.4896ms)
-✔ creates one distinct AbortController signal per operation and never retries or falls back (0.3877ms)
-✔ a provider stream exhausted without a terminal settles as an internal failure (0.213ms)
+✔ persists the synthetic user before dispatch and commits assistant content only after completed (1.9399ms)
+✔ failed turns retain user and content-free terminal metadata with a sanitized error (1.3243ms)
+✔ cancel before dispatch persists the user and one cancellation terminal without calling the adapter seam (3.765ms)
+✔ cancel after a delta aborts one controller, emits one terminal, and ignores late or duplicate provider events (25.9895ms)
+✔ hydrates persisted candidate state without dispatching another provider operation (0.361ms)
+✔ a hydrated conversation retains prior candidate messages when the next turn is persisted (0.5402ms)
+✔ hydrate cannot publish a stale read over an overlapping send (14.5959ms)
+✔ sequential sends append both completed turns instead of overwriting the conversation (0.4954ms)
+✔ repository read failure settles as an unsaved failure without provider dispatch (0.9099ms)
+✔ initial user write failure settles as an unsaved failure without provider dispatch (0.3139ms)
+✔ terminal write failure settles as an unsaved failure after one provider dispatch (0.4726ms)
+✔ overlapping sends to one conversation retain every user and assistant message (1.6303ms)
+✔ creates one distinct AbortController signal per operation and never retries or falls back (0.4206ms)
+✔ a provider stream exhausted without a terminal settles as an internal failure (0.226ms)
 ℹ tests 14
 ℹ suites 0
 ℹ pass 14
@@ -98,12 +98,12 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 153.9979
+ℹ duration_ms 163.3024
 
 > @latticework/phase4-browser@0.0.0 test:fixture
 > node --test support/synthetic-stream-fixture.test.mjs
 
-✔ synthetic stream fixture is exact-loopback, synthetic-only, and explicitly releases its port (13.4691ms)
+✔ synthetic stream fixture is exact-loopback, synthetic-only, and explicitly releases its port (13.3566ms)
 ℹ tests 1
 ℹ suites 0
 ℹ pass 1
@@ -111,55 +111,55 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 100.689
-✔ accepts the locked no-runtime amendment and packet (2.605ms)
-✔ rejects removal of accepted implementation authority (3.8588ms)
-✔ rejects real provider traffic authority (2.2651ms)
-✔ rejects deployment authority (2.5806ms)
-✔ rejects a wildcard listener (2.1401ms)
-✔ rejects a fixed listener port (2.121ms)
-✔ rejects an application listener (2.8378ms)
-✔ rejects a non-fixture amendment listener (2.2746ms)
-✔ rejects a non-synthetic packet listener (2.113ms)
-✔ rejects divergence drift (2.3848ms)
-✔ rejects a default candidate entrypoint (2.1786ms)
-✔ rejects owned path drift (2.3809ms)
-✔ rejects protected path drift (2.2528ms)
-✔ canonical accepted packet and closed implementation range are valid (934.1992ms)
-✔ Phase 3 boundary stays pinned to its accepted terminal on later descendants (138.0422ms)
-✔ protected paths are rejected even if broad ownership could match (0.1465ms)
-✔ rejects one unowned path (0.9907ms)
-✔ packet drift does not suppress independent scope failures (3.1815ms)
-✔ rejects one protected path independently (0.6349ms)
-✔ rejects packet drift: implementation-authority (2.1209ms)
-✔ rejects packet drift: application-listener (1.4295ms)
-✔ rejects packet drift: test-listener (1.3859ms)
-✔ rejects packet drift: wildcard-bind (1.9569ms)
-✔ rejects packet drift: fixed-port (2.2472ms)
-✔ rejects packet drift: listener-egress (1.6147ms)
-✔ rejects packet drift: browser-harness-port (1.4997ms)
-✔ rejects packet drift: real-provider (1.3161ms)
-✔ rejects packet drift: real-data (1.4221ms)
-✔ rejects packet drift: real-credentials (1.874ms)
-✔ rejects packet drift: activation (1.5052ms)
-✔ rejects packet drift: deployment (1.179ms)
-✔ rejects packet drift: cutover (1.4774ms)
-✔ rejects omitted narrow existing-file ownership (1.7866ms)
-✔ rejects protected-array drift (1.5455ms)
-✔ rejects candidate source primitive: fetch (1.8134ms)
-✔ rejects candidate source primitive: websocket (2.2616ms)
-✔ rejects candidate source primitive: ambient-env (1.7285ms)
-✔ rejects candidate source primitive: migration (1.5726ms)
-✔ rejects candidate source primitive: deep-import (1.5278ms)
-✔ rejects candidate source primitive: application-listen (1.6469ms)
-✔ accepts only the exact synthetic loopback port-zero listener shape (1.9642ms)
-✔ rejects a test listener without an explicit close lifecycle (1.6929ms)
-✔ rejects unsafe test-listener source (1.6055ms)
-✔ CLI rejects base or scope overrides (182.0865ms)
-✔ Playwright configuration honors the verifier-selected loopback port (422.0233ms)
-✔ Playwright harness creates and removes its contained profile root (0.3122ms)
-✔ Playwright configuration rejects an invalid verifier port (430.3648ms)
-✔ Phase 4 verification runner pins the complete bounded evidence gate (0.4362ms)
+ℹ duration_ms 102.5036
+✔ accepts the locked no-runtime amendment and packet (2.6978ms)
+✔ rejects removal of accepted implementation authority (2.9145ms)
+✔ rejects real provider traffic authority (1.671ms)
+✔ rejects deployment authority (2.0685ms)
+✔ rejects a wildcard listener (2.0688ms)
+✔ rejects a fixed listener port (1.6654ms)
+✔ rejects an application listener (2.4273ms)
+✔ rejects a non-fixture amendment listener (1.6189ms)
+✔ rejects a non-synthetic packet listener (2.2465ms)
+✔ rejects divergence drift (2.7739ms)
+✔ rejects a default candidate entrypoint (1.9573ms)
+✔ rejects owned path drift (2.3605ms)
+✔ rejects protected path drift (1.954ms)
+✔ canonical accepted packet and closed implementation range are valid (956.9209ms)
+✔ Phase 3 boundary stays pinned to its accepted terminal on later descendants (139.2664ms)
+✔ protected paths are rejected even if broad ownership could match (0.4075ms)
+✔ rejects one unowned path (0.6658ms)
+✔ packet drift does not suppress independent scope failures (2.6858ms)
+✔ rejects one protected path independently (0.9235ms)
+✔ rejects packet drift: implementation-authority (1.7505ms)
+✔ rejects packet drift: application-listener (1.6086ms)
+✔ rejects packet drift: test-listener (1.6958ms)
+✔ rejects packet drift: wildcard-bind (1.9202ms)
+✔ rejects packet drift: fixed-port (2.3342ms)
+✔ rejects packet drift: listener-egress (1.6663ms)
+✔ rejects packet drift: browser-harness-port (1.3028ms)
+✔ rejects packet drift: real-provider (1.7534ms)
+✔ rejects packet drift: real-data (1.3807ms)
+✔ rejects packet drift: real-credentials (1.2155ms)
+✔ rejects packet drift: activation (1.2946ms)
+✔ rejects packet drift: deployment (1.0646ms)
+✔ rejects packet drift: cutover (1.3703ms)
+✔ rejects omitted narrow existing-file ownership (1.8477ms)
+✔ rejects protected-array drift (1.4461ms)
+✔ rejects candidate source primitive: fetch (1.6597ms)
+✔ rejects candidate source primitive: websocket (1.4138ms)
+✔ rejects candidate source primitive: ambient-env (2.0764ms)
+✔ rejects candidate source primitive: migration (1.347ms)
+✔ rejects candidate source primitive: deep-import (1.4044ms)
+✔ rejects candidate source primitive: application-listen (1.2432ms)
+✔ accepts only the exact synthetic loopback port-zero listener shape (1.7728ms)
+✔ rejects a test listener without an explicit close lifecycle (1.7669ms)
+✔ rejects unsafe test-listener source (1.3845ms)
+✔ CLI rejects base or scope overrides (181.9801ms)
+✔ Playwright configuration honors the verifier-selected loopback port (411.6523ms)
+✔ Playwright harness creates and removes its contained profile root (0.3264ms)
+✔ Playwright configuration rejects an invalid verifier port (410.8931ms)
+✔ Phase 4 verification runner pins the complete bounded evidence gate (0.6253ms)
 ℹ tests 48
 ℹ suites 0
 ℹ pass 48
@@ -167,7 +167,7 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 2251.2853
+ℹ duration_ms 2241.6384
 
 > latticework@0.0.0 p4:browser
 > npm run test:browser --workspace @latticework/phase4-browser
@@ -179,14 +179,14 @@
 
 Running 8 tests using 1 worker
 
-  ok 1 p4-chat.spec.ts:95:1 › /p4.html is visibly synthetic and sends exactly through selected local and cloud mocks (1.5s)
-  ok 2 p4-chat.spec.ts:119:1 › fragment completion persists only completed assistant output and reload restores the disposable candidate (1.2s)
+  ok 1 p4-chat.spec.ts:95:1 › /p4.html is visibly synthetic and sends exactly through selected local and cloud mocks (1.2s)
+  ok 2 p4-chat.spec.ts:119:1 › fragment completion persists only completed assistant output and reload restores the disposable candidate (1.3s)
   ok 3 p4-chat.spec.ts:132:1 › cancel works before dispatch and after the first delta without persisting partial assistant text (1.4s)
-  ok 4 p4-chat.spec.ts:156:1 › conversation snapshot merge replaces the active conversation and preserves unrelated records (1.1s)
-  ok 5 p4-chat.spec.ts:220:1 › diagnostics are structured and do not expose synthetic message content (993ms)
-  ok 6 p4-chat.spec.ts:233:1 › keyboard, 390x844, forced colors, and reduced motion keep the bounded shell usable (858ms)
+  ok 4 p4-chat.spec.ts:156:1 › conversation snapshot merge replaces the active conversation and preserves unrelated records (1.0s)
+  ok 5 p4-chat.spec.ts:220:1 › diagnostics are structured and do not expose synthetic message content (1.0s)
+  ok 6 p4-chat.spec.ts:233:1 › keyboard, 390x844, forced colors, and reduced motion keep the bounded shell usable (947ms)
   -  7 p4-chat.spec.ts:252:1 › warm offline reload is verified only when the candidate explicitly declares offline support
-  ok 8 p4-chat.spec.ts:265:1 › the default route remains separate from the non-default P4 entry (847ms)
+  ok 8 p4-chat.spec.ts:265:1 › the default route remains separate from the non-default P4 entry (879ms)
 
   1 skipped
   7 passed (10.4s)

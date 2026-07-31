@@ -64,4 +64,9 @@ import/export, activation, deployment, or cutover is authorized.
 `LW-P5-MEM-001` implements only that bounded candidate. Canonical and
 independent tests prove the new synthetic namespace and corrected package
 behavior, but `LW-BLK-005` remains OPEN because this package supplies no
-real-data migration or activation evidence.
+real-data migration or activation evidence. Candidate
+`04355c8d2d4cd756f234358f21036f9fdb680a42` additionally closes the six
+review findings around evidence forgery, lifecycle races, package false-green,
+cleanup proof, IndexedDB failed-open leakage, and off-drive test temp usage.
+The promoted bundle is independently GREEN at 295/295 repository controls,
+4/4 Chrome, and 13/13 gates; none of that changes the blocker.

@@ -198,3 +198,13 @@ captures audit and CycloneDX SBOM output, extracts exactly eight content-free
 browser receipts, and records scope/hygiene receipts. Promotion requires the
 same script from a clean detached worktree with `-IndependentReview -Port
 5295`; pending canonical evidence is not `VERIFIED`.
+
+The promoted review-fix candidate
+`04355c8d2d4cd756f234358f21036f9fdb680a42` passes 70/70 focused Phase 5
+controls, 295/295 complete repository controls, 4/4 single-worker Chrome
+scenarios, and 13/13 evidence gates. Evidence validation is fail-closed for
+tampered or omitted artifacts, forged commands, invalid working directories,
+non-repository artifacts, malformed independent-review receipts,
+content-bearing browser receipts, and symlink/reparse traversal. The
+deterministic package gate checks both exit codes, parses both inventories,
+checks package identity and required files, and compares the resulting bytes.

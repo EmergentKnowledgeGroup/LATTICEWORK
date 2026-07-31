@@ -3,7 +3,7 @@
   "valid": true,
   "scopeChecked": true,
   "baseCommit": "1b7e1d10456e0a1e9aaa91df25db17e236bbea3e",
-  "inspectedPathCount": 287,
+  "inspectedPathCount": 336,
   "allowedExactPaths": 36,
   "allowedPrefixes": 4,
   "failures": []
@@ -13,6 +13,6 @@
   "valid": true,
   "scopeChecked": true,
   "implementationBaseSha": "ac45408307e91ee8d850c24753ce6b4d6e903f12",
-  "inspectedPathCount": 51,
+  "inspectedPathCount": 100,
   "failures": []
 }

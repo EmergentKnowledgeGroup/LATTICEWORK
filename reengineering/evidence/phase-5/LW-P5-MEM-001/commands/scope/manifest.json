@@ -10,18 +10,18 @@
   ],
   "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"node tools/reengineering/validate-phase5-active-scope.mjs && node tools/reengineering/validate-phase5-lattice-memory-implementation-scope.mjs\"",
   "cwd": "Z:\\LATTICEWORK",
-  "started_at": "2026-07-31T07:49:50.665Z",
-  "ended_at": "2026-07-31T07:49:51.636Z",
-  "duration_ms": 971.1869,
+  "started_at": "2026-07-31T09:13:16.003Z",
+  "ended_at": "2026-07-31T09:13:17.058Z",
+  "duration_ms": 1055.4896,
   "timeout_ms": 300000,
   "exit_code": 0,
   "signal": null,
   "spawn_error": null,
   "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
-  "candidate_sha": "4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2",
+  "candidate_sha": "04355c8d2d4cd756f234358f21036f9fdb680a42",
   "repository": {
-    "head": "4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2",
-    "status": "## reengineering/p5-lattice-memory\n?? reengineering/evidence/phase-5/LW-P5-MEM-001/"
+    "head": "04355c8d2d4cd756f234358f21036f9fdb680a42",
+    "status": "## reengineering/p5-lattice-memory...origin/reengineering/p5-lattice-memory [ahead 2]\n D reengineering/evidence/phase-5/LW-P5-MEM-001/README.md\n D reengineering/evidence/phase-5/LW-P5-MEM-001/browser/attachments/cleanup.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/browser/attachments/corrected-quiet-room.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/browser/attachments/corrected-validation-isolation.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/browser/attachments/fail-quiet-open.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/browser/attachments/pre-ready-queue.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/browser/attachments/retention.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/browser/attachments/same-millisecond-burst.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/browser/attachments/schema-reload-heartbeat.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/browser/results.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/audit/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/audit/stderr.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/audit/stdout.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/browser/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/browser/stderr.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/browser/stdout.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/deterministic-build/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/deterministic-build/stderr.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/deterministic-build/stdout.log\n M reengineering/evidence/phase-5/LW-P5-MEM-001/commands/environment/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/hygiene/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/hygiene/stderr.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/hygiene/stdout.log\n M reengineering/evidence/phase-5/LW-P5-MEM-001/commands/install/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/phase3-boundary/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/phase3-boundary/stderr.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/phase3-boundary/stdout.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/phase4-verification/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/phase4-verification/stderr.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/phase4-verification/stdout.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/repository-controls/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/repository-controls/stderr.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/repository-controls/stdout.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/sbom/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/sbom/stderr.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/sbom/stdout.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/scope/manifest.json\n M reengineering/evidence/phase-5/LW-P5-MEM-001/commands/scope/stdout.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/typecheck/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/typecheck/stderr.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/typecheck/stdout.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/unit/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/unit/stderr.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/commands/unit/stdout.log\n D reengineering/evidence/phase-5/LW-P5-MEM-001/independent-review/review.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/manifest.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/npm-audit.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/sbom.cdx.json\n D reengineering/evidence/phase-5/LW-P5-MEM-001/summary.json"
   },
   "environment": {
     "platform": "win32",
@@ -34,8 +34,8 @@
   "artifacts": [
     {
       "path": "stdout.log",
-      "bytes": 508,
-      "sha256": "e628d5b82e896c508b8a9707aa8846e560416ad81c93106561ca7df9929a1891"
+      "bytes": 509,
+      "sha256": "bf895461f7bfcecebcddc14521715f92ace0c3c3e8a78bc88e24505e2edf705a"
     },
     {
       "path": "stderr.log",

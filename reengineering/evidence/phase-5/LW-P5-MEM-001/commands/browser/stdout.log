@@ -9,9 +9,9 @@
 
 Running 4 tests using 1 worker
 
-  ok 1 phase5-lattice-memory.spec.ts:142:1 › native IndexedDB schema, package-only API, reload, and heartbeat preserve the 53-match contract inventory (942ms)
-  ok 2 phase5-lattice-memory.spec.ts:184:1 › corrections reject unsafe timestamps and shapes, isolate snapshots, redact diagnostics, and fail-close QuietRoom reads (1.4s)
-  ok 3 phase5-lattice-memory.spec.ts:250:1 › native same-millisecond burst, pre-ready queue 100, and newest-10000 retention have deterministic content-free counts (40.5s)
-  ok 4 phase5-lattice-memory.spec.ts:319:1 › readiness/open failures remain fail-quiet and browser cleanup removes candidate database, profile, and run root (728ms)
+  ok 1 phase5-lattice-memory.spec.ts:158:1 › native IndexedDB schema, package-only API, reload, and heartbeat preserve the 53-match contract inventory (852ms)
+  ok 2 phase5-lattice-memory.spec.ts:200:1 › corrections reject unsafe timestamps and shapes, isolate snapshots, redact diagnostics, and fail-close QuietRoom reads (1.5s)
+  ok 3 phase5-lattice-memory.spec.ts:266:1 › native same-millisecond burst, pre-ready queue 100, and newest-10000 retention have deterministic content-free counts (42.8s)
+  ok 4 phase5-lattice-memory.spec.ts:335:1 › readiness/open failures remain fail-quiet and browser cleanup removes candidate database, profile, and run root (1.4s)
 
-  4 passed (45.1s)
+  4 passed (48.4s)

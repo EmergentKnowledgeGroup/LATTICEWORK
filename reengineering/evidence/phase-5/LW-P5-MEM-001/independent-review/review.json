@@ -1,13 +1,13 @@
 {
     "schema":  "latticework.phase5-independent-review.v1",
     "verdict":  "GREEN",
-    "candidate_sha":  "4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2",
+    "candidate_sha":  "04355c8d2d4cd756f234358f21036f9fdb680a42",
     "findings":  [
 
                  ],
     "repository_controls":  {
-                                "tests":  288,
-                                "pass":  288,
+                                "tests":  295,
+                                "pass":  295,
                                 "fail":  0,
                                 "skipped":  0,
                                 "todo":  0

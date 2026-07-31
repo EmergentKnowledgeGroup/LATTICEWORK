@@ -238,6 +238,14 @@ newest 10,000 pulses, and isolated from the legacy `LatticeMemory` namespace.
 No migration, import/export, activation, default entry, deployment, or cutover
 API exists.
 
+Lifecycle mutation is serialized: accepted writes, clear, and close cannot
+overtake one another. Close moves the medium out of ready state before waiting,
+preserves concurrent commits for a later restart, and reopens through a fresh
+start promise. The injected IndexedDB repository closes late success after a
+blocked open, closes on schema-inspection failure, and releases an established
+connection on `versionchange`. Browser evidence proves database deletion and
+fails when cleanup is blocked rather than emitting an assumed-success receipt.
+
 ### Implemented non-default Phase 4 Chat slice
 
 **VERIFIED:** the accepted `LW-P4-001` packet has one isolated vertical slice

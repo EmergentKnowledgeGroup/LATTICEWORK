@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-31T09:02:11Z`
+Updated: `2026-07-31T09:15:25Z`
 
 ## CURRENT
 
 Track: `LW_P5_LATTICE_MEMORY WORK`
-Step: `phase5-lattice-memory-review-fix-green`
-Note: The six independently reproduced findings are corrected as one bounded set; runtime, browser, evidence-integrity, prior-phase regression, and full repository controls are green.
+Step: `phase5-lattice-memory-promoted-review-fix-green`
+Note: Candidate 04355c8 is independently reproduced and the canonical hash-bound implementation evidence is promoted GREEN after the consolidated correction set.
 Branch: `reengineering/p5-lattice-memory`
-Head: `d3aa875c8de8fe4e841a00d1169bac9456dab866`
-Next command: `Commit the corrected candidate, regenerate canonical and independent clean-worktree evidence for its exact SHA, then promote the evidence and update the handoff.`
+Head: `04355c8d2d4cd756f234358f21036f9fdb680a42`
+Next command: `Commit the promoted evidence and living docs, push PR #6, inspect automatic checks without another CodeRabbit command, merge when clean, then verify main.`
 
 ## LW_M0_BASELINE WORK
 
@@ -411,11 +411,11 @@ Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize
 
 ## LW_P5_LATTICE_MEMORY WORK
 
-Step: `phase5-lattice-memory-review-fix-green`
-Note: The six independently reproduced findings are corrected as one bounded set; runtime, browser, evidence-integrity, prior-phase regression, and full repository controls are green.
+Step: `phase5-lattice-memory-promoted-review-fix-green`
+Note: Candidate 04355c8 is independently reproduced and the canonical hash-bound implementation evidence is promoted GREEN after the consolidated correction set.
 Branch: `reengineering/p5-lattice-memory`
-Head: `d3aa875c8de8fe4e841a00d1169bac9456dab866`
-Next command: `Commit the corrected candidate, regenerate canonical and independent clean-worktree evidence for its exact SHA, then promote the evidence and update the handoff.`
+Head: `04355c8d2d4cd756f234358f21036f9fdb680a42`
+Next command: `Commit the promoted evidence and living docs, push PR #6, inspect automatic checks without another CodeRabbit command, merge when clean, then verify main.`
 
 ### Validations
 
@@ -459,6 +459,8 @@ Next command: `Commit the corrected candidate, regenerate canonical and independ
 - **MEASURED** — full repository controls pass 295/295 with zero fail, skip, todo, or cancellation.
 - **VERIFIED** — evidence integrity now rejects tampering, omissions, forged commands, invalid cwd, non-repository artifacts, malformed independent review, content-bearing browser receipts, and symlink/reparse traversal.
 - **VERIFIED** — canonical evidence reruns exclude only the exact generated evidence bundle from the pre-run cleanliness gate; all other worktree drift fails closed.
+- **VERIFIED** — detached clean-worktree QA reproduced candidate `04355c8d2d4cd756f234358f21036f9fdb680a42` with 295/295 controls, 4/4 Chrome, 13/13 gates, zero findings, and complete worktree cleanup.
+- **VERIFIED** — the promoted canonical evidence bundle is hash-valid, status `GREEN`, and bound to the exact independent review receipt for candidate `04355c8d2d4cd756f234358f21036f9fdb680a42`.
 
 ### Blockers
 

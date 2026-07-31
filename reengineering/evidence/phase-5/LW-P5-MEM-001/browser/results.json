@@ -92,12 +92,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 942,
+                  "duration": 852,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T07:50:11.307Z",
+                  "startTime": "2026-07-31T09:13:35.327Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -113,7 +113,7 @@
           ],
           "id": "5398e79107e937be5eb6-036c498bcdf2af26a7bb",
           "file": "phase5-lattice-memory.spec.ts",
-          "line": 142,
+          "line": 158,
           "column": 1
         },
         {
@@ -132,12 +132,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1398,
+                  "duration": 1504,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T07:50:12.274Z",
+                  "startTime": "2026-07-31T09:13:36.208Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -158,7 +158,7 @@
           ],
           "id": "5398e79107e937be5eb6-c77ec36fb14e7ed9e2ae",
           "file": "phase5-lattice-memory.spec.ts",
-          "line": 184,
+          "line": 200,
           "column": 1
         },
         {
@@ -177,12 +177,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 40496,
+                  "duration": 42798,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T07:50:13.679Z",
+                  "startTime": "2026-07-31T09:13:37.719Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -208,7 +208,7 @@
           ],
           "id": "5398e79107e937be5eb6-5fabac425d1ddd2fc130",
           "file": "phase5-lattice-memory.spec.ts",
-          "line": 250,
+          "line": 266,
           "column": 1
         },
         {
@@ -227,12 +227,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 728,
+                  "duration": 1395,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-31T07:50:54.183Z",
+                  "startTime": "2026-07-31T09:14:20.525Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -253,7 +253,7 @@
           ],
           "id": "5398e79107e937be5eb6-dc417b42f3211df9645b",
           "file": "phase5-lattice-memory.spec.ts",
-          "line": 319,
+          "line": 335,
           "column": 1
         }
       ]
@@ -261,8 +261,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-31T07:50:10.339Z",
-    "duration": 45125.885,
+    "startTime": "2026-07-31T09:13:34.194Z",
+    "duration": 48378.041000000005,
     "expected": 4,
     "skipped": 0,
     "unexpected": 0,

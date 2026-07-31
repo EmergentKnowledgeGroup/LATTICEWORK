@@ -8,7 +8,7 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 5 LATTICE MEMORY CANDIDATE VERIFIED`
+`PHASE 5 LATTICE MEMORY REVIEW-FIX VERIFIED — PR MERGE READY`
 
 ## Current milestone
 
@@ -16,7 +16,7 @@ LATTICEWORK
 
 ## Current target
 
-`Phase 5 LatticeMemory corrected candidate PR and single review cycle`
+`Phase 5 LatticeMemory corrected candidate PR merge and post-merge verification`
 
 ## Upstream baseline
 
@@ -24,7 +24,7 @@ LATTICEWORK
 
 ## Last verified commit
 
-`4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2` (Phase 5 package-only
+`04355c8d2d4cd756f234358f21036f9fdb680a42` (Phase 5 package-only
 LatticeMemory candidate independently reproduced against the immutable
 baseline)
 
@@ -82,15 +82,19 @@ accepted corrections. The native Chrome harness passes 4/4 scenarios,
 including exact schema/reload, immutable snapshots, code-only diagnostics,
 fail-closed QuietRoom behavior, 100-entry pre-ready queue, same-millisecond
 burst preservation, newest-10,000 retention, open failure, and complete
-database/profile/run-root cleanup. Strict workspace typecheck, 62/62 focused
-controls, 288/288 repository controls, Phase 3/4 regression gates, deterministic
+database/profile/run-root cleanup. The consolidated review correction also
+serializes clear/close lifecycle work, closes failed or version-changed
+IndexedDB connections, proves rather than assumes cleanup, binds every evidence
+artifact and command to its hash/identity, and rejects false-green package
+receipts. Strict workspace typecheck, 70/70 focused controls, 295/295 repository
+controls, Phase 3/4 regression gates, deterministic
 package inventory, audit, SBOM, scope, and hygiene are green. Independent
 clean-worktree review reproduced all 13 gates with zero findings, so the
 canonical evidence is promoted GREEN.
 
 ## Last verified date
 
-`2026-07-31 07:10 UTC`
+`2026-07-31 09:15 UTC`
 
 ## Locked constraints
 
@@ -288,8 +292,8 @@ canonical evidence is promoted GREEN.
 - Documentation accuracy improvements.
 - Reproducible measurement tooling.
 - Documentation and evidence corrections that do not change product semantics.
-- Open the bounded Phase 5 PR and execute exactly one CodeRabbit review/fix
-  cycle before merge.
+- Finish the already-open bounded Phase 5 PR after the single CodeRabbit
+  command and consolidated independent review-fix cycle.
 - Do not register the package in an application, read legacy or real data, or
   authorize activation, deployment, or cutover.
 
@@ -309,11 +313,11 @@ canonical evidence is promoted GREEN.
 
 ## Next handoff
 
-**Next action:** open the bounded Phase 5 PR, allow exactly one CodeRabbit
-review, consolidate actionable fixes, rerun the full gate, and merge only when
-CI and review threads are clean.
+**Next action:** push the exact independently verified candidate and canonical
+evidence to PR #6, reconcile automatic checks without another CodeRabbit review
+command, merge, then record post-merge verification on `main`.
 
-**Read first:** `docs/agents/handoffs/LW-P4-001.md`,
+**Read first:** `docs/agents/handoffs/LW-P5-MEM-001.md`,
 `reengineering/EXECUTION_CHECKLIST.md`, and `reengineering/BLOCKERBOARD.md`.
 
 **Do not touch:** stored-data/provider/security semantics, default routes,
