@@ -1,0 +1,49 @@
+{
+  "schema": "latticework.phase5-control-closure.v1",
+  "work_id": "LW-P5-CTRL-001",
+  "status": "VERIFIED",
+  "phase4_base_commit": "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  "phase4_terminal_commit": "1b7e1d10456e0a1e9aaa91df25db17e236bbea3e",
+  "phase5_base_commit": "1b7e1d10456e0a1e9aaa91df25db17e236bbea3e",
+  "candidate_base_commit": "80f5e0bc29ce23296a024849a3464d3e17d25bea",
+  "captured_at": "2026-07-31T05:44:03Z",
+  "invariants": [
+    "Phase 4 general and implementation scope are inspected only across pinned historical ranges.",
+    "Add-then-delete paths remain visible to historical and active scope validation.",
+    "Phase 5 active scope includes committed, staged, unstaged, untracked, and force-added ignored paths.",
+    "Canonical scope CLIs reject caller attempts to disable or rebase validation.",
+    "No Phase 4 allowlist was expanded."
+  ],
+  "commands": [
+    {
+      "command": "node --test tests/reengineering/phase4-active-scope.test.mjs tests/reengineering/phase4-implementation-scope.test.mjs tests/reengineering/phase5-active-scope.test.mjs",
+      "exit_code": 0,
+      "result": "46 passed; 0 failed; 0 skipped; 0 todo"
+    },
+    {
+      "command": "LATTICEWORK_BASELINE_ROOT=Z:\\LATTICEWORK_BASELINE_e7585999 TEMP=Z:\\LATTICEWORK\\runtime\\tmp\\p5-control-full TMP=Z:\\LATTICEWORK\\runtime\\tmp\\p5-control-full node --test tests/reengineering/*.test.mjs",
+      "exit_code": 0,
+      "result": "193 passed; 0 failed; 0 skipped; 0 todo"
+    },
+    {
+      "command": "node tools/reengineering/validate-phase4-active-scope.mjs",
+      "exit_code": 0,
+      "result": "valid=true; closed range e8b6a1b..1b7e1d1; 401 inspected paths; failures=[]"
+    },
+    {
+      "command": "node tools/reengineering/validate-phase5-active-scope.mjs",
+      "exit_code": 0,
+      "result": "valid=true; base=1b7e1d1; failures=[]"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "clean"
+    }
+  ],
+  "independent_review": {
+    "verdict": "GREEN",
+    "reviewer": "native Codex guardrail reviewer",
+    "receipt": "independent-review/REVIEW.md"
+  }
+}

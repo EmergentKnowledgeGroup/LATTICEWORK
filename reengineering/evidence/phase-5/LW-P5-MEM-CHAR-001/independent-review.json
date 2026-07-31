@@ -1,0 +1,22 @@
+{
+    "verdict":  "GREEN",
+    "independent":  true,
+    "atom_count":  69,
+    "clean_worktree":  true,
+    "candidate_sha":  "0ec0de6bb49ef2545d63cde483ed0b901deb50f1",
+    "browser_groups":  {
+                           "total":  13,
+                           "passed":  13,
+                           "failed":  0
+                       },
+    "attachments":  207,
+    "full_controls":  {
+                          "total":  230,
+                          "passed":  230,
+                          "failed":  0,
+                          "skipped":  0
+                      },
+    "findings":  [
+
+                 ]
+}

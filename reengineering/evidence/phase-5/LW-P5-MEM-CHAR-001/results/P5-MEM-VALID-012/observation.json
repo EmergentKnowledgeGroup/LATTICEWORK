@@ -1,0 +1,11 @@
+{
+    "schema":  "latticework.phase5.atomic-result.v1",
+    "atom_id":  "P5-MEM-VALID-012",
+    "group_id":  "shape-and-content-leak-rejection",
+    "status":  "PASS",
+    "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+    "observed":  {
+                     "matched":  true,
+                     "boolean_count":  16
+                 }
+}

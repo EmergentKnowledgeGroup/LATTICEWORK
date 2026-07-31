@@ -1,0 +1,11 @@
+{
+    "schema":  "latticework.phase5.atomic-result.v1",
+    "atom_id":  "P5-MEM-API-004",
+    "group_id":  "public-internal-api-and-loader",
+    "status":  "PASS",
+    "disposition":  "MATCH",
+    "observed":  {
+                     "matched":  true,
+                     "boolean_count":  13
+                 }
+}

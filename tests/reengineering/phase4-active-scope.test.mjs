@@ -49,13 +49,17 @@ test.afterEach(() => {
   fs.rmSync(SYNTHETIC_GIT_ROOT, { recursive: true, force: true });
 });
 
-test("canonical Phase 4 active scope accepts the currently claimed packet", () => {
+test("canonical Phase 4 closed scope accepts the merged historical packet", () => {
   const result = validatePhase4ActiveScope({ workspaceRoot: REPO_ROOT });
 
   assert.equal(result.valid, true, result.failures.join("\n"));
   assert.equal(
     result.baseCommit,
     "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  );
+  assert.equal(
+    result.terminalCommit,
+    "1b7e1d10456e0a1e9aaa91df25db17e236bbea3e",
   );
   assert.equal(result.scopeChecked, true);
 });
@@ -138,7 +142,7 @@ test("Git range collection retains add-then-delete paths and all active states",
   );
 });
 
-test("active scope rejects a real current untracked unauthorized path", () => {
+test("closed Phase 4 scope ignores later untracked Phase 5 paths", () => {
   const negativePath = path.join(
     REPO_ROOT,
     "reengineering",
@@ -147,17 +151,49 @@ test("active scope rejects a real current untracked unauthorized path", () => {
   fs.writeFileSync(negativePath, "negative control\n", "utf8");
   try {
     const result = validatePhase4ActiveScope({ workspaceRoot: REPO_ROOT });
-    assert.equal(result.valid, false);
-    assert.match(
-      result.failures.join("\n"),
-      /unauthorized Phase 4 active-scope path.*PHASE4_ACTIVE_SCOPE_NEGATIVE\.tmp/i,
-    );
+    assert.equal(result.valid, true, result.failures.join("\n"));
   } finally {
     fs.rmSync(negativePath, { force: true });
   }
 });
 
-test("canonical Phase 4 active-scope CLI cannot disable or rebase validation", () => {
+test("closed Phase 4 scope retains unauthorized add-then-delete history", () => {
+  fs.mkdirSync(SYNTHETIC_GIT_ROOT, { recursive: true });
+  git(SYNTHETIC_GIT_ROOT, ["init", "-b", "main"]);
+  git(SYNTHETIC_GIT_ROOT, ["config", "user.email", "scope@example.invalid"]);
+  git(SYNTHETIC_GIT_ROOT, ["config", "user.name", "Scope Test"]);
+  writeSynthetic("PROJECT_STATE.md", "base\n");
+  git(SYNTHETIC_GIT_ROOT, ["add", "."]);
+  git(SYNTHETIC_GIT_ROOT, ["commit", "-m", "base"]);
+  const base = git(SYNTHETIC_GIT_ROOT, ["rev-parse", "HEAD"]);
+
+  writeSynthetic("apps/web/ephemeral.ts", "unauthorized\n");
+  git(SYNTHETIC_GIT_ROOT, ["add", "."]);
+  git(SYNTHETIC_GIT_ROOT, ["commit", "-m", "add unauthorized"]);
+  fs.rmSync(path.join(SYNTHETIC_GIT_ROOT, "apps", "web", "ephemeral.ts"));
+  git(SYNTHETIC_GIT_ROOT, ["add", "-u"]);
+  git(SYNTHETIC_GIT_ROOT, ["commit", "-m", "delete unauthorized"]);
+  const terminal = git(SYNTHETIC_GIT_ROOT, ["rev-parse", "HEAD"]);
+
+  writeSynthetic("later-phase.txt", "later\n");
+  git(SYNTHETIC_GIT_ROOT, ["add", "."]);
+  git(SYNTHETIC_GIT_ROOT, ["commit", "-m", "later descendant"]);
+  writeSynthetic("untracked-later.txt", "untracked\n");
+
+  const result = validatePhase4ActiveScope({
+    workspaceRoot: SYNTHETIC_GIT_ROOT,
+    baseCommit: base,
+    terminalCommit: terminal,
+  });
+  assert.equal(result.valid, false);
+  assert.match(
+    result.failures.join("\n"),
+    /unauthorized Phase 4 active-scope path: apps\/web\/ephemeral\.ts/i,
+  );
+  assert.doesNotMatch(result.failures.join("\n"), /later-phase|untracked-later/i);
+});
+
+test("canonical Phase 4 closed-scope CLI cannot disable or rebase validation", () => {
   const result = spawnSync(
     process.execPath,
     [
@@ -165,6 +201,8 @@ test("canonical Phase 4 active-scope CLI cannot disable or rebase validation", (
       "--check-git-scope",
       "false",
       "--base-sha",
+      "HEAD",
+      "--terminal-sha",
       "HEAD",
     ],
     {
@@ -177,6 +215,6 @@ test("canonical Phase 4 active-scope CLI cannot disable or rebase validation", (
   assert.equal(result.status, 2);
   assert.match(
     `${result.stdout}\n${result.stderr}`,
-    /always checks Git scope from the pinned Phase 4 base commit/i,
+    /always checks the pinned closed Phase 4 range/i,
   );
 });

@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-31T05:15:52Z`
+Updated: `2026-07-31T09:15:25Z`
 
 ## CURRENT
 
-Track: `LW_P4_IMPLEMENTATION WORK`
-Step: `phase4-post-merge-green`
-Note: PR #5 merged the canonically and independently verified Phase 4 synthetic Chat slice after one CodeRabbit review and one consolidated fix pass; post-merge main verification is GREEN.
-Branch: `main`
-Head: `1b7e1d10456e0a1e9aaa91df25db17e236bbea3e`
-Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize and freeze one preserved feature boundary before proposing implementation.`
+Track: `LW_P5_LATTICE_MEMORY WORK`
+Step: `phase5-lattice-memory-promoted-review-fix-green`
+Note: Candidate 04355c8 is independently reproduced and the canonical hash-bound implementation evidence is promoted GREEN after the consolidated correction set.
+Branch: `reengineering/p5-lattice-memory`
+Head: `04355c8d2d4cd756f234358f21036f9fdb680a42`
+Next command: `Commit the promoted evidence and living docs, push PR #6, inspect automatic checks without another CodeRabbit command, merge when clean, then verify main.`
 
 ## LW_M0_BASELINE WORK
 
@@ -408,3 +408,61 @@ Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize
 ### Blockers
 
 - No open blocker prevents the exact bounded `LW-P4-001` implementation.
+
+## LW_P5_LATTICE_MEMORY WORK
+
+Step: `phase5-lattice-memory-promoted-review-fix-green`
+Note: Candidate 04355c8 is independently reproduced and the canonical hash-bound implementation evidence is promoted GREEN after the consolidated correction set.
+Branch: `reengineering/p5-lattice-memory`
+Head: `04355c8d2d4cd756f234358f21036f9fdb680a42`
+Next command: `Commit the promoted evidence and living docs, push PR #6, inspect automatic checks without another CodeRabbit command, merge when clean, then verify main.`
+
+### Validations
+
+- **VERIFIED** — Phase 4 PR #5 is merged and post-merge `main` is GREEN.
+- **OBSERVED** — the Phase 4 active validator still scanned through current `HEAD`, so later Phase 5 work would be falsely classified as Phase 4.
+- **OBSERVED** — `docs/modules/lattice-memory.js` has one finite pulse-medium API, one already-observed database/store, no provider, no credential, and no network authority.
+- **OBSERVED** — Core, other memory systems, Question Corner, Workshop, import/export, and sync cross broader data, security, provider, or network boundaries.
+- **OBSERVED** — no Phase 5 runtime implementation or candidate storage exists at phase start.
+- **OBSERVED** — real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.
+- **VERIFIED** — focused scope controls passed 46/46 and full repository controls passed 193/193 with zero skip.
+- **VERIFIED** — Phase 4 general and implementation validators are closed at merge `1b7e1d10456e0a1e9aaa91df25db17e236bbea3e`.
+- **VERIFIED** — the Phase 5 active validator covers committed, staged, unauthorized unstaged, untracked, force-added ignored, and add-then-delete paths.
+- **VERIFIED** — independent read-only guardrail review is GREEN after one bounded correction cycle.
+- **VERIFIED** — the LatticeMemory packet locks 69 unique atomic observations in 13 groups, including observed privacy, aliasing, malformed-filter, readiness, timestamp, loader, and warning divergences.
+- **MEASURED** — focused packet and active-scope controls passed 35/35; both canonical validators returned `valid: true`; diff hygiene is clean.
+- **VERIFIED** — final independent packet seal review is GREEN after exact source-to-contract review; all nine reserved authority flags remain false with isolated negative controls.
+- **VERIFIED** — packet commit `3ba1f10af6b8c5a0efe529d198517f8f519da6f8` contains the exact accepted machine lock; evidence and handoff receipts name that commit.
+- **MEASURED** — controller Chrome reproduction passed all 13 groups in 12.7 seconds with one worker and zero retries.
+- **MEASURED** — the browser report contains 207 attachments for 69 unique atoms, zero non-PASS atoms, and zero private-sentinel leaks.
+- **MEASURED** — characterization validator negative controls and full repository controls passed 230/230 with zero fail/skip/todo.
+- **VERIFIED** — independent clean-worktree reproduction returned GREEN for commit `0ec0de6bb49ef2545d63cde483ed0b901deb50f1`.
+- **VERIFIED** — canonical promotion contains 69/69 PASS atoms, 53 MATCH and 16 `ACCEPTED_DIVERGENCE_CANDIDATE` dispositions, 207 content-free receipts, complete cleanup, and zero egress or sentinel leakage.
+- **VERIFIED** — the promoted characterization evidence validator returned `valid: true`.
+- **VERIFIED** — the corrected implementation packet locks all 53 matches, all 16 corrections, the complete synthetic dataset descriptor, and every reserved authority flag.
+- **MEASURED** — implementation preflight controls passed 55/55 focused and 280/280 full with zero fail or skip.
+- **VERIFIED** — independent detached-worktree implementation preflight review is GREEN with zero findings.
+- **MEASURED** — strict workspace typecheck and 62/62 focused Phase 5 controls pass.
+- **MEASURED** — native Chrome passes 4/4 with one worker, zero retries, eight content-free receipts, exact-loopback teardown, and candidate database/profile/run-root cleanup.
+- **MEASURED** — full repository controls pass 287/287 with zero fail, skip, or todo.
+- **MEASURED** — Phase 3/4 regression gates, deterministic package inventory, zero-vulnerability audit, SBOM, scope, and hygiene gates are GREEN.
+- **MEASURED** — canonical pending evidence validates for candidate `e648af05bc3f9cad5c6f13980cbde3fcf40728e0`.
+- **VERIFIED** — independent clean-worktree QA reproduced candidate `4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2`: 13/13 gates, 288/288 controls, 4/4 Chrome, eight content-free receipts, and zero findings.
+- **VERIFIED** — promoted canonical evidence validates `GREEN` with the exact independent review receipt.
+- **OBSERVED** — PR #6 is open at `https://github.com/EmergentKnowledgeGroup/LATTICEWORK/pull/6`.
+- **OBSERVED** — the one CodeRabbit review command completed as a rate-limited incremental no-op with zero review objects or inline findings; no second command will be sent.
+- **VERIFIED** — an independent read-only adversarial pass reproduced six bounded findings: unhashed evidence acceptance, lifecycle clear/close races, a false-green package gate, swallowed browser cleanup, IndexedDB failed-open leaks, and non-canonical default temp placement.
+- **VERIFIED** — all six findings are covered by regressions and corrected without widening the accepted implementation packet.
+- **MEASURED** — strict workspace typecheck and 70/70 focused Phase 5 controls pass.
+- **MEASURED** — native Chrome passes 4/4 with one worker, zero retries, observed database/profile/run-root cleanup, and a negative blocked-cleanup proof.
+- **MEASURED** — Phase 4 typecheck, 48/48 controls, and 7/8 browser scenarios pass; the sole skip is the explicitly unsupported offline capability.
+- **MEASURED** — full repository controls pass 295/295 with zero fail, skip, todo, or cancellation.
+- **VERIFIED** — evidence integrity now rejects tampering, omissions, forged commands, invalid cwd, non-repository artifacts, malformed independent review, content-bearing browser receipts, and symlink/reparse traversal.
+- **VERIFIED** — canonical evidence reruns exclude only the exact generated evidence bundle from the pre-run cleanliness gate; all other worktree drift fails closed.
+- **VERIFIED** — detached clean-worktree QA reproduced candidate `04355c8d2d4cd756f234358f21036f9fdb680a42` with 295/295 controls, 4/4 Chrome, 13/13 gates, zero findings, and complete worktree cleanup.
+- **VERIFIED** — the promoted canonical evidence bundle is hash-valid, status `GREEN`, and bound to the exact independent review receipt for candidate `04355c8d2d4cd756f234358f21036f9fdb680a42`.
+
+### Blockers
+
+- `LW-BLK-005` remains open for real-data migration; only synthetic fixtures and candidate namespaces are safe.
+- The one consolidated correction set, fresh evidence, merge, and post-merge verification remain.

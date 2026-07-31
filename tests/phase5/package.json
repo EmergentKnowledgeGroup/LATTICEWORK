@@ -1,0 +1,21 @@
+{
+  "name": "@latticework/phase5-browser",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:browser": "playwright test",
+    "syntax": "playwright test --list",
+    "typecheck": "tsc --project tsconfig.json"
+  },
+  "dependencies": {
+    "@latticework/lattice-memory": "0.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.0",
+    "@types/node": "24.3.0",
+    "typescript": "6.0.3",
+    "vite": "8.1.5"
+  }
+}

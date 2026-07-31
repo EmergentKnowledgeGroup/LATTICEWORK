@@ -12,6 +12,7 @@
 | `LW-BLK-008` | P0 | P4 | Phase 3 historical scope validators incorrectly extended through current HEAD/untracked state, causing legitimate later-phase files to fail 2 canonical controls | Exact phase-closed validator/test repair and additive active Phase 4 scope validator only | Codex root controller | 48 focused controls, 116 full repository controls, force-added staging rejection, add-then-delete retention, and independent guardrail GREEN without Phase 3 allowlist expansion | Revert control repair; do not widen allowlists or suppress failures | CLOSED |
 | `LW-BLK-009` | P1 | P4-P10 | The maintainer accepted eight confirmed baseline defects as divergences and authorized one run-owned loopback synthetic stream fixture | Retest only the eleven cases frozen in `PHASE4_CHARACTERIZATION_AMENDMENT.md`; no candidate implementation | Codex root controller; independent QA reviewer | Canonical and independent amended evidence reports 31 PASS, 8 ACCEPTED_DIVERGENCE, 0 BLOCKED; original hashes/statuses preserved; listener teardown and cleanup proven | Keep legacy default and Phase 3 packages inactive; preserve original evidence | CLOSED |
 | `LW-BLK-010` | P1 | P4-P10 | Exact bounded implementation authority required a corrected packet, fail-closed validator, independent review, and maintainer acceptance | Validate/review `PHASE4_IMPLEMENTATION_PACKET.md` only before implementation | Maintainer; independent QA reviewer | Exact packet is accepted; both validators valid; 41/41 focused and 180/180 full controls pass; independent re-review GREEN | Keep legacy default; remove only the non-default candidate slice | CLOSED |
+| `LW-BLK-011` | P0 | P5-P10 | Phase 4 active and implementation scope validators extended through later descendants, causing legitimate Phase 5 files to fail closed-phase controls | Close both Phase 4 ranges at the merged terminal and add one exact active Phase 5 validator | Codex root controller; independent QA reviewer | 46/46 focused controls, 193/193 full repository controls, add-then-delete retention, all active path classes, and independent guardrail GREEN without Phase 4 allowlist expansion | Revert only the boundary repair; do not suppress paths or widen Phase 4 ownership | CLOSED |
 
 No blocker may be closed by weakening a test, hiding a capability, or relabeling required behavior.
 
@@ -35,3 +36,37 @@ that conclusion. It uses only candidate storage and in-process mocks; no real
 data, credential, provider protocol, listener, activation, deployment, or
 cutover evidence is added. `LW-BLK-005` through `LW-BLK-007` therefore remain
 open.
+
+`LW-BLK-011` repeats the Phase 3-to-Phase 4 lesson at the next boundary:
+historical Phase 4 validators are now closed at merge commit
+`1b7e1d10456e0a1e9aaa91df25db17e236bbea3e`, while a separate Phase 5
+validator owns current committed and dirty paths. No Phase 4 allowlist was
+expanded.
+
+`LW-P5-MEM-PREFLIGHT-001` authorizes only the exact synthetic browser
+characterization of immutable `docs/modules/lattice-memory.js`. It does not
+close `LW-BLK-005` and grants no real-data migration, candidate storage,
+activation, deployment, or cutover authority.
+
+`LW-P5-MEM-CHAR-001` is now canonical and independently GREEN: all 69 atoms
+pass, with 53 `MATCH` and 16 `ACCEPTED_DIVERGENCE_CANDIDATE` dispositions.
+This closes only the synthetic legacy-characterization gate. `LW-BLK-005`
+remains open because no real stored record was read, migrated, round-tripped,
+or rolled back, and characterization grants no candidate implementation or
+candidate-storage authority.
+
+`LW-P5-MEM-IMPL-PREFLIGHT-001` is accepted and independently GREEN. It
+authorizes only the exact package-only corrected candidate and disposable
+synthetic `latticework::pulse-medium` namespace. This does not close
+`LW-BLK-005`: legacy remains authoritative and no real record, migration,
+import/export, activation, deployment, or cutover is authorized.
+
+`LW-P5-MEM-001` implements only that bounded candidate. Canonical and
+independent tests prove the new synthetic namespace and corrected package
+behavior, but `LW-BLK-005` remains OPEN because this package supplies no
+real-data migration or activation evidence. Candidate
+`04355c8d2d4cd756f234358f21036f9fdb680a42` additionally closes the six
+review findings around evidence forgery, lifecycle races, package false-green,
+cleanup proof, IndexedDB failed-open leakage, and off-drive test temp usage.
+The promoted bundle is independently GREEN at 295/295 repository controls,
+4/4 Chrome, and 13/13 gates; none of that changes the blocker.

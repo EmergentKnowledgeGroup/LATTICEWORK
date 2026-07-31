@@ -6,6 +6,7 @@ import test from "node:test";
 
 import {
   IMPLEMENTATION_BASE_SHA,
+  IMPLEMENTATION_TERMINAL_SHA,
   isOwnedImplementationPath,
   isProtectedImplementationPath,
   validatePhase4ImplementationScope,
@@ -44,11 +45,12 @@ function write(root, relativePath, text) {
 
 test.after(() => fs.rmSync(TMP, { recursive: true, force: true }));
 
-test("canonical accepted packet and active implementation range are valid", () => {
+test("canonical accepted packet and closed implementation range are valid", () => {
   const result = validatePhase4ImplementationScope({ workspaceRoot: ROOT });
   assert.equal(result.valid, true, result.failures.join("\n"));
   assert.equal(result.scopeChecked, true);
   assert.equal(result.implementationBaseSha, IMPLEMENTATION_BASE_SHA);
+  assert.equal(result.implementationTerminalSha, IMPLEMENTATION_TERMINAL_SHA);
   assert.equal(result.applicationListener, false);
   assert.equal(result.testListener, true);
 });

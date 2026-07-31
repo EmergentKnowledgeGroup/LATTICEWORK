@@ -1,0 +1,37 @@
+{
+    "schema":  "latticework.phase5-independent-review.v1",
+    "verdict":  "GREEN",
+    "candidate_sha":  "04355c8d2d4cd756f234358f21036f9fdb680a42",
+    "findings":  [
+
+                 ],
+    "repository_controls":  {
+                                "tests":  295,
+                                "pass":  295,
+                                "fail":  0,
+                                "skipped":  0,
+                                "todo":  0
+                            },
+    "browser":  {
+                    "expected":  4,
+                    "content_free_receipts":  8,
+                    "unexpected":  0,
+                    "flaky":  0,
+                    "skipped":  0
+                },
+    "gates":  {
+                  "environment":  "commands/environment/manifest.json",
+                  "install":  "commands/install/manifest.json",
+                  "scope":  "commands/scope/manifest.json",
+                  "typecheck":  "commands/typecheck/manifest.json",
+                  "unit":  "commands/unit/manifest.json",
+                  "browser":  "commands/browser/manifest.json",
+                  "phase3_boundary":  "commands/phase3-boundary/manifest.json",
+                  "phase4_verification":  "commands/phase4-verification/manifest.json",
+                  "repository_controls":  "commands/repository-controls/manifest.json",
+                  "deterministic_build":  "commands/deterministic-build/manifest.json",
+                  "audit":  "commands/audit/manifest.json",
+                  "sbom":  "commands/sbom/manifest.json",
+                  "hygiene":  "commands/hygiene/manifest.json"
+              }
+}

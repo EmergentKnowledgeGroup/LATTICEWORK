@@ -4,10 +4,12 @@ import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
-import { collectActiveRangePaths } from "./git-scope-common.mjs";
+import { collectClosedRangePaths } from "./git-scope-common.mjs";
 
 export const IMPLEMENTATION_BASE_SHA =
   "faf32dbaf8159e8499421fa68d9fba4bede0fdc9";
+export const IMPLEMENTATION_TERMINAL_SHA =
+  "1b7e1d10456e0a1e9aaa91df25db17e236bbea3e";
 
 export const OWNED_EXACT_PATHS = Object.freeze([
   "package.json",
@@ -357,8 +359,23 @@ export function validatePhase4ImplementationScope({
 
   try {
     if (checkGitScope) {
-      git(root, ["merge-base", "--is-ancestor", IMPLEMENTATION_BASE_SHA, "HEAD"]);
-      activePaths = collectActiveRangePaths(root, IMPLEMENTATION_BASE_SHA);
+      git(root, [
+        "merge-base",
+        "--is-ancestor",
+        IMPLEMENTATION_BASE_SHA,
+        IMPLEMENTATION_TERMINAL_SHA,
+      ]);
+      git(root, [
+        "merge-base",
+        "--is-ancestor",
+        IMPLEMENTATION_TERMINAL_SHA,
+        "HEAD",
+      ]);
+      activePaths = collectClosedRangePaths(
+        root,
+        IMPLEMENTATION_BASE_SHA,
+        IMPLEMENTATION_TERMINAL_SHA,
+      );
     }
 
     for (const relativePath of activePaths) {
@@ -376,7 +393,14 @@ export function validatePhase4ImplementationScope({
       ]) {
         const diff = spawnSync(
           "git",
-          ["diff", "--quiet", IMPLEMENTATION_BASE_SHA, "--", relativePath],
+          [
+            "diff",
+            "--quiet",
+            IMPLEMENTATION_BASE_SHA,
+            IMPLEMENTATION_TERMINAL_SHA,
+            "--",
+            relativePath,
+          ],
           { cwd: root, windowsHide: true },
         );
         if (diff.status !== 0) {
@@ -396,10 +420,11 @@ export function validatePhase4ImplementationScope({
   }
 
   return {
-    schema: "latticework.phase4-implementation-scope-validation.v1",
+    schema: "latticework.phase4-implementation-closed-scope-validation.v1",
     valid: failures.length === 0,
     scopeChecked: checkGitScope,
     implementationBaseSha: IMPLEMENTATION_BASE_SHA,
+    implementationTerminalSha: IMPLEMENTATION_TERMINAL_SHA,
     inspectedPathCount: activePaths.length,
     applicationListener: packet?.application_listener ?? null,
     testListener: packet?.test_listener ?? null,

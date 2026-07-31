@@ -7,7 +7,7 @@ import {
   parseNamedArgs,
   writeJson,
 } from "./evidence-common.mjs";
-import { collectActiveRangePaths } from "./git-scope-common.mjs";
+import { collectClosedRangePaths } from "./git-scope-common.mjs";
 import {
   OWNED_EXACT_PATHS as IMPLEMENTATION_EXACT_PATHS,
   OWNED_PATH_PREFIXES as IMPLEMENTATION_PATH_PREFIXES,
@@ -15,6 +15,8 @@ import {
 
 const EXPECTED_PHASE4_BASE_COMMIT =
   "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd";
+const EXPECTED_PHASE4_TERMINAL_COMMIT =
+  "1b7e1d10456e0a1e9aaa91df25db17e236bbea3e";
 
 const ALLOWED_PATHS = new Set([
   ...IMPLEMENTATION_EXACT_PATHS,
@@ -91,6 +93,7 @@ export function findUnauthorizedPhase4Paths(paths) {
 export function validatePhase4ActiveScope({
   workspaceRoot,
   baseCommit = EXPECTED_PHASE4_BASE_COMMIT,
+  terminalCommit = EXPECTED_PHASE4_TERMINAL_COMMIT,
   checkGitScope = true,
 }) {
   const root = path.resolve(workspaceRoot);
@@ -98,16 +101,31 @@ export function validatePhase4ActiveScope({
   let inspectedPaths = [];
 
   if (checkGitScope) {
-    const ancestry = spawnSync(
+    const rangeAncestry = spawnSync(
       "git",
-      ["merge-base", "--is-ancestor", baseCommit, "HEAD"],
+      ["merge-base", "--is-ancestor", baseCommit, terminalCommit],
       { cwd: root, encoding: "utf8", windowsHide: true },
     );
-    if (ancestry.status !== 0) {
-      failures.push(`Phase 4 base commit ${baseCommit} is not an ancestor of HEAD`);
+    const headAncestry = spawnSync(
+      "git",
+      ["merge-base", "--is-ancestor", terminalCommit, "HEAD"],
+      { cwd: root, encoding: "utf8", windowsHide: true },
+    );
+    if (rangeAncestry.status !== 0) {
+      failures.push(
+        `Phase 4 base commit ${baseCommit} is not an ancestor of terminal ${terminalCommit}`,
+      );
+    } else if (headAncestry.status !== 0) {
+      failures.push(
+        `Phase 4 terminal commit ${terminalCommit} is not an ancestor of HEAD`,
+      );
     } else {
       try {
-        inspectedPaths = collectActiveRangePaths(root, baseCommit);
+        inspectedPaths = collectClosedRangePaths(
+          root,
+          baseCommit,
+          terminalCommit,
+        );
       } catch (error) {
         failures.push(error.message);
       }
@@ -120,10 +138,11 @@ export function validatePhase4ActiveScope({
   }
 
   return {
-    schema: "latticework.phase4-active-scope-validation.v1",
+    schema: "latticework.phase4-closed-scope-validation.v1",
     valid: failures.length === 0,
     scopeChecked: checkGitScope,
     baseCommit: checkGitScope ? baseCommit : null,
+    terminalCommit: checkGitScope ? terminalCommit : null,
     inspectedPathCount: new Set(inspectedPaths).size,
     allowedExactPaths: ALLOWED_PATHS.size,
     allowedPrefixes: ALLOWED_PREFIXES.length,
@@ -144,10 +163,11 @@ if (isMain()) {
     if (command.length > 0) throw new Error("Unexpected command arguments");
     if (
       Object.prototype.hasOwnProperty.call(options, "check-git-scope") ||
-      Object.prototype.hasOwnProperty.call(options, "base-sha")
+      Object.prototype.hasOwnProperty.call(options, "base-sha") ||
+      Object.prototype.hasOwnProperty.call(options, "terminal-sha")
     ) {
       throw new Error(
-        "canonical CLI validation always checks Git scope from the pinned Phase 4 base commit",
+        "canonical CLI validation always checks the pinned closed Phase 4 range",
       );
     }
     const workspaceRoot = options["workspace-root"]

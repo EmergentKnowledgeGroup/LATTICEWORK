@@ -1,0 +1,53 @@
+{
+    "schema":  "latticework.phase5-lattice-memory-implementation-summary.v1",
+    "evidence_label":  "MEASURED",
+    "work_id":  "LW-P5-MEM-001",
+    "valid":  true,
+    "status":  "GREEN",
+    "implementation_base_commit":  "ac45408307e91ee8d850c24753ce6b4d6e903f12",
+    "candidate_sha":  "04355c8d2d4cd756f234358f21036f9fdb680a42",
+    "safety":  {
+                   "real_credentials":  "none",
+                   "real_provider_traffic":  "none",
+                   "real_user_data":  "not-accessed",
+                   "test_listener":  "exact-loopback-run-owned",
+                   "cutover":  "none",
+                   "application_listener":  "none",
+                   "candidate_activation":  "none",
+                   "deployment":  "none"
+               },
+    "repository_controls":  {
+                                "tests":  295,
+                                "pass":  295,
+                                "fail":  0,
+                                "skipped":  0,
+                                "todo":  0
+                            },
+    "browser":  {
+                    "expected":  4,
+                    "content_free_receipts":  8,
+                    "unexpected":  0,
+                    "flaky":  0,
+                    "skipped":  0
+                },
+    "gates":  {
+                  "environment":  "commands/environment/manifest.json",
+                  "install":  "commands/install/manifest.json",
+                  "scope":  "commands/scope/manifest.json",
+                  "typecheck":  "commands/typecheck/manifest.json",
+                  "unit":  "commands/unit/manifest.json",
+                  "browser":  "commands/browser/manifest.json",
+                  "phase3_boundary":  "commands/phase3-boundary/manifest.json",
+                  "phase4_verification":  "commands/phase4-verification/manifest.json",
+                  "repository_controls":  "commands/repository-controls/manifest.json",
+                  "deterministic_build":  "commands/deterministic-build/manifest.json",
+                  "audit":  "commands/audit/manifest.json",
+                  "sbom":  "commands/sbom/manifest.json",
+                  "hygiene":  "commands/hygiene/manifest.json"
+              },
+    "independent_review":  {
+                               "verdict":  "GREEN",
+                               "candidate_sha":  "04355c8d2d4cd756f234358f21036f9fdb680a42",
+                               "receipt":  "independent-review/review.json"
+                           }
+}

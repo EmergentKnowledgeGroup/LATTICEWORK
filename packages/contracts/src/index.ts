@@ -1,4 +1,17 @@
 export type {
+  Pulse,
+  PulseCommitResult,
+  PulseDiagnostic,
+  PulseFilter,
+  PulseInput,
+  PulseMedium,
+  PulseMediumOptions,
+  PulseReference,
+  PulseRepository,
+  QuietRoomState,
+  StoredPulse,
+} from "./lattice-memory.ts";
+export type {
   DiagnosticPhase,
   DiagnosticSeverity,
   SafeDiagnostic

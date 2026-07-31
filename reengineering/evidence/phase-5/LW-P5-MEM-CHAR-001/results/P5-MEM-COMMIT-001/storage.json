@@ -1,0 +1,19 @@
+{
+    "schema":  "latticework.phase5.storage.v1",
+    "atom_id":  "P5-MEM-COMMIT-001",
+    "group_id":  "commit-copy-timestamp-fanout-persistence",
+    "database_names":  [
+                           "LatticeMemory"
+                       ],
+    "lattice_memory":  {
+                           "present":  true,
+                           "version":  1,
+                           "stores":  [
+                                          "pulses"
+                                      ],
+                           "pulse_count":  9
+                       },
+    "local_storage_key_count":  0,
+    "session_storage_key_count":  0,
+    "cache_name_count":  0
+}

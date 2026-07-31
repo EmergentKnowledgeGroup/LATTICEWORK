@@ -216,6 +216,36 @@ therefore remains the Phase 2 feature-free status shell; the new packages are
 an unused, verified synthetic/mock-only architecture seam pending later
 feature-specific work claims.
 
+### Implemented package-only Phase 5 pulse medium
+
+**MEASURED:** `@latticework/lattice-memory` is an inactive package seam. The
+host injects a `PulseRepository`, optional QuietRoom state, and a code-only
+diagnostic receiver. The package never reads a browser global, environment
+credential, legacy database, route, UI, worker, or network surface.
+
+```mermaid
+flowchart LR
+    BH["Synthetic Chrome harness"] --> PM["PulseMedium"]
+    QR["Injected QuietRoom"] --> PM
+    PM --> PR["PulseRepository contract"]
+    PR --> IDB["Injected native IDBFactory"]
+    IDB --> DB["latticework::pulse-medium / pulses"]
+    APP["apps and legacy runtime"] -. "no import or registration" .-> PM
+```
+
+The candidate database is synthetic, disposable, schema `1`, bounded to the
+newest 10,000 pulses, and isolated from the legacy `LatticeMemory` namespace.
+No migration, import/export, activation, default entry, deployment, or cutover
+API exists.
+
+Lifecycle mutation is serialized: accepted writes, clear, and close cannot
+overtake one another. Close moves the medium out of ready state before waiting,
+preserves concurrent commits for a later restart, and reopens through a fresh
+start promise. The injected IndexedDB repository closes late success after a
+blocked open, closes on schema-inspection failure, and releases an established
+connection on `versionchange`. Browser evidence proves database deletion and
+fails when cleanup is blocked rather than emitting an assumed-success receipt.
+
 ### Implemented non-default Phase 4 Chat slice
 
 **VERIFIED:** the accepted `LW-P4-001` packet has one isolated vertical slice

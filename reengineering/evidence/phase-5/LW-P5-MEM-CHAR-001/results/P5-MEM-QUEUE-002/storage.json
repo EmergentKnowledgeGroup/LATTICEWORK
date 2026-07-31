@@ -1,0 +1,19 @@
+{
+    "schema":  "latticework.phase5.storage.v1",
+    "atom_id":  "P5-MEM-QUEUE-002",
+    "group_id":  "pre-ready-queue-bound-and-drain",
+    "database_names":  [
+                           "LatticeMemory"
+                       ],
+    "lattice_memory":  {
+                           "present":  true,
+                           "version":  1,
+                           "stores":  [
+                                          "pulses"
+                                      ],
+                           "pulse_count":  102
+                       },
+    "local_storage_key_count":  0,
+    "session_storage_key_count":  0,
+    "cache_name_count":  0
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "latticework.phase5-lattice-memory-contract.v1",
+  "baseline": {
+    "path": "docs/modules/lattice-memory.js",
+    "sha256": "6c9a9f0ef9d422698ffaa5d695257c1ead003be6226b32e1cf79e59030006917",
+    "hash_basis": "utf8-lf-normalized-git-blob",
+    "database": "LatticeMemory",
+    "version": 1,
+    "store": "pulses"
+  },
+  "runner": { "channel": "chrome", "workers": 1, "retries": 0, "bind": "127.0.0.1", "port": 0 },
+  "groups": [
+    { "id": "schema-and-heartbeat", "atoms": ["P5-MEM-SCHEMA-001", "P5-MEM-HEARTBEAT-001"] },
+    { "id": "commit-copy-timestamp-fanout-persistence", "atoms": ["P5-MEM-COMMIT-001", "P5-MEM-COMMIT-002", "P5-MEM-COMMIT-003", "P5-MEM-COMMIT-004", "P5-MEM-COMMIT-005", "P5-MEM-COMMIT-006", "P5-MEM-COMMIT-007", "P5-MEM-COMMIT-008"] },
+    { "id": "filter-and-unsubscribe-matrix", "atoms": ["P5-MEM-FILTER-001", "P5-MEM-FILTER-002", "P5-MEM-FILTER-003", "P5-MEM-FILTER-004", "P5-MEM-FILTER-005", "P5-MEM-FILTER-006", "P5-MEM-FILTER-007", "P5-MEM-FILTER-008", "P5-MEM-FILTER-009"] },
+    { "id": "shape-and-content-leak-rejection", "atoms": ["P5-MEM-VALID-001", "P5-MEM-VALID-002", "P5-MEM-VALID-003", "P5-MEM-VALID-004", "P5-MEM-VALID-005", "P5-MEM-VALID-006", "P5-MEM-VALID-007", "P5-MEM-VALID-008", "P5-MEM-VALID-009", "P5-MEM-VALID-010", "P5-MEM-VALID-011", "P5-MEM-VALID-012", "P5-MEM-VALID-013", "P5-MEM-VALID-014", "P5-MEM-VALID-015", "P5-MEM-VALID-016"] },
+    { "id": "quiet-room-fail-closed-matrix", "atoms": ["P5-MEM-QUIET-001", "P5-MEM-QUIET-002", "P5-MEM-QUIET-003", "P5-MEM-QUIET-004", "P5-MEM-QUIET-005", "P5-MEM-QUIET-006", "P5-MEM-QUIET-007"] },
+    { "id": "same-millisecond-burst", "atoms": ["P5-MEM-BURST-001"] },
+    { "id": "pre-ready-queue-bound-and-drain", "atoms": ["P5-MEM-QUEUE-001", "P5-MEM-QUEUE-002"] },
+    { "id": "ten-thousand-record-retention", "atoms": ["P5-MEM-BOUND-001"] },
+    { "id": "reload-order-filter-and-heartbeat", "atoms": ["P5-MEM-RELOAD-001", "P5-MEM-RELOAD-002"] },
+    { "id": "indexeddb-fail-quiet", "atoms": ["P5-MEM-FAIL-001", "P5-MEM-FAIL-002", "P5-MEM-FAIL-003", "P5-MEM-FAIL-004", "P5-MEM-FAIL-005", "P5-MEM-FAIL-006"] },
+    { "id": "public-internal-api-and-loader", "atoms": ["P5-MEM-API-001", "P5-MEM-API-002", "P5-MEM-API-003", "P5-MEM-API-004", "P5-MEM-API-005", "P5-MEM-API-006", "P5-MEM-API-007", "P5-MEM-API-008", "P5-MEM-API-009", "P5-MEM-API-010", "P5-MEM-API-011", "P5-MEM-API-012", "P5-MEM-API-013"] },
+    { "id": "storage-and-network-isolation", "atoms": ["P5-MEM-ISO-001"] },
+    { "id": "cleanup-and-content-free-evidence", "atoms": ["P5-MEM-CLEAN-001"] }
+  ],
+  "accepted_divergence_candidates": [
+    "P5-MEM-COMMIT-006", "P5-MEM-COMMIT-007", "P5-MEM-COMMIT-008", "P5-MEM-FILTER-008", "P5-MEM-FILTER-009", "P5-MEM-VALID-011", "P5-MEM-VALID-012", "P5-MEM-VALID-013", "P5-MEM-VALID-014", "P5-MEM-VALID-015", "P5-MEM-VALID-016", "P5-MEM-QUIET-006", "P5-MEM-QUIET-007", "P5-MEM-FAIL-006", "P5-MEM-API-010", "P5-MEM-API-013"
+  ],
+  "evidence": { "content_free": true, "screenshots": false, "attachments_per_atom": ["scenario-result.json", "network.json", "storage.json"] }
+}

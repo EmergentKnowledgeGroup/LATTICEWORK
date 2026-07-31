@@ -8,15 +8,15 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 4 SYNTHETIC SLICE MERGED / VERIFIED`
+`PHASE 5 LATTICE MEMORY REVIEW-FIX VERIFIED — PR MERGE READY`
 
 ## Current milestone
 
-`M1/M3 boundary — non-default synthetic primary Chat vertical slice`
+`M3 — bounded LatticeMemory corrected candidate verification`
 
 ## Current target
 
-`Phase 5 decision and preflight planning — no Phase 5 implementation authorized`
+`Phase 5 LatticeMemory corrected candidate PR merge and post-merge verification`
 
 ## Upstream baseline
 
@@ -24,8 +24,9 @@ LATTICEWORK
 
 ## Last verified commit
 
-`1b7e1d10456e0a1e9aaa91df25db17e236bbea3e` (PR #5 merge containing the
-verified Phase 4 candidate `e65ca81940d50eabd5bb72a403deab3bf37bea93`)
+`04355c8d2d4cd756f234358f21036f9fdb680a42` (Phase 5 package-only
+LatticeMemory candidate independently reproduced against the immutable
+baseline)
 
 The verified Phase 3 candidate
 `d746b96225a3eaf59a5b5937e3f531e2cad280ef` is contained in the merged
@@ -64,9 +65,36 @@ claim. Canonical verification passes 187/187 repository controls, deterministic
 build, audit, SBOM, supply-chain, and hygiene gates. Independent QA reproduced
 the complete gate from a new detached worktree on port 4294 and returned GREEN.
 
+**VERIFIED:** the exact LatticeMemory characterization packet executed all 69
+locked atoms in 13 single-worker Chrome groups with zero retry. The promoted
+bundle contains 207 content-free receipts, 53 `MATCH` dispositions, 16
+`ACCEPTED_DIVERGENCE_CANDIDATE` dispositions, complete listener, port,
+profile, and run-root cleanup, and zero external egress or private-sentinel
+leakage. Repository controls pass 230/230, the canonical evidence validator is
+valid, and an independent clean detached worktree reproduced the result. This
+grants no candidate implementation, candidate storage, real-data migration,
+activation, deployment, or cutover authority.
+
+**MEASURED:** the corrected `@latticework/lattice-memory` candidate is
+implemented as an unregistered package with an injected repository and
+QuietRoom seam. It preserves all 53 accepted matches and applies all 16
+accepted corrections. The native Chrome harness passes 4/4 scenarios,
+including exact schema/reload, immutable snapshots, code-only diagnostics,
+fail-closed QuietRoom behavior, 100-entry pre-ready queue, same-millisecond
+burst preservation, newest-10,000 retention, open failure, and complete
+database/profile/run-root cleanup. The consolidated review correction also
+serializes clear/close lifecycle work, closes failed or version-changed
+IndexedDB connections, proves rather than assumes cleanup, binds every evidence
+artifact and command to its hash/identity, and rejects false-green package
+receipts. Strict workspace typecheck, 70/70 focused controls, 295/295 repository
+controls, Phase 3/4 regression gates, deterministic
+package inventory, audit, SBOM, scope, and hygiene are green. Independent
+clean-worktree review reproduced all 13 gates with zero findings, so the
+canonical evidence is promoted GREEN.
+
 ## Last verified date
 
-`2026-07-31 05:15 UTC`
+`2026-07-31 09:15 UTC`
 
 ## Locked constraints
 
@@ -95,6 +123,11 @@ the complete gate from a new detached worktree on port 4294 and returned GREEN.
 | `LW-P4-RETEST-001` | Bounded amended characterization retests | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P4-RETEST-001.md` |
 | `LW-P4-IMPL-PREFLIGHT-001` | Exact bounded implementation packet and range lock | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md` |
 | `LW-P4-001` | Non-default synthetic primary Chat vertical slice | Codex root controller | `main` | `COMPLETED — MERGED / VERIFIED` | `reengineering/evidence/phase-4/LW-P4-001/` |
+| `LW-P5-CTRL-001` | Phase 4 closure and fail-closed Phase 5 active scope | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P5-CTRL-001.md` |
+| `LW-P5-MEM-PREFLIGHT-001` | Exact synthetic LatticeMemory characterization lock | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P5-MEM-PREFLIGHT-001.md` |
+| `LW-P5-MEM-CHAR-001` | Immutable LatticeMemory browser characterization | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P5-MEM-CHAR-001.md` |
+| `LW-P5-MEM-IMPL-PREFLIGHT-001` | Corrected package-only LatticeMemory implementation lock | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P5-MEM-IMPL-PREFLIGHT-001.md` |
+| `LW-P5-MEM-001` | Corrected package-only synthetic LatticeMemory candidate | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — GREEN` | `reengineering/evidence/phase-5/LW-P5-MEM-001/` |
 
 ## Completed in current milestone
 
@@ -259,8 +292,10 @@ the complete gate from a new detached worktree on port 4294 and returned GREEN.
 - Documentation accuracy improvements.
 - Reproducible measurement tooling.
 - Documentation and evidence corrections that do not change product semantics.
-- Prepare a Phase 5 decision/preflight packet and characterization plan.
-- Do not implement Phase 5 behavior until its exact work packet is accepted.
+- Finish the already-open bounded Phase 5 PR after the single CodeRabbit
+  command and consolidated independent review-fix cycle.
+- Do not register the package in an application, read legacy or real data, or
+  authorize activation, deployment, or cutover.
 
 ## Human decision required
 
@@ -278,19 +313,19 @@ the complete gate from a new detached worktree on port 4294 and returned GREEN.
 
 ## Next handoff
 
-**Next action:** claim a narrow Phase 5 decision/preflight work unit, map the
-first preserved feature boundary, and obtain an accepted implementation packet
-before changing runtime behavior.
+**Next action:** push the exact independently verified candidate and canonical
+evidence to PR #6, reconcile automatic checks without another CodeRabbit review
+command, merge, then record post-merge verification on `main`.
 
-**Read first:** `docs/agents/handoffs/LW-P4-001.md`,
+**Read first:** `docs/agents/handoffs/LW-P5-MEM-001.md`,
 `reengineering/EXECUTION_CHECKLIST.md`, and `reengineering/BLOCKERBOARD.md`.
 
 **Do not touch:** stored-data/provider/security semantics, default routes,
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** the next accepted packet names one bounded Phase 5
-feature, preserves all unresolved compatibility obligations, and grants no
-real-data, provider, activation, deployment, or cutover authority by accident.
+**Success condition:** the independently reproduced candidate retains the
+53/16 behavior split, all gates stay green, and the final PR contains no
+runtime registration or real-data/provider/deployment authority.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`

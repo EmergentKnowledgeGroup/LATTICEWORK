@@ -1,0 +1,11 @@
+{
+    "schema":  "latticework.phase5.atomic-result.v1",
+    "atom_id":  "P5-MEM-FILTER-009",
+    "group_id":  "filter-and-unsubscribe-matrix",
+    "status":  "PASS",
+    "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+    "observed":  {
+                     "matched":  true,
+                     "boolean_count":  9
+                 }
+}

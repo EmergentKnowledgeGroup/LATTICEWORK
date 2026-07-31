@@ -1,0 +1,104 @@
+
+> latticework@0.0.0 p5:test
+> npm run test --workspace @latticework/lattice-memory && node --test tests/reengineering/phase5-active-scope.test.mjs tests/reengineering/phase5-lattice-memory-implementation-packet.test.mjs tests/reengineering/phase5-lattice-memory-implementation-scope.test.mjs tests/reengineering/phase5-lattice-memory-implementation-evidence.test.mjs
+
+
+> @latticework/lattice-memory@0.0.0 test
+> node --experimental-strip-types --test src/*.test.mjs
+
+✔ closes a late successful IndexedDB connection after an open-blocked rejection (0.9719ms)
+✔ closes the IndexedDB connection when post-open schema inspection throws (0.1833ms)
+✔ closes and releases an established connection on versionchange (0.2316ms)
+✔ commits deep immutable snapshots and keeps subscribers isolated (3.4754ms)
+✔ rejects invalid timestamps, shapes, refs, and filters before publication (0.8597ms)
+✔ permits an absent quiet room and fails closed for malformed or active state (0.1922ms)
+✔ bounds the pre-ready queue and emits the heartbeat only after open (0.9474ms)
+✔ reports only code and operation diagnostics for rejection and subscriber failures (0.5279ms)
+✔ serializes clear after already accepted writes so cleared pulses cannot resurrect (0.2088ms)
+✔ close stops ready acceptance, preserves concurrent commits for restart, and reopens cleanly (0.2843ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 108.3276
+✔ canonical Phase 5 active scope accepts the current control packet (345.7619ms)
+✔ Phase 5 allowlist is exact and fail-closed (0.6325ms)
+✔ Phase 5 active scope sees committed, staged, unstaged, untracked, and force-added ignored paths (819.631ms)
+✔ Phase 5 active scope retains committed add-then-delete paths (922.6853ms)
+✔ canonical Phase 5 active-scope CLI cannot disable or rebase validation (84.1146ms)
+✔ accepts a complete canonical hash-bound Phase 5 bundle (44.406ms)
+✔ rejects tampered artifact bytes (34.7838ms)
+✔ rejects manifest omissions and additions (30.18ms)
+✔ rejects forged gate commands after rehashing (31.6656ms)
+✔ rejects empty or nonabsolute gate cwd (25.8591ms)
+✔ rejects repository_artifact false (23.5649ms)
+✔ rejects independent review without its required schema (27.7689ms)
+✔ rejects content-bearing browser receipt fields (27.4609ms)
+✔ rejects a symlink or reparse point when platform permits (25.0456ms)
+✔ accepted implementation packet keeps every authority boundary disabled (6.3395ms)
+✔ packet pins the exact synthetic disposable descriptor and 53/16 behavior split (1.7199ms)
+✔ packet owns only package, test, evidence, and documentation surfaces (1.4059ms)
+✔ deterministic package gate fails each pack command and validates package inventory (1.5004ms)
+✔ canonical evidence reruns exclude only their exact generated bundle from the clean-worktree gate (1.1301ms)
+✔ canonical packet is valid and pins the requested implementation base (565.867ms)
+✔ ownership is package-only and protected paths win independently (0.3953ms)
+✔ rejects unowned and protected paths even with a valid packet (0.8688ms)
+✔ rejects packet drift: implementation gate (3.051ms)
+✔ rejects packet drift: descriptor (1.9421ms)
+✔ rejects packet drift: schema (2.7363ms)
+✔ rejects packet drift: store (1.5809ms)
+✔ rejects packet drift: snapshot (1.5323ms)
+✔ rejects packet drift: timestamp (1.8571ms)
+✔ rejects packet drift: filter (1.9974ms)
+✔ rejects packet drift: quiet (1.441ms)
+✔ rejects packet drift: diagnostics (1.5922ms)
+✔ rejects packet drift: match preservation (1.233ms)
+✔ rejects packet drift: divergence correction (1.6226ms)
+✔ rejects packet drift: descriptor sensitivity (1.86ms)
+✔ rejects packet drift: descriptor retention (1.3713ms)
+✔ rejects packet drift: descriptor source (1.6411ms)
+✔ rejects packet drift: descriptor key path (1.8295ms)
+✔ rejects packet drift: descriptor auto increment (2.0515ms)
+✔ rejects packet drift: descriptor codec (1.9354ms)
+✔ rejects packet drift: descriptor lifecycle (2.3795ms)
+✔ rejects packet drift: harness bind (1.5364ms)
+✔ rejects packet drift: harness egress (1.5447ms)
+✔ rejects packet drift: future ownership (0.9281ms)
+✔ rejects false authority flag drift: real_data_authorized (1.271ms)
+✔ rejects false authority flag drift: real_credentials_authorized (1.2495ms)
+✔ rejects false authority flag drift: real_provider_traffic_authorized (1.6597ms)
+✔ rejects false authority flag drift: migration_authorized (1.2933ms)
+✔ rejects false authority flag drift: import_export_authorized (1.6056ms)
+✔ rejects false authority flag drift: legacy_mutation_authorized (1.0581ms)
+✔ rejects false authority flag drift: activation_authorized (1.4568ms)
+✔ rejects false authority flag drift: deployment_authorized (1.2777ms)
+✔ rejects false authority flag drift: cutover_authorized (1.3682ms)
+✔ rejects false authority flag drift: default_entry_authorized (1.2783ms)
+✔ rejects false authority flag drift: shared_ui_authorized (1.5409ms)
+✔ rejects false authority flag drift: service_worker_authorized (1.2255ms)
+✔ rejects false authority flag drift: listener_authorized (1.6774ms)
+✔ rejects false authority flag drift: worker_authorized (1.6571ms)
+✔ rejects false authority flag drift: peer_lan_proxy_telegram_authorized (1.1428ms)
+✔ rejects false authority flag drift: browser_global_authorized (0.9642ms)
+✔ rejects false authority flag drift: routes_authorized (1.222ms)
+✔ rejects false authority flag drift: ui_authorized (1.5686ms)
+✔ candidate storage cannot become real or nondisposable (2.1199ms)
+✔ rejects forbidden source primitive: browser-global (1.1826ms)
+✔ rejects forbidden source primitive: network (1.0557ms)
+✔ rejects forbidden source primitive: listener (1.731ms)
+✔ rejects forbidden source primitive: credential (1.1946ms)
+✔ rejects forbidden source primitive: legacy-migration-ui (1.6488ms)
+✔ permits normal module syntax and IndexedDB only in the isolated repository (1.7068ms)
+✔ browser harness may name denied realtime APIs but cannot listen or embed external URLs (3.2507ms)
+✔ CLI rejects every override (209.8706ms)
+ℹ tests 70
+ℹ suites 0
+ℹ pass 70
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2253.987
