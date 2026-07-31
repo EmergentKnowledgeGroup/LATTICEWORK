@@ -69,6 +69,7 @@ export class ChatController {
   readonly #now: () => string;
   readonly #onEvent: ((event: ChatEvent) => void) | undefined;
   readonly #conversations = new Map<string, ChatConversationState>();
+  readonly #mutationTails = new Map<string, Promise<void>>();
 
   constructor(options: ChatControllerOptions) {
     this.#repository = options.repository;
@@ -114,21 +115,46 @@ export class ChatController {
   }
 
   async #persistUser(active: ActiveOperation): Promise<void> {
-    const prior = this.#conversations.get(active.input.conversationId)
-      ?? await this.#repository.read(active.input.conversationId)
-      ?? { conversationId: active.input.conversationId, messages: [] };
-    active.state = {
-      ...prior,
-      messages: [...prior.messages, {
-        id: active.input.userMessageId,
-        operationId: active.input.operationId,
-        role: "user",
-        content: active.input.content,
-        createdAt: this.#now(),
-      }],
-    };
-    await this.#repository.write(active.state);
-    this.#conversations.set(active.input.conversationId, active.state);
+    active.state = await this.#mutateConversation(
+      active.input.conversationId,
+      (prior) => ({
+        ...prior,
+        messages: [...prior.messages, {
+          id: active.input.userMessageId,
+          operationId: active.input.operationId,
+          role: "user",
+          content: active.input.content,
+          createdAt: this.#now(),
+        }],
+      }),
+    );
+  }
+
+  async #mutateConversation(
+    conversationId: string,
+    update: (current: ChatConversationState) => ChatConversationState,
+  ): Promise<ChatConversationState> {
+    const priorMutation = this.#mutationTails.get(conversationId) ?? Promise.resolve();
+    const mutation = priorMutation.then(async () => {
+      const current = this.#conversations.get(conversationId)
+        ?? await this.#repository.read(conversationId)
+        ?? { conversationId, messages: [] };
+      const next = update(current);
+      await this.#repository.write(next);
+      this.#conversations.set(conversationId, next);
+      return next;
+    });
+    const settled = mutation.then(
+      () => undefined,
+      () => undefined,
+    );
+    this.#mutationTails.set(conversationId, settled);
+    void settled.then(() => {
+      if (this.#mutationTails.get(conversationId) === settled) {
+        this.#mutationTails.delete(conversationId);
+      }
+    });
+    return mutation;
   }
 
   async #run(active: ActiveOperation): Promise<void> {
@@ -217,33 +243,66 @@ export class ChatController {
     const completedAt = this.#now();
     const provenance = this.#provenance(active, terminal, providerEvent?.provenance, completedAt);
     const metadata: ChatTerminalMetadata = error === undefined
-      ? { operationId: active.input.operationId, terminal, provenance }
-      : { operationId: active.input.operationId, terminal, error, provenance };
+      ? {
+        operationId: active.input.operationId,
+        terminal,
+        persistence: "saved",
+        provenance,
+      }
+      : {
+        operationId: active.input.operationId,
+        terminal,
+        persistence: "saved",
+        error,
+        provenance,
+      };
     active.terminal = (async () => {
-      await active.userPersisted;
-      const terminalMessage = terminal === "completed"
-        ? {
-          id: `${active.input.operationId}:assistant`,
+      try {
+        await active.userPersisted;
+        const terminalMessage = terminal === "completed"
+          ? {
+            id: `${active.input.operationId}:assistant`,
+            operationId: active.input.operationId,
+            role: "assistant" as const,
+            content: active.draft,
+            createdAt: completedAt,
+            completedAt,
+            finishReason: providerEvent?.type === "completed" ? providerEvent.finishReason : "stop",
+          }
+          : {
+            id: `${active.input.operationId}:terminal`,
+            operationId: active.input.operationId,
+            role: "terminal" as const,
+            createdAt: completedAt,
+            metadata,
+          };
+        active.state = await this.#mutateConversation(
+          active.input.conversationId,
+          (current) => ({
+            ...current,
+            messages: [...current.messages, terminalMessage],
+          }),
+        );
+        this.#onEvent?.({ type: "terminal", operationId: active.input.operationId, metadata });
+        active.resolveFinished(metadata);
+        return metadata;
+      } catch {
+        const failedAt = this.#now();
+        const persistenceFailure: ChatTerminalMetadata = {
           operationId: active.input.operationId,
-          role: "assistant" as const,
-          content: active.draft,
-          createdAt: completedAt,
-          completedAt,
-          finishReason: providerEvent?.type === "completed" ? providerEvent.finishReason : "stop",
-        }
-        : {
-          id: `${active.input.operationId}:terminal`,
-          operationId: active.input.operationId,
-          role: "terminal" as const,
-          createdAt: completedAt,
-          metadata,
+          terminal: "failed",
+          persistence: "not-saved",
+          error: safeError("internal"),
+          provenance: this.#provenance(active, "failed", undefined, failedAt),
         };
-      active.state = { ...active.state, messages: [...active.state.messages, terminalMessage] };
-      await this.#repository.write(active.state);
-      this.#conversations.set(active.input.conversationId, active.state);
-      this.#onEvent?.({ type: "terminal", operationId: active.input.operationId, metadata });
-      active.resolveFinished(metadata);
-      return metadata;
+        this.#onEvent?.({
+          type: "terminal",
+          operationId: active.input.operationId,
+          metadata: persistenceFailure,
+        });
+        active.resolveFinished(persistenceFailure);
+        return persistenceFailure;
+      }
     })();
     return active.terminal;
   }

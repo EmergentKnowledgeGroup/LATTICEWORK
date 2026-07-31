@@ -82,6 +82,17 @@ export function validatePhase4Amendment(root) {
     assert.equal(packet.application_listener, false, "application_listener must be false");
     assert.equal(packet.test_listener, true, "test_listener must be true");
     assert.equal(packet.test_listener_contract.synthetic_only, true, "packet test listener must be synthetic-only");
+    same(packet.browser_harness_listener, {
+      only_path: "tests/phase4/playwright.config.ts",
+      bind: "127.0.0.1",
+      port_source: "LATTICEWORK_P4_PORT",
+      canonical_port: 4194,
+      independent_port: 4294,
+      browser_channel: "chrome",
+      run_owned: true,
+      synthetic_ui_only: true,
+      external_egress: false,
+    }, "browser harness listener drifted");
     assert.equal(packet.entrypoint, "apps/web/p4.html");
     assert.equal(packet.entrypoint_default, false, "entrypoint_default must be false");
     assert.equal(packet.production_build_authorized, false);

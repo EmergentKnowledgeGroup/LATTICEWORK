@@ -33,6 +33,7 @@ export interface ChatAssistantMessage {
 export interface ChatTerminalMetadata {
   readonly operationId: string;
   readonly terminal: "completed" | "failed" | "cancelled";
+  readonly persistence: "saved" | "not-saved";
   readonly error?: ChatSafeError;
   readonly provenance: ChatTerminalProvenance;
 }

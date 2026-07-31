@@ -19,9 +19,12 @@ interface ProviderOption {
   readonly selection: ChatProviderSelection;
 }
 
-function displayStatus(terminal: ChatTerminalMetadata["terminal"]): string {
-  if (terminal === "completed") return "Completed · saved locally";
-  if (terminal === "cancelled") return "Cancelled · partial response discarded";
+function displayStatus(metadata: ChatTerminalMetadata): string {
+  if (metadata.persistence === "not-saved") {
+    return "Failed · candidate storage unavailable";
+  }
+  if (metadata.terminal === "completed") return "Completed · saved locally";
+  if (metadata.terminal === "cancelled") return "Cancelled · partial response discarded";
   return "Failed · safe metadata saved";
 }
 
@@ -88,7 +91,7 @@ export class P4ChatApp extends LitElement {
       return;
     }
     this.#lastTerminal = event.metadata;
-    this.statusText = displayStatus(event.metadata.terminal);
+    this.statusText = displayStatus(event.metadata);
     void this.#refreshConversation();
   }
 

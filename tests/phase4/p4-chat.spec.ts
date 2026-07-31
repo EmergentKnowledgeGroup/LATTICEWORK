@@ -1,9 +1,23 @@
 import { expect, test, type BrowserContext, type Page } from "@playwright/test";
-import { mkdtemp, rm } from "node:fs/promises";
+import { mkdir, mkdtemp, rm } from "node:fs/promises";
 import { existsSync } from "node:fs";
-import { resolve } from "node:path";
+import { isAbsolute, relative, resolve } from "node:path";
 
-const runRoot = resolve(import.meta.dirname, "../../runtime/tmp/p4-browser-harness");
+const workspaceRoot = resolve(import.meta.dirname, "../..");
+
+function insideWorkspace(target: string, label: string): string {
+  const resolved = resolve(target);
+  const rel = relative(workspaceRoot, resolved).replaceAll("\\", "/");
+  if (rel.length === 0 || rel.startsWith("../") || isAbsolute(rel)) {
+    throw new Error(`${label} must stay inside the workspace.`);
+  }
+  return resolved;
+}
+
+const runRoot = insideWorkspace(
+  resolve(workspaceRoot, "runtime/tmp/p4-browser-harness"),
+  "Phase 4 browser profile root",
+);
 const syntheticPrompt = "P4_BROWSER_SYNTHETIC_PROMPT";
 const forbiddenDiagnostics = [syntheticPrompt, "P4_BROWSER_SYNTHETIC_RESPONSE"];
 
@@ -45,6 +59,7 @@ async function send(page: Page, provider: "mock-local" | "mock-cloud", prompt = 
 async function withDisposableProfile(
   callback: (page: Page, context: BrowserContext, boundary: Boundary, profile: string) => Promise<void>,
 ): Promise<void> {
+  await mkdir(runRoot, { recursive: true });
   const profile = await mkdtemp(resolve(runRoot, "profile-"));
   const browserType = test.info().project.use.browserName;
   if (browserType !== "chromium") throw new Error("Phase 4 harness is pinned to Chromium.");
@@ -64,6 +79,11 @@ async function withDisposableProfile(
     expect(existsSync(profile)).toBe(false);
   }
 }
+
+test.afterAll(async () => {
+  await rm(runRoot, { recursive: true, force: true });
+  expect(existsSync(runRoot)).toBe(false);
+});
 
 test("/p4.html is visibly synthetic and sends exactly through selected local and cloud mocks", async () => {
   await withDisposableProfile(async (page) => {

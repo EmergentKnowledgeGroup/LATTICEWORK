@@ -113,6 +113,7 @@ test("persists the synthetic user before dispatch and commits assistant content 
   assert.deepEqual(store.writes.at(-1).messages.map((message) => message.role), ["user", "assistant"]);
   assert.equal(store.writes.at(-1).messages[1].content, "partial answer");
   assert.equal(terminal.terminal, "completed");
+  assert.equal(terminal.persistence, "saved");
   assert.equal(calls[0].retry.maxAttempts, 1);
   assert.equal(calls[0].providerId, "mock-local");
 });
@@ -130,6 +131,7 @@ test("failed turns retain user and content-free terminal metadata with a sanitiz
   assert.deepEqual(saved.messages.map((message) => message.role), ["user", "terminal"]);
   assert.equal(saved.messages[1].metadata.error.code, "network");
   assert.doesNotMatch(JSON.stringify(saved.messages[1]), /synthetic user content|untrusted error|must not persist|mock:\/\/local/);
+  assert.equal(terminal.persistence, "saved");
   assert.equal(terminal.provenance.adapterId, "deterministic-local-mock");
   assert.equal(terminal.provenance.trustClass, "mock");
 });
@@ -160,6 +162,7 @@ test("cancel before dispatch persists the user and one cancellation terminal wit
 
   assert.equal(calls, 0);
   assert.equal(terminal.terminal, "cancelled");
+  assert.equal(terminal.persistence, "saved");
   assert.equal(terminal.provenance.cancellationScope, "transport-aborted");
   assert.deepEqual(writes.at(-1).messages.map((message) => message.role), ["user", "terminal"]);
 });
@@ -198,6 +201,7 @@ test("cancel after a delta aborts one controller, emits one terminal, and ignore
 
   assert.equal(signal.aborted, true);
   assert.equal(terminal.terminal, "cancelled");
+  assert.equal(terminal.persistence, "saved");
   assert.equal(events.filter((event) => event.type === "terminal").length, 1);
   assert.equal(events.filter((event) => event.type === "delta").length, 1);
   assert.deepEqual(store.writes.at(-1).messages.map((message) => message.role), ["user", "terminal"]);
@@ -246,6 +250,129 @@ test("sequential sends append both completed turns instead of overwriting the co
 
   assert.deepEqual(store.writes.at(-1).messages.map((message) => message.role), ["user", "assistant", "user", "assistant"]);
   assert.deepEqual(store.writes.at(-1).messages.map((message) => message.id), ["user-1", "operation-1:assistant", "user-2", "operation-2:assistant"]);
+});
+
+test("repository read failure settles as an unsaved failure without provider dispatch", async () => {
+  let calls = 0;
+  const controller = new ChatController({
+    repository: {
+      async read() { throw new Error("private read failure"); },
+      async write() { assert.fail("write must not run after read failure"); },
+    },
+    router: {
+      run() {
+        calls += 1;
+        return (async function* () {})();
+      },
+    },
+  });
+
+  const terminal = await controller.send(input()).finished;
+
+  assert.equal(calls, 0);
+  assert.equal(terminal.terminal, "failed");
+  assert.equal(terminal.persistence, "not-saved");
+  assert.equal(terminal.error.code, "internal");
+  assert.doesNotMatch(JSON.stringify(terminal), /private read failure/);
+});
+
+test("initial user write failure settles as an unsaved failure without provider dispatch", async () => {
+  let calls = 0;
+  const controller = new ChatController({
+    repository: {
+      async read() { return undefined; },
+      async write() { throw new Error("private initial write failure"); },
+    },
+    router: {
+      run() {
+        calls += 1;
+        return (async function* () {})();
+      },
+    },
+  });
+
+  const terminal = await controller.send(input()).finished;
+
+  assert.equal(calls, 0);
+  assert.equal(terminal.terminal, "failed");
+  assert.equal(terminal.persistence, "not-saved");
+  assert.doesNotMatch(JSON.stringify(terminal), /private initial write failure/);
+});
+
+test("terminal write failure settles as an unsaved failure after one provider dispatch", async () => {
+  let writes = 0;
+  let calls = 0;
+  let saved;
+  const controller = new ChatController({
+    repository: {
+      async read() { return saved; },
+      async write(next) {
+        writes += 1;
+        if (writes === 2) throw new Error("private terminal write failure");
+        saved = structuredClone(next);
+      },
+    },
+    router: scriptedRouter([completed()], {
+      push() { calls += 1; },
+    }),
+  });
+
+  const terminal = await controller.send(input()).finished;
+
+  assert.equal(calls, 1);
+  assert.equal(terminal.terminal, "failed");
+  assert.equal(terminal.persistence, "not-saved");
+  assert.deepEqual(saved.messages.map((message) => message.role), ["user"]);
+  assert.doesNotMatch(JSON.stringify(terminal), /private terminal write failure/);
+});
+
+test("overlapping sends to one conversation retain every user and assistant message", async () => {
+  const releases = new Map();
+  const store = repository();
+  const controller = new ChatController({
+    repository: store,
+    router: {
+      run(request) {
+        return (async function* () {
+          yield {
+            type: "started",
+            operationId: request.operationId,
+            attemptId: `${request.operationId}:attempt:1`,
+          };
+          await new Promise((resolve) => releases.set(request.operationId, resolve));
+          yield {
+            ...completed(),
+            provenance: {
+              ...completed().provenance,
+              operationId: request.operationId,
+              attemptId: `${request.operationId}:attempt:1`,
+            },
+          };
+        })();
+      },
+    },
+  });
+
+  const first = controller.send(input());
+  const second = controller.send(input({
+    operationId: "operation-2",
+    userMessageId: "user-2",
+    content: "second synthetic user content",
+  }));
+  await waitFor(() => releases.size === 2);
+  releases.get("operation-2")();
+  await second.finished;
+  releases.get("operation-1")();
+  await first.finished;
+
+  const messageIds = store.writes.at(-1).messages.map((message) => message.id);
+  assert.equal(messageIds.length, 4);
+  assert.deepEqual(new Set(messageIds), new Set([
+    "user-1",
+    "operation-1:assistant",
+    "user-2",
+    "operation-2:assistant",
+  ]));
 });
 
 test("creates one distinct AbortController signal per operation and never retries or falls back", async () => {

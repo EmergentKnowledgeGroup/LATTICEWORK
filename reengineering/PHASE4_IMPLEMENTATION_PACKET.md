@@ -96,8 +96,8 @@ Phase 3 package roots.
 ## Listener boundary
 
 Application and package source may not listen, fetch, open sockets, read ambient
-credentials, or contact a provider. The only listener is
-`tests/phase4/support/synthetic-stream-fixture.mjs`; it must:
+credentials, or contact a provider. The implementation-owned synthetic stream
+listener is `tests/phase4/support/synthetic-stream-fixture.mjs`; it must:
 
 - bind literal `127.0.0.1`;
 - request port `0` and record the OS-selected port;
@@ -105,6 +105,13 @@ credentials, or contact a provider. The only listener is
 - return generated synthetic fragments only;
 - perform no DNS, forwarding, proxying, or external egress; and
 - prove teardown and port release.
+
+The browser verifier may also start Vite as a run-owned exact-loopback test
+harness from `tests/phase4/playwright.config.ts`. Its port comes only from the
+validated `LATTICEWORK_P4_PORT` test-run setting (4194 canonical, 4294
+independent), it serves only the synthetic candidate web root, it performs no
+provider traffic, and Playwright owns its teardown. This is verification
+infrastructure, not an application listener or candidate activation.
 
 ## Verification gates
 
@@ -186,6 +193,17 @@ attempt to relabel a baseline divergence as `PASS`.
     "run_owned": true,
     "fixture_only": true,
     "synthetic_only": true,
+    "external_egress": false
+  },
+  "browser_harness_listener": {
+    "only_path": "tests/phase4/playwright.config.ts",
+    "bind": "127.0.0.1",
+    "port_source": "LATTICEWORK_P4_PORT",
+    "canonical_port": 4194,
+    "independent_port": 4294,
+    "browser_channel": "chrome",
+    "run_owned": true,
+    "synthetic_ui_only": true,
     "external_egress": false
   },
   "owned_exact_paths": [

@@ -139,6 +139,12 @@ for (const [name, from, to, expected] of [
     /test_listener_contract/u,
   ],
   [
+    "browser-harness-port",
+    '"canonical_port": 4194',
+    '"canonical_port": 8080',
+    /browser_harness_listener/u,
+  ],
+  [
     "real-provider",
     '"real_provider_traffic_authorized": false',
     '"real_provider_traffic_authorized": true',
@@ -334,6 +340,63 @@ test("CLI rejects base or scope overrides", () => {
   }
 });
 
+test("Playwright configuration honors the verifier-selected loopback port", () => {
+  const result = spawnSync(
+    process.execPath,
+    [
+      "--experimental-strip-types",
+      "--input-type=module",
+      "--eval",
+      [
+        "import config from './tests/phase4/playwright.config.ts';",
+        "process.stdout.write(String(config.webServer?.url));",
+      ].join(" "),
+    ],
+    {
+      cwd: ROOT,
+      encoding: "utf8",
+      windowsHide: true,
+      env: { ...process.env, LATTICEWORK_P4_PORT: "4294" },
+    },
+  );
+
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(result.stdout, "http://127.0.0.1:4294");
+});
+
+test("Playwright harness creates and removes its contained profile root", () => {
+  const source = fs.readFileSync(
+    path.join(ROOT, "tests/phase4/p4-chat.spec.ts"),
+    "utf8",
+  );
+
+  assert.match(source, /insideWorkspace\(/u);
+  assert.match(source, /await mkdir\(runRoot, \{ recursive: true \}\)/u);
+  assert.match(source, /test\.afterAll\(async \(\) =>/u);
+  assert.match(source, /await rm\(runRoot, \{ recursive: true, force: true \}\)/u);
+});
+
+test("Playwright configuration rejects an invalid verifier port", () => {
+  const result = spawnSync(
+    process.execPath,
+    [
+      "--experimental-strip-types",
+      "--input-type=module",
+      "--eval",
+      "await import('./tests/phase4/playwright.config.ts');",
+    ],
+    {
+      cwd: ROOT,
+      encoding: "utf8",
+      windowsHide: true,
+      env: { ...process.env, LATTICEWORK_P4_PORT: "0" },
+    },
+  );
+
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /must be an integer from 1024 through 65535/u);
+});
+
 test("Phase 4 verification runner pins the complete bounded evidence gate", () => {
   const source = fs.readFileSync(
     path.join(ROOT, "tools/reengineering/run-phase4-verification.ps1"),
@@ -357,4 +420,8 @@ test("Phase 4 verification runner pins the complete bounded evidence gate", () =
   assert.match(source, /application_listener = "none"/u);
   assert.match(source, /deployment = "none"/u);
   assert.match(source, /cutover = "none"/u);
+  assert.match(source, /\$browserReport\.suites/u);
+  assert.match(source, /\$browserStats\.expected -ne 6/u);
+  assert.match(source, /\$browserStats\.skipped -ne 1/u);
+  assert.doesNotMatch(source, /browser = \[ordered\]@\{\s*passed = 6/u);
 });

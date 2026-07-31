@@ -94,6 +94,7 @@ const PACKET_PATH = "reengineering/PHASE4_IMPLEMENTATION_PACKET.md";
 const PACKET_SCHEMA = "latticework.phase4-implementation-packet.v2";
 const TEST_LISTENER_PATH =
   "tests/phase4/support/synthetic-stream-fixture.mjs";
+const BROWSER_HARNESS_PATH = "tests/phase4/playwright.config.ts";
 
 function extractPacket(text) {
   for (const match of text.matchAll(/```json\s*([\s\S]*?)```/gu)) {
@@ -190,6 +191,21 @@ function assertExactPacket(packet) {
     "test_listener_contract drifted",
   );
   assert.deepEqual(
+    packet.browser_harness_listener,
+    {
+      only_path: BROWSER_HARNESS_PATH,
+      bind: "127.0.0.1",
+      port_source: "LATTICEWORK_P4_PORT",
+      canonical_port: 4194,
+      independent_port: 4294,
+      browser_channel: "chrome",
+      run_owned: true,
+      synthetic_ui_only: true,
+      external_egress: false,
+    },
+    "browser_harness_listener drifted",
+  );
+  assert.deepEqual(
     packet.owned_exact_paths,
     [...OWNED_EXACT_PATHS],
     "owned_exact_paths drifted",
@@ -248,8 +264,11 @@ function scanCandidateSources(root, activePaths, failures) {
       relativePath.startsWith("tests/phase4/");
     if (!isCandidateSource) continue;
     const text = fs.readFileSync(absolute, "utf8");
+    const policyText = relativePath === BROWSER_HARNESS_PATH
+      ? text.replaceAll("process.env.LATTICEWORK_P4_PORT", "")
+      : text;
     for (const [pattern, label] of FORBIDDEN_SOURCE_PATTERNS) {
-      if (pattern.test(text)) {
+      if (pattern.test(policyText)) {
         failures.push(`${relativePath}: forbidden ${label}`);
       }
     }

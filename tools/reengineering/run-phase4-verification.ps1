@@ -220,6 +220,37 @@ $browserEvidence = Join-Path $EvidenceRoot "browser"
 New-Item -ItemType Directory -Force -Path $browserEvidence | Out-Null
 Get-ChildItem -LiteralPath $BrowserOutput -Force |
     Copy-Item -Destination $browserEvidence -Recurse -Force
+$browserReport = Get-Content -LiteralPath (Join-Path $browserEvidence "results.json") -Raw |
+    ConvertFrom-Json
+$browserStats = $browserReport.stats
+$browserSpecCount = @(
+    $browserReport.suites | ForEach-Object { $_.specs }
+).Count
+$browserSkipAnnotations = @(
+    $browserReport.suites |
+        ForEach-Object { $_.specs } |
+        ForEach-Object { $_.tests } |
+        ForEach-Object { $_.results } |
+        ForEach-Object { $_.annotations } |
+        Where-Object { $_.type -eq "skip" }
+)
+if (
+    $browserSpecCount -ne 7 -or
+    $browserStats.expected -ne 6 -or
+    $browserStats.skipped -ne 1 -or
+    $browserStats.unexpected -ne 0 -or
+    $browserStats.flaky -ne 0 -or
+    $browserSkipAnnotations.Count -ne 1 -or
+    $browserSkipAnnotations[0].description -ne
+        "Candidate does not declare an offline contract."
+) {
+    throw "Phase 4 browser report does not match the accepted six-pass, one-explicit-offline-skip inventory."
+}
+$browserSummary = [ordered]@{
+    passed = [int]$browserStats.expected
+    skipped = [int]$browserStats.skipped
+    skipped_reason = [string]$browserSkipAnnotations[0].description
+}
 $gateReceipts["browser"] = "commands/browser/manifest.json"
 
 Invoke-EvidenceCommand -Id "$WorkId-phase3-boundary" -Directory "phase3-boundary" -Command @(
@@ -303,6 +334,7 @@ if ($IndependentReview) {
         implementation_base_commit = $ImplementationBase
         candidate_sha = $CandidateSha
         repository_controls = $controls
+        browser = $browserSummary
         gates = $gateReceipts
     }
     [System.IO.File]::WriteAllText(
@@ -334,11 +366,7 @@ $summary = [ordered]@{
         cutover = "none"
     }
     repository_controls = $controls
-    browser = [ordered]@{
-        passed = 6
-        skipped = 1
-        skipped_reason = "Candidate does not declare offline support; no service worker is authorized in this packet."
-    }
+    browser = $browserSummary
     gates = $gateReceipts
 }
 [System.IO.File]::WriteAllText(
