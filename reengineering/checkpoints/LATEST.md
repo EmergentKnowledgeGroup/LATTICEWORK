@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-31T05:15:52Z`
+Updated: `2026-07-31T05:47:22Z`
 
 ## CURRENT
 
-Track: `LW_P4_IMPLEMENTATION WORK`
-Step: `phase4-post-merge-green`
-Note: PR #5 merged the canonically and independently verified Phase 4 synthetic Chat slice after one CodeRabbit review and one consolidated fix pass; post-merge main verification is GREEN.
-Branch: `main`
-Head: `1b7e1d10456e0a1e9aaa91df25db17e236bbea3e`
-Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize and freeze one preserved feature boundary before proposing implementation.`
+Track: `LW_P5_LATTICE_MEMORY WORK`
+Step: `phase5-scope-control-green`
+Note: Phase 4 general and implementation scope are closed at the merged terminal; the exact Phase 5 active validator is GREEN after one independent review/fix cycle.
+Branch: `reengineering/p5-lattice-memory`
+Head: `80f5e0bc29ce23296a024849a3464d3e17d25bea`
+Next command: `Commit LW-P5-CTRL-001, then claim and freeze the synthetic-only LatticeMemory characterization packet.`
 
 ## LW_M0_BASELINE WORK
 
@@ -408,3 +408,29 @@ Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize
 ### Blockers
 
 - No open blocker prevents the exact bounded `LW-P4-001` implementation.
+
+## LW_P5_LATTICE_MEMORY WORK
+
+Step: `phase5-scope-control-green`
+Note: Phase 4 general and implementation scope are closed at the merged terminal; the exact Phase 5 active validator is GREEN after one independent review/fix cycle.
+Branch: `reengineering/p5-lattice-memory`
+Head: `80f5e0bc29ce23296a024849a3464d3e17d25bea`
+Next command: `Commit LW-P5-CTRL-001, then claim and freeze the synthetic-only LatticeMemory characterization packet.`
+
+### Validations
+
+- **VERIFIED** — Phase 4 PR #5 is merged and post-merge `main` is GREEN.
+- **OBSERVED** — the Phase 4 active validator still scanned through current `HEAD`, so later Phase 5 work would be falsely classified as Phase 4.
+- **OBSERVED** — `docs/modules/lattice-memory.js` has one finite pulse-medium API, one already-observed database/store, no provider, no credential, and no network authority.
+- **OBSERVED** — Core, other memory systems, Question Corner, Workshop, import/export, and sync cross broader data, security, provider, or network boundaries.
+- **OBSERVED** — no Phase 5 runtime implementation or candidate storage exists at phase start.
+- **OBSERVED** — real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.
+- **VERIFIED** — focused scope controls passed 46/46 and full repository controls passed 193/193 with zero skip.
+- **VERIFIED** — Phase 4 general and implementation validators are closed at merge `1b7e1d10456e0a1e9aaa91df25db17e236bbea3e`.
+- **VERIFIED** — the Phase 5 active validator covers committed, staged, unauthorized unstaged, untracked, force-added ignored, and add-then-delete paths.
+- **VERIFIED** — independent read-only guardrail review is GREEN after one bounded correction cycle.
+
+### Blockers
+
+- `LW-BLK-005` remains open for real-data migration; only synthetic fixtures and candidate namespaces are safe.
+- Exact characterization and implementation authority must be machine-locked before candidate code.

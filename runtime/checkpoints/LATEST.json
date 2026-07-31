@@ -1,8 +1,8 @@
 {
   "schema": "latticework.context_checkpoint.tracks.v1",
-  "captured_at": "2026-07-31T05:15:52Z",
+  "captured_at": "2026-07-31T05:47:22Z",
   "repo_root": "Z:\\LATTICEWORK",
-  "current_track": "LW_P4_IMPLEMENTATION WORK",
+  "current_track": "LW_P5_LATTICE_MEMORY WORK",
   "tracks": {
     "LW_M0_BASELINE WORK": {
       "track": "LW_M0_BASELINE WORK",
@@ -752,7 +752,46 @@
       "blockers": [],
       "updated_at": "2026-07-31T05:15:52Z",
       "captured_at": "2026-07-31T05:15:52Z"
+    },
+    "LW_P5_LATTICE_MEMORY WORK": {
+      "track": "LW_P5_LATTICE_MEMORY WORK",
+      "step": "phase5-scope-control-green",
+      "note": "Phase 4 general and implementation scope are closed at the merged terminal; the exact Phase 5 active validator is GREEN after one independent review/fix cycle.",
+      "branch": "reengineering/p5-lattice-memory",
+      "head": "80f5e0bc29ce23296a024849a3464d3e17d25bea",
+      "next_cmd": "Commit LW-P5-CTRL-001, then claim and freeze the synthetic-only LatticeMemory characterization packet.",
+      "validations": [
+        "VERIFIED: Phase 4 PR #5 is merged and post-merge main is GREEN.",
+        "OBSERVED: the Phase 4 active validator still scanned through current HEAD, so later Phase 5 work would be falsely classified as Phase 4.",
+        "OBSERVED: docs/modules/lattice-memory.js has one finite pulse-medium API, one already-observed database/store, no provider, no credential, and no network authority.",
+        "OBSERVED: Core, other memory systems, Question Corner, Workshop, import/export, and sync cross broader data, security, provider, or network boundaries.",
+        "OBSERVED: no Phase 5 runtime implementation or candidate storage exists at phase start.",
+        "OBSERVED: real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.",
+        "VERIFIED: focused scope controls passed 46 of 46 and full repository controls passed 193 of 193 with zero skip.",
+        "VERIFIED: Phase 4 general and implementation validators are closed at merge 1b7e1d10456e0a1e9aaa91df25db17e236bbea3e.",
+        "VERIFIED: the Phase 5 active validator covers committed, staged, unauthorized unstaged, untracked, force-added ignored, and add-then-delete paths.",
+        "VERIFIED: independent read-only guardrail review is GREEN after one bounded correction cycle."
+      ],
+      "decisions": [
+        "Repair the Phase 4 to Phase 5 scope boundary before feature work.",
+        "Characterize and freeze only the deployed LatticeMemory pulse medium before implementation.",
+        "Keep legacy data authoritative and use synthetic fixtures plus deterministic mock providers only."
+      ],
+      "changed_paths": [
+        "docs/agents/claims/LW-P5-CTRL-001.md",
+        "Phase 5 scope controls, LatticeMemory characterization packet, evidence, living docs, and checkpoints"
+      ],
+      "blockers": [
+        {
+          "id": "LW-BLK-005",
+          "severity": "P1",
+          "status": "OPEN",
+          "summary": "Real-data migration remains forbidden; exact synthetic characterization and packet authority are required."
+        }
+      ],
+      "updated_at": "2026-07-31T05:47:22Z",
+      "captured_at": "2026-07-31T05:47:22Z"
     }
   },
-  "updated": "2026-07-31T05:15:52Z"
+  "updated": "2026-07-31T05:47:22Z"
 }
