@@ -44,7 +44,7 @@ test("accepts the canonical locked LatticeMemory characterization packet", () =>
 
 for (const [name, from, to, expected] of [
   ["acceptance", '"accepted": true', '"accepted": false', /false.*true|strict/i],
-  ["legacy-hash", "a65dba17a30ab8a657e52423ab8b1ac58d5597a83fe4ee823aecb83dc9588052", "b".repeat(64), /legacy_module|hash/i],
+  ["legacy-hash", "6c9a9f0ef9d422698ffaa5d695257c1ead003be6226b32e1cf79e59030006917", "b".repeat(64), /legacy_module|hash/i],
   ["schema", '"database": "LatticeMemory"', '"database": "Other"', /storage/i],
   ["record-bound", '"max_records": 10000', '"max_records": 0', /storage/i],
   ["queue-bound", '"max_pending": 100', '"max_pending": 1000', /storage/i],

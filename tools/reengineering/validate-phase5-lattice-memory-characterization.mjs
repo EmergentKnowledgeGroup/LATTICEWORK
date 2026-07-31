@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 const WORK_ID = "LW-P5-MEM-CHAR-001";
 const BASELINE_SHA = "e7585999fc1af2707f410ae87356cf2b52e08d9c";
 const MODULE_SHA256 =
-  "a65dba17a30ab8a657e52423ab8b1ac58d5597a83fe4ee823aecb83dc9588052";
+  "6c9a9f0ef9d422698ffaa5d695257c1ead003be6226b32e1cf79e59030006917";
 const DEFAULT_EVIDENCE =
   "reengineering/evidence/phase-5/LW-P5-MEM-CHAR-001";
 const SENTINELS = [
@@ -25,6 +25,13 @@ function sha256(filePath) {
   return crypto
     .createHash("sha256")
     .update(fs.readFileSync(filePath))
+    .digest("hex");
+}
+
+function normalizedTextSha256(filePath) {
+  return crypto
+    .createHash("sha256")
+    .update(fs.readFileSync(filePath, "utf8").replace(/\r\n/gu, "\n"), "utf8")
     .digest("hex");
 }
 
@@ -81,7 +88,7 @@ export function validatePhase5LatticeMemoryCharacterization({
     assert.equal(expectedAtoms.length, 69, "contract must contain 69 atoms");
     assert.equal(new Set(expectedAtoms).size, 69, "contract atoms must be unique");
     assert.equal(
-      sha256(path.join(root, "docs/modules/lattice-memory.js")),
+      normalizedTextSha256(path.join(root, "docs/modules/lattice-memory.js")),
       MODULE_SHA256,
       "immutable legacy module hash drifted",
     );

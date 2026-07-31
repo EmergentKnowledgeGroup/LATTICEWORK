@@ -9,7 +9,7 @@ const SCHEMA = "latticework.phase5-lattice-memory-preflight.v1";
 const BASE_COMMIT = "1108fe5d4a73315cbb71574361c4928b84e394da";
 const BASELINE_SHA = "e7585999fc1af2707f410ae87356cf2b52e08d9c";
 const MODULE_SHA256 =
-  "a65dba17a30ab8a657e52423ab8b1ac58d5597a83fe4ee823aecb83dc9588052";
+  "6c9a9f0ef9d422698ffaa5d695257c1ead003be6226b32e1cf79e59030006917";
 const ATOMIC_CONTRACTS = Object.freeze({
   "P5-MEM-SCHEMA-001": "open LatticeMemory version 1 with pulses keyPath _id and autoIncrement true",
   "P5-MEM-HEARTBEAT-001": "after readiness persist exactly one lattice-memory medium-online heartbeat for the session",
@@ -171,7 +171,8 @@ function extractLock(text) {
 }
 
 function sha256(filePath) {
-  return crypto.createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
+  const normalized = fs.readFileSync(filePath, "utf8").replace(/\r\n/gu, "\n");
+  return crypto.createHash("sha256").update(normalized, "utf8").digest("hex");
 }
 
 function assertExact(lock, root) {
@@ -186,6 +187,7 @@ function assertExact(lock, root) {
     path: "docs/modules/lattice-memory.js",
     git_blob: "c926100255048c39a7f0cd30f2a6945a7f53e8f6",
     sha256: MODULE_SHA256,
+    hash_basis: "utf8-lf-normalized-git-blob",
   }, "legacy_module identity drifted");
   assert.equal(
     sha256(path.join(root, lock.legacy_module.path)),

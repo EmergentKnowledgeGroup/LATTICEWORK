@@ -8,7 +8,7 @@ $Utf8NoBom = [System.Text.UTF8Encoding]::new($false)
 $RepositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $BaselineRoot = "Z:\LATTICEWORK_BASELINE_e7585999"
 $BaselineSha = "e7585999fc1af2707f410ae87356cf2b52e08d9c"
-$ModuleHash = "a65dba17a30ab8a657e52423ab8b1ac58d5597a83fe4ee823aecb83dc9588052"
+$ModuleHash = "6c9a9f0ef9d422698ffaa5d695257c1ead003be6226b32e1cf79e59030006917"
 $WorkId = "LW-P5-MEM-CHAR-001"
 $EvidenceRoot = Join-Path $RepositoryRoot "reengineering\evidence\phase-5\$WorkId"
 $RunId = "p5-memory-" + [DateTime]::UtcNow.ToString("yyyyMMddTHHmmssZ") + "-" + ([guid]::NewGuid().ToString("N").Substring(0, 8))
@@ -97,7 +97,12 @@ function New-Manifest {
 if (-not (Test-Path -LiteralPath $IndependentReviewPath -PathType Leaf)) {
     throw "Independent GREEN review receipt is required."
 }
-if ((Get-FileHash -LiteralPath (Join-Path $RepositoryRoot "docs\modules\lattice-memory.js") -Algorithm SHA256).Hash.ToLowerInvariant() -ne $ModuleHash) {
+$moduleText = [System.IO.File]::ReadAllText((Join-Path $RepositoryRoot "docs\modules\lattice-memory.js")).Replace("`r`n", "`n")
+$moduleBytes = [System.Text.Encoding]::UTF8.GetBytes($moduleText)
+$moduleHasher = [System.Security.Cryptography.SHA256]::Create()
+$observedModuleHash = ([System.BitConverter]::ToString($moduleHasher.ComputeHash($moduleBytes))).Replace("-", "").ToLowerInvariant()
+$moduleHasher.Dispose()
+if ($observedModuleHash -ne $ModuleHash) {
     throw "Repository legacy module hash drifted."
 }
 if ((& git -C $BaselineRoot rev-parse HEAD).Trim() -ne $BaselineSha -or (& git -C $BaselineRoot status --porcelain)) {

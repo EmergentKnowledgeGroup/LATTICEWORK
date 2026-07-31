@@ -2,7 +2,8 @@
   "schema": "latticework.phase5-lattice-memory-contract.v1",
   "baseline": {
     "path": "docs/modules/lattice-memory.js",
-    "sha256": "a65dba17a30ab8a657e52423ab8b1ac58d5597a83fe4ee823aecb83dc9588052",
+    "sha256": "6c9a9f0ef9d422698ffaa5d695257c1ead003be6226b32e1cf79e59030006917",
+    "hash_basis": "utf8-lf-normalized-git-blob",
     "database": "LatticeMemory",
     "version": 1,
     "store": "pulses"

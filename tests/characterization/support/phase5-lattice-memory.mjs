@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 export const repositoryRoot = path.resolve(here, "..", "..", "..");
-export const baselineSha256 = "a65dba17a30ab8a657e52423ab8b1ac58d5597a83fe4ee823aecb83dc9588052";
+export const baselineSha256 = "6c9a9f0ef9d422698ffaa5d695257c1ead003be6226b32e1cf79e59030006917";
 export const baselineCommit = "e7585999fc1af2707f410ae87356cf2b52e08d9c";
 export const privateSentinels = ["P5_PRIVATE_SUMMARY", "P5_PRIVATE_REF", "P5_PRIVATE_TOKEN", "P5_PRIVATE_ERROR"];
 
@@ -27,7 +27,11 @@ export async function startStaticBaselineFixture() {
   const observedCommit = execFileSync("git", ["-C", resolvedBaselineRoot, "rev-parse", "HEAD"], { encoding: "utf8" }).trim();
   const dirty = execFileSync("git", ["-C", resolvedBaselineRoot, "status", "--porcelain"], { encoding: "utf8" }).trim();
   if (observedCommit !== baselineCommit || dirty) throw new Error("Immutable baseline root must be clean and pinned to e7585999fc1af2707f410ae87356cf2b52e08d9c.");
-  const moduleBytes = await readFile(path.join(resolvedBaselineRoot, "docs", "modules", "lattice-memory.js"));
+  const moduleText = (await readFile(
+    path.join(resolvedBaselineRoot, "docs", "modules", "lattice-memory.js"),
+    "utf8",
+  )).replace(/\r\n/gu, "\n");
+  const moduleBytes = Buffer.from(moduleText, "utf8");
   const observedHash = createHash("sha256").update(moduleBytes).digest("hex");
   if (observedHash !== baselineSha256) {
     throw new Error(`Immutable lattice-memory.js hash mismatch: expected ${baselineSha256}, observed ${observedHash}`);

@@ -46,7 +46,8 @@ browser store or emits external traffic.
   "legacy_module": {
     "path": "docs/modules/lattice-memory.js",
     "git_blob": "c926100255048c39a7f0cd30f2a6945a7f53e8f6",
-    "sha256": "a65dba17a30ab8a657e52423ab8b1ac58d5597a83fe4ee823aecb83dc9588052"
+    "sha256": "6c9a9f0ef9d422698ffaa5d695257c1ead003be6226b32e1cf79e59030006917",
+    "hash_basis": "utf8-lf-normalized-git-blob"
   },
   "feature_id": "lattice-memory-pulse-medium",
   "storage": {
