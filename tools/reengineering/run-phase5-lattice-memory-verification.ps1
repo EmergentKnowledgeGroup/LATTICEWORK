@@ -128,8 +128,7 @@ if ($controls.tests -le 0 -or $controls.pass -ne $controls.tests -or $controls.f
 
 $pack1 = Join-Path $Scratch "pack-1.json"
 $pack2 = Join-Path $Scratch "pack-2.json"
-$gates.deterministic_build = Invoke-Receipt "deterministic-build" @(
-    "powershell.exe", "-NoProfile", "-Command",
+$DeterministicBuildScript = @(
     "`$env:npm_config_cache='$($env:npm_config_cache)'; " +
     "`$pack1Output = & npm pack --workspace @latticework/lattice-memory --dry-run --json; " +
     "if (`$LASTEXITCODE -ne 0) { exit `$LASTEXITCODE }; " +
@@ -143,6 +142,9 @@ $gates.deterministic_build = Invoke-Receipt "deterministic-build" @(
     "if (`$first[0].name -ne '@latticework/lattice-memory' -or `$second[0].name -ne '@latticework/lattice-memory') { exit 1 }; " +
     "if (-not (@(`$first[0].files.path) -contains 'src/index.ts') -or -not (@(`$second[0].files.path) -contains 'src/index.ts')) { exit 1 }; " +
     "if ((Get-FileHash '$pack1').Hash -ne (Get-FileHash '$pack2').Hash) { exit 1 }"
+) -join ""
+$gates.deterministic_build = Invoke-Receipt "deterministic-build" @(
+    "powershell.exe", "-NoProfile", "-Command", $DeterministicBuildScript
 )
 $gates.audit = Invoke-Receipt "audit" @("cmd.exe", "/d", "/s", "/c", "npm audit --workspaces --include-workspace-root --json") -AllowNonZero
 $audit = Get-Content (Join-Path $Evidence "commands\audit\stdout.log") -Raw | ConvertFrom-Json

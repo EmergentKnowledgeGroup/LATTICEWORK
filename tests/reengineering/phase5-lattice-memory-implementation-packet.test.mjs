@@ -84,6 +84,9 @@ test("deterministic package gate fails each pack command and validates package i
   assert.match(runner, /ConvertFrom-Json/u);
   assert.match(runner, /@latticework\/lattice-memory/u);
   assert.match(runner, /src\/index\.ts/u);
+  assert.match(runner, /\$DeterministicBuildScript = @\(/u);
+  assert.match(runner, /\) -join ""/u);
+  assert.match(runner, /"-Command", \$DeterministicBuildScript/u);
 });
 
 test("canonical evidence reruns exclude only their exact generated bundle from the clean-worktree gate", async () => {
