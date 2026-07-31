@@ -33,6 +33,22 @@ function Resolve-RepositoryDescendant {
     return $candidate
 }
 
+function Get-Sha256Hex {
+    param([string]$Path)
+
+    $stream = [System.IO.File]::OpenRead($Path)
+    try {
+        $sha256 = [System.Security.Cryptography.SHA256]::Create()
+        try {
+            return [System.BitConverter]::ToString($sha256.ComputeHash($stream)).Replace("-", "")
+        } finally {
+            $sha256.Dispose()
+        }
+    } finally {
+        $stream.Dispose()
+    }
+}
+
 function Remove-ExactDirectory {
     param([string]$Path, [string]$ExpectedRelative, [string]$Label)
 
@@ -165,8 +181,8 @@ Invoke-EvidenceCommand -Id "$WorkId-lockfile-replay" -Directory "lockfile-replay
     "cmd.exe", "/d", "/s", "/c", "npm install --package-lock-only --ignore-scripts"
 )
 if (
-    (Get-FileHash (Join-Path $RepositoryRoot "package-lock.json") -Algorithm SHA256).Hash -ne
-    (Get-FileHash (Join-Path $replay "package-lock.json") -Algorithm SHA256).Hash
+    (Get-Sha256Hex (Join-Path $RepositoryRoot "package-lock.json")) -ne
+    (Get-Sha256Hex (Join-Path $replay "package-lock.json"))
 ) {
     throw "Isolated lockfile replay did not reproduce package-lock.json."
 }
