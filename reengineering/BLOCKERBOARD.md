@@ -54,3 +54,9 @@ This closes only the synthetic legacy-characterization gate. `LW-BLK-005`
 remains open because no real stored record was read, migrated, round-tripped,
 or rolled back, and characterization grants no candidate implementation or
 candidate-storage authority.
+
+`LW-P5-MEM-IMPL-PREFLIGHT-001` is accepted and independently GREEN. It
+authorizes only the exact package-only corrected candidate and disposable
+synthetic `latticework::pulse-medium` namespace. This does not close
+`LW-BLK-005`: legacy remains authoritative and no real record, migration,
+import/export, activation, deployment, or cutover is authorized.

@@ -16,7 +16,7 @@ LATTICEWORK
 
 ## Current target
 
-`Phase 5 LatticeMemory implementation preflight — no candidate implementation authorized`
+`Phase 5 LatticeMemory corrected candidate implementation — package-only and synthetic-only`
 
 ## Upstream baseline
 
@@ -77,7 +77,7 @@ activation, deployment, or cutover authority.
 
 ## Last verified date
 
-`2026-07-31 06:47 UTC`
+`2026-07-31 07:10 UTC`
 
 ## Locked constraints
 
@@ -109,6 +109,7 @@ activation, deployment, or cutover authority.
 | `LW-P5-CTRL-001` | Phase 4 closure and fail-closed Phase 5 active scope | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P5-CTRL-001.md` |
 | `LW-P5-MEM-PREFLIGHT-001` | Exact synthetic LatticeMemory characterization lock | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P5-MEM-PREFLIGHT-001.md` |
 | `LW-P5-MEM-CHAR-001` | Immutable LatticeMemory browser characterization | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P5-MEM-CHAR-001.md` |
+| `LW-P5-MEM-IMPL-PREFLIGHT-001` | Corrected package-only LatticeMemory implementation lock | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P5-MEM-IMPL-PREFLIGHT-001.md` |
 
 ## Completed in current milestone
 
