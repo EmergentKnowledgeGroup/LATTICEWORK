@@ -42,6 +42,9 @@ The only permitted narrow edits to existing implementation files are:
 - `tools/reengineering/validate-phase4-active-scope.mjs`: compose the exact
   accepted implementation ownership lock into the earlier Phase 4 active
   scope. No broad application/package prefix is added.
+- `tools/reengineering/verify-phase3-boundary.mjs`: preserve Phase 3 scope
+  verification against its accepted closed base-to-terminal range while
+  continuing to run its semantic provider and storage checks on current code.
 
 Everything in the protected exact/prefix arrays must remain byte-identical to
 the pinned implementation base. Protected paths are rejected independently
@@ -199,6 +202,7 @@ attempt to relabel a baseline divergence as `PASS`.
     "tests/reengineering/phase4-active-scope.test.mjs",
     "tests/reengineering/phase2-boundary.test.mjs",
     "tests/reengineering/phase4-amendment.test.mjs",
+    "tools/reengineering/verify-phase3-boundary.mjs",
     "tools/reengineering/validate-phase4-implementation-scope.mjs",
     "tools/reengineering/validate-phase4-active-scope.mjs",
     "tools/reengineering/validate-phase4-amendment.mjs",

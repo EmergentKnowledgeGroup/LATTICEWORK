@@ -23,6 +23,7 @@ export const OWNED_EXACT_PATHS = Object.freeze([
   "tests/reengineering/phase4-active-scope.test.mjs",
   "tests/reengineering/phase2-boundary.test.mjs",
   "tests/reengineering/phase4-amendment.test.mjs",
+  "tools/reengineering/verify-phase3-boundary.mjs",
   "tools/reengineering/validate-phase4-implementation-scope.mjs",
   "tools/reengineering/validate-phase4-active-scope.mjs",
   "tools/reengineering/validate-phase4-amendment.mjs",

@@ -57,7 +57,7 @@ only after a completed terminal, records content-free failure/cancellation
 metadata, uses one operation controller, and performs zero retry/fallback.
 The Lit workbench composes only the accepted in-process mock adapters and
 candidate-only `latticework::conversation` repository. Targeted verification
-passes every workspace typecheck, 51 unit/control assertions, and six active
+passes every workspace typecheck, 52 unit/control assertions, and six active
 Chromium scenarios. The offline-contract scenario is explicitly skipped
 because this packet authorizes no service worker and the candidate makes no
 offline claim. Canonical committed evidence and independent clean-worktree
@@ -211,7 +211,7 @@ review remain pending.
   rework round. Focused controls pass 41/41 and full repository controls pass
   180/180.
 - **MEASURED:** the implemented Chat/controller/browser slice passes targeted
-  typecheck, 51 unit/control assertions, and six active browser scenarios with
+  typecheck, 52 unit/control assertions, and six active browser scenarios with
   no real provider/data/credential/deployment authority. Canonical and
   independent committed evidence are still required before completion.
 

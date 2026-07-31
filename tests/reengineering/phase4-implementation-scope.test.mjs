@@ -10,6 +10,7 @@ import {
   isProtectedImplementationPath,
   validatePhase4ImplementationScope,
 } from "../../tools/reengineering/validate-phase4-implementation-scope.mjs";
+import { verifyPhase3Boundary } from "../../tools/reengineering/verify-phase3-boundary.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..", "..");
 const TMP = path.join(
@@ -50,6 +51,20 @@ test("canonical accepted packet and active implementation range are valid", () =
   assert.equal(result.implementationBaseSha, IMPLEMENTATION_BASE_SHA);
   assert.equal(result.applicationListener, false);
   assert.equal(result.testListener, true);
+});
+
+test("Phase 3 boundary stays pinned to its accepted terminal on later descendants", () => {
+  const result = verifyPhase3Boundary({ workspaceRoot: ROOT });
+
+  assert.equal(result.valid, true, result.failures.join("\n"));
+  assert.equal(
+    result.terminalCommit,
+    "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd",
+  );
+  assert.equal(
+    result.changedPaths.some((relativePath) => relativePath.startsWith("tests/phase4/")),
+    false,
+  );
 });
 
 test("protected paths are rejected even if broad ownership could match", () => {
