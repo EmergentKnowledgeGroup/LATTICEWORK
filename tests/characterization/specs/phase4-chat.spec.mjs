@@ -132,7 +132,7 @@ async function observeLoopbackStream(page, scenario, receipt, result) {
   }
 
   if (scenario.probe === "navigation-before-first-delta") {
-    await page.reload({ waitUntil: "domcontentloaded" });
+    await page.reload({ waitUntil: "commit", timeout: 12_000 });
     await session.waitForClose(12_000);
     const afterReload = await page
       .locator("#chatMessages .chat-message.assistant")
@@ -159,7 +159,7 @@ async function observeLoopbackStream(page, scenario, receipt, result) {
   );
 
   if (scenario.probe === "navigation-after-first-delta") {
-    await page.reload({ waitUntil: "domcontentloaded" });
+    await page.reload({ waitUntil: "commit", timeout: 12_000 });
     await session.waitForClose(12_000);
     const afterReload = await page
       .locator("#chatMessages .chat-message.assistant")

@@ -51,6 +51,35 @@ test("warm-offline retest bounds service-worker readiness and navigation", () =>
   );
 });
 
+test("stream navigation retests trigger bounded committed reloads", () => {
+  const source = fs.readFileSync(
+    path.join(
+      ROOT,
+      "tests",
+      "characterization",
+      "specs",
+      "phase4-chat.spec.mjs",
+    ),
+    "utf8",
+  );
+  const beforeFirstDelta = source.slice(
+    source.indexOf('scenario.probe === "navigation-before-first-delta"'),
+    source.indexOf('scenario.probe === "navigation-after-first-delta"'),
+  );
+  const afterFirstDelta = source.slice(
+    source.indexOf('scenario.probe === "navigation-after-first-delta"'),
+    source.indexOf('session.emitDelta("P4 synthetic success")'),
+  );
+
+  for (const block of [beforeFirstDelta, afterFirstDelta]) {
+    assert.match(
+      block,
+      /page\.reload\(\{\s*waitUntil:\s*"commit",\s*timeout:\s*12_000\s*\}\)/u,
+    );
+    assert.doesNotMatch(block, /waitUntil:\s*"domcontentloaded"/u);
+  }
+});
+
 const ACCEPTED = [
   "P4-CHAT-002A",
   "P4-CHAT-004A",
