@@ -8,15 +8,15 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 5 LATTICE MEMORY REVIEW-FIX VERIFIED — PR MERGE READY`
+`PHASE 5 LATTICE MEMORY MERGED — POST-MERGE VERIFIED`
 
 ## Current milestone
 
-`M3 — bounded LatticeMemory corrected candidate verification`
+`M3 — bounded LatticeMemory corrected candidate complete`
 
 ## Current target
 
-`Phase 5 LatticeMemory corrected candidate PR merge and post-merge verification`
+`No new runtime target is authorized; next work requires a separate narrow claim`
 
 ## Upstream baseline
 
@@ -24,9 +24,9 @@ LATTICEWORK
 
 ## Last verified commit
 
-`04355c8d2d4cd756f234358f21036f9fdb680a42` (Phase 5 package-only
-LatticeMemory candidate independently reproduced against the immutable
-baseline)
+`311d06672934d4e59911282f7a27ca0d4aef1008` (PR #6 merge containing the
+independently reproduced Phase 5 package-only candidate
+`04355c8d2d4cd756f234358f21036f9fdb680a42`)
 
 The verified Phase 3 candidate
 `d746b96225a3eaf59a5b5937e3f531e2cad280ef` is contained in the merged
@@ -313,9 +313,10 @@ canonical evidence is promoted GREEN.
 
 ## Next handoff
 
-**Next action:** push the exact independently verified candidate and canonical
-evidence to PR #6, reconcile automatic checks without another CodeRabbit review
-command, merge, then record post-merge verification on `main`.
+**Next action:** preserve the verified Phase 5 boundary. Claim and approve one
+separate feature-specific work unit before any additional memory system,
+real-data migration, runtime registration, provider traffic, activation,
+deployment, or cutover work.
 
 **Read first:** `docs/agents/handoffs/LW-P5-MEM-001.md`,
 `reengineering/EXECUTION_CHECKLIST.md`, and `reengineering/BLOCKERBOARD.md`.
