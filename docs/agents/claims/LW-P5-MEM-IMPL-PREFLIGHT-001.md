@@ -1,9 +1,9 @@
 # Work Claim — `LW-P5-MEM-IMPL-PREFLIGHT-001`
 
-**Status:** Claimed  
-**Owner:** Codex `/root/p5_memory_impl_preflight`  
-**Coordinator:** Codex root controller  
-**Base commit:** `ac45408307e91ee8d850c24753ce6b4d6e903f12`  
+**Status:** Claimed
+**Owner:** Codex `/root/p5_memory_impl_preflight`
+**Coordinator:** Codex root controller
+**Base commit:** `ac45408307e91ee8d850c24753ce6b4d6e903f12`
 **Branch:** `reengineering/p5-lattice-memory`
 
 ## Objective
