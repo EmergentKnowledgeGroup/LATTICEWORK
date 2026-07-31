@@ -131,7 +131,6 @@ function assertOwnedRunRoot(root, workspaceRoot) {
     throw new Error(`Run root traverses a reparse point: ${root}`);
   }
 }
-
 function cleanProfile(profilePath, runRoot, id) {
   const resolved = path.resolve(profilePath);
   if (
@@ -377,4 +376,3 @@ if (isMain()) {
     process.exitCode = 1;
   }
 }
-
