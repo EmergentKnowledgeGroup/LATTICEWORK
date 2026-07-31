@@ -83,6 +83,8 @@ test("Phase 5 allowlist is exact and fail-closed", () => {
       "reengineering/evidence/phase-5/LW-P5-CTRL-001/summary.json",
       "reengineering/evidence/phase-5/LW-P5-MEM-CHAR-001/summary.json",
       "reengineering/evidence/phase-5/LW-P5-MEM-IMPL-PREFLIGHT-001/summary.json",
+      "packages/lattice-memory/src/pulse-medium.ts",
+      "tests/phase5/pulse-medium.browser.spec.ts",
       "apps/web/src/unauthorized.ts",
       "packages/providers/src/unauthorized.ts",
       "runtime/tmp/private.json",

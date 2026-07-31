@@ -106,7 +106,7 @@ for (const [name, source, expected] of [
   ["browser-global", "export const x = window.indexedDB;", /browser\/global primitive/u],
   ["network", "export const x = fetch('/x');", /network\/peer primitive/u],
   ["listener", "createServer().listen(0);", /listener\/worker primitive/u],
-  ["credential", "export const x = process.env.API_TOKEN;", /credential primitive/u],
+  ["credential", "export const x = process.env.API_TOKEN;", /ambient environment primitive/u],
   ["legacy-migration-ui", "export const x = new FreeLatticeDB();", /legacy\/migration\/UI primitive/u],
 ]) test(`rejects forbidden source primitive: ${name}`, () => {
   const root = fixture(`source-${name}`); const pathname = "packages/lattice-memory/src/forbidden.ts"; write(root, pathname, source);
@@ -134,6 +134,34 @@ test("permits normal module syntax and IndexedDB only in the isolated repository
   });
   assert.equal(unsafe.valid, false);
   assert.match(unsafe.failures.join("\n"), /forbidden IndexedDB outside the isolated repository/u);
+});
+
+test("browser harness may name denied realtime APIs but cannot listen or embed external URLs", () => {
+  const root = fixture("browser-harness-boundary");
+  const safePath = "tests/phase5/denial.spec.ts";
+  write(root, safePath, "export const denied = ['WebSocket', 'Worker', 'serviceWorker'];\n");
+  const safe = validatePhase5LatticeMemoryImplementationScope({
+    workspaceRoot: root,
+    checkGitScope: false,
+    activePaths: [PACKET_PATH, safePath],
+  });
+  assert.equal(safe.valid, true, safe.failures.join("\n"));
+
+  for (const [name, source, expected] of [
+    ["listener", "createServer().listen(0);\n", /forbidden test listener primitive/u],
+    ["external-url", "export const target = 'https://example.invalid';\n", /forbidden external test URL/u],
+    ["ambient-secret", "export const token = process.env.SECRET_TOKEN;\n", /forbidden test environment key SECRET_TOKEN/u],
+  ]) {
+    const pathname = `tests/phase5/${name}.spec.ts`;
+    write(root, pathname, source);
+    const result = validatePhase5LatticeMemoryImplementationScope({
+      workspaceRoot: root,
+      checkGitScope: false,
+      activePaths: [PACKET_PATH, pathname],
+    });
+    assert.equal(result.valid, false);
+    assert.match(result.failures.join("\n"), expected);
+  }
 });
 
 test("CLI rejects every override", () => {

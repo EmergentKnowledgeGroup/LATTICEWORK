@@ -8,6 +8,7 @@ import {
   writeJson,
 } from "./evidence-common.mjs";
 import { collectActiveRangePaths } from "./git-scope-common.mjs";
+import { isOwnedImplementationPath } from "./validate-phase5-lattice-memory-implementation-scope.mjs";
 
 const EXPECTED_PHASE5_BASE_COMMIT =
   "1b7e1d10456e0a1e9aaa91df25db17e236bbea3e";
@@ -62,6 +63,7 @@ export function findUnauthorizedPhase5Paths(paths) {
   return [...new Set(paths)]
     .filter((relativePath) => {
       if (ALLOWED_PATHS.has(relativePath)) return false;
+      if (isOwnedImplementationPath(relativePath)) return false;
       return !ALLOWED_PREFIXES.some((prefix) => relativePath.startsWith(prefix));
     })
     .sort();

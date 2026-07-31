@@ -140,11 +140,14 @@ function assertPacket(packet) {
 }
 
 const SOURCE_EXTENSIONS = new Set([".js", ".mjs", ".cjs", ".ts", ".tsx", ".html"]);
-const FORBIDDEN_SOURCE_PATTERNS = [
-  [/\b(?:window|globalThis|document|navigator|location|localStorage|sessionStorage|caches)\b/u, "browser/global primitive"],
+const FORBIDDEN_ALL_SOURCE_PATTERNS = [
   [/\b(?:fetch|XMLHttpRequest|WebSocket|EventSource|WebTransport|RTCPeerConnection)\b/u, "network/peer primitive"],
   [/\b(?:createServer|\.listen\s*\(|Deno\.serve|Bun\.serve|Worker|SharedWorker|serviceWorker)\b/u, "listener/worker primitive"],
-  [/\b(?:process\.env|api[_-]?key|access[_-]?token|client[_-]?secret|credential)\b/iu, "credential primitive"],
+  [/\b(?:api[_-]?key|access[_-]?token|client[_-]?secret|credential)\b/iu, "credential primitive"],
+];
+const FORBIDDEN_CANDIDATE_SOURCE_PATTERNS = [
+  [/\b(?:window|globalThis|document|navigator|location|localStorage|sessionStorage|caches)\b/u, "browser/global primitive"],
+  [/\bprocess\.env\b/u, "ambient environment primitive"],
   [/\b(?:FreeLatticeDB|LatticeMemory|MigrationService|import(?:Data|File|Legacy)|export(?:Data|File|Legacy)|activateCandidate|setReadOwner|Telegram|proxy|router|route|HTMLElement|customElements)\b/iu, "legacy/migration/UI primitive"],
 ];
 function scanSources(root, activePaths, failures) {
@@ -154,7 +157,22 @@ function scanSources(root, activePaths, failures) {
     const absolute = path.join(root, relativePath);
     if (!fs.existsSync(absolute) || !fs.statSync(absolute).isFile()) continue;
     const text = fs.readFileSync(absolute, "utf8");
-    for (const [pattern, label] of FORBIDDEN_SOURCE_PATTERNS) if (pattern.test(text)) failures.push(`${relativePath}: forbidden ${label}`);
+    if (!relativePath.startsWith("tests/phase5/")) {
+      for (const [pattern, label] of FORBIDDEN_ALL_SOURCE_PATTERNS) if (pattern.test(text)) failures.push(`${relativePath}: forbidden ${label}`);
+      for (const [pattern, label] of FORBIDDEN_CANDIDATE_SOURCE_PATTERNS) if (pattern.test(text)) failures.push(`${relativePath}: forbidden ${label}`);
+    } else {
+      if (/\b(?:createServer|\.listen\s*\(|Deno\.serve|Bun\.serve)\b/u.test(text)) {
+        failures.push(`${relativePath}: forbidden test listener primitive`);
+      }
+      const externalUrls = [...text.matchAll(/https?:\/\/[^"'`\s)]+/gu)]
+        .map((match) => match[0])
+        .filter((url) => !/^http:\/\/127\.0\.0\.1(?::(?:\d+|\$\{port\}))?(?:\/|$)/u.test(url));
+      if (externalUrls.length > 0) failures.push(`${relativePath}: forbidden external test URL`);
+      const environmentReads = [...text.matchAll(/\bprocess\.env\.([A-Z0-9_]+)/gu)].map((match) => match[1]);
+      for (const name of environmentReads) {
+        if (name !== "LATTICEWORK_P5_PORT") failures.push(`${relativePath}: forbidden test environment key ${name}`);
+      }
+    }
     if (/\bindexedDB\b/u.test(text) && !relativePath.endsWith("indexeddb-pulse-repository.ts") && !relativePath.startsWith("tests/phase5/")) failures.push(`${relativePath}: forbidden IndexedDB outside the isolated repository`);
   }
 }

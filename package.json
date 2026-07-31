@@ -13,7 +13,8 @@
     "packages/*",
     "tests/phase2",
     "tests/phase3",
-    "tests/phase4"
+    "tests/phase4",
+    "tests/phase5"
   ],
   "scripts": {
     "p2:typecheck": "npm run typecheck --workspaces --if-present",
@@ -29,7 +30,10 @@
     "p4:typecheck": "npm run typecheck --workspaces --if-present",
     "p4:test": "npm run test --workspace @latticework/chat && npm run test:fixture --workspace @latticework/phase4-browser && node --test tests/reengineering/phase4-amendment.test.mjs tests/reengineering/phase4-implementation-scope.test.mjs",
     "p4:browser": "npm run test:browser --workspace @latticework/phase4-browser",
-    "p4:verify": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/reengineering/run-phase4-verification.ps1"
+    "p4:verify": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/reengineering/run-phase4-verification.ps1",
+    "p5:typecheck": "npm run typecheck --workspaces --if-present",
+    "p5:test": "npm run test --workspace @latticework/lattice-memory && node --test tests/reengineering/phase5-active-scope.test.mjs tests/reengineering/phase5-lattice-memory-implementation-packet.test.mjs tests/reengineering/phase5-lattice-memory-implementation-scope.test.mjs tests/reengineering/phase5-lattice-memory-implementation-evidence.test.mjs",
+    "p5:browser": "npm run test:browser --workspace @latticework/phase5-browser"
   },
   "devDependencies": {
     "typescript": "6.0.3",
