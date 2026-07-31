@@ -75,7 +75,10 @@ export async function validatePhase5LatticeMemoryImplementationEvidence({
   if (summary.schema !== "latticework.phase5-lattice-memory-implementation-summary.v1") failures.push("summary schema mismatch");
   if (summary.work_id !== "LW-P5-MEM-001") failures.push("summary work_id mismatch");
   if (summary.evidence_label !== "MEASURED") failures.push("summary evidence_label must be MEASURED");
-  if (summary.valid !== true || summary.status !== "GREEN") failures.push("summary must be valid GREEN");
+  const allowedStatus = requireIndependent
+    ? summary.status === "GREEN"
+    : ["GREEN", "PENDING_INDEPENDENT_CLEAN_WORKTREE_REVIEW"].includes(summary.status);
+  if (summary.valid !== true || !allowedStatus) failures.push("summary status is not valid for the requested independent-review gate");
   if (summary.implementation_base_commit !== IMPLEMENTATION_BASE) failures.push("implementation base mismatch");
   if (!SHA.test(summary.candidate_sha ?? "")) failures.push("summary candidate SHA is invalid");
   if (candidateSha && summary.candidate_sha !== candidateSha) failures.push("summary candidate SHA does not match requested candidate");

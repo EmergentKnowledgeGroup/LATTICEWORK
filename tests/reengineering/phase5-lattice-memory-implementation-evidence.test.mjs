@@ -98,6 +98,25 @@ test("accepts a complete independently green synthetic-only evidence bundle", as
   assert.deepEqual(result.failures, []);
 });
 
+test("accepts a pending canonical bundle only when independent review is not required", async () => {
+  const evidence = await fixture({
+    status: "PENDING_INDEPENDENT_CLEAN_WORKTREE_REVIEW",
+    independent_review: null,
+  });
+  const pending = await validatePhase5LatticeMemoryImplementationEvidence({
+    evidenceDirectory: evidence,
+    candidateSha,
+    requireIndependent: false,
+  });
+  const final = await validatePhase5LatticeMemoryImplementationEvidence({
+    evidenceDirectory: evidence,
+    candidateSha,
+    requireIndependent: true,
+  });
+  assert.equal(pending.valid, true);
+  assert.equal(final.valid, false);
+});
+
 test("rejects missing independent review, unsafe authority drift, and content-bearing receipts", async () => {
   const evidence = await fixture({
     safety: {
