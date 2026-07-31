@@ -44,8 +44,10 @@ test("warm-offline retest proves exact worker/cache readiness with bounded navig
     /navigator\.serviceWorker\.register\(\s*"\/docs\/sw\.js"/u,
   );
   assert.match(warmOffline, /scope:\s*"\/docs\/"/u);
-  assert.match(warmOffline, /Promise\.race\(\[readiness, boundedFailure\]\)/u);
-  assert.match(warmOffline, /45_000/u);
+  assert.doesNotMatch(warmOffline, /navigator\.serviceWorker\.ready/u);
+  assert.match(warmOffline, /navigator\.serviceWorker\.getRegistrations\(\)/u);
+  assert.match(warmOffline, /\.poll\(readinessProbe,/u);
+  assert.match(warmOffline, /timeout:\s*45_000/u);
   assert.match(warmOffline, /cache_name:\s*"freelattice-v5\.79\.22"/u);
   assert.match(warmOffline, /cache_entry_count:\s*174/u);
   assert.match(warmOffline, /cached_app_shell:\s*true/u);

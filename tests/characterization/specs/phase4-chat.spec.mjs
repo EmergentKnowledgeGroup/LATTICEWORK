@@ -363,48 +363,57 @@ async function observeTimeoutAbsence(page, scenario, receipt, result) {
 }
 
 async function observeWarmOfflineFailure(page, context, result) {
-  const serviceWorkerReceipt = await page.evaluate(async () => {
+  const registeredScope = await page.evaluate(async () => {
     const registration = await navigator.serviceWorker.register(
       "/docs/sw.js",
       { scope: "/docs/", updateViaCache: "none" },
     );
-    const readiness = navigator.serviceWorker.ready;
-    const boundedFailure = new Promise((_, reject) => {
-      setTimeout(() => {
-        const error = new Error(
-          "baseline /docs/ service worker did not become ready within 45 seconds",
-        );
-        error.name = "WarmOfflineReadinessTimeout";
-        reject(error);
-      }, 45_000);
-    });
-    const readyRegistration = await Promise.race([readiness, boundedFailure]);
-    const active =
-      readyRegistration.active ||
-      registration.active ||
-      registration.waiting;
-    const cacheName = "freelattice-v5.79.22";
-    const cacheNames = await caches.keys();
-    const cache = await caches.open(cacheName);
-    const cacheEntries = await cache.keys();
-    const cachedApp = await cache.match("/docs/app.html");
-    return {
-      ready: Boolean(active),
-      scope: readyRegistration.scope,
-      script_url: active?.scriptURL ?? null,
-      cache_name: cacheName,
-      cache_present: cacheNames.includes(cacheName),
-      cache_entry_count: cacheEntries.length,
-      cached_app_shell: Boolean(cachedApp),
-    };
+    return registration.scope;
   });
-  expect(
-    serviceWorkerReceipt,
-    "baseline /docs/ service worker and app-shell cache were not structurally ready",
-  ).toMatchObject({
+  const expectedScope = new URL("/docs/", page.url()).href;
+  const expectedScriptUrl = new URL("/docs/sw.js", page.url()).href;
+  expect(registeredScope).toBe(expectedScope);
+  const readinessProbe = async () =>
+    page.evaluate(
+      async ({ cacheName, scope }) => {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        const registration = registrations.find((entry) => entry.scope === scope);
+        const cacheNames = await caches.keys();
+        const cache = await caches.open(cacheName);
+        const cacheEntries = await cache.keys();
+        const cachedApp = await cache.match("/docs/app.html");
+        return {
+          ready: registration?.active?.state === "activated",
+          scope: registration?.scope ?? null,
+          script_url: registration?.active?.scriptURL ?? null,
+          cache_name: cacheName,
+          cache_present: cacheNames.includes(cacheName),
+          cache_entry_count: cacheEntries.length,
+          cached_app_shell: Boolean(cachedApp),
+        };
+      },
+      { cacheName: "freelattice-v5.79.22", scope: expectedScope },
+    );
+  await expect
+    .poll(readinessProbe, {
+      message:
+        "baseline /docs/ service worker and app-shell cache were not structurally ready",
+      timeout: 45_000,
+    })
+    .toMatchObject({
+      ready: true,
+      scope: expectedScope,
+      script_url: expectedScriptUrl,
+      cache_name: "freelattice-v5.79.22",
+      cache_present: true,
+      cache_entry_count: 174,
+      cached_app_shell: true,
+    });
+  const serviceWorkerReceipt = await readinessProbe();
+  expect(serviceWorkerReceipt).toMatchObject({
     ready: true,
-    scope: new URL("/docs/", page.url()).href,
-    script_url: new URL("/docs/sw.js", page.url()).href,
+    scope: expectedScope,
+    script_url: expectedScriptUrl,
     cache_name: "freelattice-v5.79.22",
     cache_present: true,
     cache_entry_count: 174,
@@ -416,7 +425,7 @@ async function observeWarmOfflineFailure(page, context, result) {
       page.evaluate(() => navigator.serviceWorker.controller?.scriptURL ?? null),
       { timeout: 12_000 },
     )
-    .toBe(new URL("/docs/sw.js", page.url()).href);
+    .toBe(expectedScriptUrl);
   let reloadError = null;
   try {
     await context.setOffline(true);
