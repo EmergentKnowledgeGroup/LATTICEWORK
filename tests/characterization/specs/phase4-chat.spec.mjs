@@ -363,13 +363,28 @@ async function observeTimeoutAbsence(page, scenario, receipt, result) {
 }
 
 async function observeWarmOfflineFailure(page, context, result) {
-  await page.evaluate(async () => {
-    await navigator.serviceWorker.ready;
+  const serviceWorkerReady = await page.evaluate(async () => {
+    const readiness = navigator.serviceWorker.ready.then((registration) => ({
+      ready: true,
+      active: Boolean(registration.active),
+    }));
+    const boundedFailure = new Promise((resolve) => {
+      setTimeout(
+        () => resolve({ ready: false, active: false }),
+        10_000,
+      );
+    });
+    return Promise.race([readiness, boundedFailure]);
   });
-  await page.reload({ waitUntil: "domcontentloaded" });
+  expect(
+    serviceWorkerReady,
+    "baseline service worker did not become ready within 10 seconds",
+  ).toEqual({ ready: true, active: true });
+  await page.reload({ waitUntil: "domcontentloaded", timeout: 12_000 });
   await expect
     .poll(() =>
       page.evaluate(() => Boolean(navigator.serviceWorker.controller)),
+      { timeout: 12_000 },
     )
     .toBe(true);
   let reloadError = null;
@@ -399,7 +414,10 @@ async function observeWarmOfflineFailure(page, context, result) {
   result.notes.push(
     "warm offline reload reproduced the baseline navigation failure; this is an absence-of-recovery observation, not recovery success",
   );
-  await page.goto("/docs/app.html", { waitUntil: "domcontentloaded" });
+  await page.goto("/docs/app.html", {
+    waitUntil: "domcontentloaded",
+    timeout: 12_000,
+  });
 }
 
 async function observeEmptySend(page, receipt, result) {

@@ -19,6 +19,34 @@ const ORIGINAL = path.join(
   "LW-P4-CHAR-001",
 );
 
+test("warm-offline retest bounds service-worker readiness and navigation", () => {
+  const source = fs.readFileSync(
+    path.join(
+      ROOT,
+      "tests",
+      "characterization",
+      "specs",
+      "phase4-chat.spec.mjs",
+    ),
+    "utf8",
+  );
+  const warmOffline = source.slice(
+    source.indexOf("async function observeWarmOfflineFailure"),
+    source.indexOf("async function observeEmptySend"),
+  );
+
+  assert.doesNotMatch(
+    warmOffline,
+    /await navigator\.serviceWorker\.ready\s*;/u,
+  );
+  assert.match(warmOffline, /Promise\.race\(\[readiness, boundedFailure\]\)/u);
+  assert.match(warmOffline, /10_000/u);
+  assert.equal(
+    [...warmOffline.matchAll(/timeout:\s*12_000/gu)].length,
+    4,
+  );
+});
+
 const ACCEPTED = [
   "P4-CHAT-002A",
   "P4-CHAT-004A",
