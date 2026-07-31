@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-31T07:51:47Z`
+Updated: `2026-07-31T07:54:08Z`
 
 ## CURRENT
 
 Track: `LW_P5_LATTICE_MEMORY WORK`
-Step: `phase5-lattice-memory-independent-green`
-Note: The package-only synthetic pulse medium is canonical and independently GREEN with zero findings; the bounded PR and single CodeRabbit cycle are next.
+Step: `phase5-lattice-memory-pr-open`
+Note: PR #6 is open with canonical and independent GREEN evidence; exactly one CodeRabbit review/fix cycle is authorized.
 Branch: `reengineering/p5-lattice-memory`
-Head: `e648af05bc3f9cad5c6f13980cbde3fcf40728e0`
-Next command: `Commit promoted evidence and living-doc updates, push the branch, open the bounded PR, and allow exactly one CodeRabbit review.`
+Head: `92ee14ced64779fca6bfb5526b9d9a7231a6a13d`
+Next command: `Wait for PR #6 CI and the one CodeRabbit review, consolidate actionable findings into one fix pass, verify, resolve, and merge.`
 
 ## LW_M0_BASELINE WORK
 
@@ -411,11 +411,11 @@ Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize
 
 ## LW_P5_LATTICE_MEMORY WORK
 
-Step: `phase5-lattice-memory-independent-green`
-Note: The package-only synthetic pulse medium is canonical and independently GREEN with zero findings; the bounded PR and single CodeRabbit cycle are next.
+Step: `phase5-lattice-memory-pr-open`
+Note: PR #6 is open with canonical and independent GREEN evidence; exactly one CodeRabbit review/fix cycle is authorized.
 Branch: `reengineering/p5-lattice-memory`
-Head: `e648af05bc3f9cad5c6f13980cbde3fcf40728e0`
-Next command: `Commit promoted evidence and living-doc updates, push the branch, open the bounded PR, and allow exactly one CodeRabbit review.`
+Head: `92ee14ced64779fca6bfb5526b9d9a7231a6a13d`
+Next command: `Wait for PR #6 CI and the one CodeRabbit review, consolidate actionable findings into one fix pass, verify, resolve, and merge.`
 
 ### Validations
 
@@ -449,6 +449,7 @@ Next command: `Commit promoted evidence and living-doc updates, push the branch,
 - **MEASURED** — canonical pending evidence validates for candidate `e648af05bc3f9cad5c6f13980cbde3fcf40728e0`.
 - **VERIFIED** — independent clean-worktree QA reproduced candidate `4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2`: 13/13 gates, 288/288 controls, 4/4 Chrome, eight content-free receipts, and zero findings.
 - **VERIFIED** — promoted canonical evidence validates `GREEN` with the exact independent review receipt.
+- **OBSERVED** — PR #6 is open at `https://github.com/EmergentKnowledgeGroup/LATTICEWORK/pull/6`.
 
 ### Blockers
 
