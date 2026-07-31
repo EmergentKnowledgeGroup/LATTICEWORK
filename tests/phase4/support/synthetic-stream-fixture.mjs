@@ -51,17 +51,13 @@ export async function startSyntheticStreamFixture() {
     },
     async close() {
       if (closed) return;
-      closed = true;
       await new Promise((resolve, reject) => {
         server.close((error) => (error ? reject(error) : resolve()));
       });
-      await new Promise((resolve, reject) => {
-        const proof = http.createServer();
-        proof.once("error", reject);
-        proof.listen(address.port, "127.0.0.1", () => {
-          proof.close((error) => (error ? reject(error) : resolve()));
-        });
-      });
+      if (server.listening) {
+        throw new Error("Synthetic fixture remained listening after close.");
+      }
+      closed = true;
     },
   });
 }

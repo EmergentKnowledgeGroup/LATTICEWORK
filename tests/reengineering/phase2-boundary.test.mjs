@@ -49,7 +49,7 @@ function readJsonAt(commit, relativePath) {
     0,
     `Unable to read ${relativePath} at ${commit}: ${result.stderr?.trim() || "unknown Git error"}`,
   );
-  return JSON.parse(result.stdout);
+  return JSON.parse(result.stdout.replace(/^\uFEFF/u, ""));
 }
 
 function gitBlobOid(repositoryRoot, relativePath) {

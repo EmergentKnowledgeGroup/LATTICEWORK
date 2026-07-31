@@ -156,7 +156,11 @@ function assertExactPacket(packet) {
   );
   assert.equal(packet.entrypoint, "apps/web/p4.html");
   assert.equal(packet.entrypoint_default, false);
-  assert.equal(packet.production_build_authorized, false);
+  assert.equal(
+    packet.production_build_authorized,
+    false,
+    "production_build_authorized must remain false",
+  );
   assert.equal(packet.legacy_default_unchanged, true);
   assert.equal(packet.synthetic_mock_only, true);
   for (const key of [
@@ -279,17 +283,14 @@ function scanCandidateSources(root, activePaths, failures) {
       }
     }
     if (listenerAllowed) {
-      for (const required of [
-        /127\.0\.0\.1/u,
-        /\.listen\s*\(\s*0\s*,\s*["']127\.0\.0\.1["']/u,
-        /\.close\s*\(/u,
-      ]) {
-        if (!required.test(text)) {
-          failures.push(
-            `${relativePath}: test listener contract must use exact loopback port 0 and an explicit close lifecycle`,
-          );
-          break;
-        }
+      if (!/127\.0\.0\.1/u.test(text)) {
+        failures.push(`${relativePath}: test listener bind must be exact 127.0.0.1`);
+      }
+      if (!/\.listen\s*\(\s*0\s*,\s*["']127\.0\.0\.1["']/u.test(text)) {
+        failures.push(`${relativePath}: test listener must request exact loopback port 0`);
+      }
+      if (!/\.close\s*\(/u.test(text)) {
+        failures.push(`${relativePath}: test listener must have an explicit close lifecycle`);
       }
       for (const [pattern, label] of [
         [/\bnode:(?:dns|https|net|tls)\b/u, "outbound-capable module"],
@@ -342,8 +343,19 @@ export function validatePhase4ImplementationScope({
 
   try {
     packet = extractPacket(fs.readFileSync(path.join(root, PACKET_PATH), "utf8"));
-    assertExactPacket(packet);
+  } catch (error) {
+    failures.push(error.message);
+  }
 
+  if (packet !== undefined) {
+    try {
+      assertExactPacket(packet);
+    } catch (error) {
+      failures.push(error.message);
+    }
+  }
+
+  try {
     if (checkGitScope) {
       git(root, ["merge-base", "--is-ancestor", IMPLEMENTATION_BASE_SHA, "HEAD"]);
       activePaths = collectActiveRangePaths(root, IMPLEMENTATION_BASE_SHA);
@@ -374,6 +386,10 @@ export function validatePhase4ImplementationScope({
     }
 
     scanCandidateSources(root, activePaths, failures);
+  } catch (error) {
+    failures.push(error.message);
+  }
+  try {
     validatePackageBoundaries(root, failures);
   } catch (error) {
     failures.push(error.message);

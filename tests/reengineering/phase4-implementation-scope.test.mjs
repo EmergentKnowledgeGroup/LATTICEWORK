@@ -91,6 +91,26 @@ test("rejects one unowned path", () => {
   assert.match(result.failures.join("\n"), /unowned implementation path changed/);
 });
 
+test("packet drift does not suppress independent scope failures", () => {
+  const root = fixture("packet-and-scope-drift");
+  const packetPath = path.join(root, PACKET);
+  fs.writeFileSync(
+    packetPath,
+    fs.readFileSync(packetPath, "utf8").replace(
+      '"production_build_authorized": false',
+      '"production_build_authorized": true',
+    ),
+  );
+  const result = validatePhase4ImplementationScope({
+    workspaceRoot: root,
+    checkGitScope: false,
+    activePaths: [PACKET, "outside/owned-scope.txt"],
+  });
+  assert.equal(result.valid, false);
+  assert.match(result.failures.join("\n"), /production_build_authorized/u);
+  assert.match(result.failures.join("\n"), /unowned implementation path/u);
+});
+
 test("rejects one protected path independently", () => {
   const result = validatePhase4ImplementationScope({
     workspaceRoot: ROOT,
@@ -300,7 +320,11 @@ test("rejects a test listener without an explicit close lifecycle", () => {
     activePaths: [PACKET, relativePath],
   });
   assert.equal(result.valid, false);
-  assert.match(result.failures.join("\n"), /explicit close lifecycle/u);
+  assert.match(
+    result.failures.join("\n"),
+    /test listener must have an explicit close lifecycle/u,
+  );
+  assert.doesNotMatch(result.failures.join("\n"), /must request exact loopback port 0/u);
 });
 
 test("rejects unsafe test-listener source", () => {
@@ -317,7 +341,7 @@ test("rejects unsafe test-listener source", () => {
     activePaths: [PACKET, relativePath],
   });
   assert.equal(result.valid, false);
-  assert.match(result.failures.join("\n"), /exact loopback port 0/u);
+  assert.match(result.failures.join("\n"), /must request exact loopback port 0/u);
 });
 
 test("CLI rejects base or scope overrides", () => {

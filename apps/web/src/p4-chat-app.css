@@ -229,7 +229,7 @@ lw-p4-chat {
   margin: auto;
   color: #98aaa4;
   content:
-    "L\A\A Ask the mock, prove the seam.\A\A Send a synthetic prompt to exercise persistence, cancellation, streaming fragments, and safe provenance.";
+    "Ask the mock, prove the seam.\A\A Send a synthetic prompt to exercise persistence, cancellation, streaming fragments, and safe provenance.";
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.2rem, 3vw, 1.65rem);
   line-height: 1.45;

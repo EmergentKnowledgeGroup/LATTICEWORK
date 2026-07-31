@@ -445,3 +445,31 @@ test("creates one distinct AbortController signal per operation and never retrie
   assert.notEqual(signals[0], signals[1]);
   assert.deepEqual(providers, ["mock-local", "mock-local"]);
 });
+
+test("a provider stream exhausted without a terminal settles as an internal failure", async () => {
+  const store = repository();
+  const controller = new ChatController({
+    repository: store,
+    router: {
+      run(request) {
+        return (async function* () {
+          yield {
+            type: "started",
+            operationId: request.operationId,
+            attemptId: `${request.operationId}:attempt:1`,
+          };
+        })();
+      },
+    },
+    now: () => "2026-07-31T00:00:00.000Z",
+  });
+
+  const terminal = await controller.send(input()).finished;
+
+  assert.equal(terminal.terminal, "failed");
+  assert.equal(terminal.error.code, "internal");
+  assert.deepEqual(
+    store.writes.at(-1).messages.map((message) => message.role),
+    ["user", "terminal"],
+  );
+});

@@ -115,9 +115,10 @@ class Phase4SyntheticRouter implements ChatProviderRouter {
     };
     yield { type: "delta", text: "P4_BROWSER_SYNTHETIC_RESPONSE_PARTIAL" };
 
-    if (request.signal?.aborted !== true) {
+    const signal = request.signal;
+    if (signal !== undefined && !signal.aborted) {
       await new Promise<void>((resolve) => {
-        request.signal?.addEventListener("abort", () => resolve(), { once: true });
+        signal.addEventListener("abort", () => resolve(), { once: true });
       });
     }
     yield {
@@ -158,30 +159,49 @@ class CandidateChatRepository implements ChatConversationRepository {
   }
 
   async write(state: ChatConversationState): Promise<void> {
-    const snapshot: ConversationDatasetSnapshot = {
-      descriptorId: "conversation",
-      schemaVersion: 1,
-      conversations: [{
-        key: state.conversationId,
-        projection: { id: state.conversationId },
-        sourceValue: { id: state.conversationId },
-      }],
-      messages: state.messages.map((message) => ({
-        key: message.id,
-        projection: {
-          id: message.id,
-          conversationId: state.conversationId,
-          role: message.role,
-          createdAt: message.createdAt,
-        },
-        sourceValue: {
-          ...structuredClone(message),
-          conversationId: state.conversationId,
-        },
-      })),
-    };
-    await this.#repository.putSnapshot(snapshot);
+    const existing = await this.#repository.readSnapshot();
+    await this.#repository.putSnapshot(mergeConversationSnapshot(existing, state));
   }
+}
+
+export function mergeConversationSnapshot(
+  existing: ConversationDatasetSnapshot,
+  state: ChatConversationState,
+): ConversationDatasetSnapshot {
+  const conversation = {
+    key: state.conversationId,
+    projection: { id: state.conversationId },
+    sourceValue: { id: state.conversationId },
+  };
+  const currentMessages = state.messages.map((message) => ({
+    key: message.id,
+    projection: {
+      id: message.id,
+      conversationId: state.conversationId,
+      role: message.role,
+      createdAt: message.createdAt,
+    },
+    sourceValue: {
+      ...structuredClone(message),
+      conversationId: state.conversationId,
+    },
+  }));
+  return {
+    descriptorId: "conversation",
+    schemaVersion: 1,
+    conversations: [
+      ...existing.conversations.filter(
+        (record) => record.key !== state.conversationId,
+      ),
+      conversation,
+    ],
+    messages: [
+      ...existing.messages.filter(
+        (record) => record.projection.conversationId !== state.conversationId,
+      ),
+      ...currentMessages,
+    ],
+  };
 }
 
 function createRouter(): Phase4SyntheticRouter {

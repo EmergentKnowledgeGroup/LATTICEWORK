@@ -37,6 +37,7 @@ export class P4ChatApp extends LitElement {
     conversation: { state: true },
     diagnosticsOpen: { state: true },
     draft: { state: true },
+    inFlightAssistantText: { state: true },
     providerId: { state: true },
     statusText: { state: true },
   };
@@ -44,6 +45,7 @@ export class P4ChatApp extends LitElement {
   declare conversation: ChatConversationState;
   declare diagnosticsOpen: boolean;
   declare draft: string;
+  declare inFlightAssistantText: string;
   declare providerId: ProviderId;
   declare statusText: string;
 
@@ -58,6 +60,7 @@ export class P4ChatApp extends LitElement {
     this.conversation = { conversationId, messages: [] };
     this.diagnosticsOpen = false;
     this.draft = "";
+    this.inFlightAssistantText = "";
     this.providerId = "mock-local";
     this.statusText = "Synthetic workbench ready";
   }
@@ -87,9 +90,11 @@ export class P4ChatApp extends LitElement {
 
   handleChatEvent(event: ChatEvent): void {
     if (event.type === "delta") {
+      this.inFlightAssistantText += event.text;
       this.statusText = "Receiving synthetic response";
       return;
     }
+    this.inFlightAssistantText = "";
     this.#lastTerminal = event.metadata;
     this.statusText = displayStatus(event.metadata);
     void this.#refreshConversation();
@@ -166,7 +171,8 @@ export class P4ChatApp extends LitElement {
             </header>
 
             <ol
-              class=${visibleMessages.length === 0
+              class=${visibleMessages.length === 0 &&
+              this.inFlightAssistantText.length === 0
                 ? "message-list is-empty"
                 : "message-list"}
               data-testid="message-list"
@@ -182,6 +188,14 @@ export class P4ChatApp extends LitElement {
                       </li>
                     `,
                   )}
+              ${this.inFlightAssistantText.length === 0
+                ? nothing
+                : html`
+                    <li class="message" data-role="assistant" data-transient="true">
+                      <span class="message-label">Mock assistant · streaming</span>
+                      ${this.inFlightAssistantText}
+                    </li>
+                  `}
             </ol>
 
             <form class="composer" @submit=${this.#submit}>
@@ -257,7 +271,9 @@ export class P4ChatApp extends LitElement {
   #handleComposerKey = (event: KeyboardEvent): void => {
     if (event.key === "Enter" && (event.ctrlKey || event.metaKey)) {
       event.preventDefault();
-      (event.currentTarget as HTMLTextAreaElement).form?.requestSubmit();
+      if (this.draft.trim().length > 0) {
+        (event.currentTarget as HTMLTextAreaElement).form?.requestSubmit();
+      }
     }
   };
 
@@ -274,6 +290,7 @@ export class P4ChatApp extends LitElement {
     this.#sequence += 1;
     const stamp = `${Date.now()}-${this.#sequence}`;
     this.statusText = "Sending synthetic request";
+    this.inFlightAssistantText = "";
     this.draft = "";
     const operation = controller.send({
       conversationId,

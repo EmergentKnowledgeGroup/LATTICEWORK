@@ -64,19 +64,26 @@ async function withDisposableProfile(
   const browserType = test.info().project.use.browserName;
   if (browserType !== "chromium") throw new Error("Phase 4 harness is pinned to Chromium.");
   const { chromium } = await import("@playwright/test");
+  const baseURL = test.info().project.use.baseURL;
+  if (typeof baseURL !== "string") throw new Error("Phase 4 browser base URL is required.");
   const context = await chromium.launchPersistentContext(profile, {
+    baseURL,
     channel: "chrome",
     headless: true,
   });
+  let callbackFailed = false;
   try {
     const page = context.pages()[0] ?? await context.newPage();
     const boundary = await preparePage(page);
     await callback(page, context, boundary, profile);
     expect(boundary.blocked).toEqual([]);
+  } catch (error) {
+    callbackFailed = true;
+    throw error;
   } finally {
     await context.close();
     await rm(profile, { recursive: true, force: true });
-    expect(existsSync(profile)).toBe(false);
+    if (!callbackFailed) expect(existsSync(profile)).toBe(false);
   }
 }
 
@@ -89,6 +96,15 @@ test("/p4.html is visibly synthetic and sends exactly through selected local and
   await withDisposableProfile(async (page) => {
     await page.goto("/p4.html");
     await assertP4Shell(page);
+    const emptyContent = await page.getByTestId("message-list").evaluate((element) =>
+      getComputedStyle(element, "::before").content
+    );
+    expect(emptyContent).toContain("Ask the mock, prove the seam.");
+    expect(emptyContent).not.toMatch(/^["']L/u);
+    await page.getByTestId("chat-input").fill("   ");
+    await page.getByTestId("chat-input").press("Control+Enter");
+    await expect(page.getByTestId("message-list").locator(":scope > *")).toHaveCount(0);
+    await expect(page.getByTestId("status")).not.toContainText("not ready");
     await expect(page.getByTestId("provider-select")).toHaveValue("mock-local");
     await send(page, "mock-local");
     await send(page, "mock-cloud", "P4_BROWSER_SYNTHETIC_CLOUD_PROMPT");
@@ -123,13 +139,81 @@ test("cancel works before dispatch and after the first delta without persisting 
 
     await page.getByTestId("chat-input").fill("P4_BROWSER_CANCEL_AFTER_DELTA");
     await page.getByTestId("send-button").click();
-    await expect(page.getByTestId("status")).toContainText(/stream|sending|receiving/i);
+    await expect(page.getByTestId("message-list")).toContainText(
+      "P4_BROWSER_SYNTHETIC_RESPONSE_PARTIAL",
+    );
     await page.getByTestId("cancel-button").click();
     await expect(page.getByTestId("status")).toContainText(/cancel/i);
-    await page.waitForTimeout(100);
     await expect(page.getByTestId("message-list").locator(":scope > *")).toHaveCount(1);
+    await expect(page.getByTestId("message-list")).not.toContainText(
+      "P4_BROWSER_SYNTHETIC_RESPONSE_PARTIAL",
+    );
     await page.reload();
     await expect(page.getByTestId("message-list").locator(":scope > *")).toHaveCount(1);
+  });
+});
+
+test("conversation snapshot merge replaces the active conversation and preserves unrelated records", async () => {
+  await withDisposableProfile(async (page) => {
+    await page.goto("/p4.html");
+    const merged = await page.evaluate(async () => {
+      const modulePath = "/src/p4-main.ts";
+      const { mergeConversationSnapshot } = await import(
+        /* @vite-ignore */ modulePath
+      ) as {
+        mergeConversationSnapshot(
+          existing: Record<string, unknown>,
+          state: Record<string, unknown>,
+        ): {
+          conversations: Array<{ key: string }>;
+          messages: Array<{ key: string }>;
+        };
+      };
+      return mergeConversationSnapshot(
+        {
+          descriptorId: "conversation",
+          schemaVersion: 1,
+          conversations: [
+            { key: "other", projection: { id: "other" }, sourceValue: { id: "other" } },
+            { key: "active", projection: { id: "active" }, sourceValue: { id: "active" } },
+          ],
+          messages: [
+            {
+              key: "other-message",
+              projection: {
+                id: "other-message",
+                conversationId: "other",
+                role: "user",
+                createdAt: "2026-07-31T00:00:00.000Z",
+              },
+              sourceValue: { id: "other-message", conversationId: "other" },
+            },
+            {
+              key: "stale",
+              projection: {
+                id: "stale",
+                conversationId: "active",
+                role: "assistant",
+                createdAt: "2026-07-31T00:00:01.000Z",
+              },
+              sourceValue: { id: "stale", conversationId: "active" },
+            },
+          ],
+        },
+        {
+          conversationId: "active",
+          messages: [{
+            id: "fresh",
+            operationId: "operation",
+            role: "user",
+            content: "synthetic",
+            createdAt: "2026-07-31T00:00:02.000Z",
+          }],
+        },
+      );
+    });
+    expect(merged.conversations.map((record) => record.key).sort()).toEqual(["active", "other"]);
+    expect(merged.messages.map((record) => record.key).sort()).toEqual(["fresh", "other-message"]);
   });
 });
 

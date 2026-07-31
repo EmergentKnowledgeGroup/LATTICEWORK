@@ -34,6 +34,7 @@ const baseURL = `http://127.0.0.1:${port}`;
 export default defineConfig({
   forbidOnly: true,
   fullyParallel: false,
+  workers: 1,
   outputDir: p4Output(),
   reporter: [["list"], ["json", { outputFile: resolve(p4Output(), "results.json") }]],
   testDir: ".",
