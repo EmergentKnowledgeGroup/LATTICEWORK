@@ -31,9 +31,9 @@ test("accepts the locked no-runtime amendment and packet", () => {
   assert.equal(result.valid, true, result.failures.join("\n"));
 });
 
-test("rejects implementation authority", () => {
+test("rejects removal of accepted implementation authority", () => {
   const target = copyFixture("implementation-authority");
-  replace(target, "PHASE4_IMPLEMENTATION_PACKET.md", '"implementation_authorized": false', '"implementation_authorized": true');
+  replace(target, "PHASE4_IMPLEMENTATION_PACKET.md", '"implementation_authorized": true', '"implementation_authorized": false');
   const result = validatePhase4Amendment(target);
   assert.equal(result.valid, false);
   assert.match(result.failures.join("\n"), /implementation_authorized/i);
@@ -73,10 +73,10 @@ test("rejects a fixed listener port", () => {
 
 test("rejects an application listener", () => {
   const target = copyFixture("application-listener");
-  replace(target, "PHASE4_IMPLEMENTATION_PACKET.md", '"application_listener_authorized": false', '"application_listener_authorized": true');
+  replace(target, "PHASE4_IMPLEMENTATION_PACKET.md", '"application_listener": false', '"application_listener": true');
   const result = validatePhase4Amendment(target);
   assert.equal(result.valid, false);
-  assert.match(result.failures.join("\n"), /application_listener_authorized/i);
+  assert.match(result.failures.join("\n"), /application_listener/i);
 });
 
 test("rejects a non-fixture amendment listener", () => {
@@ -113,10 +113,10 @@ test("rejects a default candidate entrypoint", () => {
 
 test("rejects owned path drift", () => {
   const target = copyFixture("owned-path-drift");
-  replace(target, "PHASE4_IMPLEMENTATION_PACKET.md", '    "packages/chat/src/chat-controller.ts",\n', "");
+  replace(target, "PHASE4_IMPLEMENTATION_PACKET.md", '    "package.json",\n', "");
   const result = validatePhase4Amendment(target);
   assert.equal(result.valid, false);
-  assert.match(result.failures.join("\n"), /owned implementation paths drifted/i);
+  assert.match(result.failures.join("\n"), /owned exact paths drifted/i);
 });
 
 test("rejects protected path drift", () => {
@@ -124,5 +124,5 @@ test("rejects protected path drift", () => {
   replace(target, "PHASE4_IMPLEMENTATION_PACKET.md", '    "apps/web/src/main.ts",\n', "");
   const result = validatePhase4Amendment(target);
   assert.equal(result.valid, false);
-  assert.match(result.failures.join("\n"), /protected paths drifted/i);
+  assert.match(result.failures.join("\n"), /protected exact paths drifted/i);
 });

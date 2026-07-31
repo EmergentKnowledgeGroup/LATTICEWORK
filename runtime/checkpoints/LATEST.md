@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-31T03:28:00Z`
+Updated: `2026-07-31T03:40:08Z`
 
 ## CURRENT
 
 Track: `LW_P4_IMPL_PREFLIGHT WORK`
-Step: `phase4-implementation-preflight-start`
-Note: Characterization is GREEN; correcting and machine-locking the exact non-default synthetic/mock implementation packet before any feature code.
+Step: `phase4-implementation-preflight-accepted-independent-green`
+Note: Exact packet is accepted, both validators are valid, 41/41 focused and 180/180 full controls pass, independent re-review is GREEN, and LW-BLK-010 is closed.
 Branch: `reengineering/p4-characterization-retests`
-Head: `8d59d4e1dc2c3f1de0b923db68917118062ed458`
-Next command: `Correct PHASE4_IMPLEMENTATION_PACKET.md and add the pinned fail-closed implementation scope validator plus negative tests.`
+Head: `faf32dbaf8159e8499421fa68d9fba4bede0fdc9`
+Next command: `Commit the accepted preflight closeout, claim LW-P4-001, checkpoint LW_P4_IMPLEMENTATION WORK, then implement only the exact packet.`
 
 ## LW_M0_BASELINE WORK
 
@@ -359,11 +359,11 @@ Next command: `Commit canonical characterization evidence/docs, then correct and
 
 ## LW_P4_IMPL_PREFLIGHT WORK
 
-Step: `phase4-implementation-preflight-start`
-Note: Characterization is GREEN; correcting and machine-locking the exact non-default synthetic/mock implementation packet before any feature code.
+Step: `phase4-implementation-preflight-accepted-independent-green`
+Note: Exact packet is accepted, both validators are valid, 41/41 focused and 180/180 full controls pass, independent re-review is GREEN, and LW-BLK-010 is closed.
 Branch: `reengineering/p4-characterization-retests`
-Head: `8d59d4e1dc2c3f1de0b923db68917118062ed458`
-Next command: `Correct PHASE4_IMPLEMENTATION_PACKET.md and add the pinned fail-closed implementation scope validator plus negative tests.`
+Head: `faf32dbaf8159e8499421fa68d9fba4bede0fdc9`
+Next command: `Commit the accepted preflight closeout, claim LW-P4-001, checkpoint LW_P4_IMPLEMENTATION WORK, then implement only the exact packet.`
 
 ### Validations
 
@@ -371,7 +371,10 @@ Next command: `Correct PHASE4_IMPLEMENTATION_PACKET.md and add the pinned fail-c
 - **OBSERVED** — the maintainer directed continued execution and considers repository-authored packet choices accepted.
 - **OBSERVED** — no application or package implementation exists in this workstream at phase start.
 - **OBSERVED** — real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.
+- **MEASURED** — amendment and implementation-range validators are valid; 41/41 focused and 180/180 full repository controls pass.
+- **VERIFIED** — one independent review returned three control findings; the bounded rework fixed all three and independent re-review returned GREEN.
+- **ACCEPTED** — the maintainer's standing receipt accepts the exact machine-locked packet after independent GREEN.
 
 ### Blockers
 
-- `LW-BLK-010` remains open until the exact corrected packet is machine-validated, independently GREEN, and its standing acceptance is recorded.
+- `LW-BLK-010` is closed; `LW-P4-001` is ready for a separate work claim.

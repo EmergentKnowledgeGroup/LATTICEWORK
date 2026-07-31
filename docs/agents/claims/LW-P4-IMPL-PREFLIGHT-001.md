@@ -1,8 +1,8 @@
 # Work Claim — `LW-P4-IMPL-PREFLIGHT-001`
 
-**Status:** Claimed
+**Status:** Completed — accepted and independently GREEN
 **Owner:** Codex root controller
-**Base commit:** `8d59d4e1dc2c3f1de0b923db68917118062ed458`
+**Base commit:** `faf32dbaf8159e8499421fa68d9fba4bede0fdc9`
 **Branch:** `reengineering/p4-characterization-retests`
 **Claim time:** `2026-07-31T03:28:00Z`
 

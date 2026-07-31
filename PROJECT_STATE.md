@@ -8,15 +8,15 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 4 CHARACTERIZATION GREEN — IMPLEMENTATION PACKET CORRECTION NEXT`
+`PHASE 4 IMPLEMENTATION PACKET ACCEPTED — SYNTHETIC SLICE READY TO CLAIM`
 
 ## Current milestone
 
-`M1/M3 boundary — exact primary Chat implementation preflight`
+`M1/M3 boundary — non-default synthetic primary Chat vertical slice`
 
 ## Current target
 
-`LW-P4-IMPL-PREFLIGHT-001 — correct, validate, independently review, and accept the exact packet`
+`LW-P4-001 — claim and implement the exact accepted packet`
 
 ## Upstream baseline
 
@@ -46,10 +46,10 @@ proved exact-loopback listener teardown and port release, and found no
 sentinel/content leak, profile residue, run-root residue, reparse point, shared
 dependency, or shared browser-cache use.
 
-Candidate application changes remain blocked until the corrected exact
-implementation packet is independently GREEN and accepted. Real data,
-credentials, provider traffic, application listeners, activation, migration,
-deployment, and cutover remain unauthorized.
+The corrected exact implementation packet is accepted and independently GREEN.
+It authorizes only a removable, non-default `/p4.html` synthetic/mock slice.
+Real data, credentials, provider traffic, application listeners, activation,
+migration, deployment, and cutover remain unauthorized.
 
 ## Last verified date
 
@@ -80,6 +80,7 @@ deployment, and cutover remain unauthorized.
 | `LW-P4-CHAR-001` | Synthetic primary Chat baseline characterization | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `COMPLETED — BLOCKED` | `docs/agents/handoffs/LW-P4-CHAR-001.md` |
 | `LW-P4-AMEND-001` | Characterization amendment and initial implementation proposal | Codex root controller | `main` | `COMPLETED — MERGED / VERIFIED` | `docs/agents/handoffs/LW-P4-AMEND-001.md` |
 | `LW-P4-RETEST-001` | Bounded amended characterization retests | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P4-RETEST-001.md` |
+| `LW-P4-IMPL-PREFLIGHT-001` | Exact bounded implementation packet and range lock | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md` |
 
 ## Completed in current milestone
 
@@ -191,6 +192,11 @@ deployment, and cutover remain unauthorized.
   `55e3731ea1482f37b242da6dc1af8d8181624e9a` reproduced 32/32 controls,
   11/11 retests, 33/33 atomic JSON attachments, and 41/41 manifest artifacts
   with one canonical invocation and zero retries.
+- **VERIFIED:** the exact Phase 4 implementation packet is pinned to
+  `faf32dbaf8159e8499421fa68d9fba4bede0fdc9`, accepted by the maintainer's
+  standing receipt, machine-valid, and independently GREEN after one bounded
+  rework round. Focused controls pass 41/41 and full repository controls pass
+  180/180.
 
 ## Blockers
 
@@ -205,8 +211,8 @@ deployment, and cutover remain unauthorized.
   active-scope controls.
 - `LW-BLK-009` is closed by the canonical and independently reproduced amended
   characterization bundle: 31 PASS, eight ACCEPTED_DIVERGENCE, zero BLOCKED.
-- `LW-BLK-010` keeps candidate implementation blocked until a later,
-  separately accepted implementation packet exists.
+- `LW-BLK-010` is closed by the exact accepted packet, fail-closed range
+  validator, complete negative controls, and independent GREEN re-review.
 
 ## Open decisions
 
@@ -222,9 +228,8 @@ deployment, and cutover remain unauthorized.
 - Documentation accuracy improvements.
 - Reproducible measurement tooling.
 - Documentation and evidence corrections that do not change product semantics.
-- Correct and validate only the control-plane
-  `LW-P4-IMPL-PREFLIGHT-001` packet; do not implement before that exact packet
-  is independently GREEN and accepted.
+- Claim and execute only `LW-P4-001` under the exact accepted implementation
+  packet.
 
 ## Human decision required
 
@@ -242,12 +247,10 @@ deployment, and cutover remain unauthorized.
 
 ## Next handoff
 
-**Next action:** correct the exact implementation packet, add its fail-closed
-range validator and negative controls, obtain independent GREEN QA, then record
-the maintainer's standing acceptance. Do not modify candidate or legacy runtime
-behavior before that gate closes.
+**Next action:** claim `LW-P4-001`, checkpoint its start, then implement and
+verify only the non-default synthetic/mock `/p4.html` slice.
 
-**Read first:** `docs/agents/handoffs/LW-P4-RETEST-001.md`,
+**Read first:** `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md`,
 `reengineering/PHASE4_IMPLEMENTATION_PACKET.md`, and
 `reengineering/BLOCKERBOARD.md`.
 
@@ -255,8 +258,8 @@ behavior before that gate closes.
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** the packet's exact owned and protected paths, authority
-flags, test-only listener contract, verification commands, and rollback are
-machine-locked, independently GREEN, and accepted before `LW-P4-001` begins.
+**Success condition:** the exact non-default synthetic slice passes its full
+typecheck, unit, browser, boundary, evidence, clean-worktree, and independent
+review gates without changing `/` or any protected path.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`
