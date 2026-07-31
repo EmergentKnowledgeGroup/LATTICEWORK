@@ -21,15 +21,17 @@ const noSubscription = () => undefined;
 export class PulseMedium implements PulseMediumContract {
   readonly #options: PulseMediumOptions;
   #ready = false;
+  #closing = false;
   #startPromise: Promise<void> | undefined;
   #pending: Pulse[] = [];
   #subscriptions = new Map<number, Subscription>();
   #nextSubscriptionId = 1;
-  #writeQueue: Promise<void> = Promise.resolve();
+  #operations: Promise<void> = Promise.resolve();
 
   constructor(options: PulseMediumOptions) { this.#options = options; }
 
   start(): Promise<void> {
+    if (this.#closing) return this.#operations.then(() => this.start());
     if (this.#startPromise === undefined) this.#startPromise = this.#open();
     return this.#startPromise;
   }
@@ -78,9 +80,11 @@ export class PulseMedium implements PulseMediumContract {
   }
 
   async clear(): Promise<boolean> {
-    if (!this.#ready) return false;
+    if (!this.#ready || this.#closing) return false;
+    const operation = this.#operations.then(() => this.#options.repository.clear());
+    this.#operations = operation.catch(() => undefined);
     try {
-      await this.#options.repository.clear();
+      await operation;
       return true;
     } catch {
       this.#diagnose({ code: "clear-failed", operation: "clear" });
@@ -89,11 +93,20 @@ export class PulseMedium implements PulseMediumContract {
   }
 
   async close(): Promise<boolean> {
-    if (!this.#ready) return false;
+    if (!this.#ready || this.#closing) return false;
+    this.#ready = false;
+    this.#closing = true;
+    const operation = this.#operations.then(async () => {
+      try {
+        await this.#options.repository.close();
+      } finally {
+        this.#startPromise = undefined;
+        this.#closing = false;
+      }
+    });
+    this.#operations = operation.catch(() => undefined);
     try {
-      await this.#writeQueue;
-      await this.#options.repository.close();
-      this.#ready = false;
+      await operation;
       return true;
     } catch {
       this.#diagnose({ code: "close-failed", operation: "close" });
@@ -113,15 +126,16 @@ export class PulseMedium implements PulseMediumContract {
       this.#pending = [];
       for (const pulse of pending) this.#persist(pulse);
       this.commit({ source: "lattice-memory", kind: "medium-online", summary: "the medium opened a session" });
-      await this.#writeQueue;
+      await this.#operations;
     } catch {
       this.#ready = false;
+      this.#startPromise = undefined;
       this.#diagnose({ code: "open-failed", operation: "open" });
     }
   }
 
   #persist(pulse: Pulse): void {
-    this.#writeQueue = this.#writeQueue
+    this.#operations = this.#operations
       .then(() => this.#options.repository.write(immutablePulse(pulse)))
       .catch(() => { this.#diagnose({ code: "write-failed", operation: "write" }); });
   }

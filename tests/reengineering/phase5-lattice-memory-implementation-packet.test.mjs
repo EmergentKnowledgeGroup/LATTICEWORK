@@ -6,6 +6,10 @@ const packetPath = new URL(
   "../../reengineering/PHASE5_LATTICE_MEMORY_IMPLEMENTATION_PACKET.md",
   import.meta.url,
 );
+const runnerPath = new URL(
+  "../../tools/reengineering/run-phase5-lattice-memory-verification.ps1",
+  import.meta.url,
+);
 
 async function packet() {
   const markdown = await readFile(packetPath, "utf8");
@@ -71,4 +75,23 @@ test("packet owns only package, test, evidence, and documentation surfaces", asy
   assert(value.protected_prefixes.includes("docs/modules/"));
   assert.equal(value.browser_harness_listener.bind, "127.0.0.1");
   assert.equal(value.browser_harness_listener.external_egress, false);
+});
+
+test("deterministic package gate fails each pack command and validates package inventory", async () => {
+  const runner = await readFile(runnerPath, "utf8");
+  const exitChecks = runner.match(/if \(`\$LASTEXITCODE -ne 0\) \{ exit `\$LASTEXITCODE \}/gu) ?? [];
+  assert.equal(exitChecks.length, 2, "each npm pack invocation must fail immediately on a nonzero exit");
+  assert.match(runner, /ConvertFrom-Json/u);
+  assert.match(runner, /@latticework\/lattice-memory/u);
+  assert.match(runner, /src\/index\.ts/u);
+});
+
+test("canonical evidence reruns exclude only their exact generated bundle from the clean-worktree gate", async () => {
+  const runner = await readFile(runnerPath, "utf8");
+  assert.match(runner, /\$EvidenceGitPath = \$EvidenceRelative\.Replace\('\\', '\/'\)/u);
+  assert.match(
+    runner,
+    /git -C \$Repo status --porcelain -- \. ":\(exclude\)\$EvidenceGitPath" ":\(exclude\)\$EvidenceGitPath\/\*\*"/u,
+  );
+  assert.match(runner, /clean candidate worktree outside its exact generated evidence path/u);
 });

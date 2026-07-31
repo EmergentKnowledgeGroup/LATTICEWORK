@@ -72,44 +72,60 @@ async function attachReceipt(name: string, payload: Record<string, boolean | num
   });
 }
 
-async function deleteCandidateDatabase(page: Page): Promise<void> {
-  await page.evaluate(async (databaseName) => {
+async function deleteCandidateDatabase(page: Page): Promise<boolean> {
+  return page.evaluate(async (databaseName) => {
     await new Promise<void>((resolve, reject) => {
       const request = indexedDB.deleteDatabase(databaseName);
       request.onsuccess = () => resolve();
       request.onerror = () => reject(request.error ?? new Error("candidate database cleanup failed"));
       request.onblocked = () => reject(new Error("candidate database cleanup was blocked"));
     });
+    const remaining = await indexedDB.databases();
+    if (remaining.some((database) => database.name === databaseName)) {
+      throw new Error("candidate database remained after cleanup");
+    }
+    return true;
   }, candidateDatabase);
 }
 
 async function withDisposableProfile(
   callback: (page: Page, context: BrowserContext, boundary: Boundary) => Promise<void>,
-): Promise<void> {
+): Promise<Readonly<{ candidateDatabaseDeleted: boolean; profileDeleted: boolean }>> {
   await mkdir(runRoot, { recursive: true });
   const profile = await mkdtemp(resolve(runRoot, "profile-"));
   const baseURL = test.info().project.use.baseURL;
   if (typeof baseURL !== "string") throw new Error("Phase 5 browser base URL is required.");
   const context = await chromium.launchPersistentContext(profile, { baseURL, channel: "chrome", headless: true });
   let page: Page | undefined;
+  let callbackError: unknown;
   try {
     page = context.pages()[0] ?? await context.newPage();
     const boundary = await installBoundary(page);
     await callback(page, context, boundary);
     expect(boundary.blocked).toEqual([]);
     expect(await page.evaluate(() => (globalThis as { __phase5BlockedRealtime?: string[] }).__phase5BlockedRealtime ?? [])).toEqual([]);
-  } finally {
-    if (page) {
-      try {
-        await page.evaluate(async (modulePath) => (await import(/* @vite-ignore */ modulePath)).closeActivePulseMedium(), harnessModule);
-        await page.reload();
-      } catch { /* a failing readiness test may not have constructed a closeable medium */ }
-      try { await deleteCandidateDatabase(page); } catch { /* reported by the owning assertion when cleanup is expected */ }
-    }
-    await context.close();
-    await rm(profile, { recursive: true, force: true });
-    expect(existsSync(profile)).toBe(false);
+  } catch (error) {
+    callbackError = error;
   }
+  const cleanupErrors: unknown[] = [];
+  let candidateDatabaseDeleted = false;
+  if (page) {
+    try {
+      await page.evaluate(async (modulePath) => (await import(/* @vite-ignore */ modulePath)).closeActivePulseMedium(), harnessModule);
+      await page.reload();
+      candidateDatabaseDeleted = await deleteCandidateDatabase(page);
+    } catch (error) {
+      cleanupErrors.push(error);
+    }
+  }
+  try { await context.close(); } catch (error) { cleanupErrors.push(error); }
+  try { await rm(profile, { recursive: true, force: true }); } catch (error) { cleanupErrors.push(error); }
+  const profileDeleted = !existsSync(profile);
+  if (!profileDeleted) cleanupErrors.push(new Error("browser profile cleanup failed"));
+  const errors = callbackError === undefined ? cleanupErrors : [callbackError, ...cleanupErrors];
+  if (errors.length === 1) throw errors[0];
+  if (errors.length > 1) throw new AggregateError(errors, "Phase 5 browser profile cleanup failed.");
+  return { candidateDatabaseDeleted, profileDeleted };
 }
 
 async function medium(page: Page, quietRoom: "absent" | "active" | "malformed" | "throwing" | "inactive" = "absent", captureDiagnostics = false) {
@@ -317,7 +333,23 @@ test("native same-millisecond burst, pre-ready queue 100, and newest-10000 reten
 });
 
 test("readiness/open failures remain fail-quiet and browser cleanup removes candidate database, profile, and run root", async () => {
-  await withDisposableProfile(async (page) => {
+  await expect(withDisposableProfile(async (page) => {
+    await page.addInitScript(() => {
+      Object.defineProperty(indexedDB, "deleteDatabase", {
+        configurable: true,
+        value: () => {
+          const request: Partial<IDBOpenDBRequest> = {};
+          queueMicrotask(() => {
+            const handler = request.onblocked;
+            if (handler) handler.call(request as IDBOpenDBRequest, new IDBVersionChangeEvent("blocked"));
+          });
+          return request as IDBOpenDBRequest;
+        },
+      });
+    });
+  })).rejects.toThrow("candidate database cleanup was blocked");
+
+  const cleanup = await withDisposableProfile(async (page) => {
     const readiness = await page.evaluate(async () => {
       const modulePath = "/harness.ts";
       const bridge = await import(/* @vite-ignore */ modulePath);
@@ -339,8 +371,15 @@ test("readiness/open failures remain fail-quiet and browser cleanup removes cand
     expect(readiness.pending).toBeLessThanOrEqual(100);
     await attachReceipt("fail-quiet-open", { open_failure_not_ready: !readiness.ready, no_content: true, content_free: true });
   });
+  expect(cleanup).toEqual({ candidateDatabaseDeleted: true, profileDeleted: true });
   await rm(runRoot, { recursive: true, force: true });
   await expect(access(runRoot)).rejects.toMatchObject({ code: "ENOENT" });
-  expect(existsSync(runRoot)).toBe(false);
-  await attachReceipt("cleanup", { candidate_database_deleted: true, profiles_deleted: true, run_root_deleted: true, content_free: true });
+  const runRootDeleted = !existsSync(runRoot);
+  expect(runRootDeleted).toBe(true);
+  await attachReceipt("cleanup", {
+    candidate_database_deleted: cleanup.candidateDatabaseDeleted,
+    profiles_deleted: cleanup.profileDeleted,
+    run_root_deleted: runRootDeleted,
+    content_free: true,
+  });
 });

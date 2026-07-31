@@ -49,7 +49,9 @@ foreach ($entry in @(@($Evidence, $EvidenceRelative), @($Scratch, $ScratchRelati
     }
     if (Test-Path -LiteralPath $entry[0]) { Remove-Item -LiteralPath $entry[0] -Recurse -Force }
 }
-if (& git -C $Repo status --porcelain) { throw "Verification requires a clean candidate worktree after removing its exact generated evidence path." }
+$EvidenceGitPath = $EvidenceRelative.Replace('\', '/')
+$CandidateStatus = & git -C $Repo status --porcelain -- . ":(exclude)$EvidenceGitPath" ":(exclude)$EvidenceGitPath/**"
+if ($CandidateStatus) { throw "Verification requires a clean candidate worktree outside its exact generated evidence path." }
 New-Item -ItemType Directory -Force -Path $Evidence, $Scratch | Out-Null
 
 $env:TEMP = Join-Path $Scratch "temp"
@@ -128,7 +130,19 @@ $pack1 = Join-Path $Scratch "pack-1.json"
 $pack2 = Join-Path $Scratch "pack-2.json"
 $gates.deterministic_build = Invoke-Receipt "deterministic-build" @(
     "powershell.exe", "-NoProfile", "-Command",
-    "`$env:npm_config_cache='$($env:npm_config_cache)'; npm pack --workspace @latticework/lattice-memory --dry-run --json | Set-Content -NoNewline -Encoding utf8 '$pack1'; npm pack --workspace @latticework/lattice-memory --dry-run --json | Set-Content -NoNewline -Encoding utf8 '$pack2'; if ((Get-FileHash '$pack1').Hash -ne (Get-FileHash '$pack2').Hash) { exit 1 }"
+    "`$env:npm_config_cache='$($env:npm_config_cache)'; " +
+    "`$pack1Output = & npm pack --workspace @latticework/lattice-memory --dry-run --json; " +
+    "if (`$LASTEXITCODE -ne 0) { exit `$LASTEXITCODE }; " +
+    "`$pack1Output | Set-Content -Encoding utf8 '$pack1'; " +
+    "`$pack2Output = & npm pack --workspace @latticework/lattice-memory --dry-run --json; " +
+    "if (`$LASTEXITCODE -ne 0) { exit `$LASTEXITCODE }; " +
+    "`$pack2Output | Set-Content -Encoding utf8 '$pack2'; " +
+    "`$first = Get-Content '$pack1' -Raw | ConvertFrom-Json; " +
+    "`$second = Get-Content '$pack2' -Raw | ConvertFrom-Json; " +
+    "if (@(`$first).Count -ne 1 -or @(`$second).Count -ne 1) { exit 1 }; " +
+    "if (`$first[0].name -ne '@latticework/lattice-memory' -or `$second[0].name -ne '@latticework/lattice-memory') { exit 1 }; " +
+    "if (-not (@(`$first[0].files.path) -contains 'src/index.ts') -or -not (@(`$second[0].files.path) -contains 'src/index.ts')) { exit 1 }; " +
+    "if ((Get-FileHash '$pack1').Hash -ne (Get-FileHash '$pack2').Hash) { exit 1 }"
 )
 $gates.audit = Invoke-Receipt "audit" @("cmd.exe", "/d", "/s", "/c", "npm audit --workspaces --include-workspace-root --json") -AllowNonZero
 $audit = Get-Content (Join-Path $Evidence "commands\audit\stdout.log") -Raw | ConvertFrom-Json

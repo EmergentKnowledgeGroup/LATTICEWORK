@@ -101,3 +101,59 @@ test("reports only code and operation diagnostics for rejection and subscriber f
     { code: "subscriber-failed", operation: "subscribe" },
   ]);
 });
+
+test("serializes clear after already accepted writes so cleared pulses cannot resurrect", async () => {
+  const gate = Promise.withResolvers();
+  class DeferredRepository extends MemoryRepository {
+    async write(value) {
+      if (value.kind === "delayed") await gate.promise;
+      await super.write(value);
+    }
+  }
+  const repository = new DeferredRepository();
+  const medium = createPulseMedium({ repository, quietRoom: inactiveRoom });
+  await medium.start();
+  assert.equal(medium.commit({ source: "synthetic", kind: "delayed", summary: "synthetic" }).ok, true);
+
+  const clearing = medium.clear();
+  gate.resolve();
+
+  assert.equal(await clearing, true);
+  assert.deepEqual(await medium.recent(null, 10), []);
+});
+
+test("close stops ready acceptance, preserves concurrent commits for restart, and reopens cleanly", async () => {
+  const gate = Promise.withResolvers();
+  class StrictDeferredRepository extends MemoryRepository {
+    async write(value) {
+      if (!this.opened) throw new Error("write-after-close");
+      if (value.kind === "delayed") await gate.promise;
+      if (!this.opened) throw new Error("write-after-close");
+      await super.write(value);
+    }
+  }
+  const repository = new StrictDeferredRepository();
+  const diagnostics = [];
+  const medium = createPulseMedium({
+    repository,
+    quietRoom: inactiveRoom,
+    onDiagnostic: (diagnostic) => diagnostics.push(diagnostic),
+  });
+  await medium.start();
+  assert.equal(medium.commit({ source: "synthetic", kind: "delayed", summary: "synthetic" }).ok, true);
+
+  const closing = medium.close();
+  const duringClose = medium.commit({ source: "synthetic", kind: "after-close-started", summary: "synthetic" });
+  gate.resolve();
+
+  assert.equal(await closing, true);
+  assert.equal(medium.isReady(), false);
+  assert.equal(duringClose.ok, true);
+  assert.equal(medium.pendingCount(), 1);
+  assert.deepEqual(diagnostics, []);
+
+  await medium.start();
+  assert.equal(medium.isReady(), true);
+  assert.equal(medium.pendingCount(), 0);
+  assert.equal((await medium.recent({ kind: "after-close-started" }, 10)).length, 1);
+});

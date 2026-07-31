@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-31T07:54:08Z`
+Updated: `2026-07-31T09:02:11Z`
 
 ## CURRENT
 
 Track: `LW_P5_LATTICE_MEMORY WORK`
-Step: `phase5-lattice-memory-pr-open`
-Note: PR #6 is open with canonical and independent GREEN evidence; exactly one CodeRabbit review/fix cycle is authorized.
+Step: `phase5-lattice-memory-review-fix-green`
+Note: The six independently reproduced findings are corrected as one bounded set; runtime, browser, evidence-integrity, prior-phase regression, and full repository controls are green.
 Branch: `reengineering/p5-lattice-memory`
-Head: `92ee14ced64779fca6bfb5526b9d9a7231a6a13d`
-Next command: `Wait for PR #6 CI and the one CodeRabbit review, consolidate actionable findings into one fix pass, verify, resolve, and merge.`
+Head: `d3aa875c8de8fe4e841a00d1169bac9456dab866`
+Next command: `Commit the corrected candidate, regenerate canonical and independent clean-worktree evidence for its exact SHA, then promote the evidence and update the handoff.`
 
 ## LW_M0_BASELINE WORK
 
@@ -411,11 +411,11 @@ Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize
 
 ## LW_P5_LATTICE_MEMORY WORK
 
-Step: `phase5-lattice-memory-pr-open`
-Note: PR #6 is open with canonical and independent GREEN evidence; exactly one CodeRabbit review/fix cycle is authorized.
+Step: `phase5-lattice-memory-review-fix-green`
+Note: The six independently reproduced findings are corrected as one bounded set; runtime, browser, evidence-integrity, prior-phase regression, and full repository controls are green.
 Branch: `reengineering/p5-lattice-memory`
-Head: `92ee14ced64779fca6bfb5526b9d9a7231a6a13d`
-Next command: `Wait for PR #6 CI and the one CodeRabbit review, consolidate actionable findings into one fix pass, verify, resolve, and merge.`
+Head: `d3aa875c8de8fe4e841a00d1169bac9456dab866`
+Next command: `Commit the corrected candidate, regenerate canonical and independent clean-worktree evidence for its exact SHA, then promote the evidence and update the handoff.`
 
 ### Validations
 
@@ -450,8 +450,17 @@ Next command: `Wait for PR #6 CI and the one CodeRabbit review, consolidate acti
 - **VERIFIED** — independent clean-worktree QA reproduced candidate `4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2`: 13/13 gates, 288/288 controls, 4/4 Chrome, eight content-free receipts, and zero findings.
 - **VERIFIED** — promoted canonical evidence validates `GREEN` with the exact independent review receipt.
 - **OBSERVED** — PR #6 is open at `https://github.com/EmergentKnowledgeGroup/LATTICEWORK/pull/6`.
+- **OBSERVED** — the one CodeRabbit review command completed as a rate-limited incremental no-op with zero review objects or inline findings; no second command will be sent.
+- **VERIFIED** — an independent read-only adversarial pass reproduced six bounded findings: unhashed evidence acceptance, lifecycle clear/close races, a false-green package gate, swallowed browser cleanup, IndexedDB failed-open leaks, and non-canonical default temp placement.
+- **VERIFIED** — all six findings are covered by regressions and corrected without widening the accepted implementation packet.
+- **MEASURED** — strict workspace typecheck and 70/70 focused Phase 5 controls pass.
+- **MEASURED** — native Chrome passes 4/4 with one worker, zero retries, observed database/profile/run-root cleanup, and a negative blocked-cleanup proof.
+- **MEASURED** — Phase 4 typecheck, 48/48 controls, and 7/8 browser scenarios pass; the sole skip is the explicitly unsupported offline capability.
+- **MEASURED** — full repository controls pass 295/295 with zero fail, skip, todo, or cancellation.
+- **VERIFIED** — evidence integrity now rejects tampering, omissions, forged commands, invalid cwd, non-repository artifacts, malformed independent review, content-bearing browser receipts, and symlink/reparse traversal.
+- **VERIFIED** — canonical evidence reruns exclude only the exact generated evidence bundle from the pre-run cleanliness gate; all other worktree drift fails closed.
 
 ### Blockers
 
 - `LW-BLK-005` remains open for real-data migration; only synthetic fixtures and candidate namespaces are safe.
-- PR CI, one CodeRabbit review/fix cycle, merge, and post-merge verification remain.
+- The one consolidated correction set, fresh evidence, merge, and post-merge verification remain.

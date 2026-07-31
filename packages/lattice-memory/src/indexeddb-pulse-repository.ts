@@ -35,6 +35,12 @@ export class IndexedDbPulseRepository implements PulseRepository {
     if (this.#database !== undefined) return;
     const database = await new Promise<IDBDatabase>((resolve, reject) => {
       const request = this.#factory.open(pulseMediumDatasetDescriptor.candidateDatabase, pulseMediumDatasetDescriptor.schemaVersion);
+      let settled = false;
+      const rejectOnce = (error: Error) => {
+        if (settled) return;
+        settled = true;
+        reject(error);
+      };
       request.onupgradeneeded = () => {
         const upgrade = request.result;
         if (!upgrade.objectStoreNames.contains(pulseMediumDatasetDescriptor.store)) {
@@ -44,24 +50,38 @@ export class IndexedDbPulseRepository implements PulseRepository {
           });
         }
       };
-      request.onblocked = () => reject(new Error("open-blocked"));
-      request.onerror = () => reject(request.error ?? new Error("open-failed"));
-      request.onsuccess = () => resolve(request.result);
+      request.onblocked = () => rejectOnce(new Error("open-blocked"));
+      request.onerror = () => rejectOnce(request.error ?? new Error("open-failed"));
+      request.onsuccess = () => {
+        if (settled) {
+          request.result.close();
+          return;
+        }
+        settled = true;
+        resolve(request.result);
+      };
     });
-    const stores = [...database.objectStoreNames];
-    const schemaTransaction = database.transaction(pulseMediumDatasetDescriptor.store, "readonly");
-    const store = schemaTransaction.objectStore(pulseMediumDatasetDescriptor.store);
-    const exactSchema = database.version === pulseMediumDatasetDescriptor.schemaVersion
-      && stores.length === 1
-      && stores[0] === pulseMediumDatasetDescriptor.store
-      && store.keyPath === pulseMediumDatasetDescriptor.target.keyPath
-      && store.autoIncrement === pulseMediumDatasetDescriptor.target.autoIncrement
-      && store.indexNames.length === 0;
-    if (!exactSchema) {
-      database.close();
-      throw new Error("schema-mismatch");
+    let transferred = false;
+    try {
+      database.onversionchange = () => {
+        database.close();
+        if (this.#database === database) this.#database = undefined;
+      };
+      const stores = [...database.objectStoreNames];
+      const schemaTransaction = database.transaction(pulseMediumDatasetDescriptor.store, "readonly");
+      const store = schemaTransaction.objectStore(pulseMediumDatasetDescriptor.store);
+      const exactSchema = database.version === pulseMediumDatasetDescriptor.schemaVersion
+        && stores.length === 1
+        && stores[0] === pulseMediumDatasetDescriptor.store
+        && store.keyPath === pulseMediumDatasetDescriptor.target.keyPath
+        && store.autoIncrement === pulseMediumDatasetDescriptor.target.autoIncrement
+        && store.indexNames.length === 0;
+      if (!exactSchema) throw new Error("schema-mismatch");
+      this.#database = database;
+      transferred = true;
+    } finally {
+      if (!transferred) database.close();
     }
-    this.#database = database;
   }
 
   async write(pulse: Pulse): Promise<void> {
@@ -100,7 +120,10 @@ export class IndexedDbPulseRepository implements PulseRepository {
   }
 
   async close(): Promise<void> {
-    this.#database?.close();
+    if (this.#database !== undefined) {
+      this.#database.onversionchange = null;
+      this.#database.close();
+    }
     this.#database = undefined;
   }
 
