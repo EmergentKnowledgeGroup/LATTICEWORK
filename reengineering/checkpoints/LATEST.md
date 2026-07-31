@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-31T02:18:50Z`
+Updated: `2026-07-31T03:27:04Z`
 
 ## CURRENT
 
 Track: `LW_P4_RETEST WORK`
-Step: `phase4-retest-harness-green`
-Note: All eleven bounded retests pass in the local browser harness; promotable evidence and independent clean-worktree reproduction remain before blocker closure.
+Step: `phase4-amended-characterization-canonical-independent-green`
+Note: Canonical and independent amended characterization is GREEN at candidate 55e3731 with 31 PASS, 8 accepted divergences, 0 blocked; LW-BLK-009 is closed.
 Branch: `reengineering/p4-characterization-retests`
-Head: `9ae0c54a6b6d76622cb2a89efee5bf909ff6858e`
-Next command: `Commit the green retest harness, run tools/reengineering/run-phase4-amendment-retests.ps1 from the clean candidate SHA, then independently reproduce it.`
+Head: `55e3731ea1482f37b242da6dc1af8d8181624e9a`
+Next command: `Commit canonical characterization evidence/docs, then correct and independently validate the exact LW-P4-IMPL-PREFLIGHT-001 packet before implementation.`
 
 ## LW_M0_BASELINE WORK
 
@@ -332,11 +332,11 @@ Next command: `Execute only the eleven retests frozen in reengineering/PHASE4_CH
 
 ## LW_P4_RETEST WORK
 
-Step: `phase4-retest-harness-green`
-Note: All eleven bounded retests pass in the local browser harness; promotable evidence and independent clean-worktree reproduction remain before blocker closure.
+Step: `phase4-amended-characterization-canonical-independent-green`
+Note: Canonical and independent amended characterization is GREEN at candidate 55e3731 with 31 PASS, 8 accepted divergences, 0 blocked; LW-BLK-009 is closed.
 Branch: `reengineering/p4-characterization-retests`
-Head: `9ae0c54a6b6d76622cb2a89efee5bf909ff6858e`
-Next command: `Commit the green retest harness, run tools/reengineering/run-phase4-amendment-retests.ps1 from the clean candidate SHA, then independently reproduce it.`
+Head: `55e3731ea1482f37b242da6dc1af8d8181624e9a`
+Next command: `Commit canonical characterization evidence/docs, then correct and independently validate the exact LW-P4-IMPL-PREFLIGHT-001 packet before implementation.`
 
 ### Validations
 
@@ -348,8 +348,11 @@ Next command: `Commit the green retest harness, run tools/reengineering/run-phas
 - **MEASURED** — five exact loopback-stream retests completed with five atomic PASS receipts over a run-owned `127.0.0.1` OS-selected listener.
 - **VERIFIED** — all 149 repository reengineering controls passed with the immutable baseline root configured; zero fail, skip, or todo.
 - **VERIFIED** — amended validator, promoter smoke, fixture unit tests, syntax checks, and `git diff --check` passed.
+- **MEASURED** — canonical promotion at `55e3731ea1482f37b242da6dc1af8d8181624e9a` completed once with zero retries; 32/32 controls and 11/11 retests passed.
+- **VERIFIED** — final dispositions are 31 PASS, eight ACCEPTED_DIVERGENCE, and zero BLOCKED with immutable original hashes and statuses.
+- **VERIFIED** — independent clean-worktree QA reproduced the exact candidate, validated 33/33 atomic attachments and 41/41 manifest artifacts, and proved listener teardown, port release, no leaks, and complete cleanup.
 
 ### Blockers
 
-- `LW-BLK-009` remains open pending clean-SHA evidence promotion and independent reproduction.
+- `LW-BLK-009` is closed by canonical and independent GREEN evidence.
 - `LW-BLK-010` remains open; `LW-P4-001` has not started.

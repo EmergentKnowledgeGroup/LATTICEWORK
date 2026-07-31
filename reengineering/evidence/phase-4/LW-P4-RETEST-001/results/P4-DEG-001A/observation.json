@@ -1,0 +1,43 @@
+{
+  "schema": "latticework.phase4.atomic-result.v1",
+  "group_id": "P4-DEG-001",
+  "subcase_id": "P4-DEG-001A",
+  "probe": "warm-offline-reload",
+  "provider": "P4-PRV-OLLAMA",
+  "status": "PASS",
+  "evidence_label": "OBSERVED",
+  "profile_id": "P4-PROFILE-P4-DEG-001A",
+  "fresh_profile": true,
+  "notes": [
+    "warm offline reload reproduced the baseline navigation failure; this is an absence-of-recovery observation, not recovery success"
+  ],
+  "request_count": 0,
+  "blocked_count": 6,
+  "terminal_count": null,
+  "operation": {
+    "post_delta_retry": false,
+    "duplicate_terminal": false
+  },
+  "cleanup_status": "persistent-browser-context-closed",
+  "profile_path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-retest-existing-20260731T032407Z-835c82b9\\profiles\\P4-DEG-001A",
+  "profile_empty_at_creation": true,
+  "profile_ownership_marker": "phase4-run-marker-v1",
+  "observed_contract": {
+    "offline_recovery": "ABSENT",
+    "reload_failure": "ERR_INTERNET_DISCONNECTED_OR_CHROME_ERROR",
+    "service_worker": {
+      "ready": true,
+      "scope": "http://127.0.0.1:4184/docs/",
+      "script_url": "http://127.0.0.1:4184/docs/sw.js",
+      "cache_name": "freelattice-v5.79.22",
+      "cache_present": true,
+      "cache_entry_count": 174,
+      "cached_app_shell": true
+    },
+    "controller_before_offline": true,
+    "final_url_class": "chrome-error"
+  },
+  "context_closed": true,
+  "fixture_request_observed": false,
+  "private_sentinel_leak": null
+}

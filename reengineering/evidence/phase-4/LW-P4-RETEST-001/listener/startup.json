@@ -1,0 +1,23 @@
+{
+  "schema": "latticework.phase4-loopback-stream-listener.v1",
+  "fixture_id": "phase4-fragmented-stream-v1",
+  "bind": "127.0.0.1",
+  "port": 60231,
+  "run_root": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-retest-loopback-20260731T032407Z-835c82b9",
+  "run_owned": true,
+  "fixture_only": true,
+  "synthetic_only": true,
+  "external_egress": false,
+  "stopped": false,
+  "rejected": [],
+  "events": [
+    {
+      "sequence": 1,
+      "event": "listener-started",
+      "monotonic_ms": 5.1643,
+      "bind": "127.0.0.1",
+      "port": 60231,
+      "run_root": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-retest-loopback-20260731T032407Z-835c82b9"
+    }
+  ]
+}

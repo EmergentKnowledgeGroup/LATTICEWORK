@@ -1,0 +1,737 @@
+{
+  "schema": "latticework.phase4-amended-characterization-summary.v1",
+  "evidence_label": "MEASURED",
+  "work_id": "LW-P4-RETEST-001",
+  "status": "GREEN",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "55e3731ea1482f37b242da6dc1af8d8181624e9a",
+  "original": {
+    "work_id": "LW-P4-CHAR-001",
+    "summary_sha256": "49f9913f20d99109900bb30c50afc0bec93c4209dfe38fe0d9a4a9006660dbaf",
+    "manifest_sha256": "27badc2f9c4497084006539ea9e0805d9617225a8518b6a508aa0c67dcaf1564",
+    "results": [
+      {
+        "id": "P4-A11Y-001A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-A11Y-001B",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-A11Y-001C",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-001A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-002A",
+        "status": "FAIL"
+      },
+      {
+        "id": "P4-CHAT-003A",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-003B",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-004A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-005A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-005B",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-005C",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-006A",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-006B",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-007A",
+        "status": "FAIL"
+      },
+      {
+        "id": "P4-CHAT-007B",
+        "status": "FAIL"
+      },
+      {
+        "id": "P4-CHAT-008A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-008B",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-009A",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-009B",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-009C",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-009D",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-009E",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-CHAT-010A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-CHAT-010B",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-DEG-001A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-EGR-001A",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-EGR-001B",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-EGR-001C",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-EGR-001D",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-EGR-001E",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-EGR-001F",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-EGR-001G",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-ONB-001A",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-ONB-001B",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-ONB-001C",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-RESP-001A",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-SIG-001A",
+        "status": "PASS"
+      },
+      {
+        "id": "P4-SIG-001B",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "P4-SIG-001C",
+        "status": "PASS"
+      }
+    ]
+  },
+  "accepted_divergence_ids": [
+    "P4-CHAT-002A",
+    "P4-CHAT-004A",
+    "P4-CHAT-005A",
+    "P4-CHAT-005B",
+    "P4-CHAT-005C",
+    "P4-CHAT-007A",
+    "P4-CHAT-007B",
+    "P4-SIG-001B"
+  ],
+  "retests": [
+    {
+      "id": "P4-A11Y-001A",
+      "status": "PASS",
+      "observation_receipt": "results/P4-A11Y-001A/observation.json",
+      "network_receipt": "results/P4-A11Y-001A/network.json",
+      "storage_receipt": "results/P4-A11Y-001A/storage.json",
+      "profile_cleanup": {
+        "proven": true,
+        "deleted": true,
+        "no_reparse": true
+      },
+      "external_wire_transmissions": 0,
+      "loopback_transport_count": 0,
+      "sentinel_leak": null,
+      "observed_contract": {
+        "focus_order": [
+          "chatDriveBtn",
+          "chatInput",
+          "sendBtn"
+        ],
+        "input_label": "ABSENT",
+        "live_region": "ABSENT",
+        "send_name": "Send ✦"
+      }
+    },
+    {
+      "id": "P4-A11Y-001B",
+      "status": "PASS",
+      "observation_receipt": "results/P4-A11Y-001B/observation.json",
+      "network_receipt": "results/P4-A11Y-001B/network.json",
+      "storage_receipt": "results/P4-A11Y-001B/storage.json",
+      "profile_cleanup": {
+        "proven": true,
+        "deleted": true,
+        "no_reparse": true
+      },
+      "external_wire_transmissions": 0,
+      "loopback_transport_count": 0,
+      "sentinel_leak": null,
+      "observed_contract": {
+        "forced_colors": "ACTIVE",
+        "controls": {
+          "active": true,
+          "input": {
+            "forced_color_adjust": "auto",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0.06)"
+          },
+          "send": {
+            "forced_color_adjust": "auto",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(0, 0, 0)"
+          }
+        }
+      }
+    },
+    {
+      "id": "P4-A11Y-001C",
+      "status": "PASS",
+      "observation_receipt": "results/P4-A11Y-001C/observation.json",
+      "network_receipt": "results/P4-A11Y-001C/network.json",
+      "storage_receipt": "results/P4-A11Y-001C/storage.json",
+      "profile_cleanup": {
+        "proven": true,
+        "deleted": true,
+        "no_reparse": true
+      },
+      "external_wire_transmissions": 0,
+      "loopback_transport_count": 0,
+      "sentinel_leak": null,
+      "observed_contract": {
+        "reduced_motion": "ACTIVE",
+        "controls": {
+          "active": true,
+          "css_rule_present": true,
+          "input_animation_duration": "1e-05s",
+          "input_transition_duration": "1e-05s"
+        }
+      }
+    },
+    {
+      "id": "P4-CHAT-001A",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-001A/observation.json",
+      "network_receipt": "results/P4-CHAT-001A/network.json",
+      "storage_receipt": "results/P4-CHAT-001A/storage.json",
+      "profile_cleanup": {
+        "proven": true,
+        "deleted": true,
+        "no_reparse": true
+      },
+      "external_wire_transmissions": 0,
+      "loopback_transport_count": 1,
+      "sentinel_leak": null,
+      "observed_contract": {
+        "fragmented_stream": "REPRODUCED",
+        "ordered_fragments": true,
+        "duplicate_activation_suppressed": null,
+        "terminal_count": 1
+      }
+    },
+    {
+      "id": "P4-CHAT-003B",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-003B/observation.json",
+      "network_receipt": "results/P4-CHAT-003B/network.json",
+      "storage_receipt": "results/P4-CHAT-003B/storage.json",
+      "profile_cleanup": {
+        "proven": true,
+        "deleted": true,
+        "no_reparse": true
+      },
+      "external_wire_transmissions": 0,
+      "loopback_transport_count": 1,
+      "sentinel_leak": null,
+      "observed_contract": {
+        "fragmented_stream": "REPRODUCED",
+        "ordered_fragments": true,
+        "duplicate_activation_suppressed": true,
+        "terminal_count": 1
+      }
+    },
+    {
+      "id": "P4-CHAT-008A",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-008A/observation.json",
+      "network_receipt": "results/P4-CHAT-008A/network.json",
+      "storage_receipt": "results/P4-CHAT-008A/storage.json",
+      "profile_cleanup": {
+        "proven": true,
+        "deleted": true,
+        "no_reparse": true
+      },
+      "external_wire_transmissions": 0,
+      "loopback_transport_count": 0,
+      "sentinel_leak": null,
+      "observed_contract": {
+        "application_timeout": "ABSENT",
+        "pending_window_ms": 750,
+        "terminal_before_harness_abort": false,
+        "harness_abort_only": true
+      }
+    },
+    {
+      "id": "P4-CHAT-010A",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-010A/observation.json",
+      "network_receipt": "results/P4-CHAT-010A/network.json",
+      "storage_receipt": "results/P4-CHAT-010A/storage.json",
+      "profile_cleanup": {
+        "proven": true,
+        "deleted": true,
+        "no_reparse": true
+      },
+      "external_wire_transmissions": 0,
+      "loopback_transport_count": 1,
+      "sentinel_leak": null,
+      "observed_contract": {
+        "navigation": "BEFORE_FIRST_DELTA",
+        "client_close": "BEFORE_FIRST_DELTA_AND_TERMINAL",
+        "duplicate_assistant_terminal": false
+      }
+    },
+    {
+      "id": "P4-CHAT-010B",
+      "status": "PASS",
+      "observation_receipt": "results/P4-CHAT-010B/observation.json",
+      "network_receipt": "results/P4-CHAT-010B/network.json",
+      "storage_receipt": "results/P4-CHAT-010B/storage.json",
+      "profile_cleanup": {
+        "proven": true,
+        "deleted": true,
+        "no_reparse": true
+      },
+      "external_wire_transmissions": 0,
+      "loopback_transport_count": 1,
+      "sentinel_leak": null,
+      "observed_contract": {
+        "navigation": "AFTER_FIRST_DELTA",
+        "client_close": "AFTER_FIRST_DELTA_BEFORE_TERMINAL",
+        "late_delta_accepted": false,
+        "duplicate_assistant_terminal": false
+      }
+    },
+    {
+      "id": "P4-DEG-001A",
+      "status": "PASS",
+      "observation_receipt": "results/P4-DEG-001A/observation.json",
+      "network_receipt": "results/P4-DEG-001A/network.json",
+      "storage_receipt": "results/P4-DEG-001A/storage.json",
+      "profile_cleanup": {
+        "proven": true,
+        "deleted": true,
+        "no_reparse": true
+      },
+      "external_wire_transmissions": 0,
+      "loopback_transport_count": 0,
+      "sentinel_leak": null,
+      "observed_contract": {
+        "offline_recovery": "ABSENT",
+        "reload_failure": "ERR_INTERNET_DISCONNECTED_OR_CHROME_ERROR",
+        "service_worker": {
+          "ready": true,
+          "scope": "http://127.0.0.1:4184/docs/",
+          "script_url": "http://127.0.0.1:4184/docs/sw.js",
+          "cache_name": "freelattice-v5.79.22",
+          "cache_present": true,
+          "cache_entry_count": 174,
+          "cached_app_shell": true
+        },
+        "controller_before_offline": true,
+        "final_url_class": "chrome-error"
+      }
+    },
+    {
+      "id": "P4-ONB-001C",
+      "status": "PASS",
+      "observation_receipt": "results/P4-ONB-001C/observation.json",
+      "network_receipt": "results/P4-ONB-001C/network.json",
+      "storage_receipt": "results/P4-ONB-001C/storage.json",
+      "profile_cleanup": {
+        "proven": true,
+        "deleted": true,
+        "no_reparse": true
+      },
+      "external_wire_transmissions": 0,
+      "loopback_transport_count": 0,
+      "sentinel_leak": null,
+      "observed_contract": {
+        "invalid_configuration": "PERSISTED_AND_FAIL_OPEN_AFTER_TIMEOUT",
+        "sentinel_persisted_in_disposable_profile": true,
+        "provider_request_blocked_before_transmission": true,
+        "connected_ui_visible_after_failed_probe": true,
+        "onboarding_visible_after_reload": false
+      }
+    },
+    {
+      "id": "P4-RESP-001A",
+      "status": "PASS",
+      "observation_receipt": "results/P4-RESP-001A/observation.json",
+      "network_receipt": "results/P4-RESP-001A/network.json",
+      "storage_receipt": "results/P4-RESP-001A/storage.json",
+      "profile_cleanup": {
+        "proven": true,
+        "deleted": true,
+        "no_reparse": true
+      },
+      "external_wire_transmissions": 0,
+      "loopback_transport_count": 1,
+      "sentinel_leak": null,
+      "observed_contract": {
+        "fragmented_stream": "REPRODUCED",
+        "ordered_fragments": true,
+        "duplicate_activation_suppressed": null,
+        "terminal_count": 1
+      }
+    }
+  ],
+  "final_dispositions": [
+    {
+      "id": "P4-A11Y-001A",
+      "group": "P4-A11Y-001",
+      "original_status": "UNKNOWN",
+      "retest_status": "PASS",
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-A11Y-001B",
+      "group": "P4-A11Y-001",
+      "original_status": "UNKNOWN",
+      "retest_status": "PASS",
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-A11Y-001C",
+      "group": "P4-A11Y-001",
+      "original_status": "UNKNOWN",
+      "retest_status": "PASS",
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-001A",
+      "group": "P4-CHAT-001",
+      "original_status": "UNKNOWN",
+      "retest_status": "PASS",
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-002A",
+      "group": "P4-CHAT-002",
+      "original_status": "FAIL",
+      "retest_status": null,
+      "final_disposition": "ACCEPTED_DIVERGENCE"
+    },
+    {
+      "id": "P4-CHAT-003A",
+      "group": "P4-CHAT-003",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-003B",
+      "group": "P4-CHAT-003",
+      "original_status": "UNKNOWN",
+      "retest_status": "PASS",
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-004A",
+      "group": "P4-CHAT-004",
+      "original_status": "UNKNOWN",
+      "retest_status": null,
+      "final_disposition": "ACCEPTED_DIVERGENCE"
+    },
+    {
+      "id": "P4-CHAT-005A",
+      "group": "P4-CHAT-005",
+      "original_status": "UNKNOWN",
+      "retest_status": null,
+      "final_disposition": "ACCEPTED_DIVERGENCE"
+    },
+    {
+      "id": "P4-CHAT-005B",
+      "group": "P4-CHAT-005",
+      "original_status": "UNKNOWN",
+      "retest_status": null,
+      "final_disposition": "ACCEPTED_DIVERGENCE"
+    },
+    {
+      "id": "P4-CHAT-005C",
+      "group": "P4-CHAT-005",
+      "original_status": "UNKNOWN",
+      "retest_status": null,
+      "final_disposition": "ACCEPTED_DIVERGENCE"
+    },
+    {
+      "id": "P4-CHAT-006A",
+      "group": "P4-CHAT-006",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-006B",
+      "group": "P4-CHAT-006",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-007A",
+      "group": "P4-CHAT-007",
+      "original_status": "FAIL",
+      "retest_status": null,
+      "final_disposition": "ACCEPTED_DIVERGENCE"
+    },
+    {
+      "id": "P4-CHAT-007B",
+      "group": "P4-CHAT-007",
+      "original_status": "FAIL",
+      "retest_status": null,
+      "final_disposition": "ACCEPTED_DIVERGENCE"
+    },
+    {
+      "id": "P4-CHAT-008A",
+      "group": "P4-CHAT-008",
+      "original_status": "UNKNOWN",
+      "retest_status": "PASS",
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-008B",
+      "group": "P4-CHAT-008",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-009A",
+      "group": "P4-CHAT-009",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-009B",
+      "group": "P4-CHAT-009",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-009C",
+      "group": "P4-CHAT-009",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-009D",
+      "group": "P4-CHAT-009",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-009E",
+      "group": "P4-CHAT-009",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-010A",
+      "group": "P4-CHAT-010",
+      "original_status": "UNKNOWN",
+      "retest_status": "PASS",
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-CHAT-010B",
+      "group": "P4-CHAT-010",
+      "original_status": "UNKNOWN",
+      "retest_status": "PASS",
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-DEG-001A",
+      "group": "P4-DEG-001",
+      "original_status": "UNKNOWN",
+      "retest_status": "PASS",
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-EGR-001A",
+      "group": "P4-EGR-001",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-EGR-001B",
+      "group": "P4-EGR-001",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-EGR-001C",
+      "group": "P4-EGR-001",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-EGR-001D",
+      "group": "P4-EGR-001",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-EGR-001E",
+      "group": "P4-EGR-001",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-EGR-001F",
+      "group": "P4-EGR-001",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-EGR-001G",
+      "group": "P4-EGR-001",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-ONB-001A",
+      "group": "P4-ONB-001",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-ONB-001B",
+      "group": "P4-ONB-001",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-ONB-001C",
+      "group": "P4-ONB-001",
+      "original_status": "UNKNOWN",
+      "retest_status": "PASS",
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-RESP-001A",
+      "group": "P4-RESP-001",
+      "original_status": "UNKNOWN",
+      "retest_status": "PASS",
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-SIG-001A",
+      "group": "P4-SIG-001",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    },
+    {
+      "id": "P4-SIG-001B",
+      "group": "P4-SIG-001",
+      "original_status": "UNKNOWN",
+      "retest_status": null,
+      "final_disposition": "ACCEPTED_DIVERGENCE"
+    },
+    {
+      "id": "P4-SIG-001C",
+      "group": "P4-SIG-001",
+      "original_status": "PASS",
+      "retest_status": null,
+      "final_disposition": "PASS"
+    }
+  ],
+  "listener": {
+    "bind": "127.0.0.1",
+    "os_selected_port": true,
+    "run_owned": true,
+    "fixture_only": true,
+    "synthetic_only": true,
+    "external_egress": false,
+    "started": true,
+    "stopped": true,
+    "port_released": true,
+    "startup_receipt": "listener/startup.json",
+    "teardown_receipt": "listener/teardown.json"
+  },
+  "content_scan": {
+    "scanned": true,
+    "findings": 0
+  },
+  "independent_reproduction": {
+    "required": true,
+    "verdict": "GREEN",
+    "receipt": "independent-review.json"
+  }
+}

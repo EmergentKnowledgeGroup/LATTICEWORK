@@ -1,6 +1,6 @@
 # Work Claim — `LW-P4-RETEST-001`
 
-**Status:** Claimed
+**Status:** Completed — canonical and independent GREEN
 **Owner:** Codex root controller
 **Base commit:** `9ae0c54a6b6d76622cb2a89efee5bf909ff6858e`
 **Branch:** `reengineering/p4-characterization-retests`

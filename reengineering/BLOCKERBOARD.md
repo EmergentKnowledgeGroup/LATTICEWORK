@@ -10,7 +10,7 @@
 | `LW-BLK-006` | P1 | P7-P10 | ADR-006 is accepted; ADR-012 and gateway/LAN/worker/peer/Telegram security tests do not exist | Mock-only provider contracts may proceed; no listener | Maintainer/security lead | ADR-012 accepted plus required security tests | Keep every optional network service absent/disabled | OPEN |
 | `LW-BLK-007` | P1 | P9 | Cutover and capability retirement require explicit owner approval; ADR-009 has not started | All reversible migration and verification work | Maintainer | ADR-009 accepted after parity/migration/rollback/release evidence plus verbatim approval naming affected IDs | Keep legacy capability and route authoritative | OPEN |
 | `LW-BLK-008` | P0 | P4 | Phase 3 historical scope validators incorrectly extended through current HEAD/untracked state, causing legitimate later-phase files to fail 2 canonical controls | Exact phase-closed validator/test repair and additive active Phase 4 scope validator only | Codex root controller | 48 focused controls, 116 full repository controls, force-added staging rejection, add-then-delete retention, and independent guardrail GREEN without Phase 3 allowlist expansion | Revert control repair; do not widen allowlists or suppress failures | CLOSED |
-| `LW-BLK-009` | P1 | P4-P10 | The maintainer accepted eight confirmed baseline defects as divergences and authorized one run-owned loopback synthetic stream fixture; eleven cases still require bounded retest and independent reproduction | Execute only the retests frozen in `PHASE4_CHARACTERIZATION_AMENDMENT.md`; no candidate implementation | Codex root controller; independent QA reviewer | All 39 cases finish as original/new `PASS` or `ACCEPTED_DIVERGENCE`, with zero remaining retest/block and independent reproduction | Keep legacy default and Phase 3 packages inactive; preserve original evidence | OPEN |
+| `LW-BLK-009` | P1 | P4-P10 | The maintainer accepted eight confirmed baseline defects as divergences and authorized one run-owned loopback synthetic stream fixture | Retest only the eleven cases frozen in `PHASE4_CHARACTERIZATION_AMENDMENT.md`; no candidate implementation | Codex root controller; independent QA reviewer | Canonical and independent amended evidence reports 31 PASS, 8 ACCEPTED_DIVERGENCE, 0 BLOCKED; original hashes/statuses preserved; listener teardown and cleanup proven | Keep legacy default and Phase 3 packages inactive; preserve original evidence | CLOSED |
 | `LW-BLK-010` | P1 | P4-P10 | A corrected implementation packet is proposed but not accepted; it grants no implementation authority | Validate/review `PHASE4_IMPLEMENTATION_PACKET.md` only; no app/runtime imports, registration, activation, or cutover | Maintainer | `LW-P4-IMPL-PREFLIGHT-001` is independently GREEN and explicitly accepted after amended characterization GREEN | Keep legacy default; revert packet only; grant no implementation authority | OPEN |
 
 No blocker may be closed by weakening a test, hiding a capability, or relabeling required behavior.
@@ -24,7 +24,7 @@ not implement.
 `LW-BLK-008` is a control-plane defect, not permission to widen Phase 3 scope.
 Its repair must pin Phase 3 to a closed historical commit range and add a
 separate fail-closed Phase 4 active-scope control. `LW-BLK-009` and
-`LW-BLK-010` keep characterization and implementation authority separate.
+`LW-BLK-010` keeps characterization and implementation authority separate.
 
 ADR-004 through ADR-006 are accepted, but all three blockers remain open until
 their remaining evidence and later-decision conditions are independently

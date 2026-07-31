@@ -1,0 +1,34 @@
+{
+  "schema": "latticework.phase4.atomic-result.v1",
+  "group_id": "P4-CHAT-008",
+  "subcase_id": "P4-CHAT-008A",
+  "probe": "timeout",
+  "provider": "P4-PRV-OLLAMA",
+  "status": "PASS",
+  "evidence_label": "OBSERVED",
+  "profile_id": "P4-PROFILE-P4-CHAT-008A",
+  "fresh_profile": true,
+  "notes": [
+    "the exact primary request remained pending until the harness aborted it; this records timeout-contract absence, not timeout success"
+  ],
+  "request_count": 1,
+  "blocked_count": 5,
+  "terminal_count": 0,
+  "operation": {
+    "post_delta_retry": false,
+    "duplicate_terminal": false
+  },
+  "cleanup_status": "persistent-browser-context-closed",
+  "profile_path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-retest-existing-20260731T032407Z-835c82b9\\profiles\\P4-CHAT-008A",
+  "profile_empty_at_creation": true,
+  "profile_ownership_marker": "phase4-run-marker-v1",
+  "observed_contract": {
+    "application_timeout": "ABSENT",
+    "pending_window_ms": 750,
+    "terminal_before_harness_abort": false,
+    "harness_abort_only": true
+  },
+  "context_closed": true,
+  "fixture_request_observed": true,
+  "private_sentinel_leak": null
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "latticework.phase4.atomic-result.v1",
+  "group_id": "P4-A11Y-001",
+  "subcase_id": "P4-A11Y-001C",
+  "probe": "reduced-motion",
+  "provider": null,
+  "status": "PASS",
+  "evidence_label": "OBSERVED",
+  "profile_id": "P4-PROFILE-P4-A11Y-001C",
+  "fresh_profile": true,
+  "notes": [
+    "bounded accessibility mode observation completed with explicit absence fields where the baseline lacks semantics"
+  ],
+  "request_count": 0,
+  "blocked_count": 4,
+  "terminal_count": null,
+  "operation": {
+    "post_delta_retry": false,
+    "duplicate_terminal": false
+  },
+  "cleanup_status": "persistent-browser-context-closed",
+  "profile_path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-retest-existing-20260731T032407Z-835c82b9\\profiles\\P4-A11Y-001C",
+  "profile_empty_at_creation": true,
+  "profile_ownership_marker": "phase4-run-marker-v1",
+  "accessibility": {
+    "input_label": null,
+    "send_name": "Send ✦",
+    "live_regions": 0,
+    "signal_report_name": "Signal Report"
+  },
+  "observed_contract": {
+    "reduced_motion": "ACTIVE",
+    "controls": {
+      "active": true,
+      "css_rule_present": true,
+      "input_animation_duration": "1e-05s",
+      "input_transition_duration": "1e-05s"
+    }
+  },
+  "context_closed": true,
+  "fixture_request_observed": true,
+  "private_sentinel_leak": null
+}

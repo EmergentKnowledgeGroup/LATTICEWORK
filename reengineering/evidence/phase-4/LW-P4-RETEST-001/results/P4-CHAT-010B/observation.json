@@ -1,0 +1,105 @@
+{
+  "schema": "latticework.phase4.atomic-result.v1",
+  "group_id": "P4-CHAT-010",
+  "subcase_id": "P4-CHAT-010B",
+  "probe": "navigation-after-first-delta",
+  "provider": "P4-PRV-OLLAMA",
+  "status": "PASS",
+  "evidence_label": "OBSERVED",
+  "profile_id": "P4-PROFILE-P4-CHAT-010B",
+  "fresh_profile": true,
+  "notes": [],
+  "request_count": 1,
+  "blocked_count": 7,
+  "terminal_count": 0,
+  "operation": {
+    "post_delta_retry": false,
+    "duplicate_terminal": false
+  },
+  "cleanup_status": "persistent-browser-context-closed",
+  "profile_path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-retest-loopback-20260731T032407Z-835c82b9\\profiles\\P4-CHAT-010B",
+  "profile_empty_at_creation": true,
+  "profile_ownership_marker": "phase4-run-marker-v1",
+  "loopback_stream": {
+    "schema": "latticework.phase4-loopback-stream-receipt.v1",
+    "fixture_id": "phase4-fragmented-stream-v1",
+    "bind": "127.0.0.1",
+    "port": 60231,
+    "run_owned": true,
+    "synthetic_only": true,
+    "external_egress": false,
+    "session_id": "P4-CHAT-010B",
+    "request_received": true,
+    "request_shape": {
+      "keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream"
+      ],
+      "message_count": 2,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "stream": true
+    },
+    "fragment_count": 1,
+    "terminal_emitted": false,
+    "closed": true,
+    "closed_before_first_delta": false,
+    "closed_before_terminal": true,
+    "events": [
+      {
+        "sequence": 20,
+        "event": "session-armed",
+        "monotonic_ms": 18549.9478,
+        "session_id": "P4-CHAT-010B"
+      },
+      {
+        "sequence": 21,
+        "event": "request-accepted",
+        "monotonic_ms": 18925.7943,
+        "session_id": "P4-CHAT-010B",
+        "request_shape": {
+          "keys": [
+            "max_tokens",
+            "messages",
+            "model",
+            "stream"
+          ],
+          "message_count": 2,
+          "roles": [
+            "system",
+            "user"
+          ],
+          "stream": true
+        }
+      },
+      {
+        "sequence": 22,
+        "event": "fragment-emitted",
+        "monotonic_ms": 18926.2006,
+        "session_id": "P4-CHAT-010B",
+        "fragment_index": 1
+      },
+      {
+        "sequence": 23,
+        "event": "connection-closed",
+        "monotonic_ms": 18972.233,
+        "session_id": "P4-CHAT-010B",
+        "before_first_delta": false,
+        "before_terminal": true
+      }
+    ]
+  },
+  "observed_contract": {
+    "navigation": "AFTER_FIRST_DELTA",
+    "client_close": "AFTER_FIRST_DELTA_BEFORE_TERMINAL",
+    "late_delta_accepted": false,
+    "duplicate_assistant_terminal": false
+  },
+  "context_closed": true,
+  "fixture_request_observed": true,
+  "private_sentinel_leak": null
+}

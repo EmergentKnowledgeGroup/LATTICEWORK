@@ -1,0 +1,40 @@
+{
+  "allowed_origin": "http://127.0.0.1:4184",
+  "expected_target": "http://localhost:11434/v1/chat/completions",
+  "expected_requests": [],
+  "fixture_probes": [],
+  "blocked": [
+    {
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "resource_type": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:1234/v1/models",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "resource_type": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3141/",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "resource_type": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3141/",
+      "resource_type": "fetch"
+    }
+  ],
+  "blocked_websockets": [],
+  "console": []
+}

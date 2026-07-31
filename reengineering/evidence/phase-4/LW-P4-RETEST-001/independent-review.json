@@ -1,0 +1,115 @@
+{
+  "schema": "latticework.phase4-amended-independent-review.v1",
+  "verdict": "GREEN",
+  "reviewer": "Codex independent clean-worktree reviewer final v3",
+  "reviewed_at": "2026-07-31T03:22:54.2146945Z",
+  "candidate_sha": "55e3731ea1482f37b242da6dc1af8d8181624e9a",
+  "original_summary_sha256": "49f9913f20d99109900bb30c50afc0bec93c4209dfe38fe0d9a4a9006660dbaf",
+  "original_manifest_sha256": "27badc2f9c4497084006539ea9e0805d9617225a8518b6a508aa0c67dcaf1564",
+  "original_status_drift": 0,
+  "clean_start": true,
+  "clean_end": true,
+  "clean_end_scope": {
+    "tracked_changes": 0,
+    "staged_changes": 0,
+    "unexpected_untracked_paths": 0,
+    "expected_untracked_evidence_paths": [
+      "reengineering/evidence/phase-4/LW-P4-RETEST-001/"
+    ]
+  },
+  "canonical_runner": {
+    "path": "tools/reengineering/run-phase4-amendment-retests.ps1",
+    "invocations": 1,
+    "retries": 0,
+    "started_at": "2026-07-31T03:19:02.8965085Z",
+    "ended_at": "2026-07-31T03:20:08.8817836Z",
+    "exit_code": 0,
+    "existing_static_port": 55172,
+    "loopback_static_port": 55173,
+    "stdout_log": "Z:\\LW4V3_f3af7a\\runtime\\tmp\\independent-final-v3-runner\\canonical-runner.stdout.log",
+    "stdout_sha256": "78b9f763ab8f4dac8fad49e21933f7e0ed6c5105d9885c1e71396a5187791bf5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "controls": {
+    "pass": 32,
+    "fail": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "browser_batches": {
+    "existing_harness": {
+      "pass": 6,
+      "fail": 0,
+      "retries": 0,
+      "duration": "36.6s"
+    },
+    "loopback_harness": {
+      "pass": 5,
+      "fail": 0,
+      "retries": 0,
+      "duration": "25.8s"
+    }
+  },
+  "atomic_attachments": {
+    "required_cases": 11,
+    "case_directories_inspected": 11,
+    "json_attachments_inspected": 33,
+    "pass": 11,
+    "fail": 0,
+    "missing": 0,
+    "profile_lifecycle_failures": 0,
+    "identity_failures": 0,
+    "request_count_failures": 0,
+    "sentinel_failures": 0
+  },
+  "final_counts": {
+    "PASS": 31,
+    "ACCEPTED_DIVERGENCE": 8,
+    "BLOCKED": 0
+  },
+  "hash_validation": {
+    "promoted_manifest_artifacts": 41,
+    "artifact_hash_failures": 0,
+    "artifact_byte_count_failures": 0,
+    "promoted_summary_sha256": "b53ad04bb05b76e0711d14835425a6ea6b3ba08387c107536ea57dc609d29e2c",
+    "promoted_manifest_sha256": "32aa3d6cfe0cdf485e0c904a26743125ab996c678b3e6d41eb0bd31d99ea1ae7",
+    "promoted_conditional_review_sha256": "d3ba11319fab866ca557fcc0d5f8729169a288da524a26233d32711c922f54b9"
+  },
+  "listener_safety": {
+    "status": "PROVEN",
+    "bind": "127.0.0.1",
+    "port": 56773,
+    "os_selected_port": true,
+    "run_owned": true,
+    "fixture_only": true,
+    "synthetic_only": true,
+    "external_egress": false,
+    "started": true,
+    "stopped": true,
+    "port_rebind_proven": true,
+    "all_three_ports_live_rebind_checked": true
+  },
+  "content_and_cleanup": {
+    "sentinel_in_promoted_evidence": false,
+    "content_findings": 0,
+    "disposable_profiles_deleted": true,
+    "run_roots_deleted": true,
+    "qa_processes_remaining": 0
+  },
+  "local_isolation": {
+    "root_dependencies": "Z:\\LW4V3_f3af7a\\node_modules",
+    "root_workspace_links_disabled": true,
+    "characterization_dependencies": "Z:\\LW4V3_f3af7a\\tests\\characterization\\node_modules",
+    "playwright_browser_cache": "Z:\\LW4V3_f3af7a\\runtime\\tmp\\phase3-playwright-browsers",
+    "reparse_points": 0,
+    "shared_node_modules_used": false,
+    "shared_browser_cache_used": false,
+    "all_temp_and_cache_on_z": true
+  },
+  "worktree": {
+    "path": "Z:\\LW4V3_f3af7a",
+    "head": "55e3731ea1482f37b242da6dc1af8d8181624e9a",
+    "detached": true,
+    "left_in_place": true
+  }
+}

@@ -68,6 +68,8 @@ test("active scope rejects unauthorized tracked and untracked path classes", () 
       "reengineering/PHASE4_PREFLIGHT.md",
       "runtime/tmp/phase4-characterization/run-id/raw.json",
       "docs/agents/claims/LW-P4-CHAR-001.md",
+      "docs/agents/handoffs/LW-P4-RETEST-001.md",
+      "docs/TESTING_AND_VERIFICATION.md",
       "tests/characterization/specs/phase4-chat.spec.mjs",
       "tests/characterization/support/phase4-loopback-stream.mjs",
       "tools/reengineering/validate-phase4-characterization.mjs",

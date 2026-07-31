@@ -1,0 +1,137 @@
+{
+  "schema": "latticework.phase4.atomic-result.v1",
+  "group_id": "P4-RESP-001",
+  "subcase_id": "P4-RESP-001A",
+  "probe": "mobile-bounded-flow",
+  "provider": "P4-PRV-OLLAMA",
+  "status": "PASS",
+  "evidence_label": "OBSERVED",
+  "profile_id": "P4-PROFILE-P4-RESP-001A",
+  "fresh_profile": true,
+  "notes": [],
+  "request_count": 1,
+  "blocked_count": 5,
+  "terminal_count": 1,
+  "operation": {
+    "post_delta_retry": false,
+    "duplicate_terminal": false
+  },
+  "cleanup_status": "persistent-browser-context-closed",
+  "profile_path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-retest-loopback-20260731T032407Z-835c82b9\\profiles\\P4-RESP-001A",
+  "profile_empty_at_creation": true,
+  "profile_ownership_marker": "phase4-run-marker-v1",
+  "geometry": {
+    "overflow": false,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "input": {
+      "left": 107.453125,
+      "right": 369,
+      "width": 261.546875,
+      "height": 50
+    },
+    "send": {
+      "left": 14.94827651977539,
+      "right": 93.44235610961914,
+      "width": 78.49407958984375,
+      "height": 44.058074951171875
+    }
+  },
+  "loopback_stream": {
+    "schema": "latticework.phase4-loopback-stream-receipt.v1",
+    "fixture_id": "phase4-fragmented-stream-v1",
+    "bind": "127.0.0.1",
+    "port": 60231,
+    "run_owned": true,
+    "synthetic_only": true,
+    "external_egress": false,
+    "session_id": "P4-RESP-001A",
+    "request_received": true,
+    "request_shape": {
+      "keys": [
+        "max_tokens",
+        "messages",
+        "model",
+        "stream"
+      ],
+      "message_count": 2,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "stream": true
+    },
+    "fragment_count": 2,
+    "terminal_emitted": true,
+    "closed": true,
+    "closed_before_first_delta": false,
+    "closed_before_terminal": false,
+    "events": [
+      {
+        "sequence": 25,
+        "event": "session-armed",
+        "monotonic_ms": 23618.5227,
+        "session_id": "P4-RESP-001A"
+      },
+      {
+        "sequence": 26,
+        "event": "request-accepted",
+        "monotonic_ms": 24078.9784,
+        "session_id": "P4-RESP-001A",
+        "request_shape": {
+          "keys": [
+            "max_tokens",
+            "messages",
+            "model",
+            "stream"
+          ],
+          "message_count": 2,
+          "roles": [
+            "system",
+            "user"
+          ],
+          "stream": true
+        }
+      },
+      {
+        "sequence": 27,
+        "event": "fragment-emitted",
+        "monotonic_ms": 24079.1432,
+        "session_id": "P4-RESP-001A",
+        "fragment_index": 1
+      },
+      {
+        "sequence": 28,
+        "event": "fragment-emitted",
+        "monotonic_ms": 24103.4347,
+        "session_id": "P4-RESP-001A",
+        "fragment_index": 2
+      },
+      {
+        "sequence": 29,
+        "event": "terminal-emitted",
+        "monotonic_ms": 24103.7283,
+        "session_id": "P4-RESP-001A"
+      },
+      {
+        "sequence": 30,
+        "event": "connection-closed",
+        "monotonic_ms": 24103.8995,
+        "session_id": "P4-RESP-001A",
+        "before_first_delta": false,
+        "before_terminal": false
+      }
+    ]
+  },
+  "observed_contract": {
+    "fragmented_stream": "REPRODUCED",
+    "ordered_fragments": true,
+    "duplicate_activation_suppressed": null,
+    "terminal_count": 1
+  },
+  "context_closed": true,
+  "fixture_request_observed": true,
+  "private_sentinel_leak": null
+}
