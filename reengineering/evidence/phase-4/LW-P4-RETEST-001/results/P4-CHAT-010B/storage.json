@@ -1,0 +1,167 @@
+{
+  "databases": [
+    {
+      "name": "FreeLatticeCore",
+      "version": 1,
+      "stores": []
+    },
+    {
+      "name": "FreeLatticeDB",
+      "version": 3,
+      "stores": [
+        "conversations",
+        "memoryIndex",
+        "messages",
+        "meta"
+      ]
+    },
+    {
+      "name": "FreeLatticeEducation",
+      "version": 1,
+      "stores": []
+    },
+    {
+      "name": "FreeLatticeEvolution",
+      "version": 1,
+      "stores": [
+        "luminosStates"
+      ]
+    },
+    {
+      "name": "FreeLatticeGardenDreaming",
+      "version": 1,
+      "stores": [
+        "AffinityMatrix",
+        "DreamLog",
+        "GardenDreams"
+      ]
+    },
+    {
+      "name": "FreeLatticeGardenMemory",
+      "version": 1,
+      "stores": [
+        "GardenMemory"
+      ]
+    },
+    {
+      "name": "FreeLatticeIdentity",
+      "version": 1,
+      "stores": [
+        "MeshIdentity"
+      ]
+    },
+    {
+      "name": "FreeLatticeLetters",
+      "version": 1,
+      "stores": [
+        "letters"
+      ]
+    },
+    {
+      "name": "FreeLatticeMemory",
+      "version": 1,
+      "stores": [
+        "conversations"
+      ]
+    },
+    {
+      "name": "FreeLatticeMemoryBridge",
+      "version": 1,
+      "stores": [
+        "understanding"
+      ]
+    },
+    {
+      "name": "FreeLatticePresence",
+      "version": 1,
+      "stores": [
+        "visitors"
+      ]
+    },
+    {
+      "name": "FreeLatticeQuestionCorner",
+      "version": 1,
+      "stores": []
+    },
+    {
+      "name": "FreeLatticeSkills",
+      "version": 1,
+      "stores": [
+        "skills"
+      ]
+    },
+    {
+      "name": "FreeLatticeWallet",
+      "version": 1,
+      "stores": [
+        "LatticeLedger",
+        "WalletMeta"
+      ]
+    },
+    {
+      "name": "LatticeChain",
+      "version": 1,
+      "stores": [
+        "chain"
+      ]
+    },
+    {
+      "name": "LatticeHandshakes",
+      "version": 1,
+      "stores": [
+        "handshakes"
+      ]
+    },
+    {
+      "name": "LatticeMemory",
+      "version": 1,
+      "stores": [
+        "pulses"
+      ]
+    },
+    {
+      "name": "SophiaEngine",
+      "version": 1,
+      "stores": [
+        "configurations",
+        "identities",
+        "resonanceLog"
+      ]
+    },
+    {
+      "name": "WallOfPresence",
+      "version": 1,
+      "stores": [
+        "marks"
+      ]
+    }
+  ],
+  "local_storage_keys": [
+    "fl-has-visited",
+    "fl-last-tab",
+    "fl-onboarding-complete",
+    "fl-welcomed",
+    "fl_aiEmotions",
+    "fl_aiSelfIdentity",
+    "fl_aurora_equation_v1",
+    "fl_customEndpoint",
+    "fl_first_message_sent",
+    "fl_isLocal",
+    "fl_lan_friendly_name",
+    "fl_lan_peer_id",
+    "fl_lastActivity",
+    "fl_memory_core_v1",
+    "fl_meshNodeId",
+    "fl_modelSource",
+    "fl_ollamaModel",
+    "fl_onboardingComplete",
+    "fl_privacy",
+    "fl_provider",
+    "fl_qv_revise_to_annotate_migrated_v5_56_1",
+    "fl_trustEMA",
+    "fl_vault_msg_count",
+    "fl_voice_documents",
+    "latticePoints"
+  ],
+  "session_storage_keys": []
+}

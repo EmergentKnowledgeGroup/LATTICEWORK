@@ -9,8 +9,11 @@
     "preview": "vite preview --host 127.0.0.1 --strictPort"
   },
   "dependencies": {
+    "@latticework/chat": "0.0.0",
     "@latticework/contracts": "0.0.0",
     "@latticework/kernel": "0.0.0",
+    "@latticework/providers": "0.0.0",
+    "@latticework/storage": "0.0.0",
     "lit": "3.3.3"
   }
 }

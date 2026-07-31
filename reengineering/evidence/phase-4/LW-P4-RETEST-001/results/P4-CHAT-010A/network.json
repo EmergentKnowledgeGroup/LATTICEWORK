@@ -1,0 +1,71 @@
+{
+  "allowed_origin": "http://127.0.0.1:4185",
+  "expected_target": "http://127.0.0.1:60231/v1/chat/completions",
+  "expected_requests": [
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:60231/v1/chat/completions",
+      "header_names": [
+        "accept",
+        "accept-language",
+        "content-type",
+        "origin",
+        "referer",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform",
+        "user-agent"
+      ],
+      "payload_shape": {
+        "keys": [
+          "max_tokens",
+          "messages",
+          "model",
+          "stream"
+        ],
+        "message_count": 2,
+        "roles": [
+          "system",
+          "user"
+        ],
+        "stream": true,
+        "model_present": true
+      }
+    }
+  ],
+  "fixture_probes": [],
+  "blocked": [
+    {
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "resource_type": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:1234/v1/models",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:3141/",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://raw.githubusercontent.com/Chaos2Cured/FreeLattice/main/version.json",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://freelattice.com/version.json",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "resource_type": "stylesheet"
+    }
+  ],
+  "blocked_websockets": [],
+  "console": []
+}

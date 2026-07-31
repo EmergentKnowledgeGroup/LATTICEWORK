@@ -1,0 +1,9 @@
+
+Running 5 tests using 1 worker
+
+[1/5] specs\phase4-chat.spec.mjs:837:3 › P4-CHAT-001A fragmented-success
+[2/5] specs\phase4-chat.spec.mjs:837:3 › P4-CHAT-003B duplicate-activation
+[3/5] specs\phase4-chat.spec.mjs:837:3 › P4-CHAT-010A navigation-before-first-delta
+[4/5] specs\phase4-chat.spec.mjs:837:3 › P4-CHAT-010B navigation-after-first-delta
+[5/5] specs\phase4-chat.spec.mjs:837:3 › P4-RESP-001A mobile-bounded-flow
+  5 passed (26.1s)

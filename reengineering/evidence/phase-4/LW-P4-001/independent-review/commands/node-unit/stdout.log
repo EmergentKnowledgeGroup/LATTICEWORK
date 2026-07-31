@@ -1,0 +1,99 @@
+
+> latticework@0.0.0 p4:test
+> npm run test --workspace @latticework/chat && npm run test:fixture --workspace @latticework/phase4-browser && node --test tests/reengineering/phase4-amendment.test.mjs tests/reengineering/phase4-implementation-scope.test.mjs
+
+
+> @latticework/chat@0.0.0 test
+> node --test src/*.test.mjs
+
+✔ persists the synthetic user before dispatch and commits assistant content only after completed (1.8595ms)
+✔ failed turns retain user and content-free terminal metadata with a sanitized error (1.033ms)
+✔ cancel before dispatch persists the user and one cancellation terminal without calling the adapter seam (2.1272ms)
+✔ cancel after a delta aborts one controller, emits one terminal, and ignores late or duplicate provider events (17.5672ms)
+✔ hydrates persisted candidate state without dispatching another provider operation (0.3505ms)
+✔ a hydrated conversation retains prior candidate messages when the next turn is persisted (0.4406ms)
+✔ hydrate cannot publish a stale read over an overlapping send (14.7034ms)
+✔ sequential sends append both completed turns instead of overwriting the conversation (0.442ms)
+✔ repository read failure settles as an unsaved failure without provider dispatch (0.9224ms)
+✔ initial user write failure settles as an unsaved failure without provider dispatch (0.605ms)
+✔ terminal write failure settles as an unsaved failure after one provider dispatch (0.3659ms)
+✔ overlapping sends to one conversation retain every user and assistant message (1.1922ms)
+✔ creates one distinct AbortController signal per operation and never retries or falls back (0.3378ms)
+✔ a provider stream exhausted without a terminal settles as an internal failure (0.2048ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 131.2701
+
+> @latticework/phase4-browser@0.0.0 test:fixture
+> node --test support/synthetic-stream-fixture.test.mjs
+
+✔ synthetic stream fixture is exact-loopback, synthetic-only, and explicitly releases its port (11.5581ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 83.7051
+✔ accepts the locked no-runtime amendment and packet (2.0823ms)
+✔ rejects removal of accepted implementation authority (2.7103ms)
+✔ rejects real provider traffic authority (1.7792ms)
+✔ rejects deployment authority (2.7851ms)
+✔ rejects a wildcard listener (2.0358ms)
+✔ rejects a fixed listener port (1.8838ms)
+✔ rejects an application listener (2.0915ms)
+✔ rejects a non-fixture amendment listener (1.573ms)
+✔ rejects a non-synthetic packet listener (1.8808ms)
+✔ rejects divergence drift (2.207ms)
+✔ rejects a default candidate entrypoint (1.6358ms)
+✔ rejects owned path drift (1.5245ms)
+✔ rejects protected path drift (1.7947ms)
+✔ canonical accepted packet and active implementation range are valid (900.6894ms)
+✔ Phase 3 boundary stays pinned to its accepted terminal on later descendants (124.5739ms)
+✔ protected paths are rejected even if broad ownership could match (0.2203ms)
+✔ rejects one unowned path (0.8852ms)
+✔ packet drift does not suppress independent scope failures (2.1073ms)
+✔ rejects one protected path independently (0.4726ms)
+✔ rejects packet drift: implementation-authority (1.6402ms)
+✔ rejects packet drift: application-listener (1.1593ms)
+✔ rejects packet drift: test-listener (1.4869ms)
+✔ rejects packet drift: wildcard-bind (2.2321ms)
+✔ rejects packet drift: fixed-port (1.8424ms)
+✔ rejects packet drift: listener-egress (1.3878ms)
+✔ rejects packet drift: browser-harness-port (1.0905ms)
+✔ rejects packet drift: real-provider (0.8656ms)
+✔ rejects packet drift: real-data (0.8131ms)
+✔ rejects packet drift: real-credentials (1.097ms)
+✔ rejects packet drift: activation (1.5817ms)
+✔ rejects packet drift: deployment (1.0707ms)
+✔ rejects packet drift: cutover (1.0663ms)
+✔ rejects omitted narrow existing-file ownership (1.0718ms)
+✔ rejects protected-array drift (0.8764ms)
+✔ rejects candidate source primitive: fetch (1.0813ms)
+✔ rejects candidate source primitive: websocket (1.0183ms)
+✔ rejects candidate source primitive: ambient-env (1.3495ms)
+✔ rejects candidate source primitive: migration (1.1138ms)
+✔ rejects candidate source primitive: deep-import (0.98ms)
+✔ rejects candidate source primitive: application-listen (1.0074ms)
+✔ accepts only the exact synthetic loopback port-zero listener shape (1.0234ms)
+✔ rejects a test listener without an explicit close lifecycle (1.0547ms)
+✔ rejects unsafe test-listener source (1.32ms)
+✔ CLI rejects base or scope overrides (160.2816ms)
+✔ Playwright configuration honors the verifier-selected loopback port (351.7382ms)
+✔ Playwright harness creates and removes its contained profile root (0.2956ms)
+✔ Playwright configuration rejects an invalid verifier port (355.4928ms)
+✔ Phase 4 verification runner pins the complete bounded evidence gate (0.4408ms)
+ℹ tests 48
+ℹ suites 0
+ℹ pass 48
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2002.2862

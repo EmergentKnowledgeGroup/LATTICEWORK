@@ -26,10 +26,10 @@ LATTICEWORK must not be described as a drop-in replacement until the required le
 |---|---|---:|---|---|
 | HTTP launch, first run, and skip | `docs/app.html` | `C2` | [Phase 1 summary](../reengineering/evidence/phase-1/LW-P1-001/summary.json) | Pinned Chromium fixture against the immutable baseline; provider setup is not exercised |
 | Edge and direct-file launch | `index.html`, `app.html`, `docs/app.html`, start scripts | `C1` | [Phase 0 browser receipt](../reengineering/evidence/phase-0/LW-P0-003-browser/README.md) | Bounded first-render observations only |
-| Local model connection | Ollama, LM Studio, custom OpenAI-compatible source paths | `C0` | [Phase 4 blocked summary](../reengineering/evidence/phase-4/LW-P4-CHAR-001/summary.json) | Exact Ollama fixture request was intercepted, but timed fragmentation is UNKNOWN and no real provider was contacted |
-| Cloud provider connection | provider definitions in primary runtime | `D / C0` | [Phase 4 blocked summary](../reengineering/evidence/phase-4/LW-P4-CHAR-001/summary.json) | OpenAI-to-Groq dispatch is an accepted baseline divergence; real-provider compatibility is untested |
+| Local model connection | Ollama, LM Studio, custom OpenAI-compatible source paths | `C2` | [Phase 4 amended summary](../reengineering/evidence/phase-4/LW-P4-RETEST-001/summary.json) | Synthetic exact-Ollama caller behavior and timed fragmentation are characterized; no real provider was contacted |
+| Cloud provider connection | provider definitions in primary runtime | `D / C0` | [Phase 4 amended summary](../reengineering/evidence/phase-4/LW-P4-RETEST-001/summary.json) | OpenAI-to-Groq dispatch is an accepted baseline divergence; real-provider compatibility remains untested |
 | Chat shell | primary runtime Chat panel | `C2` | [Phase 1 summary](../reengineering/evidence/phase-1/LW-P1-001/summary.json) | Shell and unsent-input privacy boundary only |
-| Chat send, stream, cancel, and retry | primary runtime chat/send globals | `D / C0` | [Phase 4 blocked summary](../reengineering/evidence/phase-4/LW-P4-CHAR-001/summary.json) | Missing visible cancellation is an accepted divergence; eleven bounded retests and candidate proof remain |
+| Chat send, stream, cancel, and retry | primary runtime chat/send globals | `D / C2` | [Phase 4 amended summary](../reengineering/evidence/phase-4/LW-P4-RETEST-001/summary.json) | Stream/order/navigation behavior is characterized; missing visible cancellation is an accepted divergence; candidate proof remains |
 | Conversation persistence | IndexedDB/localStorage call sites | `C0` | [storage inventory](../reengineering/evidence/phase-0/LW-M0-INV-001/storage-identifiers.csv) | Schema, retention, and recovery unverified |
 | Fresh storage initialization shape | localStorage, service worker/cache, IndexedDB databases and stores | `C2` | [runtime snapshot](../reengineering/evidence/phase-1/LW-P1-001/artifacts/shell-and-storage/runtime-snapshot.json) | Names/versions/stores only; values, retention, migration, and recovery remain unverified |
 | Identity or continuity behavior | identity, key, Merkle, Garden/Core source paths | `C0` | [security map](../reengineering/SECURITY_BOUNDARY_MAP.md) | Cryptographic semantics unverified |
@@ -43,7 +43,7 @@ LATTICEWORK must not be described as a drop-in replacement until the required le
 | Import and export | file, backup, restore source paths | `C0` | [behavior JSON](../reengineering/evidence/phase-0/LW-M0-BEH-001/behavior-boundary-map.json) | Formats and malformed-input behavior unverified |
 | Stored-data migration | legacy plaintext/encrypted credential and store paths | `C0` | [data inventory](../reengineering/DATA_INVENTORY.md) | No candidate migration exists |
 | Mobile Garden behavior | Garden at 390 × 844 | `C2` | [geometry receipt](../reengineering/evidence/phase-1/LW-P1-001/artifacts/mobile/mobile-overlap.json) | One Chromium viewport; the `✦ Presence` role button overlaps the Garden title |
-| Accessibility | semantic/control source hints | `C0` | [Phase 4 blocked summary](../reengineering/evidence/phase-4/LW-P4-CHAR-001/summary.json) | Keyboard, forced-colors, and reduced-motion semantics captured; primary Chat live-region contract remains UNKNOWN |
+| Accessibility | semantic/control source hints | `C2` | [Phase 4 amended summary](../reengineering/evidence/phase-4/LW-P4-RETEST-001/summary.json) | Keyboard order, accessible names, forced-colors, and reduced-motion behavior are characterized; absent input label/live region are observed upstream behavior |
 | Signal Report open/copy | Chat diagnostics modal and clipboard action | `C2` | [Phase 1 summary](../reengineering/evidence/phase-1/LW-P1-001/summary.json) | Synthetic unsent text is excluded from the report; broader failure/recovery remains uncharacterized |
 
 C1 and C2 rows are narrowly bounded browser paths. They are not full capability
@@ -59,12 +59,18 @@ one worker, zero retries, exact in-browser provider interception, and denied
 external egress. The result is `20 PASS`, `16 UNKNOWN`, `3 FAIL`, and
 `0 CONDITIONAL`.
 
-The strict GREEN validator correctly rejects the bundle. The visible OpenAI
-choice dispatches the Groq Chat Completions endpoint; the primary Chat exposes
-no visible cancel control; timed fragmentation, several reload/race cases, and
-the complete accessibility contract remain unresolved under the current
-no-listener packet. These observations do not advance any broad compatibility
-row and do not authorize candidate implementation.
+The immutable original bundle remains the blocked historical receipt. The
+accepted amendment documents eight confirmed baseline defects as divergences
+and retests the remaining eleven observations without rewriting any original
+status or hash.
+
+**VERIFIED:** `LW-P4-RETEST-001` completes at `31 PASS`,
+`8 ACCEPTED_DIVERGENCE`, and `0 BLOCKED`. The run-owned synthetic stream
+fixture was exact-loopback, OS-port-selected, no-egress, and fully torn down.
+Independent clean-worktree QA reproduced the same result. This advances only
+the narrowly named C2 rows above; it does not establish real-provider
+compatibility or authorize candidate implementation, activation, deployment,
+or cutover.
 
 ## Candidate-only foundation evidence
 
@@ -114,6 +120,35 @@ provider protocols, persisted Chat effects, legacy import/export formats, and
 local proxy behavior remain `C0`. No candidate package is registered into the
 application, and no route, read owner, provider selection, or feature behavior
 has changed.
+
+## Phase 4 non-default primary-Chat candidate
+
+**VERIFIED:** `/p4.html` exercises a synthetic-only Chat controller through the
+accepted candidate repository and two deterministic in-process provider
+shapes. Canonical and clean detached-worktree evidence at
+`e65ca81940d50eabd5bb72a403deab3bf37bea93` proves:
+
+- sequential user/assistant turns append and survive a warm online reload;
+- user content persists before provider dispatch;
+- assistant fragments persist only after `completed`;
+- overlapping send/send and send/hydrate operations cannot replace newer
+  candidate state with a stale read;
+- repository read/write failures settle with sanitized `not-saved` metadata;
+- pre-dispatch and post-delta cancellation never retain partial assistant
+  content;
+- failure/cancellation receipts contain safe metadata, not prompt/response
+  text;
+- retry and fallback counts remain zero;
+- mock-local and mock-cloud selection, mobile layout, keyboard order,
+  forced-colors, reduced-motion, redacted diagnostics, and unchanged `/`
+  behavior pass the active browser harness.
+
+This is not a compatibility upgrade for the legacy Chat surface. It uses no
+real conversation records, provider protocols, credentials, migration,
+service worker, listener, activation, deployment, or cutover. Warm offline
+reload remains unclaimed because the accepted packet authorizes no service
+worker. The eight accepted upstream defects remain documented divergences, not
+silently redefined behavior.
 
 ## Compatibility rules
 

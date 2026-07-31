@@ -1,0 +1,10 @@
+
+Running 6 tests using 1 worker
+
+[1/6] specs\phase4-chat.spec.mjs:837:3 › P4-ONB-001C invalid-configuration-reload
+[2/6] specs\phase4-chat.spec.mjs:837:3 › P4-CHAT-008A timeout
+[3/6] specs\phase4-chat.spec.mjs:837:3 › P4-A11Y-001A keyboard-focus-name-live-region
+[4/6] specs\phase4-chat.spec.mjs:837:3 › P4-A11Y-001B forced-colors
+[5/6] specs\phase4-chat.spec.mjs:837:3 › P4-A11Y-001C reduced-motion
+[6/6] specs\phase4-chat.spec.mjs:837:3 › P4-DEG-001A warm-offline-reload
+  6 passed (37.1s)

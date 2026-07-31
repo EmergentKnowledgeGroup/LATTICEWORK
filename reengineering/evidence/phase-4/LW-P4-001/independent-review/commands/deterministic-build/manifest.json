@@ -1,0 +1,51 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P4-001-deterministic-build",
+  "command": [
+    "node.exe",
+    "tools/reengineering/verify-phase2-build.mjs",
+    "--workspace-root",
+    "Z:\\LATTICEWORK_QA_e65ca81_P4FIX",
+    "--first",
+    "Z:\\LATTICEWORK_QA_e65ca81_P4FIX\\output\\lw-p2-001\\web",
+    "--second",
+    "Z:\\LATTICEWORK_QA_e65ca81_P4FIX\\runtime\\tmp\\phase4-verification-4294\\build-2",
+    "--output",
+    "Z:\\LATTICEWORK_QA_e65ca81_P4FIX\\runtime\\tmp\\phase4-independent-review-4294\\phase2-build-comparison.json"
+  ],
+  "command_display": "\"node.exe\" \"tools/reengineering/verify-phase2-build.mjs\" \"--workspace-root\" \"Z:\\\\LATTICEWORK_QA_e65ca81_P4FIX\" \"--first\" \"Z:\\\\LATTICEWORK_QA_e65ca81_P4FIX\\\\output\\\\lw-p2-001\\\\web\" \"--second\" \"Z:\\\\LATTICEWORK_QA_e65ca81_P4FIX\\\\runtime\\\\tmp\\\\phase4-verification-4294\\\\build-2\" \"--output\" \"Z:\\\\LATTICEWORK_QA_e65ca81_P4FIX\\\\runtime\\\\tmp\\\\phase4-independent-review-4294\\\\phase2-build-comparison.json\"",
+  "cwd": "Z:\\LATTICEWORK_QA_e65ca81_P4FIX",
+  "started_at": "2026-07-31T05:06:33.949Z",
+  "ended_at": "2026-07-31T05:06:34.067Z",
+  "duration_ms": 117.9369,
+  "timeout_ms": 300000,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "e65ca81940d50eabd5bb72a403deab3bf37bea93",
+  "repository": {
+    "head": "e65ca81940d50eabd5bb72a403deab3bf37bea93",
+    "status": "## HEAD (no branch)"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 2021,
+      "sha256": "bfd4fde4f4236fcc49aa622349a27156fbde19763eda3cb51fca606bfdd694ad"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

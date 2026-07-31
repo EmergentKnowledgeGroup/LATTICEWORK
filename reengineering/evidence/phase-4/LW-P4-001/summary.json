@@ -1,0 +1,56 @@
+{
+    "schema":  "latticework.phase4-summary.v1",
+    "evidence_label":  "VERIFIED",
+    "work_id":  "LW-P4-001",
+    "valid":  true,
+    "status":  "GREEN",
+    "baseline_sha":  "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "implementation_base_commit":  "faf32dbaf8159e8499421fa68d9fba4bede0fdc9",
+    "candidate_sha":  "e65ca81940d50eabd5bb72a403deab3bf37bea93",
+    "safety":  {
+                   "real_user_data":  "not-accessed",
+                   "real_provider_traffic":  "none",
+                   "real_credentials":  "none",
+                   "application_listener":  "none",
+                   "test_listener":  "exact-loopback-port-zero-run-owned",
+                   "candidate_activation":  "none",
+                   "deployment":  "none",
+                   "cutover":  "none"
+               },
+    "repository_controls":  {
+                                "tests":  187,
+                                "pass":  187,
+                                "fail":  0,
+                                "skipped":  0,
+                                "todo":  0
+                            },
+    "browser":  {
+                    "passed":  7,
+                    "skipped":  1,
+                    "skipped_reason":  "Candidate does not declare an offline contract."
+                },
+    "independent_review":  {
+                               "verdict":  "GREEN",
+                               "receipt":  "independent-review/REVIEW.md",
+                               "automation":  "independent-review/automation.json",
+                               "port":  4294,
+                               "worktree":  "Z:\\LATTICEWORK_QA_e65ca81_P4FIX"
+                           },
+    "gates":  {
+                  "environment":  "commands/environment/manifest.json",
+                  "lockfile-replay":  "commands/lockfile-replay/manifest.json",
+                  "install":  "commands/install/manifest.json",
+                  "amendment-validator":  "commands/amendment-validator/manifest.json",
+                  "scope-validator":  "commands/scope-validator/manifest.json",
+                  "strict-typecheck":  "commands/strict-typecheck/manifest.json",
+                  "node-unit":  "commands/node-unit/manifest.json",
+                  "browser":  "commands/browser/manifest.json",
+                  "phase3-boundary":  "commands/phase3-boundary/manifest.json",
+                  "full-repository-controls":  "commands/full-repository-controls/manifest.json",
+                  "deterministic-build":  "commands/deterministic-build/manifest.json",
+                  "audit":  "commands/audit/manifest.json",
+                  "sbom":  "commands/sbom/manifest.json",
+                  "supply-chain":  "commands/supply-chain/manifest.json",
+                  "hygiene":  "commands/hygiene/manifest.json"
+              }
+}

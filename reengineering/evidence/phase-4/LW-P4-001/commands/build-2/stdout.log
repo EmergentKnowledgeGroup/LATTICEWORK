@@ -1,0 +1,18 @@
+
+> latticework@0.0.0 p2:build
+> npm run build --workspace @latticework/web
+
+
+> @latticework/web@0.0.0 build
+> vite build
+
+[36mvite v8.1.5 [32mbuilding client environment for production...[36m[39m
+[2Ktransforming...✓ 16 modules transformed.
+rendering chunks...
+computing gzip size...
+../../runtime/tmp/phase4-verification-4194/build-2/.vite/manifest.json         0.18 kB │ gzip: 0.14 kB
+../../runtime/tmp/phase4-verification-4194/build-2/index.html                  0.57 kB │ gzip: 0.33 kB
+../../runtime/tmp/phase4-verification-4194/build-2/assets/index-DPPYCueY.css   0.65 kB │ gzip: 0.39 kB
+../../runtime/tmp/phase4-verification-4194/build-2/assets/index-CMIAtJto.js   22.60 kB │ gzip: 8.37 kB
+
+[32m✓ built in 46ms[39m

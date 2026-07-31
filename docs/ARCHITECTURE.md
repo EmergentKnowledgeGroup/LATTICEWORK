@@ -216,6 +216,41 @@ therefore remains the Phase 2 feature-free status shell; the new packages are
 an unused, verified synthetic/mock-only architecture seam pending later
 feature-specific work claims.
 
+### Implemented non-default Phase 4 Chat slice
+
+**VERIFIED:** the accepted `LW-P4-001` packet has one isolated vertical slice
+at `/p4.html`, reproduced by canonical and clean detached-worktree verification
+at candidate `e65ca81940d50eabd5bb72a403deab3bf37bea93`.
+
+```mermaid
+flowchart LR
+    UI["p4.html Lit workbench"] --> CC["packages/chat controller"]
+    CC --> CR["ChatConversationRepository contract"]
+    CR --> IDB["candidate-only latticework::conversation"]
+    CC --> PR["ProviderRouter contract"]
+    PR --> LM["mock-local in-process adapter"]
+    PR --> CM["mock-cloud in-process adapter"]
+    CC --> CP["content-free terminal provenance"]
+    ROOT["unchanged / route"] -. "no registration or cutover" .-> UI
+```
+
+- `packages/chat` owns orchestration only. It serializes hydration and mutation
+  publication per conversation, reads/appends candidate state,
+  persists the user before dispatch, accumulates assistant fragments in
+  memory, commits them only on completion, and writes content-free terminal
+  records for failure or cancellation.
+- `apps/web/src/p4-main.ts` is the only composition root. It adapts the accepted
+  package-root storage/provider seams without migration, source-reader,
+  transport, credential, listener, activation, or deployment capability.
+- The cancellation test branch is in-process and synthetic. The sole OS
+  listener remains the exact test fixture under
+  `tests/phase4/support/synthetic-stream-fixture.mjs`; the application never
+  connects to it.
+- `/`, the default Vite build input, shared styling, Phase 3 packages, legacy
+  runtime, and deployment files remain protected and unchanged.
+- Offline reload is not claimed. Adding a service worker is outside this
+  packet and requires a separately accepted scope.
+
 ## Architecture invariants
 
 - No feature may require editing an unrelated monolithic surface without an explicit reason.

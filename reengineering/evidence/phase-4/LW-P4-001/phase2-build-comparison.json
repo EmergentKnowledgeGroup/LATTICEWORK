@@ -1,0 +1,66 @@
+{
+  "schema": "latticework.phase2-build-comparison.v1",
+  "evidence_label": "MEASURED",
+  "captured_at": "2026-07-31T05:04:16.803Z",
+  "valid": true,
+  "workspace_root": "Z:\\LATTICEWORK",
+  "first": {
+    "directory": "Z:\\LATTICEWORK\\output\\lw-p2-001\\web",
+    "files": [
+      {
+        "path": ".vite/manifest.json",
+        "bytes": 185,
+        "sha256": "b7d8e8bc36d19475696a4329597e23445dc514d057698b8577c2ceecc132c009"
+      },
+      {
+        "path": "assets/index-CMIAtJto.js",
+        "bytes": 22607,
+        "sha256": "6614cc064c05bb23e9a97afec82be2e23be88ffa3643eb13530519c9a2d25c16",
+        "gzip_bytes": 8332,
+        "brotli_bytes": 7413
+      },
+      {
+        "path": "assets/index-DPPYCueY.css",
+        "bytes": 655,
+        "sha256": "f44d2e40170126660778c6c967cb29508e6ae9a27eb2a058c4ba9d7c77aa00a2",
+        "gzip_bytes": 399,
+        "brotli_bytes": 314
+      },
+      {
+        "path": "index.html",
+        "bytes": 571,
+        "sha256": "e1b63129b4804ae324057ab655227b955afe06125d803aebf4e7d99ed3291f66"
+      }
+    ]
+  },
+  "second": {
+    "directory": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-verification-4194\\build-2",
+    "files": [
+      {
+        "path": ".vite/manifest.json",
+        "bytes": 185,
+        "sha256": "b7d8e8bc36d19475696a4329597e23445dc514d057698b8577c2ceecc132c009"
+      },
+      {
+        "path": "assets/index-CMIAtJto.js",
+        "bytes": 22607,
+        "sha256": "6614cc064c05bb23e9a97afec82be2e23be88ffa3643eb13530519c9a2d25c16",
+        "gzip_bytes": 8332,
+        "brotli_bytes": 7413
+      },
+      {
+        "path": "assets/index-DPPYCueY.css",
+        "bytes": 655,
+        "sha256": "f44d2e40170126660778c6c967cb29508e6ae9a27eb2a058c4ba9d7c77aa00a2",
+        "gzip_bytes": 399,
+        "brotli_bytes": 314
+      },
+      {
+        "path": "index.html",
+        "bytes": 571,
+        "sha256": "e1b63129b4804ae324057ab655227b955afe06125d803aebf4e7d99ed3291f66"
+      }
+    ]
+  },
+  "failures": []
+}

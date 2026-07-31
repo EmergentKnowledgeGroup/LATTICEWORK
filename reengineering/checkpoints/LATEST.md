@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-30T23:44:39Z`
+Updated: `2026-07-31T05:11:15Z`
 
 ## CURRENT
 
-Track: `LW_P4_AMENDMENT WORK`
-Step: `phase4-amendment-post-merge`
-Note: PR #4 merged the independently GREEN control-only amendment and corrected implementation proposal; no runtime authority is granted.
-Branch: `main`
-Head: `e71ad04f803aa6a66e2e2f947b8ed9fee10f0cdb`
-Next command: `Execute only the eleven retests frozen in reengineering/PHASE4_CHARACTERIZATION_AMENDMENT.md; do not begin LW-P4-001.`
+Track: `LW_P4_IMPLEMENTATION WORK`
+Step: `phase4-review-fix-green`
+Note: The one CodeRabbit review is complete; its in-packet findings were fixed in one consolidated pass, protected and unauthorized findings were documented, and corrected candidate e65ca819 is canonically plus independently GREEN.
+Branch: `reengineering/p4-characterization-retests`
+Head: `e65ca81940d50eabd5bb72a403deab3bf37bea93`
+Next command: `Commit the promoted evidence and living documentation, push the consolidated fix once, resolve the adjudicated review threads, verify required checks, and merge PR #5 without requesting another review.`
 
 ## LW_M0_BASELINE WORK
 
@@ -329,3 +329,80 @@ Next command: `Execute only the eleven retests frozen in reengineering/PHASE4_CH
 
 - `LW-BLK-009` remains open until the eleven bounded retests and independent reproduction are complete.
 - `LW-BLK-010` remains open until the corrected implementation packet is separately accepted.
+
+## LW_P4_RETEST WORK
+
+Step: `phase4-amended-characterization-canonical-independent-green`
+Note: Canonical and independent amended characterization is GREEN at candidate 55e3731 with 31 PASS, 8 accepted divergences, 0 blocked; LW-BLK-009 is closed.
+Branch: `reengineering/p4-characterization-retests`
+Head: `55e3731ea1482f37b242da6dc1af8d8181624e9a`
+Next command: `Commit canonical characterization evidence/docs, then correct and independently validate the exact LW-P4-IMPL-PREFLIGHT-001 packet before implementation.`
+
+### Validations
+
+- **VERIFIED** — PR #4 is merged and the amendment packet is post-merge GREEN.
+- **ACCEPTED** — maintainer directed continued work and accepts the packet's recommended synthetic/mock choices.
+- **OBSERVED** — the worktree started clean on `main` at `9ae0c54a6b6d76622cb2a89efee5bf909ff6858e`.
+- **OBSERVED** — real data, credentials, provider traffic, activation, deployment, and cutover remain disabled.
+- **MEASURED** — six exact existing-harness retests completed with six atomic PASS receipts.
+- **MEASURED** — five exact loopback-stream retests completed with five atomic PASS receipts over a run-owned `127.0.0.1` OS-selected listener.
+- **VERIFIED** — all 149 repository reengineering controls passed with the immutable baseline root configured; zero fail, skip, or todo.
+- **VERIFIED** — amended validator, promoter smoke, fixture unit tests, syntax checks, and `git diff --check` passed.
+- **MEASURED** — canonical promotion at `55e3731ea1482f37b242da6dc1af8d8181624e9a` completed once with zero retries; 32/32 controls and 11/11 retests passed.
+- **VERIFIED** — final dispositions are 31 PASS, eight ACCEPTED_DIVERGENCE, and zero BLOCKED with immutable original hashes and statuses.
+- **VERIFIED** — independent clean-worktree QA reproduced the exact candidate, validated 33/33 atomic attachments and 41/41 manifest artifacts, and proved listener teardown, port release, no leaks, and complete cleanup.
+
+### Blockers
+
+- `LW-BLK-009` is closed by canonical and independent GREEN evidence.
+- `LW-BLK-010` remains open; `LW-P4-001` has not started.
+
+## LW_P4_IMPL_PREFLIGHT WORK
+
+Step: `phase4-implementation-preflight-accepted-independent-green`
+Note: Exact packet is accepted, both validators are valid, 41/41 focused and 180/180 full controls pass, independent re-review is GREEN, and LW-BLK-010 is closed.
+Branch: `reengineering/p4-characterization-retests`
+Head: `faf32dbaf8159e8499421fa68d9fba4bede0fdc9`
+Next command: `Commit the accepted preflight closeout, claim LW-P4-001, checkpoint LW_P4_IMPLEMENTATION WORK, then implement only the exact packet.`
+
+### Validations
+
+- **VERIFIED** — `LW-P4-RETEST-001` is canonical and independently GREEN.
+- **OBSERVED** — the maintainer directed continued execution and considers repository-authored packet choices accepted.
+- **OBSERVED** — no application or package implementation exists in this workstream at phase start.
+- **OBSERVED** — real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.
+- **MEASURED** — amendment and implementation-range validators are valid; 41/41 focused and 180/180 full repository controls pass.
+- **VERIFIED** — one independent review returned three control findings; the bounded rework fixed all three and independent re-review returned GREEN.
+- **ACCEPTED** — the maintainer's standing receipt accepts the exact machine-locked packet after independent GREEN.
+
+### Blockers
+
+- `LW-BLK-010` is closed; `LW-P4-001` is ready for a separate work claim.
+
+## LW_P4_IMPLEMENTATION WORK
+
+Step: `phase4-review-fix-green`
+Note: The one CodeRabbit review is complete; its in-packet findings were fixed in one consolidated pass, protected and unauthorized findings were documented, and corrected candidate e65ca819 is canonically plus independently GREEN.
+Branch: `reengineering/p4-characterization-retests`
+Head: `e65ca81940d50eabd5bb72a403deab3bf37bea93`
+Next command: `Commit the promoted evidence and living documentation, push the consolidated fix once, resolve the adjudicated review threads, verify required checks, and merge PR #5 without requesting another review.`
+
+### Validations
+
+- **VERIFIED** — amended characterization is canonical and independently GREEN.
+- **ACCEPTED** — exact implementation packet is machine-valid and independently GREEN.
+- **OBSERVED** — worktree is clean at phase start.
+- **OBSERVED** — real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.
+- **MEASURED** — `npm run p4:typecheck` passed every workspace typecheck.
+- **MEASURED** — `npm run p4:test` passed 14 Chat tests, 1 fixture test, and 48 packet/control tests: 63/63.
+- **MEASURED** — `npm run p4:browser` passed 7 active scenarios; the explicit offline-contract scenario skipped because this packet authorizes no service worker.
+- **VERIFIED** — all 187 repository controls pass with zero fail/skip/todo.
+- **VERIFIED** — canonical verification passed lock replay, strict typecheck, targeted tests, browser, Phase 3 boundary, deterministic builds, audit, SBOM, supply-chain, hygiene, and manifest generation at candidate `e65ca81940d50eabd5bb72a403deab3bf37bea93`.
+- **VERIFIED** — clean detached-worktree QA on port 4294 reproduced the corrected candidate, visually inspected both screenshots, proved profile/listener teardown, and returned GREEN with no actionable findings.
+- **VERIFIED** — real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.
+- **VERIFIED** — the single CodeRabbit review was completed once; in-packet findings were fixed, while production-build and protected characterization/promoter suggestions were explicitly rejected or deferred under the accepted packet.
+- **OBSERVED** — PR #5 remains open against `EmergentKnowledgeGroup/LATTICEWORK:main`; the consolidated review-fix push is the next action and no second review will be requested.
+
+### Blockers
+
+- No open blocker prevents the exact bounded `LW-P4-001` implementation.

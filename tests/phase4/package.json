@@ -1,0 +1,18 @@
+{
+  "name": "@latticework/phase4-browser",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test support/synthetic-stream-fixture.test.mjs",
+    "test:browser": "playwright test",
+    "test:fixture": "node --test support/synthetic-stream-fixture.test.mjs",
+    "syntax": "playwright test --list",
+    "typecheck": "tsc --project tsconfig.json"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.0",
+    "@types/node": "24.3.0",
+    "typescript": "6.0.3"
+  }
+}

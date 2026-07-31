@@ -1,0 +1,45 @@
+{
+  "allowed_origin": "http://127.0.0.1:4184",
+  "expected_target": null,
+  "expected_requests": [],
+  "fixture_probes": [],
+  "blocked": [
+    {
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "resource_type": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "http://localhost:1234/v1/models",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://api.groq.com/openai/v1/chat/completions",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://raw.githubusercontent.com/Chaos2Cured/FreeLattice/main/version.json",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://freelattice.com/version.json",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.cloudflare.com/cdn-cgi/trace",
+      "resource_type": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://fonts.googleapis.com/css2",
+      "resource_type": "stylesheet"
+    }
+  ],
+  "blocked_websockets": [],
+  "console": []
+}

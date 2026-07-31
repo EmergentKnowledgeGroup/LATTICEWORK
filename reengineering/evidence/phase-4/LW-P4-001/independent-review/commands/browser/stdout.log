@@ -1,0 +1,22 @@
+
+> latticework@0.0.0 p4:browser
+> npm run test:browser --workspace @latticework/phase4-browser
+
+
+> @latticework/phase4-browser@0.0.0 test:browser
+> playwright test
+
+
+Running 8 tests using 1 worker
+
+  ok 1 p4-chat.spec.ts:95:1 › /p4.html is visibly synthetic and sends exactly through selected local and cloud mocks (1.2s)
+  ok 2 p4-chat.spec.ts:119:1 › fragment completion persists only completed assistant output and reload restores the disposable candidate (1.0s)
+  ok 3 p4-chat.spec.ts:132:1 › cancel works before dispatch and after the first delta without persisting partial assistant text (1.1s)
+  ok 4 p4-chat.spec.ts:156:1 › conversation snapshot merge replaces the active conversation and preserves unrelated records (855ms)
+  ok 5 p4-chat.spec.ts:220:1 › diagnostics are structured and do not expose synthetic message content (957ms)
+  ok 6 p4-chat.spec.ts:233:1 › keyboard, 390x844, forced colors, and reduced motion keep the bounded shell usable (783ms)
+  -  7 p4-chat.spec.ts:252:1 › warm offline reload is verified only when the candidate explicitly declares offline support
+  ok 8 p4-chat.spec.ts:265:1 › the default route remains separate from the non-default P4 entry (712ms)
+
+  1 skipped
+  7 passed (8.8s)

@@ -9,6 +9,7 @@ import {
   captureStorageProjection,
   configureCloudThroughWelcome,
   configureLocalThroughWelcome,
+  configureLoopbackLocalProvider,
   dismissWelcomeToChat,
   installPhase4Capture,
   newScenarioResult,
@@ -16,6 +17,9 @@ import {
   phase4Subcases,
   privateSentinelLeak,
 } from "../support/phase4-chat.mjs";
+import {
+  startPhase4LoopbackStreamFixture,
+} from "../support/phase4-loopback-stream.mjs";
 
 const specificationRoot = path.dirname(fileURLToPath(import.meta.url));
 const repositoryRoot = path.resolve(specificationRoot, "..", "..", "..");
@@ -33,6 +37,26 @@ const runRoot = path.resolve(
 const baseURL =
   process.env.LATTICEWORK_CHARACTERIZATION_BASE_URL ??
   "http://127.0.0.1:4174";
+const amendmentRetests = process.env.LATTICEWORK_PHASE4_AMENDMENT_RETESTS === "1";
+const loopbackRetests =
+  process.env.LATTICEWORK_PHASE4_LOOPBACK_RETESTS === "1";
+const invalidConfigurationSentinel = "P4_SYNTHETIC_INVALID_CONFIG_DO_NOT_EXPORT";
+let loopbackFixture = null;
+
+test.beforeAll(async () => {
+  if (!loopbackRetests) return;
+  loopbackFixture = await startPhase4LoopbackStreamFixture({
+    runRoot,
+    allowedOrigin: new URL(baseURL).origin,
+  });
+});
+
+test.afterAll(async () => {
+  if (loopbackFixture) {
+    await loopbackFixture.stop();
+    loopbackFixture = null;
+  }
+});
 
 function createOwnedProfile(scenario) {
   const profilesRoot = path.join(runRoot, "profiles");
@@ -83,12 +107,200 @@ async function configureProvider(page, scenario) {
   await dismissWelcomeToChat(page);
 }
 
+async function configureLoopbackProvider(page, scenario) {
+  expect(loopbackRetests).toBe(true);
+  expect(scenario.provider).toBe("P4-PRV-OLLAMA");
+  expect(loopbackFixture).not.toBeNull();
+  await configureLocalThroughWelcome(page);
+  await configureLoopbackLocalProvider(page, loopbackFixture.endpoint);
+}
+
+async function observeLoopbackStream(page, scenario, receipt, result) {
+  await configureLoopbackProvider(page, scenario);
+  const session = loopbackFixture.arm(scenario.id);
+  const assistantBefore = await page
+    .locator("#chatMessages .chat-message.assistant")
+    .count();
+  await page.locator("#chatInput").fill("P4_SYNTHETIC_PROMPT_DO_NOT_EXPORT");
+  await page.locator("#sendBtn").click();
+  await session.waitForRequest(12_000);
+
+  if (scenario.probe === "duplicate-activation") {
+    await page.evaluate(() => window.sendMessage());
+    await page.waitForTimeout(100);
+    expect(receipt.expected_requests).toHaveLength(1);
+  }
+
+  if (scenario.probe === "navigation-before-first-delta") {
+    await page.reload({ waitUntil: "commit", timeout: 12_000 });
+    await session.waitForClose(12_000);
+    const afterReload = await page
+      .locator("#chatMessages .chat-message.assistant")
+      .count();
+    const stream = session.receipt();
+    expect(stream.closed_before_first_delta).toBe(true);
+    expect(stream.closed_before_terminal).toBe(true);
+    expect(afterReload).toBeLessThanOrEqual(assistantBefore);
+    result.status = "PASS";
+    result.terminal_count = 0;
+    result.loopback_stream = stream;
+    result.observed_contract = {
+      navigation: "BEFORE_FIRST_DELTA",
+      client_close: "BEFORE_FIRST_DELTA_AND_TERMINAL",
+      duplicate_assistant_terminal: false,
+    };
+    session.release();
+    return;
+  }
+
+  session.emitDelta("P4 synthetic first");
+  await expect(page.locator("#chatMessages .chat-message.assistant").last()).toContainText(
+    "P4 synthetic first",
+  );
+
+  if (scenario.probe === "navigation-after-first-delta") {
+    await page.reload({ waitUntil: "commit", timeout: 12_000 });
+    await session.waitForClose(12_000);
+    const afterReload = await page
+      .locator("#chatMessages .chat-message.assistant")
+      .count();
+    const stream = session.receipt();
+    expect(stream.closed_before_first_delta).toBe(false);
+    expect(stream.closed_before_terminal).toBe(true);
+    expect(stream.terminal_emitted).toBe(false);
+    expect(afterReload).toBeLessThanOrEqual(assistantBefore);
+    result.status = "PASS";
+    result.terminal_count = 0;
+    result.loopback_stream = stream;
+    result.observed_contract = {
+      navigation: "AFTER_FIRST_DELTA",
+      client_close: "AFTER_FIRST_DELTA_BEFORE_TERMINAL",
+      late_delta_accepted: false,
+      duplicate_assistant_terminal: false,
+    };
+    session.release();
+    return;
+  }
+
+  session.emitDelta("P4 synthetic success");
+  session.finish();
+  await session.waitForClose(12_000);
+  await expect(page.locator("#sendBtn")).toBeEnabled({ timeout: 12_000 });
+  const assistantAfter = await page
+    .locator("#chatMessages .chat-message.assistant")
+    .count();
+  expect(assistantAfter - assistantBefore).toBe(1);
+  const terminal = page.locator("#chatMessages .chat-message.assistant").last();
+  await expect(terminal).toContainText("P4 synthetic firstP4 synthetic success");
+  const stream = session.receipt();
+  expect(stream.fragment_count).toBe(2);
+  expect(stream.terminal_emitted).toBe(true);
+  expect(receipt.expected_requests).toHaveLength(1);
+
+  if (scenario.probe === "mobile-bounded-flow") {
+    const geometry = await page.evaluate(() => ({
+      overflow: document.documentElement.scrollWidth > innerWidth,
+      viewport: { width: innerWidth, height: innerHeight },
+      input: (() => {
+        const rect = document.getElementById("chatInput")?.getBoundingClientRect();
+        return rect
+          ? { left: rect.left, right: rect.right, width: rect.width, height: rect.height }
+          : null;
+      })(),
+      send: (() => {
+        const rect = document.getElementById("sendBtn")?.getBoundingClientRect();
+        return rect
+          ? { left: rect.left, right: rect.right, width: rect.width, height: rect.height }
+          : null;
+      })(),
+    }));
+    expect(geometry.viewport).toEqual({ width: 390, height: 844 });
+    expect(geometry.overflow).toBe(false);
+    for (const control of [geometry.input, geometry.send]) {
+      expect(control).not.toBeNull();
+      expect(control.left).toBeGreaterThanOrEqual(0);
+      expect(control.right).toBeLessThanOrEqual(390);
+      expect(control.height).toBeGreaterThanOrEqual(24);
+    }
+    result.geometry = geometry;
+  }
+
+  result.status = "PASS";
+  result.request_count = 1;
+  result.terminal_count = 1;
+  result.loopback_stream = stream;
+  result.observed_contract = {
+    fragmented_stream: "REPRODUCED",
+    ordered_fragments: true,
+    duplicate_activation_suppressed:
+      scenario.probe === "duplicate-activation" ? true : null,
+    terminal_count: 1,
+  };
+  session.release();
+}
+
 async function observeOnboarding(page, scenario, receipt, result) {
   if (scenario.probe === "onboarding-visible") {
     await expect(page.locator("#flWelcomeOverlay")).toBeVisible();
     await expect(page.locator(".fl-welcome-skip")).toBeVisible();
     result.status = "PASS";
     result.notes.push("fresh onboarding and skip control are visible");
+    return;
+  }
+
+  if (amendmentRetests && scenario.id === "P4-ONB-001C") {
+    await page
+      .locator("#flWelcomeConnect")
+      .getByRole("button", { name: "OpenAI", exact: true })
+      .click();
+    const input = page.locator("#flWelcomeKeyInput");
+    const connect = page.locator("#flWelcomeTestBtn");
+    const blockedBefore = receipt.blocked.length;
+    await input.fill(invalidConfigurationSentinel);
+    await connect.click();
+    await expect
+      .poll(
+        async () => ({
+          sentinel_persisted: await page.evaluate(
+            (sentinel) => localStorage.getItem("fl_apiKey") === sentinel,
+            invalidConfigurationSentinel,
+          ),
+          request_observed: receipt.blocked.length > blockedBefore,
+          connected_visible: await page
+            .locator("#flWelcomeConnected")
+            .isVisible(),
+        }),
+        { timeout: 15_000 },
+      )
+      .toEqual({
+        sentinel_persisted: true,
+        request_observed: true,
+        connected_visible: true,
+      });
+    const beforeReload = await page.evaluate((sentinel) => ({
+      sentinel_persisted: localStorage.getItem("fl_apiKey") === sentinel,
+      provider_key_present: localStorage.getItem("fl_provider") !== null,
+    }), invalidConfigurationSentinel);
+    await page.getByRole("button", { name: /Got it.*start chatting/i }).click();
+    await page.reload({ waitUntil: "domcontentloaded" });
+    const afterReload = {
+      onboarding_visible: await page.locator("#flWelcomeOverlay").isVisible(),
+      key_input_visible: await input.isVisible(),
+    };
+    expect(beforeReload.sentinel_persisted).toBe(true);
+    expect(beforeReload.provider_key_present).toBe(true);
+    expect(afterReload.onboarding_visible).toBe(false);
+    result.status = "PASS";
+    result.observed_contract = {
+      invalid_configuration: "PERSISTED_AND_FAIL_OPEN_AFTER_TIMEOUT",
+      sentinel_persisted_in_disposable_profile: true,
+      provider_request_blocked_before_transmission: true,
+      connected_ui_visible_after_failed_probe: true,
+      onboarding_visible_after_reload: afterReload.onboarding_visible,
+    };
+    result.notes.push(
+      "synthetic invalid configuration persisted only in the disposable profile and suppressed onboarding after reload; no sentinel value was promoted",
+    );
     return;
   }
 
@@ -110,6 +322,143 @@ async function observeOnboarding(page, scenario, receipt, result) {
   result.notes.push(
     "the baseline does not expose a separately defined invalid-configuration contract that can be proven without persisting the synthetic credential sentinel",
   );
+}
+
+async function observeTimeoutAbsence(page, scenario, receipt, result) {
+  await configureProvider(page, scenario);
+  const assistantBefore = await page
+    .locator("#chatMessages .chat-message.assistant")
+    .count();
+  await page.locator("#chatInput").fill("P4 synthetic timeout absence probe");
+  await page.locator("#sendBtn").click();
+  await expect
+    .poll(() => receipt.expected_requests.length, { timeout: 12_000 })
+    .toBeGreaterThan(0);
+  await expect
+    .poll(() => receipt.timeout_observation?.harness_abort_monotonic_ms, {
+      timeout: 12_000,
+    })
+    .not.toBeNull();
+  const assistantAfter = await page
+    .locator("#chatMessages .chat-message.assistant")
+    .count();
+  const timeout = receipt.timeout_observation;
+  expect(timeout?.hold_ms).toBe(750);
+  expect(timeout?.pending_at_horizon).toBe(true);
+  expect(timeout?.harness_abort_monotonic_ms).toBeGreaterThan(
+    timeout?.request_started_monotonic_ms,
+  );
+  expect(assistantAfter).toBe(assistantBefore);
+  result.status = "PASS";
+  result.terminal_count = 0;
+  result.observed_contract = {
+    application_timeout: "ABSENT",
+    pending_window_ms: timeout.hold_ms,
+    terminal_before_harness_abort: false,
+    harness_abort_only: true,
+  };
+  result.notes.push(
+    "the exact primary request remained pending until the harness aborted it; this records timeout-contract absence, not timeout success",
+  );
+}
+
+async function observeWarmOfflineFailure(page, context, result) {
+  const registeredScope = await page.evaluate(async () => {
+    const registration = await navigator.serviceWorker.register(
+      "/docs/sw.js",
+      { scope: "/docs/", updateViaCache: "none" },
+    );
+    return registration.scope;
+  });
+  const expectedScope = new URL("/docs/", page.url()).href;
+  const expectedScriptUrl = new URL("/docs/sw.js", page.url()).href;
+  expect(registeredScope).toBe(expectedScope);
+  const readinessProbe = async () =>
+    page.evaluate(
+      async ({ cacheName, scope }) => {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        const registration = registrations.find((entry) => entry.scope === scope);
+        const cacheNames = await caches.keys();
+        const cache = await caches.open(cacheName);
+        const cacheEntries = await cache.keys();
+        const cachedApp = await cache.match("/docs/app.html");
+        return {
+          ready: registration?.active?.state === "activated",
+          scope: registration?.scope ?? null,
+          script_url: registration?.active?.scriptURL ?? null,
+          cache_name: cacheName,
+          cache_present: cacheNames.includes(cacheName),
+          cache_entry_count: cacheEntries.length,
+          cached_app_shell: Boolean(cachedApp),
+        };
+      },
+      { cacheName: "freelattice-v5.79.22", scope: expectedScope },
+    );
+  await expect
+    .poll(readinessProbe, {
+      message:
+        "baseline /docs/ service worker and app-shell cache were not structurally ready",
+      timeout: 45_000,
+    })
+    .toMatchObject({
+      ready: true,
+      scope: expectedScope,
+      script_url: expectedScriptUrl,
+      cache_name: "freelattice-v5.79.22",
+      cache_present: true,
+      cache_entry_count: 174,
+      cached_app_shell: true,
+    });
+  const serviceWorkerReceipt = await readinessProbe();
+  expect(serviceWorkerReceipt).toMatchObject({
+    ready: true,
+    scope: expectedScope,
+    script_url: expectedScriptUrl,
+    cache_name: "freelattice-v5.79.22",
+    cache_present: true,
+    cache_entry_count: 174,
+    cached_app_shell: true,
+  });
+  await page.reload({ waitUntil: "domcontentloaded", timeout: 12_000 });
+  await expect
+    .poll(() =>
+      page.evaluate(() => navigator.serviceWorker.controller?.scriptURL ?? null),
+      { timeout: 12_000 },
+    )
+    .toBe(expectedScriptUrl);
+  let reloadError = null;
+  try {
+    await context.setOffline(true);
+    await page.reload({ waitUntil: "domcontentloaded", timeout: 12_000 });
+  } catch (error) {
+    reloadError = String(error);
+  } finally {
+    await context.setOffline(false);
+  }
+  const finalUrl = page.url();
+  const observedFailure =
+    Boolean(reloadError) || finalUrl.startsWith("chrome-error://chromewebdata/");
+  expect(observedFailure).toBe(true);
+  expect(`${reloadError ?? ""} ${finalUrl}`).toMatch(
+    /ERR_INTERNET_DISCONNECTED|chrome-error:/i,
+  );
+  result.status = "PASS";
+  result.observed_contract = {
+    offline_recovery: "ABSENT",
+    reload_failure: "ERR_INTERNET_DISCONNECTED_OR_CHROME_ERROR",
+    service_worker: serviceWorkerReceipt,
+    controller_before_offline: true,
+    final_url_class: finalUrl.startsWith("chrome-error://")
+      ? "chrome-error"
+      : "baseline-url",
+  };
+  result.notes.push(
+    "warm offline reload reproduced the baseline navigation failure; this is an absence-of-recovery observation, not recovery success",
+  );
+  await page.goto("/docs/app.html", {
+    waitUntil: "domcontentloaded",
+    timeout: 12_000,
+  });
 }
 
 async function observeEmptySend(page, receipt, result) {
@@ -322,6 +671,77 @@ async function observeAccessibility(page, scenario, result) {
         ?.getAttribute("aria-label") ?? null,
   }));
   result.accessibility = semantics;
+  if (amendmentRetests) {
+    const input = page.locator("#chatInput");
+    const send = page.locator("#sendBtn");
+    let observedContract;
+    if (scenario.probe === "keyboard-focus-name-live-region") {
+      await input.focus();
+      await page.keyboard.press("Shift+Tab");
+      const previousFocus = await page.evaluate(() => document.activeElement?.id ?? null);
+      await page.keyboard.press("Tab");
+      const inputFocused = await page.evaluate(() => document.activeElement?.id === "chatInput");
+      const inputFocusVisible = await input.evaluate((element) =>
+        element.matches(":focus-visible"),
+      );
+      await page.keyboard.press("Tab");
+      const nextFocus = await page.evaluate(() => document.activeElement?.id ?? null);
+      expect(previousFocus).toBe("chatDriveBtn");
+      expect(inputFocused).toBe(true);
+      expect(inputFocusVisible).toBe(true);
+      expect(nextFocus).toBe("sendBtn");
+      expect(semantics.input_label).toBeNull();
+      expect(semantics.live_regions).toBe(0);
+      observedContract = {
+        focus_order: [previousFocus, "chatInput", nextFocus],
+        input_label: "ABSENT",
+        live_region: "ABSENT",
+        send_name: semantics.send_name,
+      };
+    } else if (scenario.probe === "forced-colors") {
+      const forcedColors = await page.evaluate(() => ({
+        active: matchMedia("(forced-colors: active)").matches,
+        input: (() => {
+          const style = getComputedStyle(document.getElementById("chatInput"));
+          return { forced_color_adjust: style.forcedColorAdjust, color: style.color, background: style.backgroundColor };
+        })(),
+        send: (() => {
+          const style = getComputedStyle(document.getElementById("sendBtn"));
+          return { forced_color_adjust: style.forcedColorAdjust, color: style.color, background: style.backgroundColor };
+        })(),
+      }));
+      expect(forcedColors.active).toBe(true);
+      expect(await input.isVisible()).toBe(true);
+      expect(await send.isVisible()).toBe(true);
+      expect(forcedColors.input.forced_color_adjust).not.toBe("none");
+      expect(forcedColors.send.forced_color_adjust).not.toBe("none");
+      observedContract = { forced_colors: "ACTIVE", controls: forcedColors };
+    } else {
+      const reducedMotion = await page.evaluate(() => {
+        const hasRule = (rules) => Array.from(rules ?? []).some((rule) => {
+          if (rule.media?.mediaText?.includes("prefers-reduced-motion: reduce")) return true;
+          try { return hasRule(rule.cssRules); } catch { return false; }
+        });
+        return {
+          active: matchMedia("(prefers-reduced-motion: reduce)").matches,
+          css_rule_present: Array.from(document.styleSheets).some((sheet) => {
+            try { return hasRule(sheet.cssRules); } catch { return false; }
+          }),
+          input_animation_duration: getComputedStyle(document.getElementById("chatInput")).animationDuration,
+          input_transition_duration: getComputedStyle(document.getElementById("chatInput")).transitionDuration,
+        };
+      });
+      expect(reducedMotion.active).toBe(true);
+      expect(reducedMotion.css_rule_present).toBe(true);
+      expect(await input.isVisible()).toBe(true);
+      expect(await send.isVisible()).toBe(true);
+      observedContract = { reduced_motion: "ACTIVE", controls: reducedMotion };
+    }
+    result.status = "PASS";
+    result.observed_contract = observedContract;
+    result.notes.push("bounded accessibility mode observation completed with explicit absence fields where the baseline lacks semantics");
+    return;
+  }
   result.status = "UNKNOWN";
   result.notes.push(
     "runtime semantics were captured; the baseline lacks an explicit primary-Chat live region and the locked accessibility contract is not fully established",
@@ -415,6 +835,9 @@ async function observeEgress(page, context, scenario, receipt, result) {
 
 for (const scenario of phase4Subcases) {
   test(`${scenario.id} ${scenario.probe}`, async ({}, testInfo) => {
+    if (amendmentRetests && scenario.id === "P4-DEG-001A") {
+      testInfo.setTimeout(110_000);
+    }
     const result = newScenarioResult(scenario, testInfo);
     const profilePath = createOwnedProfile(scenario);
     result.profile_id = `P4-PROFILE-${scenario.id}`;
@@ -432,6 +855,7 @@ for (const scenario of phase4Subcases) {
       console: [],
     };
     let storage = null;
+    let observationError = null;
     try {
       context = await chromium.launchPersistentContext(profilePath, {
         baseURL,
@@ -450,11 +874,18 @@ for (const scenario of phase4Subcases) {
           "--no-default-browser-check",
         ],
       });
-      receipt = await installPhase4Capture(context, scenario);
+      receipt = await installPhase4Capture(context, scenario, {
+        loopbackFixture: loopbackRetests ? loopbackFixture : null,
+      });
       const page = context.pages()[0] ?? (await context.newPage());
       await openFreshBaseline(page);
 
-      if (scenario.group_id === "P4-ONB-001") {
+      if (loopbackRetests) {
+        if (scenario.id === "P4-RESP-001A") {
+          await page.setViewportSize({ width: 390, height: 844 });
+        }
+        await observeLoopbackStream(page, scenario, receipt, result);
+      } else if (scenario.group_id === "P4-ONB-001") {
         await observeOnboarding(page, scenario, receipt, result);
       } else if (scenario.probe === "empty-send") {
         await observeEmptySend(page, receipt, result);
@@ -469,6 +900,10 @@ for (const scenario of phase4Subcases) {
         await observeResponsive(page, scenario, receipt, result);
       } else if (scenario.group_id === "P4-A11Y-001") {
         await observeAccessibility(page, scenario, result);
+      } else if (amendmentRetests && scenario.id === "P4-DEG-001A") {
+        await observeWarmOfflineFailure(page, context, result);
+      } else if (amendmentRetests && scenario.id === "P4-CHAT-008A") {
+        await observeTimeoutAbsence(page, scenario, receipt, result);
       } else if (scenario.group_id === "P4-EGR-001") {
         await observeEgress(page, context, scenario, receipt, result);
       } else {
@@ -477,6 +912,7 @@ for (const scenario of phase4Subcases) {
 
       storage = await captureStorageProjection(page);
     } catch (error) {
+      observationError = error;
       result.status = "FAIL";
       const unexpectedProviderTarget = receipt.blocked.find(
         (entry) =>
@@ -524,5 +960,6 @@ for (const scenario of phase4Subcases) {
       );
       await attachScenarioResult(testInfo, result);
     }
+    if (observationError) throw observationError;
   });
 }

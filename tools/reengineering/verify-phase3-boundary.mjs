@@ -4,6 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const IMPLEMENTATION_BASE = "93a36626f786a880210c53b8486c961e8b86e9ea";
+const PHASE3_TERMINAL = "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd";
 const ACCEPTANCE_CONTROL_PATHS = new Set([
   "ROADMAP.md",
   "docs/KNOWN_LIMITATIONS.md",
@@ -82,28 +83,33 @@ function isAllowedPath(relativePath, ownedPaths) {
 }
 
 function validateScope(root, preflight, failures) {
-  const ancestry = spawnSync(
+  const baseAncestry = spawnSync(
     "git",
-    ["merge-base", "--is-ancestor", IMPLEMENTATION_BASE, "HEAD"],
+    ["merge-base", "--is-ancestor", IMPLEMENTATION_BASE, PHASE3_TERMINAL],
     { cwd: root, encoding: "utf8", windowsHide: true },
   );
-  if (ancestry.status !== 0) {
-    failures.push(`implementation base ${IMPLEMENTATION_BASE} is not an ancestor of HEAD`);
+  if (baseAncestry.status !== 0) {
+    failures.push(
+      `implementation base ${IMPLEMENTATION_BASE} is not an ancestor of Phase 3 terminal ${PHASE3_TERMINAL}`,
+    );
+    return [];
+  }
+  const headAncestry = spawnSync(
+    "git",
+    ["merge-base", "--is-ancestor", PHASE3_TERMINAL, "HEAD"],
+    { cwd: root, encoding: "utf8", windowsHide: true },
+  );
+  if (headAncestry.status !== 0) {
+    failures.push(`Phase 3 terminal ${PHASE3_TERMINAL} is not an ancestor of HEAD`);
     return [];
   }
   const changed = runGit(
     root,
-    ["diff", "--name-only", IMPLEMENTATION_BASE, "--"],
+    ["diff", "--name-only", IMPLEMENTATION_BASE, PHASE3_TERMINAL, "--"],
     failures,
     "changed-path query",
   );
-  const untracked = runGit(
-    root,
-    ["ls-files", "--others", "--exclude-standard"],
-    failures,
-    "untracked-path query",
-  );
-  const scope = [...new Set([...changed, ...untracked])].filter(
+  const scope = [...new Set(changed)].filter(
     (relativePath) => !relativePath.startsWith("runtime/tmp/"),
   );
   const ownedPaths = preflight?.scope?.implementation_owned_paths;
@@ -208,6 +214,7 @@ export function verifyPhase3Boundary({ workspaceRoot }) {
     schema: "latticework.phase3-boundary-verification.v1",
     valid: failures.length === 0,
     implementationBase: IMPLEMENTATION_BASE,
+    terminalCommit: PHASE3_TERMINAL,
     changedPaths,
     checks: {
       realUserData: "not-accessed",

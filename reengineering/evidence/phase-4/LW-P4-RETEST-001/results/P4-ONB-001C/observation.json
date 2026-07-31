@@ -1,0 +1,35 @@
+{
+  "schema": "latticework.phase4.atomic-result.v1",
+  "group_id": "P4-ONB-001",
+  "subcase_id": "P4-ONB-001C",
+  "probe": "invalid-configuration-reload",
+  "provider": null,
+  "status": "PASS",
+  "evidence_label": "OBSERVED",
+  "profile_id": "P4-PROFILE-P4-ONB-001C",
+  "fresh_profile": true,
+  "notes": [
+    "synthetic invalid configuration persisted only in the disposable profile and suppressed onboarding after reload; no sentinel value was promoted"
+  ],
+  "request_count": 0,
+  "blocked_count": 7,
+  "terminal_count": null,
+  "operation": {
+    "post_delta_retry": false,
+    "duplicate_terminal": false
+  },
+  "cleanup_status": "persistent-browser-context-closed",
+  "profile_path": "Z:\\LATTICEWORK\\runtime\\tmp\\phase4-characterization\\p4-retest-existing-20260731T032407Z-835c82b9\\profiles\\P4-ONB-001C",
+  "profile_empty_at_creation": true,
+  "profile_ownership_marker": "phase4-run-marker-v1",
+  "observed_contract": {
+    "invalid_configuration": "PERSISTED_AND_FAIL_OPEN_AFTER_TIMEOUT",
+    "sentinel_persisted_in_disposable_profile": true,
+    "provider_request_blocked_before_transmission": true,
+    "connected_ui_visible_after_failed_probe": true,
+    "onboarding_visible_after_reload": false
+  },
+  "context_closed": true,
+  "fixture_request_observed": true,
+  "private_sentinel_leak": null
+}

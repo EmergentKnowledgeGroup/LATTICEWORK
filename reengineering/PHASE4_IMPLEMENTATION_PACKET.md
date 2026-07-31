@@ -1,15 +1,21 @@
-<!-- Status: PROPOSED | Owner: Maintainers | Work: LW-P4-IMPL-PREFLIGHT-001 -->
+<!-- Status: ACCEPTED | Owner: Maintainers | Work: LW-P4-IMPL-PREFLIGHT-001 -->
 
-# Corrected Phase 4 implementation packet
+# Accepted Phase 4 implementation packet
 
 ## Control
 
-- **Status:** PROPOSED — NOT AUTHORIZED
+- **Status:** ACCEPTED FOR BOUNDED EXECUTION AFTER INDEPENDENT GREEN
 - **Packet:** `LW-P4-IMPL-PREFLIGHT-001`
-- **Date:** `2026-07-30`
-- **Depends on:** amended Phase 4 characterization GREEN
+- **Date:** `2026-07-31`
+- **Pinned implementation base:** `faf32dbaf8159e8499421fa68d9fba4bede0fdc9`
+- **Required prior gate:** `LW-P4-RETEST-001` canonical and independent GREEN
 - **Accepted architecture:** ADR-004, ADR-005, ADR-006
-- **Implementation authority:** none until a later explicit maintainer receipt
+- **Maintainer receipt:** `Continue and consider anything you write as accepted.`
+
+The standing maintainer receipt accepts this exact packet only after its
+machine validator and independent review are GREEN. It does not authorize any
+path, capability, data source, network behavior, activation, or deployment not
+named here.
 
 ## Intended invariant
 
@@ -18,36 +24,31 @@ corrects the accepted cancellation and provider-selection divergences while
 leaving the legacy application, real stores, credentials, endpoints, default
 route, deployment, and activation untouched.
 
-## Exact proposed ownership
+## Exact ownership
 
-New candidate paths:
+The machine lock below is authoritative. New implementation source is limited
+to `packages/chat/`, the exact P4 web entry files, `tests/phase4/`, and the
+exact controls, evidence, claim, handoff, living-document, and checkpoint paths.
 
-- `packages/contracts/src/chat.ts`
-- `packages/chat/package.json`
-- `packages/chat/tsconfig.json`
-- `packages/chat/src/index.ts`
-- `packages/chat/src/chat-controller.ts`
-- `packages/chat/src/synthetic-conversation-store.ts`
-- `packages/chat/src/chat-controller.test.mjs`
-- `apps/web/p4.html`
-- `apps/web/src/p4-main.ts`
-- `apps/web/src/p4-chat-app.ts`
-- `apps/web/src/p4-chat-app.css`
-- `tests/phase4/**`
-- exact Phase 4 boundary, verification, evidence, claim, handoff, living-doc,
-  and checkpoint paths
+The only permitted narrow edits to existing implementation files are:
 
-Narrow existing-file edits:
-
+- `package.json` and `package-lock.json`: workspace bookkeeping and P4 commands.
 - `packages/contracts/src/index.ts`: export Chat contracts only.
-- `apps/web/package.json`: add `@latticework/chat`,
+- `apps/web/package.json`: add only `@latticework/chat`,
   `@latticework/providers`, and `@latticework/storage`.
-- root `package-lock.json` and `package.json`: workspace bookkeeping and
-  `p4:typecheck`, `p4:test`, and `p4:browser` commands only.
+- `tests/reengineering/phase2-boundary.test.mjs`: preserve the Phase 2
+  dependency assertion against the verified Phase 2 terminal commit rather
+  than incorrectly treating later additive dependencies as Phase 2 drift.
+- `tools/reengineering/validate-phase4-active-scope.mjs`: compose the exact
+  accepted implementation ownership lock into the earlier Phase 4 active
+  scope. No broad application/package prefix is added.
+- `tools/reengineering/verify-phase3-boundary.mjs`: preserve Phase 3 scope
+  verification against its accepted closed base-to-terminal range while
+  continuing to run its semantic provider and storage checks on current code.
 
-Protected paths include `apps/web/index.html`, `apps/web/src/main.ts`, the
-legacy tree, deployment/service-worker/server/desktop/worker files, Phase 3
-migration/source-reader implementations, and every real provider transport.
+Everything in the protected exact/prefix arrays must remain byte-identical to
+the pinned implementation base. Protected paths are rejected independently
+even if an ownership array is later edited to include one.
 
 ## Dependency and authority map
 
@@ -61,20 +62,22 @@ p4.html -> p4-main -> p4-chat-app -> @latticework/chat -> @latticework/contracts
 @latticework/storage   -> @latticework/contracts
 ```
 
-`@latticework/chat` imports interfaces only. The view cannot access storage,
-`fetch`, WebSocket, EventSource, credentials, or provider implementations.
+`@latticework/chat` depends only on `@latticework/contracts` and imports
+interfaces only. The view cannot access storage, network APIs, credentials, or
+provider implementations. Only `p4-main.ts` may compose the already-verified
+Phase 3 package roots.
 
-## Product policy frozen by this proposal
+## Product policy
 
 - Entry is `/p4.html`, dev/test-only, non-default, and visibly marked
-  synthetic. `/` remains the feature-free shell.
+  synthetic. `/` and the production build remain unchanged.
 - Provider choices are visibly `Mock local` and `Mock cloud`; there is no skip,
-  fallback, retry, endpoint, model discovery, or credential UI.
+  fallback, retry, endpoint, model discovery, credential UI, or real transport.
 - Only generated fixture-tagged records may be written to
   `latticework::conversation` inside a disposable profile.
 - No `FreeLatticeConversationSourceReader`, `ConversationMigrationService`,
   `FreeLatticeDB`, migration journal, staging namespace, activation, or
-  read-owner switch may be constructed or imported.
+  read-owner switch may be constructed, imported, or invoked.
 - A synthetic user message is persisted before mock dispatch. Assistant content
   is persisted only after `completed`. A cancelled or failed turn retains the
   user message and content-free terminal metadata; no partial assistant content
@@ -86,37 +89,57 @@ p4.html -> p4-main -> p4-chat-app -> @latticework/chat -> @latticework/contracts
 - Diagnostics/copy contain structured redacted provenance only: operation,
   attempt, adapter, model, trust class, result source, timing, terminal reason,
   and cancellation scope.
-- The candidate database may survive reload only inside its disposable test or
-  demonstration profile. Cleanup deletes that exact run-owned candidate DB;
-  it never touches legacy or migration namespaces.
-- The loopback stream listener is test-only. Application code uses the existing
-  deterministic in-process mock adapters and never connects to it.
+- The candidate database may survive reload only inside its disposable test
+  profile. Cleanup deletes that exact run-owned candidate DB and never touches
+  legacy or migration namespaces.
+
+## Listener boundary
+
+Application and package source may not listen, fetch, open sockets, read ambient
+credentials, or contact a provider. The implementation-owned synthetic stream
+listener is `tests/phase4/support/synthetic-stream-fixture.mjs`; it must:
+
+- bind literal `127.0.0.1`;
+- request port `0` and record the OS-selected port;
+- be owned and stopped by one test run;
+- return generated synthetic fragments only;
+- perform no DNS, forwarding, proxying, or external egress; and
+- prove teardown and port release.
+
+The browser verifier may also start Vite as a run-owned exact-loopback test
+harness from `tests/phase4/playwright.config.ts`. Its port comes only from the
+validated `LATTICEWORK_P4_PORT` test-run setting (4194 canonical, 4294
+independent), it serves only the synthetic candidate web root, it performs no
+provider traffic, and Playwright owns its teardown. This is verification
+infrastructure, not an application listener or candidate activation.
 
 ## Verification gates
 
-1. strict TypeScript across all workspaces;
-2. controller tests for persistence order, exactly-one terminal, cancellation,
-   late/duplicate events, reload states, malformed events, sanitized errors,
-   provenance, zero retry, and zero fallback;
-3. native Chromium disposable-profile E2E for both mock providers, fragmented
-   stream, cancellation, reload, diagnostics, keyboard, mobile, forced-colors,
-   reduced-motion, warm-offline, and unchanged `/`;
-4. test fixture rejects every wrong method/path/fixture/body, proves
-   `127.0.0.1` plus run-selected port, performs zero forwarding/DNS/external
-   egress, and proves teardown;
-5. boundary controls reject legacy imports, protected app edits, ambient
-   credentials, provider transports, network APIs in app/package code, runtime
-   listeners, and candidate activation;
-6. deterministic double build, isolated lock replay, audit, SBOM, full
-   repository controls, hashed evidence, secret/content scan, and independent
-   clean-worktree reproduction;
-7. old/new comparison reports accepted divergences as intentional candidate
-   differences, never baseline compatibility.
+1. `node tools/reengineering/validate-phase4-amendment.mjs`
+2. `node --test tests/reengineering/phase4-implementation-scope.test.mjs`
+3. `node tools/reengineering/validate-phase4-implementation-scope.mjs`
+4. `npm run p4:typecheck`
+5. `npm run p4:test`
+6. `npm run p4:browser`
+7. `npm run p3:boundary`
+8. `node --test tests/reengineering/*.test.mjs`
+9. protected Phase 3 and default-web byte comparisons to the pinned base
+10. deterministic double build, isolated lock replay, audit, SBOM, evidence
+    hashing/content scan, and independent clean-worktree reproduction
+11. desktop, 390 x 844 mobile, keyboard, forced-colors, reduced-motion,
+    explicit warm-offline disposition, cancellation, reload, diagnostics, and
+    unchanged `/` browser evidence. Warm offline may be claimed only if the
+    candidate explicitly declares and passes that contract; this packet does
+    not authorize adding a service worker to manufacture the claim.
+
+The implementation-range validator hard-codes the pinned base and rejects CLI
+base/scope overrides. It inspects committed history including add-then-delete
+paths plus staged, unstaged, untracked, and force-added ignored files.
 
 ## Rollback
 
-Before any future activation, rollback removes only the P4 entry, feature
-package, tests, and narrow dependency/export bookkeeping. It closes candidate
+Before any future activation, rollback removes only the P4 entry, Chat package,
+tests, and narrow dependency/export bookkeeping. It closes candidate
 connections and deletes only the exact run-owned
 `latticework::conversation`. Accepted evidence and every legacy/migration
 namespace remain untouched. Because `/` never changes, rollback requires no
@@ -131,17 +154,21 @@ deployment, or installer changes; migration/activation; a new provider
 protocol/dependency; content-bearing diagnostics; uncertain cleanup; or any
 attempt to relabel a baseline divergence as `PASS`.
 
-## Locked proposal
+## Machine lock
 
 ```json
 {
-  "schema": "latticework.phase4-implementation-packet.v1",
+  "schema": "latticework.phase4-implementation-packet.v2",
   "packet_id": "LW-P4-IMPL-PREFLIGHT-001",
-  "implementation_authorized": false,
+  "accepted": true,
+  "acceptance_receipt": "Continue and consider anything you write as accepted.",
+  "implementation_base_sha": "faf32dbaf8159e8499421fa68d9fba4bede0fdc9",
+  "implementation_authorized": true,
   "entrypoint": "apps/web/p4.html",
   "entrypoint_default": false,
   "production_build_authorized": false,
   "legacy_default_unchanged": true,
+  "synthetic_mock_only": true,
   "real_data_authorized": false,
   "real_credentials_authorized": false,
   "real_provider_traffic_authorized": false,
@@ -154,47 +181,114 @@ attempt to relabel a baseline divergence as `PASS`.
     "mock-local",
     "mock-cloud"
   ],
-  "owned_implementation_paths": [
+  "retry_count": 0,
+  "fallback_authorized": false,
+  "application_listener": false,
+  "test_listener": true,
+  "test_listener_contract": {
+    "only_path": "tests/phase4/support/synthetic-stream-fixture.mjs",
+    "bind": "127.0.0.1",
+    "port": "os-selected",
+    "requested_port": 0,
+    "run_owned": true,
+    "fixture_only": true,
+    "synthetic_only": true,
+    "external_egress": false
+  },
+  "browser_harness_listener": {
+    "only_path": "tests/phase4/playwright.config.ts",
+    "bind": "127.0.0.1",
+    "port_source": "LATTICEWORK_P4_PORT",
+    "canonical_port": 4194,
+    "independent_port": 4294,
+    "browser_channel": "chrome",
+    "run_owned": true,
+    "synthetic_ui_only": true,
+    "external_egress": false
+  },
+  "owned_exact_paths": [
+    "package.json",
+    "package-lock.json",
+    "packages/contracts/src/index.ts",
     "packages/contracts/src/chat.ts",
-    "packages/chat/package.json",
-    "packages/chat/tsconfig.json",
-    "packages/chat/src/index.ts",
-    "packages/chat/src/chat-controller.ts",
-    "packages/chat/src/synthetic-conversation-store.ts",
-    "packages/chat/src/chat-controller.test.mjs",
+    "apps/web/package.json",
     "apps/web/p4.html",
     "apps/web/src/p4-main.ts",
     "apps/web/src/p4-chat-app.ts",
     "apps/web/src/p4-chat-app.css",
-    "tests/phase4/"
+    "tests/reengineering/phase4-implementation-scope.test.mjs",
+    "tests/reengineering/phase4-active-scope.test.mjs",
+    "tests/reengineering/phase2-boundary.test.mjs",
+    "tests/reengineering/phase4-amendment.test.mjs",
+    "tools/reengineering/verify-phase3-boundary.mjs",
+    "tools/reengineering/validate-phase4-implementation-scope.mjs",
+    "tools/reengineering/validate-phase4-active-scope.mjs",
+    "tools/reengineering/validate-phase4-amendment.mjs",
+    "tools/reengineering/run-phase4-verification.ps1",
+    "docs/agents/claims/LW-P4-IMPL-PREFLIGHT-001.md",
+    "docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md",
+    "docs/agents/claims/LW-P4-001.md",
+    "docs/agents/handoffs/LW-P4-001.md",
+    "PROJECT_STATE.md",
+    "docs/ARCHITECTURE.md",
+    "docs/COMPATIBILITY.md",
+    "docs/TESTING_AND_VERIFICATION.md",
+    "reengineering/BLOCKERBOARD.md",
+    "reengineering/EXECUTION_CHECKLIST.md",
+    "reengineering/PHASE4_IMPLEMENTATION_PACKET.md",
+    "runtime/checkpoints/LATEST.md",
+    "runtime/checkpoints/LATEST.json",
+    "reengineering/checkpoints/LATEST.md",
+    "reengineering/checkpoints/LATEST.json"
   ],
-  "protected_paths": [
+  "owned_path_prefixes": [
+    "packages/chat/",
+    "tests/phase4/",
+    "reengineering/evidence/phase-4/LW-P4-001/"
+  ],
+  "protected_phase3_exact_paths": [
+    "packages/contracts/src/provider.ts",
+    "packages/contracts/src/storage.ts"
+  ],
+  "protected_phase3_path_prefixes": [
+    "packages/providers/",
+    "packages/storage/"
+  ],
+  "protected_exact_paths": [
+    "app.html",
+    "index.html",
+    "docs/app.html",
+    "sw.js",
+    "docs/sw.js",
+    "server.js",
+    "server.py",
+    "telegram-worker.js",
     "apps/web/index.html",
     "apps/web/src/main.ts",
-    "legacy/",
+    "apps/web/src/empty-status-shell.ts",
+    "apps/web/src/styles.css",
+    "apps/web/vite.config.ts",
+    "apps/web/tsconfig.json"
+  ],
+  "protected_path_prefixes": [
+    "modules/",
+    "docs/modules/",
+    "desktop/",
+    "worker/",
     "deployment/",
     "service-worker/",
     "server/",
-    "desktop/",
-    "worker/"
+    "tests/smoke",
+    "tests/characterization/"
   ],
-  "retry_count": 0,
-  "fallback_authorized": false,
-  "application_listener_authorized": false,
-  "test_listener": {
-    "bind": "127.0.0.1",
-    "port": "os-selected",
-    "run_owned": true,
-    "synthetic_only": true,
-    "external_egress": false
-  },
-  "required_prior_gate": "LW-P4-AMEND-001-GREEN",
-  "required_next_authority": "explicit-maintainer-acceptance"
+  "required_prior_gate": "LW-P4-RETEST-001-GREEN",
+  "required_next_authority": "none-within-this-packet"
 }
 ```
 
-## Decision requested later
+## Acceptance effect
 
-Do not start `LW-P4-001` from this document alone. After amended
-characterization and independent spec QA are green, the maintainer must
-explicitly accept this exact packet.
+Once this exact packet, validator, and negative-test suite receive independent
+GREEN review, `LW-BLK-010` closes and `LW-P4-001` may begin under this packet
+only. Real-data, credential, real-provider, application-listener, activation,
+deployment, and cutover authority remain false.

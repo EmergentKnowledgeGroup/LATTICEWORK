@@ -1,0 +1,383 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "Z:\\LATTICEWORK\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "Z:\\LATTICEWORK\\tests\\phase4\\playwright.config.ts",
+    "rootDir": "Z:/LATTICEWORK/tests/phase4",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "Z:/LATTICEWORK/runtime/tmp/p4-browser-agent/playwright",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "Z:/LATTICEWORK/tests/phase4",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "Z:\\LATTICEWORK\\runtime\\tmp\\p4-browser-agent\\playwright\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node ../../node_modules/vite/bin/vite.js ../../apps/web --host 127.0.0.1 --port 4194 --strictPort",
+      "cwd": ".",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "url": "http://127.0.0.1:4194"
+    }
+  },
+  "suites": [
+    {
+      "title": "p4-chat.spec.ts",
+      "file": "p4-chat.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "/p4.html is visibly synthetic and sends exactly through selected local and cloud mocks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1297,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-31T05:04:02.882Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "360074d745130059420a-46da399032b89c4eca98",
+          "file": "p4-chat.spec.ts",
+          "line": 95,
+          "column": 1
+        },
+        {
+          "title": "fragment completion persists only completed assistant output and reload restores the disposable candidate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 907,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-31T05:04:04.204Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "360074d745130059420a-b9b1999e6c59bc8eeed8",
+          "file": "p4-chat.spec.ts",
+          "line": 119,
+          "column": 1
+        },
+        {
+          "title": "cancel works before dispatch and after the first delta without persisting partial assistant text",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 979,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-31T05:04:05.117Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "360074d745130059420a-182fb5bf0b7ef3137505",
+          "file": "p4-chat.spec.ts",
+          "line": 132,
+          "column": 1
+        },
+        {
+          "title": "conversation snapshot merge replaces the active conversation and preserves unrelated records",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 738,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-31T05:04:06.102Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "360074d745130059420a-27b9b55ef1823c558e8e",
+          "file": "p4-chat.spec.ts",
+          "line": 156,
+          "column": 1
+        },
+        {
+          "title": "diagnostics are structured and do not expose synthetic message content",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 952,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-31T05:04:06.845Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "360074d745130059420a-bd9c849d7e9c26edc2dd",
+          "file": "p4-chat.spec.ts",
+          "line": 220,
+          "column": 1
+        },
+        {
+          "title": "keyboard, 390x844, forced colors, and reduced motion keep the bounded shell usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 882,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-31T05:04:07.802Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "360074d745130059420a-195cb6ed25945f425042",
+          "file": "p4-chat.spec.ts",
+          "line": 233,
+          "column": 1
+        },
+        {
+          "title": "warm offline reload is verified only when the candidate explicitly declares offline support",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Candidate does not declare an offline contract.",
+                  "location": {
+                    "file": "Z:\\LATTICEWORK\\tests\\phase4\\p4-chat.spec.ts",
+                    "line": 256,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 832,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-31T05:04:08.690Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Candidate does not declare an offline contract.",
+                      "location": {
+                        "file": "Z:\\LATTICEWORK\\tests\\phase4\\p4-chat.spec.ts",
+                        "line": 256,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "360074d745130059420a-aa0d6f045ee28418d796",
+          "file": "p4-chat.spec.ts",
+          "line": 252,
+          "column": 1
+        },
+        {
+          "title": "the default route remains separate from the non-default P4 entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 771,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-31T05:04:09.527Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "360074d745130059420a-26dc898dfb89f53f082e",
+          "file": "p4-chat.spec.ts",
+          "line": 265,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-31T05:04:02.002Z",
+    "duration": 8742.957,
+    "expected": 7,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

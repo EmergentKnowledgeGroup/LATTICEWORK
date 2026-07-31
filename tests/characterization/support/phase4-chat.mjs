@@ -16,12 +16,76 @@ export const phase4Contract = JSON.parse(
   fs.readFileSync(contractPath, "utf8"),
 );
 
-export const phase4Subcases = phase4Contract.groups.flatMap((group) =>
+const amendmentRetests = process.env.LATTICEWORK_PHASE4_AMENDMENT_RETESTS === "1";
+const loopbackRetests =
+  process.env.LATTICEWORK_PHASE4_LOOPBACK_RETESTS === "1";
+const amendmentRetestIds = new Set([
+  "P4-A11Y-001A",
+  "P4-A11Y-001B",
+  "P4-A11Y-001C",
+  "P4-CHAT-008A",
+  "P4-DEG-001A",
+  "P4-ONB-001C",
+]);
+const loopbackRetestIds = new Set([
+  "P4-CHAT-001A",
+  "P4-CHAT-003B",
+  "P4-CHAT-010A",
+  "P4-CHAT-010B",
+  "P4-RESP-001A",
+]);
+const requestedSubcaseIds = process.env.LATTICEWORK_PHASE4_SUBCASES
+  ? process.env.LATTICEWORK_PHASE4_SUBCASES.split(",")
+    .map((value) => value.trim())
+    .filter(Boolean)
+  : null;
+const allPhase4Subcases = phase4Contract.groups.flatMap((group) =>
   group.subcases.map((subcase) => ({
     ...subcase,
     group_id: group.id,
   })),
 );
+if (amendmentRetests) {
+  if (!requestedSubcaseIds) {
+    throw new Error("LATTICEWORK_PHASE4_AMENDMENT_RETESTS=1 requires LATTICEWORK_PHASE4_SUBCASES");
+  }
+  const requested = new Set(requestedSubcaseIds);
+  if (
+    requested.size !== amendmentRetestIds.size ||
+    [...requested].some((id) => !amendmentRetestIds.has(id))
+  ) {
+    throw new Error("Phase 4 amendment retests require the exact approved six-subcase allowlist");
+  }
+}
+if (loopbackRetests) {
+  if (!requestedSubcaseIds) {
+    throw new Error(
+      "LATTICEWORK_PHASE4_LOOPBACK_RETESTS=1 requires LATTICEWORK_PHASE4_SUBCASES",
+    );
+  }
+  const requested = new Set(requestedSubcaseIds);
+  if (
+    requested.size !== loopbackRetestIds.size ||
+    [...requested].some((id) => !loopbackRetestIds.has(id))
+  ) {
+    throw new Error(
+      "Phase 4 loopback retests require the exact approved five-subcase allowlist",
+    );
+  }
+}
+if (amendmentRetests && loopbackRetests) {
+  throw new Error("Phase 4 existing-harness and loopback retest modes are separate.");
+}
+if (
+  requestedSubcaseIds &&
+  (new Set(requestedSubcaseIds).size !== requestedSubcaseIds.length ||
+    requestedSubcaseIds.some((id) => !allPhase4Subcases.some((scenario) => scenario.id === id)))
+) {
+  throw new Error("LATTICEWORK_PHASE4_SUBCASES must contain unique exact Phase 4 subcase IDs");
+}
+export const phase4Subcases = requestedSubcaseIds
+  ? allPhase4Subcases.filter((scenario) => requestedSubcaseIds.includes(scenario.id))
+  : allPhase4Subcases;
 
 const baseURL =
   process.env.LATTICEWORK_CHARACTERIZATION_BASE_URL ??
@@ -32,6 +96,7 @@ const privateSentinels = [
   "P4_SYNTHETIC_PROMPT_DO_NOT_EXPORT",
   "P4_SYNTHETIC_RESPONSE_DO_NOT_EXPORT",
   "P4_SYNTHETIC_CREDENTIAL_DO_NOT_EXPORT",
+  "P4_SYNTHETIC_INVALID_CONFIG_DO_NOT_EXPORT",
 ];
 
 function sanitizeUrl(raw) {
@@ -165,12 +230,19 @@ function responseForProbe(probe, request) {
   };
 }
 
-export async function installPhase4Capture(context, scenario) {
+export async function installPhase4Capture(
+  context,
+  scenario,
+  { loopbackFixture = null } = {},
+) {
+  const loopbackTarget = loopbackFixture?.endpoint ?? null;
+  const loopbackOrigin = loopbackTarget ? new URL(loopbackTarget).origin : null;
   const receipt = {
     allowed_origin: allowedOrigin,
     expected_target:
       scenario.provider
-        ? phase4Contract.providers[scenario.provider].target
+        ? loopbackTarget ??
+          phase4Contract.providers[scenario.provider].target
         : null,
     expected_requests: [],
     fixture_probes: [],
@@ -222,11 +294,47 @@ export async function installPhase4Capture(context, scenario) {
         header_names: headerNames(request),
         payload_shape: payloadShape(request),
       });
+      if (loopbackTarget) {
+        if (url.origin !== loopbackOrigin || request.method() !== "POST") {
+          receipt.blocked.push({
+            method: request.method(),
+            url: sanitizeUrl(rawUrl),
+            resource_type: request.resourceType(),
+          });
+          await route.abort("blockedbyclient");
+          return;
+        }
+        await route.continue({
+          headers: {
+            ...request.headers(),
+            "x-latticework-phase4-fixture-id": loopbackFixture.fixtureId,
+          },
+        });
+        return;
+      }
       if (scenario.probe === "timeout") {
+        const amendmentTimeoutHold =
+          process.env.LATTICEWORK_PHASE4_AMENDMENT_RETESTS === "1";
+        const holdMs = 750;
         receipt.fixture_probes.push({
           status: 0,
-          content_type: "synthetic-timeout-abort",
+          content_type: amendmentTimeoutHold
+            ? "synthetic-timeout-hold"
+            : "synthetic-timeout-abort",
         });
+        if (amendmentTimeoutHold) {
+          receipt.timeout_observation = {
+            hold_ms: holdMs,
+            request_started_monotonic_ms: Number(process.hrtime.bigint() / 1_000_000n),
+            pending_at_horizon: false,
+            harness_abort_monotonic_ms: null,
+          };
+          await new Promise((resolve) => setTimeout(resolve, holdMs));
+          receipt.timeout_observation.pending_at_horizon = true;
+          receipt.timeout_observation.harness_abort_monotonic_ms = Number(
+            process.hrtime.bigint() / 1_000_000n,
+          );
+        }
         await route.abort("timedout");
         return;
       }
@@ -338,6 +446,36 @@ export async function configureLocalThroughWelcome(page) {
   await page.evaluate(() => window.switchTab?.("chat"));
   await expect(page.locator("#tab-chat")).toHaveClass(
     /(?:^|\s)active(?:\s|$)/,
+  );
+}
+
+export async function configureLoopbackLocalProvider(page, endpoint) {
+  const parsed = new URL(endpoint);
+  if (
+    parsed.protocol !== "http:" ||
+    parsed.hostname !== "127.0.0.1" ||
+    parsed.pathname !== "/v1/chat/completions" ||
+    !parsed.port
+  ) {
+    throw new Error("Loopback provider endpoint is outside the approved fixture.");
+  }
+  await page.evaluate(
+    ({ endpointValue, model }) => {
+      window.__latticeworkPhase4Endpoint = endpointValue;
+      window.__latticeworkPhase4Model = model;
+      window.eval(
+        "PROVIDERS.ollama.url = window.__latticeworkPhase4Endpoint;" +
+          "state.ollamaModel = window.__latticeworkPhase4Model;",
+      );
+      delete window.__latticeworkPhase4Endpoint;
+      delete window.__latticeworkPhase4Model;
+      const input = document.getElementById("ollamaModel");
+      if (input) input.value = model;
+    },
+    {
+      endpointValue: endpoint,
+      model: "latticework-synthetic-local",
+    },
   );
 }
 

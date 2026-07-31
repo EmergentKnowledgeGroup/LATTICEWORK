@@ -8,15 +8,15 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 4 AMENDMENT PREPARED — RETESTS AND IMPLEMENTATION ACCEPTANCE BLOCKED`
+`PHASE 4 SYNTHETIC SLICE VERIFIED — REVIEW AND MERGE PENDING`
 
 ## Current milestone
 
-`M1/M3 boundary — primary Chat amendment validation and bounded retests`
+`M1/M3 boundary — non-default synthetic primary Chat vertical slice`
 
 ## Current target
 
-`LW-P4-AMEND-001 — eight divergences accepted; eleven retests frozen`
+`LW-P4-001 — one-review pull-request and merge closeout`
 
 ## Upstream baseline
 
@@ -24,8 +24,8 @@ LATTICEWORK
 
 ## Last verified commit
 
-`baf82dc59edbe065d3c62d3ea08fe2941438fc96` (PR #3 merged; Phase 4
-characterization evidence remains honestly BLOCKED)
+`e65ca81940d50eabd5bb72a403deab3bf37bea93` (Phase 4 non-default
+synthetic Chat candidate; canonical and independent evidence are GREEN)
 
 The verified Phase 3 candidate
 `d746b96225a3eaf59a5b5937e3f531e2cad280ef` is contained in the merged
@@ -33,22 +33,40 @@ history, but its packages remain unregistered and inactive. The last verified
 active runtime behavior remains the Phase 2 foundation; Phase 3 introduced no
 route, listener, provider transport, real-data read, activation, or cutover.
 
-The locked Phase 4 characterization executed with additive, synthetic-profile,
-denied-egress tooling only. It produced 20 PASS, 16 UNKNOWN, and 3 FAIL.
-Candidate application changes, package integration, real data, credentials,
-provider traffic, listeners beyond the existing loopback static harness,
-activation, migration, and cutover remain unauthorized.
+The immutable original Phase 4 characterization remains 20 PASS, 16 UNKNOWN,
+and 3 FAIL. The accepted amendment preserves those original results, records
+eight confirmed baseline defects as divergences, and independently retests the
+remaining eleven cases. The canonical amended result is 31 PASS, eight
+ACCEPTED_DIVERGENCE, and zero BLOCKED.
 
-The maintainer has now accepted the confirmed cancellation and wrong-target
-defects as documented divergences and authorized one run-owned
-`127.0.0.1` synthetic streaming fixture. The amendment and corrected
-implementation packet remain control documents only. Eleven bounded retests,
-independent reproduction, and later explicit implementation-packet acceptance
-are still required.
+**VERIFIED:** the amended runner completed once with zero retries; all 32
+controls and all eleven browser retests passed. Independent QA reproduced the
+same result from a clean detached worktree, verified all 41 manifest artifacts,
+proved exact-loopback listener teardown and port release, and found no
+sentinel/content leak, profile residue, run-root residue, reparse point, shared
+dependency, or shared browser-cache use.
+
+The corrected exact implementation packet is accepted and independently GREEN.
+It authorizes only a removable, non-default `/p4.html` synthetic/mock slice.
+Real data, credentials, provider traffic, application listeners, activation,
+migration, deployment, and cutover remain unauthorized.
+
+**MEASURED:** the exact non-default slice is now implemented. Its Chat
+controller persists the user before dispatch, appends completed assistant text
+only after a completed terminal, records content-free failure/cancellation
+metadata, uses one operation controller, and performs zero retry/fallback.
+The Lit workbench composes only the accepted in-process mock adapters and
+candidate-only `latticework::conversation` repository. Targeted verification
+passes every workspace typecheck, 63 unit/control assertions, and seven active
+Chrome scenarios. The offline-contract scenario is explicitly skipped because
+this packet authorizes no service worker and the candidate makes no offline
+claim. Canonical verification passes 187/187 repository controls, deterministic
+build, audit, SBOM, supply-chain, and hygiene gates. Independent QA reproduced
+the complete gate from a new detached worktree on port 4294 and returned GREEN.
 
 ## Last verified date
 
-`2026-07-30 22:32 UTC`
+`2026-07-31 03:18 UTC`
 
 ## Locked constraints
 
@@ -73,7 +91,10 @@ are still required.
 | `LW-P4-CTRL-001` | Phase-closed historical and fail-closed active scope controls | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P4-CTRL-001.md` |
 | `LW-P4-PREFLIGHT-001` | Primary Chat baseline characterization lock | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `COMPLETED — LOCKED / GREEN` | `docs/agents/handoffs/LW-P4-PREFLIGHT-001.md` |
 | `LW-P4-CHAR-001` | Synthetic primary Chat baseline characterization | Codex root controller | `reengineering/p4-chat-vertical-slice-preflight` | `COMPLETED — BLOCKED` | `docs/agents/handoffs/LW-P4-CHAR-001.md` |
-| `LW-P4-AMEND-001` | Characterization amendment and corrected implementation packet | Codex root controller | `reengineering/p4-characterization-amendment` | `IN PROGRESS — CONTROL ONLY` | `reengineering/PHASE4_CHARACTERIZATION_AMENDMENT.md` |
+| `LW-P4-AMEND-001` | Characterization amendment and initial implementation proposal | Codex root controller | `main` | `COMPLETED — MERGED / VERIFIED` | `docs/agents/handoffs/LW-P4-AMEND-001.md` |
+| `LW-P4-RETEST-001` | Bounded amended characterization retests | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P4-RETEST-001.md` |
+| `LW-P4-IMPL-PREFLIGHT-001` | Exact bounded implementation packet and range lock | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md` |
+| `LW-P4-001` | Non-default synthetic primary Chat vertical slice | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — CANONICAL / INDEPENDENT GREEN` | `reengineering/evidence/phase-4/LW-P4-001/` |
 
 ## Completed in current milestone
 
@@ -177,6 +198,26 @@ are still required.
   exact mocked Ollama/OpenAI caller boundaries, denied egress, fresh profiles,
   evidence promotion and cleanup, owned paths, rollback, stop conditions, and
   a zero-UNKNOWN GREEN rule. It grants characterization authority only.
+- **VERIFIED:** `LW-P4-RETEST-001` preserves every original result and hash,
+  records only the eight maintainer-accepted divergences, and produces eleven
+  separately receipted PASS retests. Canonical validation reports 31 PASS,
+  eight ACCEPTED_DIVERGENCE, zero BLOCKED, and `valid: true`.
+- **VERIFIED:** independent clean-worktree QA at exact candidate
+  `55e3731ea1482f37b242da6dc1af8d8181624e9a` reproduced 32/32 controls,
+  11/11 retests, 33/33 atomic JSON attachments, and 41/41 manifest artifacts
+  with one canonical invocation and zero retries.
+- **VERIFIED:** the exact Phase 4 implementation packet is pinned to
+  `faf32dbaf8159e8499421fa68d9fba4bede0fdc9`, accepted by the maintainer's
+  standing receipt, machine-valid, and independently GREEN after one bounded
+  rework round. Focused controls pass 41/41 and full repository controls pass
+  180/180.
+- **VERIFIED:** the implemented Chat/controller/browser slice at
+  `e65ca81940d50eabd5bb72a403deab3bf37bea93` passes targeted typecheck,
+  63/63 assertions, 187/187 repository controls, seven active browser scenarios,
+  one exact accepted offline-contract skip, deterministic builds, audit, SBOM,
+  supply-chain, hygiene, and clean detached-worktree reproduction. No real
+  provider/data/credential/application-listener/activation/deployment/cutover
+  authority was added.
 
 ## Blockers
 
@@ -189,11 +230,10 @@ are still required.
 - `LW-BLK-007` remains open for eventual cutover.
 - `LW-BLK-008` is closed by the phase-closed historical and claim-specific
   active-scope controls.
-- `LW-BLK-009` remains open until all 39 mandatory Phase 4 cases have a final
-  `PASS` or accepted-divergence disposition and the amended bundle is
-  independently reproduced.
-- `LW-BLK-010` keeps candidate implementation blocked until a later,
-  separately accepted implementation packet exists.
+- `LW-BLK-009` is closed by the canonical and independently reproduced amended
+  characterization bundle: 31 PASS, eight ACCEPTED_DIVERGENCE, zero BLOCKED.
+- `LW-BLK-010` is closed by the exact accepted packet, fail-closed range
+  validator, complete negative controls, and independent GREEN re-review.
 
 ## Open decisions
 
@@ -209,8 +249,8 @@ are still required.
 - Documentation accuracy improvements.
 - Reproducible measurement tooling.
 - Documentation and evidence corrections that do not change product semantics.
-- Execute only the additive `LW-P4-CHAR-001` characterization paths frozen in
-  `reengineering/PHASE4_PREFLIGHT.md`.
+- Claim and execute only `LW-P4-001` under the exact accepted implementation
+  packet.
 
 ## Human decision required
 
@@ -228,21 +268,19 @@ are still required.
 
 ## Next handoff
 
-**Next action:** validate the amendment and corrected implementation packet,
-then execute only the eleven bounded characterization retests. Do not modify
-candidate or legacy runtime behavior.
+**Next action:** finish the one consolidated CodeRabbit fix proof, resolve the
+single review's threads, and merge PR #5 without requesting another review.
 
-**Read first:** `reengineering/PHASE4_PREFLIGHT.md`,
-`docs/agents/handoffs/LW-P4-PREFLIGHT-001.md`, and
+**Read first:** `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md`,
+`reengineering/PHASE4_IMPLEMENTATION_PACKET.md`, and
 `reengineering/BLOCKERBOARD.md`.
 
 **Do not touch:** stored-data/provider/security semantics, default routes,
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** all 39 mandatory atomic subcases in 16 reporting groups
-are PASS with zero UNKNOWN/conditional/fail results, complete evidence, and
-independent clean-worktree reproduction. Any missing baseline behavior remains
-an explicit blocker; it is not simulated or silently waived.
+**Success condition:** the exact non-default synthetic slice merges after one
+CodeRabbit review and one consolidated fix pass, with all required checks green
+and `/` plus every protected path unchanged.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`

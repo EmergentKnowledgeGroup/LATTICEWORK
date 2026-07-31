@@ -12,7 +12,8 @@
     "apps/*",
     "packages/*",
     "tests/phase2",
-    "tests/phase3"
+    "tests/phase3",
+    "tests/phase4"
   ],
   "scripts": {
     "p2:typecheck": "npm run typecheck --workspaces --if-present",
@@ -24,7 +25,11 @@
     "p3:typecheck": "npm run typecheck --workspaces --if-present",
     "p3:test": "npm run test --workspace @latticework/storage && npm run test --workspace @latticework/providers && node --test tests/reengineering/phase3-storage-boundary.test.mjs tests/reengineering/phase3-provider-boundary.test.mjs",
     "p3:browser": "npm run test --workspace @latticework/phase3-browser",
-    "p3:boundary": "node tools/reengineering/verify-phase3-boundary.mjs"
+    "p3:boundary": "node tools/reengineering/verify-phase3-boundary.mjs",
+    "p4:typecheck": "npm run typecheck --workspaces --if-present",
+    "p4:test": "npm run test --workspace @latticework/chat && npm run test:fixture --workspace @latticework/phase4-browser && node --test tests/reengineering/phase4-amendment.test.mjs tests/reengineering/phase4-implementation-scope.test.mjs",
+    "p4:browser": "npm run test:browser --workspace @latticework/phase4-browser",
+    "p4:verify": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/reengineering/run-phase4-verification.ps1"
   },
   "devDependencies": {
     "typescript": "6.0.3",
