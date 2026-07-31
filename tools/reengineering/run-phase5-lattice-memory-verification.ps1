@@ -20,8 +20,6 @@ if ((& git -C $BaselineRoot rev-parse HEAD).Trim() -ne $BaselineSha) { throw "Im
 if (& git -C $BaselineRoot status --porcelain) { throw "Immutable baseline is dirty." }
 & git -C $Repo merge-base --is-ancestor $ImplementationBase HEAD
 if ($LASTEXITCODE -ne 0) { throw "Implementation base is not an ancestor of HEAD." }
-if (& git -C $Repo status --porcelain) { throw "Verification requires a clean candidate worktree." }
-
 $CandidateSha = (& git -C $Repo rev-parse HEAD).Trim()
 if ($CandidateSha -notmatch "^[0-9a-f]{40}$") { throw "Unable to read candidate SHA." }
 
@@ -51,6 +49,7 @@ foreach ($entry in @(@($Evidence, $EvidenceRelative), @($Scratch, $ScratchRelati
     }
     if (Test-Path -LiteralPath $entry[0]) { Remove-Item -LiteralPath $entry[0] -Recurse -Force }
 }
+if (& git -C $Repo status --porcelain) { throw "Verification requires a clean candidate worktree after removing its exact generated evidence path." }
 New-Item -ItemType Directory -Force -Path $Evidence, $Scratch | Out-Null
 
 $env:TEMP = Join-Path $Scratch "temp"
