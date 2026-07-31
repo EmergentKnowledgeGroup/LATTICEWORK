@@ -8,7 +8,7 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 4 SYNTHETIC SLICE VERIFIED — REVIEW AND MERGE PENDING`
+`PHASE 4 SYNTHETIC SLICE MERGED / VERIFIED`
 
 ## Current milestone
 
@@ -16,7 +16,7 @@ LATTICEWORK
 
 ## Current target
 
-`LW-P4-001 — one-review pull-request and merge closeout`
+`Phase 5 decision and preflight planning — no Phase 5 implementation authorized`
 
 ## Upstream baseline
 
@@ -24,8 +24,8 @@ LATTICEWORK
 
 ## Last verified commit
 
-`e65ca81940d50eabd5bb72a403deab3bf37bea93` (Phase 4 non-default
-synthetic Chat candidate; canonical and independent evidence are GREEN)
+`1b7e1d10456e0a1e9aaa91df25db17e236bbea3e` (PR #5 merge containing the
+verified Phase 4 candidate `e65ca81940d50eabd5bb72a403deab3bf37bea93`)
 
 The verified Phase 3 candidate
 `d746b96225a3eaf59a5b5937e3f531e2cad280ef` is contained in the merged
@@ -66,7 +66,7 @@ the complete gate from a new detached worktree on port 4294 and returned GREEN.
 
 ## Last verified date
 
-`2026-07-31 03:18 UTC`
+`2026-07-31 05:15 UTC`
 
 ## Locked constraints
 
@@ -94,7 +94,7 @@ the complete gate from a new detached worktree on port 4294 and returned GREEN.
 | `LW-P4-AMEND-001` | Characterization amendment and initial implementation proposal | Codex root controller | `main` | `COMPLETED — MERGED / VERIFIED` | `docs/agents/handoffs/LW-P4-AMEND-001.md` |
 | `LW-P4-RETEST-001` | Bounded amended characterization retests | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P4-RETEST-001.md` |
 | `LW-P4-IMPL-PREFLIGHT-001` | Exact bounded implementation packet and range lock | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md` |
-| `LW-P4-001` | Non-default synthetic primary Chat vertical slice | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — CANONICAL / INDEPENDENT GREEN` | `reengineering/evidence/phase-4/LW-P4-001/` |
+| `LW-P4-001` | Non-default synthetic primary Chat vertical slice | Codex root controller | `main` | `COMPLETED — MERGED / VERIFIED` | `reengineering/evidence/phase-4/LW-P4-001/` |
 
 ## Completed in current milestone
 
@@ -218,6 +218,16 @@ the complete gate from a new detached worktree on port 4294 and returned GREEN.
   supply-chain, hygiene, and clean detached-worktree reproduction. No real
   provider/data/credential/application-listener/activation/deployment/cutover
   authority was added.
+- **VERIFIED:** pull request
+  [`#5`](https://github.com/EmergentKnowledgeGroup/LATTICEWORK/pull/5)
+  received one CodeRabbit review, resolved all 14 inline threads after one
+  consolidated fix pass, and merged into `main` at
+  `1b7e1d10456e0a1e9aaa91df25db17e236bbea3e`. The automatic post-push status
+  explicitly skipped an incremental review, so no second review ran.
+- **MEASURED:** post-merge verification on `main` passes clean lockfile
+  replay, all workspace typechecks, 63/63 targeted assertions, seven active
+  browser scenarios plus the one intentional no-offline-contract skip, the
+  exact implementation-scope gate, and diff hygiene.
 
 ## Blockers
 
@@ -249,8 +259,8 @@ the complete gate from a new detached worktree on port 4294 and returned GREEN.
 - Documentation accuracy improvements.
 - Reproducible measurement tooling.
 - Documentation and evidence corrections that do not change product semantics.
-- Claim and execute only `LW-P4-001` under the exact accepted implementation
-  packet.
+- Prepare a Phase 5 decision/preflight packet and characterization plan.
+- Do not implement Phase 5 behavior until its exact work packet is accepted.
 
 ## Human decision required
 
@@ -268,19 +278,19 @@ the complete gate from a new detached worktree on port 4294 and returned GREEN.
 
 ## Next handoff
 
-**Next action:** finish the one consolidated CodeRabbit fix proof, resolve the
-single review's threads, and merge PR #5 without requesting another review.
+**Next action:** claim a narrow Phase 5 decision/preflight work unit, map the
+first preserved feature boundary, and obtain an accepted implementation packet
+before changing runtime behavior.
 
-**Read first:** `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md`,
-`reengineering/PHASE4_IMPLEMENTATION_PACKET.md`, and
-`reengineering/BLOCKERBOARD.md`.
+**Read first:** `docs/agents/handoffs/LW-P4-001.md`,
+`reengineering/EXECUTION_CHECKLIST.md`, and `reengineering/BLOCKERBOARD.md`.
 
 **Do not touch:** stored-data/provider/security semantics, default routes,
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** the exact non-default synthetic slice merges after one
-CodeRabbit review and one consolidated fix pass, with all required checks green
-and `/` plus every protected path unchanged.
+**Success condition:** the next accepted packet names one bounded Phase 5
+feature, preserves all unresolved compatibility obligations, and grants no
+real-data, provider, activation, deployment, or cutover authority by accident.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`
