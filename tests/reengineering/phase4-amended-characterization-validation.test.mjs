@@ -19,7 +19,7 @@ const ORIGINAL = path.join(
   "LW-P4-CHAR-001",
 );
 
-test("warm-offline retest bounds service-worker readiness and navigation", () => {
+test("warm-offline retest proves exact worker/cache readiness with bounded navigation", () => {
   const source = fs.readFileSync(
     path.join(
       ROOT,
@@ -43,12 +43,37 @@ test("warm-offline retest bounds service-worker readiness and navigation", () =>
     warmOffline,
     /navigator\.serviceWorker\.register\(\s*"\/docs\/sw\.js"/u,
   );
+  assert.match(warmOffline, /scope:\s*"\/docs\/"/u);
   assert.match(warmOffline, /Promise\.race\(\[readiness, boundedFailure\]\)/u);
-  assert.match(warmOffline, /10_000/u);
+  assert.match(warmOffline, /45_000/u);
+  assert.match(warmOffline, /cache_name:\s*"freelattice-v5\.79\.22"/u);
+  assert.match(warmOffline, /cache_entry_count:\s*174/u);
+  assert.match(warmOffline, /cached_app_shell:\s*true/u);
+  assert.match(warmOffline, /controller_before_offline:\s*true/u);
   assert.equal(
     [...warmOffline.matchAll(/timeout:\s*12_000/gu)].length,
     4,
   );
+});
+
+test("atomic observation errors fail the Playwright scenario after receipts attach", () => {
+  const source = fs.readFileSync(
+    path.join(
+      ROOT,
+      "tests",
+      "characterization",
+      "specs",
+      "phase4-chat.spec.mjs",
+    ),
+    "utf8",
+  );
+  assert.match(source, /let observationError = null;/u);
+  assert.match(source, /observationError = error;/u);
+  assert.match(
+    source,
+    /await attachScenarioResult\(testInfo, result\);\s*\}\s*if \(observationError\) throw observationError;/u,
+  );
+  assert.match(source, /testInfo\.setTimeout\(110_000\)/u);
 });
 
 test("stream navigation retests trigger bounded committed reloads", () => {
