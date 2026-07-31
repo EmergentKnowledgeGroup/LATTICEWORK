@@ -1,8 +1,8 @@
 {
   "schema": "latticework.context_checkpoint.tracks.v1",
-  "captured_at": "2026-07-31T03:40:08Z",
+  "captured_at": "2026-07-31T03:42:00Z",
   "repo_root": "Z:\\LATTICEWORK",
-  "current_track": "LW_P4_IMPL_PREFLIGHT WORK",
+  "current_track": "LW_P4_IMPLEMENTATION WORK",
   "tracks": {
     "LW_M0_BASELINE WORK": {
       "track": "LW_M0_BASELINE WORK",
@@ -716,7 +716,32 @@
       ],
       "updated_at": "2026-07-31T03:40:08Z",
       "captured_at": "2026-07-31T03:40:08Z"
+    },
+    "LW_P4_IMPLEMENTATION WORK": {
+      "track": "LW_P4_IMPLEMENTATION WORK",
+      "step": "phase4-implementation-start",
+      "note": "LW-P4-001 is claimed under the exact accepted synthetic/mock packet; no feature code has been changed at phase start.",
+      "branch": "reengineering/p4-characterization-retests",
+      "head": "212b98b00a4aac9fad91b8a083c382cbd64e3ee4",
+      "next_cmd": "Implement contracts/controller tests and the non-default Lit slice within the exact owned paths; run targeted tests after each slice.",
+      "validations": [
+        "VERIFIED: amended characterization is canonical and independently GREEN.",
+        "ACCEPTED: exact implementation packet is machine-valid and independently GREEN.",
+        "OBSERVED: worktree is clean at phase start.",
+        "OBSERVED: real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled."
+      ],
+      "decisions": [
+        "Implement only the non-default synthetic/mock /p4.html slice.",
+        "Preserve every protected path and keep all real/activation/deployment authorities false."
+      ],
+      "changed_paths": [
+        "docs/agents/claims/LW-P4-001.md",
+        "exact packet-owned implementation, tests, evidence, handoff, living docs, and checkpoints"
+      ],
+      "blockers": [],
+      "updated_at": "2026-07-31T03:42:00Z",
+      "captured_at": "2026-07-31T03:42:00Z"
     }
   },
-  "updated": "2026-07-31T03:40:08Z"
+  "updated": "2026-07-31T03:42:00Z"
 }

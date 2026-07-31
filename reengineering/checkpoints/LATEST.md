@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-31T03:40:08Z`
+Updated: `2026-07-31T03:42:00Z`
 
 ## CURRENT
 
-Track: `LW_P4_IMPL_PREFLIGHT WORK`
-Step: `phase4-implementation-preflight-accepted-independent-green`
-Note: Exact packet is accepted, both validators are valid, 41/41 focused and 180/180 full controls pass, independent re-review is GREEN, and LW-BLK-010 is closed.
+Track: `LW_P4_IMPLEMENTATION WORK`
+Step: `phase4-implementation-start`
+Note: LW-P4-001 is claimed under the exact accepted synthetic/mock packet; no feature code has been changed at phase start.
 Branch: `reengineering/p4-characterization-retests`
-Head: `faf32dbaf8159e8499421fa68d9fba4bede0fdc9`
-Next command: `Commit the accepted preflight closeout, claim LW-P4-001, checkpoint LW_P4_IMPLEMENTATION WORK, then implement only the exact packet.`
+Head: `212b98b00a4aac9fad91b8a083c382cbd64e3ee4`
+Next command: `Implement contracts/controller tests and the non-default Lit slice within the exact owned paths; run targeted tests after each slice.`
 
 ## LW_M0_BASELINE WORK
 
@@ -378,3 +378,22 @@ Next command: `Commit the accepted preflight closeout, claim LW-P4-001, checkpoi
 ### Blockers
 
 - `LW-BLK-010` is closed; `LW-P4-001` is ready for a separate work claim.
+
+## LW_P4_IMPLEMENTATION WORK
+
+Step: `phase4-implementation-start`
+Note: LW-P4-001 is claimed under the exact accepted synthetic/mock packet; no feature code has been changed at phase start.
+Branch: `reengineering/p4-characterization-retests`
+Head: `212b98b00a4aac9fad91b8a083c382cbd64e3ee4`
+Next command: `Implement contracts/controller tests and the non-default Lit slice within the exact owned paths; run targeted tests after each slice.`
+
+### Validations
+
+- **VERIFIED** — amended characterization is canonical and independently GREEN.
+- **ACCEPTED** — exact implementation packet is machine-valid and independently GREEN.
+- **OBSERVED** — worktree is clean at phase start.
+- **OBSERVED** — real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.
+
+### Blockers
+
+- No open blocker prevents the exact bounded `LW-P4-001` implementation.
