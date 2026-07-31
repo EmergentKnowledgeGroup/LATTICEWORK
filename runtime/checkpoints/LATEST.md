@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-31T07:12:52Z`
+Updated: `2026-07-31T07:41:15Z`
 
 ## CURRENT
 
 Track: `LW_P5_LATTICE_MEMORY WORK`
-Step: `phase5-lattice-memory-implementation-start`
-Note: The accepted packet now authorizes the exact package-only synthetic pulse-medium candidate; implementation is claimed with every real-data, runtime-wiring, and deployment authority still false.
+Step: `phase5-lattice-memory-canonical-green`
+Note: The package-only synthetic pulse medium is implemented and canonical gates are GREEN; independent detached-worktree reproduction remains required before promotion and PR.
 Branch: `reengineering/p5-lattice-memory`
-Head: `92f97cf3f2c70764dbfc942f1fa23c8d638f3542`
-Next command: `Implement contracts/package and native browser harness in bounded lanes, integrate, then execute the complete verification packet.`
+Head: `e648af05bc3f9cad5c6f13980cbde3fcf40728e0`
+Next command: `Run the exact candidate in a clean detached worktree with run-phase5-lattice-memory-verification.ps1 -IndependentReview -Port 5295, then promote evidence only if GREEN.`
 
 ## LW_M0_BASELINE WORK
 
@@ -411,11 +411,11 @@ Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize
 
 ## LW_P5_LATTICE_MEMORY WORK
 
-Step: `phase5-lattice-memory-implementation-start`
-Note: The accepted packet now authorizes the exact package-only synthetic pulse-medium candidate; implementation is claimed with every real-data, runtime-wiring, and deployment authority still false.
+Step: `phase5-lattice-memory-canonical-green`
+Note: The package-only synthetic pulse medium is implemented and canonical gates are GREEN; independent detached-worktree reproduction remains required before promotion and PR.
 Branch: `reengineering/p5-lattice-memory`
-Head: `92f97cf3f2c70764dbfc942f1fa23c8d638f3542`
-Next command: `Implement contracts/package and native browser harness in bounded lanes, integrate, then execute the complete verification packet.`
+Head: `e648af05bc3f9cad5c6f13980cbde3fcf40728e0`
+Next command: `Run the exact candidate in a clean detached worktree with run-phase5-lattice-memory-verification.ps1 -IndependentReview -Port 5295, then promote evidence only if GREEN.`
 
 ### Validations
 
@@ -442,8 +442,13 @@ Next command: `Implement contracts/package and native browser harness in bounded
 - **VERIFIED** — the corrected implementation packet locks all 53 matches, all 16 corrections, the complete synthetic dataset descriptor, and every reserved authority flag.
 - **MEASURED** — implementation preflight controls passed 55/55 focused and 280/280 full with zero fail or skip.
 - **VERIFIED** — independent detached-worktree implementation preflight review is GREEN with zero findings.
+- **MEASURED** — strict workspace typecheck and 62/62 focused Phase 5 controls pass.
+- **MEASURED** — native Chrome passes 4/4 with one worker, zero retries, eight content-free receipts, exact-loopback teardown, and candidate database/profile/run-root cleanup.
+- **MEASURED** — full repository controls pass 287/287 with zero fail, skip, or todo.
+- **MEASURED** — Phase 3/4 regression gates, deterministic package inventory, zero-vulnerability audit, SBOM, scope, and hygiene gates are GREEN.
+- **MEASURED** — canonical pending evidence validates for candidate `e648af05bc3f9cad5c6f13980cbde3fcf40728e0`.
 
 ### Blockers
 
 - `LW-BLK-005` remains open for real-data migration; only synthetic fixtures and candidate namespaces are safe.
-- Exact characterization and implementation authority must be machine-locked before candidate code.
+- Independent clean-worktree reproduction and final evidence promotion remain required before PR.

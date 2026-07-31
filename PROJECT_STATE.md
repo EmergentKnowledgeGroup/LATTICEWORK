@@ -8,15 +8,15 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 5 LATTICE MEMORY CHARACTERIZATION VERIFIED`
+`PHASE 5 LATTICE MEMORY CANDIDATE IMPLEMENTED — INDEPENDENT REVIEW PENDING`
 
 ## Current milestone
 
-`M3 — bounded LatticeMemory compatibility and corrected-candidate planning`
+`M3 — bounded LatticeMemory corrected candidate verification`
 
 ## Current target
 
-`Phase 5 LatticeMemory corrected candidate implementation — package-only and synthetic-only`
+`Phase 5 LatticeMemory corrected candidate independent verification and PR`
 
 ## Upstream baseline
 
@@ -75,6 +75,18 @@ valid, and an independent clean detached worktree reproduced the result. This
 grants no candidate implementation, candidate storage, real-data migration,
 activation, deployment, or cutover authority.
 
+**MEASURED:** the corrected `@latticework/lattice-memory` candidate is
+implemented as an unregistered package with an injected repository and
+QuietRoom seam. It preserves all 53 accepted matches and applies all 16
+accepted corrections. The native Chrome harness passes 4/4 scenarios,
+including exact schema/reload, immutable snapshots, code-only diagnostics,
+fail-closed QuietRoom behavior, 100-entry pre-ready queue, same-millisecond
+burst preservation, newest-10,000 retention, open failure, and complete
+database/profile/run-root cleanup. Strict workspace typecheck, 62/62 focused
+controls, 287/287 repository controls, Phase 3/4 regression gates, deterministic
+package inventory, audit, SBOM, scope, and hygiene are green. Independent
+clean-worktree review remains the promotion gate.
+
 ## Last verified date
 
 `2026-07-31 07:10 UTC`
@@ -110,6 +122,7 @@ activation, deployment, or cutover authority.
 | `LW-P5-MEM-PREFLIGHT-001` | Exact synthetic LatticeMemory characterization lock | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P5-MEM-PREFLIGHT-001.md` |
 | `LW-P5-MEM-CHAR-001` | Immutable LatticeMemory browser characterization | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P5-MEM-CHAR-001.md` |
 | `LW-P5-MEM-IMPL-PREFLIGHT-001` | Corrected package-only LatticeMemory implementation lock | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P5-MEM-IMPL-PREFLIGHT-001.md` |
+| `LW-P5-MEM-001` | Corrected package-only synthetic LatticeMemory candidate | Codex root controller | `reengineering/p5-lattice-memory` | `IMPLEMENTED — INDEPENDENT REVIEW PENDING` | `reengineering/evidence/phase-5/LW-P5-MEM-001/` |
 
 ## Completed in current milestone
 
@@ -274,8 +287,10 @@ activation, deployment, or cutover authority.
 - Documentation accuracy improvements.
 - Reproducible measurement tooling.
 - Documentation and evidence corrections that do not change product semantics.
-- Prepare a Phase 5 decision/preflight packet and characterization plan.
-- Do not implement Phase 5 behavior until its exact work packet is accepted.
+- Independently reproduce and promote the exact `LW-P5-MEM-001` candidate
+  evidence before opening the bounded PR.
+- Do not register the package in an application, read legacy or real data, or
+  authorize activation, deployment, or cutover.
 
 ## Human decision required
 
@@ -293,9 +308,9 @@ activation, deployment, or cutover authority.
 
 ## Next handoff
 
-**Next action:** claim a narrow Phase 5 decision/preflight work unit, map the
-first preserved feature boundary, and obtain an accepted implementation packet
-before changing runtime behavior.
+**Next action:** independently reproduce candidate
+`e648af05bc3f9cad5c6f13980cbde3fcf40728e0` in a clean detached worktree,
+promote the evidence only if GREEN, then open the bounded PR.
 
 **Read first:** `docs/agents/handoffs/LW-P4-001.md`,
 `reengineering/EXECUTION_CHECKLIST.md`, and `reengineering/BLOCKERBOARD.md`.
@@ -304,8 +319,8 @@ before changing runtime behavior.
 legacy runtime files, deployment mirrors, or `LICENSE` without a new accepted
 decision and work claim.
 
-**Success condition:** the next accepted packet names one bounded Phase 5
-feature, preserves all unresolved compatibility obligations, and grants no
-real-data, provider, activation, deployment, or cutover authority by accident.
+**Success condition:** the independently reproduced candidate retains the
+53/16 behavior split, all gates stay green, and the final PR contains no
+runtime registration or real-data/provider/deployment authority.
 
 **Resume trigger:** `Read PROJECT_STATE.md, then the latest handoff in docs/agents/handoffs/`

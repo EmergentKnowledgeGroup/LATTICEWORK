@@ -168,3 +168,17 @@ silently redefined behavior.
 - Storage and network effects.
 - Independent reproduction.
 - Accepted result in the claims ledger.
+## Phase 5 LatticeMemory corrected candidate
+
+**MEASURED:** the package-only candidate preserves the 53 characterization
+atoms dispositioned `MATCH` and deliberately corrects the 16 accepted legacy
+defects recorded in
+`reengineering/PHASE5_LATTICE_MEMORY_IMPLEMENTATION_PACKET.md`.
+
+The correction set covers finite timestamps, deep immutable and
+subscriber-isolated snapshots, typed invalid-filter errors, fail-closed
+QuietRoom reads/subscriptions, bounded metadata, deep reference validation,
+coherent readiness, no global loader coupling, and code-only rejection or
+subscriber diagnostics. This is not a claim that real legacy records are
+compatible: no real record was read, migrated, imported, exported, or
+round-tripped. Legacy storage and the default application remain authoritative.
