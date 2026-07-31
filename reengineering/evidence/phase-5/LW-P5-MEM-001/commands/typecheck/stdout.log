@@ -1,0 +1,44 @@
+
+> latticework@0.0.0 p5:typecheck
+> npm run typecheck --workspaces --if-present
+
+
+> @latticework/web@0.0.0 typecheck
+> tsc --project tsconfig.json
+
+
+> @latticework/chat@0.0.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @latticework/contracts@0.0.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @latticework/kernel@0.0.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @latticework/lattice-memory@0.0.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @latticework/providers@0.0.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @latticework/storage@0.0.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @latticework/phase3-browser@0.0.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @latticework/phase4-browser@0.0.0 typecheck
+> tsc --project tsconfig.json
+
+
+> @latticework/phase5-browser@0.0.0 typecheck
+> tsc --project tsconfig.json
+

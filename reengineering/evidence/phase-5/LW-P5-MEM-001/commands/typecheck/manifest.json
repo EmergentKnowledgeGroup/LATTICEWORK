@@ -1,0 +1,46 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P5-MEM-001-typecheck",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/s",
+    "/c",
+    "npm run p5:typecheck"
+  ],
+  "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"npm run p5:typecheck\"",
+  "cwd": "Z:\\LATTICEWORK",
+  "started_at": "2026-07-31T07:49:51.826Z",
+  "ended_at": "2026-07-31T07:50:05.169Z",
+  "duration_ms": 13343.1634,
+  "timeout_ms": 300000,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2",
+  "repository": {
+    "head": "4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2",
+    "status": "## reengineering/p5-lattice-memory\n?? reengineering/evidence/phase-5/LW-P5-MEM-001/"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 766,
+      "sha256": "e5e09be5344664865bd069cd1247a4cbaadd59b469916f6a47aeba32291237bd"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

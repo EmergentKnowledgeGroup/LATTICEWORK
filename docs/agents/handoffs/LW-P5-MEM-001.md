@@ -1,7 +1,7 @@
 # Handoff — `LW-P5-MEM-001`
 
 **From:** Codex root controller
-**To:** Independent QA, then PR reviewer
+**To:** PR reviewer
 **Date:** 2026-07-31 02:40 America/Chicago
 **Current commit:** `e648af05bc3f9cad5c6f13980cbde3fcf40728e0`
 **Branch:** `reengineering/p5-lattice-memory`
@@ -9,9 +9,9 @@
 ## State in one paragraph
 
 The accepted corrected LatticeMemory packet is implemented as an inactive,
-package-only, synthetic/disposable pulse medium. Canonical verification is
-green and bound to the current candidate; independent detached-worktree
-reproduction remains required before evidence promotion or PR.
+package-only, synthetic/disposable pulse medium. Canonical and independent
+detached-worktree verification are GREEN and bound to candidate
+`4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2`.
 
 ## Completed
 
@@ -27,11 +27,11 @@ reproduction remains required before evidence promotion or PR.
 - Focused Phase 5 controls pass 62/62.
 - Full repository controls pass 287/287.
 - Native Chrome passes 4/4 with one worker and zero retries.
-- Canonical evidence validates with independent review explicitly pending.
+- Canonical and independent runs pass 13/13 evidence gates and 288/288
+  repository controls; the final evidence validator is `valid: true`.
 
 ## Not verified
 
-- Independent clean-worktree reproduction.
 - PR CI and the single CodeRabbit review.
 - Any real-data compatibility, activation, deployment, or cutover.
 
@@ -65,13 +65,13 @@ reproduction remains required before evidence promotion or PR.
 
 ## Next exact action
 
-Run the verifier from an exact-SHA detached worktree on port 5295, copy its
-GREEN review receipt, and finalize the canonical evidence.
+Open the bounded PR, permit one CodeRabbit review, consolidate all actionable
+findings into one fix pass, and rerun the complete gate before merge.
 
 ## Success condition
 
-The same candidate passes every canonical gate independently, with zero
-findings, clean worktree teardown, and no authority expansion.
+CI is GREEN, the one CodeRabbit review is resolved without scope expansion,
+and the PR merges with post-merge evidence.
 
 ## Resume command
 

@@ -1,0 +1,92 @@
+
+> latticework@0.0.0 p5:test
+> npm run test --workspace @latticework/lattice-memory && node --test tests/reengineering/phase5-active-scope.test.mjs tests/reengineering/phase5-lattice-memory-implementation-packet.test.mjs tests/reengineering/phase5-lattice-memory-implementation-scope.test.mjs tests/reengineering/phase5-lattice-memory-implementation-evidence.test.mjs
+
+
+> @latticework/lattice-memory@0.0.0 test
+> node --experimental-strip-types --test src/*.test.mjs
+
+✔ commits deep immutable snapshots and keeps subscribers isolated (3.8262ms)
+✔ rejects invalid timestamps, shapes, refs, and filters before publication (1.2726ms)
+✔ permits an absent quiet room and fails closed for malformed or active state (0.296ms)
+✔ bounds the pre-ready queue and emits the heartbeat only after open (1.368ms)
+✔ reports only code and operation diagnostics for rejection and subscriber failures (0.4668ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 115.0975
+✔ canonical Phase 5 active scope accepts the current control packet (366.4318ms)
+✔ Phase 5 allowlist is exact and fail-closed (1.4797ms)
+✔ Phase 5 active scope sees committed, staged, unstaged, untracked, and force-added ignored paths (803.0287ms)
+✔ Phase 5 active scope retains committed add-then-delete paths (811.1461ms)
+✔ canonical Phase 5 active-scope CLI cannot disable or rebase validation (69.8682ms)
+✔ accepts a complete independently green synthetic-only evidence bundle (27.4921ms)
+✔ accepts a pending canonical bundle only when independent review is not required (19.6294ms)
+✔ rejects missing independent review, unsafe authority drift, and content-bearing receipts (20.699ms)
+✔ rejects candidate mismatch and non-green gate receipts (19.5387ms)
+✔ accepted implementation packet keeps every authority boundary disabled (5.176ms)
+✔ packet pins the exact synthetic disposable descriptor and 53/16 behavior split (2.0342ms)
+✔ packet owns only package, test, evidence, and documentation surfaces (1.4293ms)
+✔ canonical packet is valid and pins the requested implementation base (574.5532ms)
+✔ ownership is package-only and protected paths win independently (0.1696ms)
+✔ rejects unowned and protected paths even with a valid packet (0.5013ms)
+✔ rejects packet drift: implementation gate (4.1654ms)
+✔ rejects packet drift: descriptor (1.7852ms)
+✔ rejects packet drift: schema (1.5016ms)
+✔ rejects packet drift: store (1.5417ms)
+✔ rejects packet drift: snapshot (1.7652ms)
+✔ rejects packet drift: timestamp (2.4831ms)
+✔ rejects packet drift: filter (1.4175ms)
+✔ rejects packet drift: quiet (0.9588ms)
+✔ rejects packet drift: diagnostics (1.622ms)
+✔ rejects packet drift: match preservation (2.2343ms)
+✔ rejects packet drift: divergence correction (2.0503ms)
+✔ rejects packet drift: descriptor sensitivity (1.2062ms)
+✔ rejects packet drift: descriptor retention (1.4877ms)
+✔ rejects packet drift: descriptor source (1.5539ms)
+✔ rejects packet drift: descriptor key path (1.5903ms)
+✔ rejects packet drift: descriptor auto increment (1.4514ms)
+✔ rejects packet drift: descriptor codec (1.6648ms)
+✔ rejects packet drift: descriptor lifecycle (2.5089ms)
+✔ rejects packet drift: harness bind (1.5118ms)
+✔ rejects packet drift: harness egress (1.0983ms)
+✔ rejects packet drift: future ownership (1.1398ms)
+✔ rejects false authority flag drift: real_data_authorized (1.2559ms)
+✔ rejects false authority flag drift: real_credentials_authorized (1.3175ms)
+✔ rejects false authority flag drift: real_provider_traffic_authorized (2.067ms)
+✔ rejects false authority flag drift: migration_authorized (1.5519ms)
+✔ rejects false authority flag drift: import_export_authorized (1.6118ms)
+✔ rejects false authority flag drift: legacy_mutation_authorized (2.0682ms)
+✔ rejects false authority flag drift: activation_authorized (1.8303ms)
+✔ rejects false authority flag drift: deployment_authorized (1.7823ms)
+✔ rejects false authority flag drift: cutover_authorized (1.4228ms)
+✔ rejects false authority flag drift: default_entry_authorized (1.4703ms)
+✔ rejects false authority flag drift: shared_ui_authorized (1.0888ms)
+✔ rejects false authority flag drift: service_worker_authorized (1.0329ms)
+✔ rejects false authority flag drift: listener_authorized (1.4258ms)
+✔ rejects false authority flag drift: worker_authorized (1.3782ms)
+✔ rejects false authority flag drift: peer_lan_proxy_telegram_authorized (1.8307ms)
+✔ rejects false authority flag drift: browser_global_authorized (1.1614ms)
+✔ rejects false authority flag drift: routes_authorized (1.1125ms)
+✔ rejects false authority flag drift: ui_authorized (1.2949ms)
+✔ candidate storage cannot become real or nondisposable (3.7306ms)
+✔ rejects forbidden source primitive: browser-global (1.6064ms)
+✔ rejects forbidden source primitive: network (1.5747ms)
+✔ rejects forbidden source primitive: listener (1.9012ms)
+✔ rejects forbidden source primitive: credential (1.9022ms)
+✔ rejects forbidden source primitive: legacy-migration-ui (1.4924ms)
+✔ permits normal module syntax and IndexedDB only in the isolated repository (2.2971ms)
+✔ browser harness may name denied realtime APIs but cannot listen or embed external URLs (4.5509ms)
+✔ CLI rejects every override (192.3397ms)
+ℹ tests 63
+ℹ suites 0
+ℹ pass 63
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2139.3651

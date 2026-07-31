@@ -1,0 +1,46 @@
+{
+  "schema": "latticework.evidence.command.v1",
+  "receipt_id": "LW-P5-MEM-001-repository-controls",
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/s",
+    "/c",
+    "node --test --test-reporter=tap tests/reengineering/*.test.mjs"
+  ],
+  "command_display": "\"cmd.exe\" \"/d\" \"/s\" \"/c\" \"node --test --test-reporter=tap tests/reengineering/*.test.mjs\"",
+  "cwd": "Z:\\LATTICEWORK",
+  "started_at": "2026-07-31T07:51:25.923Z",
+  "ended_at": "2026-07-31T07:51:29.239Z",
+  "duration_ms": 3316.4878,
+  "timeout_ms": 300000,
+  "exit_code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2",
+  "repository": {
+    "head": "4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2",
+    "status": "## reengineering/p5-lattice-memory\n?? reengineering/evidence/phase-5/LW-P5-MEM-001/"
+  },
+  "environment": {
+    "platform": "win32",
+    "os_release": "10.0.19045",
+    "architecture": "x64",
+    "node": "v24.13.0",
+    "git": "git version 2.50.1.windows.1",
+    "npm": null
+  },
+  "artifacts": [
+    {
+      "path": "stdout.log",
+      "bytes": 50955,
+      "sha256": "7676503cb97c555c40266b4b64863440f3d8236222526bb7ce6111ee9dad6cfd"
+    },
+    {
+      "path": "stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

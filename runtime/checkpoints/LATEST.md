@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-31T07:41:15Z`
+Updated: `2026-07-31T07:51:47Z`
 
 ## CURRENT
 
 Track: `LW_P5_LATTICE_MEMORY WORK`
-Step: `phase5-lattice-memory-canonical-green`
-Note: The package-only synthetic pulse medium is implemented and canonical gates are GREEN; independent detached-worktree reproduction remains required before promotion and PR.
+Step: `phase5-lattice-memory-independent-green`
+Note: The package-only synthetic pulse medium is canonical and independently GREEN with zero findings; the bounded PR and single CodeRabbit cycle are next.
 Branch: `reengineering/p5-lattice-memory`
 Head: `e648af05bc3f9cad5c6f13980cbde3fcf40728e0`
-Next command: `Run the exact candidate in a clean detached worktree with run-phase5-lattice-memory-verification.ps1 -IndependentReview -Port 5295, then promote evidence only if GREEN.`
+Next command: `Commit promoted evidence and living-doc updates, push the branch, open the bounded PR, and allow exactly one CodeRabbit review.`
 
 ## LW_M0_BASELINE WORK
 
@@ -411,11 +411,11 @@ Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize
 
 ## LW_P5_LATTICE_MEMORY WORK
 
-Step: `phase5-lattice-memory-canonical-green`
-Note: The package-only synthetic pulse medium is implemented and canonical gates are GREEN; independent detached-worktree reproduction remains required before promotion and PR.
+Step: `phase5-lattice-memory-independent-green`
+Note: The package-only synthetic pulse medium is canonical and independently GREEN with zero findings; the bounded PR and single CodeRabbit cycle are next.
 Branch: `reengineering/p5-lattice-memory`
 Head: `e648af05bc3f9cad5c6f13980cbde3fcf40728e0`
-Next command: `Run the exact candidate in a clean detached worktree with run-phase5-lattice-memory-verification.ps1 -IndependentReview -Port 5295, then promote evidence only if GREEN.`
+Next command: `Commit promoted evidence and living-doc updates, push the branch, open the bounded PR, and allow exactly one CodeRabbit review.`
 
 ### Validations
 
@@ -447,8 +447,10 @@ Next command: `Run the exact candidate in a clean detached worktree with run-pha
 - **MEASURED** — full repository controls pass 287/287 with zero fail, skip, or todo.
 - **MEASURED** — Phase 3/4 regression gates, deterministic package inventory, zero-vulnerability audit, SBOM, scope, and hygiene gates are GREEN.
 - **MEASURED** — canonical pending evidence validates for candidate `e648af05bc3f9cad5c6f13980cbde3fcf40728e0`.
+- **VERIFIED** — independent clean-worktree QA reproduced candidate `4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2`: 13/13 gates, 288/288 controls, 4/4 Chrome, eight content-free receipts, and zero findings.
+- **VERIFIED** — promoted canonical evidence validates `GREEN` with the exact independent review receipt.
 
 ### Blockers
 
 - `LW-BLK-005` remains open for real-data migration; only synthetic fixtures and candidate namespaces are safe.
-- Independent clean-worktree reproduction and final evidence promotion remain required before PR.
+- PR CI, one CodeRabbit review/fix cycle, merge, and post-merge verification remain.

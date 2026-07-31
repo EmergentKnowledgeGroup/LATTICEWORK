@@ -8,7 +8,7 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 5 LATTICE MEMORY CANDIDATE IMPLEMENTED — INDEPENDENT REVIEW PENDING`
+`PHASE 5 LATTICE MEMORY CANDIDATE VERIFIED`
 
 ## Current milestone
 
@@ -16,7 +16,7 @@ LATTICEWORK
 
 ## Current target
 
-`Phase 5 LatticeMemory corrected candidate independent verification and PR`
+`Phase 5 LatticeMemory corrected candidate PR and single review cycle`
 
 ## Upstream baseline
 
@@ -24,8 +24,8 @@ LATTICEWORK
 
 ## Last verified commit
 
-`0ec0de6bb49ef2545d63cde483ed0b901deb50f1` (Phase 5 LatticeMemory
-characterization candidate independently reproduced against the immutable
+`4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2` (Phase 5 package-only
+LatticeMemory candidate independently reproduced against the immutable
 baseline)
 
 The verified Phase 3 candidate
@@ -83,9 +83,10 @@ including exact schema/reload, immutable snapshots, code-only diagnostics,
 fail-closed QuietRoom behavior, 100-entry pre-ready queue, same-millisecond
 burst preservation, newest-10,000 retention, open failure, and complete
 database/profile/run-root cleanup. Strict workspace typecheck, 62/62 focused
-controls, 287/287 repository controls, Phase 3/4 regression gates, deterministic
+controls, 288/288 repository controls, Phase 3/4 regression gates, deterministic
 package inventory, audit, SBOM, scope, and hygiene are green. Independent
-clean-worktree review remains the promotion gate.
+clean-worktree review reproduced all 13 gates with zero findings, so the
+canonical evidence is promoted GREEN.
 
 ## Last verified date
 
@@ -122,7 +123,7 @@ clean-worktree review remains the promotion gate.
 | `LW-P5-MEM-PREFLIGHT-001` | Exact synthetic LatticeMemory characterization lock | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P5-MEM-PREFLIGHT-001.md` |
 | `LW-P5-MEM-CHAR-001` | Immutable LatticeMemory browser characterization | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P5-MEM-CHAR-001.md` |
 | `LW-P5-MEM-IMPL-PREFLIGHT-001` | Corrected package-only LatticeMemory implementation lock | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P5-MEM-IMPL-PREFLIGHT-001.md` |
-| `LW-P5-MEM-001` | Corrected package-only synthetic LatticeMemory candidate | Codex root controller | `reengineering/p5-lattice-memory` | `IMPLEMENTED — INDEPENDENT REVIEW PENDING` | `reengineering/evidence/phase-5/LW-P5-MEM-001/` |
+| `LW-P5-MEM-001` | Corrected package-only synthetic LatticeMemory candidate | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — GREEN` | `reengineering/evidence/phase-5/LW-P5-MEM-001/` |
 
 ## Completed in current milestone
 
@@ -287,8 +288,8 @@ clean-worktree review remains the promotion gate.
 - Documentation accuracy improvements.
 - Reproducible measurement tooling.
 - Documentation and evidence corrections that do not change product semantics.
-- Independently reproduce and promote the exact `LW-P5-MEM-001` candidate
-  evidence before opening the bounded PR.
+- Open the bounded Phase 5 PR and execute exactly one CodeRabbit review/fix
+  cycle before merge.
 - Do not register the package in an application, read legacy or real data, or
   authorize activation, deployment, or cutover.
 
@@ -308,9 +309,9 @@ clean-worktree review remains the promotion gate.
 
 ## Next handoff
 
-**Next action:** independently reproduce candidate
-`e648af05bc3f9cad5c6f13980cbde3fcf40728e0` in a clean detached worktree,
-promote the evidence only if GREEN, then open the bounded PR.
+**Next action:** open the bounded Phase 5 PR, allow exactly one CodeRabbit
+review, consolidate actionable fixes, rerun the full gate, and merge only when
+CI and review threads are clean.
 
 **Read first:** `docs/agents/handoffs/LW-P4-001.md`,
 `reengineering/EXECUTION_CHECKLIST.md`, and `reengineering/BLOCKERBOARD.md`.

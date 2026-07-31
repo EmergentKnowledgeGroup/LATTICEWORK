@@ -1,0 +1,328 @@
+{
+  "schema": "latticework.evidence.artifact-bundle.v1",
+  "receipt_id": "LW-P5-MEM-001-bundle",
+  "captured_at": "2026-07-31T07:51:34.896Z",
+  "baseline_sha": "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+  "candidate_sha": "4f1b2b4f9949af4b5ae54c4c5dbe30fd2b552ec2",
+  "directory": "Z:\\LATTICEWORK\\reengineering\\evidence\\phase-5\\LW-P5-MEM-001",
+  "artifacts": [
+    {
+      "path": "browser/attachments/cleanup.json",
+      "bytes": 152,
+      "sha256": "6cd4aa127e0178ad7600018e6226ca660d0a28e7e96bacae374bb93859efc1e7",
+      "repository_artifact": true
+    },
+    {
+      "path": "browser/attachments/corrected-quiet-room.json",
+      "bytes": 107,
+      "sha256": "eecfcb87e51315565a69b507e4f585bef5d5c8e5e6538ad0cd9245284fea2004",
+      "repository_artifact": true
+    },
+    {
+      "path": "browser/attachments/corrected-validation-isolation.json",
+      "bytes": 231,
+      "sha256": "d06c6041abcbc67f1063151f50a85629c6a50a7b40516ac1c3b1ac47a2e594a8",
+      "repository_artifact": true
+    },
+    {
+      "path": "browser/attachments/fail-quiet-open.json",
+      "bytes": 118,
+      "sha256": "929299409b7dcdf91cec82e90b1b5f0b59f5a874c7b48bae984bb55b7da0a2ea",
+      "repository_artifact": true
+    },
+    {
+      "path": "browser/attachments/pre-ready-queue.json",
+      "bytes": 146,
+      "sha256": "abcb99cba98849688b79afa418a98ea2fdf603d890bda566e37f8a007fb0f54f",
+      "repository_artifact": true
+    },
+    {
+      "path": "browser/attachments/retention.json",
+      "bytes": 106,
+      "sha256": "82e4076c31cf132a6a25b39753573263757f6b982603f2bd7976671b45c6f29d",
+      "repository_artifact": true
+    },
+    {
+      "path": "browser/attachments/same-millisecond-burst.json",
+      "bytes": 106,
+      "sha256": "8e0925d0946a01c8ad0049554e43658757458a3090cfab811440fbc965954b3e",
+      "repository_artifact": true
+    },
+    {
+      "path": "browser/attachments/schema-reload-heartbeat.json",
+      "bytes": 127,
+      "sha256": "2adc4f50defd42345a05710ed2325d9e1cef5914e1644967bb0a97c9cf9b46e3",
+      "repository_artifact": true
+    },
+    {
+      "path": "browser/results.json",
+      "bytes": 9627,
+      "sha256": "df0589b5c32a3ab23c866b88ebf3e00a89fcfa18b210e8932d17cd07de61833a",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/audit/manifest.json",
+      "bytes": 1359,
+      "sha256": "d02109ed7a697674811ec31d09a23e7033ce3bb33e303ebf05753a223d1a6295",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/audit/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/audit/stdout.log",
+      "bytes": 362,
+      "sha256": "486b6056306e9c1e24729175a7096df2ec3812cfdce3d61765742a4a4d1a825c",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/browser/manifest.json",
+      "bytes": 1290,
+      "sha256": "c31d757fe38db9f371666750fffb8b9a7e2bc3ae329e4dc6d6cece44901132ca",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/browser/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/browser/stdout.log",
+      "bytes": 892,
+      "sha256": "d914d4bbb147142085454fe15faaf75070cf7b0c08c6728985b184c6555d9b84",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/deterministic-build/manifest.json",
+      "bytes": 2786,
+      "sha256": "f457a4a497366c9f1b53ba55808f56d1fadc348135b3c839af91ebb06936a007",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/deterministic-build/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/deterministic-build/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/environment/manifest.json",
+      "bytes": 1408,
+      "sha256": "095ebb88199b7b5b1dedb2d7bd27b63c52253d3c268f0d4ab7337daa9b05d16c",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/environment/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/environment/stdout.log",
+      "bytes": 61,
+      "sha256": "4db553f9098791379d5ae839236013f75c9925b7dfba60f4142250b24cc2c098",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/hygiene/manifest.json",
+      "bytes": 1744,
+      "sha256": "ed9e1f730c8c40ec3e9c234ecf2e9044e70474772d42d5a3135e5646720382da",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/hygiene/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/hygiene/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/install/manifest.json",
+      "bytes": 1298,
+      "sha256": "b6830775910353f613611022307c46f3746b22cdc99dcf74ce16d51fa6fa2e85",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/install/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/install/stdout.log",
+      "bytes": 75,
+      "sha256": "1c2af6a14c66a020f23d6277c1085a8690b98f7c8d281ab9645f5303881ae46d",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/phase3-boundary/manifest.json",
+      "bytes": 1300,
+      "sha256": "c59a606b74c567b6c9b2f9110e1989a19f12ce3293d97e247bc03fd0962a033e",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/phase3-boundary/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/phase3-boundary/stdout.log",
+      "bytes": 16314,
+      "sha256": "f5c5396b0d3b651bc402aed661b4ac2b44270dbc4c1db1070af110a149cd3fd4",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/phase4-verification/manifest.json",
+      "bytes": 1767,
+      "sha256": "5c2913c77342146277b3c3c9d4c05a4a90615f5f39ae61487ce3c5d9676bc382",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/phase4-verification/stderr.log",
+      "bytes": 1610,
+      "sha256": "c9e908b943a518c6c3f158a4b9f9ecdf9a810df02e29763b95a080f3c6358460",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/phase4-verification/stdout.log",
+      "bytes": 7906,
+      "sha256": "0fca678ccd2cee703aa6db0990a075e087b8ed42f1641fade8ef328d751f99f6",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/repository-controls/manifest.json",
+      "bytes": 1391,
+      "sha256": "62692fd172467f52100996cc322657f473fce263dd7c7d91e690f34298119031",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/repository-controls/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/repository-controls/stdout.log",
+      "bytes": 50955,
+      "sha256": "7676503cb97c555c40266b4b64863440f3d8236222526bb7ce6111ee9dad6cfd",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/sbom/manifest.json",
+      "bytes": 1316,
+      "sha256": "68a5b45770e927f8dad560a58f2bf8faa94eca548d41d2311c4f91bb84905868",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/sbom/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/sbom/stdout.log",
+      "bytes": 44251,
+      "sha256": "11616eaefe6ca348956dd3e42e4f46ddb934a3f6dfca22096f24a99b96accf24",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/scope/manifest.json",
+      "bytes": 1532,
+      "sha256": "219b1d806b78230a940e8ae795f69160375e2b4a3b81be461a7a13eabf8ae9c9",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/scope/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/scope/stdout.log",
+      "bytes": 508,
+      "sha256": "e628d5b82e896c508b8a9707aa8846e560416ad81c93106561ca7df9929a1891",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/typecheck/manifest.json",
+      "bytes": 1296,
+      "sha256": "1d7e09dfab9738f6f33afae120d90629274b9b75a09f81bdd4963c8151ad7f7c",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/typecheck/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/typecheck/stdout.log",
+      "bytes": 766,
+      "sha256": "e5e09be5344664865bd069cd1247a4cbaadd59b469916f6a47aeba32291237bd",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/unit/manifest.json",
+      "bytes": 1280,
+      "sha256": "c11e80cfe3334725b7f03d216878bb894c214b7b0e6d330c4ee34e32ea156e81",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/unit/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repository_artifact": true
+    },
+    {
+      "path": "commands/unit/stdout.log",
+      "bytes": 5469,
+      "sha256": "95768e6b11e192b06e7ed4353770b5d2e48143fd086197cc2e6bf187824965ec",
+      "repository_artifact": true
+    },
+    {
+      "path": "independent-review/review.json",
+      "bytes": 1688,
+      "sha256": "e0837658a3835149d2312575cdde7b522e905cd78b7cb6f06be838f42448d5e0",
+      "repository_artifact": true
+    },
+    {
+      "path": "npm-audit.json",
+      "bytes": 362,
+      "sha256": "486b6056306e9c1e24729175a7096df2ec3812cfdce3d61765742a4a4d1a825c",
+      "repository_artifact": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 221,
+      "sha256": "a5bb83403d546353e58a8270ac86ffa624acc73921f3ddbd37cf95b7e7930567",
+      "repository_artifact": true
+    },
+    {
+      "path": "sbom.cdx.json",
+      "bytes": 44251,
+      "sha256": "11616eaefe6ca348956dd3e42e4f46ddb934a3f6dfca22096f24a99b96accf24",
+      "repository_artifact": true
+    },
+    {
+      "path": "summary.json",
+      "bytes": 2568,
+      "sha256": "0bc7536b42d771708ba5ea77d560be06a7a0d2b851d5cfde48a24770d588dad5",
+      "repository_artifact": true
+    }
+  ]
+}

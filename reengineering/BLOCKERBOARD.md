@@ -61,7 +61,7 @@ synthetic `latticework::pulse-medium` namespace. This does not close
 `LW-BLK-005`: legacy remains authoritative and no real record, migration,
 import/export, activation, deployment, or cutover is authorized.
 
-`LW-P5-MEM-001` implements only that bounded candidate. Canonical tests prove
-the new synthetic namespace and corrected package behavior, but the independent
-promotion gate is still pending and `LW-BLK-005` remains OPEN. Even after
-promotion, this package supplies no real-data migration or activation evidence.
+`LW-P5-MEM-001` implements only that bounded candidate. Canonical and
+independent tests prove the new synthetic namespace and corrected package
+behavior, but `LW-BLK-005` remains OPEN because this package supplies no
+real-data migration or activation evidence.
