@@ -445,7 +445,7 @@ test("Phase 4 verification runner pins the complete bounded evidence gate", () =
   assert.match(source, /deployment = "none"/u);
   assert.match(source, /cutover = "none"/u);
   assert.match(source, /\$browserReport\.suites/u);
-  assert.match(source, /\$browserStats\.expected -ne 6/u);
+  assert.match(source, /\$browserStats\.expected -ne 7/u);
   assert.match(source, /\$browserStats\.skipped -ne 1/u);
   assert.doesNotMatch(source, /browser = \[ordered\]@\{\s*passed = 6/u);
 });

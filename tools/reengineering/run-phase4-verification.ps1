@@ -235,8 +235,8 @@ $browserSkipAnnotations = @(
         Where-Object { $_.type -eq "skip" }
 )
 if (
-    $browserSpecCount -ne 7 -or
-    $browserStats.expected -ne 6 -or
+    $browserSpecCount -ne 8 -or
+    $browserStats.expected -ne 7 -or
     $browserStats.skipped -ne 1 -or
     $browserStats.unexpected -ne 0 -or
     $browserStats.flaky -ne 0 -or
@@ -244,7 +244,7 @@ if (
     $browserSkipAnnotations[0].description -ne
         "Candidate does not declare an offline contract."
 ) {
-    throw "Phase 4 browser report does not match the accepted six-pass, one-explicit-offline-skip inventory."
+    throw "Phase 4 browser report does not match the accepted seven-pass, one-explicit-offline-skip inventory."
 }
 $browserSummary = [ordered]@{
     passed = [int]$browserStats.expected
