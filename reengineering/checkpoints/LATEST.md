@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-30T23:44:39Z`
+Updated: `2026-07-31T02:18:50Z`
 
 ## CURRENT
 
-Track: `LW_P4_AMENDMENT WORK`
-Step: `phase4-amendment-post-merge`
-Note: PR #4 merged the independently GREEN control-only amendment and corrected implementation proposal; no runtime authority is granted.
-Branch: `main`
-Head: `e71ad04f803aa6a66e2e2f947b8ed9fee10f0cdb`
-Next command: `Execute only the eleven retests frozen in reengineering/PHASE4_CHARACTERIZATION_AMENDMENT.md; do not begin LW-P4-001.`
+Track: `LW_P4_RETEST WORK`
+Step: `phase4-retest-harness-green`
+Note: All eleven bounded retests pass in the local browser harness; promotable evidence and independent clean-worktree reproduction remain before blocker closure.
+Branch: `reengineering/p4-characterization-retests`
+Head: `9ae0c54a6b6d76622cb2a89efee5bf909ff6858e`
+Next command: `Commit the green retest harness, run tools/reengineering/run-phase4-amendment-retests.ps1 from the clean candidate SHA, then independently reproduce it.`
 
 ## LW_M0_BASELINE WORK
 
@@ -329,3 +329,27 @@ Next command: `Execute only the eleven retests frozen in reengineering/PHASE4_CH
 
 - `LW-BLK-009` remains open until the eleven bounded retests and independent reproduction are complete.
 - `LW-BLK-010` remains open until the corrected implementation packet is separately accepted.
+
+## LW_P4_RETEST WORK
+
+Step: `phase4-retest-harness-green`
+Note: All eleven bounded retests pass in the local browser harness; promotable evidence and independent clean-worktree reproduction remain before blocker closure.
+Branch: `reengineering/p4-characterization-retests`
+Head: `9ae0c54a6b6d76622cb2a89efee5bf909ff6858e`
+Next command: `Commit the green retest harness, run tools/reengineering/run-phase4-amendment-retests.ps1 from the clean candidate SHA, then independently reproduce it.`
+
+### Validations
+
+- **VERIFIED** — PR #4 is merged and the amendment packet is post-merge GREEN.
+- **ACCEPTED** — maintainer directed continued work and accepts the packet's recommended synthetic/mock choices.
+- **OBSERVED** — the worktree started clean on `main` at `9ae0c54a6b6d76622cb2a89efee5bf909ff6858e`.
+- **OBSERVED** — real data, credentials, provider traffic, activation, deployment, and cutover remain disabled.
+- **MEASURED** — six exact existing-harness retests completed with six atomic PASS receipts.
+- **MEASURED** — five exact loopback-stream retests completed with five atomic PASS receipts over a run-owned `127.0.0.1` OS-selected listener.
+- **VERIFIED** — all 149 repository reengineering controls passed with the immutable baseline root configured; zero fail, skip, or todo.
+- **VERIFIED** — amended validator, promoter smoke, fixture unit tests, syntax checks, and `git diff --check` passed.
+
+### Blockers
+
+- `LW-BLK-009` remains open pending clean-SHA evidence promotion and independent reproduction.
+- `LW-BLK-010` remains open; `LW-P4-001` has not started.
