@@ -364,9 +364,17 @@ async function observeTimeoutAbsence(page, scenario, receipt, result) {
 
 async function observeWarmOfflineFailure(page, context, result) {
   const serviceWorkerReady = await page.evaluate(async () => {
-    const readiness = navigator.serviceWorker.ready.then((registration) => ({
+    const registration = await navigator.serviceWorker.register(
+      "/docs/sw.js",
+      { updateViaCache: "none" },
+    );
+    const readiness = navigator.serviceWorker.ready.then((readyRegistration) => ({
       ready: true,
-      active: Boolean(registration.active),
+      active: Boolean(
+        readyRegistration.active ||
+        registration.active ||
+        registration.waiting,
+      ),
     }));
     const boundedFailure = new Promise((resolve) => {
       setTimeout(

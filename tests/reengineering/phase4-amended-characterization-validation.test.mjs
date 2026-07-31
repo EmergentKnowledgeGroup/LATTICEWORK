@@ -39,6 +39,10 @@ test("warm-offline retest bounds service-worker readiness and navigation", () =>
     warmOffline,
     /await navigator\.serviceWorker\.ready\s*;/u,
   );
+  assert.match(
+    warmOffline,
+    /navigator\.serviceWorker\.register\(\s*"\/docs\/sw\.js"/u,
+  );
   assert.match(warmOffline, /Promise\.race\(\[readiness, boundedFailure\]\)/u);
   assert.match(warmOffline, /10_000/u);
   assert.equal(
