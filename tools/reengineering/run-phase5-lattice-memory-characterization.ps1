@@ -72,7 +72,16 @@ function Find-Attachments {
 function Decode-Attachment {
     param([object]$Attachment)
     $raw = [System.Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($Attachment.body))
-    return $raw | ConvertFrom-Json -Depth 100
+    return $raw | ConvertFrom-Json
+}
+
+function Get-PortableRelativePath {
+    param([string]$BasePath, [string]$TargetPath)
+    $baseFull = [System.IO.Path]::GetFullPath($BasePath).TrimEnd('\') + '\'
+    $targetFull = [System.IO.Path]::GetFullPath($TargetPath)
+    $baseUri = [System.Uri]::new($baseFull)
+    $targetUri = [System.Uri]::new($targetFull)
+    return [System.Uri]::UnescapeDataString($baseUri.MakeRelativeUri($targetUri).ToString())
 }
 
 function New-Manifest {
@@ -81,7 +90,7 @@ function New-Manifest {
         Where-Object { $_.Name -ne "manifest.json" } |
         ForEach-Object {
             $artifacts += [ordered]@{
-                path = [System.IO.Path]::GetRelativePath($EvidenceRoot, $_.FullName).Replace('\', '/')
+                path = Get-PortableRelativePath -BasePath $EvidenceRoot -TargetPath $_.FullName
                 sha256 = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
             }
         }
@@ -129,7 +138,7 @@ if ($LASTEXITCODE -ne 0) { throw "Phase 5 packet validation failed." }
 if ($LASTEXITCODE -ne 0) { throw "LatticeMemory browser characterization failed." }
 
 $ReportPath = Join-Path $ReportRoot "playwright-results.json"
-$report = Get-Content -LiteralPath $ReportPath -Raw | ConvertFrom-Json -Depth 100
+$report = Get-Content -LiteralPath $ReportPath -Raw | ConvertFrom-Json
 $attachments = [System.Collections.Generic.List[object]]::new()
 Find-Attachments -Node $report -Output $attachments
 if ($attachments.Count -ne 207) {
@@ -172,7 +181,7 @@ foreach ($atomId in @($byAtom.Keys | Sort-Object)) {
 }
 
 $clean = $byAtom["P5-MEM-CLEAN-001"]["scenario-result.json"].observed
-$review = Get-Content -LiteralPath $IndependentReviewPath -Raw | ConvertFrom-Json -Depth 100
+$review = Get-Content -LiteralPath $IndependentReviewPath -Raw | ConvertFrom-Json
 if ($review.verdict -ne "GREEN" -or $review.independent -ne $true -or $review.atom_count -ne 69 -or $review.clean_worktree -ne $true) {
     throw "Independent review receipt is not exact GREEN."
 }

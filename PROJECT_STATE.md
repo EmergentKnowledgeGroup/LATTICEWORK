@@ -8,15 +8,15 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 4 SYNTHETIC SLICE MERGED / VERIFIED`
+`PHASE 5 LATTICE MEMORY CHARACTERIZATION VERIFIED`
 
 ## Current milestone
 
-`M1/M3 boundary — non-default synthetic primary Chat vertical slice`
+`M3 — bounded LatticeMemory compatibility and corrected-candidate planning`
 
 ## Current target
 
-`Phase 5 decision and preflight planning — no Phase 5 implementation authorized`
+`Phase 5 LatticeMemory implementation preflight — no candidate implementation authorized`
 
 ## Upstream baseline
 
@@ -24,8 +24,9 @@ LATTICEWORK
 
 ## Last verified commit
 
-`1b7e1d10456e0a1e9aaa91df25db17e236bbea3e` (PR #5 merge containing the
-verified Phase 4 candidate `e65ca81940d50eabd5bb72a403deab3bf37bea93`)
+`0ec0de6bb49ef2545d63cde483ed0b901deb50f1` (Phase 5 LatticeMemory
+characterization candidate independently reproduced against the immutable
+baseline)
 
 The verified Phase 3 candidate
 `d746b96225a3eaf59a5b5937e3f531e2cad280ef` is contained in the merged
@@ -64,9 +65,19 @@ claim. Canonical verification passes 187/187 repository controls, deterministic
 build, audit, SBOM, supply-chain, and hygiene gates. Independent QA reproduced
 the complete gate from a new detached worktree on port 4294 and returned GREEN.
 
+**VERIFIED:** the exact LatticeMemory characterization packet executed all 69
+locked atoms in 13 single-worker Chrome groups with zero retry. The promoted
+bundle contains 207 content-free receipts, 53 `MATCH` dispositions, 16
+`ACCEPTED_DIVERGENCE_CANDIDATE` dispositions, complete listener, port,
+profile, and run-root cleanup, and zero external egress or private-sentinel
+leakage. Repository controls pass 230/230, the canonical evidence validator is
+valid, and an independent clean detached worktree reproduced the result. This
+grants no candidate implementation, candidate storage, real-data migration,
+activation, deployment, or cutover authority.
+
 ## Last verified date
 
-`2026-07-31 05:15 UTC`
+`2026-07-31 06:47 UTC`
 
 ## Locked constraints
 
@@ -95,6 +106,9 @@ the complete gate from a new detached worktree on port 4294 and returned GREEN.
 | `LW-P4-RETEST-001` | Bounded amended characterization retests | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P4-RETEST-001.md` |
 | `LW-P4-IMPL-PREFLIGHT-001` | Exact bounded implementation packet and range lock | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md` |
 | `LW-P4-001` | Non-default synthetic primary Chat vertical slice | Codex root controller | `main` | `COMPLETED — MERGED / VERIFIED` | `reengineering/evidence/phase-4/LW-P4-001/` |
+| `LW-P5-CTRL-001` | Phase 4 closure and fail-closed Phase 5 active scope | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P5-CTRL-001.md` |
+| `LW-P5-MEM-PREFLIGHT-001` | Exact synthetic LatticeMemory characterization lock | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P5-MEM-PREFLIGHT-001.md` |
+| `LW-P5-MEM-CHAR-001` | Immutable LatticeMemory browser characterization | Codex root controller | `reengineering/p5-lattice-memory` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P5-MEM-CHAR-001.md` |
 
 ## Completed in current milestone
 

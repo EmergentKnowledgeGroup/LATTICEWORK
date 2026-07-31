@@ -1,0 +1,15 @@
+{
+    "schema":  "latticework.phase5.network.v1",
+    "atom_id":  "P5-MEM-COMMIT-001",
+    "group_id":  "commit-copy-timestamp-fanout-persistence",
+    "allowed_count":  2,
+    "blocked_count":  0,
+    "external_transmitted_count":  0,
+    "external_http_denied":  true,
+    "websocket_denied":  true,
+    "realtime_denied":  true,
+    "beacon_denied":  true,
+    "external_http_blocked":  0,
+    "websocket_blocked":  0,
+    "beacon_blocked":  0
+}

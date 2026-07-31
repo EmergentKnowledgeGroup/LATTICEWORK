@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-31T06:32:43Z`
+Updated: `2026-07-31T06:47:22Z`
 
 ## CURRENT
 
 Track: `LW_P5_LATTICE_MEMORY WORK`
-Step: `phase5-lattice-memory-characterization-candidate-green`
-Note: The additive LatticeMemory characterization candidate reproduces all 69 atoms across 13 Chrome groups with 207 content-free attachments; full repository controls pass 230/230 pending committed independent reproduction.
+Step: `phase5-lattice-memory-characterization-green`
+Note: Canonical LatticeMemory characterization is independently GREEN: 69/69 atoms, 53 MATCH, 16 accepted divergence candidates, 207 content-free receipts, and 230/230 controls.
 Branch: `reengineering/p5-lattice-memory`
-Head: `e34aa4304c51a7a870ab5a4fa1f45a4216cb8d38`
-Next command: `Commit the exact characterization candidate, reproduce it from a clean independent worktree, then promote and validate the final evidence bundle.`
+Head: `0ec0de6bb49ef2545d63cde483ed0b901deb50f1`
+Next command: `Freeze and independently review the exact corrected-candidate LatticeMemory implementation packet before creating candidate source or storage.`
 
 ## LW_M0_BASELINE WORK
 
@@ -411,11 +411,11 @@ Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize
 
 ## LW_P5_LATTICE_MEMORY WORK
 
-Step: `phase5-lattice-memory-characterization-candidate-green`
-Note: The additive LatticeMemory characterization candidate reproduces all 69 atoms across 13 Chrome groups with 207 content-free attachments; full repository controls pass 230/230 pending committed independent reproduction.
+Step: `phase5-lattice-memory-characterization-green`
+Note: Canonical LatticeMemory characterization is independently GREEN: 69/69 atoms, 53 MATCH, 16 accepted divergence candidates, 207 content-free receipts, and 230/230 controls.
 Branch: `reengineering/p5-lattice-memory`
-Head: `e34aa4304c51a7a870ab5a4fa1f45a4216cb8d38`
-Next command: `Commit the exact characterization candidate, reproduce it from a clean independent worktree, then promote and validate the final evidence bundle.`
+Head: `0ec0de6bb49ef2545d63cde483ed0b901deb50f1`
+Next command: `Freeze and independently review the exact corrected-candidate LatticeMemory implementation packet before creating candidate source or storage.`
 
 ### Validations
 
@@ -436,6 +436,9 @@ Next command: `Commit the exact characterization candidate, reproduce it from a 
 - **MEASURED** — controller Chrome reproduction passed all 13 groups in 12.7 seconds with one worker and zero retries.
 - **MEASURED** — the browser report contains 207 attachments for 69 unique atoms, zero non-PASS atoms, and zero private-sentinel leaks.
 - **MEASURED** — characterization validator negative controls and full repository controls passed 230/230 with zero fail/skip/todo.
+- **VERIFIED** — independent clean-worktree reproduction returned GREEN for commit `0ec0de6bb49ef2545d63cde483ed0b901deb50f1`.
+- **VERIFIED** — canonical promotion contains 69/69 PASS atoms, 53 MATCH and 16 `ACCEPTED_DIVERGENCE_CANDIDATE` dispositions, 207 content-free receipts, complete cleanup, and zero egress or sentinel leakage.
+- **VERIFIED** — the promoted characterization evidence validator returned `valid: true`.
 
 ### Blockers
 

@@ -1,0 +1,819 @@
+{
+    "schema":  "latticework.phase5-lattice-memory-characterization.v1",
+    "work_id":  "LW-P5-MEM-CHAR-001",
+    "status":  "GREEN",
+    "baseline_sha":  "e7585999fc1af2707f410ae87356cf2b52e08d9c",
+    "candidate_sha":  "0ec0de6bb49ef2545d63cde483ed0b901deb50f1",
+    "captured_at":  "2026-07-31T06:46:08.8055984Z",
+    "synthetic_only":  true,
+    "external_egress":  false,
+    "cleanup":  {
+                    "listener_closed":  true,
+                    "port_released":  true,
+                    "profiles_deleted":  true,
+                    "run_root_deleted":  true
+                },
+    "gates":  [
+                  {
+                      "id":  "phase5-active-scope",
+                      "status":  "PASS"
+                  },
+                  {
+                      "id":  "immutable-source",
+                      "status":  "PASS"
+                  },
+                  {
+                      "id":  "browser-characterization",
+                      "status":  "PASS"
+                  },
+                  {
+                      "id":  "storage-isolation",
+                      "status":  "PASS"
+                  },
+                  {
+                      "id":  "network-denial",
+                      "status":  "PASS"
+                  },
+                  {
+                      "id":  "content-free-scan",
+                      "status":  "PASS"
+                  },
+                  {
+                      "id":  "artifact-manifest",
+                      "status":  "PASS"
+                  },
+                  {
+                      "id":  "independent-clean-worktree",
+                      "status":  "PASS"
+                  },
+                  {
+                      "id":  "repository-controls",
+                      "status":  "PASS"
+                  },
+                  {
+                      "id":  "hygiene",
+                      "status":  "PASS"
+                  }
+              ],
+    "results":  [
+                    {
+                        "id":  "P5-MEM-API-001",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-001/observation.json",
+                                         "network":  "results/P5-MEM-API-001/network.json",
+                                         "storage":  "results/P5-MEM-API-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-API-002",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-002/observation.json",
+                                         "network":  "results/P5-MEM-API-002/network.json",
+                                         "storage":  "results/P5-MEM-API-002/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-API-003",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-003/observation.json",
+                                         "network":  "results/P5-MEM-API-003/network.json",
+                                         "storage":  "results/P5-MEM-API-003/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-API-004",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-004/observation.json",
+                                         "network":  "results/P5-MEM-API-004/network.json",
+                                         "storage":  "results/P5-MEM-API-004/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-API-005",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-005/observation.json",
+                                         "network":  "results/P5-MEM-API-005/network.json",
+                                         "storage":  "results/P5-MEM-API-005/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-API-006",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-006/observation.json",
+                                         "network":  "results/P5-MEM-API-006/network.json",
+                                         "storage":  "results/P5-MEM-API-006/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-API-007",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-007/observation.json",
+                                         "network":  "results/P5-MEM-API-007/network.json",
+                                         "storage":  "results/P5-MEM-API-007/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-API-008",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-008/observation.json",
+                                         "network":  "results/P5-MEM-API-008/network.json",
+                                         "storage":  "results/P5-MEM-API-008/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-API-009",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-009/observation.json",
+                                         "network":  "results/P5-MEM-API-009/network.json",
+                                         "storage":  "results/P5-MEM-API-009/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-API-010",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-010/observation.json",
+                                         "network":  "results/P5-MEM-API-010/network.json",
+                                         "storage":  "results/P5-MEM-API-010/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-API-011",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-011/observation.json",
+                                         "network":  "results/P5-MEM-API-011/network.json",
+                                         "storage":  "results/P5-MEM-API-011/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-API-012",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-012/observation.json",
+                                         "network":  "results/P5-MEM-API-012/network.json",
+                                         "storage":  "results/P5-MEM-API-012/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-API-013",
+                        "group":  "public-internal-api-and-loader",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-API-013/observation.json",
+                                         "network":  "results/P5-MEM-API-013/network.json",
+                                         "storage":  "results/P5-MEM-API-013/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-BOUND-001",
+                        "group":  "ten-thousand-record-retention",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-BOUND-001/observation.json",
+                                         "network":  "results/P5-MEM-BOUND-001/network.json",
+                                         "storage":  "results/P5-MEM-BOUND-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-BURST-001",
+                        "group":  "same-millisecond-burst",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-BURST-001/observation.json",
+                                         "network":  "results/P5-MEM-BURST-001/network.json",
+                                         "storage":  "results/P5-MEM-BURST-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-CLEAN-001",
+                        "group":  "cleanup-and-content-free-evidence",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-CLEAN-001/observation.json",
+                                         "network":  "results/P5-MEM-CLEAN-001/network.json",
+                                         "storage":  "results/P5-MEM-CLEAN-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-COMMIT-001",
+                        "group":  "commit-copy-timestamp-fanout-persistence",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-COMMIT-001/observation.json",
+                                         "network":  "results/P5-MEM-COMMIT-001/network.json",
+                                         "storage":  "results/P5-MEM-COMMIT-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-COMMIT-002",
+                        "group":  "commit-copy-timestamp-fanout-persistence",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-COMMIT-002/observation.json",
+                                         "network":  "results/P5-MEM-COMMIT-002/network.json",
+                                         "storage":  "results/P5-MEM-COMMIT-002/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-COMMIT-003",
+                        "group":  "commit-copy-timestamp-fanout-persistence",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-COMMIT-003/observation.json",
+                                         "network":  "results/P5-MEM-COMMIT-003/network.json",
+                                         "storage":  "results/P5-MEM-COMMIT-003/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-COMMIT-004",
+                        "group":  "commit-copy-timestamp-fanout-persistence",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-COMMIT-004/observation.json",
+                                         "network":  "results/P5-MEM-COMMIT-004/network.json",
+                                         "storage":  "results/P5-MEM-COMMIT-004/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-COMMIT-005",
+                        "group":  "commit-copy-timestamp-fanout-persistence",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-COMMIT-005/observation.json",
+                                         "network":  "results/P5-MEM-COMMIT-005/network.json",
+                                         "storage":  "results/P5-MEM-COMMIT-005/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-COMMIT-006",
+                        "group":  "commit-copy-timestamp-fanout-persistence",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-COMMIT-006/observation.json",
+                                         "network":  "results/P5-MEM-COMMIT-006/network.json",
+                                         "storage":  "results/P5-MEM-COMMIT-006/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-COMMIT-007",
+                        "group":  "commit-copy-timestamp-fanout-persistence",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-COMMIT-007/observation.json",
+                                         "network":  "results/P5-MEM-COMMIT-007/network.json",
+                                         "storage":  "results/P5-MEM-COMMIT-007/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-COMMIT-008",
+                        "group":  "commit-copy-timestamp-fanout-persistence",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-COMMIT-008/observation.json",
+                                         "network":  "results/P5-MEM-COMMIT-008/network.json",
+                                         "storage":  "results/P5-MEM-COMMIT-008/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FAIL-001",
+                        "group":  "indexeddb-fail-quiet",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FAIL-001/observation.json",
+                                         "network":  "results/P5-MEM-FAIL-001/network.json",
+                                         "storage":  "results/P5-MEM-FAIL-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FAIL-002",
+                        "group":  "indexeddb-fail-quiet",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FAIL-002/observation.json",
+                                         "network":  "results/P5-MEM-FAIL-002/network.json",
+                                         "storage":  "results/P5-MEM-FAIL-002/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FAIL-003",
+                        "group":  "indexeddb-fail-quiet",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FAIL-003/observation.json",
+                                         "network":  "results/P5-MEM-FAIL-003/network.json",
+                                         "storage":  "results/P5-MEM-FAIL-003/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FAIL-004",
+                        "group":  "indexeddb-fail-quiet",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FAIL-004/observation.json",
+                                         "network":  "results/P5-MEM-FAIL-004/network.json",
+                                         "storage":  "results/P5-MEM-FAIL-004/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FAIL-005",
+                        "group":  "indexeddb-fail-quiet",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FAIL-005/observation.json",
+                                         "network":  "results/P5-MEM-FAIL-005/network.json",
+                                         "storage":  "results/P5-MEM-FAIL-005/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FAIL-006",
+                        "group":  "indexeddb-fail-quiet",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FAIL-006/observation.json",
+                                         "network":  "results/P5-MEM-FAIL-006/network.json",
+                                         "storage":  "results/P5-MEM-FAIL-006/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FILTER-001",
+                        "group":  "filter-and-unsubscribe-matrix",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FILTER-001/observation.json",
+                                         "network":  "results/P5-MEM-FILTER-001/network.json",
+                                         "storage":  "results/P5-MEM-FILTER-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FILTER-002",
+                        "group":  "filter-and-unsubscribe-matrix",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FILTER-002/observation.json",
+                                         "network":  "results/P5-MEM-FILTER-002/network.json",
+                                         "storage":  "results/P5-MEM-FILTER-002/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FILTER-003",
+                        "group":  "filter-and-unsubscribe-matrix",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FILTER-003/observation.json",
+                                         "network":  "results/P5-MEM-FILTER-003/network.json",
+                                         "storage":  "results/P5-MEM-FILTER-003/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FILTER-004",
+                        "group":  "filter-and-unsubscribe-matrix",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FILTER-004/observation.json",
+                                         "network":  "results/P5-MEM-FILTER-004/network.json",
+                                         "storage":  "results/P5-MEM-FILTER-004/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FILTER-005",
+                        "group":  "filter-and-unsubscribe-matrix",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FILTER-005/observation.json",
+                                         "network":  "results/P5-MEM-FILTER-005/network.json",
+                                         "storage":  "results/P5-MEM-FILTER-005/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FILTER-006",
+                        "group":  "filter-and-unsubscribe-matrix",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FILTER-006/observation.json",
+                                         "network":  "results/P5-MEM-FILTER-006/network.json",
+                                         "storage":  "results/P5-MEM-FILTER-006/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FILTER-007",
+                        "group":  "filter-and-unsubscribe-matrix",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FILTER-007/observation.json",
+                                         "network":  "results/P5-MEM-FILTER-007/network.json",
+                                         "storage":  "results/P5-MEM-FILTER-007/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FILTER-008",
+                        "group":  "filter-and-unsubscribe-matrix",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FILTER-008/observation.json",
+                                         "network":  "results/P5-MEM-FILTER-008/network.json",
+                                         "storage":  "results/P5-MEM-FILTER-008/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-FILTER-009",
+                        "group":  "filter-and-unsubscribe-matrix",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-FILTER-009/observation.json",
+                                         "network":  "results/P5-MEM-FILTER-009/network.json",
+                                         "storage":  "results/P5-MEM-FILTER-009/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-HEARTBEAT-001",
+                        "group":  "schema-and-heartbeat",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-HEARTBEAT-001/observation.json",
+                                         "network":  "results/P5-MEM-HEARTBEAT-001/network.json",
+                                         "storage":  "results/P5-MEM-HEARTBEAT-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-ISO-001",
+                        "group":  "storage-and-network-isolation",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-ISO-001/observation.json",
+                                         "network":  "results/P5-MEM-ISO-001/network.json",
+                                         "storage":  "results/P5-MEM-ISO-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-QUEUE-001",
+                        "group":  "pre-ready-queue-bound-and-drain",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-QUEUE-001/observation.json",
+                                         "network":  "results/P5-MEM-QUEUE-001/network.json",
+                                         "storage":  "results/P5-MEM-QUEUE-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-QUEUE-002",
+                        "group":  "pre-ready-queue-bound-and-drain",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-QUEUE-002/observation.json",
+                                         "network":  "results/P5-MEM-QUEUE-002/network.json",
+                                         "storage":  "results/P5-MEM-QUEUE-002/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-QUIET-001",
+                        "group":  "quiet-room-fail-closed-matrix",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-QUIET-001/observation.json",
+                                         "network":  "results/P5-MEM-QUIET-001/network.json",
+                                         "storage":  "results/P5-MEM-QUIET-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-QUIET-002",
+                        "group":  "quiet-room-fail-closed-matrix",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-QUIET-002/observation.json",
+                                         "network":  "results/P5-MEM-QUIET-002/network.json",
+                                         "storage":  "results/P5-MEM-QUIET-002/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-QUIET-003",
+                        "group":  "quiet-room-fail-closed-matrix",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-QUIET-003/observation.json",
+                                         "network":  "results/P5-MEM-QUIET-003/network.json",
+                                         "storage":  "results/P5-MEM-QUIET-003/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-QUIET-004",
+                        "group":  "quiet-room-fail-closed-matrix",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-QUIET-004/observation.json",
+                                         "network":  "results/P5-MEM-QUIET-004/network.json",
+                                         "storage":  "results/P5-MEM-QUIET-004/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-QUIET-005",
+                        "group":  "quiet-room-fail-closed-matrix",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-QUIET-005/observation.json",
+                                         "network":  "results/P5-MEM-QUIET-005/network.json",
+                                         "storage":  "results/P5-MEM-QUIET-005/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-QUIET-006",
+                        "group":  "quiet-room-fail-closed-matrix",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-QUIET-006/observation.json",
+                                         "network":  "results/P5-MEM-QUIET-006/network.json",
+                                         "storage":  "results/P5-MEM-QUIET-006/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-QUIET-007",
+                        "group":  "quiet-room-fail-closed-matrix",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-QUIET-007/observation.json",
+                                         "network":  "results/P5-MEM-QUIET-007/network.json",
+                                         "storage":  "results/P5-MEM-QUIET-007/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-RELOAD-001",
+                        "group":  "reload-order-filter-and-heartbeat",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-RELOAD-001/observation.json",
+                                         "network":  "results/P5-MEM-RELOAD-001/network.json",
+                                         "storage":  "results/P5-MEM-RELOAD-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-RELOAD-002",
+                        "group":  "reload-order-filter-and-heartbeat",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-RELOAD-002/observation.json",
+                                         "network":  "results/P5-MEM-RELOAD-002/network.json",
+                                         "storage":  "results/P5-MEM-RELOAD-002/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-SCHEMA-001",
+                        "group":  "schema-and-heartbeat",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-SCHEMA-001/observation.json",
+                                         "network":  "results/P5-MEM-SCHEMA-001/network.json",
+                                         "storage":  "results/P5-MEM-SCHEMA-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-001",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-001/observation.json",
+                                         "network":  "results/P5-MEM-VALID-001/network.json",
+                                         "storage":  "results/P5-MEM-VALID-001/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-002",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-002/observation.json",
+                                         "network":  "results/P5-MEM-VALID-002/network.json",
+                                         "storage":  "results/P5-MEM-VALID-002/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-003",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-003/observation.json",
+                                         "network":  "results/P5-MEM-VALID-003/network.json",
+                                         "storage":  "results/P5-MEM-VALID-003/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-004",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-004/observation.json",
+                                         "network":  "results/P5-MEM-VALID-004/network.json",
+                                         "storage":  "results/P5-MEM-VALID-004/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-005",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-005/observation.json",
+                                         "network":  "results/P5-MEM-VALID-005/network.json",
+                                         "storage":  "results/P5-MEM-VALID-005/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-006",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-006/observation.json",
+                                         "network":  "results/P5-MEM-VALID-006/network.json",
+                                         "storage":  "results/P5-MEM-VALID-006/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-007",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-007/observation.json",
+                                         "network":  "results/P5-MEM-VALID-007/network.json",
+                                         "storage":  "results/P5-MEM-VALID-007/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-008",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-008/observation.json",
+                                         "network":  "results/P5-MEM-VALID-008/network.json",
+                                         "storage":  "results/P5-MEM-VALID-008/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-009",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-009/observation.json",
+                                         "network":  "results/P5-MEM-VALID-009/network.json",
+                                         "storage":  "results/P5-MEM-VALID-009/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-010",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "MATCH",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-010/observation.json",
+                                         "network":  "results/P5-MEM-VALID-010/network.json",
+                                         "storage":  "results/P5-MEM-VALID-010/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-011",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-011/observation.json",
+                                         "network":  "results/P5-MEM-VALID-011/network.json",
+                                         "storage":  "results/P5-MEM-VALID-011/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-012",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-012/observation.json",
+                                         "network":  "results/P5-MEM-VALID-012/network.json",
+                                         "storage":  "results/P5-MEM-VALID-012/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-013",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-013/observation.json",
+                                         "network":  "results/P5-MEM-VALID-013/network.json",
+                                         "storage":  "results/P5-MEM-VALID-013/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-014",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-014/observation.json",
+                                         "network":  "results/P5-MEM-VALID-014/network.json",
+                                         "storage":  "results/P5-MEM-VALID-014/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-015",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-015/observation.json",
+                                         "network":  "results/P5-MEM-VALID-015/network.json",
+                                         "storage":  "results/P5-MEM-VALID-015/storage.json"
+                                     }
+                    },
+                    {
+                        "id":  "P5-MEM-VALID-016",
+                        "group":  "shape-and-content-leak-rejection",
+                        "status":  "PASS",
+                        "disposition":  "ACCEPTED_DIVERGENCE_CANDIDATE",
+                        "receipts":  {
+                                         "observation":  "results/P5-MEM-VALID-016/observation.json",
+                                         "network":  "results/P5-MEM-VALID-016/network.json",
+                                         "storage":  "results/P5-MEM-VALID-016/storage.json"
+                                     }
+                    }
+                ]
+}

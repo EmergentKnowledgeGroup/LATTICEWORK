@@ -47,3 +47,10 @@ expanded.
 characterization of immutable `docs/modules/lattice-memory.js`. It does not
 close `LW-BLK-005` and grants no real-data migration, candidate storage,
 activation, deployment, or cutover authority.
+
+`LW-P5-MEM-CHAR-001` is now canonical and independently GREEN: all 69 atoms
+pass, with 53 `MATCH` and 16 `ACCEPTED_DIVERGENCE_CANDIDATE` dispositions.
+This closes only the synthetic legacy-characterization gate. `LW-BLK-005`
+remains open because no real stored record was read, migrated, round-tripped,
+or rolled back, and characterization grants no candidate implementation or
+candidate-storage authority.

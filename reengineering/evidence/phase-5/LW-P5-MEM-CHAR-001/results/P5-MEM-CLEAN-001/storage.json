@@ -1,0 +1,19 @@
+{
+    "schema":  "latticework.phase5.storage.v1",
+    "atom_id":  "P5-MEM-CLEAN-001",
+    "group_id":  "cleanup-and-content-free-evidence",
+    "database_names":  [
+
+                       ],
+    "lattice_memory":  {
+                           "present":  false,
+                           "version":  null,
+                           "stores":  [
+
+                                      ],
+                           "pulse_count":  null
+                       },
+    "local_storage_key_count":  0,
+    "session_storage_key_count":  0,
+    "cache_name_count":  0
+}

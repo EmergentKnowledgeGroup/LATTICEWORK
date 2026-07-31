@@ -1,0 +1,14 @@
+{
+    "schema":  "latticework.phase5.atomic-result.v1",
+    "atom_id":  "P5-MEM-CLEAN-001",
+    "group_id":  "cleanup-and-content-free-evidence",
+    "status":  "PASS",
+    "disposition":  "MATCH",
+    "observed":  {
+                     "profiles_deleted":  true,
+                     "run_root_deleted":  true,
+                     "listener_closed":  true,
+                     "port_released":  true,
+                     "content_free":  true
+                 }
+}
