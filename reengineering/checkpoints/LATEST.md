@@ -1,15 +1,15 @@
 # LATTICEWORK Reengineering Checkpoint
 
-Updated: `2026-07-31T03:27:04Z`
+Updated: `2026-07-31T03:28:00Z`
 
 ## CURRENT
 
-Track: `LW_P4_RETEST WORK`
-Step: `phase4-amended-characterization-canonical-independent-green`
-Note: Canonical and independent amended characterization is GREEN at candidate 55e3731 with 31 PASS, 8 accepted divergences, 0 blocked; LW-BLK-009 is closed.
+Track: `LW_P4_IMPL_PREFLIGHT WORK`
+Step: `phase4-implementation-preflight-start`
+Note: Characterization is GREEN; correcting and machine-locking the exact non-default synthetic/mock implementation packet before any feature code.
 Branch: `reengineering/p4-characterization-retests`
-Head: `55e3731ea1482f37b242da6dc1af8d8181624e9a`
-Next command: `Commit canonical characterization evidence/docs, then correct and independently validate the exact LW-P4-IMPL-PREFLIGHT-001 packet before implementation.`
+Head: `8d59d4e1dc2c3f1de0b923db68917118062ed458`
+Next command: `Correct PHASE4_IMPLEMENTATION_PACKET.md and add the pinned fail-closed implementation scope validator plus negative tests.`
 
 ## LW_M0_BASELINE WORK
 
@@ -356,3 +356,22 @@ Next command: `Commit canonical characterization evidence/docs, then correct and
 
 - `LW-BLK-009` is closed by canonical and independent GREEN evidence.
 - `LW-BLK-010` remains open; `LW-P4-001` has not started.
+
+## LW_P4_IMPL_PREFLIGHT WORK
+
+Step: `phase4-implementation-preflight-start`
+Note: Characterization is GREEN; correcting and machine-locking the exact non-default synthetic/mock implementation packet before any feature code.
+Branch: `reengineering/p4-characterization-retests`
+Head: `8d59d4e1dc2c3f1de0b923db68917118062ed458`
+Next command: `Correct PHASE4_IMPLEMENTATION_PACKET.md and add the pinned fail-closed implementation scope validator plus negative tests.`
+
+### Validations
+
+- **VERIFIED** — `LW-P4-RETEST-001` is canonical and independently GREEN.
+- **OBSERVED** — the maintainer directed continued execution and considers repository-authored packet choices accepted.
+- **OBSERVED** — no application or package implementation exists in this workstream at phase start.
+- **OBSERVED** — real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.
+
+### Blockers
+
+- `LW-BLK-010` remains open until the exact corrected packet is machine-validated, independently GREEN, and its standing acceptance is recorded.

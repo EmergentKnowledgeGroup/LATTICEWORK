@@ -20,11 +20,13 @@ const ALLOWED_PATHS = new Set([
   "docs/agents/claims/LW-P4-CHAR-001.md",
   "docs/agents/claims/LW-P4-AMEND-001.md",
   "docs/agents/claims/LW-P4-RETEST-001.md",
+  "docs/agents/claims/LW-P4-IMPL-PREFLIGHT-001.md",
   "docs/agents/handoffs/LW-P4-CTRL-001.md",
   "docs/agents/handoffs/LW-P4-PREFLIGHT-001.md",
   "docs/agents/handoffs/LW-P4-CHAR-001.md",
   "docs/agents/handoffs/LW-P4-AMEND-001.md",
   "docs/agents/handoffs/LW-P4-RETEST-001.md",
+  "docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md",
   "docs/COMPATIBILITY.md",
   "docs/TESTING_AND_VERIFICATION.md",
   "reengineering/MIGRATION_LEDGER.md",
@@ -49,6 +51,7 @@ const ALLOWED_PATHS = new Set([
   "tests/reengineering/phase4-amendment.test.mjs",
   "tests/reengineering/phase4-amended-characterization-validation.test.mjs",
   "tests/reengineering/phase4-loopback-stream.test.mjs",
+  "tests/reengineering/phase4-implementation-scope.test.mjs",
   "tools/reengineering/git-scope-common.mjs",
   "tools/reengineering/run-phase4-characterization.ps1",
   "tools/reengineering/run-phase4-amendment-retests.ps1",
@@ -59,6 +62,7 @@ const ALLOWED_PATHS = new Set([
   "tools/reengineering/validate-phase4-characterization.mjs",
   "tools/reengineering/validate-phase4-amendment.mjs",
   "tools/reengineering/validate-phase4-amended-characterization.mjs",
+  "tools/reengineering/validate-phase4-implementation-scope.mjs",
 ]);
 
 const ALLOWED_PREFIXES = [
