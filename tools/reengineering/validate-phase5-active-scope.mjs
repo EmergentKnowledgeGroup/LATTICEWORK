@@ -18,13 +18,16 @@ const ALLOWED_PATHS = new Set([
   "docs/agents/claims/LW-P5-CTRL-001.md",
   "docs/agents/claims/LW-P5-MEM-PREFLIGHT-001.md",
   "docs/agents/claims/LW-P5-MEM-CHAR-001.md",
+  "docs/agents/claims/LW-P5-MEM-IMPL-PREFLIGHT-001.md",
   "docs/agents/handoffs/LW-P4-001.md",
   "docs/agents/handoffs/LW-P5-CTRL-001.md",
   "docs/agents/handoffs/LW-P5-MEM-PREFLIGHT-001.md",
   "docs/agents/handoffs/LW-P5-MEM-CHAR-001.md",
+  "docs/agents/handoffs/LW-P5-MEM-IMPL-PREFLIGHT-001.md",
   "reengineering/BLOCKERBOARD.md",
   "reengineering/EXECUTION_CHECKLIST.md",
   "reengineering/PHASE5_LATTICE_MEMORY_PREFLIGHT.md",
+  "reengineering/PHASE5_LATTICE_MEMORY_IMPLEMENTATION_PACKET.md",
   "reengineering/checkpoints/LATEST.json",
   "reengineering/checkpoints/LATEST.md",
   "runtime/checkpoints/LATEST.json",
@@ -34,6 +37,7 @@ const ALLOWED_PATHS = new Set([
   "tests/reengineering/phase5-active-scope.test.mjs",
   "tests/reengineering/phase5-lattice-memory-preflight.test.mjs",
   "tests/reengineering/phase5-lattice-memory-characterization-validation.test.mjs",
+  "tests/reengineering/phase5-lattice-memory-implementation-scope.test.mjs",
   "tests/characterization/fixtures/phase5-lattice-memory-contract.json",
   "tests/characterization/phase5-lattice-memory.playwright.config.mjs",
   "tests/characterization/specs/phase5-lattice-memory.spec.mjs",
@@ -44,12 +48,14 @@ const ALLOWED_PATHS = new Set([
   "tools/reengineering/validate-phase5-lattice-memory-preflight.mjs",
   "tools/reengineering/run-phase5-lattice-memory-characterization.ps1",
   "tools/reengineering/validate-phase5-lattice-memory-characterization.mjs",
+  "tools/reengineering/validate-phase5-lattice-memory-implementation-scope.mjs",
 ]);
 
 const ALLOWED_PREFIXES = [
   "reengineering/evidence/phase-5/LW-P5-CTRL-001/",
   "reengineering/evidence/phase-5/LW-P5-MEM-PREFLIGHT-001/",
   "reengineering/evidence/phase-5/LW-P5-MEM-CHAR-001/",
+  "reengineering/evidence/phase-5/LW-P5-MEM-IMPL-PREFLIGHT-001/",
 ];
 
 export function findUnauthorizedPhase5Paths(paths) {
