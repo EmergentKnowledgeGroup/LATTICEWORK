@@ -318,3 +318,28 @@ test("CLI rejects base or scope overrides", () => {
     assert.match(result.stderr, /accepts no CLI base or scope overrides/u);
   }
 });
+
+test("Phase 4 verification runner pins the complete bounded evidence gate", () => {
+  const source = fs.readFileSync(
+    path.join(ROOT, "tools/reengineering/run-phase4-verification.ps1"),
+    "utf8",
+  );
+  for (const required of [
+    'reengineering\\evidence\\phase-4\\LW-P4-001',
+    "npm run p4:typecheck",
+    "npm run p4:test",
+    "npm run p4:browser",
+    "npm run p3:boundary",
+    "tests/reengineering/*.test.mjs",
+    "npm audit --workspaces --include-workspace-root --json",
+    "npm sbom --sbom-format cyclonedx",
+    "manifest-evidence-directory.mjs",
+    "Z:\\LATTICEWORK_BASELINE_e7585999",
+  ]) {
+    assert.match(source, new RegExp(required.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&"), "u"));
+  }
+  assert.match(source, /real_provider_traffic = "none"/u);
+  assert.match(source, /application_listener = "none"/u);
+  assert.match(source, /deployment = "none"/u);
+  assert.match(source, /cutover = "none"/u);
+});

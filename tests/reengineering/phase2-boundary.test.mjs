@@ -6,6 +6,7 @@ import test from "node:test";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..", "..");
 const BASELINE_ROOT = process.env.LATTICEWORK_BASELINE_ROOT;
+const PHASE2_TERMINAL = "7e928bba605e0309273989bf8fd1303d2a822923";
 
 const PROTECTED_PATHS = [
   "app.html",
@@ -37,8 +38,18 @@ const FORBIDDEN_RUNTIME_PATTERNS = [
   /\bNotification\b/,
 ];
 
-function readJson(relativePath) {
-  return JSON.parse(fs.readFileSync(path.join(REPO_ROOT, relativePath), "utf8"));
+function readJsonAt(commit, relativePath) {
+  const result = spawnSync("git", ["show", `${commit}:${relativePath}`], {
+    cwd: REPO_ROOT,
+    encoding: "utf8",
+    windowsHide: true,
+  });
+  assert.equal(
+    result.status,
+    0,
+    `Unable to read ${relativePath} at ${commit}: ${result.stderr?.trim() || "unknown Git error"}`,
+  );
+  return JSON.parse(result.stdout);
 }
 
 function gitBlobOid(repositoryRoot, relativePath) {
@@ -70,11 +81,11 @@ function walkSource(directory) {
 }
 
 test("Phase 2 direct dependency set is exact and workspace-scoped", () => {
-  const root = readJson("package.json");
-  const web = readJson("apps/web/package.json");
-  const contracts = readJson("packages/contracts/package.json");
-  const kernel = readJson("packages/kernel/package.json");
-  const browser = readJson("tests/phase2/package.json");
+  const root = readJsonAt(PHASE2_TERMINAL, "package.json");
+  const web = readJsonAt(PHASE2_TERMINAL, "apps/web/package.json");
+  const contracts = readJsonAt(PHASE2_TERMINAL, "packages/contracts/package.json");
+  const kernel = readJsonAt(PHASE2_TERMINAL, "packages/kernel/package.json");
+  const browser = readJsonAt(PHASE2_TERMINAL, "tests/phase2/package.json");
 
   assert.deepEqual(root.devDependencies, {
     typescript: "6.0.3",

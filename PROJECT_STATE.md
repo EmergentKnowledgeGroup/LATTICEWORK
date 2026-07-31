@@ -8,7 +8,7 @@ LATTICEWORK
 
 ## Project state
 
-`PHASE 4 IMPLEMENTATION PACKET ACCEPTED — SYNTHETIC SLICE READY TO CLAIM`
+`PHASE 4 SYNTHETIC SLICE IMPLEMENTED — CLEAN EVIDENCE RUN PENDING`
 
 ## Current milestone
 
@@ -16,7 +16,7 @@ LATTICEWORK
 
 ## Current target
 
-`LW-P4-001 — claim and implement the exact accepted packet`
+`LW-P4-001 — canonical and independent verification of the implemented packet`
 
 ## Upstream baseline
 
@@ -51,6 +51,18 @@ It authorizes only a removable, non-default `/p4.html` synthetic/mock slice.
 Real data, credentials, provider traffic, application listeners, activation,
 migration, deployment, and cutover remain unauthorized.
 
+**MEASURED:** the exact non-default slice is now implemented. Its Chat
+controller persists the user before dispatch, appends completed assistant text
+only after a completed terminal, records content-free failure/cancellation
+metadata, uses one operation controller, and performs zero retry/fallback.
+The Lit workbench composes only the accepted in-process mock adapters and
+candidate-only `latticework::conversation` repository. Targeted verification
+passes every workspace typecheck, 51 unit/control assertions, and six active
+Chromium scenarios. The offline-contract scenario is explicitly skipped
+because this packet authorizes no service worker and the candidate makes no
+offline claim. Canonical committed evidence and independent clean-worktree
+review remain pending.
+
 ## Last verified date
 
 `2026-07-31 03:18 UTC`
@@ -81,6 +93,7 @@ migration, deployment, and cutover remain unauthorized.
 | `LW-P4-AMEND-001` | Characterization amendment and initial implementation proposal | Codex root controller | `main` | `COMPLETED — MERGED / VERIFIED` | `docs/agents/handoffs/LW-P4-AMEND-001.md` |
 | `LW-P4-RETEST-001` | Bounded amended characterization retests | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — GREEN` | `docs/agents/handoffs/LW-P4-RETEST-001.md` |
 | `LW-P4-IMPL-PREFLIGHT-001` | Exact bounded implementation packet and range lock | Codex root controller | `reengineering/p4-characterization-retests` | `COMPLETED — ACCEPTED / GREEN` | `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md` |
+| `LW-P4-001` | Non-default synthetic primary Chat vertical slice | Codex root controller | `reengineering/p4-characterization-retests` | `IN PROGRESS — TARGETED GATES GREEN` | `reengineering/evidence/phase-4/LW-P4-001/` pending |
 
 ## Completed in current milestone
 
@@ -197,6 +210,10 @@ migration, deployment, and cutover remain unauthorized.
   standing receipt, machine-valid, and independently GREEN after one bounded
   rework round. Focused controls pass 41/41 and full repository controls pass
   180/180.
+- **MEASURED:** the implemented Chat/controller/browser slice passes targeted
+  typecheck, 51 unit/control assertions, and six active browser scenarios with
+  no real provider/data/credential/deployment authority. Canonical and
+  independent committed evidence are still required before completion.
 
 ## Blockers
 
@@ -247,8 +264,9 @@ migration, deployment, and cutover remain unauthorized.
 
 ## Next handoff
 
-**Next action:** claim `LW-P4-001`, checkpoint its start, then implement and
-verify only the non-default synthetic/mock `/p4.html` slice.
+**Next action:** commit the exact implementation range, run the canonical
+Phase 4 verifier from the clean commit, then reproduce it in a separate clean
+detached worktree.
 
 **Read first:** `docs/agents/handoffs/LW-P4-IMPL-PREFLIGHT-001.md`,
 `reengineering/PHASE4_IMPLEMENTATION_PACKET.md`, and

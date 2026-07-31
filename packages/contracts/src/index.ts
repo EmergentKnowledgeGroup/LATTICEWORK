@@ -65,3 +65,19 @@ export type {
   ProviderTrustClass,
   ProviderUsageEvent
 } from "./provider.ts";
+export type {
+  ChatAssistantMessage,
+  ChatConversationRepository,
+  ChatConversationState,
+  ChatEvent,
+  ChatMessage,
+  ChatOperation,
+  ChatProviderRouter,
+  ChatProviderSelection,
+  ChatSafeError,
+  ChatSendInput,
+  ChatTerminalMessage,
+  ChatTerminalMetadata,
+  ChatTerminalProvenance,
+  ChatUserMessage
+} from "./chat.ts";

@@ -8,11 +8,16 @@ import {
   writeJson,
 } from "./evidence-common.mjs";
 import { collectActiveRangePaths } from "./git-scope-common.mjs";
+import {
+  OWNED_EXACT_PATHS as IMPLEMENTATION_EXACT_PATHS,
+  OWNED_PATH_PREFIXES as IMPLEMENTATION_PATH_PREFIXES,
+} from "./validate-phase4-implementation-scope.mjs";
 
 const EXPECTED_PHASE4_BASE_COMMIT =
   "e8b6a1bfe9f3f5c59f9d78b20aaa8ed2f649c4cd";
 
 const ALLOWED_PATHS = new Set([
+  ...IMPLEMENTATION_EXACT_PATHS,
   "PROJECT_STATE.md",
   "ROADMAP.md",
   "docs/agents/claims/LW-P4-CTRL-001.md",
@@ -66,6 +71,7 @@ const ALLOWED_PATHS = new Set([
 ]);
 
 const ALLOWED_PREFIXES = [
+  ...IMPLEMENTATION_PATH_PREFIXES,
   "reengineering/evidence/phase-4/LW-P4-CTRL-001/",
   "reengineering/evidence/phase-4/LW-P4-PREFLIGHT-001/",
   "reengineering/evidence/phase-4/LW-P4-CHAR-001/",

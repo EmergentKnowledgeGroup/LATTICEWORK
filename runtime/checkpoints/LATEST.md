@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-31T03:42:00Z`
+Updated: `2026-07-31T03:58:00Z`
 
 ## CURRENT
 
 Track: `LW_P4_IMPLEMENTATION WORK`
-Step: `phase4-implementation-start`
-Note: LW-P4-001 is claimed under the exact accepted synthetic/mock packet; no feature code has been changed at phase start.
+Step: `phase4-integrated-tests-green`
+Note: The non-default synthetic Chat slice, controller, candidate persistence, test-only fixture, and browser harness are integrated; targeted typecheck, tests, browser scenarios, scope validation, and hygiene are green pending the clean committed evidence run.
 Branch: `reengineering/p4-characterization-retests`
-Head: `212b98b00a4aac9fad91b8a083c382cbd64e3ee4`
-Next command: `Implement contracts/controller tests and the non-default Lit slice within the exact owned paths; run targeted tests after each slice.`
+Head: `e8de177e7f5c3b8a0ca218c4ffe9ac83cec963a1`
+Next command: `Update living docs and handoff, commit the exact implementation range, then run tools/reengineering/run-phase4-verification.ps1 from the clean candidate commit.`
 
 ## LW_M0_BASELINE WORK
 
@@ -381,11 +381,11 @@ Next command: `Commit the accepted preflight closeout, claim LW-P4-001, checkpoi
 
 ## LW_P4_IMPLEMENTATION WORK
 
-Step: `phase4-implementation-start`
-Note: LW-P4-001 is claimed under the exact accepted synthetic/mock packet; no feature code has been changed at phase start.
+Step: `phase4-integrated-tests-green`
+Note: The non-default synthetic Chat slice, controller, candidate persistence, test-only fixture, and browser harness are integrated; targeted typecheck, tests, browser scenarios, scope validation, and hygiene are green pending the clean committed evidence run.
 Branch: `reengineering/p4-characterization-retests`
-Head: `212b98b00a4aac9fad91b8a083c382cbd64e3ee4`
-Next command: `Implement contracts/controller tests and the non-default Lit slice within the exact owned paths; run targeted tests after each slice.`
+Head: `e8de177e7f5c3b8a0ca218c4ffe9ac83cec963a1`
+Next command: `Update living docs and handoff, commit the exact implementation range, then run tools/reengineering/run-phase4-verification.ps1 from the clean candidate commit.`
 
 ### Validations
 
@@ -393,6 +393,11 @@ Next command: `Implement contracts/controller tests and the non-default Lit slic
 - **ACCEPTED** — exact implementation packet is machine-valid and independently GREEN.
 - **OBSERVED** — worktree is clean at phase start.
 - **OBSERVED** — real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.
+- **MEASURED** — `npm run p4:typecheck` passed every workspace typecheck.
+- **MEASURED** — `npm run p4:test` passed 8 Chat tests, 1 fixture test, and 42 packet/control tests.
+- **MEASURED** — `npm run p4:browser` passed 6 active scenarios; the explicit offline-contract scenario skipped because this packet authorizes no service worker.
+- **VERIFIED** — all 181 repository controls pass with zero fail/skip/todo.
+- **VERIFIED** — the active implementation-scope validator is valid across 41 inspected paths and `git diff --check` is clean.
 
 ### Blockers
 

@@ -121,6 +121,31 @@ local proxy behavior remain `C0`. No candidate package is registered into the
 application, and no route, read owner, provider selection, or feature behavior
 has changed.
 
+## Phase 4 non-default primary-Chat candidate
+
+**MEASURED; independent verification pending:** `/p4.html` now exercises a
+synthetic-only Chat controller through the accepted candidate repository and
+two deterministic in-process provider shapes. The evidence currently proves:
+
+- sequential user/assistant turns append and survive a warm online reload;
+- user content persists before provider dispatch;
+- assistant fragments persist only after `completed`;
+- pre-dispatch and post-delta cancellation never retain partial assistant
+  content;
+- failure/cancellation receipts contain safe metadata, not prompt/response
+  text;
+- retry and fallback counts remain zero;
+- mock-local and mock-cloud selection, mobile layout, keyboard order,
+  forced-colors, reduced-motion, redacted diagnostics, and unchanged `/`
+  behavior pass the active browser harness.
+
+This is not a compatibility upgrade for the legacy Chat surface. It uses no
+real conversation records, provider protocols, credentials, migration,
+service worker, listener, activation, deployment, or cutover. Warm offline
+reload remains unclaimed because the accepted packet authorizes no service
+worker. The eight accepted upstream defects remain documented divergences, not
+silently redefined behavior.
+
 ## Compatibility rules
 
 - Preserve user-visible semantics, not implementation accidents, unless an accident became relied-upon behavior.

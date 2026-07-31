@@ -29,3 +29,9 @@ separate fail-closed Phase 4 active-scope control. `LW-BLK-009` and
 ADR-004 through ADR-006 are accepted, but all three blockers remain open until
 their remaining evidence and later-decision conditions are independently
 verified. Acceptance alone is not a blocker-closure receipt.
+
+The implemented non-default `LW-P4-001` synthetic Chat slice does not change
+that conclusion. It uses only candidate storage and in-process mocks; no real
+data, credential, provider protocol, listener, activation, deployment, or
+cutover evidence is added. `LW-BLK-005` through `LW-BLK-007` therefore remain
+open.

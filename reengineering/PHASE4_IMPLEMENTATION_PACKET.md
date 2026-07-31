@@ -36,6 +36,12 @@ The only permitted narrow edits to existing implementation files are:
 - `packages/contracts/src/index.ts`: export Chat contracts only.
 - `apps/web/package.json`: add only `@latticework/chat`,
   `@latticework/providers`, and `@latticework/storage`.
+- `tests/reengineering/phase2-boundary.test.mjs`: preserve the Phase 2
+  dependency assertion against the verified Phase 2 terminal commit rather
+  than incorrectly treating later additive dependencies as Phase 2 drift.
+- `tools/reengineering/validate-phase4-active-scope.mjs`: compose the exact
+  accepted implementation ownership lock into the earlier Phase 4 active
+  scope. No broad application/package prefix is added.
 
 Everything in the protected exact/prefix arrays must remain byte-identical to
 the pinned implementation base. Protected paths are rejected independently
@@ -111,8 +117,10 @@ credentials, or contact a provider. The only listener is
 10. deterministic double build, isolated lock replay, audit, SBOM, evidence
     hashing/content scan, and independent clean-worktree reproduction
 11. desktop, 390 x 844 mobile, keyboard, forced-colors, reduced-motion,
-    warm-offline, cancellation, reload, diagnostics, and unchanged `/` browser
-    evidence
+    explicit warm-offline disposition, cancellation, reload, diagnostics, and
+    unchanged `/` browser evidence. Warm offline may be claimed only if the
+    candidate explicitly declares and passes that contract; this packet does
+    not authorize adding a service worker to manufacture the claim.
 
 The implementation-range validator hard-codes the pinned base and rejects CLI
 base/scope overrides. It inspects committed history including add-then-delete
@@ -188,8 +196,11 @@ attempt to relabel a baseline divergence as `PASS`.
     "apps/web/src/p4-chat-app.ts",
     "apps/web/src/p4-chat-app.css",
     "tests/reengineering/phase4-implementation-scope.test.mjs",
+    "tests/reengineering/phase4-active-scope.test.mjs",
+    "tests/reengineering/phase2-boundary.test.mjs",
     "tests/reengineering/phase4-amendment.test.mjs",
     "tools/reengineering/validate-phase4-implementation-scope.mjs",
+    "tools/reengineering/validate-phase4-active-scope.mjs",
     "tools/reengineering/validate-phase4-amendment.mjs",
     "tools/reengineering/run-phase4-verification.ps1",
     "docs/agents/claims/LW-P4-IMPL-PREFLIGHT-001.md",

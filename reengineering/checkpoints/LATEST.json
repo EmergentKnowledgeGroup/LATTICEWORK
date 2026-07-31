@@ -1,6 +1,6 @@
 {
   "schema": "latticework.context_checkpoint.tracks.v1",
-  "captured_at": "2026-07-31T03:42:00Z",
+  "captured_at": "2026-07-31T03:58:00Z",
   "repo_root": "Z:\\LATTICEWORK",
   "current_track": "LW_P4_IMPLEMENTATION WORK",
   "tracks": {
@@ -719,16 +719,21 @@
     },
     "LW_P4_IMPLEMENTATION WORK": {
       "track": "LW_P4_IMPLEMENTATION WORK",
-      "step": "phase4-implementation-start",
-      "note": "LW-P4-001 is claimed under the exact accepted synthetic/mock packet; no feature code has been changed at phase start.",
+      "step": "phase4-integrated-tests-green",
+      "note": "The non-default synthetic Chat slice, controller, candidate persistence, test-only fixture, and browser harness are integrated; targeted typecheck, tests, browser scenarios, scope validation, and hygiene are green pending the clean committed evidence run.",
       "branch": "reengineering/p4-characterization-retests",
-      "head": "212b98b00a4aac9fad91b8a083c382cbd64e3ee4",
-      "next_cmd": "Implement contracts/controller tests and the non-default Lit slice within the exact owned paths; run targeted tests after each slice.",
+      "head": "e8de177e7f5c3b8a0ca218c4ffe9ac83cec963a1",
+      "next_cmd": "Update living docs and handoff, commit the exact implementation range, then run tools/reengineering/run-phase4-verification.ps1 from the clean candidate commit.",
       "validations": [
         "VERIFIED: amended characterization is canonical and independently GREEN.",
         "ACCEPTED: exact implementation packet is machine-valid and independently GREEN.",
         "OBSERVED: worktree is clean at phase start.",
-        "OBSERVED: real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled."
+        "OBSERVED: real data, credentials, provider traffic, application listeners, activation, deployment, and cutover remain disabled.",
+        "MEASURED: npm run p4:typecheck passed every workspace typecheck.",
+        "MEASURED: npm run p4:test passed 8 Chat tests, 1 fixture test, and 42 packet/control tests.",
+        "MEASURED: npm run p4:browser passed 6 active scenarios; the explicit offline-contract scenario skipped because this packet authorizes no service worker.",
+        "VERIFIED: all 181 repository controls pass with zero fail, skip, or todo.",
+        "VERIFIED: active implementation-scope validator is valid across 41 inspected paths and git diff --check is clean."
       ],
       "decisions": [
         "Implement only the non-default synthetic/mock /p4.html slice.",
@@ -739,9 +744,9 @@
         "exact packet-owned implementation, tests, evidence, handoff, living docs, and checkpoints"
       ],
       "blockers": [],
-      "updated_at": "2026-07-31T03:42:00Z",
-      "captured_at": "2026-07-31T03:42:00Z"
+      "updated_at": "2026-07-31T03:58:00Z",
+      "captured_at": "2026-07-31T03:58:00Z"
     }
   },
-  "updated": "2026-07-31T03:42:00Z"
+  "updated": "2026-07-31T03:58:00Z"
 }
