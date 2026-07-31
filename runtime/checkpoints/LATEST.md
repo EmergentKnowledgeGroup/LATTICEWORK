@@ -1,15 +1,15 @@
 # LATTICEWORK Runtime Checkpoint
 
-Updated: `2026-07-31T05:47:22Z`
+Updated: `2026-07-31T06:11:01Z`
 
 ## CURRENT
 
 Track: `LW_P5_LATTICE_MEMORY WORK`
-Step: `phase5-scope-control-green`
-Note: Phase 4 general and implementation scope are closed at the merged terminal; the exact Phase 5 active validator is GREEN after one independent review/fix cycle.
+Step: `phase5-lattice-memory-preflight-green`
+Note: The synthetic-only LatticeMemory characterization packet is independently GREEN with 69 exact atomic observations, 13 groups, and all implementation, data, provider, credential, activation, deployment, and cutover authority disabled.
 Branch: `reengineering/p5-lattice-memory`
-Head: `80f5e0bc29ce23296a024849a3464d3e17d25bea`
-Next command: `Commit LW-P5-CTRL-001, then claim and freeze the synthetic-only LatticeMemory characterization packet.`
+Head: `1108fe5d4a73315cbb71574361c4928b84e394da`
+Next command: `Commit the accepted LW-P5-MEM-PREFLIGHT-001 packet, record its evidence/handoff receipt, then claim LW-P5-MEM-CHAR-001.`
 
 ## LW_M0_BASELINE WORK
 
@@ -411,11 +411,11 @@ Next command: `Claim a narrow Phase 5 decision/preflight work unit; characterize
 
 ## LW_P5_LATTICE_MEMORY WORK
 
-Step: `phase5-scope-control-green`
-Note: Phase 4 general and implementation scope are closed at the merged terminal; the exact Phase 5 active validator is GREEN after one independent review/fix cycle.
+Step: `phase5-lattice-memory-preflight-green`
+Note: The synthetic-only LatticeMemory characterization packet is independently GREEN with 69 exact atomic observations, 13 groups, and all implementation, data, provider, credential, activation, deployment, and cutover authority disabled.
 Branch: `reengineering/p5-lattice-memory`
-Head: `80f5e0bc29ce23296a024849a3464d3e17d25bea`
-Next command: `Commit LW-P5-CTRL-001, then claim and freeze the synthetic-only LatticeMemory characterization packet.`
+Head: `1108fe5d4a73315cbb71574361c4928b84e394da`
+Next command: `Commit the accepted LW-P5-MEM-PREFLIGHT-001 packet, record its evidence/handoff receipt, then claim LW-P5-MEM-CHAR-001.`
 
 ### Validations
 
@@ -429,6 +429,9 @@ Next command: `Commit LW-P5-CTRL-001, then claim and freeze the synthetic-only L
 - **VERIFIED** — Phase 4 general and implementation validators are closed at merge `1b7e1d10456e0a1e9aaa91df25db17e236bbea3e`.
 - **VERIFIED** — the Phase 5 active validator covers committed, staged, unauthorized unstaged, untracked, force-added ignored, and add-then-delete paths.
 - **VERIFIED** — independent read-only guardrail review is GREEN after one bounded correction cycle.
+- **VERIFIED** — the LatticeMemory packet locks 69 unique atomic observations in 13 groups, including observed privacy, aliasing, malformed-filter, readiness, timestamp, loader, and warning divergences.
+- **MEASURED** — focused packet and active-scope controls passed 35/35; both canonical validators returned `valid: true`; diff hygiene is clean.
+- **VERIFIED** — final independent packet seal review is GREEN after exact source-to-contract review; all nine reserved authority flags remain false with isolated negative controls.
 
 ### Blockers
 
